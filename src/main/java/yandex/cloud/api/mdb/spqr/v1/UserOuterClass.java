@@ -169,6 +169,33 @@ public final class UserOuterClass {
      */
     com.google.protobuf.ByteString
         getGrantsBytes(int index);
+
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+     * @return Whether the deletionProtection field is set.
+     */
+    boolean hasDeletionProtection();
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+     * @return The deletionProtection.
+     */
+    com.google.protobuf.BoolValue getDeletionProtection();
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder();
   }
   /**
    * <pre>
@@ -266,6 +293,19 @@ public final class UserOuterClass {
                 mutable_bitField0_ |= 0x00000002;
               }
               grants_.add(s);
+              break;
+            }
+            case 50: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (deletionProtection_ != null) {
+                subBuilder = deletionProtection_.toBuilder();
+              }
+              deletionProtection_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deletionProtection_);
+                deletionProtection_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -547,6 +587,44 @@ public final class UserOuterClass {
       return grants_.getByteString(index);
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 6;
+    private com.google.protobuf.BoolValue deletionProtection_;
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+     * @return Whether the deletionProtection field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeletionProtection() {
+      return deletionProtection_ != null;
+    }
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+     * @return The deletionProtection.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getDeletionProtection() {
+      return deletionProtection_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+    }
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder() {
+      return getDeletionProtection();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -575,6 +653,9 @@ public final class UserOuterClass {
       }
       for (int i = 0; i < grants_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, grants_.getRaw(i));
+      }
+      if (deletionProtection_ != null) {
+        output.writeMessage(6, getDeletionProtection());
       }
       unknownFields.writeTo(output);
     }
@@ -607,6 +688,10 @@ public final class UserOuterClass {
         size += dataSize;
         size += 1 * getGrantsList().size();
       }
+      if (deletionProtection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getDeletionProtection());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -635,6 +720,11 @@ public final class UserOuterClass {
       }
       if (!getGrantsList()
           .equals(other.getGrantsList())) return false;
+      if (hasDeletionProtection() != other.hasDeletionProtection()) return false;
+      if (hasDeletionProtection()) {
+        if (!getDeletionProtection()
+            .equals(other.getDeletionProtection())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -661,6 +751,10 @@ public final class UserOuterClass {
       if (getGrantsCount() > 0) {
         hash = (37 * hash) + GRANTS_FIELD_NUMBER;
         hash = (53 * hash) + getGrantsList().hashCode();
+      }
+      if (hasDeletionProtection()) {
+        hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDeletionProtection().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -819,6 +913,12 @@ public final class UserOuterClass {
         }
         grants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = null;
+        } else {
+          deletionProtection_ = null;
+          deletionProtectionBuilder_ = null;
+        }
         return this;
       }
 
@@ -867,6 +967,11 @@ public final class UserOuterClass {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.grants_ = grants_;
+        if (deletionProtectionBuilder_ == null) {
+          result.deletionProtection_ = deletionProtection_;
+        } else {
+          result.deletionProtection_ = deletionProtectionBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -961,6 +1066,9 @@ public final class UserOuterClass {
             grants_.addAll(other.grants_);
           }
           onChanged();
+        }
+        if (other.hasDeletionProtection()) {
+          mergeDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1796,6 +1904,161 @@ public final class UserOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.BoolValue deletionProtection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> deletionProtectionBuilder_;
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+       * @return Whether the deletionProtection field is set.
+       */
+      public boolean hasDeletionProtection() {
+        return deletionProtectionBuilder_ != null || deletionProtection_ != null;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+       * @return The deletionProtection.
+       */
+      public com.google.protobuf.BoolValue getDeletionProtection() {
+        if (deletionProtectionBuilder_ == null) {
+          return deletionProtection_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+        } else {
+          return deletionProtectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+       */
+      public Builder setDeletionProtection(com.google.protobuf.BoolValue value) {
+        if (deletionProtectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deletionProtection_ = value;
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+       */
+      public Builder setDeletionProtection(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = builderForValue.build();
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+       */
+      public Builder mergeDeletionProtection(com.google.protobuf.BoolValue value) {
+        if (deletionProtectionBuilder_ == null) {
+          if (deletionProtection_ != null) {
+            deletionProtection_ =
+              com.google.protobuf.BoolValue.newBuilder(deletionProtection_).mergeFrom(value).buildPartial();
+          } else {
+            deletionProtection_ = value;
+          }
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+       */
+      public Builder clearDeletionProtection() {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = null;
+          onChanged();
+        } else {
+          deletionProtection_ = null;
+          deletionProtectionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getDeletionProtectionBuilder() {
+        
+        onChanged();
+        return getDeletionProtectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder() {
+        if (deletionProtectionBuilder_ != null) {
+          return deletionProtectionBuilder_.getMessageOrBuilder();
+        } else {
+          return deletionProtection_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+        }
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getDeletionProtectionFieldBuilder() {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getDeletionProtection(),
+                  getParentForChildren(),
+                  isClean());
+          deletionProtection_ = null;
+        }
+        return deletionProtectionBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2608,6 +2871,33 @@ public final class UserOuterClass {
      */
     com.google.protobuf.ByteString
         getGrantsBytes(int index);
+
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+     * @return Whether the deletionProtection field is set.
+     */
+    boolean hasDeletionProtection();
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+     * @return The deletionProtection.
+     */
+    com.google.protobuf.BoolValue getDeletionProtection();
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.spqr.v1.UserSpec}
@@ -2700,6 +2990,19 @@ public final class UserOuterClass {
                 mutable_bitField0_ |= 0x00000002;
               }
               grants_.add(s);
+              break;
+            }
+            case 50: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (deletionProtection_ != null) {
+                subBuilder = deletionProtection_.toBuilder();
+              }
+              deletionProtection_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deletionProtection_);
+                deletionProtection_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -2981,6 +3284,44 @@ public final class UserOuterClass {
       return grants_.getByteString(index);
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 6;
+    private com.google.protobuf.BoolValue deletionProtection_;
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+     * @return Whether the deletionProtection field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeletionProtection() {
+      return deletionProtection_ != null;
+    }
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+     * @return The deletionProtection.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getDeletionProtection() {
+      return deletionProtection_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+    }
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder() {
+      return getDeletionProtection();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3009,6 +3350,9 @@ public final class UserOuterClass {
       }
       for (int i = 0; i < grants_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, grants_.getRaw(i));
+      }
+      if (deletionProtection_ != null) {
+        output.writeMessage(6, getDeletionProtection());
       }
       unknownFields.writeTo(output);
     }
@@ -3041,6 +3385,10 @@ public final class UserOuterClass {
         size += dataSize;
         size += 1 * getGrantsList().size();
       }
+      if (deletionProtection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getDeletionProtection());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3069,6 +3417,11 @@ public final class UserOuterClass {
       }
       if (!getGrantsList()
           .equals(other.getGrantsList())) return false;
+      if (hasDeletionProtection() != other.hasDeletionProtection()) return false;
+      if (hasDeletionProtection()) {
+        if (!getDeletionProtection()
+            .equals(other.getDeletionProtection())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3095,6 +3448,10 @@ public final class UserOuterClass {
       if (getGrantsCount() > 0) {
         hash = (37 * hash) + GRANTS_FIELD_NUMBER;
         hash = (53 * hash) + getGrantsList().hashCode();
+      }
+      if (hasDeletionProtection()) {
+        hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDeletionProtection().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3248,6 +3605,12 @@ public final class UserOuterClass {
         }
         grants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = null;
+        } else {
+          deletionProtection_ = null;
+          deletionProtectionBuilder_ = null;
+        }
         return this;
       }
 
@@ -3296,6 +3659,11 @@ public final class UserOuterClass {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.grants_ = grants_;
+        if (deletionProtectionBuilder_ == null) {
+          result.deletionProtection_ = deletionProtection_;
+        } else {
+          result.deletionProtection_ = deletionProtectionBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -3390,6 +3758,9 @@ public final class UserOuterClass {
             grants_.addAll(other.grants_);
           }
           onChanged();
+        }
+        if (other.hasDeletionProtection()) {
+          mergeDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4224,6 +4595,161 @@ public final class UserOuterClass {
         grants_.add(value);
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.BoolValue deletionProtection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> deletionProtectionBuilder_;
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+       * @return Whether the deletionProtection field is set.
+       */
+      public boolean hasDeletionProtection() {
+        return deletionProtectionBuilder_ != null || deletionProtection_ != null;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+       * @return The deletionProtection.
+       */
+      public com.google.protobuf.BoolValue getDeletionProtection() {
+        if (deletionProtectionBuilder_ == null) {
+          return deletionProtection_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+        } else {
+          return deletionProtectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+       */
+      public Builder setDeletionProtection(com.google.protobuf.BoolValue value) {
+        if (deletionProtectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deletionProtection_ = value;
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+       */
+      public Builder setDeletionProtection(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = builderForValue.build();
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+       */
+      public Builder mergeDeletionProtection(com.google.protobuf.BoolValue value) {
+        if (deletionProtectionBuilder_ == null) {
+          if (deletionProtection_ != null) {
+            deletionProtection_ =
+              com.google.protobuf.BoolValue.newBuilder(deletionProtection_).mergeFrom(value).buildPartial();
+          } else {
+            deletionProtection_ = value;
+          }
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+       */
+      public Builder clearDeletionProtection() {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = null;
+          onChanged();
+        } else {
+          deletionProtection_ = null;
+          deletionProtectionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getDeletionProtectionBuilder() {
+        
+        onChanged();
+        return getDeletionProtectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder() {
+        if (deletionProtectionBuilder_ != null) {
+          return deletionProtectionBuilder_.getMessageOrBuilder();
+        } else {
+          return deletionProtection_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+        }
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getDeletionProtectionFieldBuilder() {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getDeletionProtection(),
+                  getParentForChildren(),
+                  isClean());
+          deletionProtection_ = null;
+        }
+        return deletionProtectionBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5134,25 +5660,28 @@ public final class UserOuterClass {
       "\n#yandex/cloud/mdb/spqr/v1/user.proto\022\030y" +
       "andex.cloud.mdb.spqr.v1\032\036google/protobuf" +
       "/wrappers.proto\032\035yandex/cloud/validation" +
-      ".proto\"\311\001\n\004User\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster" +
+      ".proto\"\202\002\n\004User\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster" +
       "_id\030\002 \001(\t\0229\n\013permissions\030\003 \003(\0132$.yandex." +
       "cloud.mdb.spqr.v1.Permission\0228\n\010settings" +
       "\030\004 \001(\0132&.yandex.cloud.mdb.spqr.v1.UserSe" +
       "ttings\022*\n\006grants\030\005 \003(\tB\032\212\3101\004<=63\362\3071\016[a-z" +
-      "A-Z0-9_-]*\"#\n\nPermission\022\025\n\rdatabase_nam" +
-      "e\030\001 \001(\t\"\372\001\n\010UserSpec\022,\n\004name\030\001 \001(\tB\036\350\3071\001" +
-      "\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\037\n\010password\030\002" +
-      " \001(\tB\r\350\3071\001\212\3101\0058-128\0229\n\013permissions\030\003 \003(\013" +
-      "2$.yandex.cloud.mdb.spqr.v1.Permission\0228" +
-      "\n\010settings\030\004 \001(\0132&.yandex.cloud.mdb.spqr" +
-      ".v1.UserSettings\022*\n\006grants\030\005 \003(\tB\032\212\3101\004<=" +
-      "63\362\3071\016[a-zA-Z0-9_-]*\"~\n\014UserSettings\0225\n\020" +
-      "connection_limit\030\001 \001(\0132\033.google.protobuf" +
-      ".Int64Value\0227\n\022connection_retries\030\002 \001(\0132" +
-      "\033.google.protobuf.Int64ValueBa\n\034yandex.c" +
-      "loud.api.mdb.spqr.v1ZAgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/mdb/spqr/" +
-      "v1;spqrb\006proto3"
+      "A-Z0-9_-]*\0227\n\023deletion_protection\030\006 \001(\0132" +
+      "\032.google.protobuf.BoolValue\"#\n\nPermissio" +
+      "n\022\025\n\rdatabase_name\030\001 \001(\t\"\263\002\n\010UserSpec\022,\n" +
+      "\004name\030\001 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_" +
+      "-]*\022\037\n\010password\030\002 \001(\tB\r\350\3071\001\212\3101\0058-128\0229\n\013" +
+      "permissions\030\003 \003(\0132$.yandex.cloud.mdb.spq" +
+      "r.v1.Permission\0228\n\010settings\030\004 \001(\0132&.yand" +
+      "ex.cloud.mdb.spqr.v1.UserSettings\022*\n\006gra" +
+      "nts\030\005 \003(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\0227\n" +
+      "\023deletion_protection\030\006 \001(\0132\032.google.prot" +
+      "obuf.BoolValue\"~\n\014UserSettings\0225\n\020connec" +
+      "tion_limit\030\001 \001(\0132\033.google.protobuf.Int64" +
+      "Value\0227\n\022connection_retries\030\002 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueBa\n\034yandex.cloud.a" +
+      "pi.mdb.spqr.v1ZAgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/mdb/spqr/v1;spq" +
+      "rb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5165,7 +5694,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_spqr_v1_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_spqr_v1_User_descriptor,
-        new java.lang.String[] { "Name", "ClusterId", "Permissions", "Settings", "Grants", });
+        new java.lang.String[] { "Name", "ClusterId", "Permissions", "Settings", "Grants", "DeletionProtection", });
     internal_static_yandex_cloud_mdb_spqr_v1_Permission_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_spqr_v1_Permission_fieldAccessorTable = new
@@ -5177,7 +5706,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_spqr_v1_UserSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_spqr_v1_UserSpec_descriptor,
-        new java.lang.String[] { "Name", "Password", "Permissions", "Settings", "Grants", });
+        new java.lang.String[] { "Name", "Password", "Permissions", "Settings", "Grants", "DeletionProtection", });
     internal_static_yandex_cloud_mdb_spqr_v1_UserSettings_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_spqr_v1_UserSettings_fieldAccessorTable = new

@@ -2899,6 +2899,1418 @@ public final class PublicConnectionServiceOuterClass {
 
   }
 
+  public interface MovePublicConnectionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.MovePublicConnectionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the PublicConnection resource to move.
+     * To get the publicConnection ID use a [PublicConnectionService.List] request.
+     * </pre>
+     *
+     * <code>string public_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The publicConnectionId.
+     */
+    java.lang.String getPublicConnectionId();
+    /**
+     * <pre>
+     * ID of the PublicConnection resource to move.
+     * To get the publicConnection ID use a [PublicConnectionService.List] request.
+     * </pre>
+     *
+     * <code>string public_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for publicConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getPublicConnectionIdBytes();
+
+    /**
+     * <pre>
+     * ID of the folder to which publicConnections will be moved.
+     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The destinationFolderId.
+     */
+    java.lang.String getDestinationFolderId();
+    /**
+     * <pre>
+     * ID of the folder to which publicConnections will be moved.
+     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for destinationFolderId.
+     */
+    com.google.protobuf.ByteString
+        getDestinationFolderIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.MovePublicConnectionRequest}
+   */
+  public static final class MovePublicConnectionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.MovePublicConnectionRequest)
+      MovePublicConnectionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MovePublicConnectionRequest.newBuilder() to construct.
+    private MovePublicConnectionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MovePublicConnectionRequest() {
+      publicConnectionId_ = "";
+      destinationFolderId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MovePublicConnectionRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MovePublicConnectionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              publicConnectionId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              destinationFolderId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MovePublicConnectionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MovePublicConnectionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest.class, yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest.Builder.class);
+    }
+
+    public static final int PUBLIC_CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object publicConnectionId_;
+    /**
+     * <pre>
+     * ID of the PublicConnection resource to move.
+     * To get the publicConnection ID use a [PublicConnectionService.List] request.
+     * </pre>
+     *
+     * <code>string public_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The publicConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getPublicConnectionId() {
+      java.lang.Object ref = publicConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        publicConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the PublicConnection resource to move.
+     * To get the publicConnection ID use a [PublicConnectionService.List] request.
+     * </pre>
+     *
+     * <code>string public_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for publicConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPublicConnectionIdBytes() {
+      java.lang.Object ref = publicConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        publicConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESTINATION_FOLDER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object destinationFolderId_;
+    /**
+     * <pre>
+     * ID of the folder to which publicConnections will be moved.
+     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The destinationFolderId.
+     */
+    @java.lang.Override
+    public java.lang.String getDestinationFolderId() {
+      java.lang.Object ref = destinationFolderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destinationFolderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the folder to which publicConnections will be moved.
+     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for destinationFolderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDestinationFolderIdBytes() {
+      java.lang.Object ref = destinationFolderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destinationFolderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, publicConnectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationFolderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, destinationFolderId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, publicConnectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationFolderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, destinationFolderId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest other = (yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest) obj;
+
+      if (!getPublicConnectionId()
+          .equals(other.getPublicConnectionId())) return false;
+      if (!getDestinationFolderId()
+          .equals(other.getDestinationFolderId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PUBLIC_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPublicConnectionId().hashCode();
+      hash = (37 * hash) + DESTINATION_FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDestinationFolderId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.MovePublicConnectionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.MovePublicConnectionRequest)
+        yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MovePublicConnectionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MovePublicConnectionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest.class, yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        publicConnectionId_ = "";
+
+        destinationFolderId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MovePublicConnectionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest build() {
+        yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest buildPartial() {
+        yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest result = new yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest(this);
+        result.publicConnectionId_ = publicConnectionId_;
+        result.destinationFolderId_ = destinationFolderId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest) {
+          return mergeFrom((yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest other) {
+        if (other == yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest.getDefaultInstance()) return this;
+        if (!other.getPublicConnectionId().isEmpty()) {
+          publicConnectionId_ = other.publicConnectionId_;
+          onChanged();
+        }
+        if (!other.getDestinationFolderId().isEmpty()) {
+          destinationFolderId_ = other.destinationFolderId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object publicConnectionId_ = "";
+      /**
+       * <pre>
+       * ID of the PublicConnection resource to move.
+       * To get the publicConnection ID use a [PublicConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string public_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The publicConnectionId.
+       */
+      public java.lang.String getPublicConnectionId() {
+        java.lang.Object ref = publicConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          publicConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PublicConnection resource to move.
+       * To get the publicConnection ID use a [PublicConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string public_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for publicConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getPublicConnectionIdBytes() {
+        java.lang.Object ref = publicConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          publicConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PublicConnection resource to move.
+       * To get the publicConnection ID use a [PublicConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string public_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The publicConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        publicConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PublicConnection resource to move.
+       * To get the publicConnection ID use a [PublicConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string public_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublicConnectionId() {
+        
+        publicConnectionId_ = getDefaultInstance().getPublicConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PublicConnection resource to move.
+       * To get the publicConnection ID use a [PublicConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string public_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for publicConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        publicConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object destinationFolderId_ = "";
+      /**
+       * <pre>
+       * ID of the folder to which publicConnections will be moved.
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The destinationFolderId.
+       */
+      public java.lang.String getDestinationFolderId() {
+        java.lang.Object ref = destinationFolderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          destinationFolderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder to which publicConnections will be moved.
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for destinationFolderId.
+       */
+      public com.google.protobuf.ByteString
+          getDestinationFolderIdBytes() {
+        java.lang.Object ref = destinationFolderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          destinationFolderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder to which publicConnections will be moved.
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The destinationFolderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        destinationFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder to which publicConnections will be moved.
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDestinationFolderId() {
+        
+        destinationFolderId_ = getDefaultInstance().getDestinationFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder to which publicConnections will be moved.
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for destinationFolderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        destinationFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.MovePublicConnectionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.MovePublicConnectionRequest)
+    private static final yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest();
+    }
+
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MovePublicConnectionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MovePublicConnectionRequest>() {
+      @java.lang.Override
+      public MovePublicConnectionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MovePublicConnectionRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MovePublicConnectionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MovePublicConnectionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MovePublicConnectionMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.MovePublicConnectionMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the publicConnection that is being moved.
+     * </pre>
+     *
+     * <code>string public_connection_id = 1;</code>
+     * @return The publicConnectionId.
+     */
+    java.lang.String getPublicConnectionId();
+    /**
+     * <pre>
+     * ID of the publicConnection that is being moved.
+     * </pre>
+     *
+     * <code>string public_connection_id = 1;</code>
+     * @return The bytes for publicConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getPublicConnectionIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.MovePublicConnectionMetadata}
+   */
+  public static final class MovePublicConnectionMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.MovePublicConnectionMetadata)
+      MovePublicConnectionMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MovePublicConnectionMetadata.newBuilder() to construct.
+    private MovePublicConnectionMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MovePublicConnectionMetadata() {
+      publicConnectionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MovePublicConnectionMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MovePublicConnectionMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              publicConnectionId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MovePublicConnectionMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MovePublicConnectionMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata.class, yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata.Builder.class);
+    }
+
+    public static final int PUBLIC_CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object publicConnectionId_;
+    /**
+     * <pre>
+     * ID of the publicConnection that is being moved.
+     * </pre>
+     *
+     * <code>string public_connection_id = 1;</code>
+     * @return The publicConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getPublicConnectionId() {
+      java.lang.Object ref = publicConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        publicConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the publicConnection that is being moved.
+     * </pre>
+     *
+     * <code>string public_connection_id = 1;</code>
+     * @return The bytes for publicConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPublicConnectionIdBytes() {
+      java.lang.Object ref = publicConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        publicConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, publicConnectionId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, publicConnectionId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata other = (yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata) obj;
+
+      if (!getPublicConnectionId()
+          .equals(other.getPublicConnectionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PUBLIC_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPublicConnectionId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.MovePublicConnectionMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.MovePublicConnectionMetadata)
+        yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MovePublicConnectionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MovePublicConnectionMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata.class, yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        publicConnectionId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MovePublicConnectionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata build() {
+        yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata buildPartial() {
+        yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata result = new yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata(this);
+        result.publicConnectionId_ = publicConnectionId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata) {
+          return mergeFrom((yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata other) {
+        if (other == yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata.getDefaultInstance()) return this;
+        if (!other.getPublicConnectionId().isEmpty()) {
+          publicConnectionId_ = other.publicConnectionId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object publicConnectionId_ = "";
+      /**
+       * <pre>
+       * ID of the publicConnection that is being moved.
+       * </pre>
+       *
+       * <code>string public_connection_id = 1;</code>
+       * @return The publicConnectionId.
+       */
+      public java.lang.String getPublicConnectionId() {
+        java.lang.Object ref = publicConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          publicConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the publicConnection that is being moved.
+       * </pre>
+       *
+       * <code>string public_connection_id = 1;</code>
+       * @return The bytes for publicConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getPublicConnectionIdBytes() {
+        java.lang.Object ref = publicConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          publicConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the publicConnection that is being moved.
+       * </pre>
+       *
+       * <code>string public_connection_id = 1;</code>
+       * @param value The publicConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        publicConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the publicConnection that is being moved.
+       * </pre>
+       *
+       * <code>string public_connection_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublicConnectionId() {
+        
+        publicConnectionId_ = getDefaultInstance().getPublicConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the publicConnection that is being moved.
+       * </pre>
+       *
+       * <code>string public_connection_id = 1;</code>
+       * @param value The bytes for publicConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        publicConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.MovePublicConnectionMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.MovePublicConnectionMetadata)
+    private static final yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata();
+    }
+
+    public static yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MovePublicConnectionMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<MovePublicConnectionMetadata>() {
+      @java.lang.Override
+      public MovePublicConnectionMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MovePublicConnectionMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MovePublicConnectionMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MovePublicConnectionMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_cic_v1_GetPublicConnectionRequest_descriptor;
   private static final 
@@ -2914,6 +4326,16 @@ public final class PublicConnectionServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_cic_v1_ListPublicConnectionsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_MovePublicConnectionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_MovePublicConnectionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_MovePublicConnectionMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_MovePublicConnectionMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2926,33 +4348,47 @@ public final class PublicConnectionServiceOuterClass {
       "\n3yandex/cloud/cic/v1/public_connection_" +
       "service.proto\022\023yandex.cloud.cic.v1\032\034goog" +
       "le/api/annotations.proto\032\035yandex/cloud/v" +
-      "alidation.proto\032+yandex/cloud/cic/v1/pub" +
-      "lic_connection.proto\"H\n\032GetPublicConnect" +
-      "ionRequest\022*\n\024public_connection_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\"\231\001\n\034ListPublicConnections" +
-      "Request\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_" +
-      "token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n" +
-      "\212\3101\006<=1000\"{\n\035ListPublicConnectionsRespo" +
-      "nse\022A\n\022public_connections\030\001 \003(\0132%.yandex" +
-      ".cloud.cic.v1.PublicConnection\022\027\n\017next_p" +
-      "age_token\030\002 \001(\t2\306\002\n\027PublicConnectionServ" +
-      "ice\022\227\001\n\003Get\022/.yandex.cloud.cic.v1.GetPub" +
-      "licConnectionRequest\032%.yandex.cloud.cic." +
-      "v1.PublicConnection\"8\202\323\344\223\0022\0220/cic/v1/pub" +
-      "licConnections/{public_connection_id}\022\220\001" +
-      "\n\004List\0221.yandex.cloud.cic.v1.ListPublicC" +
-      "onnectionsRequest\0322.yandex.cloud.cic.v1." +
-      "ListPublicConnectionsResponse\"!\202\323\344\223\002\033\022\031/" +
-      "cic/v1/publicConnectionsBV\n\027yandex.cloud" +
-      ".api.cic.v1Z;github.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/cic/v1;cicb\006proto3"
+      "alidation.proto\032 yandex/cloud/api/operat" +
+      "ion.proto\032&yandex/cloud/operation/operat" +
+      "ion.proto\032+yandex/cloud/cic/v1/public_co" +
+      "nnection.proto\"H\n\032GetPublicConnectionReq" +
+      "uest\022*\n\024public_connection_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\"\231\001\n\034ListPublicConnectionsReques" +
+      "t\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpa" +
+      "ge_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030" +
+      "\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=" +
+      "1000\"{\n\035ListPublicConnectionsResponse\022A\n" +
+      "\022public_connections\030\001 \003(\0132%.yandex.cloud" +
+      ".cic.v1.PublicConnection\022\027\n\017next_page_to" +
+      "ken\030\002 \001(\t\"v\n\033MovePublicConnectionRequest" +
+      "\022*\n\024public_connection_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022+\n\025destination_folder_id\030\002 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\"<\n\034MovePublicConnectionMetadat" +
+      "a\022\034\n\024public_connection_id\030\001 \001(\t2\232\004\n\027Publ" +
+      "icConnectionService\022\227\001\n\003Get\022/.yandex.clo" +
+      "ud.cic.v1.GetPublicConnectionRequest\032%.y" +
+      "andex.cloud.cic.v1.PublicConnection\"8\202\323\344" +
+      "\223\0022\0220/cic/v1/publicConnections/{public_c" +
+      "onnection_id}\022\220\001\n\004List\0221.yandex.cloud.ci" +
+      "c.v1.ListPublicConnectionsRequest\0322.yand" +
+      "ex.cloud.cic.v1.ListPublicConnectionsRes" +
+      "ponse\"!\202\323\344\223\002\033\022\031/cic/v1/publicConnections" +
+      "\022\321\001\n\004Move\0220.yandex.cloud.cic.v1.MovePubl" +
+      "icConnectionRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"t\202\323\344\223\002:\"5/cic/v1/publicCo" +
+      "nnections/{public_connection_id}:move:\001*" +
+      "\262\322*0\n\034MovePublicConnectionMetadata\022\020Publ" +
+      "icConnectionBV\n\027yandex.cloud.api.cic.v1Z" +
+      ";github.com/yandex-cloud/go-genproto/yan" +
+      "dex/cloud/cic/v1;cicb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
+          yandex.cloud.api.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.cic.v1.PublicConnectionOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_cic_v1_GetPublicConnectionRequest_descriptor =
@@ -2973,9 +4409,22 @@ public final class PublicConnectionServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cic_v1_ListPublicConnectionsResponse_descriptor,
         new java.lang.String[] { "PublicConnections", "NextPageToken", });
+    internal_static_yandex_cloud_cic_v1_MovePublicConnectionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_cic_v1_MovePublicConnectionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_MovePublicConnectionRequest_descriptor,
+        new java.lang.String[] { "PublicConnectionId", "DestinationFolderId", });
+    internal_static_yandex_cloud_cic_v1_MovePublicConnectionMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_cic_v1_MovePublicConnectionMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_MovePublicConnectionMetadata_descriptor,
+        new java.lang.String[] { "PublicConnectionId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.value);
@@ -2983,6 +4432,8 @@ public final class PublicConnectionServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
+    yandex.cloud.api.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.cic.v1.PublicConnectionOuterClass.getDescriptor();
   }
 

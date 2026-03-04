@@ -1275,7 +1275,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Enables or disables session_log system table.
-     * Default value: **true** for versions 25.8 and higher, **false** for versions 25.7 and lower.
+     * Default value: **true** for versions 25.3 and higher, **false** for versions 25.2 and lower.
      * Change of the setting is applied with restart.
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/session_log).
      * </pre>
@@ -1287,7 +1287,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Enables or disables session_log system table.
-     * Default value: **true** for versions 25.8 and higher, **false** for versions 25.7 and lower.
+     * Default value: **true** for versions 25.3 and higher, **false** for versions 25.2 and lower.
      * Change of the setting is applied with restart.
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/session_log).
      * </pre>
@@ -1299,7 +1299,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Enables or disables session_log system table.
-     * Default value: **true** for versions 25.8 and higher, **false** for versions 25.7 and lower.
+     * Default value: **true** for versions 25.3 and higher, **false** for versions 25.2 and lower.
      * Change of the setting is applied with restart.
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/session_log).
      * </pre>
@@ -1312,7 +1312,7 @@ public final class Clickhouse {
      * <pre>
      * The maximum size that session_log can grow to before old data will be removed. If set to **0**,
      * automatic removal of session_log data based on size is disabled.
-     * Default value: **536870912** (512 MiB) for versions 25.8 and higher, **0** for versions 25.7 and lower.
+     * Default value: **536870912** (512 MiB) for versions 25.3 and higher, **0** for versions 25.2 and lower.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -1323,7 +1323,7 @@ public final class Clickhouse {
      * <pre>
      * The maximum size that session_log can grow to before old data will be removed. If set to **0**,
      * automatic removal of session_log data based on size is disabled.
-     * Default value: **536870912** (512 MiB) for versions 25.8 and higher, **0** for versions 25.7 and lower.
+     * Default value: **536870912** (512 MiB) for versions 25.3 and higher, **0** for versions 25.2 and lower.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -1334,7 +1334,7 @@ public final class Clickhouse {
      * <pre>
      * The maximum size that session_log can grow to before old data will be removed. If set to **0**,
      * automatic removal of session_log data based on size is disabled.
-     * Default value: **536870912** (512 MiB) for versions 25.8 and higher, **0** for versions 25.7 and lower.
+     * Default value: **536870912** (512 MiB) for versions 25.3 and higher, **0** for versions 25.2 and lower.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -1784,6 +1784,108 @@ public final class Clickhouse {
 
     /**
      * <pre>
+     * Enables or disables query_metric_log system table.
+     * Default value: **false**.
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/query_metric_log).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_metric_log_enabled = 83;</code>
+     * @return Whether the queryMetricLogEnabled field is set.
+     */
+    boolean hasQueryMetricLogEnabled();
+    /**
+     * <pre>
+     * Enables or disables query_metric_log system table.
+     * Default value: **false**.
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/query_metric_log).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_metric_log_enabled = 83;</code>
+     * @return The queryMetricLogEnabled.
+     */
+    com.google.protobuf.BoolValue getQueryMetricLogEnabled();
+    /**
+     * <pre>
+     * Enables or disables query_metric_log system table.
+     * Default value: **false**.
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/query_metric_log).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_metric_log_enabled = 83;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getQueryMetricLogEnabledOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum size that query_metric_log can grow to before old data will be removed. If set to **0**,
+     * automatic removal of query_metric_log data based on size is disabled.
+     * Default value: **536870912** (512 MiB).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_metric_log_retention_size = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the queryMetricLogRetentionSize field is set.
+     */
+    boolean hasQueryMetricLogRetentionSize();
+    /**
+     * <pre>
+     * The maximum size that query_metric_log can grow to before old data will be removed. If set to **0**,
+     * automatic removal of query_metric_log data based on size is disabled.
+     * Default value: **536870912** (512 MiB).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_metric_log_retention_size = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The queryMetricLogRetentionSize.
+     */
+    com.google.protobuf.Int64Value getQueryMetricLogRetentionSize();
+    /**
+     * <pre>
+     * The maximum size that query_metric_log can grow to before old data will be removed. If set to **0**,
+     * automatic removal of query_metric_log data based on size is disabled.
+     * Default value: **536870912** (512 MiB).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_metric_log_retention_size = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getQueryMetricLogRetentionSizeOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum time that query_metric_log records will be retained before removal. If set to **0**,
+     * automatic removal of query_metric_log data based on time is disabled.
+     * Default value: **2592000000** (30 days).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_metric_log_retention_time = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the queryMetricLogRetentionTime field is set.
+     */
+    boolean hasQueryMetricLogRetentionTime();
+    /**
+     * <pre>
+     * The maximum time that query_metric_log records will be retained before removal. If set to **0**,
+     * automatic removal of query_metric_log data based on time is disabled.
+     * Default value: **2592000000** (30 days).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_metric_log_retention_time = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The queryMetricLogRetentionTime.
+     */
+    com.google.protobuf.Int64Value getQueryMetricLogRetentionTime();
+    /**
+     * <pre>
+     * The maximum time that query_metric_log records will be retained before removal. If set to **0**,
+     * automatic removal of query_metric_log data based on time is disabled.
+     * Default value: **2592000000** (30 days).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_metric_log_retention_time = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getQueryMetricLogRetentionTimeOrBuilder();
+
+    /**
+     * <pre>
      * Access control settings.
      * </pre>
      *
@@ -1817,7 +1919,7 @@ public final class Clickhouse {
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_connections).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+     * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "128-8192"];</code>
      * @return Whether the maxConnections field is set.
      */
     boolean hasMaxConnections();
@@ -1829,7 +1931,7 @@ public final class Clickhouse {
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_connections).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+     * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "128-8192"];</code>
      * @return The maxConnections.
      */
     com.google.protobuf.Int64Value getMaxConnections();
@@ -1841,7 +1943,7 @@ public final class Clickhouse {
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_connections).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+     * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "128-8192"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder();
 
@@ -1852,7 +1954,7 @@ public final class Clickhouse {
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_concurrent_queries).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=50"];</code>
+     * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=100"];</code>
      * @return Whether the maxConcurrentQueries field is set.
      */
     boolean hasMaxConcurrentQueries();
@@ -1863,7 +1965,7 @@ public final class Clickhouse {
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_concurrent_queries).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=50"];</code>
+     * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=100"];</code>
      * @return The maxConcurrentQueries.
      */
     com.google.protobuf.Int64Value getMaxConcurrentQueries();
@@ -1874,7 +1976,7 @@ public final class Clickhouse {
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_concurrent_queries).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=50"];</code>
+     * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=100"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxConcurrentQueriesOrBuilder();
 
@@ -1947,7 +2049,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * The number of seconds that ClickHouse waits for incoming requests for HTTP protocol before closing the connection.
-     * Default value: **30**.
+     * Default value: **3** for versions 25.10 and higher, **30** for versions 25.9 and lower.
      * Change of the setting is applied with restart.
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#keep_alive_timeout).
      * </pre>
@@ -1959,7 +2061,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * The number of seconds that ClickHouse waits for incoming requests for HTTP protocol before closing the connection.
-     * Default value: **30**.
+     * Default value: **3** for versions 25.10 and higher, **30** for versions 25.9 and lower.
      * Change of the setting is applied with restart.
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#keep_alive_timeout).
      * </pre>
@@ -1971,7 +2073,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * The number of seconds that ClickHouse waits for incoming requests for HTTP protocol before closing the connection.
-     * Default value: **30**.
+     * Default value: **3** for versions 25.10 and higher, **30** for versions 25.9 and lower.
      * Change of the setting is applied with restart.
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#keep_alive_timeout).
      * </pre>
@@ -2345,6 +2447,114 @@ public final class Clickhouse {
 
     /**
      * <pre>
+     * Size of cache for vector similarity indexes, in bytes. **0** means disabled.
+     * Default value: **5368709120** (5 GiB).
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vector_similarity_index_cache_size = 86 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the vectorSimilarityIndexCacheSize field is set.
+     */
+    boolean hasVectorSimilarityIndexCacheSize();
+    /**
+     * <pre>
+     * Size of cache for vector similarity indexes, in bytes. **0** means disabled.
+     * Default value: **5368709120** (5 GiB).
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vector_similarity_index_cache_size = 86 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The vectorSimilarityIndexCacheSize.
+     */
+    com.google.protobuf.Int64Value getVectorSimilarityIndexCacheSize();
+    /**
+     * <pre>
+     * Size of cache for vector similarity indexes, in bytes. **0** means disabled.
+     * Default value: **5368709120** (5 GiB).
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vector_similarity_index_cache_size = 86 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getVectorSimilarityIndexCacheSizeOrBuilder();
+
+    /**
+     * <pre>
+     * Size of cache for vector similarity indexes, in entries. **0** means disabled.
+     * Default value: **10000000**.
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_max_entries).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vector_similarity_index_cache_max_entries = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the vectorSimilarityIndexCacheMaxEntries field is set.
+     */
+    boolean hasVectorSimilarityIndexCacheMaxEntries();
+    /**
+     * <pre>
+     * Size of cache for vector similarity indexes, in entries. **0** means disabled.
+     * Default value: **10000000**.
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_max_entries).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vector_similarity_index_cache_max_entries = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The vectorSimilarityIndexCacheMaxEntries.
+     */
+    com.google.protobuf.Int64Value getVectorSimilarityIndexCacheMaxEntries();
+    /**
+     * <pre>
+     * Size of cache for vector similarity indexes, in entries. **0** means disabled.
+     * Default value: **10000000**.
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_max_entries).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vector_similarity_index_cache_max_entries = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getVectorSimilarityIndexCacheMaxEntriesOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum number of threads to use for building vector indexes. **0** means unlimited.
+     * Default value: **16**.
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_build_vector_similarity_index_thread_pool_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_build_vector_similarity_index_thread_pool_size = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxBuildVectorSimilarityIndexThreadPoolSize field is set.
+     */
+    boolean hasMaxBuildVectorSimilarityIndexThreadPoolSize();
+    /**
+     * <pre>
+     * The maximum number of threads to use for building vector indexes. **0** means unlimited.
+     * Default value: **16**.
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_build_vector_similarity_index_thread_pool_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_build_vector_similarity_index_thread_pool_size = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxBuildVectorSimilarityIndexThreadPoolSize.
+     */
+    com.google.protobuf.Int64Value getMaxBuildVectorSimilarityIndexThreadPoolSize();
+    /**
+     * <pre>
+     * The maximum number of threads to use for building vector indexes. **0** means unlimited.
+     * Default value: **16**.
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_build_vector_similarity_index_thread_pool_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_build_vector_similarity_index_thread_pool_size = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxBuildVectorSimilarityIndexThreadPoolSizeOrBuilder();
+
+    /**
+     * <pre>
      * Settings for the MergeTree table engine family.
      * Change of the settings of **merge_tree** is applied with restart.
      * </pre>
@@ -2571,9 +2781,9 @@ public final class Clickhouse {
      * Change of the settings of **kafka_topics** is applied with restart.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
      */
-    java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic> 
+    @java.lang.Deprecated java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic> 
         getKafkaTopicsList();
     /**
      * <pre>
@@ -2581,27 +2791,27 @@ public final class Clickhouse {
      * Change of the settings of **kafka_topics** is applied with restart.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
      */
-    yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic getKafkaTopics(int index);
+    @java.lang.Deprecated yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic getKafkaTopics(int index);
     /**
      * <pre>
      * Per-topic Kafka integration settings.
      * Change of the settings of **kafka_topics** is applied with restart.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
      */
-    int getKafkaTopicsCount();
+    @java.lang.Deprecated int getKafkaTopicsCount();
     /**
      * <pre>
      * Per-topic Kafka integration settings.
      * Change of the settings of **kafka_topics** is applied with restart.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
      */
-    java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder> 
         getKafkaTopicsOrBuilderList();
     /**
      * <pre>
@@ -2609,9 +2819,9 @@ public final class Clickhouse {
      * Change of the settings of **kafka_topics** is applied with restart.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
      */
-    yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder getKafkaTopicsOrBuilder(
+    @java.lang.Deprecated yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder getKafkaTopicsOrBuilder(
         int index);
 
     /**
@@ -3956,6 +4166,84 @@ public final class Clickhouse {
               }
               customMacros_.add(
                   input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Macro.parser(), extensionRegistry));
+              break;
+            }
+            case 666: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (queryMetricLogEnabled_ != null) {
+                subBuilder = queryMetricLogEnabled_.toBuilder();
+              }
+              queryMetricLogEnabled_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(queryMetricLogEnabled_);
+                queryMetricLogEnabled_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 674: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (queryMetricLogRetentionSize_ != null) {
+                subBuilder = queryMetricLogRetentionSize_.toBuilder();
+              }
+              queryMetricLogRetentionSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(queryMetricLogRetentionSize_);
+                queryMetricLogRetentionSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 682: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (queryMetricLogRetentionTime_ != null) {
+                subBuilder = queryMetricLogRetentionTime_.toBuilder();
+              }
+              queryMetricLogRetentionTime_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(queryMetricLogRetentionTime_);
+                queryMetricLogRetentionTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 690: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (vectorSimilarityIndexCacheSize_ != null) {
+                subBuilder = vectorSimilarityIndexCacheSize_.toBuilder();
+              }
+              vectorSimilarityIndexCacheSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(vectorSimilarityIndexCacheSize_);
+                vectorSimilarityIndexCacheSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 698: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (vectorSimilarityIndexCacheMaxEntries_ != null) {
+                subBuilder = vectorSimilarityIndexCacheMaxEntries_.toBuilder();
+              }
+              vectorSimilarityIndexCacheMaxEntries_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(vectorSimilarityIndexCacheMaxEntries_);
+                vectorSimilarityIndexCacheMaxEntries_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 706: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxBuildVectorSimilarityIndexThreadPoolSize_ != null) {
+                subBuilder = maxBuildVectorSimilarityIndexThreadPoolSize_.toBuilder();
+              }
+              maxBuildVectorSimilarityIndexThreadPoolSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxBuildVectorSimilarityIndexThreadPoolSize_);
+                maxBuildVectorSimilarityIndexThreadPoolSize_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -5915,7 +6203,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of most recently inserted blocks for which ClickHouse Keeper stores hash sums to check for duplicates.
-       * Default value: **1000** for versions 23.11 and higher, **100** for versions 23.10 and lower.
+       * Default value: **10000** for versions 25.9 and higher, **1000** for versions from 23.11 to 25.8, **100** for versions 23.10 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window).
        * </pre>
        *
@@ -5926,7 +6214,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of most recently inserted blocks for which ClickHouse Keeper stores hash sums to check for duplicates.
-       * Default value: **1000** for versions 23.11 and higher, **100** for versions 23.10 and lower.
+       * Default value: **10000** for versions 25.9 and higher, **1000** for versions from 23.11 to 25.8, **100** for versions 23.10 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window).
        * </pre>
        *
@@ -5937,7 +6225,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of most recently inserted blocks for which ClickHouse Keeper stores hash sums to check for duplicates.
-       * Default value: **1000** for versions 23.11 and higher, **100** for versions 23.10 and lower.
+       * Default value: **10000** for versions 25.9 and higher, **1000** for versions from 23.11 to 25.8, **100** for versions 23.10 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window).
        * </pre>
        *
@@ -5948,7 +6236,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of seconds after which the hash sums of the inserted blocks are removed from ClickHouse Keeper.
-       * Default value: **604800** (7 days).
+       * Default value: **3600** (1 hour) for versions 25.10 and higher, **604800** (7 days) for versions 25.9 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window_seconds).
        * </pre>
        *
@@ -5959,7 +6247,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of seconds after which the hash sums of the inserted blocks are removed from ClickHouse Keeper.
-       * Default value: **604800** (7 days).
+       * Default value: **3600** (1 hour) for versions 25.10 and higher, **604800** (7 days) for versions 25.9 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window_seconds).
        * </pre>
        *
@@ -5970,7 +6258,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of seconds after which the hash sums of the inserted blocks are removed from ClickHouse Keeper.
-       * Default value: **604800** (7 days).
+       * Default value: **3600** (1 hour) for versions 25.10 and higher, **604800** (7 days) for versions 25.9 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window_seconds).
        * </pre>
        *
@@ -8175,7 +8463,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of most recently inserted blocks for which ClickHouse Keeper stores hash sums to check for duplicates.
-       * Default value: **1000** for versions 23.11 and higher, **100** for versions 23.10 and lower.
+       * Default value: **10000** for versions 25.9 and higher, **1000** for versions from 23.11 to 25.8, **100** for versions 23.10 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window).
        * </pre>
        *
@@ -8189,7 +8477,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of most recently inserted blocks for which ClickHouse Keeper stores hash sums to check for duplicates.
-       * Default value: **1000** for versions 23.11 and higher, **100** for versions 23.10 and lower.
+       * Default value: **10000** for versions 25.9 and higher, **1000** for versions from 23.11 to 25.8, **100** for versions 23.10 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window).
        * </pre>
        *
@@ -8203,7 +8491,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of most recently inserted blocks for which ClickHouse Keeper stores hash sums to check for duplicates.
-       * Default value: **1000** for versions 23.11 and higher, **100** for versions 23.10 and lower.
+       * Default value: **10000** for versions 25.9 and higher, **1000** for versions from 23.11 to 25.8, **100** for versions 23.10 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window).
        * </pre>
        *
@@ -8219,7 +8507,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of seconds after which the hash sums of the inserted blocks are removed from ClickHouse Keeper.
-       * Default value: **604800** (7 days).
+       * Default value: **3600** (1 hour) for versions 25.10 and higher, **604800** (7 days) for versions 25.9 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window_seconds).
        * </pre>
        *
@@ -8233,7 +8521,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of seconds after which the hash sums of the inserted blocks are removed from ClickHouse Keeper.
-       * Default value: **604800** (7 days).
+       * Default value: **3600** (1 hour) for versions 25.10 and higher, **604800** (7 days) for versions 25.9 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window_seconds).
        * </pre>
        *
@@ -8247,7 +8535,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of seconds after which the hash sums of the inserted blocks are removed from ClickHouse Keeper.
-       * Default value: **604800** (7 days).
+       * Default value: **3600** (1 hour) for versions 25.10 and higher, **604800** (7 days) for versions 25.9 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window_seconds).
        * </pre>
        *
@@ -13880,7 +14168,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * The number of most recently inserted blocks for which ClickHouse Keeper stores hash sums to check for duplicates.
-         * Default value: **1000** for versions 23.11 and higher, **100** for versions 23.10 and lower.
+         * Default value: **10000** for versions 25.9 and higher, **1000** for versions from 23.11 to 25.8, **100** for versions 23.10 and lower.
          * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window).
          * </pre>
          *
@@ -13893,7 +14181,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * The number of most recently inserted blocks for which ClickHouse Keeper stores hash sums to check for duplicates.
-         * Default value: **1000** for versions 23.11 and higher, **100** for versions 23.10 and lower.
+         * Default value: **10000** for versions 25.9 and higher, **1000** for versions from 23.11 to 25.8, **100** for versions 23.10 and lower.
          * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window).
          * </pre>
          *
@@ -13910,7 +14198,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * The number of most recently inserted blocks for which ClickHouse Keeper stores hash sums to check for duplicates.
-         * Default value: **1000** for versions 23.11 and higher, **100** for versions 23.10 and lower.
+         * Default value: **10000** for versions 25.9 and higher, **1000** for versions from 23.11 to 25.8, **100** for versions 23.10 and lower.
          * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window).
          * </pre>
          *
@@ -13932,7 +14220,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * The number of most recently inserted blocks for which ClickHouse Keeper stores hash sums to check for duplicates.
-         * Default value: **1000** for versions 23.11 and higher, **100** for versions 23.10 and lower.
+         * Default value: **10000** for versions 25.9 and higher, **1000** for versions from 23.11 to 25.8, **100** for versions 23.10 and lower.
          * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window).
          * </pre>
          *
@@ -13952,7 +14240,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * The number of most recently inserted blocks for which ClickHouse Keeper stores hash sums to check for duplicates.
-         * Default value: **1000** for versions 23.11 and higher, **100** for versions 23.10 and lower.
+         * Default value: **10000** for versions 25.9 and higher, **1000** for versions from 23.11 to 25.8, **100** for versions 23.10 and lower.
          * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window).
          * </pre>
          *
@@ -13976,7 +14264,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * The number of most recently inserted blocks for which ClickHouse Keeper stores hash sums to check for duplicates.
-         * Default value: **1000** for versions 23.11 and higher, **100** for versions 23.10 and lower.
+         * Default value: **10000** for versions 25.9 and higher, **1000** for versions from 23.11 to 25.8, **100** for versions 23.10 and lower.
          * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window).
          * </pre>
          *
@@ -13996,7 +14284,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * The number of most recently inserted blocks for which ClickHouse Keeper stores hash sums to check for duplicates.
-         * Default value: **1000** for versions 23.11 and higher, **100** for versions 23.10 and lower.
+         * Default value: **10000** for versions 25.9 and higher, **1000** for versions from 23.11 to 25.8, **100** for versions 23.10 and lower.
          * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window).
          * </pre>
          *
@@ -14010,7 +14298,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * The number of most recently inserted blocks for which ClickHouse Keeper stores hash sums to check for duplicates.
-         * Default value: **1000** for versions 23.11 and higher, **100** for versions 23.10 and lower.
+         * Default value: **10000** for versions 25.9 and higher, **1000** for versions from 23.11 to 25.8, **100** for versions 23.10 and lower.
          * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window).
          * </pre>
          *
@@ -14027,7 +14315,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * The number of most recently inserted blocks for which ClickHouse Keeper stores hash sums to check for duplicates.
-         * Default value: **1000** for versions 23.11 and higher, **100** for versions 23.10 and lower.
+         * Default value: **10000** for versions 25.9 and higher, **1000** for versions from 23.11 to 25.8, **100** for versions 23.10 and lower.
          * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window).
          * </pre>
          *
@@ -14053,7 +14341,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * The number of seconds after which the hash sums of the inserted blocks are removed from ClickHouse Keeper.
-         * Default value: **604800** (7 days).
+         * Default value: **3600** (1 hour) for versions 25.10 and higher, **604800** (7 days) for versions 25.9 and lower.
          * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window_seconds).
          * </pre>
          *
@@ -14066,7 +14354,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * The number of seconds after which the hash sums of the inserted blocks are removed from ClickHouse Keeper.
-         * Default value: **604800** (7 days).
+         * Default value: **3600** (1 hour) for versions 25.10 and higher, **604800** (7 days) for versions 25.9 and lower.
          * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window_seconds).
          * </pre>
          *
@@ -14083,7 +14371,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * The number of seconds after which the hash sums of the inserted blocks are removed from ClickHouse Keeper.
-         * Default value: **604800** (7 days).
+         * Default value: **3600** (1 hour) for versions 25.10 and higher, **604800** (7 days) for versions 25.9 and lower.
          * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window_seconds).
          * </pre>
          *
@@ -14105,7 +14393,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * The number of seconds after which the hash sums of the inserted blocks are removed from ClickHouse Keeper.
-         * Default value: **604800** (7 days).
+         * Default value: **3600** (1 hour) for versions 25.10 and higher, **604800** (7 days) for versions 25.9 and lower.
          * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window_seconds).
          * </pre>
          *
@@ -14125,7 +14413,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * The number of seconds after which the hash sums of the inserted blocks are removed from ClickHouse Keeper.
-         * Default value: **604800** (7 days).
+         * Default value: **3600** (1 hour) for versions 25.10 and higher, **604800** (7 days) for versions 25.9 and lower.
          * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window_seconds).
          * </pre>
          *
@@ -14149,7 +14437,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * The number of seconds after which the hash sums of the inserted blocks are removed from ClickHouse Keeper.
-         * Default value: **604800** (7 days).
+         * Default value: **3600** (1 hour) for versions 25.10 and higher, **604800** (7 days) for versions 25.9 and lower.
          * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window_seconds).
          * </pre>
          *
@@ -14169,7 +14457,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * The number of seconds after which the hash sums of the inserted blocks are removed from ClickHouse Keeper.
-         * Default value: **604800** (7 days).
+         * Default value: **3600** (1 hour) for versions 25.10 and higher, **604800** (7 days) for versions 25.9 and lower.
          * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window_seconds).
          * </pre>
          *
@@ -14183,7 +14471,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * The number of seconds after which the hash sums of the inserted blocks are removed from ClickHouse Keeper.
-         * Default value: **604800** (7 days).
+         * Default value: **3600** (1 hour) for versions 25.10 and higher, **604800** (7 days) for versions 25.9 and lower.
          * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window_seconds).
          * </pre>
          *
@@ -14200,7 +14488,7 @@ public final class Clickhouse {
         /**
          * <pre>
          * The number of seconds after which the hash sums of the inserted blocks are removed from ClickHouse Keeper.
-         * Default value: **604800** (7 days).
+         * Default value: **3600** (1 hour) for versions 25.10 and higher, **604800** (7 days) for versions 25.9 and lower.
          * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/merge-tree-settings#replicated_deduplication_window_seconds).
          * </pre>
          *
@@ -43946,6 +44234,66 @@ public final class Clickhouse {
        * @return The autoOffsetReset.
        */
       yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.AutoOffsetReset getAutoOffsetReset();
+
+      /**
+       * <pre>
+       * Maximum Kafka protocol request message size.
+       * Default value: **1000000**.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 10 [(.yandex.cloud.value) = "1000-1000000000"];</code>
+       * @return Whether the messageMaxBytes field is set.
+       */
+      boolean hasMessageMaxBytes();
+      /**
+       * <pre>
+       * Maximum Kafka protocol request message size.
+       * Default value: **1000000**.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 10 [(.yandex.cloud.value) = "1000-1000000000"];</code>
+       * @return The messageMaxBytes.
+       */
+      com.google.protobuf.Int64Value getMessageMaxBytes();
+      /**
+       * <pre>
+       * Maximum Kafka protocol request message size.
+       * Default value: **1000000**.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 10 [(.yandex.cloud.value) = "1000-1000000000"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getMessageMaxBytesOrBuilder();
+
+      /**
+       * <pre>
+       * Maximum size (in bytes) of all messages batched in one MessageSet, including protocol framing overhead.
+       * Default value: **1000000**.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value batch_size = 11 [(.yandex.cloud.value) = "1-2147483647"];</code>
+       * @return Whether the batchSize field is set.
+       */
+      boolean hasBatchSize();
+      /**
+       * <pre>
+       * Maximum size (in bytes) of all messages batched in one MessageSet, including protocol framing overhead.
+       * Default value: **1000000**.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value batch_size = 11 [(.yandex.cloud.value) = "1-2147483647"];</code>
+       * @return The batchSize.
+       */
+      com.google.protobuf.Int64Value getBatchSize();
+      /**
+       * <pre>
+       * Maximum size (in bytes) of all messages batched in one MessageSet, including protocol framing overhead.
+       * Default value: **1000000**.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value batch_size = 11 [(.yandex.cloud.value) = "1-2147483647"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getBatchSizeOrBuilder();
     }
     /**
      * <pre>
@@ -44076,6 +44424,32 @@ public final class Clickhouse {
                 int rawValue = input.readEnum();
 
                 autoOffsetReset_ = rawValue;
+                break;
+              }
+              case 82: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (messageMaxBytes_ != null) {
+                  subBuilder = messageMaxBytes_.toBuilder();
+                }
+                messageMaxBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(messageMaxBytes_);
+                  messageMaxBytes_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 90: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (batchSize_ != null) {
+                  subBuilder = batchSize_.toBuilder();
+                }
+                batchSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(batchSize_);
+                  batchSize_ = subBuilder.buildPartial();
+                }
+
                 break;
               }
               default: {
@@ -45171,6 +45545,88 @@ public final class Clickhouse {
         return result == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.AutoOffsetReset.UNRECOGNIZED : result;
       }
 
+      public static final int MESSAGE_MAX_BYTES_FIELD_NUMBER = 10;
+      private com.google.protobuf.Int64Value messageMaxBytes_;
+      /**
+       * <pre>
+       * Maximum Kafka protocol request message size.
+       * Default value: **1000000**.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 10 [(.yandex.cloud.value) = "1000-1000000000"];</code>
+       * @return Whether the messageMaxBytes field is set.
+       */
+      @java.lang.Override
+      public boolean hasMessageMaxBytes() {
+        return messageMaxBytes_ != null;
+      }
+      /**
+       * <pre>
+       * Maximum Kafka protocol request message size.
+       * Default value: **1000000**.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 10 [(.yandex.cloud.value) = "1000-1000000000"];</code>
+       * @return The messageMaxBytes.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getMessageMaxBytes() {
+        return messageMaxBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : messageMaxBytes_;
+      }
+      /**
+       * <pre>
+       * Maximum Kafka protocol request message size.
+       * Default value: **1000000**.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value message_max_bytes = 10 [(.yandex.cloud.value) = "1000-1000000000"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getMessageMaxBytesOrBuilder() {
+        return getMessageMaxBytes();
+      }
+
+      public static final int BATCH_SIZE_FIELD_NUMBER = 11;
+      private com.google.protobuf.Int64Value batchSize_;
+      /**
+       * <pre>
+       * Maximum size (in bytes) of all messages batched in one MessageSet, including protocol framing overhead.
+       * Default value: **1000000**.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value batch_size = 11 [(.yandex.cloud.value) = "1-2147483647"];</code>
+       * @return Whether the batchSize field is set.
+       */
+      @java.lang.Override
+      public boolean hasBatchSize() {
+        return batchSize_ != null;
+      }
+      /**
+       * <pre>
+       * Maximum size (in bytes) of all messages batched in one MessageSet, including protocol framing overhead.
+       * Default value: **1000000**.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value batch_size = 11 [(.yandex.cloud.value) = "1-2147483647"];</code>
+       * @return The batchSize.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getBatchSize() {
+        return batchSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : batchSize_;
+      }
+      /**
+       * <pre>
+       * Maximum size (in bytes) of all messages batched in one MessageSet, including protocol framing overhead.
+       * Default value: **1000000**.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value batch_size = 11 [(.yandex.cloud.value) = "1-2147483647"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getBatchSizeOrBuilder() {
+        return getBatchSize();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -45211,6 +45667,12 @@ public final class Clickhouse {
         }
         if (autoOffsetReset_ != yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.AutoOffsetReset.AUTO_OFFSET_RESET_UNSPECIFIED.getNumber()) {
           output.writeEnum(9, autoOffsetReset_);
+        }
+        if (messageMaxBytes_ != null) {
+          output.writeMessage(10, getMessageMaxBytes());
+        }
+        if (batchSize_ != null) {
+          output.writeMessage(11, getBatchSize());
         }
         unknownFields.writeTo(output);
       }
@@ -45255,6 +45717,14 @@ public final class Clickhouse {
           size += com.google.protobuf.CodedOutputStream
             .computeEnumSize(9, autoOffsetReset_);
         }
+        if (messageMaxBytes_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(10, getMessageMaxBytes());
+        }
+        if (batchSize_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(11, getBatchSize());
+        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -45293,6 +45763,16 @@ public final class Clickhouse {
         }
         if (debug_ != other.debug_) return false;
         if (autoOffsetReset_ != other.autoOffsetReset_) return false;
+        if (hasMessageMaxBytes() != other.hasMessageMaxBytes()) return false;
+        if (hasMessageMaxBytes()) {
+          if (!getMessageMaxBytes()
+              .equals(other.getMessageMaxBytes())) return false;
+        }
+        if (hasBatchSize() != other.hasBatchSize()) return false;
+        if (hasBatchSize()) {
+          if (!getBatchSize()
+              .equals(other.getBatchSize())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -45328,6 +45808,14 @@ public final class Clickhouse {
         hash = (53 * hash) + debug_;
         hash = (37 * hash) + AUTO_OFFSET_RESET_FIELD_NUMBER;
         hash = (53 * hash) + autoOffsetReset_;
+        if (hasMessageMaxBytes()) {
+          hash = (37 * hash) + MESSAGE_MAX_BYTES_FIELD_NUMBER;
+          hash = (53 * hash) + getMessageMaxBytes().hashCode();
+        }
+        if (hasBatchSize()) {
+          hash = (37 * hash) + BATCH_SIZE_FIELD_NUMBER;
+          hash = (53 * hash) + getBatchSize().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -45496,6 +45984,18 @@ public final class Clickhouse {
 
           autoOffsetReset_ = 0;
 
+          if (messageMaxBytesBuilder_ == null) {
+            messageMaxBytes_ = null;
+          } else {
+            messageMaxBytes_ = null;
+            messageMaxBytesBuilder_ = null;
+          }
+          if (batchSizeBuilder_ == null) {
+            batchSize_ = null;
+          } else {
+            batchSize_ = null;
+            batchSizeBuilder_ = null;
+          }
           return this;
         }
 
@@ -45543,6 +46043,16 @@ public final class Clickhouse {
           }
           result.debug_ = debug_;
           result.autoOffsetReset_ = autoOffsetReset_;
+          if (messageMaxBytesBuilder_ == null) {
+            result.messageMaxBytes_ = messageMaxBytes_;
+          } else {
+            result.messageMaxBytes_ = messageMaxBytesBuilder_.build();
+          }
+          if (batchSizeBuilder_ == null) {
+            result.batchSize_ = batchSize_;
+          } else {
+            result.batchSize_ = batchSizeBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -45619,6 +46129,12 @@ public final class Clickhouse {
           }
           if (other.autoOffsetReset_ != 0) {
             setAutoOffsetResetValue(other.getAutoOffsetResetValue());
+          }
+          if (other.hasMessageMaxBytes()) {
+            mergeMessageMaxBytes(other.getMessageMaxBytes());
+          }
+          if (other.hasBatchSize()) {
+            mergeBatchSize(other.getBatchSize());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -46678,6 +47194,334 @@ public final class Clickhouse {
           autoOffsetReset_ = 0;
           onChanged();
           return this;
+        }
+
+        private com.google.protobuf.Int64Value messageMaxBytes_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> messageMaxBytesBuilder_;
+        /**
+         * <pre>
+         * Maximum Kafka protocol request message size.
+         * Default value: **1000000**.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value message_max_bytes = 10 [(.yandex.cloud.value) = "1000-1000000000"];</code>
+         * @return Whether the messageMaxBytes field is set.
+         */
+        public boolean hasMessageMaxBytes() {
+          return messageMaxBytesBuilder_ != null || messageMaxBytes_ != null;
+        }
+        /**
+         * <pre>
+         * Maximum Kafka protocol request message size.
+         * Default value: **1000000**.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value message_max_bytes = 10 [(.yandex.cloud.value) = "1000-1000000000"];</code>
+         * @return The messageMaxBytes.
+         */
+        public com.google.protobuf.Int64Value getMessageMaxBytes() {
+          if (messageMaxBytesBuilder_ == null) {
+            return messageMaxBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : messageMaxBytes_;
+          } else {
+            return messageMaxBytesBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Maximum Kafka protocol request message size.
+         * Default value: **1000000**.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value message_max_bytes = 10 [(.yandex.cloud.value) = "1000-1000000000"];</code>
+         */
+        public Builder setMessageMaxBytes(com.google.protobuf.Int64Value value) {
+          if (messageMaxBytesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            messageMaxBytes_ = value;
+            onChanged();
+          } else {
+            messageMaxBytesBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum Kafka protocol request message size.
+         * Default value: **1000000**.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value message_max_bytes = 10 [(.yandex.cloud.value) = "1000-1000000000"];</code>
+         */
+        public Builder setMessageMaxBytes(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (messageMaxBytesBuilder_ == null) {
+            messageMaxBytes_ = builderForValue.build();
+            onChanged();
+          } else {
+            messageMaxBytesBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum Kafka protocol request message size.
+         * Default value: **1000000**.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value message_max_bytes = 10 [(.yandex.cloud.value) = "1000-1000000000"];</code>
+         */
+        public Builder mergeMessageMaxBytes(com.google.protobuf.Int64Value value) {
+          if (messageMaxBytesBuilder_ == null) {
+            if (messageMaxBytes_ != null) {
+              messageMaxBytes_ =
+                com.google.protobuf.Int64Value.newBuilder(messageMaxBytes_).mergeFrom(value).buildPartial();
+            } else {
+              messageMaxBytes_ = value;
+            }
+            onChanged();
+          } else {
+            messageMaxBytesBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum Kafka protocol request message size.
+         * Default value: **1000000**.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value message_max_bytes = 10 [(.yandex.cloud.value) = "1000-1000000000"];</code>
+         */
+        public Builder clearMessageMaxBytes() {
+          if (messageMaxBytesBuilder_ == null) {
+            messageMaxBytes_ = null;
+            onChanged();
+          } else {
+            messageMaxBytes_ = null;
+            messageMaxBytesBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum Kafka protocol request message size.
+         * Default value: **1000000**.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value message_max_bytes = 10 [(.yandex.cloud.value) = "1000-1000000000"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getMessageMaxBytesBuilder() {
+          
+          onChanged();
+          return getMessageMaxBytesFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Maximum Kafka protocol request message size.
+         * Default value: **1000000**.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value message_max_bytes = 10 [(.yandex.cloud.value) = "1000-1000000000"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getMessageMaxBytesOrBuilder() {
+          if (messageMaxBytesBuilder_ != null) {
+            return messageMaxBytesBuilder_.getMessageOrBuilder();
+          } else {
+            return messageMaxBytes_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : messageMaxBytes_;
+          }
+        }
+        /**
+         * <pre>
+         * Maximum Kafka protocol request message size.
+         * Default value: **1000000**.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value message_max_bytes = 10 [(.yandex.cloud.value) = "1000-1000000000"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getMessageMaxBytesFieldBuilder() {
+          if (messageMaxBytesBuilder_ == null) {
+            messageMaxBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getMessageMaxBytes(),
+                    getParentForChildren(),
+                    isClean());
+            messageMaxBytes_ = null;
+          }
+          return messageMaxBytesBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value batchSize_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> batchSizeBuilder_;
+        /**
+         * <pre>
+         * Maximum size (in bytes) of all messages batched in one MessageSet, including protocol framing overhead.
+         * Default value: **1000000**.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value batch_size = 11 [(.yandex.cloud.value) = "1-2147483647"];</code>
+         * @return Whether the batchSize field is set.
+         */
+        public boolean hasBatchSize() {
+          return batchSizeBuilder_ != null || batchSize_ != null;
+        }
+        /**
+         * <pre>
+         * Maximum size (in bytes) of all messages batched in one MessageSet, including protocol framing overhead.
+         * Default value: **1000000**.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value batch_size = 11 [(.yandex.cloud.value) = "1-2147483647"];</code>
+         * @return The batchSize.
+         */
+        public com.google.protobuf.Int64Value getBatchSize() {
+          if (batchSizeBuilder_ == null) {
+            return batchSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : batchSize_;
+          } else {
+            return batchSizeBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Maximum size (in bytes) of all messages batched in one MessageSet, including protocol framing overhead.
+         * Default value: **1000000**.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value batch_size = 11 [(.yandex.cloud.value) = "1-2147483647"];</code>
+         */
+        public Builder setBatchSize(com.google.protobuf.Int64Value value) {
+          if (batchSizeBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            batchSize_ = value;
+            onChanged();
+          } else {
+            batchSizeBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum size (in bytes) of all messages batched in one MessageSet, including protocol framing overhead.
+         * Default value: **1000000**.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value batch_size = 11 [(.yandex.cloud.value) = "1-2147483647"];</code>
+         */
+        public Builder setBatchSize(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (batchSizeBuilder_ == null) {
+            batchSize_ = builderForValue.build();
+            onChanged();
+          } else {
+            batchSizeBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum size (in bytes) of all messages batched in one MessageSet, including protocol framing overhead.
+         * Default value: **1000000**.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value batch_size = 11 [(.yandex.cloud.value) = "1-2147483647"];</code>
+         */
+        public Builder mergeBatchSize(com.google.protobuf.Int64Value value) {
+          if (batchSizeBuilder_ == null) {
+            if (batchSize_ != null) {
+              batchSize_ =
+                com.google.protobuf.Int64Value.newBuilder(batchSize_).mergeFrom(value).buildPartial();
+            } else {
+              batchSize_ = value;
+            }
+            onChanged();
+          } else {
+            batchSizeBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum size (in bytes) of all messages batched in one MessageSet, including protocol framing overhead.
+         * Default value: **1000000**.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value batch_size = 11 [(.yandex.cloud.value) = "1-2147483647"];</code>
+         */
+        public Builder clearBatchSize() {
+          if (batchSizeBuilder_ == null) {
+            batchSize_ = null;
+            onChanged();
+          } else {
+            batchSize_ = null;
+            batchSizeBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Maximum size (in bytes) of all messages batched in one MessageSet, including protocol framing overhead.
+         * Default value: **1000000**.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value batch_size = 11 [(.yandex.cloud.value) = "1-2147483647"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getBatchSizeBuilder() {
+          
+          onChanged();
+          return getBatchSizeFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Maximum size (in bytes) of all messages batched in one MessageSet, including protocol framing overhead.
+         * Default value: **1000000**.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value batch_size = 11 [(.yandex.cloud.value) = "1-2147483647"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getBatchSizeOrBuilder() {
+          if (batchSizeBuilder_ != null) {
+            return batchSizeBuilder_.getMessageOrBuilder();
+          } else {
+            return batchSize_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : batchSize_;
+          }
+        }
+        /**
+         * <pre>
+         * Maximum size (in bytes) of all messages batched in one MessageSet, including protocol framing overhead.
+         * Default value: **1000000**.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value batch_size = 11 [(.yandex.cloud.value) = "1-2147483647"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getBatchSizeFieldBuilder() {
+          if (batchSizeBuilder_ == null) {
+            batchSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getBatchSize(),
+                    getParentForChildren(),
+                    isClean());
+            batchSize_ = null;
+          }
+          return batchSizeBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -54456,7 +55300,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Enables or disables session_log system table.
-     * Default value: **true** for versions 25.8 and higher, **false** for versions 25.7 and lower.
+     * Default value: **true** for versions 25.3 and higher, **false** for versions 25.2 and lower.
      * Change of the setting is applied with restart.
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/session_log).
      * </pre>
@@ -54471,7 +55315,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Enables or disables session_log system table.
-     * Default value: **true** for versions 25.8 and higher, **false** for versions 25.7 and lower.
+     * Default value: **true** for versions 25.3 and higher, **false** for versions 25.2 and lower.
      * Change of the setting is applied with restart.
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/session_log).
      * </pre>
@@ -54486,7 +55330,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Enables or disables session_log system table.
-     * Default value: **true** for versions 25.8 and higher, **false** for versions 25.7 and lower.
+     * Default value: **true** for versions 25.3 and higher, **false** for versions 25.2 and lower.
      * Change of the setting is applied with restart.
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/session_log).
      * </pre>
@@ -54504,7 +55348,7 @@ public final class Clickhouse {
      * <pre>
      * The maximum size that session_log can grow to before old data will be removed. If set to **0**,
      * automatic removal of session_log data based on size is disabled.
-     * Default value: **536870912** (512 MiB) for versions 25.8 and higher, **0** for versions 25.7 and lower.
+     * Default value: **536870912** (512 MiB) for versions 25.3 and higher, **0** for versions 25.2 and lower.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -54518,7 +55362,7 @@ public final class Clickhouse {
      * <pre>
      * The maximum size that session_log can grow to before old data will be removed. If set to **0**,
      * automatic removal of session_log data based on size is disabled.
-     * Default value: **536870912** (512 MiB) for versions 25.8 and higher, **0** for versions 25.7 and lower.
+     * Default value: **536870912** (512 MiB) for versions 25.3 and higher, **0** for versions 25.2 and lower.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -54532,7 +55376,7 @@ public final class Clickhouse {
      * <pre>
      * The maximum size that session_log can grow to before old data will be removed. If set to **0**,
      * automatic removal of session_log data based on size is disabled.
-     * Default value: **536870912** (512 MiB) for versions 25.8 and higher, **0** for versions 25.7 and lower.
+     * Default value: **536870912** (512 MiB) for versions 25.3 and higher, **0** for versions 25.2 and lower.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -55126,6 +55970,141 @@ public final class Clickhouse {
       return getErrorLogRetentionTime();
     }
 
+    public static final int QUERY_METRIC_LOG_ENABLED_FIELD_NUMBER = 83;
+    private com.google.protobuf.BoolValue queryMetricLogEnabled_;
+    /**
+     * <pre>
+     * Enables or disables query_metric_log system table.
+     * Default value: **false**.
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/query_metric_log).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_metric_log_enabled = 83;</code>
+     * @return Whether the queryMetricLogEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueryMetricLogEnabled() {
+      return queryMetricLogEnabled_ != null;
+    }
+    /**
+     * <pre>
+     * Enables or disables query_metric_log system table.
+     * Default value: **false**.
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/query_metric_log).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_metric_log_enabled = 83;</code>
+     * @return The queryMetricLogEnabled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getQueryMetricLogEnabled() {
+      return queryMetricLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : queryMetricLogEnabled_;
+    }
+    /**
+     * <pre>
+     * Enables or disables query_metric_log system table.
+     * Default value: **false**.
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/query_metric_log).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_metric_log_enabled = 83;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getQueryMetricLogEnabledOrBuilder() {
+      return getQueryMetricLogEnabled();
+    }
+
+    public static final int QUERY_METRIC_LOG_RETENTION_SIZE_FIELD_NUMBER = 84;
+    private com.google.protobuf.Int64Value queryMetricLogRetentionSize_;
+    /**
+     * <pre>
+     * The maximum size that query_metric_log can grow to before old data will be removed. If set to **0**,
+     * automatic removal of query_metric_log data based on size is disabled.
+     * Default value: **536870912** (512 MiB).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_metric_log_retention_size = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the queryMetricLogRetentionSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueryMetricLogRetentionSize() {
+      return queryMetricLogRetentionSize_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum size that query_metric_log can grow to before old data will be removed. If set to **0**,
+     * automatic removal of query_metric_log data based on size is disabled.
+     * Default value: **536870912** (512 MiB).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_metric_log_retention_size = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The queryMetricLogRetentionSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getQueryMetricLogRetentionSize() {
+      return queryMetricLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryMetricLogRetentionSize_;
+    }
+    /**
+     * <pre>
+     * The maximum size that query_metric_log can grow to before old data will be removed. If set to **0**,
+     * automatic removal of query_metric_log data based on size is disabled.
+     * Default value: **536870912** (512 MiB).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_metric_log_retention_size = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getQueryMetricLogRetentionSizeOrBuilder() {
+      return getQueryMetricLogRetentionSize();
+    }
+
+    public static final int QUERY_METRIC_LOG_RETENTION_TIME_FIELD_NUMBER = 85;
+    private com.google.protobuf.Int64Value queryMetricLogRetentionTime_;
+    /**
+     * <pre>
+     * The maximum time that query_metric_log records will be retained before removal. If set to **0**,
+     * automatic removal of query_metric_log data based on time is disabled.
+     * Default value: **2592000000** (30 days).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_metric_log_retention_time = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the queryMetricLogRetentionTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueryMetricLogRetentionTime() {
+      return queryMetricLogRetentionTime_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum time that query_metric_log records will be retained before removal. If set to **0**,
+     * automatic removal of query_metric_log data based on time is disabled.
+     * Default value: **2592000000** (30 days).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_metric_log_retention_time = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The queryMetricLogRetentionTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getQueryMetricLogRetentionTime() {
+      return queryMetricLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryMetricLogRetentionTime_;
+    }
+    /**
+     * <pre>
+     * The maximum time that query_metric_log records will be retained before removal. If set to **0**,
+     * automatic removal of query_metric_log data based on time is disabled.
+     * Default value: **2592000000** (30 days).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_metric_log_retention_time = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getQueryMetricLogRetentionTimeOrBuilder() {
+      return getQueryMetricLogRetentionTime();
+    }
+
     public static final int ACCESS_CONTROL_IMPROVEMENTS_FIELD_NUMBER = 74;
     private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements accessControlImprovements_;
     /**
@@ -55174,7 +56153,7 @@ public final class Clickhouse {
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_connections).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+     * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "128-8192"];</code>
      * @return Whether the maxConnections field is set.
      */
     @java.lang.Override
@@ -55189,7 +56168,7 @@ public final class Clickhouse {
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_connections).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+     * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "128-8192"];</code>
      * @return The maxConnections.
      */
     @java.lang.Override
@@ -55204,7 +56183,7 @@ public final class Clickhouse {
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_connections).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+     * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "128-8192"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder() {
@@ -55220,7 +56199,7 @@ public final class Clickhouse {
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_concurrent_queries).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=50"];</code>
+     * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=100"];</code>
      * @return Whether the maxConcurrentQueries field is set.
      */
     @java.lang.Override
@@ -55234,7 +56213,7 @@ public final class Clickhouse {
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_concurrent_queries).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=50"];</code>
+     * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=100"];</code>
      * @return The maxConcurrentQueries.
      */
     @java.lang.Override
@@ -55248,7 +56227,7 @@ public final class Clickhouse {
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_concurrent_queries).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=50"];</code>
+     * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=100"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxConcurrentQueriesOrBuilder() {
@@ -55348,7 +56327,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * The number of seconds that ClickHouse waits for incoming requests for HTTP protocol before closing the connection.
-     * Default value: **30**.
+     * Default value: **3** for versions 25.10 and higher, **30** for versions 25.9 and lower.
      * Change of the setting is applied with restart.
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#keep_alive_timeout).
      * </pre>
@@ -55363,7 +56342,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * The number of seconds that ClickHouse waits for incoming requests for HTTP protocol before closing the connection.
-     * Default value: **30**.
+     * Default value: **3** for versions 25.10 and higher, **30** for versions 25.9 and lower.
      * Change of the setting is applied with restart.
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#keep_alive_timeout).
      * </pre>
@@ -55378,7 +56357,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * The number of seconds that ClickHouse waits for incoming requests for HTTP protocol before closing the connection.
-     * Default value: **30**.
+     * Default value: **3** for versions 25.10 and higher, **30** for versions 25.9 and lower.
      * Change of the setting is applied with restart.
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#keep_alive_timeout).
      * </pre>
@@ -55904,6 +56883,147 @@ public final class Clickhouse {
       return getRestoreThreads();
     }
 
+    public static final int VECTOR_SIMILARITY_INDEX_CACHE_SIZE_FIELD_NUMBER = 86;
+    private com.google.protobuf.Int64Value vectorSimilarityIndexCacheSize_;
+    /**
+     * <pre>
+     * Size of cache for vector similarity indexes, in bytes. **0** means disabled.
+     * Default value: **5368709120** (5 GiB).
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vector_similarity_index_cache_size = 86 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the vectorSimilarityIndexCacheSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasVectorSimilarityIndexCacheSize() {
+      return vectorSimilarityIndexCacheSize_ != null;
+    }
+    /**
+     * <pre>
+     * Size of cache for vector similarity indexes, in bytes. **0** means disabled.
+     * Default value: **5368709120** (5 GiB).
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vector_similarity_index_cache_size = 86 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The vectorSimilarityIndexCacheSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getVectorSimilarityIndexCacheSize() {
+      return vectorSimilarityIndexCacheSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : vectorSimilarityIndexCacheSize_;
+    }
+    /**
+     * <pre>
+     * Size of cache for vector similarity indexes, in bytes. **0** means disabled.
+     * Default value: **5368709120** (5 GiB).
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vector_similarity_index_cache_size = 86 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getVectorSimilarityIndexCacheSizeOrBuilder() {
+      return getVectorSimilarityIndexCacheSize();
+    }
+
+    public static final int VECTOR_SIMILARITY_INDEX_CACHE_MAX_ENTRIES_FIELD_NUMBER = 87;
+    private com.google.protobuf.Int64Value vectorSimilarityIndexCacheMaxEntries_;
+    /**
+     * <pre>
+     * Size of cache for vector similarity indexes, in entries. **0** means disabled.
+     * Default value: **10000000**.
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_max_entries).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vector_similarity_index_cache_max_entries = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the vectorSimilarityIndexCacheMaxEntries field is set.
+     */
+    @java.lang.Override
+    public boolean hasVectorSimilarityIndexCacheMaxEntries() {
+      return vectorSimilarityIndexCacheMaxEntries_ != null;
+    }
+    /**
+     * <pre>
+     * Size of cache for vector similarity indexes, in entries. **0** means disabled.
+     * Default value: **10000000**.
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_max_entries).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vector_similarity_index_cache_max_entries = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The vectorSimilarityIndexCacheMaxEntries.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getVectorSimilarityIndexCacheMaxEntries() {
+      return vectorSimilarityIndexCacheMaxEntries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : vectorSimilarityIndexCacheMaxEntries_;
+    }
+    /**
+     * <pre>
+     * Size of cache for vector similarity indexes, in entries. **0** means disabled.
+     * Default value: **10000000**.
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_max_entries).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vector_similarity_index_cache_max_entries = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getVectorSimilarityIndexCacheMaxEntriesOrBuilder() {
+      return getVectorSimilarityIndexCacheMaxEntries();
+    }
+
+    public static final int MAX_BUILD_VECTOR_SIMILARITY_INDEX_THREAD_POOL_SIZE_FIELD_NUMBER = 88;
+    private com.google.protobuf.Int64Value maxBuildVectorSimilarityIndexThreadPoolSize_;
+    /**
+     * <pre>
+     * The maximum number of threads to use for building vector indexes. **0** means unlimited.
+     * Default value: **16**.
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_build_vector_similarity_index_thread_pool_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_build_vector_similarity_index_thread_pool_size = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxBuildVectorSimilarityIndexThreadPoolSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxBuildVectorSimilarityIndexThreadPoolSize() {
+      return maxBuildVectorSimilarityIndexThreadPoolSize_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum number of threads to use for building vector indexes. **0** means unlimited.
+     * Default value: **16**.
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_build_vector_similarity_index_thread_pool_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_build_vector_similarity_index_thread_pool_size = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxBuildVectorSimilarityIndexThreadPoolSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxBuildVectorSimilarityIndexThreadPoolSize() {
+      return maxBuildVectorSimilarityIndexThreadPoolSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBuildVectorSimilarityIndexThreadPoolSize_;
+    }
+    /**
+     * <pre>
+     * The maximum number of threads to use for building vector indexes. **0** means unlimited.
+     * Default value: **16**.
+     * Change of the setting is applied with restart.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_build_vector_similarity_index_thread_pool_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_build_vector_similarity_index_thread_pool_size = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxBuildVectorSimilarityIndexThreadPoolSizeOrBuilder() {
+      return getMaxBuildVectorSimilarityIndexThreadPoolSize();
+    }
+
     public static final int MERGE_TREE_FIELD_NUMBER = 2;
     private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree mergeTree_;
     /**
@@ -56204,10 +57324,10 @@ public final class Clickhouse {
      * Change of the settings of **kafka_topics** is applied with restart.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic> getKafkaTopicsList() {
+    @java.lang.Deprecated public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic> getKafkaTopicsList() {
       return kafkaTopics_;
     }
     /**
@@ -56216,10 +57336,10 @@ public final class Clickhouse {
      * Change of the settings of **kafka_topics** is applied with restart.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder> 
         getKafkaTopicsOrBuilderList() {
       return kafkaTopics_;
     }
@@ -56229,10 +57349,10 @@ public final class Clickhouse {
      * Change of the settings of **kafka_topics** is applied with restart.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
      */
     @java.lang.Override
-    public int getKafkaTopicsCount() {
+    @java.lang.Deprecated public int getKafkaTopicsCount() {
       return kafkaTopics_.size();
     }
     /**
@@ -56241,10 +57361,10 @@ public final class Clickhouse {
      * Change of the settings of **kafka_topics** is applied with restart.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic getKafkaTopics(int index) {
+    @java.lang.Deprecated public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic getKafkaTopics(int index) {
       return kafkaTopics_.get(index);
     }
     /**
@@ -56253,10 +57373,10 @@ public final class Clickhouse {
      * Change of the settings of **kafka_topics** is applied with restart.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder getKafkaTopicsOrBuilder(
+    @java.lang.Deprecated public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder getKafkaTopicsOrBuilder(
         int index) {
       return kafkaTopics_.get(index);
     }
@@ -56877,6 +57997,24 @@ public final class Clickhouse {
       for (int i = 0; i < customMacros_.size(); i++) {
         output.writeMessage(82, customMacros_.get(i));
       }
+      if (queryMetricLogEnabled_ != null) {
+        output.writeMessage(83, getQueryMetricLogEnabled());
+      }
+      if (queryMetricLogRetentionSize_ != null) {
+        output.writeMessage(84, getQueryMetricLogRetentionSize());
+      }
+      if (queryMetricLogRetentionTime_ != null) {
+        output.writeMessage(85, getQueryMetricLogRetentionTime());
+      }
+      if (vectorSimilarityIndexCacheSize_ != null) {
+        output.writeMessage(86, getVectorSimilarityIndexCacheSize());
+      }
+      if (vectorSimilarityIndexCacheMaxEntries_ != null) {
+        output.writeMessage(87, getVectorSimilarityIndexCacheMaxEntries());
+      }
+      if (maxBuildVectorSimilarityIndexThreadPoolSize_ != null) {
+        output.writeMessage(88, getMaxBuildVectorSimilarityIndexThreadPoolSize());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -57212,6 +58350,30 @@ public final class Clickhouse {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(82, customMacros_.get(i));
       }
+      if (queryMetricLogEnabled_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(83, getQueryMetricLogEnabled());
+      }
+      if (queryMetricLogRetentionSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(84, getQueryMetricLogRetentionSize());
+      }
+      if (queryMetricLogRetentionTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(85, getQueryMetricLogRetentionTime());
+      }
+      if (vectorSimilarityIndexCacheSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(86, getVectorSimilarityIndexCacheSize());
+      }
+      if (vectorSimilarityIndexCacheMaxEntries_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(87, getVectorSimilarityIndexCacheMaxEntries());
+      }
+      if (maxBuildVectorSimilarityIndexThreadPoolSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(88, getMaxBuildVectorSimilarityIndexThreadPoolSize());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -57479,6 +58641,21 @@ public final class Clickhouse {
         if (!getErrorLogRetentionTime()
             .equals(other.getErrorLogRetentionTime())) return false;
       }
+      if (hasQueryMetricLogEnabled() != other.hasQueryMetricLogEnabled()) return false;
+      if (hasQueryMetricLogEnabled()) {
+        if (!getQueryMetricLogEnabled()
+            .equals(other.getQueryMetricLogEnabled())) return false;
+      }
+      if (hasQueryMetricLogRetentionSize() != other.hasQueryMetricLogRetentionSize()) return false;
+      if (hasQueryMetricLogRetentionSize()) {
+        if (!getQueryMetricLogRetentionSize()
+            .equals(other.getQueryMetricLogRetentionSize())) return false;
+      }
+      if (hasQueryMetricLogRetentionTime() != other.hasQueryMetricLogRetentionTime()) return false;
+      if (hasQueryMetricLogRetentionTime()) {
+        if (!getQueryMetricLogRetentionTime()
+            .equals(other.getQueryMetricLogRetentionTime())) return false;
+      }
       if (hasAccessControlImprovements() != other.hasAccessControlImprovements()) return false;
       if (hasAccessControlImprovements()) {
         if (!getAccessControlImprovements()
@@ -57557,6 +58734,21 @@ public final class Clickhouse {
       if (hasRestoreThreads()) {
         if (!getRestoreThreads()
             .equals(other.getRestoreThreads())) return false;
+      }
+      if (hasVectorSimilarityIndexCacheSize() != other.hasVectorSimilarityIndexCacheSize()) return false;
+      if (hasVectorSimilarityIndexCacheSize()) {
+        if (!getVectorSimilarityIndexCacheSize()
+            .equals(other.getVectorSimilarityIndexCacheSize())) return false;
+      }
+      if (hasVectorSimilarityIndexCacheMaxEntries() != other.hasVectorSimilarityIndexCacheMaxEntries()) return false;
+      if (hasVectorSimilarityIndexCacheMaxEntries()) {
+        if (!getVectorSimilarityIndexCacheMaxEntries()
+            .equals(other.getVectorSimilarityIndexCacheMaxEntries())) return false;
+      }
+      if (hasMaxBuildVectorSimilarityIndexThreadPoolSize() != other.hasMaxBuildVectorSimilarityIndexThreadPoolSize()) return false;
+      if (hasMaxBuildVectorSimilarityIndexThreadPoolSize()) {
+        if (!getMaxBuildVectorSimilarityIndexThreadPoolSize()
+            .equals(other.getMaxBuildVectorSimilarityIndexThreadPoolSize())) return false;
       }
       if (hasMergeTree() != other.hasMergeTree()) return false;
       if (hasMergeTree()) {
@@ -57820,6 +59012,18 @@ public final class Clickhouse {
         hash = (37 * hash) + ERROR_LOG_RETENTION_TIME_FIELD_NUMBER;
         hash = (53 * hash) + getErrorLogRetentionTime().hashCode();
       }
+      if (hasQueryMetricLogEnabled()) {
+        hash = (37 * hash) + QUERY_METRIC_LOG_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + getQueryMetricLogEnabled().hashCode();
+      }
+      if (hasQueryMetricLogRetentionSize()) {
+        hash = (37 * hash) + QUERY_METRIC_LOG_RETENTION_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getQueryMetricLogRetentionSize().hashCode();
+      }
+      if (hasQueryMetricLogRetentionTime()) {
+        hash = (37 * hash) + QUERY_METRIC_LOG_RETENTION_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getQueryMetricLogRetentionTime().hashCode();
+      }
       if (hasAccessControlImprovements()) {
         hash = (37 * hash) + ACCESS_CONTROL_IMPROVEMENTS_FIELD_NUMBER;
         hash = (53 * hash) + getAccessControlImprovements().hashCode();
@@ -57883,6 +59087,18 @@ public final class Clickhouse {
       if (hasRestoreThreads()) {
         hash = (37 * hash) + RESTORE_THREADS_FIELD_NUMBER;
         hash = (53 * hash) + getRestoreThreads().hashCode();
+      }
+      if (hasVectorSimilarityIndexCacheSize()) {
+        hash = (37 * hash) + VECTOR_SIMILARITY_INDEX_CACHE_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getVectorSimilarityIndexCacheSize().hashCode();
+      }
+      if (hasVectorSimilarityIndexCacheMaxEntries()) {
+        hash = (37 * hash) + VECTOR_SIMILARITY_INDEX_CACHE_MAX_ENTRIES_FIELD_NUMBER;
+        hash = (53 * hash) + getVectorSimilarityIndexCacheMaxEntries().hashCode();
+      }
+      if (hasMaxBuildVectorSimilarityIndexThreadPoolSize()) {
+        hash = (37 * hash) + MAX_BUILD_VECTOR_SIMILARITY_INDEX_THREAD_POOL_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxBuildVectorSimilarityIndexThreadPoolSize().hashCode();
       }
       if (hasMergeTree()) {
         hash = (37 * hash) + MERGE_TREE_FIELD_NUMBER;
@@ -58384,6 +59600,24 @@ public final class Clickhouse {
           errorLogRetentionTime_ = null;
           errorLogRetentionTimeBuilder_ = null;
         }
+        if (queryMetricLogEnabledBuilder_ == null) {
+          queryMetricLogEnabled_ = null;
+        } else {
+          queryMetricLogEnabled_ = null;
+          queryMetricLogEnabledBuilder_ = null;
+        }
+        if (queryMetricLogRetentionSizeBuilder_ == null) {
+          queryMetricLogRetentionSize_ = null;
+        } else {
+          queryMetricLogRetentionSize_ = null;
+          queryMetricLogRetentionSizeBuilder_ = null;
+        }
+        if (queryMetricLogRetentionTimeBuilder_ == null) {
+          queryMetricLogRetentionTime_ = null;
+        } else {
+          queryMetricLogRetentionTime_ = null;
+          queryMetricLogRetentionTimeBuilder_ = null;
+        }
         if (accessControlImprovementsBuilder_ == null) {
           accessControlImprovements_ = null;
         } else {
@@ -58477,6 +59711,24 @@ public final class Clickhouse {
         } else {
           restoreThreads_ = null;
           restoreThreadsBuilder_ = null;
+        }
+        if (vectorSimilarityIndexCacheSizeBuilder_ == null) {
+          vectorSimilarityIndexCacheSize_ = null;
+        } else {
+          vectorSimilarityIndexCacheSize_ = null;
+          vectorSimilarityIndexCacheSizeBuilder_ = null;
+        }
+        if (vectorSimilarityIndexCacheMaxEntriesBuilder_ == null) {
+          vectorSimilarityIndexCacheMaxEntries_ = null;
+        } else {
+          vectorSimilarityIndexCacheMaxEntries_ = null;
+          vectorSimilarityIndexCacheMaxEntriesBuilder_ = null;
+        }
+        if (maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_ == null) {
+          maxBuildVectorSimilarityIndexThreadPoolSize_ = null;
+        } else {
+          maxBuildVectorSimilarityIndexThreadPoolSize_ = null;
+          maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_ = null;
         }
         if (mergeTreeBuilder_ == null) {
           mergeTree_ = null;
@@ -58835,6 +60087,21 @@ public final class Clickhouse {
         } else {
           result.errorLogRetentionTime_ = errorLogRetentionTimeBuilder_.build();
         }
+        if (queryMetricLogEnabledBuilder_ == null) {
+          result.queryMetricLogEnabled_ = queryMetricLogEnabled_;
+        } else {
+          result.queryMetricLogEnabled_ = queryMetricLogEnabledBuilder_.build();
+        }
+        if (queryMetricLogRetentionSizeBuilder_ == null) {
+          result.queryMetricLogRetentionSize_ = queryMetricLogRetentionSize_;
+        } else {
+          result.queryMetricLogRetentionSize_ = queryMetricLogRetentionSizeBuilder_.build();
+        }
+        if (queryMetricLogRetentionTimeBuilder_ == null) {
+          result.queryMetricLogRetentionTime_ = queryMetricLogRetentionTime_;
+        } else {
+          result.queryMetricLogRetentionTime_ = queryMetricLogRetentionTimeBuilder_.build();
+        }
         if (accessControlImprovementsBuilder_ == null) {
           result.accessControlImprovements_ = accessControlImprovements_;
         } else {
@@ -58911,6 +60178,21 @@ public final class Clickhouse {
           result.restoreThreads_ = restoreThreads_;
         } else {
           result.restoreThreads_ = restoreThreadsBuilder_.build();
+        }
+        if (vectorSimilarityIndexCacheSizeBuilder_ == null) {
+          result.vectorSimilarityIndexCacheSize_ = vectorSimilarityIndexCacheSize_;
+        } else {
+          result.vectorSimilarityIndexCacheSize_ = vectorSimilarityIndexCacheSizeBuilder_.build();
+        }
+        if (vectorSimilarityIndexCacheMaxEntriesBuilder_ == null) {
+          result.vectorSimilarityIndexCacheMaxEntries_ = vectorSimilarityIndexCacheMaxEntries_;
+        } else {
+          result.vectorSimilarityIndexCacheMaxEntries_ = vectorSimilarityIndexCacheMaxEntriesBuilder_.build();
+        }
+        if (maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_ == null) {
+          result.maxBuildVectorSimilarityIndexThreadPoolSize_ = maxBuildVectorSimilarityIndexThreadPoolSize_;
+        } else {
+          result.maxBuildVectorSimilarityIndexThreadPoolSize_ = maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_.build();
         }
         if (mergeTreeBuilder_ == null) {
           result.mergeTree_ = mergeTree_;
@@ -59205,6 +60487,15 @@ public final class Clickhouse {
         if (other.hasErrorLogRetentionTime()) {
           mergeErrorLogRetentionTime(other.getErrorLogRetentionTime());
         }
+        if (other.hasQueryMetricLogEnabled()) {
+          mergeQueryMetricLogEnabled(other.getQueryMetricLogEnabled());
+        }
+        if (other.hasQueryMetricLogRetentionSize()) {
+          mergeQueryMetricLogRetentionSize(other.getQueryMetricLogRetentionSize());
+        }
+        if (other.hasQueryMetricLogRetentionTime()) {
+          mergeQueryMetricLogRetentionTime(other.getQueryMetricLogRetentionTime());
+        }
         if (other.hasAccessControlImprovements()) {
           mergeAccessControlImprovements(other.getAccessControlImprovements());
         }
@@ -59257,6 +60548,15 @@ public final class Clickhouse {
         }
         if (other.hasRestoreThreads()) {
           mergeRestoreThreads(other.getRestoreThreads());
+        }
+        if (other.hasVectorSimilarityIndexCacheSize()) {
+          mergeVectorSimilarityIndexCacheSize(other.getVectorSimilarityIndexCacheSize());
+        }
+        if (other.hasVectorSimilarityIndexCacheMaxEntries()) {
+          mergeVectorSimilarityIndexCacheMaxEntries(other.getVectorSimilarityIndexCacheMaxEntries());
+        }
+        if (other.hasMaxBuildVectorSimilarityIndexThreadPoolSize()) {
+          mergeMaxBuildVectorSimilarityIndexThreadPoolSize(other.getMaxBuildVectorSimilarityIndexThreadPoolSize());
         }
         if (other.hasMergeTree()) {
           mergeMergeTree(other.getMergeTree());
@@ -65855,7 +67155,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Enables or disables session_log system table.
-       * Default value: **true** for versions 25.8 and higher, **false** for versions 25.7 and lower.
+       * Default value: **true** for versions 25.3 and higher, **false** for versions 25.2 and lower.
        * Change of the setting is applied with restart.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/session_log).
        * </pre>
@@ -65869,7 +67169,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Enables or disables session_log system table.
-       * Default value: **true** for versions 25.8 and higher, **false** for versions 25.7 and lower.
+       * Default value: **true** for versions 25.3 and higher, **false** for versions 25.2 and lower.
        * Change of the setting is applied with restart.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/session_log).
        * </pre>
@@ -65887,7 +67187,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Enables or disables session_log system table.
-       * Default value: **true** for versions 25.8 and higher, **false** for versions 25.7 and lower.
+       * Default value: **true** for versions 25.3 and higher, **false** for versions 25.2 and lower.
        * Change of the setting is applied with restart.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/session_log).
        * </pre>
@@ -65910,7 +67210,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Enables or disables session_log system table.
-       * Default value: **true** for versions 25.8 and higher, **false** for versions 25.7 and lower.
+       * Default value: **true** for versions 25.3 and higher, **false** for versions 25.2 and lower.
        * Change of the setting is applied with restart.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/session_log).
        * </pre>
@@ -65931,7 +67231,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Enables or disables session_log system table.
-       * Default value: **true** for versions 25.8 and higher, **false** for versions 25.7 and lower.
+       * Default value: **true** for versions 25.3 and higher, **false** for versions 25.2 and lower.
        * Change of the setting is applied with restart.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/session_log).
        * </pre>
@@ -65956,7 +67256,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Enables or disables session_log system table.
-       * Default value: **true** for versions 25.8 and higher, **false** for versions 25.7 and lower.
+       * Default value: **true** for versions 25.3 and higher, **false** for versions 25.2 and lower.
        * Change of the setting is applied with restart.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/session_log).
        * </pre>
@@ -65977,7 +67277,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Enables or disables session_log system table.
-       * Default value: **true** for versions 25.8 and higher, **false** for versions 25.7 and lower.
+       * Default value: **true** for versions 25.3 and higher, **false** for versions 25.2 and lower.
        * Change of the setting is applied with restart.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/session_log).
        * </pre>
@@ -65992,7 +67292,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Enables or disables session_log system table.
-       * Default value: **true** for versions 25.8 and higher, **false** for versions 25.7 and lower.
+       * Default value: **true** for versions 25.3 and higher, **false** for versions 25.2 and lower.
        * Change of the setting is applied with restart.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/session_log).
        * </pre>
@@ -66010,7 +67310,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Enables or disables session_log system table.
-       * Default value: **true** for versions 25.8 and higher, **false** for versions 25.7 and lower.
+       * Default value: **true** for versions 25.3 and higher, **false** for versions 25.2 and lower.
        * Change of the setting is applied with restart.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/session_log).
        * </pre>
@@ -66038,7 +67338,7 @@ public final class Clickhouse {
        * <pre>
        * The maximum size that session_log can grow to before old data will be removed. If set to **0**,
        * automatic removal of session_log data based on size is disabled.
-       * Default value: **536870912** (512 MiB) for versions 25.8 and higher, **0** for versions 25.7 and lower.
+       * Default value: **536870912** (512 MiB) for versions 25.3 and higher, **0** for versions 25.2 and lower.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -66051,7 +67351,7 @@ public final class Clickhouse {
        * <pre>
        * The maximum size that session_log can grow to before old data will be removed. If set to **0**,
        * automatic removal of session_log data based on size is disabled.
-       * Default value: **536870912** (512 MiB) for versions 25.8 and higher, **0** for versions 25.7 and lower.
+       * Default value: **536870912** (512 MiB) for versions 25.3 and higher, **0** for versions 25.2 and lower.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -66068,7 +67368,7 @@ public final class Clickhouse {
        * <pre>
        * The maximum size that session_log can grow to before old data will be removed. If set to **0**,
        * automatic removal of session_log data based on size is disabled.
-       * Default value: **536870912** (512 MiB) for versions 25.8 and higher, **0** for versions 25.7 and lower.
+       * Default value: **536870912** (512 MiB) for versions 25.3 and higher, **0** for versions 25.2 and lower.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -66090,7 +67390,7 @@ public final class Clickhouse {
        * <pre>
        * The maximum size that session_log can grow to before old data will be removed. If set to **0**,
        * automatic removal of session_log data based on size is disabled.
-       * Default value: **536870912** (512 MiB) for versions 25.8 and higher, **0** for versions 25.7 and lower.
+       * Default value: **536870912** (512 MiB) for versions 25.3 and higher, **0** for versions 25.2 and lower.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -66110,7 +67410,7 @@ public final class Clickhouse {
        * <pre>
        * The maximum size that session_log can grow to before old data will be removed. If set to **0**,
        * automatic removal of session_log data based on size is disabled.
-       * Default value: **536870912** (512 MiB) for versions 25.8 and higher, **0** for versions 25.7 and lower.
+       * Default value: **536870912** (512 MiB) for versions 25.3 and higher, **0** for versions 25.2 and lower.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -66134,7 +67434,7 @@ public final class Clickhouse {
        * <pre>
        * The maximum size that session_log can grow to before old data will be removed. If set to **0**,
        * automatic removal of session_log data based on size is disabled.
-       * Default value: **536870912** (512 MiB) for versions 25.8 and higher, **0** for versions 25.7 and lower.
+       * Default value: **536870912** (512 MiB) for versions 25.3 and higher, **0** for versions 25.2 and lower.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -66154,7 +67454,7 @@ public final class Clickhouse {
        * <pre>
        * The maximum size that session_log can grow to before old data will be removed. If set to **0**,
        * automatic removal of session_log data based on size is disabled.
-       * Default value: **536870912** (512 MiB) for versions 25.8 and higher, **0** for versions 25.7 and lower.
+       * Default value: **536870912** (512 MiB) for versions 25.3 and higher, **0** for versions 25.2 and lower.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -66168,7 +67468,7 @@ public final class Clickhouse {
        * <pre>
        * The maximum size that session_log can grow to before old data will be removed. If set to **0**,
        * automatic removal of session_log data based on size is disabled.
-       * Default value: **536870912** (512 MiB) for versions 25.8 and higher, **0** for versions 25.7 and lower.
+       * Default value: **536870912** (512 MiB) for versions 25.3 and higher, **0** for versions 25.2 and lower.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -66185,7 +67485,7 @@ public final class Clickhouse {
        * <pre>
        * The maximum size that session_log can grow to before old data will be removed. If set to **0**,
        * automatic removal of session_log data based on size is disabled.
-       * Default value: **536870912** (512 MiB) for versions 25.8 and higher, **0** for versions 25.7 and lower.
+       * Default value: **536870912** (512 MiB) for versions 25.3 and higher, **0** for versions 25.2 and lower.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -68489,6 +69789,534 @@ public final class Clickhouse {
         return errorLogRetentionTimeBuilder_;
       }
 
+      private com.google.protobuf.BoolValue queryMetricLogEnabled_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> queryMetricLogEnabledBuilder_;
+      /**
+       * <pre>
+       * Enables or disables query_metric_log system table.
+       * Default value: **false**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/query_metric_log).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_metric_log_enabled = 83;</code>
+       * @return Whether the queryMetricLogEnabled field is set.
+       */
+      public boolean hasQueryMetricLogEnabled() {
+        return queryMetricLogEnabledBuilder_ != null || queryMetricLogEnabled_ != null;
+      }
+      /**
+       * <pre>
+       * Enables or disables query_metric_log system table.
+       * Default value: **false**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/query_metric_log).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_metric_log_enabled = 83;</code>
+       * @return The queryMetricLogEnabled.
+       */
+      public com.google.protobuf.BoolValue getQueryMetricLogEnabled() {
+        if (queryMetricLogEnabledBuilder_ == null) {
+          return queryMetricLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : queryMetricLogEnabled_;
+        } else {
+          return queryMetricLogEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enables or disables query_metric_log system table.
+       * Default value: **false**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/query_metric_log).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_metric_log_enabled = 83;</code>
+       */
+      public Builder setQueryMetricLogEnabled(com.google.protobuf.BoolValue value) {
+        if (queryMetricLogEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          queryMetricLogEnabled_ = value;
+          onChanged();
+        } else {
+          queryMetricLogEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables query_metric_log system table.
+       * Default value: **false**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/query_metric_log).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_metric_log_enabled = 83;</code>
+       */
+      public Builder setQueryMetricLogEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (queryMetricLogEnabledBuilder_ == null) {
+          queryMetricLogEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          queryMetricLogEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables query_metric_log system table.
+       * Default value: **false**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/query_metric_log).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_metric_log_enabled = 83;</code>
+       */
+      public Builder mergeQueryMetricLogEnabled(com.google.protobuf.BoolValue value) {
+        if (queryMetricLogEnabledBuilder_ == null) {
+          if (queryMetricLogEnabled_ != null) {
+            queryMetricLogEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(queryMetricLogEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            queryMetricLogEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          queryMetricLogEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables query_metric_log system table.
+       * Default value: **false**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/query_metric_log).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_metric_log_enabled = 83;</code>
+       */
+      public Builder clearQueryMetricLogEnabled() {
+        if (queryMetricLogEnabledBuilder_ == null) {
+          queryMetricLogEnabled_ = null;
+          onChanged();
+        } else {
+          queryMetricLogEnabled_ = null;
+          queryMetricLogEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables query_metric_log system table.
+       * Default value: **false**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/query_metric_log).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_metric_log_enabled = 83;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getQueryMetricLogEnabledBuilder() {
+        
+        onChanged();
+        return getQueryMetricLogEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enables or disables query_metric_log system table.
+       * Default value: **false**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/query_metric_log).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_metric_log_enabled = 83;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getQueryMetricLogEnabledOrBuilder() {
+        if (queryMetricLogEnabledBuilder_ != null) {
+          return queryMetricLogEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return queryMetricLogEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : queryMetricLogEnabled_;
+        }
+      }
+      /**
+       * <pre>
+       * Enables or disables query_metric_log system table.
+       * Default value: **false**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/system-tables/query_metric_log).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_metric_log_enabled = 83;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getQueryMetricLogEnabledFieldBuilder() {
+        if (queryMetricLogEnabledBuilder_ == null) {
+          queryMetricLogEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getQueryMetricLogEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          queryMetricLogEnabled_ = null;
+        }
+        return queryMetricLogEnabledBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value queryMetricLogRetentionSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> queryMetricLogRetentionSizeBuilder_;
+      /**
+       * <pre>
+       * The maximum size that query_metric_log can grow to before old data will be removed. If set to **0**,
+       * automatic removal of query_metric_log data based on size is disabled.
+       * Default value: **536870912** (512 MiB).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_metric_log_retention_size = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the queryMetricLogRetentionSize field is set.
+       */
+      public boolean hasQueryMetricLogRetentionSize() {
+        return queryMetricLogRetentionSizeBuilder_ != null || queryMetricLogRetentionSize_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum size that query_metric_log can grow to before old data will be removed. If set to **0**,
+       * automatic removal of query_metric_log data based on size is disabled.
+       * Default value: **536870912** (512 MiB).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_metric_log_retention_size = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The queryMetricLogRetentionSize.
+       */
+      public com.google.protobuf.Int64Value getQueryMetricLogRetentionSize() {
+        if (queryMetricLogRetentionSizeBuilder_ == null) {
+          return queryMetricLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryMetricLogRetentionSize_;
+        } else {
+          return queryMetricLogRetentionSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size that query_metric_log can grow to before old data will be removed. If set to **0**,
+       * automatic removal of query_metric_log data based on size is disabled.
+       * Default value: **536870912** (512 MiB).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_metric_log_retention_size = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setQueryMetricLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (queryMetricLogRetentionSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          queryMetricLogRetentionSize_ = value;
+          onChanged();
+        } else {
+          queryMetricLogRetentionSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that query_metric_log can grow to before old data will be removed. If set to **0**,
+       * automatic removal of query_metric_log data based on size is disabled.
+       * Default value: **536870912** (512 MiB).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_metric_log_retention_size = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setQueryMetricLogRetentionSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (queryMetricLogRetentionSizeBuilder_ == null) {
+          queryMetricLogRetentionSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          queryMetricLogRetentionSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that query_metric_log can grow to before old data will be removed. If set to **0**,
+       * automatic removal of query_metric_log data based on size is disabled.
+       * Default value: **536870912** (512 MiB).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_metric_log_retention_size = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeQueryMetricLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (queryMetricLogRetentionSizeBuilder_ == null) {
+          if (queryMetricLogRetentionSize_ != null) {
+            queryMetricLogRetentionSize_ =
+              com.google.protobuf.Int64Value.newBuilder(queryMetricLogRetentionSize_).mergeFrom(value).buildPartial();
+          } else {
+            queryMetricLogRetentionSize_ = value;
+          }
+          onChanged();
+        } else {
+          queryMetricLogRetentionSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that query_metric_log can grow to before old data will be removed. If set to **0**,
+       * automatic removal of query_metric_log data based on size is disabled.
+       * Default value: **536870912** (512 MiB).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_metric_log_retention_size = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearQueryMetricLogRetentionSize() {
+        if (queryMetricLogRetentionSizeBuilder_ == null) {
+          queryMetricLogRetentionSize_ = null;
+          onChanged();
+        } else {
+          queryMetricLogRetentionSize_ = null;
+          queryMetricLogRetentionSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that query_metric_log can grow to before old data will be removed. If set to **0**,
+       * automatic removal of query_metric_log data based on size is disabled.
+       * Default value: **536870912** (512 MiB).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_metric_log_retention_size = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getQueryMetricLogRetentionSizeBuilder() {
+        
+        onChanged();
+        return getQueryMetricLogRetentionSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum size that query_metric_log can grow to before old data will be removed. If set to **0**,
+       * automatic removal of query_metric_log data based on size is disabled.
+       * Default value: **536870912** (512 MiB).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_metric_log_retention_size = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getQueryMetricLogRetentionSizeOrBuilder() {
+        if (queryMetricLogRetentionSizeBuilder_ != null) {
+          return queryMetricLogRetentionSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return queryMetricLogRetentionSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : queryMetricLogRetentionSize_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size that query_metric_log can grow to before old data will be removed. If set to **0**,
+       * automatic removal of query_metric_log data based on size is disabled.
+       * Default value: **536870912** (512 MiB).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_metric_log_retention_size = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getQueryMetricLogRetentionSizeFieldBuilder() {
+        if (queryMetricLogRetentionSizeBuilder_ == null) {
+          queryMetricLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getQueryMetricLogRetentionSize(),
+                  getParentForChildren(),
+                  isClean());
+          queryMetricLogRetentionSize_ = null;
+        }
+        return queryMetricLogRetentionSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value queryMetricLogRetentionTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> queryMetricLogRetentionTimeBuilder_;
+      /**
+       * <pre>
+       * The maximum time that query_metric_log records will be retained before removal. If set to **0**,
+       * automatic removal of query_metric_log data based on time is disabled.
+       * Default value: **2592000000** (30 days).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_metric_log_retention_time = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the queryMetricLogRetentionTime field is set.
+       */
+      public boolean hasQueryMetricLogRetentionTime() {
+        return queryMetricLogRetentionTimeBuilder_ != null || queryMetricLogRetentionTime_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum time that query_metric_log records will be retained before removal. If set to **0**,
+       * automatic removal of query_metric_log data based on time is disabled.
+       * Default value: **2592000000** (30 days).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_metric_log_retention_time = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The queryMetricLogRetentionTime.
+       */
+      public com.google.protobuf.Int64Value getQueryMetricLogRetentionTime() {
+        if (queryMetricLogRetentionTimeBuilder_ == null) {
+          return queryMetricLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryMetricLogRetentionTime_;
+        } else {
+          return queryMetricLogRetentionTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time that query_metric_log records will be retained before removal. If set to **0**,
+       * automatic removal of query_metric_log data based on time is disabled.
+       * Default value: **2592000000** (30 days).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_metric_log_retention_time = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setQueryMetricLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (queryMetricLogRetentionTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          queryMetricLogRetentionTime_ = value;
+          onChanged();
+        } else {
+          queryMetricLogRetentionTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that query_metric_log records will be retained before removal. If set to **0**,
+       * automatic removal of query_metric_log data based on time is disabled.
+       * Default value: **2592000000** (30 days).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_metric_log_retention_time = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setQueryMetricLogRetentionTime(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (queryMetricLogRetentionTimeBuilder_ == null) {
+          queryMetricLogRetentionTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          queryMetricLogRetentionTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that query_metric_log records will be retained before removal. If set to **0**,
+       * automatic removal of query_metric_log data based on time is disabled.
+       * Default value: **2592000000** (30 days).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_metric_log_retention_time = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeQueryMetricLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (queryMetricLogRetentionTimeBuilder_ == null) {
+          if (queryMetricLogRetentionTime_ != null) {
+            queryMetricLogRetentionTime_ =
+              com.google.protobuf.Int64Value.newBuilder(queryMetricLogRetentionTime_).mergeFrom(value).buildPartial();
+          } else {
+            queryMetricLogRetentionTime_ = value;
+          }
+          onChanged();
+        } else {
+          queryMetricLogRetentionTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that query_metric_log records will be retained before removal. If set to **0**,
+       * automatic removal of query_metric_log data based on time is disabled.
+       * Default value: **2592000000** (30 days).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_metric_log_retention_time = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearQueryMetricLogRetentionTime() {
+        if (queryMetricLogRetentionTimeBuilder_ == null) {
+          queryMetricLogRetentionTime_ = null;
+          onChanged();
+        } else {
+          queryMetricLogRetentionTime_ = null;
+          queryMetricLogRetentionTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that query_metric_log records will be retained before removal. If set to **0**,
+       * automatic removal of query_metric_log data based on time is disabled.
+       * Default value: **2592000000** (30 days).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_metric_log_retention_time = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getQueryMetricLogRetentionTimeBuilder() {
+        
+        onChanged();
+        return getQueryMetricLogRetentionTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum time that query_metric_log records will be retained before removal. If set to **0**,
+       * automatic removal of query_metric_log data based on time is disabled.
+       * Default value: **2592000000** (30 days).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_metric_log_retention_time = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getQueryMetricLogRetentionTimeOrBuilder() {
+        if (queryMetricLogRetentionTimeBuilder_ != null) {
+          return queryMetricLogRetentionTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return queryMetricLogRetentionTime_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : queryMetricLogRetentionTime_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time that query_metric_log records will be retained before removal. If set to **0**,
+       * automatic removal of query_metric_log data based on time is disabled.
+       * Default value: **2592000000** (30 days).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_metric_log_retention_time = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getQueryMetricLogRetentionTimeFieldBuilder() {
+        if (queryMetricLogRetentionTimeBuilder_ == null) {
+          queryMetricLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getQueryMetricLogRetentionTime(),
+                  getParentForChildren(),
+                  isClean());
+          queryMetricLogRetentionTime_ = null;
+        }
+        return queryMetricLogRetentionTimeBuilder_;
+      }
+
       private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements accessControlImprovements_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovements.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.AccessControlImprovementsOrBuilder> accessControlImprovementsBuilder_;
@@ -68655,7 +70483,7 @@ public final class Clickhouse {
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_connections).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+       * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "128-8192"];</code>
        * @return Whether the maxConnections field is set.
        */
       public boolean hasMaxConnections() {
@@ -68669,7 +70497,7 @@ public final class Clickhouse {
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_connections).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+       * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "128-8192"];</code>
        * @return The maxConnections.
        */
       public com.google.protobuf.Int64Value getMaxConnections() {
@@ -68687,7 +70515,7 @@ public final class Clickhouse {
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_connections).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+       * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "128-8192"];</code>
        */
       public Builder setMaxConnections(com.google.protobuf.Int64Value value) {
         if (maxConnectionsBuilder_ == null) {
@@ -68710,7 +70538,7 @@ public final class Clickhouse {
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_connections).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+       * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "128-8192"];</code>
        */
       public Builder setMaxConnections(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -68731,7 +70559,7 @@ public final class Clickhouse {
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_connections).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+       * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "128-8192"];</code>
        */
       public Builder mergeMaxConnections(com.google.protobuf.Int64Value value) {
         if (maxConnectionsBuilder_ == null) {
@@ -68756,7 +70584,7 @@ public final class Clickhouse {
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_connections).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+       * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "128-8192"];</code>
        */
       public Builder clearMaxConnections() {
         if (maxConnectionsBuilder_ == null) {
@@ -68777,7 +70605,7 @@ public final class Clickhouse {
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_connections).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+       * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "128-8192"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getMaxConnectionsBuilder() {
         
@@ -68792,7 +70620,7 @@ public final class Clickhouse {
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_connections).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+       * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "128-8192"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder() {
         if (maxConnectionsBuilder_ != null) {
@@ -68810,7 +70638,7 @@ public final class Clickhouse {
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_connections).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
+       * <code>.google.protobuf.Int64Value max_connections = 6 [(.yandex.cloud.value) = "128-8192"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -68836,7 +70664,7 @@ public final class Clickhouse {
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_concurrent_queries).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=50"];</code>
+       * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=100"];</code>
        * @return Whether the maxConcurrentQueries field is set.
        */
       public boolean hasMaxConcurrentQueries() {
@@ -68849,7 +70677,7 @@ public final class Clickhouse {
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_concurrent_queries).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=50"];</code>
+       * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=100"];</code>
        * @return The maxConcurrentQueries.
        */
       public com.google.protobuf.Int64Value getMaxConcurrentQueries() {
@@ -68866,7 +70694,7 @@ public final class Clickhouse {
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_concurrent_queries).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=50"];</code>
+       * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=100"];</code>
        */
       public Builder setMaxConcurrentQueries(com.google.protobuf.Int64Value value) {
         if (maxConcurrentQueriesBuilder_ == null) {
@@ -68888,7 +70716,7 @@ public final class Clickhouse {
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_concurrent_queries).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=50"];</code>
+       * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=100"];</code>
        */
       public Builder setMaxConcurrentQueries(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -68908,7 +70736,7 @@ public final class Clickhouse {
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_concurrent_queries).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=50"];</code>
+       * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=100"];</code>
        */
       public Builder mergeMaxConcurrentQueries(com.google.protobuf.Int64Value value) {
         if (maxConcurrentQueriesBuilder_ == null) {
@@ -68932,7 +70760,7 @@ public final class Clickhouse {
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_concurrent_queries).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=50"];</code>
+       * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=100"];</code>
        */
       public Builder clearMaxConcurrentQueries() {
         if (maxConcurrentQueriesBuilder_ == null) {
@@ -68952,7 +70780,7 @@ public final class Clickhouse {
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_concurrent_queries).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=50"];</code>
+       * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=100"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getMaxConcurrentQueriesBuilder() {
         
@@ -68966,7 +70794,7 @@ public final class Clickhouse {
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_concurrent_queries).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=50"];</code>
+       * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=100"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMaxConcurrentQueriesOrBuilder() {
         if (maxConcurrentQueriesBuilder_ != null) {
@@ -68983,7 +70811,7 @@ public final class Clickhouse {
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_concurrent_queries).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=50"];</code>
+       * <code>.google.protobuf.Int64Value max_concurrent_queries = 7 [(.yandex.cloud.value) = "&gt;=100"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -69351,7 +71179,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of seconds that ClickHouse waits for incoming requests for HTTP protocol before closing the connection.
-       * Default value: **30**.
+       * Default value: **3** for versions 25.10 and higher, **30** for versions 25.9 and lower.
        * Change of the setting is applied with restart.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#keep_alive_timeout).
        * </pre>
@@ -69365,7 +71193,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of seconds that ClickHouse waits for incoming requests for HTTP protocol before closing the connection.
-       * Default value: **30**.
+       * Default value: **3** for versions 25.10 and higher, **30** for versions 25.9 and lower.
        * Change of the setting is applied with restart.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#keep_alive_timeout).
        * </pre>
@@ -69383,7 +71211,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of seconds that ClickHouse waits for incoming requests for HTTP protocol before closing the connection.
-       * Default value: **30**.
+       * Default value: **3** for versions 25.10 and higher, **30** for versions 25.9 and lower.
        * Change of the setting is applied with restart.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#keep_alive_timeout).
        * </pre>
@@ -69406,7 +71234,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of seconds that ClickHouse waits for incoming requests for HTTP protocol before closing the connection.
-       * Default value: **30**.
+       * Default value: **3** for versions 25.10 and higher, **30** for versions 25.9 and lower.
        * Change of the setting is applied with restart.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#keep_alive_timeout).
        * </pre>
@@ -69427,7 +71255,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of seconds that ClickHouse waits for incoming requests for HTTP protocol before closing the connection.
-       * Default value: **30**.
+       * Default value: **3** for versions 25.10 and higher, **30** for versions 25.9 and lower.
        * Change of the setting is applied with restart.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#keep_alive_timeout).
        * </pre>
@@ -69452,7 +71280,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of seconds that ClickHouse waits for incoming requests for HTTP protocol before closing the connection.
-       * Default value: **30**.
+       * Default value: **3** for versions 25.10 and higher, **30** for versions 25.9 and lower.
        * Change of the setting is applied with restart.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#keep_alive_timeout).
        * </pre>
@@ -69473,7 +71301,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of seconds that ClickHouse waits for incoming requests for HTTP protocol before closing the connection.
-       * Default value: **30**.
+       * Default value: **3** for versions 25.10 and higher, **30** for versions 25.9 and lower.
        * Change of the setting is applied with restart.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#keep_alive_timeout).
        * </pre>
@@ -69488,7 +71316,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of seconds that ClickHouse waits for incoming requests for HTTP protocol before closing the connection.
-       * Default value: **30**.
+       * Default value: **3** for versions 25.10 and higher, **30** for versions 25.9 and lower.
        * Change of the setting is applied with restart.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#keep_alive_timeout).
        * </pre>
@@ -69506,7 +71334,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The number of seconds that ClickHouse waits for incoming requests for HTTP protocol before closing the connection.
-       * Default value: **30**.
+       * Default value: **3** for versions 25.10 and higher, **30** for versions 25.9 and lower.
        * Change of the setting is applied with restart.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#keep_alive_timeout).
        * </pre>
@@ -71350,6 +73178,552 @@ public final class Clickhouse {
         return restoreThreadsBuilder_;
       }
 
+      private com.google.protobuf.Int64Value vectorSimilarityIndexCacheSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> vectorSimilarityIndexCacheSizeBuilder_;
+      /**
+       * <pre>
+       * Size of cache for vector similarity indexes, in bytes. **0** means disabled.
+       * Default value: **5368709120** (5 GiB).
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vector_similarity_index_cache_size = 86 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the vectorSimilarityIndexCacheSize field is set.
+       */
+      public boolean hasVectorSimilarityIndexCacheSize() {
+        return vectorSimilarityIndexCacheSizeBuilder_ != null || vectorSimilarityIndexCacheSize_ != null;
+      }
+      /**
+       * <pre>
+       * Size of cache for vector similarity indexes, in bytes. **0** means disabled.
+       * Default value: **5368709120** (5 GiB).
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vector_similarity_index_cache_size = 86 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The vectorSimilarityIndexCacheSize.
+       */
+      public com.google.protobuf.Int64Value getVectorSimilarityIndexCacheSize() {
+        if (vectorSimilarityIndexCacheSizeBuilder_ == null) {
+          return vectorSimilarityIndexCacheSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : vectorSimilarityIndexCacheSize_;
+        } else {
+          return vectorSimilarityIndexCacheSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Size of cache for vector similarity indexes, in bytes. **0** means disabled.
+       * Default value: **5368709120** (5 GiB).
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vector_similarity_index_cache_size = 86 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setVectorSimilarityIndexCacheSize(com.google.protobuf.Int64Value value) {
+        if (vectorSimilarityIndexCacheSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          vectorSimilarityIndexCacheSize_ = value;
+          onChanged();
+        } else {
+          vectorSimilarityIndexCacheSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of cache for vector similarity indexes, in bytes. **0** means disabled.
+       * Default value: **5368709120** (5 GiB).
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vector_similarity_index_cache_size = 86 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setVectorSimilarityIndexCacheSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (vectorSimilarityIndexCacheSizeBuilder_ == null) {
+          vectorSimilarityIndexCacheSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          vectorSimilarityIndexCacheSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of cache for vector similarity indexes, in bytes. **0** means disabled.
+       * Default value: **5368709120** (5 GiB).
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vector_similarity_index_cache_size = 86 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeVectorSimilarityIndexCacheSize(com.google.protobuf.Int64Value value) {
+        if (vectorSimilarityIndexCacheSizeBuilder_ == null) {
+          if (vectorSimilarityIndexCacheSize_ != null) {
+            vectorSimilarityIndexCacheSize_ =
+              com.google.protobuf.Int64Value.newBuilder(vectorSimilarityIndexCacheSize_).mergeFrom(value).buildPartial();
+          } else {
+            vectorSimilarityIndexCacheSize_ = value;
+          }
+          onChanged();
+        } else {
+          vectorSimilarityIndexCacheSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of cache for vector similarity indexes, in bytes. **0** means disabled.
+       * Default value: **5368709120** (5 GiB).
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vector_similarity_index_cache_size = 86 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearVectorSimilarityIndexCacheSize() {
+        if (vectorSimilarityIndexCacheSizeBuilder_ == null) {
+          vectorSimilarityIndexCacheSize_ = null;
+          onChanged();
+        } else {
+          vectorSimilarityIndexCacheSize_ = null;
+          vectorSimilarityIndexCacheSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of cache for vector similarity indexes, in bytes. **0** means disabled.
+       * Default value: **5368709120** (5 GiB).
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vector_similarity_index_cache_size = 86 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getVectorSimilarityIndexCacheSizeBuilder() {
+        
+        onChanged();
+        return getVectorSimilarityIndexCacheSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Size of cache for vector similarity indexes, in bytes. **0** means disabled.
+       * Default value: **5368709120** (5 GiB).
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vector_similarity_index_cache_size = 86 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getVectorSimilarityIndexCacheSizeOrBuilder() {
+        if (vectorSimilarityIndexCacheSizeBuilder_ != null) {
+          return vectorSimilarityIndexCacheSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return vectorSimilarityIndexCacheSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : vectorSimilarityIndexCacheSize_;
+        }
+      }
+      /**
+       * <pre>
+       * Size of cache for vector similarity indexes, in bytes. **0** means disabled.
+       * Default value: **5368709120** (5 GiB).
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vector_similarity_index_cache_size = 86 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getVectorSimilarityIndexCacheSizeFieldBuilder() {
+        if (vectorSimilarityIndexCacheSizeBuilder_ == null) {
+          vectorSimilarityIndexCacheSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getVectorSimilarityIndexCacheSize(),
+                  getParentForChildren(),
+                  isClean());
+          vectorSimilarityIndexCacheSize_ = null;
+        }
+        return vectorSimilarityIndexCacheSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value vectorSimilarityIndexCacheMaxEntries_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> vectorSimilarityIndexCacheMaxEntriesBuilder_;
+      /**
+       * <pre>
+       * Size of cache for vector similarity indexes, in entries. **0** means disabled.
+       * Default value: **10000000**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_max_entries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vector_similarity_index_cache_max_entries = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the vectorSimilarityIndexCacheMaxEntries field is set.
+       */
+      public boolean hasVectorSimilarityIndexCacheMaxEntries() {
+        return vectorSimilarityIndexCacheMaxEntriesBuilder_ != null || vectorSimilarityIndexCacheMaxEntries_ != null;
+      }
+      /**
+       * <pre>
+       * Size of cache for vector similarity indexes, in entries. **0** means disabled.
+       * Default value: **10000000**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_max_entries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vector_similarity_index_cache_max_entries = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The vectorSimilarityIndexCacheMaxEntries.
+       */
+      public com.google.protobuf.Int64Value getVectorSimilarityIndexCacheMaxEntries() {
+        if (vectorSimilarityIndexCacheMaxEntriesBuilder_ == null) {
+          return vectorSimilarityIndexCacheMaxEntries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : vectorSimilarityIndexCacheMaxEntries_;
+        } else {
+          return vectorSimilarityIndexCacheMaxEntriesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Size of cache for vector similarity indexes, in entries. **0** means disabled.
+       * Default value: **10000000**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_max_entries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vector_similarity_index_cache_max_entries = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setVectorSimilarityIndexCacheMaxEntries(com.google.protobuf.Int64Value value) {
+        if (vectorSimilarityIndexCacheMaxEntriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          vectorSimilarityIndexCacheMaxEntries_ = value;
+          onChanged();
+        } else {
+          vectorSimilarityIndexCacheMaxEntriesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of cache for vector similarity indexes, in entries. **0** means disabled.
+       * Default value: **10000000**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_max_entries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vector_similarity_index_cache_max_entries = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setVectorSimilarityIndexCacheMaxEntries(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (vectorSimilarityIndexCacheMaxEntriesBuilder_ == null) {
+          vectorSimilarityIndexCacheMaxEntries_ = builderForValue.build();
+          onChanged();
+        } else {
+          vectorSimilarityIndexCacheMaxEntriesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of cache for vector similarity indexes, in entries. **0** means disabled.
+       * Default value: **10000000**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_max_entries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vector_similarity_index_cache_max_entries = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeVectorSimilarityIndexCacheMaxEntries(com.google.protobuf.Int64Value value) {
+        if (vectorSimilarityIndexCacheMaxEntriesBuilder_ == null) {
+          if (vectorSimilarityIndexCacheMaxEntries_ != null) {
+            vectorSimilarityIndexCacheMaxEntries_ =
+              com.google.protobuf.Int64Value.newBuilder(vectorSimilarityIndexCacheMaxEntries_).mergeFrom(value).buildPartial();
+          } else {
+            vectorSimilarityIndexCacheMaxEntries_ = value;
+          }
+          onChanged();
+        } else {
+          vectorSimilarityIndexCacheMaxEntriesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of cache for vector similarity indexes, in entries. **0** means disabled.
+       * Default value: **10000000**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_max_entries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vector_similarity_index_cache_max_entries = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearVectorSimilarityIndexCacheMaxEntries() {
+        if (vectorSimilarityIndexCacheMaxEntriesBuilder_ == null) {
+          vectorSimilarityIndexCacheMaxEntries_ = null;
+          onChanged();
+        } else {
+          vectorSimilarityIndexCacheMaxEntries_ = null;
+          vectorSimilarityIndexCacheMaxEntriesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of cache for vector similarity indexes, in entries. **0** means disabled.
+       * Default value: **10000000**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_max_entries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vector_similarity_index_cache_max_entries = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getVectorSimilarityIndexCacheMaxEntriesBuilder() {
+        
+        onChanged();
+        return getVectorSimilarityIndexCacheMaxEntriesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Size of cache for vector similarity indexes, in entries. **0** means disabled.
+       * Default value: **10000000**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_max_entries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vector_similarity_index_cache_max_entries = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getVectorSimilarityIndexCacheMaxEntriesOrBuilder() {
+        if (vectorSimilarityIndexCacheMaxEntriesBuilder_ != null) {
+          return vectorSimilarityIndexCacheMaxEntriesBuilder_.getMessageOrBuilder();
+        } else {
+          return vectorSimilarityIndexCacheMaxEntries_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : vectorSimilarityIndexCacheMaxEntries_;
+        }
+      }
+      /**
+       * <pre>
+       * Size of cache for vector similarity indexes, in entries. **0** means disabled.
+       * Default value: **10000000**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#vector_similarity_index_cache_max_entries).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vector_similarity_index_cache_max_entries = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getVectorSimilarityIndexCacheMaxEntriesFieldBuilder() {
+        if (vectorSimilarityIndexCacheMaxEntriesBuilder_ == null) {
+          vectorSimilarityIndexCacheMaxEntriesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getVectorSimilarityIndexCacheMaxEntries(),
+                  getParentForChildren(),
+                  isClean());
+          vectorSimilarityIndexCacheMaxEntries_ = null;
+        }
+        return vectorSimilarityIndexCacheMaxEntriesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxBuildVectorSimilarityIndexThreadPoolSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_;
+      /**
+       * <pre>
+       * The maximum number of threads to use for building vector indexes. **0** means unlimited.
+       * Default value: **16**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_build_vector_similarity_index_thread_pool_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_build_vector_similarity_index_thread_pool_size = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxBuildVectorSimilarityIndexThreadPoolSize field is set.
+       */
+      public boolean hasMaxBuildVectorSimilarityIndexThreadPoolSize() {
+        return maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_ != null || maxBuildVectorSimilarityIndexThreadPoolSize_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum number of threads to use for building vector indexes. **0** means unlimited.
+       * Default value: **16**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_build_vector_similarity_index_thread_pool_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_build_vector_similarity_index_thread_pool_size = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxBuildVectorSimilarityIndexThreadPoolSize.
+       */
+      public com.google.protobuf.Int64Value getMaxBuildVectorSimilarityIndexThreadPoolSize() {
+        if (maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_ == null) {
+          return maxBuildVectorSimilarityIndexThreadPoolSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBuildVectorSimilarityIndexThreadPoolSize_;
+        } else {
+          return maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum number of threads to use for building vector indexes. **0** means unlimited.
+       * Default value: **16**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_build_vector_similarity_index_thread_pool_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_build_vector_similarity_index_thread_pool_size = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxBuildVectorSimilarityIndexThreadPoolSize(com.google.protobuf.Int64Value value) {
+        if (maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxBuildVectorSimilarityIndexThreadPoolSize_ = value;
+          onChanged();
+        } else {
+          maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of threads to use for building vector indexes. **0** means unlimited.
+       * Default value: **16**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_build_vector_similarity_index_thread_pool_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_build_vector_similarity_index_thread_pool_size = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxBuildVectorSimilarityIndexThreadPoolSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_ == null) {
+          maxBuildVectorSimilarityIndexThreadPoolSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of threads to use for building vector indexes. **0** means unlimited.
+       * Default value: **16**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_build_vector_similarity_index_thread_pool_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_build_vector_similarity_index_thread_pool_size = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeMaxBuildVectorSimilarityIndexThreadPoolSize(com.google.protobuf.Int64Value value) {
+        if (maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_ == null) {
+          if (maxBuildVectorSimilarityIndexThreadPoolSize_ != null) {
+            maxBuildVectorSimilarityIndexThreadPoolSize_ =
+              com.google.protobuf.Int64Value.newBuilder(maxBuildVectorSimilarityIndexThreadPoolSize_).mergeFrom(value).buildPartial();
+          } else {
+            maxBuildVectorSimilarityIndexThreadPoolSize_ = value;
+          }
+          onChanged();
+        } else {
+          maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of threads to use for building vector indexes. **0** means unlimited.
+       * Default value: **16**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_build_vector_similarity_index_thread_pool_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_build_vector_similarity_index_thread_pool_size = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearMaxBuildVectorSimilarityIndexThreadPoolSize() {
+        if (maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_ == null) {
+          maxBuildVectorSimilarityIndexThreadPoolSize_ = null;
+          onChanged();
+        } else {
+          maxBuildVectorSimilarityIndexThreadPoolSize_ = null;
+          maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of threads to use for building vector indexes. **0** means unlimited.
+       * Default value: **16**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_build_vector_similarity_index_thread_pool_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_build_vector_similarity_index_thread_pool_size = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxBuildVectorSimilarityIndexThreadPoolSizeBuilder() {
+        
+        onChanged();
+        return getMaxBuildVectorSimilarityIndexThreadPoolSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum number of threads to use for building vector indexes. **0** means unlimited.
+       * Default value: **16**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_build_vector_similarity_index_thread_pool_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_build_vector_similarity_index_thread_pool_size = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxBuildVectorSimilarityIndexThreadPoolSizeOrBuilder() {
+        if (maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_ != null) {
+          return maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return maxBuildVectorSimilarityIndexThreadPoolSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxBuildVectorSimilarityIndexThreadPoolSize_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum number of threads to use for building vector indexes. **0** means unlimited.
+       * Default value: **16**.
+       * Change of the setting is applied with restart.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/server-configuration-parameters/settings#max_build_vector_similarity_index_thread_pool_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_build_vector_similarity_index_thread_pool_size = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxBuildVectorSimilarityIndexThreadPoolSizeFieldBuilder() {
+        if (maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_ == null) {
+          maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxBuildVectorSimilarityIndexThreadPoolSize(),
+                  getParentForChildren(),
+                  isClean());
+          maxBuildVectorSimilarityIndexThreadPoolSize_ = null;
+        }
+        return maxBuildVectorSimilarityIndexThreadPoolSizeBuilder_;
+      }
+
       private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree mergeTree_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTree.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.MergeTreeOrBuilder> mergeTreeBuilder_;
@@ -72740,9 +75114,9 @@ public final class Clickhouse {
        * Change of the settings of **kafka_topics** is applied with restart.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
        */
-      public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic> getKafkaTopicsList() {
+      @java.lang.Deprecated public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic> getKafkaTopicsList() {
         if (kafkaTopicsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(kafkaTopics_);
         } else {
@@ -72755,9 +75129,9 @@ public final class Clickhouse {
        * Change of the settings of **kafka_topics** is applied with restart.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
        */
-      public int getKafkaTopicsCount() {
+      @java.lang.Deprecated public int getKafkaTopicsCount() {
         if (kafkaTopicsBuilder_ == null) {
           return kafkaTopics_.size();
         } else {
@@ -72770,9 +75144,9 @@ public final class Clickhouse {
        * Change of the settings of **kafka_topics** is applied with restart.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
        */
-      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic getKafkaTopics(int index) {
+      @java.lang.Deprecated public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic getKafkaTopics(int index) {
         if (kafkaTopicsBuilder_ == null) {
           return kafkaTopics_.get(index);
         } else {
@@ -72785,9 +75159,9 @@ public final class Clickhouse {
        * Change of the settings of **kafka_topics** is applied with restart.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
        */
-      public Builder setKafkaTopics(
+      @java.lang.Deprecated public Builder setKafkaTopics(
           int index, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic value) {
         if (kafkaTopicsBuilder_ == null) {
           if (value == null) {
@@ -72807,9 +75181,9 @@ public final class Clickhouse {
        * Change of the settings of **kafka_topics** is applied with restart.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
        */
-      public Builder setKafkaTopics(
+      @java.lang.Deprecated public Builder setKafkaTopics(
           int index, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder builderForValue) {
         if (kafkaTopicsBuilder_ == null) {
           ensureKafkaTopicsIsMutable();
@@ -72826,9 +75200,9 @@ public final class Clickhouse {
        * Change of the settings of **kafka_topics** is applied with restart.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
        */
-      public Builder addKafkaTopics(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic value) {
+      @java.lang.Deprecated public Builder addKafkaTopics(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic value) {
         if (kafkaTopicsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -72847,9 +75221,9 @@ public final class Clickhouse {
        * Change of the settings of **kafka_topics** is applied with restart.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
        */
-      public Builder addKafkaTopics(
+      @java.lang.Deprecated public Builder addKafkaTopics(
           int index, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic value) {
         if (kafkaTopicsBuilder_ == null) {
           if (value == null) {
@@ -72869,9 +75243,9 @@ public final class Clickhouse {
        * Change of the settings of **kafka_topics** is applied with restart.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
        */
-      public Builder addKafkaTopics(
+      @java.lang.Deprecated public Builder addKafkaTopics(
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder builderForValue) {
         if (kafkaTopicsBuilder_ == null) {
           ensureKafkaTopicsIsMutable();
@@ -72888,9 +75262,9 @@ public final class Clickhouse {
        * Change of the settings of **kafka_topics** is applied with restart.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
        */
-      public Builder addKafkaTopics(
+      @java.lang.Deprecated public Builder addKafkaTopics(
           int index, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder builderForValue) {
         if (kafkaTopicsBuilder_ == null) {
           ensureKafkaTopicsIsMutable();
@@ -72907,9 +75281,9 @@ public final class Clickhouse {
        * Change of the settings of **kafka_topics** is applied with restart.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
        */
-      public Builder addAllKafkaTopics(
+      @java.lang.Deprecated public Builder addAllKafkaTopics(
           java.lang.Iterable<? extends yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic> values) {
         if (kafkaTopicsBuilder_ == null) {
           ensureKafkaTopicsIsMutable();
@@ -72927,9 +75301,9 @@ public final class Clickhouse {
        * Change of the settings of **kafka_topics** is applied with restart.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
        */
-      public Builder clearKafkaTopics() {
+      @java.lang.Deprecated public Builder clearKafkaTopics() {
         if (kafkaTopicsBuilder_ == null) {
           kafkaTopics_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000008);
@@ -72945,9 +75319,9 @@ public final class Clickhouse {
        * Change of the settings of **kafka_topics** is applied with restart.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
        */
-      public Builder removeKafkaTopics(int index) {
+      @java.lang.Deprecated public Builder removeKafkaTopics(int index) {
         if (kafkaTopicsBuilder_ == null) {
           ensureKafkaTopicsIsMutable();
           kafkaTopics_.remove(index);
@@ -72963,9 +75337,9 @@ public final class Clickhouse {
        * Change of the settings of **kafka_topics** is applied with restart.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
        */
-      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder getKafkaTopicsBuilder(
+      @java.lang.Deprecated public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder getKafkaTopicsBuilder(
           int index) {
         return getKafkaTopicsFieldBuilder().getBuilder(index);
       }
@@ -72975,9 +75349,9 @@ public final class Clickhouse {
        * Change of the settings of **kafka_topics** is applied with restart.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
        */
-      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder getKafkaTopicsOrBuilder(
+      @java.lang.Deprecated public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder getKafkaTopicsOrBuilder(
           int index) {
         if (kafkaTopicsBuilder_ == null) {
           return kafkaTopics_.get(index);  } else {
@@ -72990,9 +75364,9 @@ public final class Clickhouse {
        * Change of the settings of **kafka_topics** is applied with restart.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
        */
-      public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder> 
            getKafkaTopicsOrBuilderList() {
         if (kafkaTopicsBuilder_ != null) {
           return kafkaTopicsBuilder_.getMessageOrBuilderList();
@@ -73006,9 +75380,9 @@ public final class Clickhouse {
        * Change of the settings of **kafka_topics** is applied with restart.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
        */
-      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder addKafkaTopicsBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder addKafkaTopicsBuilder() {
         return getKafkaTopicsFieldBuilder().addBuilder(
             yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.getDefaultInstance());
       }
@@ -73018,9 +75392,9 @@ public final class Clickhouse {
        * Change of the settings of **kafka_topics** is applied with restart.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
        */
-      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder addKafkaTopicsBuilder(
+      @java.lang.Deprecated public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder addKafkaTopicsBuilder(
           int index) {
         return getKafkaTopicsFieldBuilder().addBuilder(
             index, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.getDefaultInstance());
@@ -73031,9 +75405,9 @@ public final class Clickhouse {
        * Change of the settings of **kafka_topics** is applied with restart.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36 [deprecated = true];</code>
        */
-      public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder> 
+      @java.lang.Deprecated public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder> 
            getKafkaTopicsBuilderList() {
         return getKafkaTopicsFieldBuilder().getBuilderList();
       }
@@ -76013,8 +78387,8 @@ public final class Clickhouse {
       "\n6yandex/cloud/mdb/clickhouse/v1/config/" +
       "clickhouse.proto\022%yandex.cloud.mdb.click" +
       "house.v1.config\032\036google/protobuf/wrapper" +
-      "s.proto\032\035yandex/cloud/validation.proto\"\214" +
-      "\204\001\n\020ClickhouseConfig\022B\n\024background_pool_" +
+      "s.proto\032\035yandex/cloud/validation.proto\"\216" +
+      "\211\001\n\020ClickhouseConfig\022B\n\024background_pool_" +
       "size\030! \001(\0132\033.google.protobuf.Int64ValueB" +
       "\007\372\3071\003>=1\022R\n-background_merges_mutations_" +
       "concurrency_ratio\0300 \001(\0132\033.google.protobu" +
@@ -76109,345 +78483,361 @@ public final class Clickhouse {
       "uf.BoolValue\022F\n\030error_log_retention_size" +
       "\030L \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
       "\003>=0\022F\n\030error_log_retention_time\030M \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022v\n\033" +
-      "access_control_improvements\030J \001(\0132Q.yand" +
-      "ex.cloud.mdb.clickhouse.v1.config.Clickh" +
-      "ouseConfig.AccessControlImprovements\022>\n\017" +
-      "max_connections\030\006 \001(\0132\033.google.protobuf." +
-      "Int64ValueB\010\372\3071\004>=10\022E\n\026max_concurrent_q" +
-      "ueries\030\007 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\010\372\3071\004>=50\022D\n\026max_table_size_to_drop\030\013 " +
-      "\001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=" +
-      "0\022H\n\032max_partition_size_to_drop\030\r \001(\0132\033." +
-      "google.protobuf.Int64ValueB\007\372\3071\003>=0\0227\n\022k" +
-      "eep_alive_timeout\030\010 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022<\n\027uncompressed_cache_size\030" +
-      "\t \001(\0132\033.google.protobuf.Int64Value\0224\n\017ma" +
-      "rk_cache_size\030\n \001(\0132\033.google.protobuf.In" +
-      "t64Value\022\020\n\010timezone\030\016 \001(\t\0223\n\017geobase_en" +
-      "abled\030B \001(\0132\032.google.protobuf.BoolValue\022" +
-      "\023\n\013geobase_uri\030\017 \001(\t\0226\n\020default_database" +
-      "\030+ \001(\0132\034.google.protobuf.StringValue\022?\n\032" +
-      "total_memory_profiler_step\030, \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\022M\n\'total_memory_tr" +
-      "acker_sample_probability\030- \001(\0132\034.google." +
-      "protobuf.DoubleValue\022B\n\024async_insert_thr" +
-      "eads\030O \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\007\372\3071\003>=0\0223\n\016backup_threads\030P \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\0224\n\017restore_threads" +
-      "\030Q \001(\0132\033.google.protobuf.Int64Value\022U\n\nm" +
-      "erge_tree\030\002 \001(\0132A.yandex.cloud.mdb.click" +
-      "house.v1.config.ClickhouseConfig.MergeTr" +
-      "ee\022X\n\013compression\030\003 \003(\0132C.yandex.cloud.m" +
-      "db.clickhouse.v1.config.ClickhouseConfig" +
-      ".Compression\022`\n\014dictionaries\030\004 \003(\0132J.yan" +
-      "dex.cloud.mdb.clickhouse.v1.config.Click" +
-      "houseConfig.ExternalDictionary\022_\n\017graphi" +
-      "te_rollup\030\005 \003(\0132F.yandex.cloud.mdb.click" +
-      "house.v1.config.ClickhouseConfig.Graphit" +
-      "eRollup\022L\n\005kafka\030# \001(\0132=.yandex.cloud.md" +
-      "b.clickhouse.v1.config.ClickhouseConfig." +
-      "Kafka\022X\n\014kafka_topics\030$ \003(\0132B.yandex.clo" +
-      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
-      "nfig.KafkaTopic\022R\n\010rabbitmq\030% \001(\0132@.yand" +
-      "ex.cloud.mdb.clickhouse.v1.config.Clickh" +
-      "ouseConfig.Rabbitmq\022e\n\023query_masking_rul" +
-      "es\030C \003(\0132H.yandex.cloud.mdb.clickhouse.v" +
-      "1.config.ClickhouseConfig.QueryMaskingRu" +
-      "le\022W\n\013query_cache\030E \001(\0132B.yandex.cloud.m" +
-      "db.clickhouse.v1.config.ClickhouseConfig" +
-      ".QueryCache\022W\n\013jdbc_bridge\030F \001(\0132B.yande" +
-      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
-      "useConfig.JdbcBridge\0222\n\016mysql_protocol\030N" +
-      " \001(\0132\032.google.protobuf.BoolValue\022T\n\rcust" +
-      "om_macros\030R \003(\0132=.yandex.cloud.mdb.click" +
-      "house.v1.config.ClickhouseConfig.Macro\022M" +
-      "\n$builtin_dictionaries_reload_interval\030\014" +
-      " \001(\0132\033.google.protobuf.Int64ValueB\002\030\001\032\270\001" +
-      "\n\031AccessControlImprovements\022H\n$select_fr" +
-      "om_system_db_requires_grant\030\001 \001(\0132\032.goog" +
-      "le.protobuf.BoolValue\022Q\n-select_from_inf" +
-      "ormation_schema_requires_grant\030\002 \001(\0132\032.g" +
-      "oogle.protobuf.BoolValue\032\254\031\n\tMergeTree\022:" +
-      "\n\025parts_to_delay_insert\030\003 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\022:\n\025parts_to_throw_ins" +
-      "ert\030\004 \001(\0132\033.google.protobuf.Int64Value\022L" +
-      "\n\036inactive_parts_to_delay_insert\030\t \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022L\n\036" +
-      "inactive_parts_to_throw_insert\030\n \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\007\372\3071\003>=0\022R\n$ma" +
-      "x_avg_part_size_for_too_many_parts\030\025 \001(\013" +
-      "2\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\0227" +
-      "\n\022max_parts_in_total\030\021 \001(\0132\033.google.prot" +
-      "obuf.Int64Value\022C\n\036max_replicated_merges" +
-      "_in_queue\030\005 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\022^\n9number_of_free_entries_in_pool_t" +
-      "o_lower_max_size_of_merge\030\006 \001(\0132\033.google" +
-      ".protobuf.Int64Value\022W\n2number_of_free_e" +
-      "ntries_in_pool_to_execute_mutation\030\024 \001(\013" +
-      "2\033.google.protobuf.Int64Value\022L\n\'max_byt" +
-      "es_to_merge_at_min_space_in_pool\030\007 \001(\0132\033" +
-      ".google.protobuf.Int64Value\022U\n\'max_bytes" +
-      "_to_merge_at_max_space_in_pool\030\010 \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\007\372\3071\003>=0\022<\n\027mi" +
-      "n_bytes_for_wide_part\030\013 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022;\n\026min_rows_for_wide_pa" +
-      "rt\030\014 \001(\0132\033.google.protobuf.Int64Value\022B\n" +
-      "\024cleanup_delay_period\030\023 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\007\372\3071\003>=0\022F\n\030max_cleanup" +
-      "_delay_period\030\034 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\007\372\3071\003>=0\022F\n\030merge_selecting_sle" +
-      "ep_ms\030\030 \001(\0132\033.google.protobuf.Int64Value" +
-      "B\007\372\3071\003>=0\022J\n\034max_merge_selecting_sleep_m" +
-      "s\030\033 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
-      "1\003>=0\022L\n\036min_age_to_force_merge_seconds\030" +
-      "\026 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003" +
-      ">=0\022L\n(min_age_to_force_merge_on_partiti" +
-      "on_only\030\027 \001(\0132\032.google.protobuf.BoolValu" +
-      "e\0229\n\024merge_max_block_size\030\031 \001(\0132\033.google" +
-      ".protobuf.Int64Value\022\213\001\n!deduplicate_mer" +
-      "ge_projection_mode\030\035 \001(\0162`.yandex.cloud." +
-      "mdb.clickhouse.v1.config.ClickhouseConfi" +
-      "g.MergeTree.DeduplicateMergeProjectionMo" +
-      "de\022\221\001\n$lightweight_mutation_projection_m" +
-      "ode\030\036 \001(\0162c.yandex.cloud.mdb.clickhouse." +
-      "v1.config.ClickhouseConfig.MergeTree.Lig" +
-      "htweightMutationProjectionMode\022D\n\037replic" +
-      "ated_deduplication_window\030\001 \001(\0132\033.google" +
-      ".protobuf.Int64Value\022L\n\'replicated_dedup" +
-      "lication_window_seconds\030\002 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\0226\n\022fsync_after_insert" +
-      "\030  \001(\0132\032.google.protobuf.BoolValue\0228\n\024fs" +
-      "ync_part_directory\030! \001(\0132\032.google.protob" +
-      "uf.BoolValue\022N\n)min_compressed_bytes_to_" +
-      "fsync_after_fetch\030\" \001(\0132\033.google.protobu" +
-      "f.Int64Value\022N\n)min_compressed_bytes_to_" +
-      "fsync_after_merge\030# \001(\0132\033.google.protobu" +
-      "f.Int64Value\022B\n\035min_rows_to_fsync_after_" +
-      "merge\030$ \001(\0132\033.google.protobuf.Int64Value" +
-      "\0227\n\023ttl_only_drop_parts\030\r \001(\0132\032.google.p" +
-      "rotobuf.BoolValue\022;\n\026merge_with_ttl_time" +
-      "out\030\017 \001(\0132\033.google.protobuf.Int64Value\022I" +
-      "\n$merge_with_recompression_ttl_timeout\030\020" +
-      " \001(\0132\033.google.protobuf.Int64Value\022J\n%max" +
-      "_number_of_merges_with_ttl_in_pool\030\022 \001(\013" +
-      "2\033.google.protobuf.Int64Value\022D\n materia" +
-      "lize_ttl_recalculate_only\030\037 \001(\0132\032.google" +
-      ".protobuf.BoolValue\022B\n\036check_sample_colu" +
-      "mn_is_correct\030\032 \001(\0132\032.google.protobuf.Bo" +
-      "olValue\022M\n%allow_remote_fs_zero_copy_rep" +
-      "lication\030\016 \001(\0132\032.google.protobuf.BoolVal" +
-      "ueB\002\030\001\"\211\002\n\036DeduplicateMergeProjectionMod" +
-      "e\0221\n-DEDUPLICATE_MERGE_PROJECTION_MODE_U" +
-      "NSPECIFIED\020\000\022,\n(DEDUPLICATE_MERGE_PROJEC" +
-      "TION_MODE_IGNORE\020\001\022+\n\'DEDUPLICATE_MERGE_" +
-      "PROJECTION_MODE_THROW\020\002\022*\n&DEDUPLICATE_M" +
-      "ERGE_PROJECTION_MODE_DROP\020\003\022-\n)DEDUPLICA" +
-      "TE_MERGE_PROJECTION_MODE_REBUILD\020\004\"\352\001\n!L" +
-      "ightweightMutationProjectionMode\0224\n0LIGH" +
-      "TWEIGHT_MUTATION_PROJECTION_MODE_UNSPECI" +
-      "FIED\020\000\022.\n*LIGHTWEIGHT_MUTATION_PROJECTIO" +
-      "N_MODE_THROW\020\001\022-\n)LIGHTWEIGHT_MUTATION_P" +
-      "ROJECTION_MODE_DROP\020\002\0220\n,LIGHTWEIGHT_MUT" +
-      "ATION_PROJECTION_MODE_REBUILD\020\003\032\217\002\n\013Comp" +
-      "ression\022`\n\006method\030\001 \001(\0162J.yandex.cloud.m" +
-      "db.clickhouse.v1.config.ClickhouseConfig" +
-      ".Compression.MethodB\004\350\3071\001\022\025\n\rmin_part_si" +
-      "ze\030\002 \001(\003\022\033\n\023min_part_size_ratio\030\003 \001(\001\022*\n" +
-      "\005level\030\004 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\">\n\006Method\022\026\n\022METHOD_UNSPECIFIED\020\000\022\007\n\003L" +
-      "Z4\020\001\022\010\n\004ZSTD\020\002\022\t\n\005LZ4HC\020\003\032\351 \n\022ExternalDi" +
-      "ctionary\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022m\n\tstructur" +
-      "e\030\002 \001(\0132T.yandex.cloud.mdb.clickhouse.v1" +
-      ".config.ClickhouseConfig.ExternalDiction" +
-      "ary.StructureB\004\350\3071\001\022g\n\006layout\030\003 \001(\0132Q.ya" +
-      "ndex.cloud.mdb.clickhouse.v1.config.Clic" +
-      "khouseConfig.ExternalDictionary.LayoutB\004" +
-      "\350\3071\001\022\030\n\016fixed_lifetime\030\004 \001(\003H\000\022j\n\016lifeti" +
-      "me_range\030\005 \001(\0132P.yandex.cloud.mdb.clickh" +
-      "ouse.v1.config.ClickhouseConfig.External" +
-      "Dictionary.RangeH\000\022l\n\013http_source\030\006 \001(\0132" +
-      "U.yandex.cloud.mdb.clickhouse.v1.config." +
-      "ClickhouseConfig.ExternalDictionary.Http" +
-      "SourceH\001\022n\n\014mysql_source\030\007 \001(\0132V.yandex." +
-      "cloud.mdb.clickhouse.v1.config.Clickhous" +
-      "eConfig.ExternalDictionary.MysqlSourceH\001" +
-      "\022x\n\021clickhouse_source\030\010 \001(\0132[.yandex.clo" +
-      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
-      "nfig.ExternalDictionary.ClickhouseSource" +
-      "H\001\022r\n\016mongodb_source\030\t \001(\0132X.yandex.clou" +
-      "d.mdb.clickhouse.v1.config.ClickhouseCon" +
-      "fig.ExternalDictionary.MongodbSourceH\001\022x" +
-      "\n\021postgresql_source\030\n \001(\0132[.yandex.cloud" +
-      ".mdb.clickhouse.v1.config.ClickhouseConf" +
-      "ig.ExternalDictionary.PostgresqlSourceH\001" +
-      "\032\336\006\n\tStructure\022c\n\002id\030\001 \001(\0132W.yandex.clou" +
-      "d.mdb.clickhouse.v1.config.ClickhouseCon" +
-      "fig.ExternalDictionary.Structure.Id\022e\n\003k" +
-      "ey\030\003 \001(\0132X.yandex.cloud.mdb.clickhouse.v" +
-      "1.config.ClickhouseConfig.ExternalDictio" +
-      "nary.Structure.Key\022q\n\trange_min\030\004 \001(\0132^." +
-      "yandex.cloud.mdb.clickhouse.v1.config.Cl" +
-      "ickhouseConfig.ExternalDictionary.Struct" +
-      "ure.Attribute\022q\n\trange_max\030\005 \001(\0132^.yande" +
-      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
-      "useConfig.ExternalDictionary.Structure.A" +
-      "ttribute\022z\n\nattributes\030\002 \003(\0132^.yandex.cl" +
-      "oud.mdb.clickhouse.v1.config.ClickhouseC" +
-      "onfig.ExternalDictionary.Structure.Attri" +
-      "buteB\006\202\3101\002>0\032\030\n\002Id\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\032\201" +
-      "\001\n\003Key\022z\n\nattributes\030\001 \003(\0132^.yandex.clou" +
-      "d.mdb.clickhouse.v1.config.ClickhouseCon" +
-      "fig.ExternalDictionary.Structure.Attribu" +
-      "teB\006\202\3101\002>0\032\204\001\n\tAttribute\022\022\n\004name\030\001 \001(\tB\004" +
-      "\350\3071\001\022\022\n\004type\030\002 \001(\tB\004\350\3071\001\022\022\n\nnull_value\030\003" +
-      " \001(\t\022\022\n\nexpression\030\004 \001(\t\022\024\n\014hierarchical" +
-      "\030\005 \001(\010\022\021\n\tinjective\030\006 \001(\010\032\231\006\n\006Layout\022j\n\004" +
-      "type\030\001 \001(\0162V.yandex.cloud.mdb.clickhouse" +
-      ".v1.config.ClickhouseConfig.ExternalDict" +
-      "ionary.Layout.TypeB\004\350\3071\001\022\036\n\rsize_in_cell" +
-      "s\030\002 \001(\003B\007\372\3071\003>=0\022;\n\027allow_read_expired_k" +
-      "eys\030\005 \001(\0132\032.google.protobuf.BoolValue\022&\n" +
-      "\025max_update_queue_size\030\006 \001(\003B\007\372\3071\003>=0\0227\n" +
-      "&update_queue_push_timeout_milliseconds\030" +
-      "\007 \001(\003B\007\372\3071\003>=0\0220\n\037query_wait_timeout_mil" +
-      "liseconds\030\010 \001(\003B\007\372\3071\003>=0\022(\n\027max_threads_" +
-      "for_updates\030\t \001(\003B\007\372\3071\003>=0\022#\n\022initial_ar" +
-      "ray_size\030\n \001(\003B\007\372\3071\003>=0\022\037\n\016max_array_siz" +
-      "e\030\003 \001(\003B\007\372\3071\003>=0\022A\n\035access_to_key_from_a" +
-      "ttributes\030\004 \001(\0132\032.google.protobuf.BoolVa" +
-      "lue\"\377\001\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\010\n\004FL" +
-      "AT\020\001\022\n\n\006HASHED\020\002\022\026\n\022COMPLEX_KEY_HASHED\020\003" +
-      "\022\020\n\014RANGE_HASHED\020\004\022\t\n\005CACHE\020\005\022\025\n\021COMPLEX" +
-      "_KEY_CACHE\020\006\022\021\n\rSPARSE_HASHED\020\007\022\035\n\031COMPL" +
-      "EX_KEY_SPARSE_HASHED\020\010\022\034\n\030COMPLEX_KEY_RA" +
-      "NGE_HASHED\020\t\022\n\n\006DIRECT\020\n\022\026\n\022COMPLEX_KEY_" +
-      "DIRECT\020\013\022\013\n\007IP_TRIE\020\014\032!\n\005Range\022\013\n\003min\030\001 " +
-      "\001(\003\022\013\n\003max\030\002 \001(\003\032\327\001\n\nHttpSource\022\021\n\003url\030\001" +
-      " \001(\tB\004\350\3071\001\022\024\n\006format\030\002 \001(\tB\004\350\3071\001\022m\n\007head" +
-      "ers\030\003 \003(\0132\\.yandex.cloud.mdb.clickhouse." +
-      "v1.config.ClickhouseConfig.ExternalDicti" +
-      "onary.HttpSource.Header\0321\n\006Header\022\022\n\004nam" +
-      "e\030\001 \001(\tB\004\350\3071\001\022\023\n\005value\030\002 \001(\tB\004\350\3071\001\032\372\003\n\013M" +
-      "ysqlSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 " +
-      "\001(\tB\004\350\3071\001\022\031\n\004port\030\003 \001(\003B\013\372\3071\0070-65535\022\022\n\004" +
-      "user\030\004 \001(\tB\004\350\3071\001\022\020\n\010password\030\005 \001(\t\022p\n\010re" +
-      "plicas\030\006 \003(\0132^.yandex.cloud.mdb.clickhou" +
-      "se.v1.config.ClickhouseConfig.ExternalDi" +
-      "ctionary.MysqlSource.Replica\022\r\n\005where\030\007 " +
-      "\001(\t\022\030\n\020invalidate_query\030\010 \001(\t\0224\n\020close_c" +
-      "onnection\030\t \001(\0132\032.google.protobuf.BoolVa" +
-      "lue\0224\n\020share_connection\030\n \001(\0132\032.google.p" +
-      "rotobuf.BoolValue\032|\n\007Replica\022\033\n\004host\030\001 \001" +
-      "(\tB\r\350\3071\001\212\3101\005<=253\022\031\n\010priority\030\002 \001(\003B\007\372\3071" +
-      "\003>=0\022\031\n\004port\030\003 \001(\003B\013\372\3071\0070-65535\022\014\n\004user\030" +
-      "\004 \001(\t\022\020\n\010password\030\005 \001(\t\032\316\001\n\020ClickhouseSo" +
-      "urce\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350" +
-      "\3071\001\022\027\n\004host\030\003 \001(\tB\t\212\3101\005<=253\022\031\n\004port\030\004 \001" +
-      "(\003B\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010p" +
-      "assword\030\006 \001(\t\022\r\n\005where\030\007 \001(\t\022*\n\006secure\030\010" +
-      " \001(\0132\032.google.protobuf.BoolValue\032\252\001\n\rMon" +
-      "godbSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\030\n\ncollecti" +
-      "on\030\002 \001(\tB\004\350\3071\001\022\033\n\004host\030\003 \001(\tB\r\350\3071\001\212\3101\005<=" +
-      "253\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022\022\n\004user\030\005" +
-      " \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t\022\017\n\007options\030" +
-      "\007 \001(\t\032\203\003\n\020PostgresqlSource\022\020\n\002db\030\001 \001(\tB\004" +
-      "\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\r\n\005hosts\030\003 \003(\t" +
-      "\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(" +
-      "\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t\022\030\n\020invalidate_" +
-      "query\030\007 \001(\t\022u\n\010ssl_mode\030\010 \001(\0162c.yandex.c" +
+      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022<\n\030" +
+      "query_metric_log_enabled\030S \001(\0132\032.google." +
+      "protobuf.BoolValue\022M\n\037query_metric_log_r" +
+      "etention_size\030T \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\007\372\3071\003>=0\022M\n\037query_metric_log_re" +
+      "tention_time\030U \001(\0132\033.google.protobuf.Int" +
+      "64ValueB\007\372\3071\003>=0\022v\n\033access_control_impro" +
+      "vements\030J \001(\0132Q.yandex.cloud.mdb.clickho" +
+      "use.v1.config.ClickhouseConfig.AccessCon" +
+      "trolImprovements\022B\n\017max_connections\030\006 \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\014\372\3071\010128-" +
+      "8192\022F\n\026max_concurrent_queries\030\007 \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\t\372\3071\005>=100\022D\n\026" +
+      "max_table_size_to_drop\030\013 \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\007\372\3071\003>=0\022H\n\032max_partit" +
+      "ion_size_to_drop\030\r \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\007\372\3071\003>=0\0227\n\022keep_alive_timeo" +
+      "ut\030\010 \001(\0132\033.google.protobuf.Int64Value\022<\n" +
+      "\027uncompressed_cache_size\030\t \001(\0132\033.google." +
+      "protobuf.Int64Value\0224\n\017mark_cache_size\030\n" +
+      " \001(\0132\033.google.protobuf.Int64Value\022\020\n\010tim" +
+      "ezone\030\016 \001(\t\0223\n\017geobase_enabled\030B \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\022\023\n\013geobase_uri\030" +
+      "\017 \001(\t\0226\n\020default_database\030+ \001(\0132\034.google" +
+      ".protobuf.StringValue\022?\n\032total_memory_pr" +
+      "ofiler_step\030, \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022M\n\'total_memory_tracker_sample_pr" +
+      "obability\030- \001(\0132\034.google.protobuf.Double" +
+      "Value\022B\n\024async_insert_threads\030O \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\007\372\3071\003>=0\0223\n\016bac" +
+      "kup_threads\030P \001(\0132\033.google.protobuf.Int6" +
+      "4Value\0224\n\017restore_threads\030Q \001(\0132\033.google" +
+      ".protobuf.Int64Value\022P\n\"vector_similarit" +
+      "y_index_cache_size\030V \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\007\372\3071\003>=0\022W\n)vector_similar" +
+      "ity_index_cache_max_entries\030W \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\007\372\3071\003>=0\022`\n2max_b" +
+      "uild_vector_similarity_index_thread_pool" +
+      "_size\030X \001(\0132\033.google.protobuf.Int64Value" +
+      "B\007\372\3071\003>=0\022U\n\nmerge_tree\030\002 \001(\0132A.yandex.c" +
       "loud.mdb.clickhouse.v1.config.Clickhouse" +
-      "Config.ExternalDictionary.PostgresqlSour" +
-      "ce.SslMode\"g\n\007SslMode\022\030\n\024SSL_MODE_UNSPEC" +
-      "IFIED\020\000\022\013\n\007DISABLE\020\001\022\t\n\005ALLOW\020\002\022\n\n\006PREFE" +
-      "R\020\003\022\r\n\tVERIFY_CA\020\004\022\017\n\013VERIFY_FULL\020\005B\020\n\010l" +
-      "ifetime\022\004\300\3011\001B\016\n\006source\022\004\300\3011\001\032\302\003\n\016Graphi" +
-      "teRollup\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022h\n\010patterns" +
-      "\030\002 \003(\0132N.yandex.cloud.mdb.clickhouse.v1." +
-      "config.ClickhouseConfig.GraphiteRollup.P" +
-      "atternB\006\202\3101\002>0\022\030\n\020path_column_name\030\003 \001(\t" +
-      "\022\030\n\020time_column_name\030\004 \001(\t\022\031\n\021value_colu" +
-      "mn_name\030\005 \001(\t\022\033\n\023version_column_name\030\006 \001" +
-      "(\t\032\305\001\n\007Pattern\022\016\n\006regexp\030\001 \001(\t\022\020\n\010functi" +
-      "on\030\002 \001(\t\022k\n\tretention\030\003 \003(\0132X.yandex.clo" +
-      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
-      "nfig.GraphiteRollup.Pattern.Retention\032+\n" +
-      "\tRetention\022\013\n\003age\030\001 \001(\003\022\021\n\tprecision\030\002 \001" +
-      "(\003\032\240\r\n\005Kafka\022i\n\021security_protocol\030\001 \001(\0162" +
-      "N.yandex.cloud.mdb.clickhouse.v1.config." +
-      "ClickhouseConfig.Kafka.SecurityProtocol\022" +
-      "c\n\016sasl_mechanism\030\002 \001(\0162K.yandex.cloud.m" +
-      "db.clickhouse.v1.config.ClickhouseConfig" +
-      ".Kafka.SaslMechanism\022\025\n\rsasl_username\030\003 " +
-      "\001(\t\022\025\n\rsasl_password\030\004 \001(\t\022G\n#enable_ssl" +
-      "_certificate_verification\030\005 \001(\0132\032.google" +
-      ".protobuf.BoolValue\022B\n\024max_poll_interval" +
-      "_ms\030\006 \001(\0132\033.google.protobuf.Int64ValueB\007" +
-      "\372\3071\003>=0\022@\n\022session_timeout_ms\030\007 \001(\0132\033.go" +
-      "ogle.protobuf.Int64ValueB\007\372\3071\003>=0\022R\n\005deb" +
-      "ug\030\010 \001(\0162C.yandex.cloud.mdb.clickhouse.v" +
-      "1.config.ClickhouseConfig.Kafka.Debug\022h\n" +
-      "\021auto_offset_reset\030\t \001(\0162M.yandex.cloud." +
-      "mdb.clickhouse.v1.config.ClickhouseConfi" +
-      "g.Kafka.AutoOffsetReset\"\267\001\n\020SecurityProt" +
-      "ocol\022!\n\035SECURITY_PROTOCOL_UNSPECIFIED\020\000\022" +
-      "\037\n\033SECURITY_PROTOCOL_PLAINTEXT\020\001\022\031\n\025SECU" +
-      "RITY_PROTOCOL_SSL\020\002\022$\n SECURITY_PROTOCOL" +
-      "_SASL_PLAINTEXT\020\003\022\036\n\032SECURITY_PROTOCOL_S" +
-      "ASL_SSL\020\004\"\250\001\n\rSaslMechanism\022\036\n\032SASL_MECH" +
-      "ANISM_UNSPECIFIED\020\000\022\031\n\025SASL_MECHANISM_GS" +
-      "SAPI\020\001\022\030\n\024SASL_MECHANISM_PLAIN\020\002\022 \n\034SASL" +
-      "_MECHANISM_SCRAM_SHA_256\020\003\022 \n\034SASL_MECHA" +
-      "NISM_SCRAM_SHA_512\020\004\"\231\003\n\005Debug\022\025\n\021DEBUG_" +
-      "UNSPECIFIED\020\000\022\021\n\rDEBUG_GENERIC\020\001\022\020\n\014DEBU" +
-      "G_BROKER\020\002\022\017\n\013DEBUG_TOPIC\020\003\022\022\n\016DEBUG_MET" +
-      "ADATA\020\004\022\021\n\rDEBUG_FEATURE\020\005\022\017\n\013DEBUG_QUEU" +
-      "E\020\006\022\r\n\tDEBUG_MSG\020\007\022\022\n\016DEBUG_PROTOCOL\020\010\022\016" +
-      "\n\nDEBUG_CGRP\020\t\022\022\n\016DEBUG_SECURITY\020\n\022\017\n\013DE" +
-      "BUG_FETCH\020\013\022\025\n\021DEBUG_INTERCEPTOR\020\014\022\020\n\014DE" +
-      "BUG_PLUGIN\020\r\022\022\n\016DEBUG_CONSUMER\020\016\022\017\n\013DEBU" +
-      "G_ADMIN\020\017\022\r\n\tDEBUG_EOS\020\020\022\016\n\nDEBUG_MOCK\020\021" +
-      "\022\022\n\016DEBUG_ASSIGNOR\020\022\022\016\n\nDEBUG_CONF\020\023\022\023\n\017" +
-      "DEBUG_TELEMETRY\020\024\022\r\n\tDEBUG_ALL\020\025\"\212\002\n\017Aut" +
-      "oOffsetReset\022!\n\035AUTO_OFFSET_RESET_UNSPEC",
-      "IFIED\020\000\022\036\n\032AUTO_OFFSET_RESET_SMALLEST\020\001\022" +
-      "\036\n\032AUTO_OFFSET_RESET_EARLIEST\020\002\022\037\n\033AUTO_" +
-      "OFFSET_RESET_BEGINNING\020\003\022\035\n\031AUTO_OFFSET_" +
-      "RESET_LARGEST\020\004\022\034\n\030AUTO_OFFSET_RESET_LAT" +
-      "EST\020\005\022\031\n\025AUTO_OFFSET_RESET_END\020\006\022\033\n\027AUTO" +
-      "_OFFSET_RESET_ERROR\020\007\032w\n\nKafkaTopic\022\022\n\004n" +
-      "ame\030\001 \001(\tB\004\350\3071\001\022U\n\010settings\030\002 \001(\0132=.yand" +
+      "Config.MergeTree\022X\n\013compression\030\003 \003(\0132C." +
+      "yandex.cloud.mdb.clickhouse.v1.config.Cl" +
+      "ickhouseConfig.Compression\022`\n\014dictionari" +
+      "es\030\004 \003(\0132J.yandex.cloud.mdb.clickhouse.v" +
+      "1.config.ClickhouseConfig.ExternalDictio" +
+      "nary\022_\n\017graphite_rollup\030\005 \003(\0132F.yandex.c" +
+      "loud.mdb.clickhouse.v1.config.Clickhouse" +
+      "Config.GraphiteRollup\022L\n\005kafka\030# \001(\0132=.y" +
+      "andex.cloud.mdb.clickhouse.v1.config.Cli" +
+      "ckhouseConfig.Kafka\022\\\n\014kafka_topics\030$ \003(" +
+      "\0132B.yandex.cloud.mdb.clickhouse.v1.confi" +
+      "g.ClickhouseConfig.KafkaTopicB\002\030\001\022R\n\010rab" +
+      "bitmq\030% \001(\0132@.yandex.cloud.mdb.clickhous" +
+      "e.v1.config.ClickhouseConfig.Rabbitmq\022e\n" +
+      "\023query_masking_rules\030C \003(\0132H.yandex.clou" +
+      "d.mdb.clickhouse.v1.config.ClickhouseCon" +
+      "fig.QueryMaskingRule\022W\n\013query_cache\030E \001(" +
+      "\0132B.yandex.cloud.mdb.clickhouse.v1.confi" +
+      "g.ClickhouseConfig.QueryCache\022W\n\013jdbc_br" +
+      "idge\030F \001(\0132B.yandex.cloud.mdb.clickhouse" +
+      ".v1.config.ClickhouseConfig.JdbcBridge\0222" +
+      "\n\016mysql_protocol\030N \001(\0132\032.google.protobuf" +
+      ".BoolValue\022T\n\rcustom_macros\030R \003(\0132=.yand" +
       "ex.cloud.mdb.clickhouse.v1.config.Clickh" +
-      "ouseConfig.KafkaB\004\350\3071\001\032=\n\010Rabbitmq\022\020\n\010us" +
-      "ername\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\022\r\n\005vhost\030" +
-      "\003 \001(\t\032G\n\020QueryMaskingRule\022\014\n\004name\030\001 \001(\t\022" +
-      "\024\n\006regexp\030\002 \001(\tB\004\350\3071\001\022\017\n\007replace\030\003 \001(\t\032\225" +
-      "\002\n\nQueryCache\022?\n\021max_size_in_bytes\030\001 \001(\013" +
-      "2\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\0229" +
-      "\n\013max_entries\030\002 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\007\372\3071\003>=0\022E\n\027max_entry_size_in_b" +
-      "ytes\030\003 \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\007\372\3071\003>=0\022D\n\026max_entry_size_in_rows\030\004 \001(\013" +
-      "2\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\032R" +
-      "\n\nJdbcBridge\022\014\n\004host\030\001 \001(\t\0226\n\004port\030\002 \001(\013" +
-      "2\033.google.protobuf.Int64ValueB\013\372\3071\0070-655" +
-      "35\032|\n\005Macro\0228\n\004name\030\001 \001(\tB*\350\3071\001\212\3101\004<=63\362" +
-      "\3071\032[a-zA-Z0-9_][a-zA-Z0-9_-]*\0229\n\005value\030\002" +
-      " \001(\tB*\350\3071\001\212\3101\004<=63\362\3071\032[a-zA-Z0-9_][a-zA-" +
-      "Z0-9_-]*\"d\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPEC" +
-      "IFIED\020\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG\020\002\022\017\n\013INFORMA" +
-      "TION\020\003\022\013\n\007WARNING\020\004\022\t\n\005ERROR\020\005\"\231\002\n\023Click" +
-      "houseConfigSet\022W\n\020effective_config\030\001 \001(\013" +
-      "27.yandex.cloud.mdb.clickhouse.v1.config" +
-      ".ClickhouseConfigB\004\350\3071\001\022R\n\013user_config\030\002" +
-      " \001(\01327.yandex.cloud.mdb.clickhouse.v1.co" +
-      "nfig.ClickhouseConfigB\004\350\3071\001\022U\n\016default_c" +
-      "onfig\030\003 \001(\01327.yandex.cloud.mdb.clickhous" +
-      "e.v1.config.ClickhouseConfigB\004\350\3071\001B\201\001\n)y" +
-      "andex.cloud.api.mdb.clickhouse.v1.config" +
-      "ZTgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/mdb/clickhouse/v1/config;clic" +
-      "khouseb\006proto3"
+      "ouseConfig.Macro\022M\n$builtin_dictionaries" +
+      "_reload_interval\030\014 \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\002\030\001\032\270\001\n\031AccessControlImprove" +
+      "ments\022H\n$select_from_system_db_requires_" +
+      "grant\030\001 \001(\0132\032.google.protobuf.BoolValue\022" +
+      "Q\n-select_from_information_schema_requir" +
+      "es_grant\030\002 \001(\0132\032.google.protobuf.BoolVal" +
+      "ue\032\254\031\n\tMergeTree\022:\n\025parts_to_delay_inser" +
+      "t\030\003 \001(\0132\033.google.protobuf.Int64Value\022:\n\025" +
+      "parts_to_throw_insert\030\004 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022L\n\036inactive_parts_to_de" +
+      "lay_insert\030\t \001(\0132\033.google.protobuf.Int64" +
+      "ValueB\007\372\3071\003>=0\022L\n\036inactive_parts_to_thro" +
+      "w_insert\030\n \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\007\372\3071\003>=0\022R\n$max_avg_part_size_for_to" +
+      "o_many_parts\030\025 \001(\0132\033.google.protobuf.Int" +
+      "64ValueB\007\372\3071\003>=0\0227\n\022max_parts_in_total\030\021" +
+      " \001(\0132\033.google.protobuf.Int64Value\022C\n\036max" +
+      "_replicated_merges_in_queue\030\005 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022^\n9number_of_free" +
+      "_entries_in_pool_to_lower_max_size_of_me" +
+      "rge\030\006 \001(\0132\033.google.protobuf.Int64Value\022W" +
+      "\n2number_of_free_entries_in_pool_to_exec" +
+      "ute_mutation\030\024 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022L\n\'max_bytes_to_merge_at_min_spa" +
+      "ce_in_pool\030\007 \001(\0132\033.google.protobuf.Int64" +
+      "Value\022U\n\'max_bytes_to_merge_at_max_space" +
+      "_in_pool\030\010 \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\007\372\3071\003>=0\022<\n\027min_bytes_for_wide_part\030" +
+      "\013 \001(\0132\033.google.protobuf.Int64Value\022;\n\026mi" +
+      "n_rows_for_wide_part\030\014 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022B\n\024cleanup_delay_period\030" +
+      "\023 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003" +
+      ">=0\022F\n\030max_cleanup_delay_period\030\034 \001(\0132\033." +
+      "google.protobuf.Int64ValueB\007\372\3071\003>=0\022F\n\030m" +
+      "erge_selecting_sleep_ms\030\030 \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\007\372\3071\003>=0\022J\n\034max_merge" +
+      "_selecting_sleep_ms\030\033 \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\007\372\3071\003>=0\022L\n\036min_age_to_fo" +
+      "rce_merge_seconds\030\026 \001(\0132\033.google.protobu" +
+      "f.Int64ValueB\007\372\3071\003>=0\022L\n(min_age_to_forc" +
+      "e_merge_on_partition_only\030\027 \001(\0132\032.google" +
+      ".protobuf.BoolValue\0229\n\024merge_max_block_s" +
+      "ize\030\031 \001(\0132\033.google.protobuf.Int64Value\022\213" +
+      "\001\n!deduplicate_merge_projection_mode\030\035 \001" +
+      "(\0162`.yandex.cloud.mdb.clickhouse.v1.conf" +
+      "ig.ClickhouseConfig.MergeTree.Deduplicat" +
+      "eMergeProjectionMode\022\221\001\n$lightweight_mut" +
+      "ation_projection_mode\030\036 \001(\0162c.yandex.clo" +
+      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
+      "nfig.MergeTree.LightweightMutationProjec" +
+      "tionMode\022D\n\037replicated_deduplication_win" +
+      "dow\030\001 \001(\0132\033.google.protobuf.Int64Value\022L" +
+      "\n\'replicated_deduplication_window_second" +
+      "s\030\002 \001(\0132\033.google.protobuf.Int64Value\0226\n\022" +
+      "fsync_after_insert\030  \001(\0132\032.google.protob" +
+      "uf.BoolValue\0228\n\024fsync_part_directory\030! \001" +
+      "(\0132\032.google.protobuf.BoolValue\022N\n)min_co" +
+      "mpressed_bytes_to_fsync_after_fetch\030\" \001(" +
+      "\0132\033.google.protobuf.Int64Value\022N\n)min_co" +
+      "mpressed_bytes_to_fsync_after_merge\030# \001(" +
+      "\0132\033.google.protobuf.Int64Value\022B\n\035min_ro" +
+      "ws_to_fsync_after_merge\030$ \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\0227\n\023ttl_only_drop_part" +
+      "s\030\r \001(\0132\032.google.protobuf.BoolValue\022;\n\026m" +
+      "erge_with_ttl_timeout\030\017 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022I\n$merge_with_recompres" +
+      "sion_ttl_timeout\030\020 \001(\0132\033.google.protobuf" +
+      ".Int64Value\022J\n%max_number_of_merges_with" +
+      "_ttl_in_pool\030\022 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022D\n materialize_ttl_recalculate_o" +
+      "nly\030\037 \001(\0132\032.google.protobuf.BoolValue\022B\n" +
+      "\036check_sample_column_is_correct\030\032 \001(\0132\032." +
+      "google.protobuf.BoolValue\022M\n%allow_remot" +
+      "e_fs_zero_copy_replication\030\016 \001(\0132\032.googl" +
+      "e.protobuf.BoolValueB\002\030\001\"\211\002\n\036Deduplicate" +
+      "MergeProjectionMode\0221\n-DEDUPLICATE_MERGE" +
+      "_PROJECTION_MODE_UNSPECIFIED\020\000\022,\n(DEDUPL" +
+      "ICATE_MERGE_PROJECTION_MODE_IGNORE\020\001\022+\n\'" +
+      "DEDUPLICATE_MERGE_PROJECTION_MODE_THROW\020" +
+      "\002\022*\n&DEDUPLICATE_MERGE_PROJECTION_MODE_D" +
+      "ROP\020\003\022-\n)DEDUPLICATE_MERGE_PROJECTION_MO" +
+      "DE_REBUILD\020\004\"\352\001\n!LightweightMutationProj" +
+      "ectionMode\0224\n0LIGHTWEIGHT_MUTATION_PROJE" +
+      "CTION_MODE_UNSPECIFIED\020\000\022.\n*LIGHTWEIGHT_" +
+      "MUTATION_PROJECTION_MODE_THROW\020\001\022-\n)LIGH" +
+      "TWEIGHT_MUTATION_PROJECTION_MODE_DROP\020\002\022" +
+      "0\n,LIGHTWEIGHT_MUTATION_PROJECTION_MODE_" +
+      "REBUILD\020\003\032\217\002\n\013Compression\022`\n\006method\030\001 \001(" +
+      "\0162J.yandex.cloud.mdb.clickhouse.v1.confi" +
+      "g.ClickhouseConfig.Compression.MethodB\004\350" +
+      "\3071\001\022\025\n\rmin_part_size\030\002 \001(\003\022\033\n\023min_part_s" +
+      "ize_ratio\030\003 \001(\001\022*\n\005level\030\004 \001(\0132\033.google." +
+      "protobuf.Int64Value\">\n\006Method\022\026\n\022METHOD_" +
+      "UNSPECIFIED\020\000\022\007\n\003LZ4\020\001\022\010\n\004ZSTD\020\002\022\t\n\005LZ4H" +
+      "C\020\003\032\351 \n\022ExternalDictionary\022\022\n\004name\030\001 \001(\t" +
+      "B\004\350\3071\001\022m\n\tstructure\030\002 \001(\0132T.yandex.cloud" +
+      ".mdb.clickhouse.v1.config.ClickhouseConf" +
+      "ig.ExternalDictionary.StructureB\004\350\3071\001\022g\n" +
+      "\006layout\030\003 \001(\0132Q.yandex.cloud.mdb.clickho" +
+      "use.v1.config.ClickhouseConfig.ExternalD" +
+      "ictionary.LayoutB\004\350\3071\001\022\030\n\016fixed_lifetime" +
+      "\030\004 \001(\003H\000\022j\n\016lifetime_range\030\005 \001(\0132P.yande" +
+      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
+      "useConfig.ExternalDictionary.RangeH\000\022l\n\013" +
+      "http_source\030\006 \001(\0132U.yandex.cloud.mdb.cli" +
+      "ckhouse.v1.config.ClickhouseConfig.Exter" +
+      "nalDictionary.HttpSourceH\001\022n\n\014mysql_sour" +
+      "ce\030\007 \001(\0132V.yandex.cloud.mdb.clickhouse.v" +
+      "1.config.ClickhouseConfig.ExternalDictio" +
+      "nary.MysqlSourceH\001\022x\n\021clickhouse_source\030" +
+      "\010 \001(\0132[.yandex.cloud.mdb.clickhouse.v1.c" +
+      "onfig.ClickhouseConfig.ExternalDictionar" +
+      "y.ClickhouseSourceH\001\022r\n\016mongodb_source\030\t" +
+      " \001(\0132X.yandex.cloud.mdb.clickhouse.v1.co" +
+      "nfig.ClickhouseConfig.ExternalDictionary" +
+      ".MongodbSourceH\001\022x\n\021postgresql_source\030\n " +
+      "\001(\0132[.yandex.cloud.mdb.clickhouse.v1.con" +
+      "fig.ClickhouseConfig.ExternalDictionary." +
+      "PostgresqlSourceH\001\032\336\006\n\tStructure\022c\n\002id\030\001" +
+      " \001(\0132W.yandex.cloud.mdb.clickhouse.v1.co" +
+      "nfig.ClickhouseConfig.ExternalDictionary" +
+      ".Structure.Id\022e\n\003key\030\003 \001(\0132X.yandex.clou" +
+      "d.mdb.clickhouse.v1.config.ClickhouseCon" +
+      "fig.ExternalDictionary.Structure.Key\022q\n\t" +
+      "range_min\030\004 \001(\0132^.yandex.cloud.mdb.click" +
+      "house.v1.config.ClickhouseConfig.Externa" +
+      "lDictionary.Structure.Attribute\022q\n\trange" +
+      "_max\030\005 \001(\0132^.yandex.cloud.mdb.clickhouse" +
+      ".v1.config.ClickhouseConfig.ExternalDict" +
+      "ionary.Structure.Attribute\022z\n\nattributes" +
+      "\030\002 \003(\0132^.yandex.cloud.mdb.clickhouse.v1." +
+      "config.ClickhouseConfig.ExternalDictiona" +
+      "ry.Structure.AttributeB\006\202\3101\002>0\032\030\n\002Id\022\022\n\004" +
+      "name\030\001 \001(\tB\004\350\3071\001\032\201\001\n\003Key\022z\n\nattributes\030\001" +
+      " \003(\0132^.yandex.cloud.mdb.clickhouse.v1.co" +
+      "nfig.ClickhouseConfig.ExternalDictionary" +
+      ".Structure.AttributeB\006\202\3101\002>0\032\204\001\n\tAttribu" +
+      "te\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\022\n\004type\030\002 \001(\tB\004\350\307" +
+      "1\001\022\022\n\nnull_value\030\003 \001(\t\022\022\n\nexpression\030\004 \001" +
+      "(\t\022\024\n\014hierarchical\030\005 \001(\010\022\021\n\tinjective\030\006 " +
+      "\001(\010\032\231\006\n\006Layout\022j\n\004type\030\001 \001(\0162V.yandex.cl" +
+      "oud.mdb.clickhouse.v1.config.ClickhouseC" +
+      "onfig.ExternalDictionary.Layout.TypeB\004\350\307" +
+      "1\001\022\036\n\rsize_in_cells\030\002 \001(\003B\007\372\3071\003>=0\022;\n\027al" +
+      "low_read_expired_keys\030\005 \001(\0132\032.google.pro" +
+      "tobuf.BoolValue\022&\n\025max_update_queue_size" +
+      "\030\006 \001(\003B\007\372\3071\003>=0\0227\n&update_queue_push_tim" +
+      "eout_milliseconds\030\007 \001(\003B\007\372\3071\003>=0\0220\n\037quer" +
+      "y_wait_timeout_milliseconds\030\010 \001(\003B\007\372\3071\003>" +
+      "=0\022(\n\027max_threads_for_updates\030\t \001(\003B\007\372\3071" +
+      "\003>=0\022#\n\022initial_array_size\030\n \001(\003B\007\372\3071\003>=" +
+      "0\022\037\n\016max_array_size\030\003 \001(\003B\007\372\3071\003>=0\022A\n\035ac" +
+      "cess_to_key_from_attributes\030\004 \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\"\377\001\n\004Type\022\024\n\020TYPE_U" +
+      "NSPECIFIED\020\000\022\010\n\004FLAT\020\001\022\n\n\006HASHED\020\002\022\026\n\022CO" +
+      "MPLEX_KEY_HASHED\020\003\022\020\n\014RANGE_HASHED\020\004\022\t\n\005" +
+      "CACHE\020\005\022\025\n\021COMPLEX_KEY_CACHE\020\006\022\021\n\rSPARSE" +
+      "_HASHED\020\007\022\035\n\031COMPLEX_KEY_SPARSE_HASHED\020\010" +
+      "\022\034\n\030COMPLEX_KEY_RANGE_HASHED\020\t\022\n\n\006DIRECT" +
+      "\020\n\022\026\n\022COMPLEX_KEY_DIRECT\020\013\022\013\n\007IP_TRIE\020\014\032" +
+      "!\n\005Range\022\013\n\003min\030\001 \001(\003\022\013\n\003max\030\002 \001(\003\032\327\001\n\nH" +
+      "ttpSource\022\021\n\003url\030\001 \001(\tB\004\350\3071\001\022\024\n\006format\030\002" +
+      " \001(\tB\004\350\3071\001\022m\n\007headers\030\003 \003(\0132\\.yandex.clo" +
+      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
+      "nfig.ExternalDictionary.HttpSource.Heade" +
+      "r\0321\n\006Header\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\023\n\005value" +
+      "\030\002 \001(\tB\004\350\3071\001\032\372\003\n\013MysqlSource\022\020\n\002db\030\001 \001(\t" +
+      "B\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\031\n\004port\030\003 \001(" +
+      "\003B\013\372\3071\0070-65535\022\022\n\004user\030\004 \001(\tB\004\350\3071\001\022\020\n\010pa" +
+      "ssword\030\005 \001(\t\022p\n\010replicas\030\006 \003(\0132^.yandex." +
+      "cloud.mdb.clickhouse.v1.config.Clickhous" +
+      "eConfig.ExternalDictionary.MysqlSource.R" +
+      "eplica\022\r\n\005where\030\007 \001(\t\022\030\n\020invalidate_quer" +
+      "y\030\010 \001(\t\0224\n\020close_connection\030\t \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\0224\n\020share_connectio" +
+      "n\030\n \001(\0132\032.google.protobuf.BoolValue\032|\n\007R" +
+      "eplica\022\033\n\004host\030\001 \001(\tB\r\350\3071\001\212\3101\005<=253\022\031\n\010p" +
+      "riority\030\002 \001(\003B\007\372\3071\003>=0\022\031\n\004port\030\003 \001(\003B\013\372\307" +
+      "1\0070-65535\022\014\n\004user\030\004 \001(\t\022\020\n\010password\030\005 \001(" +
+      "\t\032\316\001\n\020ClickhouseSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001" +
+      "\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\027\n\004host\030\003 \001(\tB\t\212\3101" +
+      "\005<=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022\022\n\004use" +
+      "r\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t\022\r\n\005where" +
+      "\030\007 \001(\t\022*\n\006secure\030\010 \001(\0132\032.google.protobuf" +
+      ".BoolValue\032\252\001\n\rMongodbSource\022\020\n\002db\030\001 \001(\t" +
+      "B\004\350\3071\001\022\030\n\ncollection\030\002 \001(\tB\004\350\3071\001\022\033\n\004host" +
+      "\030\003 \001(\tB\r\350\3071\001\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B\013\372\3071" +
+      "\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password" +
+      "\030\006 \001(\t\022\017\n\007options\030\007 \001(\t\032\203\003\n\020PostgresqlSo" +
+      "urce\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350" +
+      "\3071\001\022\r\n\005hosts\030\003 \003(\t\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-" +
+      "65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 " +
+      "\001(\t\022\030\n\020invalidate_query\030\007 \001(\t\022u\n\010ssl_mod" +
+      "e\030\010 \001(\0162c.yandex.cloud.mdb.clickhouse.v1" +
+      ".config.ClickhouseConfig.ExternalDiction" +
+      "ary.PostgresqlSource.SslMode\"g\n\007SslMode\022" +
+      "\030\n\024SSL_MODE_UNSPECIFIED\020\000\022\013\n\007DISABLE\020\001\022\t" +
+      "\n\005ALLOW\020\002\022\n\n\006PREFER\020\003\022\r\n\tVERIFY_CA\020\004\022\017\n\013" +
+      "VERIFY_FULL\020\005B\020\n\010lifetime\022\004\300\3011\001B\016\n\006sourc" +
+      "e\022\004\300\3011\001\032\302\003\n\016GraphiteRollup\022\022\n\004name\030\001 \001(\t" +
+      "B\004\350\3071\001\022h\n\010patterns\030\002 \003(\0132N.yandex.cloud." +
+      "mdb.clickhouse.v1.config.ClickhouseConfi" +
+      "g.GraphiteRollup.PatternB\006\202\3101\002>0\022\030\n\020path" +
+      "_column_name\030\003 \001(\t\022\030\n\020time_column_name\030\004" +
+      " \001(\t\022\031\n\021value_column_name\030\005 \001(\t\022\033\n\023versi" +
+      "on_column_name\030\006 \001(\t\032\305\001\n\007Pattern\022\016\n\006rege" +
+      "xp\030\001 \001(\t\022\020\n\010function\030\002 \001(\t\022k\n\tretention\030" +
+      "\003 \003(\0132X.yandex.cloud.mdb.clickhouse.v1.c" +
+      "onfig.ClickhouseConfig.GraphiteRollup.Pa" +
+      "ttern.Retention\032+\n\tRetention\022\013\n\003age\030\001 \001(" +
+      "\003\022\021\n\tprecision\030\002 \001(\003\032\260\016\n\005Kafka\022i\n\021securi" +
+      "ty_protocol\030\001 \001(\0162N.yandex.cloud.mdb.cli" +
+      "ckhouse.v1.config.ClickhouseConfig.Kafka" +
+      ".SecurityProtocol\022c\n\016sasl_mechanism\030\002 \001(" +
+      "\0162K.yandex.cloud.mdb.clickhouse.v1.confi" +
+      "g.ClickhouseConfig.Kafka.SaslMechanism\022\025" +
+      "\n\rsasl_username\030\003 \001(\t\022\025\n\rsasl_password\030\004" +
+      " \001(\t\022G\n#enable_ssl_certificate_verificat" +
+      "ion\030\005 \001(\0132\032.google.protobuf.BoolValue\022B\n" +
+      "\024max_poll_interval_ms\030\006 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\007\372\3071\003>=0\022@\n\022session_tim" +
+      "eout_ms\030\007 \001(\0132\033.google.protobuf.Int64Val" +
+      "ueB\007\372\3071\003>=0\022R\n\005debug\030\010 \001(\0162C.yandex.clou" +
+      "d.mdb.clickhouse.v1.config.ClickhouseCon" +
+      "fig.Kafka.Debug\022h\n\021auto_offset_reset\030\t \001" +
+      "(\0162M.yandex.cloud.mdb.clickhouse.v1.conf" +
+      "ig.ClickhouseConfig.Kafka.AutoOffsetRese" +
+      "t\022K\n\021message_max_bytes\030\n \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\023\372\3071\0171000-1000000000\022A" +
+      "\n\nbatch_size\030\013 \001(\0132\033.google.protobuf.Int" +
+      "64ValueB\020\372\3071\0141-2147483647\"\267\001\n\020SecurityPr" +
+      "otocol\022!\n\035SECURITY_PROTOCOL_UNSPECIFIED\020" +
+      "\000\022\037\n\033SECURITY_PROTOCOL_PLAINTEXT\020\001\022\031\n\025SE" +
+      "CURITY_PROTOCOL_SSL\020\002\022$\n SECURITY_PROTOC" +
+      "OL_SASL_PLAINTEXT\020\003\022\036\n\032SECURITY_PROTOCOL",
+      "_SASL_SSL\020\004\"\250\001\n\rSaslMechanism\022\036\n\032SASL_ME" +
+      "CHANISM_UNSPECIFIED\020\000\022\031\n\025SASL_MECHANISM_" +
+      "GSSAPI\020\001\022\030\n\024SASL_MECHANISM_PLAIN\020\002\022 \n\034SA" +
+      "SL_MECHANISM_SCRAM_SHA_256\020\003\022 \n\034SASL_MEC" +
+      "HANISM_SCRAM_SHA_512\020\004\"\231\003\n\005Debug\022\025\n\021DEBU" +
+      "G_UNSPECIFIED\020\000\022\021\n\rDEBUG_GENERIC\020\001\022\020\n\014DE" +
+      "BUG_BROKER\020\002\022\017\n\013DEBUG_TOPIC\020\003\022\022\n\016DEBUG_M" +
+      "ETADATA\020\004\022\021\n\rDEBUG_FEATURE\020\005\022\017\n\013DEBUG_QU" +
+      "EUE\020\006\022\r\n\tDEBUG_MSG\020\007\022\022\n\016DEBUG_PROTOCOL\020\010" +
+      "\022\016\n\nDEBUG_CGRP\020\t\022\022\n\016DEBUG_SECURITY\020\n\022\017\n\013" +
+      "DEBUG_FETCH\020\013\022\025\n\021DEBUG_INTERCEPTOR\020\014\022\020\n\014" +
+      "DEBUG_PLUGIN\020\r\022\022\n\016DEBUG_CONSUMER\020\016\022\017\n\013DE" +
+      "BUG_ADMIN\020\017\022\r\n\tDEBUG_EOS\020\020\022\016\n\nDEBUG_MOCK" +
+      "\020\021\022\022\n\016DEBUG_ASSIGNOR\020\022\022\016\n\nDEBUG_CONF\020\023\022\023" +
+      "\n\017DEBUG_TELEMETRY\020\024\022\r\n\tDEBUG_ALL\020\025\"\212\002\n\017A" +
+      "utoOffsetReset\022!\n\035AUTO_OFFSET_RESET_UNSP" +
+      "ECIFIED\020\000\022\036\n\032AUTO_OFFSET_RESET_SMALLEST\020" +
+      "\001\022\036\n\032AUTO_OFFSET_RESET_EARLIEST\020\002\022\037\n\033AUT" +
+      "O_OFFSET_RESET_BEGINNING\020\003\022\035\n\031AUTO_OFFSE" +
+      "T_RESET_LARGEST\020\004\022\034\n\030AUTO_OFFSET_RESET_L" +
+      "ATEST\020\005\022\031\n\025AUTO_OFFSET_RESET_END\020\006\022\033\n\027AU" +
+      "TO_OFFSET_RESET_ERROR\020\007\032w\n\nKafkaTopic\022\022\n" +
+      "\004name\030\001 \001(\tB\004\350\3071\001\022U\n\010settings\030\002 \001(\0132=.ya" +
+      "ndex.cloud.mdb.clickhouse.v1.config.Clic" +
+      "khouseConfig.KafkaB\004\350\3071\001\032=\n\010Rabbitmq\022\020\n\010" +
+      "username\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\022\r\n\005vhos" +
+      "t\030\003 \001(\t\032G\n\020QueryMaskingRule\022\014\n\004name\030\001 \001(" +
+      "\t\022\024\n\006regexp\030\002 \001(\tB\004\350\3071\001\022\017\n\007replace\030\003 \001(\t" +
+      "\032\225\002\n\nQueryCache\022?\n\021max_size_in_bytes\030\001 \001" +
+      "(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0" +
+      "\0229\n\013max_entries\030\002 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\007\372\3071\003>=0\022E\n\027max_entry_size_in" +
+      "_bytes\030\003 \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\007\372\3071\003>=0\022D\n\026max_entry_size_in_rows\030\004 \001" +
+      "(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0" +
+      "\032R\n\nJdbcBridge\022\014\n\004host\030\001 \001(\t\0226\n\004port\030\002 \001" +
+      "(\0132\033.google.protobuf.Int64ValueB\013\372\3071\0070-6" +
+      "5535\032|\n\005Macro\0228\n\004name\030\001 \001(\tB*\350\3071\001\212\3101\004<=6" +
+      "3\362\3071\032[a-zA-Z0-9_][a-zA-Z0-9_-]*\0229\n\005value" +
+      "\030\002 \001(\tB*\350\3071\001\212\3101\004<=63\362\3071\032[a-zA-Z0-9_][a-z" +
+      "A-Z0-9_-]*\"d\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSP" +
+      "ECIFIED\020\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG\020\002\022\017\n\013INFOR" +
+      "MATION\020\003\022\013\n\007WARNING\020\004\022\t\n\005ERROR\020\005\"\231\002\n\023Cli" +
+      "ckhouseConfigSet\022W\n\020effective_config\030\001 \001" +
+      "(\01327.yandex.cloud.mdb.clickhouse.v1.conf" +
+      "ig.ClickhouseConfigB\004\350\3071\001\022R\n\013user_config" +
+      "\030\002 \001(\01327.yandex.cloud.mdb.clickhouse.v1." +
+      "config.ClickhouseConfigB\004\350\3071\001\022U\n\016default" +
+      "_config\030\003 \001(\01327.yandex.cloud.mdb.clickho" +
+      "use.v1.config.ClickhouseConfigB\004\350\3071\001B\201\001\n" +
+      ")yandex.cloud.api.mdb.clickhouse.v1.conf" +
+      "igZTgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/mdb/clickhouse/v1/config;cl" +
+      "ickhouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -76460,7 +78850,7 @@ public final class Clickhouse {
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor,
-        new java.lang.String[] { "BackgroundPoolSize", "BackgroundMergesMutationsConcurrencyRatio", "BackgroundSchedulePoolSize", "BackgroundFetchesPoolSize", "BackgroundMovePoolSize", "BackgroundDistributedSchedulePoolSize", "BackgroundBufferFlushSchedulePoolSize", "BackgroundMessageBrokerSchedulePoolSize", "BackgroundCommonPoolSize", "DictionariesLazyLoad", "LogLevel", "QueryLogRetentionSize", "QueryLogRetentionTime", "QueryThreadLogEnabled", "QueryThreadLogRetentionSize", "QueryThreadLogRetentionTime", "PartLogRetentionSize", "PartLogRetentionTime", "MetricLogEnabled", "MetricLogRetentionSize", "MetricLogRetentionTime", "TraceLogEnabled", "TraceLogRetentionSize", "TraceLogRetentionTime", "TextLogEnabled", "TextLogRetentionSize", "TextLogRetentionTime", "TextLogLevel", "OpentelemetrySpanLogEnabled", "OpentelemetrySpanLogRetentionSize", "OpentelemetrySpanLogRetentionTime", "QueryViewsLogEnabled", "QueryViewsLogRetentionSize", "QueryViewsLogRetentionTime", "AsynchronousMetricLogEnabled", "AsynchronousMetricLogRetentionSize", "AsynchronousMetricLogRetentionTime", "SessionLogEnabled", "SessionLogRetentionSize", "SessionLogRetentionTime", "ZookeeperLogEnabled", "ZookeeperLogRetentionSize", "ZookeeperLogRetentionTime", "AsynchronousInsertLogEnabled", "AsynchronousInsertLogRetentionSize", "AsynchronousInsertLogRetentionTime", "ProcessorsProfileLogEnabled", "ProcessorsProfileLogRetentionSize", "ProcessorsProfileLogRetentionTime", "ErrorLogEnabled", "ErrorLogRetentionSize", "ErrorLogRetentionTime", "AccessControlImprovements", "MaxConnections", "MaxConcurrentQueries", "MaxTableSizeToDrop", "MaxPartitionSizeToDrop", "KeepAliveTimeout", "UncompressedCacheSize", "MarkCacheSize", "Timezone", "GeobaseEnabled", "GeobaseUri", "DefaultDatabase", "TotalMemoryProfilerStep", "TotalMemoryTrackerSampleProbability", "AsyncInsertThreads", "BackupThreads", "RestoreThreads", "MergeTree", "Compression", "Dictionaries", "GraphiteRollup", "Kafka", "KafkaTopics", "Rabbitmq", "QueryMaskingRules", "QueryCache", "JdbcBridge", "MysqlProtocol", "CustomMacros", "BuiltinDictionariesReloadInterval", });
+        new java.lang.String[] { "BackgroundPoolSize", "BackgroundMergesMutationsConcurrencyRatio", "BackgroundSchedulePoolSize", "BackgroundFetchesPoolSize", "BackgroundMovePoolSize", "BackgroundDistributedSchedulePoolSize", "BackgroundBufferFlushSchedulePoolSize", "BackgroundMessageBrokerSchedulePoolSize", "BackgroundCommonPoolSize", "DictionariesLazyLoad", "LogLevel", "QueryLogRetentionSize", "QueryLogRetentionTime", "QueryThreadLogEnabled", "QueryThreadLogRetentionSize", "QueryThreadLogRetentionTime", "PartLogRetentionSize", "PartLogRetentionTime", "MetricLogEnabled", "MetricLogRetentionSize", "MetricLogRetentionTime", "TraceLogEnabled", "TraceLogRetentionSize", "TraceLogRetentionTime", "TextLogEnabled", "TextLogRetentionSize", "TextLogRetentionTime", "TextLogLevel", "OpentelemetrySpanLogEnabled", "OpentelemetrySpanLogRetentionSize", "OpentelemetrySpanLogRetentionTime", "QueryViewsLogEnabled", "QueryViewsLogRetentionSize", "QueryViewsLogRetentionTime", "AsynchronousMetricLogEnabled", "AsynchronousMetricLogRetentionSize", "AsynchronousMetricLogRetentionTime", "SessionLogEnabled", "SessionLogRetentionSize", "SessionLogRetentionTime", "ZookeeperLogEnabled", "ZookeeperLogRetentionSize", "ZookeeperLogRetentionTime", "AsynchronousInsertLogEnabled", "AsynchronousInsertLogRetentionSize", "AsynchronousInsertLogRetentionTime", "ProcessorsProfileLogEnabled", "ProcessorsProfileLogRetentionSize", "ProcessorsProfileLogRetentionTime", "ErrorLogEnabled", "ErrorLogRetentionSize", "ErrorLogRetentionTime", "QueryMetricLogEnabled", "QueryMetricLogRetentionSize", "QueryMetricLogRetentionTime", "AccessControlImprovements", "MaxConnections", "MaxConcurrentQueries", "MaxTableSizeToDrop", "MaxPartitionSizeToDrop", "KeepAliveTimeout", "UncompressedCacheSize", "MarkCacheSize", "Timezone", "GeobaseEnabled", "GeobaseUri", "DefaultDatabase", "TotalMemoryProfilerStep", "TotalMemoryTrackerSampleProbability", "AsyncInsertThreads", "BackupThreads", "RestoreThreads", "VectorSimilarityIndexCacheSize", "VectorSimilarityIndexCacheMaxEntries", "MaxBuildVectorSimilarityIndexThreadPoolSize", "MergeTree", "Compression", "Dictionaries", "GraphiteRollup", "Kafka", "KafkaTopics", "Rabbitmq", "QueryMaskingRules", "QueryCache", "JdbcBridge", "MysqlProtocol", "CustomMacros", "BuiltinDictionariesReloadInterval", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_AccessControlImprovements_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_AccessControlImprovements_fieldAccessorTable = new
@@ -76586,7 +78976,7 @@ public final class Clickhouse {
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Kafka_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Kafka_descriptor,
-        new java.lang.String[] { "SecurityProtocol", "SaslMechanism", "SaslUsername", "SaslPassword", "EnableSslCertificateVerification", "MaxPollIntervalMs", "SessionTimeoutMs", "Debug", "AutoOffsetReset", });
+        new java.lang.String[] { "SecurityProtocol", "SaslMechanism", "SaslUsername", "SaslPassword", "EnableSslCertificateVerification", "MaxPollIntervalMs", "SessionTimeoutMs", "Debug", "AutoOffsetReset", "MessageMaxBytes", "BatchSize", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_KafkaTopic_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(6);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_KafkaTopic_fieldAccessorTable = new

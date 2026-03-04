@@ -5244,6 +5244,1179 @@ public final class ParametrizationOuterClass {
 
   }
 
+  public interface WorkspaceParameterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.monitoring.v3.WorkspaceParameter)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. Project ID.
+     * </pre>
+     *
+     * <code>string project_id = 1;</code>
+     * @return Whether the projectId field is set.
+     */
+    boolean hasProjectId();
+    /**
+     * <pre>
+     * Required. Project ID.
+     * </pre>
+     *
+     * <code>string project_id = 1;</code>
+     * @return The projectId.
+     */
+    java.lang.String getProjectId();
+    /**
+     * <pre>
+     * Required. Project ID.
+     * </pre>
+     *
+     * <code>string project_id = 1;</code>
+     * @return The bytes for projectId.
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+
+    /**
+     * <pre>
+     * Required. Folder ID.
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     * @return Whether the folderId field is set.
+     */
+    boolean hasFolderId();
+    /**
+     * <pre>
+     * Required. Folder ID.
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * Required. Folder ID.
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+
+    /**
+     * <pre>
+     * Default value
+     * </pre>
+     *
+     * <code>string default_workspace_id = 3;</code>
+     * @return The defaultWorkspaceId.
+     */
+    java.lang.String getDefaultWorkspaceId();
+    /**
+     * <pre>
+     * Default value
+     * </pre>
+     *
+     * <code>string default_workspace_id = 3;</code>
+     * @return The bytes for defaultWorkspaceId.
+     */
+    com.google.protobuf.ByteString
+        getDefaultWorkspaceIdBytes();
+
+    public yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.ContainerCase getContainerCase();
+  }
+  /**
+   * <pre>
+   * Workspace parameter.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.monitoring.v3.WorkspaceParameter}
+   */
+  public static final class WorkspaceParameter extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.monitoring.v3.WorkspaceParameter)
+      WorkspaceParameterOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WorkspaceParameter.newBuilder() to construct.
+    private WorkspaceParameter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WorkspaceParameter() {
+      defaultWorkspaceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WorkspaceParameter();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private WorkspaceParameter(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              containerCase_ = 1;
+              container_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              containerCase_ = 2;
+              container_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              defaultWorkspaceId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.internal_static_yandex_cloud_monitoring_v3_WorkspaceParameter_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.internal_static_yandex_cloud_monitoring_v3_WorkspaceParameter_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.class, yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.Builder.class);
+    }
+
+    private int containerCase_ = 0;
+    private java.lang.Object container_;
+    public enum ContainerCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      PROJECT_ID(1),
+      FOLDER_ID(2),
+      CONTAINER_NOT_SET(0);
+      private final int value;
+      private ContainerCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ContainerCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ContainerCase forNumber(int value) {
+        switch (value) {
+          case 1: return PROJECT_ID;
+          case 2: return FOLDER_ID;
+          case 0: return CONTAINER_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ContainerCase
+    getContainerCase() {
+      return ContainerCase.forNumber(
+          containerCase_);
+    }
+
+    public static final int PROJECT_ID_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * Required. Project ID.
+     * </pre>
+     *
+     * <code>string project_id = 1;</code>
+     * @return Whether the projectId field is set.
+     */
+    public boolean hasProjectId() {
+      return containerCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Required. Project ID.
+     * </pre>
+     *
+     * <code>string project_id = 1;</code>
+     * @return The projectId.
+     */
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = "";
+      if (containerCase_ == 1) {
+        ref = container_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (containerCase_ == 1) {
+          container_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. Project ID.
+     * </pre>
+     *
+     * <code>string project_id = 1;</code>
+     * @return The bytes for projectId.
+     */
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = "";
+      if (containerCase_ == 1) {
+        ref = container_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (containerCase_ == 1) {
+          container_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Required. Folder ID.
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     * @return Whether the folderId field is set.
+     */
+    public boolean hasFolderId() {
+      return containerCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Required. Folder ID.
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     * @return The folderId.
+     */
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = "";
+      if (containerCase_ == 2) {
+        ref = container_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (containerCase_ == 2) {
+          container_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. Folder ID.
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
+     */
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = "";
+      if (containerCase_ == 2) {
+        ref = container_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (containerCase_ == 2) {
+          container_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEFAULT_WORKSPACE_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object defaultWorkspaceId_;
+    /**
+     * <pre>
+     * Default value
+     * </pre>
+     *
+     * <code>string default_workspace_id = 3;</code>
+     * @return The defaultWorkspaceId.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultWorkspaceId() {
+      java.lang.Object ref = defaultWorkspaceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultWorkspaceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Default value
+     * </pre>
+     *
+     * <code>string default_workspace_id = 3;</code>
+     * @return The bytes for defaultWorkspaceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultWorkspaceIdBytes() {
+      java.lang.Object ref = defaultWorkspaceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultWorkspaceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (containerCase_ == 1) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, container_);
+      }
+      if (containerCase_ == 2) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, container_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultWorkspaceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, defaultWorkspaceId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (containerCase_ == 1) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, container_);
+      }
+      if (containerCase_ == 2) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, container_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultWorkspaceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, defaultWorkspaceId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter other = (yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter) obj;
+
+      if (!getDefaultWorkspaceId()
+          .equals(other.getDefaultWorkspaceId())) return false;
+      if (!getContainerCase().equals(other.getContainerCase())) return false;
+      switch (containerCase_) {
+        case 1:
+          if (!getProjectId()
+              .equals(other.getProjectId())) return false;
+          break;
+        case 2:
+          if (!getFolderId()
+              .equals(other.getFolderId())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DEFAULT_WORKSPACE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultWorkspaceId().hashCode();
+      switch (containerCase_) {
+        case 1:
+          hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getProjectId().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getFolderId().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Workspace parameter.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.monitoring.v3.WorkspaceParameter}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.monitoring.v3.WorkspaceParameter)
+        yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameterOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.internal_static_yandex_cloud_monitoring_v3_WorkspaceParameter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.internal_static_yandex_cloud_monitoring_v3_WorkspaceParameter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.class, yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        defaultWorkspaceId_ = "";
+
+        containerCase_ = 0;
+        container_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.internal_static_yandex_cloud_monitoring_v3_WorkspaceParameter_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter getDefaultInstanceForType() {
+        return yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter build() {
+        yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter buildPartial() {
+        yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter result = new yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter(this);
+        if (containerCase_ == 1) {
+          result.container_ = container_;
+        }
+        if (containerCase_ == 2) {
+          result.container_ = container_;
+        }
+        result.defaultWorkspaceId_ = defaultWorkspaceId_;
+        result.containerCase_ = containerCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter) {
+          return mergeFrom((yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter other) {
+        if (other == yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.getDefaultInstance()) return this;
+        if (!other.getDefaultWorkspaceId().isEmpty()) {
+          defaultWorkspaceId_ = other.defaultWorkspaceId_;
+          onChanged();
+        }
+        switch (other.getContainerCase()) {
+          case PROJECT_ID: {
+            containerCase_ = 1;
+            container_ = other.container_;
+            onChanged();
+            break;
+          }
+          case FOLDER_ID: {
+            containerCase_ = 2;
+            container_ = other.container_;
+            onChanged();
+            break;
+          }
+          case CONTAINER_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int containerCase_ = 0;
+      private java.lang.Object container_;
+      public ContainerCase
+          getContainerCase() {
+        return ContainerCase.forNumber(
+            containerCase_);
+      }
+
+      public Builder clearContainer() {
+        containerCase_ = 0;
+        container_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      /**
+       * <pre>
+       * Required. Project ID.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       * @return Whether the projectId field is set.
+       */
+      @java.lang.Override
+      public boolean hasProjectId() {
+        return containerCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Required. Project ID.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       * @return The projectId.
+       */
+      @java.lang.Override
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = "";
+        if (containerCase_ == 1) {
+          ref = container_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (containerCase_ == 1) {
+            container_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Project ID.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       * @return The bytes for projectId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = "";
+        if (containerCase_ == 1) {
+          ref = container_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (containerCase_ == 1) {
+            container_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Project ID.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       * @param value The projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  containerCase_ = 1;
+        container_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Project ID.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProjectId() {
+        if (containerCase_ == 1) {
+          containerCase_ = 0;
+          container_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Project ID.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       * @param value The bytes for projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        containerCase_ = 1;
+        container_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Required. Folder ID.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @return Whether the folderId field is set.
+       */
+      @java.lang.Override
+      public boolean hasFolderId() {
+        return containerCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Required. Folder ID.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @return The folderId.
+       */
+      @java.lang.Override
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = "";
+        if (containerCase_ == 2) {
+          ref = container_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (containerCase_ == 2) {
+            container_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Folder ID.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = "";
+        if (containerCase_ == 2) {
+          ref = container_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (containerCase_ == 2) {
+            container_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Folder ID.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  containerCase_ = 2;
+        container_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Folder ID.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        if (containerCase_ == 2) {
+          containerCase_ = 0;
+          container_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Folder ID.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        containerCase_ = 2;
+        container_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object defaultWorkspaceId_ = "";
+      /**
+       * <pre>
+       * Default value
+       * </pre>
+       *
+       * <code>string default_workspace_id = 3;</code>
+       * @return The defaultWorkspaceId.
+       */
+      public java.lang.String getDefaultWorkspaceId() {
+        java.lang.Object ref = defaultWorkspaceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultWorkspaceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Default value
+       * </pre>
+       *
+       * <code>string default_workspace_id = 3;</code>
+       * @return The bytes for defaultWorkspaceId.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultWorkspaceIdBytes() {
+        java.lang.Object ref = defaultWorkspaceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultWorkspaceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Default value
+       * </pre>
+       *
+       * <code>string default_workspace_id = 3;</code>
+       * @param value The defaultWorkspaceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultWorkspaceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        defaultWorkspaceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Default value
+       * </pre>
+       *
+       * <code>string default_workspace_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultWorkspaceId() {
+        
+        defaultWorkspaceId_ = getDefaultInstance().getDefaultWorkspaceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Default value
+       * </pre>
+       *
+       * <code>string default_workspace_id = 3;</code>
+       * @param value The bytes for defaultWorkspaceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultWorkspaceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        defaultWorkspaceId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.monitoring.v3.WorkspaceParameter)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.monitoring.v3.WorkspaceParameter)
+    private static final yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter();
+    }
+
+    public static yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WorkspaceParameter>
+        PARSER = new com.google.protobuf.AbstractParser<WorkspaceParameter>() {
+      @java.lang.Override
+      public WorkspaceParameter parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new WorkspaceParameter(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<WorkspaceParameter> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WorkspaceParameter> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ParameterOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.monitoring.v3.Parameter)
       com.google.protobuf.MessageOrBuilder {
@@ -5452,6 +6625,33 @@ public final class ParametrizationOuterClass {
 
     /**
      * <pre>
+     * Workspace parameter
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.WorkspaceParameter workspace_parameter = 15;</code>
+     * @return Whether the workspaceParameter field is set.
+     */
+    boolean hasWorkspaceParameter();
+    /**
+     * <pre>
+     * Workspace parameter
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.WorkspaceParameter workspace_parameter = 15;</code>
+     * @return The workspaceParameter.
+     */
+    yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter getWorkspaceParameter();
+    /**
+     * <pre>
+     * Workspace parameter
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.WorkspaceParameter workspace_parameter = 15;</code>
+     */
+    yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameterOrBuilder getWorkspaceParameterOrBuilder();
+
+    /**
+     * <pre>
      * UI-visibility.
      * </pre>
      *
@@ -5479,6 +6679,16 @@ public final class ParametrizationOuterClass {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Is parameter grouped.
+     * </pre>
+     *
+     * <code>bool grouped = 14;</code>
+     * @return The grouped.
+     */
+    boolean getGrouped();
 
     public yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.Parameter.DataCase getDataCase();
   }
@@ -5641,6 +6851,25 @@ public final class ParametrizationOuterClass {
               description_ = s;
               break;
             }
+            case 112: {
+
+              grouped_ = input.readBool();
+              break;
+            }
+            case 122: {
+              yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.Builder subBuilder = null;
+              if (dataCase_ == 15) {
+                subBuilder = ((yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter) data_).toBuilder();
+              }
+              data_ =
+                  input.readMessage(yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter) data_);
+                data_ = subBuilder.buildPartial();
+              }
+              dataCase_ = 15;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5684,6 +6913,7 @@ public final class ParametrizationOuterClass {
       INTEGER_PARAMETER(7),
       DOUBLE_PARAMETER(8),
       TEXT_VALUES(9),
+      WORKSPACE_PARAMETER(15),
       DATA_NOT_SET(0);
       private final int value;
       private DataCase(int value) {
@@ -5707,6 +6937,7 @@ public final class ParametrizationOuterClass {
           case 7: return INTEGER_PARAMETER;
           case 8: return DOUBLE_PARAMETER;
           case 9: return TEXT_VALUES;
+          case 15: return WORKSPACE_PARAMETER;
           case 0: return DATA_NOT_SET;
           default: return null;
         }
@@ -6072,6 +7303,49 @@ public final class ParametrizationOuterClass {
       return yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.TextValuesParameter.getDefaultInstance();
     }
 
+    public static final int WORKSPACE_PARAMETER_FIELD_NUMBER = 15;
+    /**
+     * <pre>
+     * Workspace parameter
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.WorkspaceParameter workspace_parameter = 15;</code>
+     * @return Whether the workspaceParameter field is set.
+     */
+    @java.lang.Override
+    public boolean hasWorkspaceParameter() {
+      return dataCase_ == 15;
+    }
+    /**
+     * <pre>
+     * Workspace parameter
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.WorkspaceParameter workspace_parameter = 15;</code>
+     * @return The workspaceParameter.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter getWorkspaceParameter() {
+      if (dataCase_ == 15) {
+         return (yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter) data_;
+      }
+      return yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Workspace parameter
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.WorkspaceParameter workspace_parameter = 15;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameterOrBuilder getWorkspaceParameterOrBuilder() {
+      if (dataCase_ == 15) {
+         return (yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter) data_;
+      }
+      return yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.getDefaultInstance();
+    }
+
     public static final int HIDDEN_FIELD_NUMBER = 6;
     private boolean hidden_;
     /**
@@ -6133,6 +7407,21 @@ public final class ParametrizationOuterClass {
       }
     }
 
+    public static final int GROUPED_FIELD_NUMBER = 14;
+    private boolean grouped_;
+    /**
+     * <pre>
+     * Is parameter grouped.
+     * </pre>
+     *
+     * <code>bool grouped = 14;</code>
+     * @return The grouped.
+     */
+    @java.lang.Override
+    public boolean getGrouped() {
+      return grouped_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6176,6 +7465,12 @@ public final class ParametrizationOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, description_);
+      }
+      if (grouped_ != false) {
+        output.writeBool(14, grouped_);
+      }
+      if (dataCase_ == 15) {
+        output.writeMessage(15, (yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter) data_);
       }
       unknownFields.writeTo(output);
     }
@@ -6223,6 +7518,14 @@ public final class ParametrizationOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, description_);
       }
+      if (grouped_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(14, grouped_);
+      }
+      if (dataCase_ == 15) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, (yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter) data_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6246,6 +7549,8 @@ public final class ParametrizationOuterClass {
           != other.getHidden()) return false;
       if (!getDescription()
           .equals(other.getDescription())) return false;
+      if (getGrouped()
+          != other.getGrouped()) return false;
       if (!getDataCase().equals(other.getDataCase())) return false;
       switch (dataCase_) {
         case 3:
@@ -6272,6 +7577,10 @@ public final class ParametrizationOuterClass {
           if (!getTextValues()
               .equals(other.getTextValues())) return false;
           break;
+        case 15:
+          if (!getWorkspaceParameter()
+              .equals(other.getWorkspaceParameter())) return false;
+          break;
         case 0:
         default:
       }
@@ -6295,6 +7604,9 @@ public final class ParametrizationOuterClass {
           getHidden());
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + GROUPED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getGrouped());
       switch (dataCase_) {
         case 3:
           hash = (37 * hash) + LABEL_VALUES_FIELD_NUMBER;
@@ -6319,6 +7631,10 @@ public final class ParametrizationOuterClass {
         case 9:
           hash = (37 * hash) + TEXT_VALUES_FIELD_NUMBER;
           hash = (53 * hash) + getTextValues().hashCode();
+          break;
+        case 15:
+          hash = (37 * hash) + WORKSPACE_PARAMETER_FIELD_NUMBER;
+          hash = (53 * hash) + getWorkspaceParameter().hashCode();
           break;
         case 0:
         default:
@@ -6468,6 +7784,8 @@ public final class ParametrizationOuterClass {
 
         description_ = "";
 
+        grouped_ = false;
+
         dataCase_ = 0;
         data_ = null;
         return this;
@@ -6540,8 +7858,16 @@ public final class ParametrizationOuterClass {
             result.data_ = textValuesBuilder_.build();
           }
         }
+        if (dataCase_ == 15) {
+          if (workspaceParameterBuilder_ == null) {
+            result.data_ = data_;
+          } else {
+            result.data_ = workspaceParameterBuilder_.build();
+          }
+        }
         result.hidden_ = hidden_;
         result.description_ = description_;
+        result.grouped_ = grouped_;
         result.dataCase_ = dataCase_;
         onBuilt();
         return result;
@@ -6606,6 +7932,9 @@ public final class ParametrizationOuterClass {
           description_ = other.description_;
           onChanged();
         }
+        if (other.getGrouped() != false) {
+          setGrouped(other.getGrouped());
+        }
         switch (other.getDataCase()) {
           case LABEL_VALUES: {
             mergeLabelValues(other.getLabelValues());
@@ -6629,6 +7958,10 @@ public final class ParametrizationOuterClass {
           }
           case TEXT_VALUES: {
             mergeTextValues(other.getTextValues());
+            break;
+          }
+          case WORKSPACE_PARAMETER: {
+            mergeWorkspaceParameter(other.getWorkspaceParameter());
             break;
           }
           case DATA_NOT_SET: {
@@ -7933,6 +9266,183 @@ public final class ParametrizationOuterClass {
         return textValuesBuilder_;
       }
 
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter, yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.Builder, yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameterOrBuilder> workspaceParameterBuilder_;
+      /**
+       * <pre>
+       * Workspace parameter
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.WorkspaceParameter workspace_parameter = 15;</code>
+       * @return Whether the workspaceParameter field is set.
+       */
+      @java.lang.Override
+      public boolean hasWorkspaceParameter() {
+        return dataCase_ == 15;
+      }
+      /**
+       * <pre>
+       * Workspace parameter
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.WorkspaceParameter workspace_parameter = 15;</code>
+       * @return The workspaceParameter.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter getWorkspaceParameter() {
+        if (workspaceParameterBuilder_ == null) {
+          if (dataCase_ == 15) {
+            return (yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter) data_;
+          }
+          return yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.getDefaultInstance();
+        } else {
+          if (dataCase_ == 15) {
+            return workspaceParameterBuilder_.getMessage();
+          }
+          return yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Workspace parameter
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.WorkspaceParameter workspace_parameter = 15;</code>
+       */
+      public Builder setWorkspaceParameter(yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter value) {
+        if (workspaceParameterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          data_ = value;
+          onChanged();
+        } else {
+          workspaceParameterBuilder_.setMessage(value);
+        }
+        dataCase_ = 15;
+        return this;
+      }
+      /**
+       * <pre>
+       * Workspace parameter
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.WorkspaceParameter workspace_parameter = 15;</code>
+       */
+      public Builder setWorkspaceParameter(
+          yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.Builder builderForValue) {
+        if (workspaceParameterBuilder_ == null) {
+          data_ = builderForValue.build();
+          onChanged();
+        } else {
+          workspaceParameterBuilder_.setMessage(builderForValue.build());
+        }
+        dataCase_ = 15;
+        return this;
+      }
+      /**
+       * <pre>
+       * Workspace parameter
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.WorkspaceParameter workspace_parameter = 15;</code>
+       */
+      public Builder mergeWorkspaceParameter(yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter value) {
+        if (workspaceParameterBuilder_ == null) {
+          if (dataCase_ == 15 &&
+              data_ != yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.getDefaultInstance()) {
+            data_ = yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.newBuilder((yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter) data_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            data_ = value;
+          }
+          onChanged();
+        } else {
+          if (dataCase_ == 15) {
+            workspaceParameterBuilder_.mergeFrom(value);
+          }
+          workspaceParameterBuilder_.setMessage(value);
+        }
+        dataCase_ = 15;
+        return this;
+      }
+      /**
+       * <pre>
+       * Workspace parameter
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.WorkspaceParameter workspace_parameter = 15;</code>
+       */
+      public Builder clearWorkspaceParameter() {
+        if (workspaceParameterBuilder_ == null) {
+          if (dataCase_ == 15) {
+            dataCase_ = 0;
+            data_ = null;
+            onChanged();
+          }
+        } else {
+          if (dataCase_ == 15) {
+            dataCase_ = 0;
+            data_ = null;
+          }
+          workspaceParameterBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Workspace parameter
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.WorkspaceParameter workspace_parameter = 15;</code>
+       */
+      public yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.Builder getWorkspaceParameterBuilder() {
+        return getWorkspaceParameterFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Workspace parameter
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.WorkspaceParameter workspace_parameter = 15;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameterOrBuilder getWorkspaceParameterOrBuilder() {
+        if ((dataCase_ == 15) && (workspaceParameterBuilder_ != null)) {
+          return workspaceParameterBuilder_.getMessageOrBuilder();
+        } else {
+          if (dataCase_ == 15) {
+            return (yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter) data_;
+          }
+          return yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Workspace parameter
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.WorkspaceParameter workspace_parameter = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter, yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.Builder, yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameterOrBuilder> 
+          getWorkspaceParameterFieldBuilder() {
+        if (workspaceParameterBuilder_ == null) {
+          if (!(dataCase_ == 15)) {
+            data_ = yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.getDefaultInstance();
+          }
+          workspaceParameterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter, yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter.Builder, yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameterOrBuilder>(
+                  (yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.WorkspaceParameter) data_,
+                  getParentForChildren(),
+                  isClean());
+          data_ = null;
+        }
+        dataCase_ = 15;
+        onChanged();;
+        return workspaceParameterBuilder_;
+      }
+
       private boolean hidden_ ;
       /**
        * <pre>
@@ -8068,6 +9578,49 @@ public final class ParametrizationOuterClass {
   checkByteStringIsUtf8(value);
         
         description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean grouped_ ;
+      /**
+       * <pre>
+       * Is parameter grouped.
+       * </pre>
+       *
+       * <code>bool grouped = 14;</code>
+       * @return The grouped.
+       */
+      @java.lang.Override
+      public boolean getGrouped() {
+        return grouped_;
+      }
+      /**
+       * <pre>
+       * Is parameter grouped.
+       * </pre>
+       *
+       * <code>bool grouped = 14;</code>
+       * @param value The grouped to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGrouped(boolean value) {
+        
+        grouped_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Is parameter grouped.
+       * </pre>
+       *
+       * <code>bool grouped = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGrouped() {
+        
+        grouped_ = false;
         onChanged();
         return this;
       }
@@ -9254,6 +10807,11 @@ public final class ParametrizationOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_monitoring_v3_TextValuesParameter_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_monitoring_v3_WorkspaceParameter_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_monitoring_v3_WorkspaceParameter_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_monitoring_v3_Parameter_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -9288,25 +10846,30 @@ public final class ParametrizationOuterClass {
       "ter\022\025\n\rdefault_value\030\001 \001(\003\022;\n\013unit_forma" +
       "t\030\002 \001(\0162&.yandex.cloud.monitoring.v3.Uni" +
       "tFormat\"-\n\023TextValuesParameter\022\026\n\016defaul" +
-      "t_values\030\001 \003(\t\"\365\003\n\tParameter\022\014\n\004name\030\001 \001" +
-      "(\t\022\r\n\005title\030\002 \001(\t\022H\n\014label_values\030\003 \001(\0132" +
-      "0.yandex.cloud.monitoring.v3.LabelValues" +
-      "ParameterH\000\022=\n\006custom\030\004 \001(\0132+.yandex.clo" +
-      "ud.monitoring.v3.CustomParameterH\000\0229\n\004te" +
-      "xt\030\005 \001(\0132).yandex.cloud.monitoring.v3.Te" +
-      "xtParameterH\000\022I\n\021integer_parameter\030\007 \001(\013" +
-      "2,.yandex.cloud.monitoring.v3.IntegerPar" +
-      "ameterH\000\022G\n\020double_parameter\030\010 \001(\0132+.yan" +
-      "dex.cloud.monitoring.v3.DoubleParameterH" +
-      "\000\022F\n\013text_values\030\t \001(\0132/.yandex.cloud.mo" +
-      "nitoring.v3.TextValuesParameterH\000\022\016\n\006hid" +
-      "den\030\006 \001(\010\022\023\n\013description\030\n \001(\tB\006\n\004data\"_" +
-      "\n\017Parametrization\0229\n\nparameters\030\001 \003(\0132%." +
-      "yandex.cloud.monitoring.v3.Parameter\022\021\n\t" +
-      "selectors\030\002 \001(\tBk\n\036yandex.cloud.api.moni" +
-      "toring.v3ZIgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/monitoring/v3;monito" +
-      "ringb\006proto3"
+      "t_values\030\001 \003(\t\"j\n\022WorkspaceParameter\022\024\n\n" +
+      "project_id\030\001 \001(\tH\000\022\023\n\tfolder_id\030\002 \001(\tH\000\022" +
+      "\034\n\024default_workspace_id\030\003 \001(\tB\013\n\tcontain" +
+      "er\"\333\004\n\tParameter\022\014\n\004name\030\001 \001(\t\022\r\n\005title\030" +
+      "\002 \001(\t\022H\n\014label_values\030\003 \001(\01320.yandex.clo" +
+      "ud.monitoring.v3.LabelValuesParameterH\000\022" +
+      "=\n\006custom\030\004 \001(\0132+.yandex.cloud.monitorin" +
+      "g.v3.CustomParameterH\000\0229\n\004text\030\005 \001(\0132).y" +
+      "andex.cloud.monitoring.v3.TextParameterH" +
+      "\000\022I\n\021integer_parameter\030\007 \001(\0132,.yandex.cl" +
+      "oud.monitoring.v3.IntegerParameterH\000\022G\n\020" +
+      "double_parameter\030\010 \001(\0132+.yandex.cloud.mo" +
+      "nitoring.v3.DoubleParameterH\000\022F\n\013text_va" +
+      "lues\030\t \001(\0132/.yandex.cloud.monitoring.v3." +
+      "TextValuesParameterH\000\022M\n\023workspace_param" +
+      "eter\030\017 \001(\0132..yandex.cloud.monitoring.v3." +
+      "WorkspaceParameterH\000\022\016\n\006hidden\030\006 \001(\010\022\023\n\013" +
+      "description\030\n \001(\t\022\017\n\007grouped\030\016 \001(\010B\006\n\004da" +
+      "taJ\004\010\013\020\016\"_\n\017Parametrization\0229\n\nparameter" +
+      "s\030\001 \003(\0132%.yandex.cloud.monitoring.v3.Par" +
+      "ameter\022\021\n\tselectors\030\002 \001(\tBk\n\036yandex.clou" +
+      "d.api.monitoring.v3ZIgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/monitoring" +
+      "/v3;monitoringb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9349,14 +10912,20 @@ public final class ParametrizationOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_TextValuesParameter_descriptor,
         new java.lang.String[] { "DefaultValues", });
-    internal_static_yandex_cloud_monitoring_v3_Parameter_descriptor =
+    internal_static_yandex_cloud_monitoring_v3_WorkspaceParameter_descriptor =
       getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_monitoring_v3_WorkspaceParameter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_monitoring_v3_WorkspaceParameter_descriptor,
+        new java.lang.String[] { "ProjectId", "FolderId", "DefaultWorkspaceId", "Container", });
+    internal_static_yandex_cloud_monitoring_v3_Parameter_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_monitoring_v3_Parameter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_Parameter_descriptor,
-        new java.lang.String[] { "Name", "Title", "LabelValues", "Custom", "Text", "IntegerParameter", "DoubleParameter", "TextValues", "Hidden", "Description", "Data", });
+        new java.lang.String[] { "Name", "Title", "LabelValues", "Custom", "Text", "IntegerParameter", "DoubleParameter", "TextValues", "WorkspaceParameter", "Hidden", "Description", "Grouped", "Data", });
     internal_static_yandex_cloud_monitoring_v3_Parametrization_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_monitoring_v3_Parametrization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_Parametrization_descriptor,

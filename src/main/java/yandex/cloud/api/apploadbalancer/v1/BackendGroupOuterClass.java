@@ -8685,6 +8685,30 @@ public final class BackendGroupOuterClass {
      * <code>.google.protobuf.Duration ttl = 2;</code>
      */
     com.google.protobuf.DurationOrBuilder getTtlOrBuilder();
+
+    /**
+     * <pre>
+     * Path of cookie.
+     * This will be used to set the path of a new cookie when it is generated.
+     * If path is unspecified or empty, no path will be set for the cookie.
+     * </pre>
+     *
+     * <code>string path = 3 [(.yandex.cloud.length) = "0-256"];</code>
+     * @return The path.
+     */
+    java.lang.String getPath();
+    /**
+     * <pre>
+     * Path of cookie.
+     * This will be used to set the path of a new cookie when it is generated.
+     * If path is unspecified or empty, no path will be set for the cookie.
+     * </pre>
+     *
+     * <code>string path = 3 [(.yandex.cloud.length) = "0-256"];</code>
+     * @return The bytes for path.
+     */
+    com.google.protobuf.ByteString
+        getPathBytes();
   }
   /**
    * <pre>
@@ -8704,6 +8728,7 @@ public final class BackendGroupOuterClass {
     }
     private CookieSessionAffinity() {
       name_ = "";
+      path_ = "";
     }
 
     @java.lang.Override
@@ -8753,6 +8778,12 @@ public final class BackendGroupOuterClass {
                 ttl_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              path_ = s;
               break;
             }
             default: {
@@ -8880,6 +8911,56 @@ public final class BackendGroupOuterClass {
       return getTtl();
     }
 
+    public static final int PATH_FIELD_NUMBER = 3;
+    private volatile java.lang.Object path_;
+    /**
+     * <pre>
+     * Path of cookie.
+     * This will be used to set the path of a new cookie when it is generated.
+     * If path is unspecified or empty, no path will be set for the cookie.
+     * </pre>
+     *
+     * <code>string path = 3 [(.yandex.cloud.length) = "0-256"];</code>
+     * @return The path.
+     */
+    @java.lang.Override
+    public java.lang.String getPath() {
+      java.lang.Object ref = path_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        path_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Path of cookie.
+     * This will be used to set the path of a new cookie when it is generated.
+     * If path is unspecified or empty, no path will be set for the cookie.
+     * </pre>
+     *
+     * <code>string path = 3 [(.yandex.cloud.length) = "0-256"];</code>
+     * @return The bytes for path.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPathBytes() {
+      java.lang.Object ref = path_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        path_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8900,6 +8981,9 @@ public final class BackendGroupOuterClass {
       if (ttl_ != null) {
         output.writeMessage(2, getTtl());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, path_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8915,6 +8999,9 @@ public final class BackendGroupOuterClass {
       if (ttl_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTtl());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, path_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8938,6 +9025,8 @@ public final class BackendGroupOuterClass {
         if (!getTtl()
             .equals(other.getTtl())) return false;
       }
+      if (!getPath()
+          .equals(other.getPath())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8955,6 +9044,8 @@ public final class BackendGroupOuterClass {
         hash = (37 * hash) + TTL_FIELD_NUMBER;
         hash = (53 * hash) + getTtl().hashCode();
       }
+      hash = (37 * hash) + PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getPath().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9100,6 +9191,8 @@ public final class BackendGroupOuterClass {
           ttl_ = null;
           ttlBuilder_ = null;
         }
+        path_ = "";
+
         return this;
       }
 
@@ -9132,6 +9225,7 @@ public final class BackendGroupOuterClass {
         } else {
           result.ttl_ = ttlBuilder_.build();
         }
+        result.path_ = path_;
         onBuilt();
         return result;
       }
@@ -9186,6 +9280,10 @@ public final class BackendGroupOuterClass {
         }
         if (other.hasTtl()) {
           mergeTtl(other.getTtl());
+        }
+        if (!other.getPath().isEmpty()) {
+          path_ = other.path_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9492,6 +9590,112 @@ public final class BackendGroupOuterClass {
           ttl_ = null;
         }
         return ttlBuilder_;
+      }
+
+      private java.lang.Object path_ = "";
+      /**
+       * <pre>
+       * Path of cookie.
+       * This will be used to set the path of a new cookie when it is generated.
+       * If path is unspecified or empty, no path will be set for the cookie.
+       * </pre>
+       *
+       * <code>string path = 3 [(.yandex.cloud.length) = "0-256"];</code>
+       * @return The path.
+       */
+      public java.lang.String getPath() {
+        java.lang.Object ref = path_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          path_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Path of cookie.
+       * This will be used to set the path of a new cookie when it is generated.
+       * If path is unspecified or empty, no path will be set for the cookie.
+       * </pre>
+       *
+       * <code>string path = 3 [(.yandex.cloud.length) = "0-256"];</code>
+       * @return The bytes for path.
+       */
+      public com.google.protobuf.ByteString
+          getPathBytes() {
+        java.lang.Object ref = path_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          path_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Path of cookie.
+       * This will be used to set the path of a new cookie when it is generated.
+       * If path is unspecified or empty, no path will be set for the cookie.
+       * </pre>
+       *
+       * <code>string path = 3 [(.yandex.cloud.length) = "0-256"];</code>
+       * @param value The path to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPath(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        path_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Path of cookie.
+       * This will be used to set the path of a new cookie when it is generated.
+       * If path is unspecified or empty, no path will be set for the cookie.
+       * </pre>
+       *
+       * <code>string path = 3 [(.yandex.cloud.length) = "0-256"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPath() {
+        
+        path_ = getDefaultInstance().getPath();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Path of cookie.
+       * This will be used to set the path of a new cookie when it is generated.
+       * If path is unspecified or empty, no path will be set for the cookie.
+       * </pre>
+       *
+       * <code>string path = 3 [(.yandex.cloud.length) = "0-256"];</code>
+       * @param value The bytes for path to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        path_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -28405,94 +28609,94 @@ public final class BackendGroupOuterClass {
       "(\01326.yandex.cloud.apploadbalancer.v1.Coo" +
       "kieSessionAffinityH\000B\022\n\020session_affinity" +
       "\"7\n\025HeaderSessionAffinity\022\036\n\013header_name" +
-      "\030\001 \001(\tB\t\212\3101\0051-256\"X\n\025CookieSessionAffini" +
+      "\030\001 \001(\tB\t\212\3101\0051-256\"q\n\025CookieSessionAffini" +
       "ty\022\027\n\004name\030\001 \001(\tB\t\212\3101\0051-256\022&\n\003ttl\030\002 \001(\013" +
-      "2\031.google.protobuf.Duration\".\n\031Connectio" +
-      "nSessionAffinity\022\021\n\tsource_ip\030\001 \001(\010\"\307\001\n\023" +
-      "LoadBalancingConfig\022\"\n\017panic_threshold\030\001" +
-      " \001(\003B\t\372\3071\0050-100\0221\n\036locality_aware_routin" +
-      "g_percent\030\002 \001(\003B\t\372\3071\0050-100\022\027\n\017strict_loc" +
-      "ality\030\003 \001(\010\022@\n\004mode\030\004 \001(\01622.yandex.cloud" +
-      ".apploadbalancer.v1.LoadBalancingMode\"\227\004" +
-      "\n\rStreamBackend\022.\n\004name\030\001 \001(\tB \362\3071\034[a-z]" +
-      "[-a-z0-9]{1,61}[a-z0-9]\0223\n\016backend_weigh" +
-      "t\030\002 \001(\0132\033.google.protobuf.Int64Value\022S\n\025" +
-      "load_balancing_config\030\003 \001(\01324.yandex.clo" +
-      "ud.apploadbalancer.v1.LoadBalancingConfi" +
-      "g\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022M\n\rtarget_g" +
-      "roups\030\005 \001(\01324.yandex.cloud.apploadbalanc" +
-      "er.v1.TargetGroupsBackendH\000\022B\n\014healthche" +
-      "cks\030\006 \003(\0132,.yandex.cloud.apploadbalancer" +
-      ".v1.HealthCheck\0228\n\003tls\030\007 \001(\0132+.yandex.cl" +
-      "oud.apploadbalancer.v1.BackendTls\022\035\n\025ena" +
-      "ble_proxy_protocol\030\010 \001(\010\022/\n\'keep_connect" +
-      "ions_on_host_health_failure\030\t \001(\010B\024\n\014bac" +
-      "kend_type\022\004\300\3011\001\"\255\004\n\013HttpBackend\0222\n\004name\030" +
-      "\001 \001(\tB$\350\3071\001\362\3071\034[a-z][-a-z0-9]{1,61}[a-z0" +
-      "-9]\0223\n\016backend_weight\030\002 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022S\n\025load_balancing_confi" +
-      "g\030\003 \001(\01324.yandex.cloud.apploadbalancer.v" +
-      "1.LoadBalancingConfig\022\031\n\004port\030\004 \001(\003B\013\372\3071" +
-      "\0070-65535\022M\n\rtarget_groups\030\005 \001(\01324.yandex" +
-      ".cloud.apploadbalancer.v1.TargetGroupsBa" +
-      "ckendH\000\022O\n\016storage_bucket\030\t \001(\01325.yandex" +
-      ".cloud.apploadbalancer.v1.StorageBucketB" +
-      "ackendH\000\022B\n\014healthchecks\030\006 \003(\0132,.yandex." +
-      "cloud.apploadbalancer.v1.HealthCheck\0228\n\003" +
-      "tls\030\007 \001(\0132+.yandex.cloud.apploadbalancer" +
-      ".v1.BackendTls\022\021\n\tuse_http2\030\010 \001(\010B\024\n\014bac" +
-      "kend_type\022\004\300\3011\001\"\317\003\n\013GrpcBackend\0222\n\004name\030" +
-      "\001 \001(\tB$\350\3071\001\362\3071\034[a-z][-a-z0-9]{1,61}[a-z0" +
-      "-9]\0223\n\016backend_weight\030\002 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022S\n\025load_balancing_confi" +
-      "g\030\003 \001(\01324.yandex.cloud.apploadbalancer.v" +
-      "1.LoadBalancingConfig\022\031\n\004port\030\004 \001(\003B\013\372\3071" +
-      "\0070-65535\022M\n\rtarget_groups\030\005 \001(\01324.yandex" +
-      ".cloud.apploadbalancer.v1.TargetGroupsBa" +
-      "ckendH\000\022B\n\014healthchecks\030\007 \003(\0132,.yandex.c" +
-      "loud.apploadbalancer.v1.HealthCheck\0228\n\003t" +
-      "ls\030\010 \001(\0132+.yandex.cloud.apploadbalancer." +
-      "v1.BackendTlsB\024\n\014backend_type\022\004\300\3011\001J\004\010\006\020" +
-      "\007\"7\n\023TargetGroupsBackend\022 \n\020target_group" +
-      "_ids\030\001 \003(\tB\006\202\3101\002>0\"\034\n\032PlaintextTransport" +
-      "Settings\"|\n\027SecureTransportSettings\022\013\n\003s" +
-      "ni\030\001 \001(\t\022N\n\022validation_context\030\003 \001(\01322.y" +
-      "andex.cloud.apploadbalancer.v1.Validatio" +
-      "nContextJ\004\010\002\020\003\"o\n\nBackendTls\022\013\n\003sni\030\001 \001(" +
-      "\t\022N\n\022validation_context\030\003 \001(\01322.yandex.c" +
-      "loud.apploadbalancer.v1.ValidationContex" +
-      "tJ\004\010\002\020\003\",\n\024StorageBucketBackend\022\024\n\006bucke" +
-      "t\030\001 \001(\tB\004\350\3071\001\"\314\007\n\013HealthCheck\0220\n\007timeout" +
-      "\030\001 \001(\0132\031.google.protobuf.DurationB\004\350\3071\001\022" +
-      "1\n\010interval\030\002 \001(\0132\031.google.protobuf.Dura" +
-      "tionB\004\350\3071\001\022\037\n\027interval_jitter_percent\030\003 " +
-      "\001(\001\022\031\n\021healthy_threshold\030\004 \001(\003\022\033\n\023unheal" +
-      "thy_threshold\030\005 \001(\003\022%\n\020healthcheck_port\030" +
-      "\006 \001(\003B\013\372\3071\0070-65535\022P\n\006stream\030\007 \001(\0132>.yan" +
+      "2\031.google.protobuf.Duration\022\027\n\004path\030\003 \001(" +
+      "\tB\t\212\3101\0050-256\".\n\031ConnectionSessionAffinit" +
+      "y\022\021\n\tsource_ip\030\001 \001(\010\"\307\001\n\023LoadBalancingCo" +
+      "nfig\022\"\n\017panic_threshold\030\001 \001(\003B\t\372\3071\0050-100" +
+      "\0221\n\036locality_aware_routing_percent\030\002 \001(\003" +
+      "B\t\372\3071\0050-100\022\027\n\017strict_locality\030\003 \001(\010\022@\n\004" +
+      "mode\030\004 \001(\01622.yandex.cloud.apploadbalance" +
+      "r.v1.LoadBalancingMode\"\227\004\n\rStreamBackend" +
+      "\022.\n\004name\030\001 \001(\tB \362\3071\034[a-z][-a-z0-9]{1,61}" +
+      "[a-z0-9]\0223\n\016backend_weight\030\002 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\022S\n\025load_balancing_" +
+      "config\030\003 \001(\01324.yandex.cloud.apploadbalan" +
+      "cer.v1.LoadBalancingConfig\022\031\n\004port\030\004 \001(\003" +
+      "B\013\372\3071\0070-65535\022M\n\rtarget_groups\030\005 \001(\01324.y" +
+      "andex.cloud.apploadbalancer.v1.TargetGro" +
+      "upsBackendH\000\022B\n\014healthchecks\030\006 \003(\0132,.yan" +
       "dex.cloud.apploadbalancer.v1.HealthCheck" +
-      ".StreamHealthCheckH\000\022L\n\004http\030\010 \001(\0132<.yan" +
-      "dex.cloud.apploadbalancer.v1.HealthCheck" +
-      ".HttpHealthCheckH\000\022L\n\004grpc\030\t \001(\0132<.yande" +
-      "x.cloud.apploadbalancer.v1.HealthCheck.G" +
-      "rpcHealthCheckH\000\022P\n\tplaintext\030\n \001(\0132;.ya" +
-      "ndex.cloud.apploadbalancer.v1.PlaintextT" +
-      "ransportSettingsH\001\022G\n\003tls\030\013 \001(\01328.yandex" +
-      ".cloud.apploadbalancer.v1.SecureTranspor" +
-      "tSettingsH\001\032\206\001\n\021StreamHealthCheck\0226\n\004sen" +
-      "d\030\001 \001(\0132(.yandex.cloud.apploadbalancer.v" +
-      "1.Payload\0229\n\007receive\030\002 \001(\0132(.yandex.clou" +
-      "d.apploadbalancer.v1.Payload\032r\n\017HttpHeal" +
-      "thCheck\022\014\n\004host\030\001 \001(\t\022\022\n\004path\030\002 \001(\tB\004\350\3071" +
-      "\001\022\021\n\tuse_http2\030\003 \001(\010\022*\n\021expected_statuse" +
-      "s\030\004 \003(\003B\017\372\3071\007100-599\220\3101\001\032\'\n\017GrpcHealthCh" +
-      "eck\022\024\n\014service_name\030\001 \001(\tB\023\n\013healthcheck" +
-      "\022\004\300\3011\001B\024\n\022transport_settings*T\n\021LoadBala" +
-      "ncingMode\022\017\n\013ROUND_ROBIN\020\000\022\n\n\006RANDOM\020\001\022\021" +
-      "\n\rLEAST_REQUEST\020\002\022\017\n\013MAGLEV_HASH\020\003Bz\n#ya" +
-      "ndex.cloud.api.apploadbalancer.v1ZSgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/apploadbalancer/v1;apploadbalancerb\006" +
-      "proto3"
+      "\0228\n\003tls\030\007 \001(\0132+.yandex.cloud.apploadbala" +
+      "ncer.v1.BackendTls\022\035\n\025enable_proxy_proto" +
+      "col\030\010 \001(\010\022/\n\'keep_connections_on_host_he" +
+      "alth_failure\030\t \001(\010B\024\n\014backend_type\022\004\300\3011\001" +
+      "\"\255\004\n\013HttpBackend\0222\n\004name\030\001 \001(\tB$\350\3071\001\362\3071\034" +
+      "[a-z][-a-z0-9]{1,61}[a-z0-9]\0223\n\016backend_" +
+      "weight\030\002 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\022S\n\025load_balancing_config\030\003 \001(\01324.yande" +
+      "x.cloud.apploadbalancer.v1.LoadBalancing" +
+      "Config\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022M\n\rtar" +
+      "get_groups\030\005 \001(\01324.yandex.cloud.apploadb" +
+      "alancer.v1.TargetGroupsBackendH\000\022O\n\016stor" +
+      "age_bucket\030\t \001(\01325.yandex.cloud.apploadb" +
+      "alancer.v1.StorageBucketBackendH\000\022B\n\014hea" +
+      "lthchecks\030\006 \003(\0132,.yandex.cloud.apploadba" +
+      "lancer.v1.HealthCheck\0228\n\003tls\030\007 \001(\0132+.yan" +
+      "dex.cloud.apploadbalancer.v1.BackendTls\022" +
+      "\021\n\tuse_http2\030\010 \001(\010B\024\n\014backend_type\022\004\300\3011\001" +
+      "\"\317\003\n\013GrpcBackend\0222\n\004name\030\001 \001(\tB$\350\3071\001\362\3071\034" +
+      "[a-z][-a-z0-9]{1,61}[a-z0-9]\0223\n\016backend_" +
+      "weight\030\002 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\022S\n\025load_balancing_config\030\003 \001(\01324.yande" +
+      "x.cloud.apploadbalancer.v1.LoadBalancing" +
+      "Config\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022M\n\rtar" +
+      "get_groups\030\005 \001(\01324.yandex.cloud.apploadb" +
+      "alancer.v1.TargetGroupsBackendH\000\022B\n\014heal" +
+      "thchecks\030\007 \003(\0132,.yandex.cloud.apploadbal" +
+      "ancer.v1.HealthCheck\0228\n\003tls\030\010 \001(\0132+.yand" +
+      "ex.cloud.apploadbalancer.v1.BackendTlsB\024" +
+      "\n\014backend_type\022\004\300\3011\001J\004\010\006\020\007\"7\n\023TargetGrou" +
+      "psBackend\022 \n\020target_group_ids\030\001 \003(\tB\006\202\3101" +
+      "\002>0\"\034\n\032PlaintextTransportSettings\"|\n\027Sec" +
+      "ureTransportSettings\022\013\n\003sni\030\001 \001(\t\022N\n\022val" +
+      "idation_context\030\003 \001(\01322.yandex.cloud.app" +
+      "loadbalancer.v1.ValidationContextJ\004\010\002\020\003\"" +
+      "o\n\nBackendTls\022\013\n\003sni\030\001 \001(\t\022N\n\022validation" +
+      "_context\030\003 \001(\01322.yandex.cloud.apploadbal" +
+      "ancer.v1.ValidationContextJ\004\010\002\020\003\",\n\024Stor" +
+      "ageBucketBackend\022\024\n\006bucket\030\001 \001(\tB\004\350\3071\001\"\314" +
+      "\007\n\013HealthCheck\0220\n\007timeout\030\001 \001(\0132\031.google" +
+      ".protobuf.DurationB\004\350\3071\001\0221\n\010interval\030\002 \001" +
+      "(\0132\031.google.protobuf.DurationB\004\350\3071\001\022\037\n\027i" +
+      "nterval_jitter_percent\030\003 \001(\001\022\031\n\021healthy_" +
+      "threshold\030\004 \001(\003\022\033\n\023unhealthy_threshold\030\005" +
+      " \001(\003\022%\n\020healthcheck_port\030\006 \001(\003B\013\372\3071\0070-65" +
+      "535\022P\n\006stream\030\007 \001(\0132>.yandex.cloud.applo" +
+      "adbalancer.v1.HealthCheck.StreamHealthCh" +
+      "eckH\000\022L\n\004http\030\010 \001(\0132<.yandex.cloud.applo" +
+      "adbalancer.v1.HealthCheck.HttpHealthChec" +
+      "kH\000\022L\n\004grpc\030\t \001(\0132<.yandex.cloud.appload" +
+      "balancer.v1.HealthCheck.GrpcHealthCheckH" +
+      "\000\022P\n\tplaintext\030\n \001(\0132;.yandex.cloud.appl" +
+      "oadbalancer.v1.PlaintextTransportSetting" +
+      "sH\001\022G\n\003tls\030\013 \001(\01328.yandex.cloud.apploadb" +
+      "alancer.v1.SecureTransportSettingsH\001\032\206\001\n" +
+      "\021StreamHealthCheck\0226\n\004send\030\001 \001(\0132(.yande" +
+      "x.cloud.apploadbalancer.v1.Payload\0229\n\007re" +
+      "ceive\030\002 \001(\0132(.yandex.cloud.apploadbalanc" +
+      "er.v1.Payload\032r\n\017HttpHealthCheck\022\014\n\004host" +
+      "\030\001 \001(\t\022\022\n\004path\030\002 \001(\tB\004\350\3071\001\022\021\n\tuse_http2\030" +
+      "\003 \001(\010\022*\n\021expected_statuses\030\004 \003(\003B\017\372\3071\00710" +
+      "0-599\220\3101\001\032\'\n\017GrpcHealthCheck\022\024\n\014service_" +
+      "name\030\001 \001(\tB\023\n\013healthcheck\022\004\300\3011\001B\024\n\022trans" +
+      "port_settings*T\n\021LoadBalancingMode\022\017\n\013RO" +
+      "UND_ROBIN\020\000\022\n\n\006RANDOM\020\001\022\021\n\rLEAST_REQUEST" +
+      "\020\002\022\017\n\013MAGLEV_HASH\020\003Bz\n#yandex.cloud.api." +
+      "apploadbalancer.v1ZSgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/apploadbala" +
+      "ncer/v1;apploadbalancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -28545,7 +28749,7 @@ public final class BackendGroupOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_CookieSessionAffinity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_CookieSessionAffinity_descriptor,
-        new java.lang.String[] { "Name", "Ttl", });
+        new java.lang.String[] { "Name", "Ttl", "Path", });
     internal_static_yandex_cloud_apploadbalancer_v1_ConnectionSessionAffinity_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_apploadbalancer_v1_ConnectionSessionAffinity_fieldAccessorTable = new

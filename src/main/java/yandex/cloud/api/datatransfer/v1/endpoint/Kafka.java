@@ -137,7 +137,8 @@ public final class Kafka {
 
     /**
      * <pre>
-     * Managed Service for Kafka cluster ID
+     * Managed Service for Kafka cluster ID. 
+     * Set only one of: cluster_id/on_premise/connection_manager_connection
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -146,7 +147,8 @@ public final class Kafka {
     boolean hasClusterId();
     /**
      * <pre>
-     * Managed Service for Kafka cluster ID
+     * Managed Service for Kafka cluster ID. 
+     * Set only one of: cluster_id/on_premise/connection_manager_connection
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -155,7 +157,8 @@ public final class Kafka {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Managed Service for Kafka cluster ID
+     * Managed Service for Kafka cluster ID. 
+     * Set only one of: cluster_id/on_premise/connection_manager_connection
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -167,6 +170,7 @@ public final class Kafka {
     /**
      * <pre>
      * Connection options for on-premise Kafka
+     * Set only one of: cluster_id/on_premise/connection_manager_connection
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseKafka on_premise = 2;</code>
@@ -176,6 +180,7 @@ public final class Kafka {
     /**
      * <pre>
      * Connection options for on-premise Kafka
+     * Set only one of: cluster_id/on_premise/connection_manager_connection
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseKafka on_premise = 2;</code>
@@ -185,11 +190,42 @@ public final class Kafka {
     /**
      * <pre>
      * Connection options for on-premise Kafka
+     * Set only one of: cluster_id/on_premise/connection_manager_connection
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseKafka on_premise = 2;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Kafka.OnPremiseKafkaOrBuilder getOnPremiseOrBuilder();
+
+    /**
+     * <pre>
+     * Get Kafka installation params and credentials from Connection Manager
+     * Set only one of: cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     * @return Whether the connectionManagerConnection field is set.
+     */
+    boolean hasConnectionManagerConnection();
+    /**
+     * <pre>
+     * Get Kafka installation params and credentials from Connection Manager
+     * Set only one of: cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     * @return The connectionManagerConnection.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection getConnectionManagerConnection();
+    /**
+     * <pre>
+     * Get Kafka installation params and credentials from Connection Manager
+     * Set only one of: cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder getConnectionManagerConnectionOrBuilder();
 
     public yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaConnectionOptions.ConnectionCase getConnectionCase();
   }
@@ -258,6 +294,20 @@ public final class Kafka {
               connectionCase_ = 2;
               break;
             }
+            case 26: {
+              yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder subBuilder = null;
+              if (connectionCase_ == 3) {
+                subBuilder = ((yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_).toBuilder();
+              }
+              connection_ =
+                  input.readMessage(yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_);
+                connection_ = subBuilder.buildPartial();
+              }
+              connectionCase_ = 3;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -297,6 +347,7 @@ public final class Kafka {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       CLUSTER_ID(1),
       ON_PREMISE(2),
+      CONNECTION_MANAGER_CONNECTION(3),
       CONNECTION_NOT_SET(0);
       private final int value;
       private ConnectionCase(int value) {
@@ -316,6 +367,7 @@ public final class Kafka {
         switch (value) {
           case 1: return CLUSTER_ID;
           case 2: return ON_PREMISE;
+          case 3: return CONNECTION_MANAGER_CONNECTION;
           case 0: return CONNECTION_NOT_SET;
           default: return null;
         }
@@ -334,7 +386,8 @@ public final class Kafka {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     /**
      * <pre>
-     * Managed Service for Kafka cluster ID
+     * Managed Service for Kafka cluster ID. 
+     * Set only one of: cluster_id/on_premise/connection_manager_connection
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -345,7 +398,8 @@ public final class Kafka {
     }
     /**
      * <pre>
-     * Managed Service for Kafka cluster ID
+     * Managed Service for Kafka cluster ID. 
+     * Set only one of: cluster_id/on_premise/connection_manager_connection
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -370,7 +424,8 @@ public final class Kafka {
     }
     /**
      * <pre>
-     * Managed Service for Kafka cluster ID
+     * Managed Service for Kafka cluster ID. 
+     * Set only one of: cluster_id/on_premise/connection_manager_connection
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -399,6 +454,7 @@ public final class Kafka {
     /**
      * <pre>
      * Connection options for on-premise Kafka
+     * Set only one of: cluster_id/on_premise/connection_manager_connection
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseKafka on_premise = 2;</code>
@@ -411,6 +467,7 @@ public final class Kafka {
     /**
      * <pre>
      * Connection options for on-premise Kafka
+     * Set only one of: cluster_id/on_premise/connection_manager_connection
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseKafka on_premise = 2;</code>
@@ -426,6 +483,7 @@ public final class Kafka {
     /**
      * <pre>
      * Connection options for on-premise Kafka
+     * Set only one of: cluster_id/on_premise/connection_manager_connection
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseKafka on_premise = 2;</code>
@@ -436,6 +494,52 @@ public final class Kafka {
          return (yandex.cloud.api.datatransfer.v1.endpoint.Kafka.OnPremiseKafka) connection_;
       }
       return yandex.cloud.api.datatransfer.v1.endpoint.Kafka.OnPremiseKafka.getDefaultInstance();
+    }
+
+    public static final int CONNECTION_MANAGER_CONNECTION_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * Get Kafka installation params and credentials from Connection Manager
+     * Set only one of: cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     * @return Whether the connectionManagerConnection field is set.
+     */
+    @java.lang.Override
+    public boolean hasConnectionManagerConnection() {
+      return connectionCase_ == 3;
+    }
+    /**
+     * <pre>
+     * Get Kafka installation params and credentials from Connection Manager
+     * Set only one of: cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     * @return The connectionManagerConnection.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection getConnectionManagerConnection() {
+      if (connectionCase_ == 3) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Get Kafka installation params and credentials from Connection Manager
+     * Set only one of: cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder getConnectionManagerConnectionOrBuilder() {
+      if (connectionCase_ == 3) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -458,6 +562,9 @@ public final class Kafka {
       if (connectionCase_ == 2) {
         output.writeMessage(2, (yandex.cloud.api.datatransfer.v1.endpoint.Kafka.OnPremiseKafka) connection_);
       }
+      if (connectionCase_ == 3) {
+        output.writeMessage(3, (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -473,6 +580,10 @@ public final class Kafka {
       if (connectionCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, (yandex.cloud.api.datatransfer.v1.endpoint.Kafka.OnPremiseKafka) connection_);
+      }
+      if (connectionCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -499,6 +610,10 @@ public final class Kafka {
           if (!getOnPremise()
               .equals(other.getOnPremise())) return false;
           break;
+        case 3:
+          if (!getConnectionManagerConnection()
+              .equals(other.getConnectionManagerConnection())) return false;
+          break;
         case 0:
         default:
       }
@@ -521,6 +636,10 @@ public final class Kafka {
         case 2:
           hash = (37 * hash) + ON_PREMISE_FIELD_NUMBER;
           hash = (53 * hash) + getOnPremise().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + CONNECTION_MANAGER_CONNECTION_FIELD_NUMBER;
+          hash = (53 * hash) + getConnectionManagerConnection().hashCode();
           break;
         case 0:
         default:
@@ -696,6 +815,13 @@ public final class Kafka {
             result.connection_ = onPremiseBuilder_.build();
           }
         }
+        if (connectionCase_ == 3) {
+          if (connectionManagerConnectionBuilder_ == null) {
+            result.connection_ = connection_;
+          } else {
+            result.connection_ = connectionManagerConnectionBuilder_.build();
+          }
+        }
         result.connectionCase_ = connectionCase_;
         onBuilt();
         return result;
@@ -756,6 +882,10 @@ public final class Kafka {
             mergeOnPremise(other.getOnPremise());
             break;
           }
+          case CONNECTION_MANAGER_CONNECTION: {
+            mergeConnectionManagerConnection(other.getConnectionManagerConnection());
+            break;
+          }
           case CONNECTION_NOT_SET: {
             break;
           }
@@ -806,7 +936,8 @@ public final class Kafka {
 
       /**
        * <pre>
-       * Managed Service for Kafka cluster ID
+       * Managed Service for Kafka cluster ID. 
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -818,7 +949,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Managed Service for Kafka cluster ID
+       * Managed Service for Kafka cluster ID. 
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -844,7 +976,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Managed Service for Kafka cluster ID
+       * Managed Service for Kafka cluster ID. 
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -871,7 +1004,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Managed Service for Kafka cluster ID
+       * Managed Service for Kafka cluster ID. 
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -890,7 +1024,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Managed Service for Kafka cluster ID
+       * Managed Service for Kafka cluster ID. 
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -906,7 +1041,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Managed Service for Kafka cluster ID
+       * Managed Service for Kafka cluster ID. 
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -930,6 +1066,7 @@ public final class Kafka {
       /**
        * <pre>
        * Connection options for on-premise Kafka
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseKafka on_premise = 2;</code>
@@ -942,6 +1079,7 @@ public final class Kafka {
       /**
        * <pre>
        * Connection options for on-premise Kafka
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseKafka on_premise = 2;</code>
@@ -964,6 +1102,7 @@ public final class Kafka {
       /**
        * <pre>
        * Connection options for on-premise Kafka
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseKafka on_premise = 2;</code>
@@ -984,6 +1123,7 @@ public final class Kafka {
       /**
        * <pre>
        * Connection options for on-premise Kafka
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseKafka on_premise = 2;</code>
@@ -1002,6 +1142,7 @@ public final class Kafka {
       /**
        * <pre>
        * Connection options for on-premise Kafka
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseKafka on_premise = 2;</code>
@@ -1028,6 +1169,7 @@ public final class Kafka {
       /**
        * <pre>
        * Connection options for on-premise Kafka
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseKafka on_premise = 2;</code>
@@ -1051,6 +1193,7 @@ public final class Kafka {
       /**
        * <pre>
        * Connection options for on-premise Kafka
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseKafka on_premise = 2;</code>
@@ -1061,6 +1204,7 @@ public final class Kafka {
       /**
        * <pre>
        * Connection options for on-premise Kafka
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseKafka on_premise = 2;</code>
@@ -1079,6 +1223,7 @@ public final class Kafka {
       /**
        * <pre>
        * Connection options for on-premise Kafka
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseKafka on_premise = 2;</code>
@@ -1100,6 +1245,192 @@ public final class Kafka {
         connectionCase_ = 2;
         onChanged();;
         return onPremiseBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder> connectionManagerConnectionBuilder_;
+      /**
+       * <pre>
+       * Get Kafka installation params and credentials from Connection Manager
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       * @return Whether the connectionManagerConnection field is set.
+       */
+      @java.lang.Override
+      public boolean hasConnectionManagerConnection() {
+        return connectionCase_ == 3;
+      }
+      /**
+       * <pre>
+       * Get Kafka installation params and credentials from Connection Manager
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       * @return The connectionManagerConnection.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection getConnectionManagerConnection() {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (connectionCase_ == 3) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+        } else {
+          if (connectionCase_ == 3) {
+            return connectionManagerConnectionBuilder_.getMessage();
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Get Kafka installation params and credentials from Connection Manager
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      public Builder setConnectionManagerConnection(yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection value) {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          connection_ = value;
+          onChanged();
+        } else {
+          connectionManagerConnectionBuilder_.setMessage(value);
+        }
+        connectionCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Get Kafka installation params and credentials from Connection Manager
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      public Builder setConnectionManagerConnection(
+          yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder builderForValue) {
+        if (connectionManagerConnectionBuilder_ == null) {
+          connection_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectionManagerConnectionBuilder_.setMessage(builderForValue.build());
+        }
+        connectionCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Get Kafka installation params and credentials from Connection Manager
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      public Builder mergeConnectionManagerConnection(yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection value) {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (connectionCase_ == 3 &&
+              connection_ != yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance()) {
+            connection_ = yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.newBuilder((yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            connection_ = value;
+          }
+          onChanged();
+        } else {
+          if (connectionCase_ == 3) {
+            connectionManagerConnectionBuilder_.mergeFrom(value);
+          }
+          connectionManagerConnectionBuilder_.setMessage(value);
+        }
+        connectionCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Get Kafka installation params and credentials from Connection Manager
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      public Builder clearConnectionManagerConnection() {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (connectionCase_ == 3) {
+            connectionCase_ = 0;
+            connection_ = null;
+            onChanged();
+          }
+        } else {
+          if (connectionCase_ == 3) {
+            connectionCase_ = 0;
+            connection_ = null;
+          }
+          connectionManagerConnectionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Get Kafka installation params and credentials from Connection Manager
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder getConnectionManagerConnectionBuilder() {
+        return getConnectionManagerConnectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Get Kafka installation params and credentials from Connection Manager
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder getConnectionManagerConnectionOrBuilder() {
+        if ((connectionCase_ == 3) && (connectionManagerConnectionBuilder_ != null)) {
+          return connectionManagerConnectionBuilder_.getMessageOrBuilder();
+        } else {
+          if (connectionCase_ == 3) {
+            return (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_;
+          }
+          return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Get Kafka installation params and credentials from Connection Manager
+       * Set only one of: cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder> 
+          getConnectionManagerConnectionFieldBuilder() {
+        if (connectionManagerConnectionBuilder_ == null) {
+          if (!(connectionCase_ == 3)) {
+            connection_ = yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
+          }
+          connectionManagerConnectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder>(
+                  (yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection) connection_,
+                  getParentForChildren(),
+                  isClean());
+          connection_ = null;
+        }
+        connectionCase_ = 3;
+        onChanged();;
+        return connectionManagerConnectionBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1201,7 +1532,9 @@ public final class Kafka {
 
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
@@ -1210,7 +1543,9 @@ public final class Kafka {
     java.lang.String getSubnetId();
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
@@ -1247,6 +1582,10 @@ public final class Kafka {
     yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder getTlsModeOrBuilder();
   }
   /**
+   * <pre>
+   * On-premise Kafka installation options
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.OnPremiseKafka}
    */
   public static final class OnPremiseKafka extends
@@ -1412,7 +1751,9 @@ public final class Kafka {
     private volatile java.lang.Object subnetId_;
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
@@ -1433,7 +1774,9 @@ public final class Kafka {
     }
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
@@ -1680,6 +2023,10 @@ public final class Kafka {
       return builder;
     }
     /**
+     * <pre>
+     * On-premise Kafka installation options
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.OnPremiseKafka}
      */
     public static final class Builder extends
@@ -2009,7 +2356,9 @@ public final class Kafka {
       private java.lang.Object subnetId_ = "";
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -2029,7 +2378,9 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -2050,7 +2401,9 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -2069,7 +2422,9 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -2083,7 +2438,9 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -3402,7 +3759,8 @@ public final class Kafka {
 
     /**
      * <pre>
-     * SASL mechanism for authentication
+     * SASL mechanism for authentication, use one of: KAFKA_MECHANISM_SHA256,
+     * KAFKA_MECHANISM_SHA512
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
@@ -3411,7 +3769,8 @@ public final class Kafka {
     int getMechanismValue();
     /**
      * <pre>
-     * SASL mechanism for authentication
+     * SASL mechanism for authentication, use one of: KAFKA_MECHANISM_SHA256,
+     * KAFKA_MECHANISM_SHA512
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
@@ -3600,7 +3959,8 @@ public final class Kafka {
     private int mechanism_;
     /**
      * <pre>
-     * SASL mechanism for authentication
+     * SASL mechanism for authentication, use one of: KAFKA_MECHANISM_SHA256,
+     * KAFKA_MECHANISM_SHA512
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
@@ -3611,7 +3971,8 @@ public final class Kafka {
     }
     /**
      * <pre>
-     * SASL mechanism for authentication
+     * SASL mechanism for authentication, use one of: KAFKA_MECHANISM_SHA256,
+     * KAFKA_MECHANISM_SHA512
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
@@ -4108,7 +4469,8 @@ public final class Kafka {
       private int mechanism_ = 0;
       /**
        * <pre>
-       * SASL mechanism for authentication
+       * SASL mechanism for authentication, use one of: KAFKA_MECHANISM_SHA256,
+       * KAFKA_MECHANISM_SHA512
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
@@ -4119,7 +4481,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * SASL mechanism for authentication
+       * SASL mechanism for authentication, use one of: KAFKA_MECHANISM_SHA256,
+       * KAFKA_MECHANISM_SHA512
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
@@ -4134,7 +4497,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * SASL mechanism for authentication
+       * SASL mechanism for authentication, use one of: KAFKA_MECHANISM_SHA256,
+       * KAFKA_MECHANISM_SHA512
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
@@ -4148,7 +4512,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * SASL mechanism for authentication
+       * SASL mechanism for authentication, use one of: KAFKA_MECHANISM_SHA256,
+       * KAFKA_MECHANISM_SHA512
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
@@ -4166,7 +4531,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * SASL mechanism for authentication
+       * SASL mechanism for authentication, use one of: KAFKA_MECHANISM_SHA256,
+       * KAFKA_MECHANISM_SHA512
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
@@ -4446,7 +4812,8 @@ public final class Kafka {
 
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 3;</code>
@@ -4456,7 +4823,8 @@ public final class Kafka {
         getSecurityGroupsList();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 3;</code>
@@ -4465,7 +4833,8 @@ public final class Kafka {
     int getSecurityGroupsCount();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 3;</code>
@@ -4475,7 +4844,8 @@ public final class Kafka {
     java.lang.String getSecurityGroups(int index);
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 3;</code>
@@ -4487,8 +4857,8 @@ public final class Kafka {
 
     /**
      * <pre>
+     * **Deprecated**. Please use `topic_names` instead
      * Full source topic name
-     * Deprecated in favor of topic names
      * </pre>
      *
      * <code>string topic_name = 4 [deprecated = true];</code>
@@ -4498,8 +4868,8 @@ public final class Kafka {
     @java.lang.Deprecated java.lang.String getTopicName();
     /**
      * <pre>
+     * **Deprecated**. Please use `topic_names` instead
      * Full source topic name
-     * Deprecated in favor of topic names
      * </pre>
      *
      * <code>string topic_name = 4 [deprecated = true];</code>
@@ -4511,7 +4881,7 @@ public final class Kafka {
 
     /**
      * <pre>
-     * Data transformation rules
+     * Transform data with a custom Cloud Function
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions transformer = 5;</code>
@@ -4520,7 +4890,7 @@ public final class Kafka {
     boolean hasTransformer();
     /**
      * <pre>
-     * Data transformation rules
+     * Transform data with a custom Cloud Function
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions transformer = 5;</code>
@@ -4529,7 +4899,7 @@ public final class Kafka {
     yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions getTransformer();
     /**
      * <pre>
-     * Data transformation rules
+     * Transform data with a custom Cloud Function
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions transformer = 5;</code>
@@ -4538,7 +4908,7 @@ public final class Kafka {
 
     /**
      * <pre>
-     * Data parsing rules
+     * Data parsing parameters. If not set, the source messages are read in raw
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Parser parser = 7;</code>
@@ -4547,7 +4917,7 @@ public final class Kafka {
     boolean hasParser();
     /**
      * <pre>
-     * Data parsing rules
+     * Data parsing parameters. If not set, the source messages are read in raw
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Parser parser = 7;</code>
@@ -4556,7 +4926,7 @@ public final class Kafka {
     yandex.cloud.api.datatransfer.v1.endpoint.Parsers.Parser getParser();
     /**
      * <pre>
-     * Data parsing rules
+     * Data parsing parameters. If not set, the source messages are read in raw
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Parser parser = 7;</code>
@@ -4565,7 +4935,7 @@ public final class Kafka {
 
     /**
      * <pre>
-     * List of topic names to read
+     * List of full source topic names to read
      * </pre>
      *
      * <code>repeated string topic_names = 8;</code>
@@ -4575,7 +4945,7 @@ public final class Kafka {
         getTopicNamesList();
     /**
      * <pre>
-     * List of topic names to read
+     * List of full source topic names to read
      * </pre>
      *
      * <code>repeated string topic_names = 8;</code>
@@ -4584,7 +4954,7 @@ public final class Kafka {
     int getTopicNamesCount();
     /**
      * <pre>
-     * List of topic names to read
+     * List of full source topic names to read
      * </pre>
      *
      * <code>repeated string topic_names = 8;</code>
@@ -4594,7 +4964,7 @@ public final class Kafka {
     java.lang.String getTopicNames(int index);
     /**
      * <pre>
-     * List of topic names to read
+     * List of full source topic names to read
      * </pre>
      *
      * <code>repeated string topic_names = 8;</code>
@@ -4605,6 +4975,10 @@ public final class Kafka {
         getTopicNamesBytes(int index);
   }
   /**
+   * <pre>
+   * Settings specific to the Kafka source endpoint
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.KafkaSource}
    */
   public static final class KafkaSource extends
@@ -4847,7 +5221,8 @@ public final class Kafka {
     private com.google.protobuf.LazyStringList securityGroups_;
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 3;</code>
@@ -4859,7 +5234,8 @@ public final class Kafka {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 3;</code>
@@ -4870,7 +5246,8 @@ public final class Kafka {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 3;</code>
@@ -4882,7 +5259,8 @@ public final class Kafka {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 3;</code>
@@ -4898,8 +5276,8 @@ public final class Kafka {
     private volatile java.lang.Object topicName_;
     /**
      * <pre>
+     * **Deprecated**. Please use `topic_names` instead
      * Full source topic name
-     * Deprecated in favor of topic names
      * </pre>
      *
      * <code>string topic_name = 4 [deprecated = true];</code>
@@ -4921,8 +5299,8 @@ public final class Kafka {
     }
     /**
      * <pre>
+     * **Deprecated**. Please use `topic_names` instead
      * Full source topic name
-     * Deprecated in favor of topic names
      * </pre>
      *
      * <code>string topic_name = 4 [deprecated = true];</code>
@@ -4948,7 +5326,7 @@ public final class Kafka {
     private yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions transformer_;
     /**
      * <pre>
-     * Data transformation rules
+     * Transform data with a custom Cloud Function
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions transformer = 5;</code>
@@ -4960,7 +5338,7 @@ public final class Kafka {
     }
     /**
      * <pre>
-     * Data transformation rules
+     * Transform data with a custom Cloud Function
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions transformer = 5;</code>
@@ -4972,7 +5350,7 @@ public final class Kafka {
     }
     /**
      * <pre>
-     * Data transformation rules
+     * Transform data with a custom Cloud Function
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions transformer = 5;</code>
@@ -4986,7 +5364,7 @@ public final class Kafka {
     private yandex.cloud.api.datatransfer.v1.endpoint.Parsers.Parser parser_;
     /**
      * <pre>
-     * Data parsing rules
+     * Data parsing parameters. If not set, the source messages are read in raw
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Parser parser = 7;</code>
@@ -4998,7 +5376,7 @@ public final class Kafka {
     }
     /**
      * <pre>
-     * Data parsing rules
+     * Data parsing parameters. If not set, the source messages are read in raw
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Parser parser = 7;</code>
@@ -5010,7 +5388,7 @@ public final class Kafka {
     }
     /**
      * <pre>
-     * Data parsing rules
+     * Data parsing parameters. If not set, the source messages are read in raw
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Parser parser = 7;</code>
@@ -5024,7 +5402,7 @@ public final class Kafka {
     private com.google.protobuf.LazyStringList topicNames_;
     /**
      * <pre>
-     * List of topic names to read
+     * List of full source topic names to read
      * </pre>
      *
      * <code>repeated string topic_names = 8;</code>
@@ -5036,7 +5414,7 @@ public final class Kafka {
     }
     /**
      * <pre>
-     * List of topic names to read
+     * List of full source topic names to read
      * </pre>
      *
      * <code>repeated string topic_names = 8;</code>
@@ -5047,7 +5425,7 @@ public final class Kafka {
     }
     /**
      * <pre>
-     * List of topic names to read
+     * List of full source topic names to read
      * </pre>
      *
      * <code>repeated string topic_names = 8;</code>
@@ -5059,7 +5437,7 @@ public final class Kafka {
     }
     /**
      * <pre>
-     * List of topic names to read
+     * List of full source topic names to read
      * </pre>
      *
      * <code>repeated string topic_names = 8;</code>
@@ -5324,6 +5702,10 @@ public final class Kafka {
       return builder;
     }
     /**
+     * <pre>
+     * Settings specific to the Kafka source endpoint
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.KafkaSource}
      */
     public static final class Builder extends
@@ -5882,7 +6264,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 3;</code>
@@ -5894,7 +6277,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 3;</code>
@@ -5905,7 +6289,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 3;</code>
@@ -5917,7 +6302,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 3;</code>
@@ -5930,7 +6316,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 3;</code>
@@ -5950,7 +6337,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 3;</code>
@@ -5969,7 +6357,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 3;</code>
@@ -5986,7 +6375,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 3;</code>
@@ -6000,7 +6390,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 3;</code>
@@ -6022,8 +6413,8 @@ public final class Kafka {
       private java.lang.Object topicName_ = "";
       /**
        * <pre>
+       * **Deprecated**. Please use `topic_names` instead
        * Full source topic name
-       * Deprecated in favor of topic names
        * </pre>
        *
        * <code>string topic_name = 4 [deprecated = true];</code>
@@ -6044,8 +6435,8 @@ public final class Kafka {
       }
       /**
        * <pre>
+       * **Deprecated**. Please use `topic_names` instead
        * Full source topic name
-       * Deprecated in favor of topic names
        * </pre>
        *
        * <code>string topic_name = 4 [deprecated = true];</code>
@@ -6067,8 +6458,8 @@ public final class Kafka {
       }
       /**
        * <pre>
+       * **Deprecated**. Please use `topic_names` instead
        * Full source topic name
-       * Deprecated in favor of topic names
        * </pre>
        *
        * <code>string topic_name = 4 [deprecated = true];</code>
@@ -6088,8 +6479,8 @@ public final class Kafka {
       }
       /**
        * <pre>
+       * **Deprecated**. Please use `topic_names` instead
        * Full source topic name
-       * Deprecated in favor of topic names
        * </pre>
        *
        * <code>string topic_name = 4 [deprecated = true];</code>
@@ -6104,8 +6495,8 @@ public final class Kafka {
       }
       /**
        * <pre>
+       * **Deprecated**. Please use `topic_names` instead
        * Full source topic name
-       * Deprecated in favor of topic names
        * </pre>
        *
        * <code>string topic_name = 4 [deprecated = true];</code>
@@ -6130,7 +6521,7 @@ public final class Kafka {
           yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions, yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptionsOrBuilder> transformerBuilder_;
       /**
        * <pre>
-       * Data transformation rules
+       * Transform data with a custom Cloud Function
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions transformer = 5;</code>
@@ -6141,7 +6532,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Data transformation rules
+       * Transform data with a custom Cloud Function
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions transformer = 5;</code>
@@ -6156,7 +6547,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Data transformation rules
+       * Transform data with a custom Cloud Function
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions transformer = 5;</code>
@@ -6176,7 +6567,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Data transformation rules
+       * Transform data with a custom Cloud Function
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions transformer = 5;</code>
@@ -6194,7 +6585,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Data transformation rules
+       * Transform data with a custom Cloud Function
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions transformer = 5;</code>
@@ -6216,7 +6607,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Data transformation rules
+       * Transform data with a custom Cloud Function
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions transformer = 5;</code>
@@ -6234,7 +6625,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Data transformation rules
+       * Transform data with a custom Cloud Function
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions transformer = 5;</code>
@@ -6246,7 +6637,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Data transformation rules
+       * Transform data with a custom Cloud Function
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions transformer = 5;</code>
@@ -6261,7 +6652,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Data transformation rules
+       * Transform data with a custom Cloud Function
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions transformer = 5;</code>
@@ -6285,7 +6676,7 @@ public final class Kafka {
           yandex.cloud.api.datatransfer.v1.endpoint.Parsers.Parser, yandex.cloud.api.datatransfer.v1.endpoint.Parsers.Parser.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Parsers.ParserOrBuilder> parserBuilder_;
       /**
        * <pre>
-       * Data parsing rules
+       * Data parsing parameters. If not set, the source messages are read in raw
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Parser parser = 7;</code>
@@ -6296,7 +6687,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Data parsing rules
+       * Data parsing parameters. If not set, the source messages are read in raw
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Parser parser = 7;</code>
@@ -6311,7 +6702,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Data parsing rules
+       * Data parsing parameters. If not set, the source messages are read in raw
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Parser parser = 7;</code>
@@ -6331,7 +6722,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Data parsing rules
+       * Data parsing parameters. If not set, the source messages are read in raw
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Parser parser = 7;</code>
@@ -6349,7 +6740,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Data parsing rules
+       * Data parsing parameters. If not set, the source messages are read in raw
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Parser parser = 7;</code>
@@ -6371,7 +6762,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Data parsing rules
+       * Data parsing parameters. If not set, the source messages are read in raw
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Parser parser = 7;</code>
@@ -6389,7 +6780,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Data parsing rules
+       * Data parsing parameters. If not set, the source messages are read in raw
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Parser parser = 7;</code>
@@ -6401,7 +6792,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Data parsing rules
+       * Data parsing parameters. If not set, the source messages are read in raw
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Parser parser = 7;</code>
@@ -6416,7 +6807,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Data parsing rules
+       * Data parsing parameters. If not set, the source messages are read in raw
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Parser parser = 7;</code>
@@ -6444,7 +6835,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * List of topic names to read
+       * List of full source topic names to read
        * </pre>
        *
        * <code>repeated string topic_names = 8;</code>
@@ -6456,7 +6847,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * List of topic names to read
+       * List of full source topic names to read
        * </pre>
        *
        * <code>repeated string topic_names = 8;</code>
@@ -6467,7 +6858,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * List of topic names to read
+       * List of full source topic names to read
        * </pre>
        *
        * <code>repeated string topic_names = 8;</code>
@@ -6479,7 +6870,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * List of topic names to read
+       * List of full source topic names to read
        * </pre>
        *
        * <code>repeated string topic_names = 8;</code>
@@ -6492,7 +6883,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * List of topic names to read
+       * List of full source topic names to read
        * </pre>
        *
        * <code>repeated string topic_names = 8;</code>
@@ -6512,7 +6903,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * List of topic names to read
+       * List of full source topic names to read
        * </pre>
        *
        * <code>repeated string topic_names = 8;</code>
@@ -6531,7 +6922,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * List of topic names to read
+       * List of full source topic names to read
        * </pre>
        *
        * <code>repeated string topic_names = 8;</code>
@@ -6548,7 +6939,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * List of topic names to read
+       * List of full source topic names to read
        * </pre>
        *
        * <code>repeated string topic_names = 8;</code>
@@ -6562,7 +6953,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * List of topic names to read
+       * List of full source topic names to read
        * </pre>
        *
        * <code>repeated string topic_names = 8;</code>
@@ -6693,7 +7084,8 @@ public final class Kafka {
 
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 3;</code>
@@ -6703,7 +7095,8 @@ public final class Kafka {
         getSecurityGroupsList();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 3;</code>
@@ -6712,7 +7105,8 @@ public final class Kafka {
     int getSecurityGroupsCount();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 3;</code>
@@ -6722,7 +7116,8 @@ public final class Kafka {
     java.lang.String getSecurityGroups(int index);
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 3;</code>
@@ -6787,6 +7182,10 @@ public final class Kafka {
     yandex.cloud.api.datatransfer.v1.endpoint.Serializers.SerializerOrBuilder getSerializerOrBuilder();
   }
   /**
+   * <pre>
+   * Settings specific to the Kafka target endpoint
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.KafkaTarget}
    */
   public static final class KafkaTarget extends
@@ -7009,7 +7408,8 @@ public final class Kafka {
     private com.google.protobuf.LazyStringList securityGroups_;
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 3;</code>
@@ -7021,7 +7421,8 @@ public final class Kafka {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 3;</code>
@@ -7032,7 +7433,8 @@ public final class Kafka {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 3;</code>
@@ -7044,7 +7446,8 @@ public final class Kafka {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 3;</code>
@@ -7358,6 +7761,10 @@ public final class Kafka {
       return builder;
     }
     /**
+     * <pre>
+     * Settings specific to the Kafka target endpoint
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.KafkaTarget}
      */
     public static final class Builder extends
@@ -7892,7 +8299,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 3;</code>
@@ -7904,7 +8312,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 3;</code>
@@ -7915,7 +8324,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 3;</code>
@@ -7927,7 +8337,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 3;</code>
@@ -7940,7 +8351,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 3;</code>
@@ -7960,7 +8372,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 3;</code>
@@ -7979,7 +8392,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 3;</code>
@@ -7996,7 +8410,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 3;</code>
@@ -8010,7 +8425,8 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 3;</code>
@@ -8397,7 +8813,7 @@ public final class Kafka {
 
     /**
      * <pre>
-     * Full topic name
+     * All messages will be sent to one topic
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaTargetTopic topic = 1;</code>
@@ -8406,7 +8822,7 @@ public final class Kafka {
     boolean hasTopic();
     /**
      * <pre>
-     * Full topic name
+     * All messages will be sent to one topic
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaTargetTopic topic = 1;</code>
@@ -8415,7 +8831,7 @@ public final class Kafka {
     yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaTargetTopic getTopic();
     /**
      * <pre>
-     * Full topic name
+     * All messages will be sent to one topic
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaTargetTopic topic = 1;</code>
@@ -8425,9 +8841,8 @@ public final class Kafka {
     /**
      * <pre>
      * Topic prefix
-     * 
-     * Analogue of the Debezium setting database.server.name.
      * Messages will be sent to topic with name &lt;topic_prefix&gt;.&lt;schema&gt;.&lt;table_name&gt;.
+     * Analogue of the Debezium setting database.server.name.
      * </pre>
      *
      * <code>string topic_prefix = 2;</code>
@@ -8437,9 +8852,8 @@ public final class Kafka {
     /**
      * <pre>
      * Topic prefix
-     * 
-     * Analogue of the Debezium setting database.server.name.
      * Messages will be sent to topic with name &lt;topic_prefix&gt;.&lt;schema&gt;.&lt;table_name&gt;.
+     * Analogue of the Debezium setting database.server.name.
      * </pre>
      *
      * <code>string topic_prefix = 2;</code>
@@ -8449,9 +8863,8 @@ public final class Kafka {
     /**
      * <pre>
      * Topic prefix
-     * 
-     * Analogue of the Debezium setting database.server.name.
      * Messages will be sent to topic with name &lt;topic_prefix&gt;.&lt;schema&gt;.&lt;table_name&gt;.
+     * Analogue of the Debezium setting database.server.name.
      * </pre>
      *
      * <code>string topic_prefix = 2;</code>
@@ -8603,7 +9016,7 @@ public final class Kafka {
     public static final int TOPIC_FIELD_NUMBER = 1;
     /**
      * <pre>
-     * Full topic name
+     * All messages will be sent to one topic
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaTargetTopic topic = 1;</code>
@@ -8615,7 +9028,7 @@ public final class Kafka {
     }
     /**
      * <pre>
-     * Full topic name
+     * All messages will be sent to one topic
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaTargetTopic topic = 1;</code>
@@ -8630,7 +9043,7 @@ public final class Kafka {
     }
     /**
      * <pre>
-     * Full topic name
+     * All messages will be sent to one topic
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaTargetTopic topic = 1;</code>
@@ -8647,9 +9060,8 @@ public final class Kafka {
     /**
      * <pre>
      * Topic prefix
-     * 
-     * Analogue of the Debezium setting database.server.name.
      * Messages will be sent to topic with name &lt;topic_prefix&gt;.&lt;schema&gt;.&lt;table_name&gt;.
+     * Analogue of the Debezium setting database.server.name.
      * </pre>
      *
      * <code>string topic_prefix = 2;</code>
@@ -8661,9 +9073,8 @@ public final class Kafka {
     /**
      * <pre>
      * Topic prefix
-     * 
-     * Analogue of the Debezium setting database.server.name.
      * Messages will be sent to topic with name &lt;topic_prefix&gt;.&lt;schema&gt;.&lt;table_name&gt;.
+     * Analogue of the Debezium setting database.server.name.
      * </pre>
      *
      * <code>string topic_prefix = 2;</code>
@@ -8689,9 +9100,8 @@ public final class Kafka {
     /**
      * <pre>
      * Topic prefix
-     * 
-     * Analogue of the Debezium setting database.server.name.
      * Messages will be sent to topic with name &lt;topic_prefix&gt;.&lt;schema&gt;.&lt;table_name&gt;.
+     * Analogue of the Debezium setting database.server.name.
      * </pre>
      *
      * <code>string topic_prefix = 2;</code>
@@ -9086,7 +9496,7 @@ public final class Kafka {
           yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaTargetTopic, yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaTargetTopic.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaTargetTopicOrBuilder> topicBuilder_;
       /**
        * <pre>
-       * Full topic name
+       * All messages will be sent to one topic
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaTargetTopic topic = 1;</code>
@@ -9098,7 +9508,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Full topic name
+       * All messages will be sent to one topic
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaTargetTopic topic = 1;</code>
@@ -9120,7 +9530,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Full topic name
+       * All messages will be sent to one topic
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaTargetTopic topic = 1;</code>
@@ -9140,7 +9550,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Full topic name
+       * All messages will be sent to one topic
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaTargetTopic topic = 1;</code>
@@ -9158,7 +9568,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Full topic name
+       * All messages will be sent to one topic
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaTargetTopic topic = 1;</code>
@@ -9184,7 +9594,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Full topic name
+       * All messages will be sent to one topic
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaTargetTopic topic = 1;</code>
@@ -9207,7 +9617,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Full topic name
+       * All messages will be sent to one topic
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaTargetTopic topic = 1;</code>
@@ -9217,7 +9627,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Full topic name
+       * All messages will be sent to one topic
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaTargetTopic topic = 1;</code>
@@ -9235,7 +9645,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Full topic name
+       * All messages will be sent to one topic
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaTargetTopic topic = 1;</code>
@@ -9262,9 +9672,8 @@ public final class Kafka {
       /**
        * <pre>
        * Topic prefix
-       * 
-       * Analogue of the Debezium setting database.server.name.
        * Messages will be sent to topic with name &lt;topic_prefix&gt;.&lt;schema&gt;.&lt;table_name&gt;.
+       * Analogue of the Debezium setting database.server.name.
        * </pre>
        *
        * <code>string topic_prefix = 2;</code>
@@ -9277,9 +9686,8 @@ public final class Kafka {
       /**
        * <pre>
        * Topic prefix
-       * 
-       * Analogue of the Debezium setting database.server.name.
        * Messages will be sent to topic with name &lt;topic_prefix&gt;.&lt;schema&gt;.&lt;table_name&gt;.
+       * Analogue of the Debezium setting database.server.name.
        * </pre>
        *
        * <code>string topic_prefix = 2;</code>
@@ -9306,9 +9714,8 @@ public final class Kafka {
       /**
        * <pre>
        * Topic prefix
-       * 
-       * Analogue of the Debezium setting database.server.name.
        * Messages will be sent to topic with name &lt;topic_prefix&gt;.&lt;schema&gt;.&lt;table_name&gt;.
+       * Analogue of the Debezium setting database.server.name.
        * </pre>
        *
        * <code>string topic_prefix = 2;</code>
@@ -9336,9 +9743,8 @@ public final class Kafka {
       /**
        * <pre>
        * Topic prefix
-       * 
-       * Analogue of the Debezium setting database.server.name.
        * Messages will be sent to topic with name &lt;topic_prefix&gt;.&lt;schema&gt;.&lt;table_name&gt;.
+       * Analogue of the Debezium setting database.server.name.
        * </pre>
        *
        * <code>string topic_prefix = 2;</code>
@@ -9358,9 +9764,8 @@ public final class Kafka {
       /**
        * <pre>
        * Topic prefix
-       * 
-       * Analogue of the Debezium setting database.server.name.
        * Messages will be sent to topic with name &lt;topic_prefix&gt;.&lt;schema&gt;.&lt;table_name&gt;.
+       * Analogue of the Debezium setting database.server.name.
        * </pre>
        *
        * <code>string topic_prefix = 2;</code>
@@ -9377,9 +9782,8 @@ public final class Kafka {
       /**
        * <pre>
        * Topic prefix
-       * 
-       * Analogue of the Debezium setting database.server.name.
        * Messages will be sent to topic with name &lt;topic_prefix&gt;.&lt;schema&gt;.&lt;table_name&gt;.
+       * Analogue of the Debezium setting database.server.name.
        * </pre>
        *
        * <code>string topic_prefix = 2;</code>
@@ -9456,7 +9860,7 @@ public final class Kafka {
 
     /**
      * <pre>
-     * Topic name
+     * Full topic name
      * </pre>
      *
      * <code>string topic_name = 1;</code>
@@ -9465,7 +9869,7 @@ public final class Kafka {
     java.lang.String getTopicName();
     /**
      * <pre>
-     * Topic name
+     * Full topic name
      * </pre>
      *
      * <code>string topic_name = 1;</code>
@@ -9578,7 +9982,7 @@ public final class Kafka {
     private volatile java.lang.Object topicName_;
     /**
      * <pre>
-     * Topic name
+     * Full topic name
      * </pre>
      *
      * <code>string topic_name = 1;</code>
@@ -9599,7 +10003,7 @@ public final class Kafka {
     }
     /**
      * <pre>
-     * Topic name
+     * Full topic name
      * </pre>
      *
      * <code>string topic_name = 1;</code>
@@ -9959,7 +10363,7 @@ public final class Kafka {
       private java.lang.Object topicName_ = "";
       /**
        * <pre>
-       * Topic name
+       * Full topic name
        * </pre>
        *
        * <code>string topic_name = 1;</code>
@@ -9979,7 +10383,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Topic name
+       * Full topic name
        * </pre>
        *
        * <code>string topic_name = 1;</code>
@@ -10000,7 +10404,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Topic name
+       * Full topic name
        * </pre>
        *
        * <code>string topic_name = 1;</code>
@@ -10019,7 +10423,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Topic name
+       * Full topic name
        * </pre>
        *
        * <code>string topic_name = 1;</code>
@@ -10033,7 +10437,7 @@ public final class Kafka {
       }
       /**
        * <pre>
-       * Topic name
+       * Full topic name
        * </pre>
        *
        * <code>string topic_name = 1;</code>
@@ -10205,53 +10609,56 @@ public final class Kafka {
       "/endpoint/common.proto\0323yandex/cloud/dat" +
       "atransfer/v1/endpoint/parsers.proto\0327yan" +
       "dex/cloud/datatransfer/v1/endpoint/seria" +
-      "lizers.proto\"\211\001\n\026KafkaConnectionOptions\022" +
+      "lizers.proto\"\366\001\n\026KafkaConnectionOptions\022" +
       "\024\n\ncluster_id\030\001 \001(\tH\000\022K\n\non_premise\030\002 \001(" +
       "\01325.yandex.cloud.datatransfer.v1.endpoin" +
-      "t.OnPremiseKafkaH\000B\014\n\nconnection\"\200\001\n\016OnP" +
-      "remiseKafka\022\023\n\013broker_urls\030\001 \003(\t\022\021\n\tsubn" +
-      "et_id\030\004 \001(\t\022@\n\010tls_mode\030\005 \001(\0132..yandex.c" +
-      "loud.datatransfer.v1.endpoint.TLSModeJ\004\010" +
-      "\002\020\004\"\243\001\n\tKafkaAuth\022H\n\004sasl\030\001 \001(\01328.yandex" +
-      ".cloud.datatransfer.v1.endpoint.KafkaSas" +
-      "lSecurityH\000\022@\n\007no_auth\030\002 \001(\0132-.yandex.cl" +
-      "oud.datatransfer.v1.endpoint.NoAuthH\000B\n\n" +
-      "\010security\"\262\001\n\021KafkaSaslSecurity\022\014\n\004user\030" +
-      "\001 \001(\t\022H\n\tmechanism\030\003 \001(\01625.yandex.cloud." +
-      "datatransfer.v1.endpoint.KafkaMechanism\022" +
-      "?\n\010password\030\004 \001(\0132-.yandex.cloud.datatra" +
-      "nsfer.v1.endpoint.SecretJ\004\010\002\020\003\"\202\003\n\013Kafka" +
-      "Source\022Q\n\nconnection\030\001 \001(\0132=.yandex.clou" +
-      "d.datatransfer.v1.endpoint.KafkaConnecti" +
-      "onOptions\022>\n\004auth\030\002 \001(\01320.yandex.cloud.d" +
-      "atatransfer.v1.endpoint.KafkaAuth\022\027\n\017sec" +
-      "urity_groups\030\003 \003(\t\022\026\n\ntopic_name\030\004 \001(\tB\002" +
-      "\030\001\022U\n\013transformer\030\005 \001(\0132@.yandex.cloud.d" +
-      "atatransfer.v1.endpoint.DataTransformati" +
-      "onOptions\022=\n\006parser\030\007 \001(\0132-.yandex.cloud" +
-      ".datatransfer.v1.endpoint.Parser\022\023\n\013topi" +
-      "c_names\030\010 \003(\tJ\004\010\006\020\007\"\337\002\n\013KafkaTarget\022Q\n\nc" +
+      "t.OnPremiseKafkaH\000\022k\n\035connection_manager" +
+      "_connection\030\003 \001(\0132B.yandex.cloud.datatra" +
+      "nsfer.v1.endpoint.ConnectionManagerConne" +
+      "ctionH\000B\014\n\nconnection\"\200\001\n\016OnPremiseKafka" +
+      "\022\023\n\013broker_urls\030\001 \003(\t\022\021\n\tsubnet_id\030\004 \001(\t" +
+      "\022@\n\010tls_mode\030\005 \001(\0132..yandex.cloud.datatr" +
+      "ansfer.v1.endpoint.TLSModeJ\004\010\002\020\004\"\243\001\n\tKaf" +
+      "kaAuth\022H\n\004sasl\030\001 \001(\01328.yandex.cloud.data" +
+      "transfer.v1.endpoint.KafkaSaslSecurityH\000" +
+      "\022@\n\007no_auth\030\002 \001(\0132-.yandex.cloud.datatra" +
+      "nsfer.v1.endpoint.NoAuthH\000B\n\n\010security\"\262" +
+      "\001\n\021KafkaSaslSecurity\022\014\n\004user\030\001 \001(\t\022H\n\tme" +
+      "chanism\030\003 \001(\01625.yandex.cloud.datatransfe" +
+      "r.v1.endpoint.KafkaMechanism\022?\n\010password" +
+      "\030\004 \001(\0132-.yandex.cloud.datatransfer.v1.en" +
+      "dpoint.SecretJ\004\010\002\020\003\"\202\003\n\013KafkaSource\022Q\n\nc" +
       "onnection\030\001 \001(\0132=.yandex.cloud.datatrans" +
       "fer.v1.endpoint.KafkaConnectionOptions\022>" +
       "\n\004auth\030\002 \001(\01320.yandex.cloud.datatransfer" +
       ".v1.endpoint.KafkaAuth\022\027\n\017security_group" +
-      "s\030\003 \003(\t\022W\n\016topic_settings\030\007 \001(\0132?.yandex" +
-      ".cloud.datatransfer.v1.endpoint.KafkaTar" +
-      "getTopicSettings\022E\n\nserializer\030\010 \001(\01321.y" +
-      "andex.cloud.datatransfer.v1.endpoint.Ser" +
-      "ializerJ\004\010\004\020\007\"\216\001\n\030KafkaTargetTopicSettin" +
-      "gs\022H\n\005topic\030\001 \001(\01327.yandex.cloud.datatra" +
-      "nsfer.v1.endpoint.KafkaTargetTopicH\000\022\026\n\014" +
-      "topic_prefix\030\002 \001(\tH\000B\020\n\016topic_settings\"=" +
-      "\n\020KafkaTargetTopic\022\022\n\ntopic_name\030\001 \001(\t\022\025" +
-      "\n\rsave_tx_order\030\002 \001(\010*i\n\016KafkaMechanism\022" +
-      "\037\n\033KAFKA_MECHANISM_UNSPECIFIED\020\000\022\032\n\026KAFK" +
-      "A_MECHANISM_SHA256\020\001\022\032\n\026KAFKA_MECHANISM_" +
-      "SHA512\020\002B\247\001\n)yandex.cloud.api.datatransf" +
-      "er.v1.endpointZRgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/datatransfer/v1" +
-      "/endpoint;endpoint\252\002%Yandex.Cloud.Datatr" +
-      "ansfer.V1.EndPointb\006proto3"
+      "s\030\003 \003(\t\022\026\n\ntopic_name\030\004 \001(\tB\002\030\001\022U\n\013trans" +
+      "former\030\005 \001(\0132@.yandex.cloud.datatransfer" +
+      ".v1.endpoint.DataTransformationOptions\022=" +
+      "\n\006parser\030\007 \001(\0132-.yandex.cloud.datatransf" +
+      "er.v1.endpoint.Parser\022\023\n\013topic_names\030\010 \003" +
+      "(\tJ\004\010\006\020\007\"\337\002\n\013KafkaTarget\022Q\n\nconnection\030\001" +
+      " \001(\0132=.yandex.cloud.datatransfer.v1.endp" +
+      "oint.KafkaConnectionOptions\022>\n\004auth\030\002 \001(" +
+      "\01320.yandex.cloud.datatransfer.v1.endpoin" +
+      "t.KafkaAuth\022\027\n\017security_groups\030\003 \003(\t\022W\n\016" +
+      "topic_settings\030\007 \001(\0132?.yandex.cloud.data" +
+      "transfer.v1.endpoint.KafkaTargetTopicSet" +
+      "tings\022E\n\nserializer\030\010 \001(\01321.yandex.cloud" +
+      ".datatransfer.v1.endpoint.SerializerJ\004\010\004" +
+      "\020\007\"\216\001\n\030KafkaTargetTopicSettings\022H\n\005topic" +
+      "\030\001 \001(\01327.yandex.cloud.datatransfer.v1.en" +
+      "dpoint.KafkaTargetTopicH\000\022\026\n\014topic_prefi" +
+      "x\030\002 \001(\tH\000B\020\n\016topic_settings\"=\n\020KafkaTarg" +
+      "etTopic\022\022\n\ntopic_name\030\001 \001(\t\022\025\n\rsave_tx_o" +
+      "rder\030\002 \001(\010*i\n\016KafkaMechanism\022\037\n\033KAFKA_ME" +
+      "CHANISM_UNSPECIFIED\020\000\022\032\n\026KAFKA_MECHANISM" +
+      "_SHA256\020\001\022\032\n\026KAFKA_MECHANISM_SHA512\020\002B\247\001" +
+      "\n)yandex.cloud.api.datatransfer.v1.endpo" +
+      "intZRgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/datatransfer/v1/endpoint;e" +
+      "ndpoint\252\002%Yandex.Cloud.Datatransfer.V1.E" +
+      "ndPointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10265,7 +10672,7 @@ public final class Kafka {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_KafkaConnectionOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_KafkaConnectionOptions_descriptor,
-        new java.lang.String[] { "ClusterId", "OnPremise", "Connection", });
+        new java.lang.String[] { "ClusterId", "OnPremise", "ConnectionManagerConnection", "Connection", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_OnPremiseKafka_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_OnPremiseKafka_fieldAccessorTable = new

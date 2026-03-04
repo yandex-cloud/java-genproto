@@ -737,6 +737,33 @@ public final class DashboardServiceOuterClass {
     com.google.protobuf.ByteString
         getSelectorsBytes();
 
+    /**
+     * <pre>
+     * Control which fields to include in dashboard response.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask read_mask = 23;</code>
+     * @return Whether the readMask field is set.
+     */
+    boolean hasReadMask();
+    /**
+     * <pre>
+     * Control which fields to include in dashboard response.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask read_mask = 23;</code>
+     * @return The readMask.
+     */
+    com.google.protobuf.FieldMask getReadMask();
+    /**
+     * <pre>
+     * Control which fields to include in dashboard response.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask read_mask = 23;</code>
+     */
+    com.google.protobuf.FieldMaskOrBuilder getReadMaskOrBuilder();
+
     public yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.ListDashboardsRequest.ContainerCase getContainerCase();
   }
   /**
@@ -814,6 +841,19 @@ public final class DashboardServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               selectors_ = s;
+              break;
+            }
+            case 186: {
+              com.google.protobuf.FieldMask.Builder subBuilder = null;
+              if (readMask_ != null) {
+                subBuilder = readMask_.toBuilder();
+              }
+              readMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(readMask_);
+                readMask_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1120,6 +1160,44 @@ public final class DashboardServiceOuterClass {
       }
     }
 
+    public static final int READ_MASK_FIELD_NUMBER = 23;
+    private com.google.protobuf.FieldMask readMask_;
+    /**
+     * <pre>
+     * Control which fields to include in dashboard response.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask read_mask = 23;</code>
+     * @return Whether the readMask field is set.
+     */
+    @java.lang.Override
+    public boolean hasReadMask() {
+      return readMask_ != null;
+    }
+    /**
+     * <pre>
+     * Control which fields to include in dashboard response.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask read_mask = 23;</code>
+     * @return The readMask.
+     */
+    @java.lang.Override
+    public com.google.protobuf.FieldMask getReadMask() {
+      return readMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : readMask_;
+    }
+    /**
+     * <pre>
+     * Control which fields to include in dashboard response.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask read_mask = 23;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FieldMaskOrBuilder getReadMaskOrBuilder() {
+      return getReadMask();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1149,6 +1227,9 @@ public final class DashboardServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(selectors_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 22, selectors_);
       }
+      if (readMask_ != null) {
+        output.writeMessage(23, getReadMask());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1174,6 +1255,10 @@ public final class DashboardServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(selectors_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, selectors_);
       }
+      if (readMask_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(23, getReadMask());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1197,6 +1282,11 @@ public final class DashboardServiceOuterClass {
           .equals(other.getFilter())) return false;
       if (!getSelectors()
           .equals(other.getSelectors())) return false;
+      if (hasReadMask() != other.hasReadMask()) return false;
+      if (hasReadMask()) {
+        if (!getReadMask()
+            .equals(other.getReadMask())) return false;
+      }
       if (!getContainerCase().equals(other.getContainerCase())) return false;
       switch (containerCase_) {
         case 2:
@@ -1226,6 +1316,10 @@ public final class DashboardServiceOuterClass {
       hash = (53 * hash) + getFilter().hashCode();
       hash = (37 * hash) + SELECTORS_FIELD_NUMBER;
       hash = (53 * hash) + getSelectors().hashCode();
+      if (hasReadMask()) {
+        hash = (37 * hash) + READ_MASK_FIELD_NUMBER;
+        hash = (53 * hash) + getReadMask().hashCode();
+      }
       switch (containerCase_) {
         case 2:
           hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
@@ -1375,6 +1469,12 @@ public final class DashboardServiceOuterClass {
 
         selectors_ = "";
 
+        if (readMaskBuilder_ == null) {
+          readMask_ = null;
+        } else {
+          readMask_ = null;
+          readMaskBuilder_ = null;
+        }
         containerCase_ = 0;
         container_ = null;
         return this;
@@ -1410,6 +1510,11 @@ public final class DashboardServiceOuterClass {
         result.pageToken_ = pageToken_;
         result.filter_ = filter_;
         result.selectors_ = selectors_;
+        if (readMaskBuilder_ == null) {
+          result.readMask_ = readMask_;
+        } else {
+          result.readMask_ = readMaskBuilder_.build();
+        }
         result.containerCase_ = containerCase_;
         onBuilt();
         return result;
@@ -1473,6 +1578,9 @@ public final class DashboardServiceOuterClass {
         if (!other.getSelectors().isEmpty()) {
           selectors_ = other.selectors_;
           onChanged();
+        }
+        if (other.hasReadMask()) {
+          mergeReadMask(other.getReadMask());
         }
         switch (other.getContainerCase()) {
           case FOLDER_ID: {
@@ -2020,6 +2128,161 @@ public final class DashboardServiceOuterClass {
         selectors_ = value;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.FieldMask readMask_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> readMaskBuilder_;
+      /**
+       * <pre>
+       * Control which fields to include in dashboard response.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask read_mask = 23;</code>
+       * @return Whether the readMask field is set.
+       */
+      public boolean hasReadMask() {
+        return readMaskBuilder_ != null || readMask_ != null;
+      }
+      /**
+       * <pre>
+       * Control which fields to include in dashboard response.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask read_mask = 23;</code>
+       * @return The readMask.
+       */
+      public com.google.protobuf.FieldMask getReadMask() {
+        if (readMaskBuilder_ == null) {
+          return readMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : readMask_;
+        } else {
+          return readMaskBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Control which fields to include in dashboard response.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask read_mask = 23;</code>
+       */
+      public Builder setReadMask(com.google.protobuf.FieldMask value) {
+        if (readMaskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          readMask_ = value;
+          onChanged();
+        } else {
+          readMaskBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Control which fields to include in dashboard response.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask read_mask = 23;</code>
+       */
+      public Builder setReadMask(
+          com.google.protobuf.FieldMask.Builder builderForValue) {
+        if (readMaskBuilder_ == null) {
+          readMask_ = builderForValue.build();
+          onChanged();
+        } else {
+          readMaskBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Control which fields to include in dashboard response.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask read_mask = 23;</code>
+       */
+      public Builder mergeReadMask(com.google.protobuf.FieldMask value) {
+        if (readMaskBuilder_ == null) {
+          if (readMask_ != null) {
+            readMask_ =
+              com.google.protobuf.FieldMask.newBuilder(readMask_).mergeFrom(value).buildPartial();
+          } else {
+            readMask_ = value;
+          }
+          onChanged();
+        } else {
+          readMaskBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Control which fields to include in dashboard response.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask read_mask = 23;</code>
+       */
+      public Builder clearReadMask() {
+        if (readMaskBuilder_ == null) {
+          readMask_ = null;
+          onChanged();
+        } else {
+          readMask_ = null;
+          readMaskBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Control which fields to include in dashboard response.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask read_mask = 23;</code>
+       */
+      public com.google.protobuf.FieldMask.Builder getReadMaskBuilder() {
+        
+        onChanged();
+        return getReadMaskFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Control which fields to include in dashboard response.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask read_mask = 23;</code>
+       */
+      public com.google.protobuf.FieldMaskOrBuilder getReadMaskOrBuilder() {
+        if (readMaskBuilder_ != null) {
+          return readMaskBuilder_.getMessageOrBuilder();
+        } else {
+          return readMask_ == null ?
+              com.google.protobuf.FieldMask.getDefaultInstance() : readMask_;
+        }
+      }
+      /**
+       * <pre>
+       * Control which fields to include in dashboard response.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask read_mask = 23;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+          getReadMaskFieldBuilder() {
+        if (readMaskBuilder_ == null) {
+          readMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                  getReadMask(),
+                  getParentForChildren(),
+                  isClean());
+          readMask_ = null;
+        }
+        return readMaskBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -18705,114 +18968,117 @@ public final class DashboardServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n2yandex/cloud/monitoring/v3/dashboard_s" +
       "ervice.proto\022\032yandex.cloud.monitoring.v3" +
-      "\032\034google/api/annotations.proto\032 yandex/c" +
-      "loud/api/operation.proto\032*yandex/cloud/m" +
-      "onitoring/v3/dashboard.proto\0320yandex/clo" +
-      "ud/monitoring/v3/parametrization.proto\032\'" +
-      "yandex/cloud/monitoring/v3/widget.proto\032" +
-      "&yandex/cloud/operation/operation.proto\032" +
-      "\035yandex/cloud/validation.proto\032)yandex/c" +
-      "loud/monitoring/v3/timeline.proto\032*yande" +
-      "x/cloud/monitoring/v3/link_item.proto\"9\n" +
-      "\023GetDashboardRequest\022\"\n\014dashboard_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\"\306\001\n\025ListDashboardsReque" +
-      "st\022!\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50H\000\022\035\n" +
-      "\tpage_size\030\023 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
-      "en\030\024 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\025 \001(\tB\n\212\3101" +
-      "\006<=1000\022\035\n\tselectors\030\026 \001(\tB\n\212\3101\006<=1000B\013" +
-      "\n\tcontainerJ\004\010\003\020\023\"l\n\026ListDashboardsRespo" +
-      "nse\0229\n\ndashboards\030\001 \003(\0132%.yandex.cloud.m" +
-      "onitoring.v3.Dashboard\022\027\n\017next_page_toke" +
-      "n\030\002 \001(\t\"\230\005\n\026CreateDashboardRequest\022!\n\tfo" +
-      "lder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50H\000\0222\n\004name\030\023 " +
-      "\001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])" +
-      "?\022\036\n\013description\030\024 \001(\tB\t\212\3101\005<=256\022\227\001\n\006la" +
-      "bels\030\025 \003(\0132>.yandex.cloud.monitoring.v3." +
-      "CreateDashboardRequest.LabelsEntryBG\202\3101\004" +
-      "<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-6" +
-      "3\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\r\n\005title\030\026 \001" +
-      "(\t\0223\n\007widgets\030\027 \003(\0132\".yandex.cloud.monit" +
-      "oring.v3.Widget\022D\n\017parametrization\030\030 \001(\013" +
-      "2+.yandex.cloud.monitoring.v3.Parametriz" +
-      "ation\022\022\n\nmanaged_by\030\032 \001(\t\022\024\n\014managed_lin" +
-      "k\030\033 \001(\t\0226\n\010timeline\030\034 \001(\0132$.yandex.cloud" +
-      ".monitoring.v3.Timeline\0223\n\005links\030\035 \003(\0132$" +
-      ".yandex.cloud.monitoring.v3.LinkItem\032-\n\013" +
-      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001B\013\n\tcontainerJ\004\010\003\020\023J\004\010\036\020\"J\004\010\031\020\032\"/\n\027Cr" +
-      "eateDashboardMetadata\022\024\n\014dashboard_id\030\001 " +
-      "\001(\t\"\224\005\n\026UpdateDashboardRequest\022\"\n\014dashbo" +
-      "ard_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\t" +
-      "B$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036" +
-      "\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\227\001\n\006label" +
-      "s\030\004 \003(\0132>.yandex.cloud.monitoring.v3.Upd" +
-      "ateDashboardRequest.LabelsEntryBG\202\3101\004<=6" +
-      "4\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\310" +
-      "1\026\022\024[a-z][-_./\\@0-9a-z]*\022\r\n\005title\030\005 \001(\t\022" +
-      "3\n\007widgets\030\006 \003(\0132\".yandex.cloud.monitori" +
-      "ng.v3.Widget\022D\n\017parametrization\030\007 \001(\0132+." +
-      "yandex.cloud.monitoring.v3.Parametrizati" +
-      "on\022\014\n\004etag\030\010 \001(\t\022\022\n\nmanaged_by\030\032 \001(\t\022\024\n\014" +
-      "managed_link\030\033 \001(\t\0226\n\010timeline\030\034 \001(\0132$.y" +
-      "andex.cloud.monitoring.v3.Timeline\0223\n\005li" +
-      "nks\030\035 \003(\0132$.yandex.cloud.monitoring.v3.L" +
-      "inkItem\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001J\004\010\036\020\"J\004\010\t\020\032\"/\n\027UpdateDash" +
-      "boardMetadata\022\024\n\014dashboard_id\030\001 \001(\t\"J\n\026D" +
-      "eleteDashboardRequest\022\"\n\014dashboard_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004etag\030\002 \001(\t\"/\n\027Delet" +
-      "eDashboardMetadata\022\024\n\014dashboard_id\030\001 \001(\t" +
-      "\"\202\001\n\036ListDashboardOperationsRequest\022\"\n\014d" +
-      "ashboard_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_" +
-      "size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001" +
-      "(\tB\t\212\3101\005<=100\"q\n\037ListDashboardOperations" +
-      "Response\0225\n\noperations\030\001 \003(\0132!.yandex.cl" +
-      "oud.operation.Operation\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t\"h\n\036ListDashboardLabelNamesReque" +
-      "st\022\022\n\nproject_id\030\001 \001(\t\022\014\n\004text\030\002 \001(\t\022\021\n\t" +
-      "selectors\030\003 \001(\t\022\021\n\tpage_size\030\004 \001(\003\"I\n\037Li" +
-      "stDashboardLabelNamesResponse\022\023\n\013label_n" +
-      "ames\030\001 \003(\t\022\021\n\ttruncated\030\002 \001(\010\"}\n\037ListDas" +
-      "hboardLabelValuesRequest\022\022\n\nproject_id\030\001" +
-      " \001(\t\022\021\n\tselectors\030\002 \001(\t\022\022\n\nlabel_name\030\003 " +
-      "\001(\t\022\014\n\004text\030\004 \001(\t\022\021\n\tpage_size\030\005 \001(\003\"K\n " +
-      "ListDashboardLabelValuesResponse\022\024\n\014labe" +
-      "l_values\030\001 \003(\t\022\021\n\ttruncated\030\002 \001(\0102\267\010\n\020Da" +
-      "shboardService\022\217\001\n\003Get\022/.yandex.cloud.mo" +
-      "nitoring.v3.GetDashboardRequest\032%.yandex" +
-      ".cloud.monitoring.v3.Dashboard\"0\202\323\344\223\002*\022(" +
-      "/monitoring/v3/dashboards/{dashboard_id}" +
-      "\022\220\001\n\004List\0221.yandex.cloud.monitoring.v3.L" +
-      "istDashboardsRequest\0322.yandex.cloud.moni" +
-      "toring.v3.ListDashboardsResponse\"!\202\323\344\223\002\033" +
-      "\022\031/monitoring/v3/dashboards\022\255\001\n\006Create\0222" +
-      ".yandex.cloud.monitoring.v3.CreateDashbo" +
-      "ardRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"L\202\323\344\223\002\036\"\031/monitoring/v3/dashboards" +
-      ":\001*\262\322*$\n\027CreateDashboardMetadata\022\tDashbo" +
-      "ard\022\274\001\n\006Update\0222.yandex.cloud.monitoring" +
-      ".v3.UpdateDashboardRequest\032!.yandex.clou" +
-      "d.operation.Operation\"[\202\323\344\223\002-2(/monitori" +
-      "ng/v3/dashboards/{dashboard_id}:\001*\262\322*$\n\027" +
-      "UpdateDashboardMetadata\022\tDashboard\022\305\001\n\006D" +
-      "elete\0222.yandex.cloud.monitoring.v3.Delet" +
-      "eDashboardRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"d\202\323\344\223\002**(/monitoring/v3/das" +
-      "hboards/{dashboard_id}\262\322*0\n\027DeleteDashbo" +
-      "ardMetadata\022\025google.protobuf.Empty\022\306\001\n\016L" +
-      "istOperations\022:.yandex.cloud.monitoring." +
-      "v3.ListDashboardOperationsRequest\032;.yand" +
-      "ex.cloud.monitoring.v3.ListDashboardOper" +
-      "ationsResponse\";\202\323\344\223\0025\0223/monitoring/v3/d" +
-      "ashboards/{dashboard_id}/operationsBk\n\036y" +
-      "andex.cloud.api.monitoring.v3ZIgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "monitoring/v3;monitoringb\006proto3"
+      "\032\034google/api/annotations.proto\032 google/p" +
+      "rotobuf/field_mask.proto\032 yandex/cloud/a" +
+      "pi/operation.proto\032*yandex/cloud/monitor" +
+      "ing/v3/dashboard.proto\0320yandex/cloud/mon" +
+      "itoring/v3/parametrization.proto\032\'yandex" +
+      "/cloud/monitoring/v3/widget.proto\032&yande" +
+      "x/cloud/operation/operation.proto\032\035yande" +
+      "x/cloud/validation.proto\032)yandex/cloud/m" +
+      "onitoring/v3/timeline.proto\032*yandex/clou" +
+      "d/monitoring/v3/link_item.proto\"9\n\023GetDa" +
+      "shboardRequest\022\"\n\014dashboard_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\"\365\001\n\025ListDashboardsRequest\022!\n\t" +
+      "folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50H\000\022\035\n\tpage_" +
+      "size\030\023 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\024 \001" +
+      "(\tB\t\212\3101\005<=100\022\032\n\006filter\030\025 \001(\tB\n\212\3101\006<=100" +
+      "0\022\035\n\tselectors\030\026 \001(\tB\n\212\3101\006<=1000\022-\n\tread" +
+      "_mask\030\027 \001(\0132\032.google.protobuf.FieldMaskB" +
+      "\013\n\tcontainerJ\004\010\003\020\023\"l\n\026ListDashboardsResp" +
+      "onse\0229\n\ndashboards\030\001 \003(\0132%.yandex.cloud." +
+      "monitoring.v3.Dashboard\022\027\n\017next_page_tok" +
+      "en\030\002 \001(\t\"\230\005\n\026CreateDashboardRequest\022!\n\tf" +
+      "older_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50H\000\0222\n\004name\030\023" +
+      " \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9]" +
+      ")?\022\036\n\013description\030\024 \001(\tB\t\212\3101\005<=256\022\227\001\n\006l" +
+      "abels\030\025 \003(\0132>.yandex.cloud.monitoring.v3" +
+      ".CreateDashboardRequest.LabelsEntryBG\202\3101" +
+      "\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-" +
+      "63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\r\n\005title\030\026 " +
+      "\001(\t\0223\n\007widgets\030\027 \003(\0132\".yandex.cloud.moni" +
+      "toring.v3.Widget\022D\n\017parametrization\030\030 \001(" +
+      "\0132+.yandex.cloud.monitoring.v3.Parametri" +
+      "zation\022\022\n\nmanaged_by\030\032 \001(\t\022\024\n\014managed_li" +
+      "nk\030\033 \001(\t\0226\n\010timeline\030\034 \001(\0132$.yandex.clou" +
+      "d.monitoring.v3.Timeline\0223\n\005links\030\035 \003(\0132" +
+      "$.yandex.cloud.monitoring.v3.LinkItem\032-\n" +
+      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001B\013\n\tcontainerJ\004\010\003\020\023J\004\010\036\020\"J\004\010\031\020\032\"/\n\027C" +
+      "reateDashboardMetadata\022\024\n\014dashboard_id\030\001" +
+      " \001(\t\"\224\005\n\026UpdateDashboardRequest\022\"\n\014dashb" +
+      "oard_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(" +
+      "\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022" +
+      "\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\227\001\n\006labe" +
+      "ls\030\004 \003(\0132>.yandex.cloud.monitoring.v3.Up" +
+      "dateDashboardRequest.LabelsEntryBG\202\3101\004<=" +
+      "64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262" +
+      "\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\r\n\005title\030\005 \001(\t" +
+      "\0223\n\007widgets\030\006 \003(\0132\".yandex.cloud.monitor" +
+      "ing.v3.Widget\022D\n\017parametrization\030\007 \001(\0132+" +
+      ".yandex.cloud.monitoring.v3.Parametrizat" +
+      "ion\022\014\n\004etag\030\010 \001(\t\022\022\n\nmanaged_by\030\032 \001(\t\022\024\n" +
+      "\014managed_link\030\033 \001(\t\0226\n\010timeline\030\034 \001(\0132$." +
+      "yandex.cloud.monitoring.v3.Timeline\0223\n\005l" +
+      "inks\030\035 \003(\0132$.yandex.cloud.monitoring.v3." +
+      "LinkItem\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001J\004\010\036\020\"J\004\010\t\020\032\"/\n\027UpdateDas" +
+      "hboardMetadata\022\024\n\014dashboard_id\030\001 \001(\t\"J\n\026" +
+      "DeleteDashboardRequest\022\"\n\014dashboard_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004etag\030\002 \001(\t\"/\n\027Dele" +
+      "teDashboardMetadata\022\024\n\014dashboard_id\030\001 \001(" +
+      "\t\"\202\001\n\036ListDashboardOperationsRequest\022\"\n\014" +
+      "dashboard_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
+      "_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 " +
+      "\001(\tB\t\212\3101\005<=100\"q\n\037ListDashboardOperation" +
+      "sResponse\0225\n\noperations\030\001 \003(\0132!.yandex.c" +
+      "loud.operation.Operation\022\027\n\017next_page_to" +
+      "ken\030\002 \001(\t\"h\n\036ListDashboardLabelNamesRequ" +
+      "est\022\022\n\nproject_id\030\001 \001(\t\022\014\n\004text\030\002 \001(\t\022\021\n" +
+      "\tselectors\030\003 \001(\t\022\021\n\tpage_size\030\004 \001(\003\"I\n\037L" +
+      "istDashboardLabelNamesResponse\022\023\n\013label_" +
+      "names\030\001 \003(\t\022\021\n\ttruncated\030\002 \001(\010\"}\n\037ListDa" +
+      "shboardLabelValuesRequest\022\022\n\nproject_id\030" +
+      "\001 \001(\t\022\021\n\tselectors\030\002 \001(\t\022\022\n\nlabel_name\030\003" +
+      " \001(\t\022\014\n\004text\030\004 \001(\t\022\021\n\tpage_size\030\005 \001(\003\"K\n" +
+      " ListDashboardLabelValuesResponse\022\024\n\014lab" +
+      "el_values\030\001 \003(\t\022\021\n\ttruncated\030\002 \001(\0102\267\010\n\020D" +
+      "ashboardService\022\217\001\n\003Get\022/.yandex.cloud.m" +
+      "onitoring.v3.GetDashboardRequest\032%.yande" +
+      "x.cloud.monitoring.v3.Dashboard\"0\202\323\344\223\002*\022" +
+      "(/monitoring/v3/dashboards/{dashboard_id" +
+      "}\022\220\001\n\004List\0221.yandex.cloud.monitoring.v3." +
+      "ListDashboardsRequest\0322.yandex.cloud.mon" +
+      "itoring.v3.ListDashboardsResponse\"!\202\323\344\223\002" +
+      "\033\022\031/monitoring/v3/dashboards\022\255\001\n\006Create\022" +
+      "2.yandex.cloud.monitoring.v3.CreateDashb" +
+      "oardRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"L\202\323\344\223\002\036\"\031/monitoring/v3/dashboard" +
+      "s:\001*\262\322*$\n\027CreateDashboardMetadata\022\tDashb" +
+      "oard\022\274\001\n\006Update\0222.yandex.cloud.monitorin" +
+      "g.v3.UpdateDashboardRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"[\202\323\344\223\002-2(/monitor" +
+      "ing/v3/dashboards/{dashboard_id}:\001*\262\322*$\n" +
+      "\027UpdateDashboardMetadata\022\tDashboard\022\305\001\n\006" +
+      "Delete\0222.yandex.cloud.monitoring.v3.Dele" +
+      "teDashboardRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"d\202\323\344\223\002**(/monitoring/v3/da" +
+      "shboards/{dashboard_id}\262\322*0\n\027DeleteDashb" +
+      "oardMetadata\022\025google.protobuf.Empty\022\306\001\n\016" +
+      "ListOperations\022:.yandex.cloud.monitoring" +
+      ".v3.ListDashboardOperationsRequest\032;.yan" +
+      "dex.cloud.monitoring.v3.ListDashboardOpe" +
+      "rationsResponse\";\202\323\344\223\0025\0223/monitoring/v3/" +
+      "dashboards/{dashboard_id}/operationsBk\n\036" +
+      "yandex.cloud.api.monitoring.v3ZIgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/monitoring/v3;monitoringb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.monitoring.v3.DashboardOuterClass.getDescriptor(),
           yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.getDescriptor(),
@@ -18833,7 +19099,7 @@ public final class DashboardServiceOuterClass {
     internal_static_yandex_cloud_monitoring_v3_ListDashboardsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_ListDashboardsRequest_descriptor,
-        new java.lang.String[] { "FolderId", "PageSize", "PageToken", "Filter", "Selectors", "Container", });
+        new java.lang.String[] { "FolderId", "PageSize", "PageToken", "Filter", "Selectors", "ReadMask", "Container", });
     internal_static_yandex_cloud_monitoring_v3_ListDashboardsResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_monitoring_v3_ListDashboardsResponse_fieldAccessorTable = new
@@ -18937,6 +19203,7 @@ public final class DashboardServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.monitoring.v3.DashboardOuterClass.getDescriptor();
     yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.getDescriptor();

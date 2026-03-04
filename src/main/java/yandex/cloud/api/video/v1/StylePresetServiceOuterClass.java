@@ -3154,7 +3154,7 @@ public final class StylePresetServiceOuterClass {
      * Style preset title.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9-_ ]+", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The title.
      */
     java.lang.String getTitle();
@@ -3163,7 +3163,7 @@ public final class StylePresetServiceOuterClass {
      * Style preset title.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9-_ ]+", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for title.
      */
     com.google.protobuf.ByteString
@@ -3254,7 +3254,7 @@ public final class StylePresetServiceOuterClass {
      * Gap between widget blocks.
      * </pre>
      *
-     * <code>int64 widget_block_gap = 7 [(.yandex.cloud.value) = "0-10"];</code>
+     * <code>int64 widget_block_gap = 7 [(.yandex.cloud.value) = "0-50"];</code>
      * @return The widgetBlockGap.
      */
     long getWidgetBlockGap();
@@ -3344,7 +3344,7 @@ public final class StylePresetServiceOuterClass {
      * Gap between videos in playlist.
      * </pre>
      *
-     * <code>int64 playlist_item_gap = 17 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>int64 playlist_item_gap = 17 [(.yandex.cloud.value) = "0-50"];</code>
      * @return The playlistItemGap.
      */
     long getPlaylistItemGap();
@@ -3703,7 +3703,7 @@ public final class StylePresetServiceOuterClass {
      * Style preset title.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9-_ ]+", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The title.
      */
     @java.lang.Override
@@ -3724,7 +3724,7 @@ public final class StylePresetServiceOuterClass {
      * Style preset title.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9-_ ]+", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for title.
      */
     @java.lang.Override
@@ -3933,7 +3933,7 @@ public final class StylePresetServiceOuterClass {
      * Gap between widget blocks.
      * </pre>
      *
-     * <code>int64 widget_block_gap = 7 [(.yandex.cloud.value) = "0-10"];</code>
+     * <code>int64 widget_block_gap = 7 [(.yandex.cloud.value) = "0-50"];</code>
      * @return The widgetBlockGap.
      */
     @java.lang.Override
@@ -4116,7 +4116,7 @@ public final class StylePresetServiceOuterClass {
      * Gap between videos in playlist.
      * </pre>
      *
-     * <code>int64 playlist_item_gap = 17 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>int64 playlist_item_gap = 17 [(.yandex.cloud.value) = "0-50"];</code>
      * @return The playlistItemGap.
      */
     @java.lang.Override
@@ -5011,7 +5011,7 @@ public final class StylePresetServiceOuterClass {
        * Style preset title.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9-_ ]+", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The title.
        */
       public java.lang.String getTitle() {
@@ -5031,7 +5031,7 @@ public final class StylePresetServiceOuterClass {
        * Style preset title.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9-_ ]+", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
@@ -5052,7 +5052,7 @@ public final class StylePresetServiceOuterClass {
        * Style preset title.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9-_ ]+", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
@@ -5071,7 +5071,7 @@ public final class StylePresetServiceOuterClass {
        * Style preset title.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9-_ ]+", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
@@ -5085,7 +5085,7 @@ public final class StylePresetServiceOuterClass {
        * Style preset title.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9-_ ]+", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
@@ -5491,7 +5491,7 @@ public final class StylePresetServiceOuterClass {
        * Gap between widget blocks.
        * </pre>
        *
-       * <code>int64 widget_block_gap = 7 [(.yandex.cloud.value) = "0-10"];</code>
+       * <code>int64 widget_block_gap = 7 [(.yandex.cloud.value) = "0-50"];</code>
        * @return The widgetBlockGap.
        */
       @java.lang.Override
@@ -5503,7 +5503,7 @@ public final class StylePresetServiceOuterClass {
        * Gap between widget blocks.
        * </pre>
        *
-       * <code>int64 widget_block_gap = 7 [(.yandex.cloud.value) = "0-10"];</code>
+       * <code>int64 widget_block_gap = 7 [(.yandex.cloud.value) = "0-50"];</code>
        * @param value The widgetBlockGap to set.
        * @return This builder for chaining.
        */
@@ -5518,7 +5518,7 @@ public final class StylePresetServiceOuterClass {
        * Gap between widget blocks.
        * </pre>
        *
-       * <code>int64 widget_block_gap = 7 [(.yandex.cloud.value) = "0-10"];</code>
+       * <code>int64 widget_block_gap = 7 [(.yandex.cloud.value) = "0-50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearWidgetBlockGap() {
@@ -5908,7 +5908,7 @@ public final class StylePresetServiceOuterClass {
        * Gap between videos in playlist.
        * </pre>
        *
-       * <code>int64 playlist_item_gap = 17 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 playlist_item_gap = 17 [(.yandex.cloud.value) = "0-50"];</code>
        * @return The playlistItemGap.
        */
       @java.lang.Override
@@ -5920,7 +5920,7 @@ public final class StylePresetServiceOuterClass {
        * Gap between videos in playlist.
        * </pre>
        *
-       * <code>int64 playlist_item_gap = 17 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 playlist_item_gap = 17 [(.yandex.cloud.value) = "0-50"];</code>
        * @param value The playlistItemGap to set.
        * @return This builder for chaining.
        */
@@ -5935,7 +5935,7 @@ public final class StylePresetServiceOuterClass {
        * Gap between videos in playlist.
        * </pre>
        *
-       * <code>int64 playlist_item_gap = 17 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 playlist_item_gap = 17 [(.yandex.cloud.value) = "0-50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPlaylistItemGap() {
@@ -7364,7 +7364,7 @@ public final class StylePresetServiceOuterClass {
      * Style preset title.
      * </pre>
      *
-     * <code>string title = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9-_ ]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The title.
      */
     java.lang.String getTitle();
@@ -7373,7 +7373,7 @@ public final class StylePresetServiceOuterClass {
      * Style preset title.
      * </pre>
      *
-     * <code>string title = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9-_ ]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for title.
      */
     com.google.protobuf.ByteString
@@ -7464,7 +7464,7 @@ public final class StylePresetServiceOuterClass {
      * Gap between widget blocks.
      * </pre>
      *
-     * <code>int64 widget_block_gap = 8 [(.yandex.cloud.value) = "0-10"];</code>
+     * <code>int64 widget_block_gap = 8 [(.yandex.cloud.value) = "0-50"];</code>
      * @return The widgetBlockGap.
      */
     long getWidgetBlockGap();
@@ -7554,7 +7554,7 @@ public final class StylePresetServiceOuterClass {
      * Gap between videos in playlist.
      * </pre>
      *
-     * <code>int64 playlist_item_gap = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>int64 playlist_item_gap = 18 [(.yandex.cloud.value) = "0-50"];</code>
      * @return The playlistItemGap.
      */
     long getPlaylistItemGap();
@@ -7973,7 +7973,7 @@ public final class StylePresetServiceOuterClass {
      * Style preset title.
      * </pre>
      *
-     * <code>string title = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9-_ ]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The title.
      */
     @java.lang.Override
@@ -7994,7 +7994,7 @@ public final class StylePresetServiceOuterClass {
      * Style preset title.
      * </pre>
      *
-     * <code>string title = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9-_ ]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for title.
      */
     @java.lang.Override
@@ -8203,7 +8203,7 @@ public final class StylePresetServiceOuterClass {
      * Gap between widget blocks.
      * </pre>
      *
-     * <code>int64 widget_block_gap = 8 [(.yandex.cloud.value) = "0-10"];</code>
+     * <code>int64 widget_block_gap = 8 [(.yandex.cloud.value) = "0-50"];</code>
      * @return The widgetBlockGap.
      */
     @java.lang.Override
@@ -8386,7 +8386,7 @@ public final class StylePresetServiceOuterClass {
      * Gap between videos in playlist.
      * </pre>
      *
-     * <code>int64 playlist_item_gap = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>int64 playlist_item_gap = 18 [(.yandex.cloud.value) = "0-50"];</code>
      * @return The playlistItemGap.
      */
     @java.lang.Override
@@ -9493,7 +9493,7 @@ public final class StylePresetServiceOuterClass {
        * Style preset title.
        * </pre>
        *
-       * <code>string title = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9-_ ]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The title.
        */
       public java.lang.String getTitle() {
@@ -9513,7 +9513,7 @@ public final class StylePresetServiceOuterClass {
        * Style preset title.
        * </pre>
        *
-       * <code>string title = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9-_ ]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
@@ -9534,7 +9534,7 @@ public final class StylePresetServiceOuterClass {
        * Style preset title.
        * </pre>
        *
-       * <code>string title = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9-_ ]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
@@ -9553,7 +9553,7 @@ public final class StylePresetServiceOuterClass {
        * Style preset title.
        * </pre>
        *
-       * <code>string title = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9-_ ]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
@@ -9567,7 +9567,7 @@ public final class StylePresetServiceOuterClass {
        * Style preset title.
        * </pre>
        *
-       * <code>string title = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9-_ ]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
@@ -9973,7 +9973,7 @@ public final class StylePresetServiceOuterClass {
        * Gap between widget blocks.
        * </pre>
        *
-       * <code>int64 widget_block_gap = 8 [(.yandex.cloud.value) = "0-10"];</code>
+       * <code>int64 widget_block_gap = 8 [(.yandex.cloud.value) = "0-50"];</code>
        * @return The widgetBlockGap.
        */
       @java.lang.Override
@@ -9985,7 +9985,7 @@ public final class StylePresetServiceOuterClass {
        * Gap between widget blocks.
        * </pre>
        *
-       * <code>int64 widget_block_gap = 8 [(.yandex.cloud.value) = "0-10"];</code>
+       * <code>int64 widget_block_gap = 8 [(.yandex.cloud.value) = "0-50"];</code>
        * @param value The widgetBlockGap to set.
        * @return This builder for chaining.
        */
@@ -10000,7 +10000,7 @@ public final class StylePresetServiceOuterClass {
        * Gap between widget blocks.
        * </pre>
        *
-       * <code>int64 widget_block_gap = 8 [(.yandex.cloud.value) = "0-10"];</code>
+       * <code>int64 widget_block_gap = 8 [(.yandex.cloud.value) = "0-50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearWidgetBlockGap() {
@@ -10390,7 +10390,7 @@ public final class StylePresetServiceOuterClass {
        * Gap between videos in playlist.
        * </pre>
        *
-       * <code>int64 playlist_item_gap = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 playlist_item_gap = 18 [(.yandex.cloud.value) = "0-50"];</code>
        * @return The playlistItemGap.
        */
       @java.lang.Override
@@ -10402,7 +10402,7 @@ public final class StylePresetServiceOuterClass {
        * Gap between videos in playlist.
        * </pre>
        *
-       * <code>int64 playlist_item_gap = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 playlist_item_gap = 18 [(.yandex.cloud.value) = "0-50"];</code>
        * @param value The playlistItemGap to set.
        * @return This builder for chaining.
        */
@@ -10417,7 +10417,7 @@ public final class StylePresetServiceOuterClass {
        * Gap between videos in playlist.
        * </pre>
        *
-       * <code>int64 playlist_item_gap = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 playlist_item_gap = 18 [(.yandex.cloud.value) = "0-50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPlaylistItemGap() {
@@ -13077,84 +13077,83 @@ public final class StylePresetServiceOuterClass {
       "\3101\006<=1000J\004\010\002\020d\"t\n\030ListStylePresetsRespo" +
       "nse\0229\n\rstyle_presets\030\001 \003(\0132\".yandex.clou" +
       "d.video.v1.StylePreset\022\027\n\017next_page_toke" +
-      "n\030d \001(\tJ\004\010\002\020d\"\233\007\n\030CreateStylePresetReque" +
-      "st\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022.\n\005" +
-      "title\030\002 \001(\tB\037\350\3071\001\362\3071\017[a-zA-Z0-9-_ ]+\212\3101\004" +
-      "<=50\0227\n\020background_color\030\003 \001(\tB\035\350\3071\001\362\3071\r" +
-      "[#a-zA-Z0-9]+\212\3101\004<=50\022@\n\031widget_text_col" +
-      "or_primary\030\004 \001(\tB\035\350\3071\001\362\3071\r[#a-zA-Z0-9]+\212" +
-      "\3101\004<=50\022B\n\033widget_text_color_secondary\030\005" +
-      " \001(\tB\035\350\3071\001\362\3071\r[#a-zA-Z0-9]+\212\3101\004<=50\022:\n\023w" +
-      "idget_accent_color\030\006 \001(\tB\035\350\3071\001\362\3071\r[#a-zA" +
-      "-Z0-9]+\212\3101\004<=50\022\"\n\020widget_block_gap\030\007 \001(" +
-      "\003B\010\372\3071\0040-10\022C\n\034widget_block_separator_co" +
-      "lor\030\010 \001(\tB\035\350\3071\001\362\3071\r[#a-zA-Z0-9]+\212\3101\004<=50" +
-      "\022%\n\024player_border_radius\030\r \001(\003B\007\372\3071\003>=0\022" +
-      "3\n\014player_color\030\016 \001(\tB\035\350\3071\001\362\3071\r[#a-zA-Z0" +
-      "-9]+\212\3101\004<=50\022N\n\'playlist_selected_item_b" +
-      "ackground_color\030\017 \001(\tB\035\350\3071\001\362\3071\r[#a-zA-Z0" +
-      "-9]+\212\3101\004<=50\022,\n\033playlist_item_border_rad" +
-      "ius\030\020 \001(\003B\007\372\3071\003>=0\022\"\n\021playlist_item_gap\030" +
-      "\021 \001(\003B\007\372\3071\003>=0\022R\n\021playlist_location\030\022 \001(" +
-      "\01621.yandex.cloud.video.v1.StylePreset.Wi" +
-      "dgetLocationB\004\350\3071\001\0224\n\rright_widgets\030\013 \003(" +
-      "\0132\035.yandex.cloud.video.v1.Widget\0225\n\016bott" +
-      "om_widgets\030\014 \003(\0132\035.yandex.cloud.video.v1" +
-      ".WidgetJ\004\010\t\020\nJ\004\010\n\020\013\"4\n\031CreateStylePreset" +
-      "Metadata\022\027\n\017style_preset_id\030\001 \001(\t\"\265\007\n\030Up" +
-      "dateStylePresetRequest\022%\n\017style_preset_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0224\n\nfield_mask\030\002 \001(" +
-      "\0132\032.google.protobuf.FieldMaskB\004\350\3071\001\022*\n\005t" +
-      "itle\030\003 \001(\tB\033\362\3071\017[a-zA-Z0-9-_ ]*\212\3101\004<=50\022" +
-      "4\n\020background_color\030\004 \001(\tB\032\362\3071\016[#a-zA-Z0" +
-      "-9-]*\212\3101\004<=50\022=\n\031widget_text_color_prima" +
-      "ry\030\005 \001(\tB\032\362\3071\016[#a-zA-Z0-9-]*\212\3101\004<=50\022?\n\033" +
-      "widget_text_color_secondary\030\006 \001(\tB\032\362\3071\016[" +
-      "#a-zA-Z0-9-]*\212\3101\004<=50\0227\n\023widget_accent_c" +
-      "olor\030\007 \001(\tB\032\362\3071\016[#a-zA-Z0-9-]*\212\3101\004<=50\022\"" +
-      "\n\020widget_block_gap\030\010 \001(\003B\010\372\3071\0040-10\022@\n\034wi" +
-      "dget_block_separator_color\030\t \001(\tB\032\362\3071\016[#" +
-      "a-zA-Z0-9-]*\212\3101\004<=50\022%\n\024player_border_ra" +
-      "dius\030\016 \001(\003B\007\372\3071\003>=0\022/\n\014player_color\030\017 \001(" +
-      "\tB\031\362\3071\r[#a-zA-Z0-9]*\212\3101\004<=50\022J\n\'playlist" +
-      "_selected_item_background_color\030\020 \001(\tB\031\362" +
-      "\3071\r[#a-zA-Z0-9]*\212\3101\004<=50\022,\n\033playlist_ite" +
-      "m_border_radius\030\021 \001(\003B\007\372\3071\003>=0\022\"\n\021playli" +
-      "st_item_gap\030\022 \001(\003B\007\372\3071\003>=0\022L\n\021playlist_l" +
-      "ocation\030\023 \001(\01621.yandex.cloud.video.v1.St" +
-      "ylePreset.WidgetLocation\0224\n\rright_widget" +
-      "s\030\014 \003(\0132\035.yandex.cloud.video.v1.Widget\0225" +
-      "\n\016bottom_widgets\030\r \003(\0132\035.yandex.cloud.vi" +
-      "deo.v1.WidgetJ\004\010\n\020\013J\004\010\013\020\014\"4\n\031UpdateStyle" +
-      "PresetMetadata\022\027\n\017style_preset_id\030\001 \001(\t\"" +
-      "A\n\030DeleteStylePresetRequest\022%\n\017style_pre" +
-      "set_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"4\n\031DeleteStyl" +
-      "ePresetMetadata\022\027\n\017style_preset_id\030\001 \001(\t" +
-      "2\337\006\n\022StylePresetService\022\211\001\n\003Get\022,.yandex" +
-      ".cloud.video.v1.GetStylePresetRequest\032\"." +
-      "yandex.cloud.video.v1.StylePreset\"0\202\323\344\223\002" +
-      "*\022(/video/v1/stylePresets/{style_preset_" +
-      "id}\022\207\001\n\004List\022..yandex.cloud.video.v1.Lis" +
-      "tStylePresetsRequest\032/.yandex.cloud.vide" +
-      "o.v1.ListStylePresetsResponse\"\036\202\323\344\223\002\030\022\026/" +
-      "video/v1/stylePresets\022\253\001\n\006Create\022/.yande" +
-      "x.cloud.video.v1.CreateStylePresetReques" +
-      "t\032!.yandex.cloud.operation.Operation\"M\202\323" +
-      "\344\223\002\033\"\026/video/v1/stylePresets:\001*\262\322*(\n\031Cre" +
-      "ateStylePresetMetadata\022\013StylePreset\022\275\001\n\006" +
-      "Update\022/.yandex.cloud.video.v1.UpdateSty" +
-      "lePresetRequest\032!.yandex.cloud.operation" +
-      ".Operation\"_\202\323\344\223\002-2(/video/v1/stylePrese" +
-      "ts/{style_preset_id}:\001*\262\322*(\n\031UpdateStyle" +
-      "PresetMetadata\022\013StylePreset\022\304\001\n\006Delete\022/" +
-      ".yandex.cloud.video.v1.DeleteStylePreset" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"f\202\323\344\223\002**(/video/v1/stylePresets/{styl" +
-      "e_preset_id}\262\322*2\n\031DeleteStylePresetMetad" +
-      "ata\022\025google.protobuf.EmptyB\\\n\031yandex.clo" +
-      "ud.api.video.v1Z?github.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/video/v1;video" +
-      "b\006proto3"
+      "n\030d \001(\tJ\004\010\002\020d\"\211\007\n\030CreateStylePresetReque" +
+      "st\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\005" +
+      "title\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\0227\n\020background_" +
+      "color\030\003 \001(\tB\035\350\3071\001\362\3071\r[#a-zA-Z0-9]+\212\3101\004<=" +
+      "50\022@\n\031widget_text_color_primary\030\004 \001(\tB\035\350" +
+      "\3071\001\362\3071\r[#a-zA-Z0-9]+\212\3101\004<=50\022B\n\033widget_t" +
+      "ext_color_secondary\030\005 \001(\tB\035\350\3071\001\362\3071\r[#a-z" +
+      "A-Z0-9]+\212\3101\004<=50\022:\n\023widget_accent_color\030" +
+      "\006 \001(\tB\035\350\3071\001\362\3071\r[#a-zA-Z0-9]+\212\3101\004<=50\022\"\n\020" +
+      "widget_block_gap\030\007 \001(\003B\010\372\3071\0040-50\022C\n\034widg" +
+      "et_block_separator_color\030\010 \001(\tB\035\350\3071\001\362\3071\r" +
+      "[#a-zA-Z0-9]+\212\3101\004<=50\022%\n\024player_border_r" +
+      "adius\030\r \001(\003B\007\372\3071\003>=0\0223\n\014player_color\030\016 \001" +
+      "(\tB\035\350\3071\001\362\3071\r[#a-zA-Z0-9]+\212\3101\004<=50\022N\n\'pla" +
+      "ylist_selected_item_background_color\030\017 \001" +
+      "(\tB\035\350\3071\001\362\3071\r[#a-zA-Z0-9]+\212\3101\004<=50\022,\n\033pla" +
+      "ylist_item_border_radius\030\020 \001(\003B\007\372\3071\003>=0\022" +
+      "#\n\021playlist_item_gap\030\021 \001(\003B\010\372\3071\0040-50\022R\n\021" +
+      "playlist_location\030\022 \001(\01621.yandex.cloud.v" +
+      "ideo.v1.StylePreset.WidgetLocationB\004\350\3071\001" +
+      "\0224\n\rright_widgets\030\013 \003(\0132\035.yandex.cloud.v" +
+      "ideo.v1.Widget\0225\n\016bottom_widgets\030\014 \003(\0132\035" +
+      ".yandex.cloud.video.v1.WidgetJ\004\010\t\020\nJ\004\010\n\020" +
+      "\013\"4\n\031CreateStylePresetMetadata\022\027\n\017style_" +
+      "preset_id\030\001 \001(\t\"\243\007\n\030UpdateStylePresetReq" +
+      "uest\022%\n\017style_preset_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\0224\n\nfield_mask\030\002 \001(\0132\032.google.protobu" +
+      "f.FieldMaskB\004\350\3071\001\022\027\n\005title\030\003 \001(\tB\010\212\3101\004<=" +
+      "50\0224\n\020background_color\030\004 \001(\tB\032\362\3071\016[#a-zA" +
+      "-Z0-9-]*\212\3101\004<=50\022=\n\031widget_text_color_pr" +
+      "imary\030\005 \001(\tB\032\362\3071\016[#a-zA-Z0-9-]*\212\3101\004<=50\022" +
+      "?\n\033widget_text_color_secondary\030\006 \001(\tB\032\362\307" +
+      "1\016[#a-zA-Z0-9-]*\212\3101\004<=50\0227\n\023widget_accen" +
+      "t_color\030\007 \001(\tB\032\362\3071\016[#a-zA-Z0-9-]*\212\3101\004<=5" +
+      "0\022\"\n\020widget_block_gap\030\010 \001(\003B\010\372\3071\0040-50\022@\n" +
+      "\034widget_block_separator_color\030\t \001(\tB\032\362\3071" +
+      "\016[#a-zA-Z0-9-]*\212\3101\004<=50\022%\n\024player_border" +
+      "_radius\030\016 \001(\003B\007\372\3071\003>=0\022/\n\014player_color\030\017" +
+      " \001(\tB\031\362\3071\r[#a-zA-Z0-9]*\212\3101\004<=50\022J\n\'playl" +
+      "ist_selected_item_background_color\030\020 \001(\t" +
+      "B\031\362\3071\r[#a-zA-Z0-9]*\212\3101\004<=50\022,\n\033playlist_" +
+      "item_border_radius\030\021 \001(\003B\007\372\3071\003>=0\022#\n\021pla" +
+      "ylist_item_gap\030\022 \001(\003B\010\372\3071\0040-50\022L\n\021playli" +
+      "st_location\030\023 \001(\01621.yandex.cloud.video.v" +
+      "1.StylePreset.WidgetLocation\0224\n\rright_wi" +
+      "dgets\030\014 \003(\0132\035.yandex.cloud.video.v1.Widg" +
+      "et\0225\n\016bottom_widgets\030\r \003(\0132\035.yandex.clou" +
+      "d.video.v1.WidgetJ\004\010\n\020\013J\004\010\013\020\014\"4\n\031UpdateS" +
+      "tylePresetMetadata\022\027\n\017style_preset_id\030\001 " +
+      "\001(\t\"A\n\030DeleteStylePresetRequest\022%\n\017style" +
+      "_preset_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"4\n\031Delete" +
+      "StylePresetMetadata\022\027\n\017style_preset_id\030\001" +
+      " \001(\t2\337\006\n\022StylePresetService\022\211\001\n\003Get\022,.ya" +
+      "ndex.cloud.video.v1.GetStylePresetReques" +
+      "t\032\".yandex.cloud.video.v1.StylePreset\"0\202" +
+      "\323\344\223\002*\022(/video/v1/stylePresets/{style_pre" +
+      "set_id}\022\207\001\n\004List\022..yandex.cloud.video.v1" +
+      ".ListStylePresetsRequest\032/.yandex.cloud." +
+      "video.v1.ListStylePresetsResponse\"\036\202\323\344\223\002" +
+      "\030\022\026/video/v1/stylePresets\022\253\001\n\006Create\022/.y" +
+      "andex.cloud.video.v1.CreateStylePresetRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"M\202\323\344\223\002\033\"\026/video/v1/stylePresets:\001*\262\322*(\n" +
+      "\031CreateStylePresetMetadata\022\013StylePreset\022" +
+      "\275\001\n\006Update\022/.yandex.cloud.video.v1.Updat" +
+      "eStylePresetRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"_\202\323\344\223\002-2(/video/v1/styleP" +
+      "resets/{style_preset_id}:\001*\262\322*(\n\031UpdateS" +
+      "tylePresetMetadata\022\013StylePreset\022\304\001\n\006Dele" +
+      "te\022/.yandex.cloud.video.v1.DeleteStylePr" +
+      "esetRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"f\202\323\344\223\002**(/video/v1/stylePresets/{" +
+      "style_preset_id}\262\322*2\n\031DeleteStylePresetM" +
+      "etadata\022\025google.protobuf.EmptyB\\\n\031yandex" +
+      ".cloud.api.video.v1Z?github.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/video/v1;v" +
+      "ideob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

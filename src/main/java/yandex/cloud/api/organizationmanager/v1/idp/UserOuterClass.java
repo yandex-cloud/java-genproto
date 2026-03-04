@@ -286,6 +286,86 @@ public final class UserOuterClass {
      */
     com.google.protobuf.ByteString
         getExternalIdBytes();
+
+    /**
+     * <pre>
+     * User's company name.
+     * </pre>
+     *
+     * <code>string company_name = 14;</code>
+     * @return The companyName.
+     */
+    java.lang.String getCompanyName();
+    /**
+     * <pre>
+     * User's company name.
+     * </pre>
+     *
+     * <code>string company_name = 14;</code>
+     * @return The bytes for companyName.
+     */
+    com.google.protobuf.ByteString
+        getCompanyNameBytes();
+
+    /**
+     * <pre>
+     * User's department.
+     * </pre>
+     *
+     * <code>string department = 15;</code>
+     * @return The department.
+     */
+    java.lang.String getDepartment();
+    /**
+     * <pre>
+     * User's department.
+     * </pre>
+     *
+     * <code>string department = 15;</code>
+     * @return The bytes for department.
+     */
+    com.google.protobuf.ByteString
+        getDepartmentBytes();
+
+    /**
+     * <pre>
+     * User's job title.
+     * </pre>
+     *
+     * <code>string job_title = 16;</code>
+     * @return The jobTitle.
+     */
+    java.lang.String getJobTitle();
+    /**
+     * <pre>
+     * User's job title.
+     * </pre>
+     *
+     * <code>string job_title = 16;</code>
+     * @return The bytes for jobTitle.
+     */
+    com.google.protobuf.ByteString
+        getJobTitleBytes();
+
+    /**
+     * <pre>
+     * User's employee ID
+     * </pre>
+     *
+     * <code>string employee_id = 17;</code>
+     * @return The employeeId.
+     */
+    java.lang.String getEmployeeId();
+    /**
+     * <pre>
+     * User's employee ID
+     * </pre>
+     *
+     * <code>string employee_id = 17;</code>
+     * @return The bytes for employeeId.
+     */
+    com.google.protobuf.ByteString
+        getEmployeeIdBytes();
   }
   /**
    * <pre>
@@ -316,6 +396,10 @@ public final class UserOuterClass {
       email_ = "";
       phoneNumber_ = "";
       externalId_ = "";
+      companyName_ = "";
+      department_ = "";
+      jobTitle_ = "";
+      employeeId_ = "";
     }
 
     @java.lang.Override
@@ -432,6 +516,30 @@ public final class UserOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               externalId_ = s;
+              break;
+            }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              companyName_ = s;
+              break;
+            }
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              department_ = s;
+              break;
+            }
+            case 130: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              jobTitle_ = s;
+              break;
+            }
+            case 138: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              employeeId_ = s;
               break;
             }
             default: {
@@ -1184,6 +1292,190 @@ public final class UserOuterClass {
       }
     }
 
+    public static final int COMPANY_NAME_FIELD_NUMBER = 14;
+    private volatile java.lang.Object companyName_;
+    /**
+     * <pre>
+     * User's company name.
+     * </pre>
+     *
+     * <code>string company_name = 14;</code>
+     * @return The companyName.
+     */
+    @java.lang.Override
+    public java.lang.String getCompanyName() {
+      java.lang.Object ref = companyName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        companyName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * User's company name.
+     * </pre>
+     *
+     * <code>string company_name = 14;</code>
+     * @return The bytes for companyName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCompanyNameBytes() {
+      java.lang.Object ref = companyName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        companyName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEPARTMENT_FIELD_NUMBER = 15;
+    private volatile java.lang.Object department_;
+    /**
+     * <pre>
+     * User's department.
+     * </pre>
+     *
+     * <code>string department = 15;</code>
+     * @return The department.
+     */
+    @java.lang.Override
+    public java.lang.String getDepartment() {
+      java.lang.Object ref = department_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        department_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * User's department.
+     * </pre>
+     *
+     * <code>string department = 15;</code>
+     * @return The bytes for department.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDepartmentBytes() {
+      java.lang.Object ref = department_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        department_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int JOB_TITLE_FIELD_NUMBER = 16;
+    private volatile java.lang.Object jobTitle_;
+    /**
+     * <pre>
+     * User's job title.
+     * </pre>
+     *
+     * <code>string job_title = 16;</code>
+     * @return The jobTitle.
+     */
+    @java.lang.Override
+    public java.lang.String getJobTitle() {
+      java.lang.Object ref = jobTitle_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        jobTitle_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * User's job title.
+     * </pre>
+     *
+     * <code>string job_title = 16;</code>
+     * @return The bytes for jobTitle.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJobTitleBytes() {
+      java.lang.Object ref = jobTitle_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jobTitle_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EMPLOYEE_ID_FIELD_NUMBER = 17;
+    private volatile java.lang.Object employeeId_;
+    /**
+     * <pre>
+     * User's employee ID
+     * </pre>
+     *
+     * <code>string employee_id = 17;</code>
+     * @return The employeeId.
+     */
+    @java.lang.Override
+    public java.lang.String getEmployeeId() {
+      java.lang.Object ref = employeeId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        employeeId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * User's employee ID
+     * </pre>
+     *
+     * <code>string employee_id = 17;</code>
+     * @return The bytes for employeeId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEmployeeIdBytes() {
+      java.lang.Object ref = employeeId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        employeeId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1234,6 +1526,18 @@ public final class UserOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 13, externalId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, companyName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(department_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, department_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jobTitle_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, jobTitle_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(employeeId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, employeeId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1282,6 +1586,18 @@ public final class UserOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, externalId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, companyName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(department_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, department_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jobTitle_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, jobTitle_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(employeeId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, employeeId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1326,6 +1642,14 @@ public final class UserOuterClass {
       }
       if (!getExternalId()
           .equals(other.getExternalId())) return false;
+      if (!getCompanyName()
+          .equals(other.getCompanyName())) return false;
+      if (!getDepartment()
+          .equals(other.getDepartment())) return false;
+      if (!getJobTitle()
+          .equals(other.getJobTitle())) return false;
+      if (!getEmployeeId()
+          .equals(other.getEmployeeId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1365,6 +1689,14 @@ public final class UserOuterClass {
       }
       hash = (37 * hash) + EXTERNAL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getExternalId().hashCode();
+      hash = (37 * hash) + COMPANY_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getCompanyName().hashCode();
+      hash = (37 * hash) + DEPARTMENT_FIELD_NUMBER;
+      hash = (53 * hash) + getDepartment().hashCode();
+      hash = (37 * hash) + JOB_TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getJobTitle().hashCode();
+      hash = (37 * hash) + EMPLOYEE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getEmployeeId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1536,6 +1868,14 @@ public final class UserOuterClass {
         }
         externalId_ = "";
 
+        companyName_ = "";
+
+        department_ = "";
+
+        jobTitle_ = "";
+
+        employeeId_ = "";
+
         return this;
       }
 
@@ -1582,6 +1922,10 @@ public final class UserOuterClass {
           result.updatedAt_ = updatedAtBuilder_.build();
         }
         result.externalId_ = externalId_;
+        result.companyName_ = companyName_;
+        result.department_ = department_;
+        result.jobTitle_ = jobTitle_;
+        result.employeeId_ = employeeId_;
         onBuilt();
         return result;
       }
@@ -1673,6 +2017,22 @@ public final class UserOuterClass {
         }
         if (!other.getExternalId().isEmpty()) {
           externalId_ = other.externalId_;
+          onChanged();
+        }
+        if (!other.getCompanyName().isEmpty()) {
+          companyName_ = other.companyName_;
+          onChanged();
+        }
+        if (!other.getDepartment().isEmpty()) {
+          department_ = other.department_;
+          onChanged();
+        }
+        if (!other.getJobTitle().isEmpty()) {
+          jobTitle_ = other.jobTitle_;
+          onChanged();
+        }
+        if (!other.getEmployeeId().isEmpty()) {
+          employeeId_ = other.employeeId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -2991,6 +3351,390 @@ public final class UserOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object companyName_ = "";
+      /**
+       * <pre>
+       * User's company name.
+       * </pre>
+       *
+       * <code>string company_name = 14;</code>
+       * @return The companyName.
+       */
+      public java.lang.String getCompanyName() {
+        java.lang.Object ref = companyName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          companyName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User's company name.
+       * </pre>
+       *
+       * <code>string company_name = 14;</code>
+       * @return The bytes for companyName.
+       */
+      public com.google.protobuf.ByteString
+          getCompanyNameBytes() {
+        java.lang.Object ref = companyName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          companyName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User's company name.
+       * </pre>
+       *
+       * <code>string company_name = 14;</code>
+       * @param value The companyName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompanyName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        companyName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User's company name.
+       * </pre>
+       *
+       * <code>string company_name = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCompanyName() {
+        
+        companyName_ = getDefaultInstance().getCompanyName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User's company name.
+       * </pre>
+       *
+       * <code>string company_name = 14;</code>
+       * @param value The bytes for companyName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompanyNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        companyName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object department_ = "";
+      /**
+       * <pre>
+       * User's department.
+       * </pre>
+       *
+       * <code>string department = 15;</code>
+       * @return The department.
+       */
+      public java.lang.String getDepartment() {
+        java.lang.Object ref = department_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          department_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User's department.
+       * </pre>
+       *
+       * <code>string department = 15;</code>
+       * @return The bytes for department.
+       */
+      public com.google.protobuf.ByteString
+          getDepartmentBytes() {
+        java.lang.Object ref = department_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          department_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User's department.
+       * </pre>
+       *
+       * <code>string department = 15;</code>
+       * @param value The department to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepartment(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        department_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User's department.
+       * </pre>
+       *
+       * <code>string department = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDepartment() {
+        
+        department_ = getDefaultInstance().getDepartment();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User's department.
+       * </pre>
+       *
+       * <code>string department = 15;</code>
+       * @param value The bytes for department to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepartmentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        department_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object jobTitle_ = "";
+      /**
+       * <pre>
+       * User's job title.
+       * </pre>
+       *
+       * <code>string job_title = 16;</code>
+       * @return The jobTitle.
+       */
+      public java.lang.String getJobTitle() {
+        java.lang.Object ref = jobTitle_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          jobTitle_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User's job title.
+       * </pre>
+       *
+       * <code>string job_title = 16;</code>
+       * @return The bytes for jobTitle.
+       */
+      public com.google.protobuf.ByteString
+          getJobTitleBytes() {
+        java.lang.Object ref = jobTitle_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jobTitle_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User's job title.
+       * </pre>
+       *
+       * <code>string job_title = 16;</code>
+       * @param value The jobTitle to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobTitle(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        jobTitle_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User's job title.
+       * </pre>
+       *
+       * <code>string job_title = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJobTitle() {
+        
+        jobTitle_ = getDefaultInstance().getJobTitle();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User's job title.
+       * </pre>
+       *
+       * <code>string job_title = 16;</code>
+       * @param value The bytes for jobTitle to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        jobTitle_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object employeeId_ = "";
+      /**
+       * <pre>
+       * User's employee ID
+       * </pre>
+       *
+       * <code>string employee_id = 17;</code>
+       * @return The employeeId.
+       */
+      public java.lang.String getEmployeeId() {
+        java.lang.Object ref = employeeId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          employeeId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User's employee ID
+       * </pre>
+       *
+       * <code>string employee_id = 17;</code>
+       * @return The bytes for employeeId.
+       */
+      public com.google.protobuf.ByteString
+          getEmployeeIdBytes() {
+        java.lang.Object ref = employeeId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          employeeId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User's employee ID
+       * </pre>
+       *
+       * <code>string employee_id = 17;</code>
+       * @param value The employeeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmployeeId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        employeeId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User's employee ID
+       * </pre>
+       *
+       * <code>string employee_id = 17;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmployeeId() {
+        
+        employeeId_ = getDefaultInstance().getEmployeeId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User's employee ID
+       * </pre>
+       *
+       * <code>string employee_id = 17;</code>
+       * @param value The bytes for employeeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmployeeIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        employeeId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3061,7 +3805,7 @@ public final class UserOuterClass {
       "\n2yandex/cloud/organizationmanager/v1/id" +
       "p/user.proto\022\'yandex.cloud.organizationm" +
       "anager.v1.idp\032\037google/protobuf/timestamp" +
-      ".proto\"\264\003\n\004User\022\n\n\002id\030\001 \001(\t\022\023\n\013userpool_" +
+      ".proto\"\206\004\n\004User\022\n\n\002id\030\001 \001(\t\022\023\n\013userpool_" +
       "id\030\002 \001(\t\022D\n\006status\030\003 \001(\01624.yandex.cloud." +
       "organizationmanager.v1.idp.User.Status\022\020" +
       "\n\010username\030\004 \001(\t\022\021\n\tfull_name\030\006 \001(\t\022\022\n\ng" +
@@ -3069,13 +3813,15 @@ public final class UserOuterClass {
       "email\030\t \001(\t\022\024\n\014phone_number\030\n \001(\t\022.\n\ncre" +
       "ated_at\030\013 \001(\0132\032.google.protobuf.Timestam" +
       "p\022.\n\nupdated_at\030\014 \001(\0132\032.google.protobuf." +
-      "Timestamp\022\023\n\013external_id\030\r \001(\t\"W\n\006Status" +
-      "\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\004\022\n" +
-      "\n\006ACTIVE\020\001\022\r\n\tSUSPENDED\020\002\022\014\n\010DELETING\020\003J" +
-      "\004\010\005\020\006B~\n+yandex.cloud.api.organizationma" +
-      "nager.v1.idpZOgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/organizationmanag" +
-      "er/v1/idp;idpb\006proto3"
+      "Timestamp\022\023\n\013external_id\030\r \001(\t\022\024\n\014compan" +
+      "y_name\030\016 \001(\t\022\022\n\ndepartment\030\017 \001(\t\022\021\n\tjob_" +
+      "title\030\020 \001(\t\022\023\n\013employee_id\030\021 \001(\t\"W\n\006Stat" +
+      "us\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\004" +
+      "\022\n\n\006ACTIVE\020\001\022\r\n\tSUSPENDED\020\002\022\014\n\010DELETING\020" +
+      "\003J\004\010\005\020\006B~\n+yandex.cloud.api.organization" +
+      "manager.v1.idpZOgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/organizationman" +
+      "ager/v1/idp;idpb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3087,7 +3833,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_organizationmanager_v1_idp_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_idp_User_descriptor,
-        new java.lang.String[] { "Id", "UserpoolId", "Status", "Username", "FullName", "GivenName", "FamilyName", "Email", "PhoneNumber", "CreatedAt", "UpdatedAt", "ExternalId", });
+        new java.lang.String[] { "Id", "UserpoolId", "Status", "Username", "FullName", "GivenName", "FamilyName", "Email", "PhoneNumber", "CreatedAt", "UpdatedAt", "ExternalId", "CompanyName", "Department", "JobTitle", "EmployeeId", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

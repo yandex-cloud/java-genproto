@@ -26852,158 +26852,177 @@ public final class ClusterServiceOuterClass {
       "\n.yandex/cloud/dataproc/v1/cluster_servi" +
       "ce.proto\022\030yandex.cloud.dataproc.v1\032\034goog" +
       "le/api/annotations.proto\032 google/protobu" +
-      "f/field_mask.proto\032 yandex/cloud/api/ope" +
-      "ration.proto\032&yandex/cloud/dataproc/v1/c" +
-      "luster.proto\032%yandex/cloud/dataproc/v1/c" +
-      "ommon.proto\032)yandex/cloud/dataproc/v1/su" +
-      "bcluster.proto\032&yandex/cloud/operation/o" +
-      "peration.proto\032\035yandex/cloud/validation." +
-      "proto\"5\n\021GetClusterRequest\022 \n\ncluster_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\220\001\n\023ListClustersReq" +
-      "uest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n" +
-      "\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
-      "en\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101" +
-      "\006<=1000\"d\n\024ListClustersResponse\0223\n\010clust" +
-      "ers\030\001 \003(\0132!.yandex.cloud.dataproc.v1.Clu" +
-      "ster\022\027\n\017next_page_token\030\002 \001(\t\"\341\002\n\032Create" +
-      "SubclusterConfigSpec\022/\n\004name\030\001 \001(\tB!\362\3071\035" +
-      "|[a-z][-a-z0-9]{1,61}[a-z0-9]\0222\n\004role\030\002 " +
-      "\001(\0162\036.yandex.cloud.dataproc.v1.RoleB\004\350\3071" +
-      "\001\022<\n\tresources\030\003 \001(\0132#.yandex.cloud.data" +
-      "proc.v1.ResourcesB\004\350\3071\001\022\037\n\tsubnet_id\030\004 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022\034\n\013hosts_count\030\005 \001(\003B\007\372" +
-      "\3071\003>=1\022\030\n\020assign_public_ip\030\006 \001(\010\022G\n\022auto" +
-      "scaling_config\030\007 \001(\0132+.yandex.cloud.data" +
-      "proc.v1.AutoscalingConfig\"\370\001\n\032UpdateSubc" +
-      "lusterConfigSpec\022\n\n\002id\030\001 \001(\t\022/\n\004name\030\002 \001" +
-      "(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\0226\n" +
-      "\tresources\030\003 \001(\0132#.yandex.cloud.dataproc" +
-      ".v1.Resources\022\034\n\013hosts_count\030\004 \001(\003B\007\372\3071\003" +
-      ">=1\022G\n\022autoscaling_config\030\005 \001(\0132+.yandex" +
-      ".cloud.dataproc.v1.AutoscalingConfig\"\265\001\n" +
-      "\027CreateClusterConfigSpec\022\022\n\nversion_id\030\001" +
-      " \001(\t\0226\n\006hadoop\030\002 \001(\0132&.yandex.cloud.data" +
-      "proc.v1.HadoopConfig\022N\n\020subclusters_spec" +
-      "\030\003 \003(\01324.yandex.cloud.dataproc.v1.Create" +
-      "SubclusterConfigSpec\"\241\001\n\027UpdateClusterCo" +
-      "nfigSpec\022N\n\020subclusters_spec\030\001 \003(\01324.yan" +
-      "dex.cloud.dataproc.v1.UpdateSubclusterCo" +
-      "nfigSpec\0226\n\006hadoop\030\002 \001(\0132&.yandex.cloud." +
-      "dataproc.v1.HadoopConfig\"\317\005\n\024CreateClust" +
-      "erRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022/\n\004name\030\002 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1," +
-      "61}[a-z0-9]\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=" +
-      "256\022\213\001\n\006labels\030\004 \003(\0132:.yandex.cloud.data" +
-      "proc.v1.CreateClusterRequest.LabelsEntry" +
-      "B?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041" +
-      "-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022L\n\013config_spec" +
-      "\030\006 \001(\01321.yandex.cloud.dataproc.v1.Create" +
-      "ClusterConfigSpecB\004\350\3071\001\022\035\n\007zone_id\030\007 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022 \n\022service_account_id\030\010 \001" +
-      "(\tB\004\350\3071\001\022\016\n\006bucket\030\t \001(\t\022\020\n\010ui_proxy\030\n \001" +
-      "(\010\022\032\n\022security_group_ids\030\013 \003(\t\022\026\n\016host_g" +
-      "roup_ids\030\014 \003(\t\022\033\n\023deletion_protection\030\r " +
-      "\001(\010\022\024\n\014log_group_id\030\016 \001(\t\022B\n\013environment" +
-      "\030\017 \001(\0162-.yandex.cloud.dataproc.v1.Cluste" +
-      "r.Environment\022&\n\036autoscaling_service_acc" +
-      "ount_id\030\020 \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005\020\006\"+\n\025CreateClus" +
-      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\233\005\n\024Upda" +
-      "teClusterRequest\022\034\n\ncluster_id\030\001 \001(\tB\010\212\310" +
-      "1\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.pro" +
-      "tobuf.FieldMask\022\036\n\013description\030\003 \001(\tB\t\212\310" +
-      "1\005<=256\022\213\001\n\006labels\030\004 \003(\0132:.yandex.cloud." +
-      "dataproc.v1.UpdateClusterRequest.LabelsE" +
-      "ntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101" +
-      "\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022F\n\013config_" +
-      "spec\030\005 \001(\01321.yandex.cloud.dataproc.v1.Up" +
-      "dateClusterConfigSpec\022/\n\004name\030\006 \001(\tB!\362\3071" +
-      "\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\032\n\022servic" +
-      "e_account_id\030\007 \001(\t\022\016\n\006bucket\030\010 \001(\t\022)\n\024de" +
-      "commission_timeout\030\t \001(\003B\013\372\3071\0070-86400\022\020\n" +
-      "\010ui_proxy\030\n \001(\010\022\032\n\022security_group_ids\030\013 " +
-      "\003(\t\022\033\n\023deletion_protection\030\014 \001(\010\022\024\n\014log_" +
-      "group_id\030\r \001(\t\022&\n\036autoscaling_service_ac" +
-      "count_id\030\016 \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMe" +
-      "tadata\022\022\n\ncluster_id\030\001 \001(\t\"c\n\024DeleteClus" +
-      "terRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022)\n\024decommission_timeout\030\002 \001(\003B\013\372\3071\007" +
-      "0-86400\"+\n\025DeleteClusterMetadata\022\022\n\nclus" +
-      "ter_id\030\001 \001(\t\"7\n\023StartClusterRequest\022 \n\nc" +
-      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartCl" +
-      "usterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"a\n\022Sto" +
-      "pClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\022)\n\024decommission_timeout\030\002 \001(\003B" +
-      "\013\372\3071\0070-86400\")\n\023StopClusterMetadata\022\022\n\nc" +
-      "luster_id\030\001 \001(\t\"~\n\034ListClusterOperations" +
-      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage" +
-      "_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOp" +
-      "erationsResponse\0225\n\noperations\030\001 \003(\0132!.y" +
-      "andex.cloud.operation.Operation\022\027\n\017next_" +
-      "page_token\030\002 \001(\t\"\221\001\n\027ListClusterHostsReq" +
-      "uest\022\034\n\ncluster_id\030\001 \001(\tB\010\212\3101\004<=50\022\035\n\tpa" +
-      "ge_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030" +
-      "\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=" +
-      "1000\"b\n\030ListClusterHostsResponse\022-\n\005host" +
-      "s\030\001 \003(\0132\036.yandex.cloud.dataproc.v1.Host\022" +
-      "\027\n\017next_page_token\030\002 \001(\t\"2\n\022ListUILinksR" +
-      "equest\022\034\n\ncluster_id\030\001 \001(\tB\010\212\3101\004<=50\"#\n\006" +
-      "UILink\022\014\n\004name\030\001 \001(\t\022\013\n\003url\030\002 \001(\t\"F\n\023Lis" +
-      "tUILinksResponse\022/\n\005links\030\001 \003(\0132 .yandex" +
-      ".cloud.dataproc.v1.UILink2\221\r\n\016ClusterSer" +
-      "vice\022\201\001\n\003Get\022+.yandex.cloud.dataproc.v1." +
-      "GetClusterRequest\032!.yandex.cloud.datapro" +
-      "c.v1.Cluster\"*\202\323\344\223\002$\022\"/dataproc/v1/clust" +
-      "ers/{cluster_id}\022\204\001\n\004List\022-.yandex.cloud" +
-      ".dataproc.v1.ListClustersRequest\032..yande" +
-      "x.cloud.dataproc.v1.ListClustersResponse" +
-      "\"\035\202\323\344\223\002\027\022\025/dataproc/v1/clusters\022\241\001\n\006Crea" +
-      "te\022..yandex.cloud.dataproc.v1.CreateClus" +
-      "terRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"D\202\323\344\223\002\032\"\025/dataproc/v1/clusters:\001*\262" +
-      "\322* \n\025CreateClusterMetadata\022\007Cluster\022\256\001\n\006" +
-      "Update\022..yandex.cloud.dataproc.v1.Update" +
-      "ClusterRequest\032!.yandex.cloud.operation." +
-      "Operation\"Q\202\323\344\223\002\'2\"/dataproc/v1/clusters" +
-      "/{cluster_id}:\001*\262\322* \n\025UpdateClusterMetad" +
-      "ata\022\007Cluster\022\271\001\n\006Delete\022..yandex.cloud.d" +
-      "ataproc.v1.DeleteClusterRequest\032!.yandex" +
-      ".cloud.operation.Operation\"\\\202\323\344\223\002$*\"/dat" +
-      "aproc/v1/clusters/{cluster_id}\262\322*.\n\025Dele" +
-      "teClusterMetadata\022\025google.protobuf.Empty" +
-      "\022\256\001\n\005Start\022-.yandex.cloud.dataproc.v1.St" +
-      "artClusterRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"S\202\323\344\223\002*\"(/dataproc/v1/clust" +
-      "ers/{cluster_id}:start\262\322*\037\n\024StartCluster" +
-      "Metadata\022\007Cluster\022\255\001\n\004Stop\022,.yandex.clou" +
-      "d.dataproc.v1.StopClusterRequest\032!.yande" +
-      "x.cloud.operation.Operation\"T\202\323\344\223\002,\"\'/da" +
-      "taproc/v1/clusters/{cluster_id}:stop:\001*\262" +
-      "\322*\036\n\023StopClusterMetadata\022\007Cluster\022\270\001\n\016Li" +
-      "stOperations\0226.yandex.cloud.dataproc.v1." +
-      "ListClusterOperationsRequest\0327.yandex.cl" +
-      "oud.dataproc.v1.ListClusterOperationsRes" +
-      "ponse\"5\202\323\344\223\002/\022-/dataproc/v1/clusters/{cl" +
-      "uster_id}/operations\022\244\001\n\tListHosts\0221.yan" +
-      "dex.cloud.dataproc.v1.ListClusterHostsRe" +
-      "quest\0322.yandex.cloud.dataproc.v1.ListClu" +
-      "sterHostsResponse\"0\202\323\344\223\002*\022(/dataproc/v1/" +
-      "clusters/{cluster_id}/hosts\022\237\001\n\013ListUILi" +
-      "nks\022,.yandex.cloud.dataproc.v1.ListUILin" +
-      "ksRequest\032-.yandex.cloud.dataproc.v1.Lis" +
-      "tUILinksResponse\"3\202\323\344\223\002-\022+/dataproc/v1/c" +
-      "lusters/{cluster_id}/ui_linksBe\n\034yandex." +
-      "cloud.api.dataproc.v1ZEgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/dataproc" +
-      "/v1;dataprocb\006proto3"
+      "f/field_mask.proto\032 yandex/cloud/access/" +
+      "access.proto\032 yandex/cloud/api/operation" +
+      ".proto\032&yandex/cloud/dataproc/v1/cluster" +
+      ".proto\032%yandex/cloud/dataproc/v1/common." +
+      "proto\032)yandex/cloud/dataproc/v1/subclust" +
+      "er.proto\032&yandex/cloud/operation/operati" +
+      "on.proto\032\035yandex/cloud/validation.proto\"" +
+      "5\n\021GetClusterRequest\022 \n\ncluster_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\"\220\001\n\023ListClustersRequest\022\037" +
+      "\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_" +
+      "size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001" +
+      "(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=100" +
+      "0\"d\n\024ListClustersResponse\0223\n\010clusters\030\001 " +
+      "\003(\0132!.yandex.cloud.dataproc.v1.Cluster\022\027" +
+      "\n\017next_page_token\030\002 \001(\t\"\341\002\n\032CreateSubclu" +
+      "sterConfigSpec\022/\n\004name\030\001 \001(\tB!\362\3071\035|[a-z]" +
+      "[-a-z0-9]{1,61}[a-z0-9]\0222\n\004role\030\002 \001(\0162\036." +
+      "yandex.cloud.dataproc.v1.RoleB\004\350\3071\001\022<\n\tr" +
+      "esources\030\003 \001(\0132#.yandex.cloud.dataproc.v" +
+      "1.ResourcesB\004\350\3071\001\022\037\n\tsubnet_id\030\004 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022\034\n\013hosts_count\030\005 \001(\003B\007\372\3071\003>=1" +
+      "\022\030\n\020assign_public_ip\030\006 \001(\010\022G\n\022autoscalin" +
+      "g_config\030\007 \001(\0132+.yandex.cloud.dataproc.v" +
+      "1.AutoscalingConfig\"\370\001\n\032UpdateSubcluster" +
+      "ConfigSpec\022\n\n\002id\030\001 \001(\t\022/\n\004name\030\002 \001(\tB!\362\307" +
+      "1\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\0226\n\tresou" +
+      "rces\030\003 \001(\0132#.yandex.cloud.dataproc.v1.Re" +
+      "sources\022\034\n\013hosts_count\030\004 \001(\003B\007\372\3071\003>=1\022G\n" +
+      "\022autoscaling_config\030\005 \001(\0132+.yandex.cloud" +
+      ".dataproc.v1.AutoscalingConfig\"\265\001\n\027Creat" +
+      "eClusterConfigSpec\022\022\n\nversion_id\030\001 \001(\t\0226" +
+      "\n\006hadoop\030\002 \001(\0132&.yandex.cloud.dataproc.v" +
+      "1.HadoopConfig\022N\n\020subclusters_spec\030\003 \003(\013" +
+      "24.yandex.cloud.dataproc.v1.CreateSubclu" +
+      "sterConfigSpec\"\241\001\n\027UpdateClusterConfigSp" +
+      "ec\022N\n\020subclusters_spec\030\001 \003(\01324.yandex.cl" +
+      "oud.dataproc.v1.UpdateSubclusterConfigSp" +
+      "ec\0226\n\006hadoop\030\002 \001(\0132&.yandex.cloud.datapr" +
+      "oc.v1.HadoopConfig\"\317\005\n\024CreateClusterRequ" +
+      "est\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\004" +
+      "name\030\002 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-" +
+      "z0-9]\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\213\001" +
+      "\n\006labels\030\004 \003(\0132:.yandex.cloud.dataproc.v" +
+      "1.CreateClusterRequest.LabelsEntryB?\202\3101\004" +
+      "<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101" +
+      "\022\022\020[a-z][-_0-9a-z]*\022L\n\013config_spec\030\006 \001(\013" +
+      "21.yandex.cloud.dataproc.v1.CreateCluste" +
+      "rConfigSpecB\004\350\3071\001\022\035\n\007zone_id\030\007 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\022 \n\022service_account_id\030\010 \001(\tB\004\350\307" +
+      "1\001\022\016\n\006bucket\030\t \001(\t\022\020\n\010ui_proxy\030\n \001(\010\022\032\n\022" +
+      "security_group_ids\030\013 \003(\t\022\026\n\016host_group_i" +
+      "ds\030\014 \003(\t\022\033\n\023deletion_protection\030\r \001(\010\022\024\n" +
+      "\014log_group_id\030\016 \001(\t\022B\n\013environment\030\017 \001(\016" +
+      "2-.yandex.cloud.dataproc.v1.Cluster.Envi" +
+      "ronment\022&\n\036autoscaling_service_account_i" +
+      "d\030\020 \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001J\004\010\005\020\006\"+\n\025CreateClusterMet" +
+      "adata\022\022\n\ncluster_id\030\001 \001(\t\"\233\005\n\024UpdateClus" +
+      "terRequest\022\034\n\ncluster_id\030\001 \001(\tB\010\212\3101\004<=50" +
+      "\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf." +
+      "FieldMask\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=25" +
+      "6\022\213\001\n\006labels\030\004 \003(\0132:.yandex.cloud.datapr" +
+      "oc.v1.UpdateClusterRequest.LabelsEntryB?" +
+      "\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-6" +
+      "3\262\3101\022\022\020[a-z][-_0-9a-z]*\022F\n\013config_spec\030\005" +
+      " \001(\01321.yandex.cloud.dataproc.v1.UpdateCl" +
+      "usterConfigSpec\022/\n\004name\030\006 \001(\tB!\362\3071\035|[a-z" +
+      "][-a-z0-9]{1,61}[a-z0-9]\022\032\n\022service_acco" +
+      "unt_id\030\007 \001(\t\022\016\n\006bucket\030\010 \001(\t\022)\n\024decommis" +
+      "sion_timeout\030\t \001(\003B\013\372\3071\0070-86400\022\020\n\010ui_pr" +
+      "oxy\030\n \001(\010\022\032\n\022security_group_ids\030\013 \003(\t\022\033\n" +
+      "\023deletion_protection\030\014 \001(\010\022\024\n\014log_group_" +
+      "id\030\r \001(\t\022&\n\036autoscaling_service_account_" +
+      "id\030\016 \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMetadata" +
+      "\022\022\n\ncluster_id\030\001 \001(\t\"c\n\024DeleteClusterReq" +
+      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022)" +
+      "\n\024decommission_timeout\030\002 \001(\003B\013\372\3071\0070-8640" +
+      "0\"+\n\025DeleteClusterMetadata\022\022\n\ncluster_id" +
+      "\030\001 \001(\t\"7\n\023StartClusterRequest\022 \n\ncluster" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterM" +
+      "etadata\022\022\n\ncluster_id\030\001 \001(\t\"a\n\022StopClust" +
+      "erRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022)\n\024decommission_timeout\030\002 \001(\003B\013\372\3071\0070" +
+      "-86400\")\n\023StopClusterMetadata\022\022\n\ncluster" +
+      "_id\030\001 \001(\t\"~\n\034ListClusterOperationsReques" +
+      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tp" +
+      "age_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token" +
+      "\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOperatio" +
+      "nsResponse\0225\n\noperations\030\001 \003(\0132!.yandex." +
+      "cloud.operation.Operation\022\027\n\017next_page_t" +
+      "oken\030\002 \001(\t\"\221\001\n\027ListClusterHostsRequest\022\034" +
+      "\n\ncluster_id\030\001 \001(\tB\010\212\3101\004<=50\022\035\n\tpage_siz" +
+      "e\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB" +
+      "\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"b" +
+      "\n\030ListClusterHostsResponse\022-\n\005hosts\030\001 \003(" +
+      "\0132\036.yandex.cloud.dataproc.v1.Host\022\027\n\017nex" +
+      "t_page_token\030\002 \001(\t\"2\n\022ListUILinksRequest" +
+      "\022\034\n\ncluster_id\030\001 \001(\tB\010\212\3101\004<=50\"#\n\006UILink" +
+      "\022\014\n\004name\030\001 \001(\t\022\013\n\003url\030\002 \001(\t\"F\n\023ListUILin" +
+      "ksResponse\022/\n\005links\030\001 \003(\0132 .yandex.cloud" +
+      ".dataproc.v1.UILink2\303\022\n\016ClusterService\022\201" +
+      "\001\n\003Get\022+.yandex.cloud.dataproc.v1.GetClu" +
+      "sterRequest\032!.yandex.cloud.dataproc.v1.C" +
+      "luster\"*\202\323\344\223\002$\022\"/dataproc/v1/clusters/{c" +
+      "luster_id}\022\204\001\n\004List\022-.yandex.cloud.datap" +
+      "roc.v1.ListClustersRequest\032..yandex.clou" +
+      "d.dataproc.v1.ListClustersResponse\"\035\202\323\344\223" +
+      "\002\027\022\025/dataproc/v1/clusters\022\241\001\n\006Create\022..y" +
+      "andex.cloud.dataproc.v1.CreateClusterReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "D\202\323\344\223\002\032\"\025/dataproc/v1/clusters:\001*\262\322* \n\025C" +
+      "reateClusterMetadata\022\007Cluster\022\256\001\n\006Update" +
+      "\022..yandex.cloud.dataproc.v1.UpdateCluste" +
+      "rRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"Q\202\323\344\223\002\'2\"/dataproc/v1/clusters/{clus" +
+      "ter_id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007C" +
+      "luster\022\271\001\n\006Delete\022..yandex.cloud.datapro" +
+      "c.v1.DeleteClusterRequest\032!.yandex.cloud" +
+      ".operation.Operation\"\\\202\323\344\223\002$*\"/dataproc/" +
+      "v1/clusters/{cluster_id}\262\322*.\n\025DeleteClus" +
+      "terMetadata\022\025google.protobuf.Empty\022\256\001\n\005S" +
+      "tart\022-.yandex.cloud.dataproc.v1.StartClu" +
+      "sterRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"S\202\323\344\223\002*\"(/dataproc/v1/clusters/{c" +
+      "luster_id}:start\262\322*\037\n\024StartClusterMetada" +
+      "ta\022\007Cluster\022\255\001\n\004Stop\022,.yandex.cloud.data" +
+      "proc.v1.StopClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"T\202\323\344\223\002,\"\'/dataproc" +
+      "/v1/clusters/{cluster_id}:stop:\001*\262\322*\036\n\023S" +
+      "topClusterMetadata\022\007Cluster\022\270\001\n\016ListOper" +
+      "ations\0226.yandex.cloud.dataproc.v1.ListCl" +
+      "usterOperationsRequest\0327.yandex.cloud.da" +
+      "taproc.v1.ListClusterOperationsResponse\"" +
+      "5\202\323\344\223\002/\022-/dataproc/v1/clusters/{cluster_" +
+      "id}/operations\022\244\001\n\tListHosts\0221.yandex.cl" +
+      "oud.dataproc.v1.ListClusterHostsRequest\032" +
+      "2.yandex.cloud.dataproc.v1.ListClusterHo" +
+      "stsResponse\"0\202\323\344\223\002*\022(/dataproc/v1/cluste" +
+      "rs/{cluster_id}/hosts\022\237\001\n\013ListUILinks\022,." +
+      "yandex.cloud.dataproc.v1.ListUILinksRequ" +
+      "est\032-.yandex.cloud.dataproc.v1.ListUILin" +
+      "ksResponse\"3\202\323\344\223\002-\022+/dataproc/v1/cluster" +
+      "s/{cluster_id}/ui_links\022\265\001\n\022ListAccessBi" +
+      "ndings\022..yandex.cloud.access.ListAccessB" +
+      "indingsRequest\032/.yandex.cloud.access.Lis" +
+      "tAccessBindingsResponse\">\202\323\344\223\0028\0226/datapr" +
+      "oc/v1/clusters/{resource_id}:listAccessB" +
+      "indings\022\364\001\n\021SetAccessBindings\022-.yandex.c" +
+      "loud.access.SetAccessBindingsRequest\032!.y" +
+      "andex.cloud.operation.Operation\"\214\001\202\323\344\223\002:" +
+      "\"5/dataproc/v1/clusters/{resource_id}:se" +
+      "tAccessBindings:\001*\262\322*H\n access.SetAccess" +
+      "BindingsMetadata\022$access.AccessBindingsO" +
+      "perationResult\022\200\002\n\024UpdateAccessBindings\022" +
+      "0.yandex.cloud.access.UpdateAccessBindin" +
+      "gsRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"\222\001\202\323\344\223\002=28/dataproc/v1/clusters/{re" +
+      "source_id}:updateAccessBindings:\001*\262\322*K\n#" +
+      "access.UpdateAccessBindingsMetadata\022$acc" +
+      "ess.AccessBindingsOperationResultBe\n\034yan" +
+      "dex.cloud.api.dataproc.v1ZEgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/data" +
+      "proc/v1;dataprocb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.dataproc.v1.ClusterOuterClass.getDescriptor(),
           yandex.cloud.api.dataproc.v1.Common.getDescriptor(),
@@ -27181,6 +27200,7 @@ public final class ClusterServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.dataproc.v1.ClusterOuterClass.getDescriptor();
     yandex.cloud.api.dataproc.v1.Common.getDescriptor();

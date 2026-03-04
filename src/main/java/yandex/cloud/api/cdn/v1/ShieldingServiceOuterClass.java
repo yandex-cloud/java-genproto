@@ -4537,6 +4537,26 @@ public final class ShieldingServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
+
+    /**
+     * <pre>
+     * ID of the resource for which to request a list of locations where shielding can be activated.
+     * </pre>
+     *
+     * <code>string resource_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
+     */
+    java.lang.String getResourceId();
+    /**
+     * <pre>
+     * ID of the resource for which to request a list of locations where shielding can be activated.
+     * </pre>
+     *
+     * <code>string resource_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
+     */
+    com.google.protobuf.ByteString
+        getResourceIdBytes();
   }
   /**
    * <pre>
@@ -4557,6 +4577,7 @@ public final class ShieldingServiceOuterClass {
     private ListShieldingLocationsRequest() {
       folderId_ = "";
       pageToken_ = "";
+      resourceId_ = "";
     }
 
     @java.lang.Override
@@ -4604,6 +4625,12 @@ public final class ShieldingServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               pageToken_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourceId_ = s;
               break;
             }
             default: {
@@ -4749,6 +4776,52 @@ public final class ShieldingServiceOuterClass {
       }
     }
 
+    public static final int RESOURCE_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object resourceId_;
+    /**
+     * <pre>
+     * ID of the resource for which to request a list of locations where shielding can be activated.
+     * </pre>
+     *
+     * <code>string resource_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the resource for which to request a list of locations where shielding can be activated.
+     * </pre>
+     *
+     * <code>string resource_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4772,6 +4845,9 @@ public final class ShieldingServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, resourceId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4790,6 +4866,9 @@ public final class ShieldingServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, resourceId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4812,6 +4891,8 @@ public final class ShieldingServiceOuterClass {
           != other.getPageSize()) return false;
       if (!getPageToken()
           .equals(other.getPageToken())) return false;
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4830,6 +4911,8 @@ public final class ShieldingServiceOuterClass {
           getPageSize());
       hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getPageToken().hashCode();
+      hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4973,6 +5056,8 @@ public final class ShieldingServiceOuterClass {
 
         pageToken_ = "";
 
+        resourceId_ = "";
+
         return this;
       }
 
@@ -5002,6 +5087,7 @@ public final class ShieldingServiceOuterClass {
         result.folderId_ = folderId_;
         result.pageSize_ = pageSize_;
         result.pageToken_ = pageToken_;
+        result.resourceId_ = resourceId_;
         onBuilt();
         return result;
       }
@@ -5059,6 +5145,10 @@ public final class ShieldingServiceOuterClass {
         }
         if (!other.getPageToken().isEmpty()) {
           pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        if (!other.getResourceId().isEmpty()) {
+          resourceId_ = other.resourceId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -5331,6 +5421,102 @@ public final class ShieldingServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         pageToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object resourceId_ = "";
+      /**
+       * <pre>
+       * ID of the resource for which to request a list of locations where shielding can be activated.
+       * </pre>
+       *
+       * <code>string resource_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The resourceId.
+       */
+      public java.lang.String getResourceId() {
+        java.lang.Object ref = resourceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the resource for which to request a list of locations where shielding can be activated.
+       * </pre>
+       *
+       * <code>string resource_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for resourceId.
+       */
+      public com.google.protobuf.ByteString
+          getResourceIdBytes() {
+        java.lang.Object ref = resourceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the resource for which to request a list of locations where shielding can be activated.
+       * </pre>
+       *
+       * <code>string resource_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the resource for which to request a list of locations where shielding can be activated.
+       * </pre>
+       *
+       * <code>string resource_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceId() {
+        
+        resourceId_ = getDefaultInstance().getResourceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the resource for which to request a list of locations where shielding can be activated.
+       * </pre>
+       *
+       * <code>string resource_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourceId_ = value;
         onChanged();
         return this;
       }
@@ -6557,33 +6743,34 @@ public final class ShieldingServiceOuterClass {
       "\"X\n\026UpdateShieldingRequest\022!\n\013resource_i" +
       "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\013location_id\030\002 \001" +
       "(\003B\006\372\3071\002>0\"<\n\027UpdateShieldingMetadata\022!\n" +
-      "\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"~\n\035List" +
-      "ShieldingLocationsRequest\022\037\n\tfolder_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
-      "\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
-      "\"}\n\036ListShieldingLocationsResponse\022B\n\023sh" +
-      "ielding_locations\030\001 \003(\0132%.yandex.cloud.c" +
-      "dn.v1.ShieldingDetails\022\027\n\017next_page_toke" +
-      "n\030\002 \001(\t2\260\005\n\020ShieldingService\022\217\001\n\010Activat" +
-      "e\022-.yandex.cloud.cdn.v1.ActivateShieldin" +
-      "gRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"1\262\322*-\n\031ActivateShieldingMetadata\022\020Sh" +
-      "ieldingDetails\022\232\001\n\nDeactivate\022/.yandex.c" +
-      "loud.cdn.v1.DeactivateShieldingRequest\032!" +
-      ".yandex.cloud.operation.Operation\"8\262\322*4\n" +
-      "\033DeactivateShieldingMetadata\022\025google.pro" +
-      "tobuf.Empty\022]\n\003Get\022/.yandex.cloud.cdn.v1" +
-      ".GetShieldingDetailsRequest\032%.yandex.clo" +
-      "ud.cdn.v1.ShieldingDetails\022\211\001\n\006Update\022+." +
-      "yandex.cloud.cdn.v1.UpdateShieldingReque" +
-      "st\032!.yandex.cloud.operation.Operation\"/\262" +
-      "\322*+\n\027UpdateShieldingMetadata\022\020ShieldingD" +
-      "etails\022\201\001\n\026ListAvailableLocations\0222.yand" +
-      "ex.cloud.cdn.v1.ListShieldingLocationsRe" +
-      "quest\0323.yandex.cloud.cdn.v1.ListShieldin" +
-      "gLocationsResponseBV\n\027yandex.cloud.api.c" +
-      "dn.v1Z;github.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/cdn/v1;cdnb\006proto3"
+      "\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\241\001\n\035Lis" +
+      "tShieldingLocationsRequest\022\037\n\tfolder_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n" +
+      "\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=10" +
+      "0\022!\n\013resource_id\030\004 \001(\tB\014\350\3071\001\212\3101\004<=50\"}\n\036" +
+      "ListShieldingLocationsResponse\022B\n\023shield" +
+      "ing_locations\030\001 \003(\0132%.yandex.cloud.cdn.v" +
+      "1.ShieldingDetails\022\027\n\017next_page_token\030\002 " +
+      "\001(\t2\260\005\n\020ShieldingService\022\217\001\n\010Activate\022-." +
+      "yandex.cloud.cdn.v1.ActivateShieldingReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "1\262\322*-\n\031ActivateShieldingMetadata\022\020Shield" +
+      "ingDetails\022\232\001\n\nDeactivate\022/.yandex.cloud" +
+      ".cdn.v1.DeactivateShieldingRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"8\262\322*4\n\033Dea" +
+      "ctivateShieldingMetadata\022\025google.protobu" +
+      "f.Empty\022]\n\003Get\022/.yandex.cloud.cdn.v1.Get" +
+      "ShieldingDetailsRequest\032%.yandex.cloud.c" +
+      "dn.v1.ShieldingDetails\022\211\001\n\006Update\022+.yand" +
+      "ex.cloud.cdn.v1.UpdateShieldingRequest\032!" +
+      ".yandex.cloud.operation.Operation\"/\262\322*+\n" +
+      "\027UpdateShieldingMetadata\022\020ShieldingDetai" +
+      "ls\022\201\001\n\026ListAvailableLocations\0222.yandex.c" +
+      "loud.cdn.v1.ListShieldingLocationsReques" +
+      "t\0323.yandex.cloud.cdn.v1.ListShieldingLoc" +
+      "ationsResponseBV\n\027yandex.cloud.api.cdn.v" +
+      "1Z;github.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/cdn/v1;cdnb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6640,7 +6827,7 @@ public final class ShieldingServiceOuterClass {
     internal_static_yandex_cloud_cdn_v1_ListShieldingLocationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cdn_v1_ListShieldingLocationsRequest_descriptor,
-        new java.lang.String[] { "FolderId", "PageSize", "PageToken", });
+        new java.lang.String[] { "FolderId", "PageSize", "PageToken", "ResourceId", });
     internal_static_yandex_cloud_cdn_v1_ListShieldingLocationsResponse_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_cdn_v1_ListShieldingLocationsResponse_fieldAccessorTable = new

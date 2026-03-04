@@ -2068,11 +2068,19 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Field name
+     * </pre>
+     *
      * <code>string name = 1;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Field name
+     * </pre>
+     *
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
@@ -2080,34 +2088,60 @@ public final class Common {
         getNameBytes();
 
     /**
+     * <pre>
+     * Field type, one of: `INT64`, `INT32`, `INT16`, `INT8`, `UINT64`, `UINT32`,
+     * `UINT16`, `UINT8`, `DOUBLE`, `BOOLEAN`, `STRING`, `UTF8`, `ANY`, `DATETIME`.    
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnType type = 2;</code>
      * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
+     * <pre>
+     * Field type, one of: `INT64`, `INT32`, `INT16`, `INT8`, `UINT64`, `UINT32`,
+     * `UINT16`, `UINT8`, `DOUBLE`, `BOOLEAN`, `STRING`, `UTF8`, `ANY`, `DATETIME`.    
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnType type = 2;</code>
      * @return The type.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnType getType();
 
     /**
+     * <pre>
+     * Mark field as Primary Key
+     * </pre>
+     *
      * <code>bool key = 3;</code>
      * @return The key.
      */
     boolean getKey();
 
     /**
+     * <pre>
+     * Mark field as required
+     * </pre>
+     *
      * <code>bool required = 4;</code>
      * @return The required.
      */
     boolean getRequired();
 
     /**
+     * <pre>
+     * Path to the field
+     * </pre>
+     *
      * <code>string path = 5;</code>
      * @return The path.
      */
     java.lang.String getPath();
     /**
+     * <pre>
+     * Path to the field
+     * </pre>
+     *
      * <code>string path = 5;</code>
      * @return The bytes for path.
      */
@@ -2225,6 +2259,10 @@ public final class Common {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Field name
+     * </pre>
+     *
      * <code>string name = 1;</code>
      * @return The name.
      */
@@ -2242,6 +2280,10 @@ public final class Common {
       }
     }
     /**
+     * <pre>
+     * Field name
+     * </pre>
+     *
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
@@ -2263,6 +2305,11 @@ public final class Common {
     public static final int TYPE_FIELD_NUMBER = 2;
     private int type_;
     /**
+     * <pre>
+     * Field type, one of: `INT64`, `INT32`, `INT16`, `INT8`, `UINT64`, `UINT32`,
+     * `UINT16`, `UINT8`, `DOUBLE`, `BOOLEAN`, `STRING`, `UTF8`, `ANY`, `DATETIME`.    
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnType type = 2;</code>
      * @return The enum numeric value on the wire for type.
      */
@@ -2270,6 +2317,11 @@ public final class Common {
       return type_;
     }
     /**
+     * <pre>
+     * Field type, one of: `INT64`, `INT32`, `INT16`, `INT8`, `UINT64`, `UINT32`,
+     * `UINT16`, `UINT8`, `DOUBLE`, `BOOLEAN`, `STRING`, `UTF8`, `ANY`, `DATETIME`.    
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnType type = 2;</code>
      * @return The type.
      */
@@ -2282,6 +2334,10 @@ public final class Common {
     public static final int KEY_FIELD_NUMBER = 3;
     private boolean key_;
     /**
+     * <pre>
+     * Mark field as Primary Key
+     * </pre>
+     *
      * <code>bool key = 3;</code>
      * @return The key.
      */
@@ -2293,6 +2349,10 @@ public final class Common {
     public static final int REQUIRED_FIELD_NUMBER = 4;
     private boolean required_;
     /**
+     * <pre>
+     * Mark field as required
+     * </pre>
+     *
      * <code>bool required = 4;</code>
      * @return The required.
      */
@@ -2304,6 +2364,10 @@ public final class Common {
     public static final int PATH_FIELD_NUMBER = 5;
     private volatile java.lang.Object path_;
     /**
+     * <pre>
+     * Path to the field
+     * </pre>
+     *
      * <code>string path = 5;</code>
      * @return The path.
      */
@@ -2321,6 +2385,10 @@ public final class Common {
       }
     }
     /**
+     * <pre>
+     * Path to the field
+     * </pre>
+     *
      * <code>string path = 5;</code>
      * @return The bytes for path.
      */
@@ -2712,6 +2780,10 @@ public final class Common {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Field name
+       * </pre>
+       *
        * <code>string name = 1;</code>
        * @return The name.
        */
@@ -2728,6 +2800,10 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * Field name
+       * </pre>
+       *
        * <code>string name = 1;</code>
        * @return The bytes for name.
        */
@@ -2745,6 +2821,10 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * Field name
+       * </pre>
+       *
        * <code>string name = 1;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -2760,6 +2840,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * Field name
+       * </pre>
+       *
        * <code>string name = 1;</code>
        * @return This builder for chaining.
        */
@@ -2770,6 +2854,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * Field name
+       * </pre>
+       *
        * <code>string name = 1;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -2788,6 +2876,11 @@ public final class Common {
 
       private int type_ = 0;
       /**
+       * <pre>
+       * Field type, one of: `INT64`, `INT32`, `INT16`, `INT8`, `UINT64`, `UINT32`,
+       * `UINT16`, `UINT8`, `DOUBLE`, `BOOLEAN`, `STRING`, `UTF8`, `ANY`, `DATETIME`.    
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnType type = 2;</code>
        * @return The enum numeric value on the wire for type.
        */
@@ -2795,6 +2888,11 @@ public final class Common {
         return type_;
       }
       /**
+       * <pre>
+       * Field type, one of: `INT64`, `INT32`, `INT16`, `INT8`, `UINT64`, `UINT32`,
+       * `UINT16`, `UINT8`, `DOUBLE`, `BOOLEAN`, `STRING`, `UTF8`, `ANY`, `DATETIME`.    
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnType type = 2;</code>
        * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
@@ -2806,6 +2904,11 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * Field type, one of: `INT64`, `INT32`, `INT16`, `INT8`, `UINT64`, `UINT32`,
+       * `UINT16`, `UINT8`, `DOUBLE`, `BOOLEAN`, `STRING`, `UTF8`, `ANY`, `DATETIME`.    
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnType type = 2;</code>
        * @return The type.
        */
@@ -2816,6 +2919,11 @@ public final class Common {
         return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Field type, one of: `INT64`, `INT32`, `INT16`, `INT8`, `UINT64`, `UINT32`,
+       * `UINT16`, `UINT8`, `DOUBLE`, `BOOLEAN`, `STRING`, `UTF8`, `ANY`, `DATETIME`.    
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnType type = 2;</code>
        * @param value The type to set.
        * @return This builder for chaining.
@@ -2830,6 +2938,11 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * Field type, one of: `INT64`, `INT32`, `INT16`, `INT8`, `UINT64`, `UINT32`,
+       * `UINT16`, `UINT8`, `DOUBLE`, `BOOLEAN`, `STRING`, `UTF8`, `ANY`, `DATETIME`.    
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnType type = 2;</code>
        * @return This builder for chaining.
        */
@@ -2842,6 +2955,10 @@ public final class Common {
 
       private boolean key_ ;
       /**
+       * <pre>
+       * Mark field as Primary Key
+       * </pre>
+       *
        * <code>bool key = 3;</code>
        * @return The key.
        */
@@ -2850,6 +2967,10 @@ public final class Common {
         return key_;
       }
       /**
+       * <pre>
+       * Mark field as Primary Key
+       * </pre>
+       *
        * <code>bool key = 3;</code>
        * @param value The key to set.
        * @return This builder for chaining.
@@ -2861,6 +2982,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * Mark field as Primary Key
+       * </pre>
+       *
        * <code>bool key = 3;</code>
        * @return This builder for chaining.
        */
@@ -2873,6 +2998,10 @@ public final class Common {
 
       private boolean required_ ;
       /**
+       * <pre>
+       * Mark field as required
+       * </pre>
+       *
        * <code>bool required = 4;</code>
        * @return The required.
        */
@@ -2881,6 +3010,10 @@ public final class Common {
         return required_;
       }
       /**
+       * <pre>
+       * Mark field as required
+       * </pre>
+       *
        * <code>bool required = 4;</code>
        * @param value The required to set.
        * @return This builder for chaining.
@@ -2892,6 +3025,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * Mark field as required
+       * </pre>
+       *
        * <code>bool required = 4;</code>
        * @return This builder for chaining.
        */
@@ -2904,6 +3041,10 @@ public final class Common {
 
       private java.lang.Object path_ = "";
       /**
+       * <pre>
+       * Path to the field
+       * </pre>
+       *
        * <code>string path = 5;</code>
        * @return The path.
        */
@@ -2920,6 +3061,10 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * Path to the field
+       * </pre>
+       *
        * <code>string path = 5;</code>
        * @return The bytes for path.
        */
@@ -2937,6 +3082,10 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * Path to the field
+       * </pre>
+       *
        * <code>string path = 5;</code>
        * @param value The path to set.
        * @return This builder for chaining.
@@ -2952,6 +3101,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * Path to the field
+       * </pre>
+       *
        * <code>string path = 5;</code>
        * @return This builder for chaining.
        */
@@ -2962,6 +3115,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * Path to the field
+       * </pre>
+       *
        * <code>string path = 5;</code>
        * @param value The bytes for path to set.
        * @return This builder for chaining.
@@ -3035,31 +3192,58 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Empty block designating that the connection is not secured, i.e. plaintext
+     * connection
+     * </pre>
+     *
      * <code>.google.protobuf.Empty disabled = 1;</code>
      * @return Whether the disabled field is set.
      */
     boolean hasDisabled();
     /**
+     * <pre>
+     * Empty block designating that the connection is not secured, i.e. plaintext
+     * connection
+     * </pre>
+     *
      * <code>.google.protobuf.Empty disabled = 1;</code>
      * @return The disabled.
      */
     com.google.protobuf.Empty getDisabled();
     /**
+     * <pre>
+     * Empty block designating that the connection is not secured, i.e. plaintext
+     * connection
+     * </pre>
+     *
      * <code>.google.protobuf.Empty disabled = 1;</code>
      */
     com.google.protobuf.EmptyOrBuilder getDisabledOrBuilder();
 
     /**
+     * <pre>
+     * TLS is used for the server connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
      * @return Whether the enabled field is set.
      */
     boolean hasEnabled();
     /**
+     * <pre>
+     * TLS is used for the server connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
      * @return The enabled.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfig getEnabled();
     /**
+     * <pre>
+     * TLS is used for the server connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfigOrBuilder getEnabledOrBuilder();
@@ -3067,6 +3251,10 @@ public final class Common {
     public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.TlsModeCase getTlsModeCase();
   }
   /**
+   * <pre>
+   * TLS configuration
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.TLSMode}
    */
   public static final class TLSMode extends
@@ -3214,6 +3402,11 @@ public final class Common {
 
     public static final int DISABLED_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Empty block designating that the connection is not secured, i.e. plaintext
+     * connection
+     * </pre>
+     *
      * <code>.google.protobuf.Empty disabled = 1;</code>
      * @return Whether the disabled field is set.
      */
@@ -3222,6 +3415,11 @@ public final class Common {
       return tlsModeCase_ == 1;
     }
     /**
+     * <pre>
+     * Empty block designating that the connection is not secured, i.e. plaintext
+     * connection
+     * </pre>
+     *
      * <code>.google.protobuf.Empty disabled = 1;</code>
      * @return The disabled.
      */
@@ -3233,6 +3431,11 @@ public final class Common {
       return com.google.protobuf.Empty.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Empty block designating that the connection is not secured, i.e. plaintext
+     * connection
+     * </pre>
+     *
      * <code>.google.protobuf.Empty disabled = 1;</code>
      */
     @java.lang.Override
@@ -3245,6 +3448,10 @@ public final class Common {
 
     public static final int ENABLED_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * TLS is used for the server connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
      * @return Whether the enabled field is set.
      */
@@ -3253,6 +3460,10 @@ public final class Common {
       return tlsModeCase_ == 2;
     }
     /**
+     * <pre>
+     * TLS is used for the server connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
      * @return The enabled.
      */
@@ -3264,6 +3475,10 @@ public final class Common {
       return yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfig.getDefaultInstance();
     }
     /**
+     * <pre>
+     * TLS is used for the server connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
      */
     @java.lang.Override
@@ -3458,6 +3673,10 @@ public final class Common {
       return builder;
     }
     /**
+     * <pre>
+     * TLS configuration
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.TLSMode}
      */
     public static final class Builder extends
@@ -3646,6 +3865,11 @@ public final class Common {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Empty, com.google.protobuf.Empty.Builder, com.google.protobuf.EmptyOrBuilder> disabledBuilder_;
       /**
+       * <pre>
+       * Empty block designating that the connection is not secured, i.e. plaintext
+       * connection
+       * </pre>
+       *
        * <code>.google.protobuf.Empty disabled = 1;</code>
        * @return Whether the disabled field is set.
        */
@@ -3654,6 +3878,11 @@ public final class Common {
         return tlsModeCase_ == 1;
       }
       /**
+       * <pre>
+       * Empty block designating that the connection is not secured, i.e. plaintext
+       * connection
+       * </pre>
+       *
        * <code>.google.protobuf.Empty disabled = 1;</code>
        * @return The disabled.
        */
@@ -3672,6 +3901,11 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * Empty block designating that the connection is not secured, i.e. plaintext
+       * connection
+       * </pre>
+       *
        * <code>.google.protobuf.Empty disabled = 1;</code>
        */
       public Builder setDisabled(com.google.protobuf.Empty value) {
@@ -3688,6 +3922,11 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * Empty block designating that the connection is not secured, i.e. plaintext
+       * connection
+       * </pre>
+       *
        * <code>.google.protobuf.Empty disabled = 1;</code>
        */
       public Builder setDisabled(
@@ -3702,6 +3941,11 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * Empty block designating that the connection is not secured, i.e. plaintext
+       * connection
+       * </pre>
+       *
        * <code>.google.protobuf.Empty disabled = 1;</code>
        */
       public Builder mergeDisabled(com.google.protobuf.Empty value) {
@@ -3724,6 +3968,11 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * Empty block designating that the connection is not secured, i.e. plaintext
+       * connection
+       * </pre>
+       *
        * <code>.google.protobuf.Empty disabled = 1;</code>
        */
       public Builder clearDisabled() {
@@ -3743,12 +3992,22 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * Empty block designating that the connection is not secured, i.e. plaintext
+       * connection
+       * </pre>
+       *
        * <code>.google.protobuf.Empty disabled = 1;</code>
        */
       public com.google.protobuf.Empty.Builder getDisabledBuilder() {
         return getDisabledFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Empty block designating that the connection is not secured, i.e. plaintext
+       * connection
+       * </pre>
+       *
        * <code>.google.protobuf.Empty disabled = 1;</code>
        */
       @java.lang.Override
@@ -3763,6 +4022,11 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * Empty block designating that the connection is not secured, i.e. plaintext
+       * connection
+       * </pre>
+       *
        * <code>.google.protobuf.Empty disabled = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3787,6 +4051,10 @@ public final class Common {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfig, yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfig.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfigOrBuilder> enabledBuilder_;
       /**
+       * <pre>
+       * TLS is used for the server connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
        * @return Whether the enabled field is set.
        */
@@ -3795,6 +4063,10 @@ public final class Common {
         return tlsModeCase_ == 2;
       }
       /**
+       * <pre>
+       * TLS is used for the server connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
        * @return The enabled.
        */
@@ -3813,6 +4085,10 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * TLS is used for the server connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
        */
       public Builder setEnabled(yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfig value) {
@@ -3829,6 +4105,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * TLS is used for the server connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
        */
       public Builder setEnabled(
@@ -3843,6 +4123,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * TLS is used for the server connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
        */
       public Builder mergeEnabled(yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfig value) {
@@ -3865,6 +4149,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * TLS is used for the server connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
        */
       public Builder clearEnabled() {
@@ -3884,12 +4172,20 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * TLS is used for the server connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSConfig.Builder getEnabledBuilder() {
         return getEnabledFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * TLS is used for the server connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
        */
       @java.lang.Override
@@ -3904,6 +4200,10 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * TLS is used for the server connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSConfig enabled = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3984,10 +4284,10 @@ public final class Common {
     /**
      * <pre>
      * CA certificate
-     * 
      * X.509 certificate of the certificate authority which issued the server's
-     * certificate, in PEM format. When CA certificate is specified TLS is used to
-     * connect to the server.
+     * certificate, in PEM format. When CA certificate is specified, TLS is used to
+     * connect to the server. If CA certificate is empty, the server's certificate must
+     * be signed by a well-known CA
      * </pre>
      *
      * <code>string ca_certificate = 1;</code>
@@ -3997,10 +4297,10 @@ public final class Common {
     /**
      * <pre>
      * CA certificate
-     * 
      * X.509 certificate of the certificate authority which issued the server's
-     * certificate, in PEM format. When CA certificate is specified TLS is used to
-     * connect to the server.
+     * certificate, in PEM format. When CA certificate is specified, TLS is used to
+     * connect to the server. If CA certificate is empty, the server's certificate must
+     * be signed by a well-known CA
      * </pre>
      *
      * <code>string ca_certificate = 1;</code>
@@ -4098,10 +4398,10 @@ public final class Common {
     /**
      * <pre>
      * CA certificate
-     * 
      * X.509 certificate of the certificate authority which issued the server's
-     * certificate, in PEM format. When CA certificate is specified TLS is used to
-     * connect to the server.
+     * certificate, in PEM format. When CA certificate is specified, TLS is used to
+     * connect to the server. If CA certificate is empty, the server's certificate must
+     * be signed by a well-known CA
      * </pre>
      *
      * <code>string ca_certificate = 1;</code>
@@ -4123,10 +4423,10 @@ public final class Common {
     /**
      * <pre>
      * CA certificate
-     * 
      * X.509 certificate of the certificate authority which issued the server's
-     * certificate, in PEM format. When CA certificate is specified TLS is used to
-     * connect to the server.
+     * certificate, in PEM format. When CA certificate is specified, TLS is used to
+     * connect to the server. If CA certificate is empty, the server's certificate must
+     * be signed by a well-known CA
      * </pre>
      *
      * <code>string ca_certificate = 1;</code>
@@ -4453,10 +4753,10 @@ public final class Common {
       /**
        * <pre>
        * CA certificate
-       * 
        * X.509 certificate of the certificate authority which issued the server's
-       * certificate, in PEM format. When CA certificate is specified TLS is used to
-       * connect to the server.
+       * certificate, in PEM format. When CA certificate is specified, TLS is used to
+       * connect to the server. If CA certificate is empty, the server's certificate must
+       * be signed by a well-known CA
        * </pre>
        *
        * <code>string ca_certificate = 1;</code>
@@ -4477,10 +4777,10 @@ public final class Common {
       /**
        * <pre>
        * CA certificate
-       * 
        * X.509 certificate of the certificate authority which issued the server's
-       * certificate, in PEM format. When CA certificate is specified TLS is used to
-       * connect to the server.
+       * certificate, in PEM format. When CA certificate is specified, TLS is used to
+       * connect to the server. If CA certificate is empty, the server's certificate must
+       * be signed by a well-known CA
        * </pre>
        *
        * <code>string ca_certificate = 1;</code>
@@ -4502,10 +4802,10 @@ public final class Common {
       /**
        * <pre>
        * CA certificate
-       * 
        * X.509 certificate of the certificate authority which issued the server's
-       * certificate, in PEM format. When CA certificate is specified TLS is used to
-       * connect to the server.
+       * certificate, in PEM format. When CA certificate is specified, TLS is used to
+       * connect to the server. If CA certificate is empty, the server's certificate must
+       * be signed by a well-known CA
        * </pre>
        *
        * <code>string ca_certificate = 1;</code>
@@ -4525,10 +4825,10 @@ public final class Common {
       /**
        * <pre>
        * CA certificate
-       * 
        * X.509 certificate of the certificate authority which issued the server's
-       * certificate, in PEM format. When CA certificate is specified TLS is used to
-       * connect to the server.
+       * certificate, in PEM format. When CA certificate is specified, TLS is used to
+       * connect to the server. If CA certificate is empty, the server's certificate must
+       * be signed by a well-known CA
        * </pre>
        *
        * <code>string ca_certificate = 1;</code>
@@ -4543,10 +4843,10 @@ public final class Common {
       /**
        * <pre>
        * CA certificate
-       * 
        * X.509 certificate of the certificate authority which issued the server's
-       * certificate, in PEM format. When CA certificate is specified TLS is used to
-       * connect to the server.
+       * certificate, in PEM format. When CA certificate is specified, TLS is used to
+       * connect to the server. If CA certificate is empty, the server's certificate must
+       * be signed by a well-known CA
        * </pre>
        *
        * <code>string ca_certificate = 1;</code>
@@ -5339,7 +5639,8 @@ public final class Common {
 
     /**
      * <pre>
-     * Buffer size for function
+     * Buffer size for function. Maximum 4 GB.  Use value with units, i.e. 10 B, 20 kB,
+     * 2.0 MB, 30 MB, 1.0 GB
      * </pre>
      *
      * <code>string buffer_size = 3;</code>
@@ -5348,7 +5649,8 @@ public final class Common {
     java.lang.String getBufferSize();
     /**
      * <pre>
-     * Buffer size for function
+     * Buffer size for function. Maximum 4 GB.  Use value with units, i.e. 10 B, 20 kB,
+     * 2.0 MB, 30 MB, 1.0 GB
      * </pre>
      *
      * <code>string buffer_size = 3;</code>
@@ -5599,7 +5901,8 @@ public final class Common {
     private volatile java.lang.Object bufferSize_;
     /**
      * <pre>
-     * Buffer size for function
+     * Buffer size for function. Maximum 4 GB.  Use value with units, i.e. 10 B, 20 kB,
+     * 2.0 MB, 30 MB, 1.0 GB
      * </pre>
      *
      * <code>string buffer_size = 3;</code>
@@ -5620,7 +5923,8 @@ public final class Common {
     }
     /**
      * <pre>
-     * Buffer size for function
+     * Buffer size for function. Maximum 4 GB.  Use value with units, i.e. 10 B, 20 kB,
+     * 2.0 MB, 30 MB, 1.0 GB
      * </pre>
      *
      * <code>string buffer_size = 3;</code>
@@ -6309,7 +6613,8 @@ public final class Common {
       private java.lang.Object bufferSize_ = "";
       /**
        * <pre>
-       * Buffer size for function
+       * Buffer size for function. Maximum 4 GB.  Use value with units, i.e. 10 B, 20 kB,
+       * 2.0 MB, 30 MB, 1.0 GB
        * </pre>
        *
        * <code>string buffer_size = 3;</code>
@@ -6329,7 +6634,8 @@ public final class Common {
       }
       /**
        * <pre>
-       * Buffer size for function
+       * Buffer size for function. Maximum 4 GB.  Use value with units, i.e. 10 B, 20 kB,
+       * 2.0 MB, 30 MB, 1.0 GB
        * </pre>
        *
        * <code>string buffer_size = 3;</code>
@@ -6350,7 +6656,8 @@ public final class Common {
       }
       /**
        * <pre>
-       * Buffer size for function
+       * Buffer size for function. Maximum 4 GB.  Use value with units, i.e. 10 B, 20 kB,
+       * 2.0 MB, 30 MB, 1.0 GB
        * </pre>
        *
        * <code>string buffer_size = 3;</code>
@@ -6369,7 +6676,8 @@ public final class Common {
       }
       /**
        * <pre>
-       * Buffer size for function
+       * Buffer size for function. Maximum 4 GB.  Use value with units, i.e. 10 B, 20 kB,
+       * 2.0 MB, 30 MB, 1.0 GB
        * </pre>
        *
        * <code>string buffer_size = 3;</code>
@@ -6383,7 +6691,8 @@ public final class Common {
       }
       /**
        * <pre>
-       * Buffer size for function
+       * Buffer size for function. Maximum 4 GB.  Use value with units, i.e. 10 B, 20 kB,
+       * 2.0 MB, 30 MB, 1.0 GB
        * </pre>
        *
        * <code>string buffer_size = 3;</code>
@@ -6748,7 +7057,7 @@ public final class Common {
 
     /**
      * <pre>
-     * Column schema
+     * Description of the column schema in the array of `fields` structure
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -6757,7 +7066,7 @@ public final class Common {
         getFieldsList();
     /**
      * <pre>
-     * Column schema
+     * Description of the column schema in the array of `fields` structure
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -6765,7 +7074,7 @@ public final class Common {
     yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema getFields(int index);
     /**
      * <pre>
-     * Column schema
+     * Description of the column schema in the array of `fields` structure
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -6773,7 +7082,7 @@ public final class Common {
     int getFieldsCount();
     /**
      * <pre>
-     * Column schema
+     * Description of the column schema in the array of `fields` structure
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -6782,7 +7091,7 @@ public final class Common {
         getFieldsOrBuilderList();
     /**
      * <pre>
-     * Column schema
+     * Description of the column schema in the array of `fields` structure
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -6885,7 +7194,7 @@ public final class Common {
     private java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Common.ColSchema> fields_;
     /**
      * <pre>
-     * Column schema
+     * Description of the column schema in the array of `fields` structure
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -6896,7 +7205,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * Column schema
+     * Description of the column schema in the array of `fields` structure
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -6908,7 +7217,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * Column schema
+     * Description of the column schema in the array of `fields` structure
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -6919,7 +7228,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * Column schema
+     * Description of the column schema in the array of `fields` structure
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -6930,7 +7239,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * Column schema
+     * Description of the column schema in the array of `fields` structure
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -7297,7 +7606,7 @@ public final class Common {
 
       /**
        * <pre>
-       * Column schema
+       * Description of the column schema in the array of `fields` structure
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -7311,7 +7620,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Column schema
+       * Description of the column schema in the array of `fields` structure
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -7325,7 +7634,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Column schema
+       * Description of the column schema in the array of `fields` structure
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -7339,7 +7648,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Column schema
+       * Description of the column schema in the array of `fields` structure
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -7360,7 +7669,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Column schema
+       * Description of the column schema in the array of `fields` structure
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -7378,7 +7687,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Column schema
+       * Description of the column schema in the array of `fields` structure
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -7398,7 +7707,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Column schema
+       * Description of the column schema in the array of `fields` structure
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -7419,7 +7728,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Column schema
+       * Description of the column schema in the array of `fields` structure
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -7437,7 +7746,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Column schema
+       * Description of the column schema in the array of `fields` structure
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -7455,7 +7764,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Column schema
+       * Description of the column schema in the array of `fields` structure
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -7474,7 +7783,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Column schema
+       * Description of the column schema in the array of `fields` structure
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -7491,7 +7800,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Column schema
+       * Description of the column schema in the array of `fields` structure
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -7508,7 +7817,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Column schema
+       * Description of the column schema in the array of `fields` structure
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -7519,7 +7828,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Column schema
+       * Description of the column schema in the array of `fields` structure
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -7533,7 +7842,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Column schema
+       * Description of the column schema in the array of `fields` structure
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -7548,7 +7857,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Column schema
+       * Description of the column schema in the array of `fields` structure
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -7559,7 +7868,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Column schema
+       * Description of the column schema in the array of `fields` structure
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -7571,7 +7880,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * Column schema
+       * Description of the column schema in the array of `fields` structure
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ColSchema fields = 2;</code>
@@ -7652,33 +7961,63 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string json_fields = 1;</code>
+     * <pre>
+     * Description of the data schema as JSON specification
+     * Deprecated: please use fields instead
+     * </pre>
+     *
+     * <code>string json_fields = 1 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the jsonFields field is set.
      */
-    boolean hasJsonFields();
+    @java.lang.Deprecated boolean hasJsonFields();
     /**
-     * <code>string json_fields = 1;</code>
+     * <pre>
+     * Description of the data schema as JSON specification
+     * Deprecated: please use fields instead
+     * </pre>
+     *
+     * <code>string json_fields = 1 [deprecated = true];</code>
+     * @deprecated
      * @return The jsonFields.
      */
-    java.lang.String getJsonFields();
+    @java.lang.Deprecated java.lang.String getJsonFields();
     /**
-     * <code>string json_fields = 1;</code>
+     * <pre>
+     * Description of the data schema as JSON specification
+     * Deprecated: please use fields instead
+     * </pre>
+     *
+     * <code>string json_fields = 1 [deprecated = true];</code>
+     * @deprecated
      * @return The bytes for jsonFields.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getJsonFieldsBytes();
 
     /**
+     * <pre>
+     * Description of the data schema in the array of `fields` structure
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
      * @return Whether the fields field is set.
      */
     boolean hasFields();
     /**
+     * <pre>
+     * Description of the data schema in the array of `fields` structure
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
      * @return The fields.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList getFields();
     /**
+     * <pre>
+     * Description of the data schema in the array of `fields` structure
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldListOrBuilder getFieldsOrBuilder();
@@ -7787,7 +8126,7 @@ public final class Common {
     public enum SchemaCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      JSON_FIELDS(1),
+      @java.lang.Deprecated JSON_FIELDS(1),
       FIELDS(2),
       SCHEMA_NOT_SET(0);
       private final int value;
@@ -7825,17 +8164,29 @@ public final class Common {
 
     public static final int JSON_FIELDS_FIELD_NUMBER = 1;
     /**
-     * <code>string json_fields = 1;</code>
+     * <pre>
+     * Description of the data schema as JSON specification
+     * Deprecated: please use fields instead
+     * </pre>
+     *
+     * <code>string json_fields = 1 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the jsonFields field is set.
      */
-    public boolean hasJsonFields() {
+    @java.lang.Deprecated public boolean hasJsonFields() {
       return schemaCase_ == 1;
     }
     /**
-     * <code>string json_fields = 1;</code>
+     * <pre>
+     * Description of the data schema as JSON specification
+     * Deprecated: please use fields instead
+     * </pre>
+     *
+     * <code>string json_fields = 1 [deprecated = true];</code>
+     * @deprecated
      * @return The jsonFields.
      */
-    public java.lang.String getJsonFields() {
+    @java.lang.Deprecated public java.lang.String getJsonFields() {
       java.lang.Object ref = "";
       if (schemaCase_ == 1) {
         ref = schema_;
@@ -7853,10 +8204,16 @@ public final class Common {
       }
     }
     /**
-     * <code>string json_fields = 1;</code>
+     * <pre>
+     * Description of the data schema as JSON specification
+     * Deprecated: please use fields instead
+     * </pre>
+     *
+     * <code>string json_fields = 1 [deprecated = true];</code>
+     * @deprecated
      * @return The bytes for jsonFields.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getJsonFieldsBytes() {
       java.lang.Object ref = "";
       if (schemaCase_ == 1) {
@@ -7877,6 +8234,10 @@ public final class Common {
 
     public static final int FIELDS_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Description of the data schema in the array of `fields` structure
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
      * @return Whether the fields field is set.
      */
@@ -7885,6 +8246,10 @@ public final class Common {
       return schemaCase_ == 2;
     }
     /**
+     * <pre>
+     * Description of the data schema in the array of `fields` structure
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
      * @return The fields.
      */
@@ -7896,6 +8261,10 @@ public final class Common {
       return yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Description of the data schema in the array of `fields` structure
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
      */
     @java.lang.Override
@@ -8273,19 +8642,31 @@ public final class Common {
 
 
       /**
-       * <code>string json_fields = 1;</code>
+       * <pre>
+       * Description of the data schema as JSON specification
+       * Deprecated: please use fields instead
+       * </pre>
+       *
+       * <code>string json_fields = 1 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the jsonFields field is set.
        */
       @java.lang.Override
-      public boolean hasJsonFields() {
+      @java.lang.Deprecated public boolean hasJsonFields() {
         return schemaCase_ == 1;
       }
       /**
-       * <code>string json_fields = 1;</code>
+       * <pre>
+       * Description of the data schema as JSON specification
+       * Deprecated: please use fields instead
+       * </pre>
+       *
+       * <code>string json_fields = 1 [deprecated = true];</code>
+       * @deprecated
        * @return The jsonFields.
        */
       @java.lang.Override
-      public java.lang.String getJsonFields() {
+      @java.lang.Deprecated public java.lang.String getJsonFields() {
         java.lang.Object ref = "";
         if (schemaCase_ == 1) {
           ref = schema_;
@@ -8303,11 +8684,17 @@ public final class Common {
         }
       }
       /**
-       * <code>string json_fields = 1;</code>
+       * <pre>
+       * Description of the data schema as JSON specification
+       * Deprecated: please use fields instead
+       * </pre>
+       *
+       * <code>string json_fields = 1 [deprecated = true];</code>
+       * @deprecated
        * @return The bytes for jsonFields.
        */
       @java.lang.Override
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getJsonFieldsBytes() {
         java.lang.Object ref = "";
         if (schemaCase_ == 1) {
@@ -8326,11 +8713,17 @@ public final class Common {
         }
       }
       /**
-       * <code>string json_fields = 1;</code>
+       * <pre>
+       * Description of the data schema as JSON specification
+       * Deprecated: please use fields instead
+       * </pre>
+       *
+       * <code>string json_fields = 1 [deprecated = true];</code>
+       * @deprecated
        * @param value The jsonFields to set.
        * @return This builder for chaining.
        */
-      public Builder setJsonFields(
+      @java.lang.Deprecated public Builder setJsonFields(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -8341,10 +8734,16 @@ public final class Common {
         return this;
       }
       /**
-       * <code>string json_fields = 1;</code>
+       * <pre>
+       * Description of the data schema as JSON specification
+       * Deprecated: please use fields instead
+       * </pre>
+       *
+       * <code>string json_fields = 1 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearJsonFields() {
+      @java.lang.Deprecated public Builder clearJsonFields() {
         if (schemaCase_ == 1) {
           schemaCase_ = 0;
           schema_ = null;
@@ -8353,11 +8752,17 @@ public final class Common {
         return this;
       }
       /**
-       * <code>string json_fields = 1;</code>
+       * <pre>
+       * Description of the data schema as JSON specification
+       * Deprecated: please use fields instead
+       * </pre>
+       *
+       * <code>string json_fields = 1 [deprecated = true];</code>
+       * @deprecated
        * @param value The bytes for jsonFields to set.
        * @return This builder for chaining.
        */
-      public Builder setJsonFieldsBytes(
+      @java.lang.Deprecated public Builder setJsonFieldsBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -8372,6 +8777,10 @@ public final class Common {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList, yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldListOrBuilder> fieldsBuilder_;
       /**
+       * <pre>
+       * Description of the data schema in the array of `fields` structure
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
        * @return Whether the fields field is set.
        */
@@ -8380,6 +8789,10 @@ public final class Common {
         return schemaCase_ == 2;
       }
       /**
+       * <pre>
+       * Description of the data schema in the array of `fields` structure
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
        * @return The fields.
        */
@@ -8398,6 +8811,10 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * Description of the data schema in the array of `fields` structure
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
        */
       public Builder setFields(yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList value) {
@@ -8414,6 +8831,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * Description of the data schema in the array of `fields` structure
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
        */
       public Builder setFields(
@@ -8428,6 +8849,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * Description of the data schema in the array of `fields` structure
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
        */
       public Builder mergeFields(yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList value) {
@@ -8450,6 +8875,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * Description of the data schema in the array of `fields` structure
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
        */
       public Builder clearFields() {
@@ -8469,12 +8898,20 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * Description of the data schema in the array of `fields` structure
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.Builder getFieldsBuilder() {
         return getFieldsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Description of the data schema in the array of `fields` structure
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
        */
       @java.lang.Override
@@ -8489,6 +8926,10 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * Description of the data schema in the array of `fields` structure
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8993,18 +9434,54 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of connection in Connection Manager with installation params and credetials
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The connectionId.
      */
     java.lang.String getConnectionId();
     /**
+     * <pre>
+     * ID of connection in Connection Manager with installation params and credetials
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The bytes for connectionId.
      */
     com.google.protobuf.ByteString
         getConnectionIdBytes();
+
+    /**
+     * <pre>
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return The subnetId.
+     */
+    java.lang.String getSubnetId();
+    /**
+     * <pre>
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return The bytes for subnetId.
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdBytes();
   }
   /**
+   * <pre>
+   * Use Connection Manager connection
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection}
    */
   public static final class ConnectionManagerConnection extends
@@ -9018,6 +9495,7 @@ public final class Common {
     }
     private ConnectionManagerConnection() {
       connectionId_ = "";
+      subnetId_ = "";
     }
 
     @java.lang.Override
@@ -9056,6 +9534,12 @@ public final class Common {
               connectionId_ = s;
               break;
             }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subnetId_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -9091,6 +9575,10 @@ public final class Common {
     public static final int CONNECTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object connectionId_;
     /**
+     * <pre>
+     * ID of connection in Connection Manager with installation params and credetials
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The connectionId.
      */
@@ -9108,6 +9596,10 @@ public final class Common {
       }
     }
     /**
+     * <pre>
+     * ID of connection in Connection Manager with installation params and credetials
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The bytes for connectionId.
      */
@@ -9120,6 +9612,56 @@ public final class Common {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         connectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBNET_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object subnetId_;
+    /**
+     * <pre>
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return The subnetId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubnetId() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subnetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return The bytes for subnetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubnetIdBytes() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subnetId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -9143,6 +9685,9 @@ public final class Common {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, connectionId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subnetId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9154,6 +9699,9 @@ public final class Common {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, connectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subnetId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9172,6 +9720,8 @@ public final class Common {
 
       if (!getConnectionId()
           .equals(other.getConnectionId())) return false;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9185,6 +9735,8 @@ public final class Common {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
       hash = (53 * hash) + getConnectionId().hashCode();
+      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubnetId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9281,6 +9833,10 @@ public final class Common {
       return builder;
     }
     /**
+     * <pre>
+     * Use Connection Manager connection
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection}
      */
     public static final class Builder extends
@@ -9320,6 +9876,8 @@ public final class Common {
         super.clear();
         connectionId_ = "";
 
+        subnetId_ = "";
+
         return this;
       }
 
@@ -9347,6 +9905,7 @@ public final class Common {
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection buildPartial() {
         yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection result = new yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection(this);
         result.connectionId_ = connectionId_;
+        result.subnetId_ = subnetId_;
         onBuilt();
         return result;
       }
@@ -9399,6 +9958,10 @@ public final class Common {
           connectionId_ = other.connectionId_;
           onChanged();
         }
+        if (!other.getSubnetId().isEmpty()) {
+          subnetId_ = other.subnetId_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -9430,6 +9993,10 @@ public final class Common {
 
       private java.lang.Object connectionId_ = "";
       /**
+       * <pre>
+       * ID of connection in Connection Manager with installation params and credetials
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return The connectionId.
        */
@@ -9446,6 +10013,10 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * ID of connection in Connection Manager with installation params and credetials
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return The bytes for connectionId.
        */
@@ -9463,6 +10034,10 @@ public final class Common {
         }
       }
       /**
+       * <pre>
+       * ID of connection in Connection Manager with installation params and credetials
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @param value The connectionId to set.
        * @return This builder for chaining.
@@ -9478,6 +10053,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * ID of connection in Connection Manager with installation params and credetials
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -9488,6 +10067,10 @@ public final class Common {
         return this;
       }
       /**
+       * <pre>
+       * ID of connection in Connection Manager with installation params and credetials
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @param value The bytes for connectionId to set.
        * @return This builder for chaining.
@@ -9500,6 +10083,112 @@ public final class Common {
   checkByteStringIsUtf8(value);
         
         connectionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subnetId_ = "";
+      /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @return The subnetId.
+       */
+      public java.lang.String getSubnetId() {
+        java.lang.Object ref = subnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @return The bytes for subnetId.
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdBytes() {
+        java.lang.Object ref = subnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubnetId() {
+        
+        subnetId_ = getDefaultInstance().getSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subnetId_ = value;
         onChanged();
         return this;
       }
@@ -9641,25 +10330,26 @@ public final class Common {
       "(\t\022\032\n\022service_account_id\030\010 \001(\tJ\004\010\006\020\010\"S\n\t" +
       "FieldList\022@\n\006fields\030\002 \003(\01320.yandex.cloud" +
       ".datatransfer.v1.endpoint.ColSchemaJ\004\010\001\020" +
-      "\002\"q\n\nDataSchema\022\025\n\013json_fields\030\001 \001(\tH\000\022B" +
-      "\n\006fields\030\002 \001(\01320.yandex.cloud.datatransf" +
-      "er.v1.endpoint.FieldListH\000B\010\n\006schema\"\010\n\006" +
-      "NoAuth\"4\n\033ConnectionManagerConnection\022\025\n" +
-      "\rconnection_id\030\001 \001(\t*h\n\023ObjectTransferSt" +
-      "age\022%\n!OBJECT_TRANSFER_STAGE_UNSPECIFIED" +
-      "\020\000\022\017\n\013BEFORE_DATA\020\001\022\016\n\nAFTER_DATA\020\002\022\t\n\005N" +
-      "EVER\020\003*U\n\rCleanupPolicy\022\036\n\032CLEANUP_POLIC" +
-      "Y_UNSPECIFIED\020\000\022\014\n\010DISABLED\020\001\022\010\n\004DROP\020\002\022" +
-      "\014\n\010TRUNCATE\020\003*\311\001\n\nColumnType\022\033\n\027COLUMN_T" +
-      "YPE_UNSPECIFIED\020\000\022\t\n\005INT32\020\001\022\t\n\005INT16\020\002\022" +
-      "\010\n\004INT8\020\003\022\n\n\006UINT64\020\004\022\n\n\006UINT32\020\005\022\n\n\006UIN" +
-      "T16\020\006\022\t\n\005UINT8\020\007\022\n\n\006DOUBLE\020\010\022\013\n\007BOOLEAN\020" +
-      "\t\022\n\n\006STRING\020\n\022\010\n\004UTF8\020\013\022\007\n\003ANY\020\014\022\014\n\010DATE" +
-      "TIME\020\r\022\t\n\005INT64\020\016B\247\001\n)yandex.cloud.api.d" +
-      "atatransfer.v1.endpointZRgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/datatr" +
-      "ansfer/v1/endpoint;endpoint\252\002%Yandex.Clo" +
-      "ud.Datatransfer.V1.EndPointb\006proto3"
+      "\002\"u\n\nDataSchema\022\031\n\013json_fields\030\001 \001(\tB\002\030\001" +
+      "H\000\022B\n\006fields\030\002 \001(\01320.yandex.cloud.datatr" +
+      "ansfer.v1.endpoint.FieldListH\000B\010\n\006schema" +
+      "\"\010\n\006NoAuth\"G\n\033ConnectionManagerConnectio" +
+      "n\022\025\n\rconnection_id\030\001 \001(\t\022\021\n\tsubnet_id\030\002 " +
+      "\001(\t*h\n\023ObjectTransferStage\022%\n!OBJECT_TRA" +
+      "NSFER_STAGE_UNSPECIFIED\020\000\022\017\n\013BEFORE_DATA" +
+      "\020\001\022\016\n\nAFTER_DATA\020\002\022\t\n\005NEVER\020\003*U\n\rCleanup" +
+      "Policy\022\036\n\032CLEANUP_POLICY_UNSPECIFIED\020\000\022\014" +
+      "\n\010DISABLED\020\001\022\010\n\004DROP\020\002\022\014\n\010TRUNCATE\020\003*\311\001\n" +
+      "\nColumnType\022\033\n\027COLUMN_TYPE_UNSPECIFIED\020\000" +
+      "\022\t\n\005INT32\020\001\022\t\n\005INT16\020\002\022\010\n\004INT8\020\003\022\n\n\006UINT" +
+      "64\020\004\022\n\n\006UINT32\020\005\022\n\n\006UINT16\020\006\022\t\n\005UINT8\020\007\022" +
+      "\n\n\006DOUBLE\020\010\022\013\n\007BOOLEAN\020\t\022\n\n\006STRING\020\n\022\010\n\004" +
+      "UTF8\020\013\022\007\n\003ANY\020\014\022\014\n\010DATETIME\020\r\022\t\n\005INT64\020\016" +
+      "B\247\001\n)yandex.cloud.api.datatransfer.v1.en" +
+      "dpointZRgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/datatransfer/v1/endpoin" +
+      "t;endpoint\252\002%Yandex.Cloud.Datatransfer.V" +
+      "1.EndPointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9731,7 +10421,7 @@ public final class Common {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ConnectionManagerConnection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_ConnectionManagerConnection_descriptor,
-        new java.lang.String[] { "ConnectionId", });
+        new java.lang.String[] { "ConnectionId", "SubnetId", });
     com.google.protobuf.EmptyProto.getDescriptor();
   }
 

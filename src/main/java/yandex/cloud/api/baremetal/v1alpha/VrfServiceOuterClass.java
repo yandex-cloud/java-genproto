@@ -3223,6 +3223,50 @@ public final class VrfServiceOuterClass {
 
     /**
      * <pre>
+     * VRF static routes.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+     */
+    java.util.List<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute> 
+        getStaticRoutesList();
+    /**
+     * <pre>
+     * VRF static routes.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+     */
+    yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute getStaticRoutes(int index);
+    /**
+     * <pre>
+     * VRF static routes.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+     */
+    int getStaticRoutesCount();
+    /**
+     * <pre>
+     * VRF static routes.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder> 
+        getStaticRoutesOrBuilderList();
+    /**
+     * <pre>
+     * VRF static routes.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+     */
+    yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder getStaticRoutesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
      * Resource labels as `key:value` pairs.
      * </pre>
      *
@@ -3291,6 +3335,7 @@ public final class VrfServiceOuterClass {
       folderId_ = "";
       name_ = "";
       description_ = "";
+      staticRoutes_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -3342,11 +3387,20 @@ public final class VrfServiceOuterClass {
               description_ = s;
               break;
             }
-            case 1602: {
+            case 34: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                staticRoutes_ = new java.util.ArrayList<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              staticRoutes_.add(
+                  input.readMessage(yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.parser(), extensionRegistry));
+              break;
+            }
+            case 1602: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000002;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -3370,6 +3424,9 @@ public final class VrfServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          staticRoutes_ = java.util.Collections.unmodifiableList(staticRoutes_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -3541,6 +3598,66 @@ public final class VrfServiceOuterClass {
       }
     }
 
+    public static final int STATIC_ROUTES_FIELD_NUMBER = 4;
+    private java.util.List<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute> staticRoutes_;
+    /**
+     * <pre>
+     * VRF static routes.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute> getStaticRoutesList() {
+      return staticRoutes_;
+    }
+    /**
+     * <pre>
+     * VRF static routes.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder> 
+        getStaticRoutesOrBuilderList() {
+      return staticRoutes_;
+    }
+    /**
+     * <pre>
+     * VRF static routes.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+     */
+    @java.lang.Override
+    public int getStaticRoutesCount() {
+      return staticRoutes_.size();
+    }
+    /**
+     * <pre>
+     * VRF static routes.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute getStaticRoutes(int index) {
+      return staticRoutes_.get(index);
+    }
+    /**
+     * <pre>
+     * VRF static routes.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder getStaticRoutesOrBuilder(
+        int index) {
+      return staticRoutes_.get(index);
+    }
+
     public static final int LABELS_FIELD_NUMBER = 200;
     private static final class LabelsDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
@@ -3661,6 +3778,9 @@ public final class VrfServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
+      for (int i = 0; i < staticRoutes_.size(); i++) {
+        output.writeMessage(4, staticRoutes_.get(i));
+      }
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
           output,
@@ -3684,6 +3804,10 @@ public final class VrfServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      for (int i = 0; i < staticRoutes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, staticRoutes_.get(i));
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
            : internalGetLabels().getMap().entrySet()) {
@@ -3716,6 +3840,8 @@ public final class VrfServiceOuterClass {
           .equals(other.getName())) return false;
       if (!getDescription()
           .equals(other.getDescription())) return false;
+      if (!getStaticRoutesList()
+          .equals(other.getStaticRoutesList())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -3735,6 +3861,10 @@ public final class VrfServiceOuterClass {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      if (getStaticRoutesCount() > 0) {
+        hash = (37 * hash) + STATIC_ROUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getStaticRoutesList().hashCode();
+      }
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
@@ -3889,6 +4019,7 @@ public final class VrfServiceOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getStaticRoutesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -3900,6 +4031,12 @@ public final class VrfServiceOuterClass {
 
         description_ = "";
 
+        if (staticRoutesBuilder_ == null) {
+          staticRoutes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          staticRoutesBuilder_.clear();
+        }
         internalGetMutableLabels().clear();
         return this;
       }
@@ -3931,6 +4068,15 @@ public final class VrfServiceOuterClass {
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.description_ = description_;
+        if (staticRoutesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            staticRoutes_ = java.util.Collections.unmodifiableList(staticRoutes_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.staticRoutes_ = staticRoutes_;
+        } else {
+          result.staticRoutes_ = staticRoutesBuilder_.build();
+        }
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         onBuilt();
@@ -3992,6 +4138,32 @@ public final class VrfServiceOuterClass {
         if (!other.getDescription().isEmpty()) {
           description_ = other.description_;
           onChanged();
+        }
+        if (staticRoutesBuilder_ == null) {
+          if (!other.staticRoutes_.isEmpty()) {
+            if (staticRoutes_.isEmpty()) {
+              staticRoutes_ = other.staticRoutes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureStaticRoutesIsMutable();
+              staticRoutes_.addAll(other.staticRoutes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.staticRoutes_.isEmpty()) {
+            if (staticRoutesBuilder_.isEmpty()) {
+              staticRoutesBuilder_.dispose();
+              staticRoutesBuilder_ = null;
+              staticRoutes_ = other.staticRoutes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              staticRoutesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getStaticRoutesFieldBuilder() : null;
+            } else {
+              staticRoutesBuilder_.addAllMessages(other.staticRoutes_);
+            }
+          }
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
@@ -4321,6 +4493,318 @@ public final class VrfServiceOuterClass {
         description_ = value;
         onChanged();
         return this;
+      }
+
+      private java.util.List<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute> staticRoutes_ =
+        java.util.Collections.emptyList();
+      private void ensureStaticRoutesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          staticRoutes_ = new java.util.ArrayList<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute>(staticRoutes_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder> staticRoutesBuilder_;
+
+      /**
+       * <pre>
+       * VRF static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute> getStaticRoutesList() {
+        if (staticRoutesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(staticRoutes_);
+        } else {
+          return staticRoutesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * VRF static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+       */
+      public int getStaticRoutesCount() {
+        if (staticRoutesBuilder_ == null) {
+          return staticRoutes_.size();
+        } else {
+          return staticRoutesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * VRF static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute getStaticRoutes(int index) {
+        if (staticRoutesBuilder_ == null) {
+          return staticRoutes_.get(index);
+        } else {
+          return staticRoutesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * VRF static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+       */
+      public Builder setStaticRoutes(
+          int index, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute value) {
+        if (staticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.set(index, value);
+          onChanged();
+        } else {
+          staticRoutesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VRF static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+       */
+      public Builder setStaticRoutes(
+          int index, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder builderForValue) {
+        if (staticRoutesBuilder_ == null) {
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          staticRoutesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VRF static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+       */
+      public Builder addStaticRoutes(yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute value) {
+        if (staticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.add(value);
+          onChanged();
+        } else {
+          staticRoutesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VRF static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+       */
+      public Builder addStaticRoutes(
+          int index, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute value) {
+        if (staticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.add(index, value);
+          onChanged();
+        } else {
+          staticRoutesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VRF static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+       */
+      public Builder addStaticRoutes(
+          yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder builderForValue) {
+        if (staticRoutesBuilder_ == null) {
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          staticRoutesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VRF static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+       */
+      public Builder addStaticRoutes(
+          int index, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder builderForValue) {
+        if (staticRoutesBuilder_ == null) {
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          staticRoutesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VRF static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+       */
+      public Builder addAllStaticRoutes(
+          java.lang.Iterable<? extends yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute> values) {
+        if (staticRoutesBuilder_ == null) {
+          ensureStaticRoutesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, staticRoutes_);
+          onChanged();
+        } else {
+          staticRoutesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VRF static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+       */
+      public Builder clearStaticRoutes() {
+        if (staticRoutesBuilder_ == null) {
+          staticRoutes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          staticRoutesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VRF static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+       */
+      public Builder removeStaticRoutes(int index) {
+        if (staticRoutesBuilder_ == null) {
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.remove(index);
+          onChanged();
+        } else {
+          staticRoutesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VRF static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder getStaticRoutesBuilder(
+          int index) {
+        return getStaticRoutesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * VRF static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder getStaticRoutesOrBuilder(
+          int index) {
+        if (staticRoutesBuilder_ == null) {
+          return staticRoutes_.get(index);  } else {
+          return staticRoutesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * VRF static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder> 
+           getStaticRoutesOrBuilderList() {
+        if (staticRoutesBuilder_ != null) {
+          return staticRoutesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(staticRoutes_);
+        }
+      }
+      /**
+       * <pre>
+       * VRF static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder addStaticRoutesBuilder() {
+        return getStaticRoutesFieldBuilder().addBuilder(
+            yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * VRF static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder addStaticRoutesBuilder(
+          int index) {
+        return getStaticRoutesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * VRF static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder> 
+           getStaticRoutesBuilderList() {
+        return getStaticRoutesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder> 
+          getStaticRoutesFieldBuilder() {
+        if (staticRoutesBuilder_ == null) {
+          staticRoutesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder>(
+                  staticRoutes_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          staticRoutes_ = null;
+        }
+        return staticRoutesBuilder_;
       }
 
       private com.google.protobuf.MapField<
@@ -5235,6 +5719,50 @@ public final class VrfServiceOuterClass {
 
     /**
      * <pre>
+     * VRF static routes.  
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+     */
+    java.util.List<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute> 
+        getStaticRoutesList();
+    /**
+     * <pre>
+     * VRF static routes.  
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+     */
+    yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute getStaticRoutes(int index);
+    /**
+     * <pre>
+     * VRF static routes.  
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+     */
+    int getStaticRoutesCount();
+    /**
+     * <pre>
+     * VRF static routes.  
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder> 
+        getStaticRoutesOrBuilderList();
+    /**
+     * <pre>
+     * VRF static routes.  
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+     */
+    yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder getStaticRoutesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
      * Resource labels as `key:value` pairs.
      * Existing set of labels is completely replaced by the provided set.
      * </pre>
@@ -5308,6 +5836,7 @@ public final class VrfServiceOuterClass {
       vrfId_ = "";
       name_ = "";
       description_ = "";
+      staticRoutes_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -5372,11 +5901,20 @@ public final class VrfServiceOuterClass {
               description_ = s;
               break;
             }
-            case 1602: {
+            case 42: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                staticRoutes_ = new java.util.ArrayList<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              staticRoutes_.add(
+                  input.readMessage(yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.parser(), extensionRegistry));
+              break;
+            }
+            case 1602: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000002;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -5400,6 +5938,9 @@ public final class VrfServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          staticRoutes_ = java.util.Collections.unmodifiableList(staticRoutes_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -5609,6 +6150,66 @@ public final class VrfServiceOuterClass {
       }
     }
 
+    public static final int STATIC_ROUTES_FIELD_NUMBER = 5;
+    private java.util.List<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute> staticRoutes_;
+    /**
+     * <pre>
+     * VRF static routes.  
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute> getStaticRoutesList() {
+      return staticRoutes_;
+    }
+    /**
+     * <pre>
+     * VRF static routes.  
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder> 
+        getStaticRoutesOrBuilderList() {
+      return staticRoutes_;
+    }
+    /**
+     * <pre>
+     * VRF static routes.  
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+     */
+    @java.lang.Override
+    public int getStaticRoutesCount() {
+      return staticRoutes_.size();
+    }
+    /**
+     * <pre>
+     * VRF static routes.  
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute getStaticRoutes(int index) {
+      return staticRoutes_.get(index);
+    }
+    /**
+     * <pre>
+     * VRF static routes.  
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder getStaticRoutesOrBuilder(
+        int index) {
+      return staticRoutes_.get(index);
+    }
+
     public static final int LABELS_FIELD_NUMBER = 200;
     private static final class LabelsDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
@@ -5736,6 +6337,9 @@ public final class VrfServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
+      for (int i = 0; i < staticRoutes_.size(); i++) {
+        output.writeMessage(5, staticRoutes_.get(i));
+      }
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
           output,
@@ -5763,6 +6367,10 @@ public final class VrfServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
+      }
+      for (int i = 0; i < staticRoutes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, staticRoutes_.get(i));
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
            : internalGetLabels().getMap().entrySet()) {
@@ -5800,6 +6408,8 @@ public final class VrfServiceOuterClass {
           .equals(other.getName())) return false;
       if (!getDescription()
           .equals(other.getDescription())) return false;
+      if (!getStaticRoutesList()
+          .equals(other.getStaticRoutesList())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -5823,6 +6433,10 @@ public final class VrfServiceOuterClass {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      if (getStaticRoutesCount() > 0) {
+        hash = (37 * hash) + STATIC_ROUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getStaticRoutesList().hashCode();
+      }
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
@@ -5977,6 +6591,7 @@ public final class VrfServiceOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getStaticRoutesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -5994,6 +6609,12 @@ public final class VrfServiceOuterClass {
 
         description_ = "";
 
+        if (staticRoutesBuilder_ == null) {
+          staticRoutes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          staticRoutesBuilder_.clear();
+        }
         internalGetMutableLabels().clear();
         return this;
       }
@@ -6030,6 +6651,15 @@ public final class VrfServiceOuterClass {
         }
         result.name_ = name_;
         result.description_ = description_;
+        if (staticRoutesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            staticRoutes_ = java.util.Collections.unmodifiableList(staticRoutes_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.staticRoutes_ = staticRoutes_;
+        } else {
+          result.staticRoutes_ = staticRoutesBuilder_.build();
+        }
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         onBuilt();
@@ -6094,6 +6724,32 @@ public final class VrfServiceOuterClass {
         if (!other.getDescription().isEmpty()) {
           description_ = other.description_;
           onChanged();
+        }
+        if (staticRoutesBuilder_ == null) {
+          if (!other.staticRoutes_.isEmpty()) {
+            if (staticRoutes_.isEmpty()) {
+              staticRoutes_ = other.staticRoutes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureStaticRoutesIsMutable();
+              staticRoutes_.addAll(other.staticRoutes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.staticRoutes_.isEmpty()) {
+            if (staticRoutesBuilder_.isEmpty()) {
+              staticRoutesBuilder_.dispose();
+              staticRoutesBuilder_ = null;
+              staticRoutes_ = other.staticRoutes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              staticRoutesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getStaticRoutesFieldBuilder() : null;
+            } else {
+              staticRoutesBuilder_.addAllMessages(other.staticRoutes_);
+            }
+          }
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
@@ -6578,6 +7234,318 @@ public final class VrfServiceOuterClass {
         description_ = value;
         onChanged();
         return this;
+      }
+
+      private java.util.List<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute> staticRoutes_ =
+        java.util.Collections.emptyList();
+      private void ensureStaticRoutesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          staticRoutes_ = new java.util.ArrayList<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute>(staticRoutes_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder> staticRoutesBuilder_;
+
+      /**
+       * <pre>
+       * VRF static routes.  
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute> getStaticRoutesList() {
+        if (staticRoutesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(staticRoutes_);
+        } else {
+          return staticRoutesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * VRF static routes.  
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+       */
+      public int getStaticRoutesCount() {
+        if (staticRoutesBuilder_ == null) {
+          return staticRoutes_.size();
+        } else {
+          return staticRoutesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * VRF static routes.  
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute getStaticRoutes(int index) {
+        if (staticRoutesBuilder_ == null) {
+          return staticRoutes_.get(index);
+        } else {
+          return staticRoutesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * VRF static routes.  
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+       */
+      public Builder setStaticRoutes(
+          int index, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute value) {
+        if (staticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.set(index, value);
+          onChanged();
+        } else {
+          staticRoutesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VRF static routes.  
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+       */
+      public Builder setStaticRoutes(
+          int index, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder builderForValue) {
+        if (staticRoutesBuilder_ == null) {
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          staticRoutesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VRF static routes.  
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+       */
+      public Builder addStaticRoutes(yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute value) {
+        if (staticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.add(value);
+          onChanged();
+        } else {
+          staticRoutesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VRF static routes.  
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+       */
+      public Builder addStaticRoutes(
+          int index, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute value) {
+        if (staticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.add(index, value);
+          onChanged();
+        } else {
+          staticRoutesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VRF static routes.  
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+       */
+      public Builder addStaticRoutes(
+          yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder builderForValue) {
+        if (staticRoutesBuilder_ == null) {
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          staticRoutesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VRF static routes.  
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+       */
+      public Builder addStaticRoutes(
+          int index, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder builderForValue) {
+        if (staticRoutesBuilder_ == null) {
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          staticRoutesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VRF static routes.  
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+       */
+      public Builder addAllStaticRoutes(
+          java.lang.Iterable<? extends yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute> values) {
+        if (staticRoutesBuilder_ == null) {
+          ensureStaticRoutesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, staticRoutes_);
+          onChanged();
+        } else {
+          staticRoutesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VRF static routes.  
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+       */
+      public Builder clearStaticRoutes() {
+        if (staticRoutesBuilder_ == null) {
+          staticRoutes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          staticRoutesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VRF static routes.  
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+       */
+      public Builder removeStaticRoutes(int index) {
+        if (staticRoutesBuilder_ == null) {
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.remove(index);
+          onChanged();
+        } else {
+          staticRoutesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VRF static routes.  
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder getStaticRoutesBuilder(
+          int index) {
+        return getStaticRoutesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * VRF static routes.  
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder getStaticRoutesOrBuilder(
+          int index) {
+        if (staticRoutesBuilder_ == null) {
+          return staticRoutes_.get(index);  } else {
+          return staticRoutesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * VRF static routes.  
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder> 
+           getStaticRoutesOrBuilderList() {
+        if (staticRoutesBuilder_ != null) {
+          return staticRoutesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(staticRoutes_);
+        }
+      }
+      /**
+       * <pre>
+       * VRF static routes.  
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder addStaticRoutesBuilder() {
+        return getStaticRoutesFieldBuilder().addBuilder(
+            yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * VRF static routes.  
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder addStaticRoutesBuilder(
+          int index) {
+        return getStaticRoutesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * VRF static routes.  
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder> 
+           getStaticRoutesBuilderList() {
+        return getStaticRoutesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder> 
+          getStaticRoutesFieldBuilder() {
+        if (staticRoutesBuilder_ == null) {
+          staticRoutesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder>(
+                  staticRoutes_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          staticRoutes_ = null;
+        }
+        return staticRoutesBuilder_;
       }
 
       private com.google.protobuf.MapField<
@@ -10736,64 +11704,67 @@ public final class VrfServiceOuterClass {
       "by\030f \001(\t\022\016\n\006filter\030g \001(\tJ\004\010\002\020d\"c\n\017ListVr" +
       "fResponse\0221\n\004vrfs\030\001 \003(\0132#.yandex.cloud.b" +
       "aremetal.v1alpha.Vrf\022\027\n\017next_page_token\030" +
-      "d \001(\tJ\004\010\002\020d\"\341\002\n\020CreateVrfRequest\022/\n\tfold" +
+      "d \001(\tJ\004\010\002\020d\"\245\003\n\020CreateVrfRequest\022/\n\tfold" +
       "er_id\030\001 \001(\tB\034\362\3071\020[a-z][a-z0-9.-]*\212\3101\004<=5" +
       "0\0224\n\004name\030\002 \001(\tB&\362\3071\032[a-z]([-a-z0-9]*[a-" +
       "z0-9])?\212\3101\0042-63\022\037\n\013description\030\003 \001(\tB\n\212\310" +
-      "1\006<=1024\022\216\001\n\006labels\030\310\001 \003(\0132<.yandex.clou" +
-      "d.baremetal.v1alpha.CreateVrfRequest.Lab" +
-      "elsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]" +
-      "*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013Lab" +
-      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "J\005\010\004\020\310\001\"#\n\021CreateVrfMetadata\022\016\n\006vrf_id\030\001" +
-      " \001(\t\"\213\003\n\020UpdateVrfRequest\022(\n\006vrf_id\030\001 \001(" +
-      "\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\022/\n\013update_ma" +
-      "sk\030\002 \001(\0132\032.google.protobuf.FieldMask\0224\n\004" +
-      "name\030\003 \001(\tB&\362\3071\032[a-z]([-a-z0-9]*[a-z0-9]" +
-      ")?\212\3101\0042-63\022\037\n\013description\030\004 \001(\tB\n\212\3101\006<=1" +
-      "024\022\216\001\n\006labels\030\310\001 \003(\0132<.yandex.cloud.bar" +
-      "emetal.v1alpha.UpdateVrfRequest.LabelsEn" +
-      "tryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006" +
-      "\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005\010\005\020" +
-      "\310\001\"#\n\021UpdateVrfMetadata\022\016\n\006vrf_id\030\001 \001(\t\"" +
-      "<\n\020DeleteVrfRequest\022(\n\006vrf_id\030\001 \001(\tB\030\362\3071" +
-      "\016[a-z][a-z0-9]*\212\3101\00220\"#\n\021DeleteVrfMetada" +
-      "ta\022\016\n\006vrf_id\030\001 \001(\t\"|\n\030ListVrfOperationsR" +
-      "equest\022(\n\006vrf_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9" +
-      "]*\212\3101\00220\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\022" +
-      "\n\npage_token\030e \001(\tJ\004\010\002\020d\"q\n\031ListVrfOpera" +
-      "tionsResponse\0225\n\noperations\030\001 \003(\0132!.yand" +
-      "ex.cloud.operation.Operation\022\027\n\017next_pag" +
-      "e_token\030d \001(\tJ\004\010\002\020d2\333\007\n\nVrfService\022\203\001\n\003G" +
-      "et\022-.yandex.cloud.baremetal.v1alpha.GetV" +
-      "rfRequest\032#.yandex.cloud.baremetal.v1alp" +
-      "ha.Vrf\"(\202\323\344\223\002\"\022 /baremetal/v1alpha/vrfs/" +
-      "{vrf_id}\022\210\001\n\004List\022..yandex.cloud.baremet" +
-      "al.v1alpha.ListVrfRequest\032/.yandex.cloud" +
-      ".baremetal.v1alpha.ListVrfResponse\"\037\202\323\344\223" +
-      "\002\031\022\027/baremetal/v1alpha/vrfs\022\235\001\n\006Create\0220" +
-      ".yandex.cloud.baremetal.v1alpha.CreateVr" +
-      "fRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\">\202\323\344\223\002\034\"\027/baremetal/v1alpha/vrfs:\001*\262" +
-      "\322*\030\n\021CreateVrfMetadata\022\003Vrf\022\246\001\n\006Update\0220" +
-      ".yandex.cloud.baremetal.v1alpha.UpdateVr" +
-      "fRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"G\202\323\344\223\002%2 /baremetal/v1alpha/vrfs/{vr" +
-      "f_id}:\001*\262\322*\030\n\021UpdateVrfMetadata\022\003Vrf\022\265\001\n" +
-      "\006Delete\0220.yandex.cloud.baremetal.v1alpha" +
-      ".DeleteVrfRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"V\202\323\344\223\002\"* /baremetal/v1alpha" +
-      "/vrfs/{vrf_id}\262\322**\n\021DeleteVrfMetadata\022\025g" +
-      "oogle.protobuf.Empty\022\272\001\n\016ListOperations\022" +
-      "8.yandex.cloud.baremetal.v1alpha.ListVrf" +
-      "OperationsRequest\0329.yandex.cloud.baremet" +
-      "al.v1alpha.ListVrfOperationsResponse\"3\202\323" +
-      "\344\223\002-\022+/baremetal/v1alpha/vrfs/{vrf_id}/o" +
-      "perationsBr\n\"yandex.cloud.api.baremetal." +
-      "v1alphaZLgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/baremetal/v1alpha;bare" +
-      "metalb\006proto3"
+      "1\006<=1024\022B\n\rstatic_routes\030\004 \003(\0132+.yandex" +
+      ".cloud.baremetal.v1alpha.StaticRoute\022\216\001\n" +
+      "\006labels\030\310\001 \003(\0132<.yandex.cloud.baremetal." +
+      "v1alpha.CreateVrfRequest.LabelsEntryB?\202\310" +
+      "1\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262" +
+      "\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005\010\005\020\310\001\"#\n\021C" +
+      "reateVrfMetadata\022\016\n\006vrf_id\030\001 \001(\t\"\317\003\n\020Upd" +
+      "ateVrfRequest\022(\n\006vrf_id\030\001 \001(\tB\030\362\3071\016[a-z]" +
+      "[a-z0-9]*\212\3101\00220\022/\n\013update_mask\030\002 \001(\0132\032.g" +
+      "oogle.protobuf.FieldMask\0224\n\004name\030\003 \001(\tB&" +
+      "\362\3071\032[a-z]([-a-z0-9]*[a-z0-9])?\212\3101\0042-63\022\037" +
+      "\n\013description\030\004 \001(\tB\n\212\3101\006<=1024\022B\n\rstati" +
+      "c_routes\030\005 \003(\0132+.yandex.cloud.baremetal." +
+      "v1alpha.StaticRoute\022\216\001\n\006labels\030\310\001 \003(\0132<." +
+      "yandex.cloud.baremetal.v1alpha.UpdateVrf" +
+      "Request.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071" +
+      "\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a" +
+      "-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001J\005\010\006\020\310\001\"#\n\021UpdateVrfMetadata\022" +
+      "\016\n\006vrf_id\030\001 \001(\t\"<\n\020DeleteVrfRequest\022(\n\006v" +
+      "rf_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\"#\n" +
+      "\021DeleteVrfMetadata\022\016\n\006vrf_id\030\001 \001(\t\"|\n\030Li" +
+      "stVrfOperationsRequest\022(\n\006vrf_id\030\001 \001(\tB\030" +
+      "\362\3071\016[a-z][a-z0-9]*\212\3101\00220\022\034\n\tpage_size\030d " +
+      "\001(\003B\t\372\3071\005<=100\022\022\n\npage_token\030e \001(\tJ\004\010\002\020d" +
+      "\"q\n\031ListVrfOperationsResponse\0225\n\noperati" +
+      "ons\030\001 \003(\0132!.yandex.cloud.operation.Opera" +
+      "tion\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d2\333\007\n\n" +
+      "VrfService\022\203\001\n\003Get\022-.yandex.cloud.bareme" +
+      "tal.v1alpha.GetVrfRequest\032#.yandex.cloud" +
+      ".baremetal.v1alpha.Vrf\"(\202\323\344\223\002\"\022 /baremet" +
+      "al/v1alpha/vrfs/{vrf_id}\022\210\001\n\004List\022..yand" +
+      "ex.cloud.baremetal.v1alpha.ListVrfReques" +
+      "t\032/.yandex.cloud.baremetal.v1alpha.ListV" +
+      "rfResponse\"\037\202\323\344\223\002\031\022\027/baremetal/v1alpha/v" +
+      "rfs\022\235\001\n\006Create\0220.yandex.cloud.baremetal." +
+      "v1alpha.CreateVrfRequest\032!.yandex.cloud." +
+      "operation.Operation\">\202\323\344\223\002\034\"\027/baremetal/" +
+      "v1alpha/vrfs:\001*\262\322*\030\n\021CreateVrfMetadata\022\003" +
+      "Vrf\022\246\001\n\006Update\0220.yandex.cloud.baremetal." +
+      "v1alpha.UpdateVrfRequest\032!.yandex.cloud." +
+      "operation.Operation\"G\202\323\344\223\002%2 /baremetal/" +
+      "v1alpha/vrfs/{vrf_id}:\001*\262\322*\030\n\021UpdateVrfM" +
+      "etadata\022\003Vrf\022\265\001\n\006Delete\0220.yandex.cloud.b" +
+      "aremetal.v1alpha.DeleteVrfRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"V\202\323\344\223\002\"* /b" +
+      "aremetal/v1alpha/vrfs/{vrf_id}\262\322**\n\021Dele" +
+      "teVrfMetadata\022\025google.protobuf.Empty\022\272\001\n" +
+      "\016ListOperations\0228.yandex.cloud.baremetal" +
+      ".v1alpha.ListVrfOperationsRequest\0329.yand" +
+      "ex.cloud.baremetal.v1alpha.ListVrfOperat" +
+      "ionsResponse\"3\202\323\344\223\002-\022+/baremetal/v1alpha" +
+      "/vrfs/{vrf_id}/operationsBr\n\"yandex.clou" +
+      "d.api.baremetal.v1alphaZLgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/bareme" +
+      "tal/v1alpha;baremetalb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10828,7 +11799,7 @@ public final class VrfServiceOuterClass {
     internal_static_yandex_cloud_baremetal_v1alpha_CreateVrfRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_baremetal_v1alpha_CreateVrfRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "StaticRoutes", "Labels", });
     internal_static_yandex_cloud_baremetal_v1alpha_CreateVrfRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_baremetal_v1alpha_CreateVrfRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_baremetal_v1alpha_CreateVrfRequest_LabelsEntry_fieldAccessorTable = new
@@ -10846,7 +11817,7 @@ public final class VrfServiceOuterClass {
     internal_static_yandex_cloud_baremetal_v1alpha_UpdateVrfRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_baremetal_v1alpha_UpdateVrfRequest_descriptor,
-        new java.lang.String[] { "VrfId", "UpdateMask", "Name", "Description", "Labels", });
+        new java.lang.String[] { "VrfId", "UpdateMask", "Name", "Description", "StaticRoutes", "Labels", });
     internal_static_yandex_cloud_baremetal_v1alpha_UpdateVrfRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_baremetal_v1alpha_UpdateVrfRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_baremetal_v1alpha_UpdateVrfRequest_LabelsEntry_fieldAccessorTable = new

@@ -153,11 +153,21 @@ public final class ImageServiceOuterClass {
         getFilterBytes();
 
     /**
+     * <pre>
+     * By which field to sort the results.
+     * You can sort by `name`, `digest`, `created_at`, `last_modified`. To sort results by multiple fields, separate the fields with commas.
+     * </pre>
+     *
      * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The orderBy.
      */
     java.lang.String getOrderBy();
     /**
+     * <pre>
+     * By which field to sort the results.
+     * You can sort by `name`, `digest`, `created_at`, `last_modified`. To sort results by multiple fields, separate the fields with commas.
+     * </pre>
+     *
      * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for orderBy.
      */
@@ -560,6 +570,11 @@ public final class ImageServiceOuterClass {
     public static final int ORDER_BY_FIELD_NUMBER = 6;
     private volatile java.lang.Object orderBy_;
     /**
+     * <pre>
+     * By which field to sort the results.
+     * You can sort by `name`, `digest`, `created_at`, `last_modified`. To sort results by multiple fields, separate the fields with commas.
+     * </pre>
+     *
      * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The orderBy.
      */
@@ -577,6 +592,11 @@ public final class ImageServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * By which field to sort the results.
+     * You can sort by `name`, `digest`, `created_at`, `last_modified`. To sort results by multiple fields, separate the fields with commas.
+     * </pre>
+     *
      * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for orderBy.
      */
@@ -1587,6 +1607,11 @@ public final class ImageServiceOuterClass {
 
       private java.lang.Object orderBy_ = "";
       /**
+       * <pre>
+       * By which field to sort the results.
+       * You can sort by `name`, `digest`, `created_at`, `last_modified`. To sort results by multiple fields, separate the fields with commas.
+       * </pre>
+       *
        * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The orderBy.
        */
@@ -1603,6 +1628,11 @@ public final class ImageServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * By which field to sort the results.
+       * You can sort by `name`, `digest`, `created_at`, `last_modified`. To sort results by multiple fields, separate the fields with commas.
+       * </pre>
+       *
        * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The bytes for orderBy.
        */
@@ -1620,6 +1650,11 @@ public final class ImageServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * By which field to sort the results.
+       * You can sort by `name`, `digest`, `created_at`, `last_modified`. To sort results by multiple fields, separate the fields with commas.
+       * </pre>
+       *
        * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The orderBy to set.
        * @return This builder for chaining.
@@ -1635,6 +1670,11 @@ public final class ImageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * By which field to sort the results.
+       * You can sort by `name`, `digest`, `created_at`, `last_modified`. To sort results by multiple fields, separate the fields with commas.
+       * </pre>
+       *
        * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
@@ -1645,6 +1685,11 @@ public final class ImageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * By which field to sort the results.
+       * You can sort by `name`, `digest`, `created_at`, `last_modified`. To sort results by multiple fields, separate the fields with commas.
+       * </pre>
+       *
        * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The bytes for orderBy to set.
        * @return This builder for chaining.

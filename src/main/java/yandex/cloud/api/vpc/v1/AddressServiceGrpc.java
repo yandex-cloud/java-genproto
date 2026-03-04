@@ -111,6 +111,37 @@ public final class AddressServiceGrpc {
     return getListMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetRequest,
+      yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetResponse> getListBySubnetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListBySubnet",
+      requestType = yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetRequest.class,
+      responseType = yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetRequest,
+      yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetResponse> getListBySubnetMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetRequest, yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetResponse> getListBySubnetMethod;
+    if ((getListBySubnetMethod = AddressServiceGrpc.getListBySubnetMethod) == null) {
+      synchronized (AddressServiceGrpc.class) {
+        if ((getListBySubnetMethod = AddressServiceGrpc.getListBySubnetMethod) == null) {
+          AddressServiceGrpc.getListBySubnetMethod = getListBySubnetMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetRequest, yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListBySubnet"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AddressServiceMethodDescriptorSupplier("ListBySubnet"))
+              .build();
+        }
+      }
+    }
+    return getListBySubnetMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.CreateAddressRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
 
@@ -351,6 +382,16 @@ public final class AddressServiceGrpc {
 
     /**
      * <pre>
+     * Retrieves the list of Address resources in the specified subnet.
+     * </pre>
+     */
+    public void listBySubnet(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListBySubnetMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates an address in the specified folder and network.
      * </pre>
      */
@@ -422,6 +463,13 @@ public final class AddressServiceGrpc {
                 yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesRequest,
                 yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesResponse>(
                   this, METHODID_LIST)))
+          .addMethod(
+            getListBySubnetMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetRequest,
+                yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetResponse>(
+                  this, METHODID_LIST_BY_SUBNET)))
           .addMethod(
             getCreateMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -511,6 +559,17 @@ public final class AddressServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of Address resources in the specified subnet.
+     * </pre>
+     */
+    public void listBySubnet(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListBySubnetMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -620,6 +679,16 @@ public final class AddressServiceGrpc {
 
     /**
      * <pre>
+     * Retrieves the list of Address resources in the specified subnet.
+     * </pre>
+     */
+    public yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetResponse listBySubnet(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListBySubnetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Creates an address in the specified folder and network.
      * </pre>
      */
@@ -723,6 +792,17 @@ public final class AddressServiceGrpc {
 
     /**
      * <pre>
+     * Retrieves the list of Address resources in the specified subnet.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetResponse> listBySubnet(
+        yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListBySubnetMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Creates an address in the specified folder and network.
      * </pre>
      */
@@ -780,11 +860,12 @@ public final class AddressServiceGrpc {
   private static final int METHODID_GET = 0;
   private static final int METHODID_GET_BY_VALUE = 1;
   private static final int METHODID_LIST = 2;
-  private static final int METHODID_CREATE = 3;
-  private static final int METHODID_UPDATE = 4;
-  private static final int METHODID_DELETE = 5;
-  private static final int METHODID_LIST_OPERATIONS = 6;
-  private static final int METHODID_MOVE = 7;
+  private static final int METHODID_LIST_BY_SUBNET = 3;
+  private static final int METHODID_CREATE = 4;
+  private static final int METHODID_UPDATE = 5;
+  private static final int METHODID_DELETE = 6;
+  private static final int METHODID_LIST_OPERATIONS = 7;
+  private static final int METHODID_MOVE = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -814,6 +895,10 @@ public final class AddressServiceGrpc {
         case METHODID_LIST:
           serviceImpl.list((yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesResponse>) responseObserver);
+          break;
+        case METHODID_LIST_BY_SUBNET:
+          serviceImpl.listBySubnet((yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesBySubnetResponse>) responseObserver);
           break;
         case METHODID_CREATE:
           serviceImpl.create((yandex.cloud.api.vpc.v1.AddressServiceOuterClass.CreateAddressRequest) request,
@@ -899,6 +984,7 @@ public final class AddressServiceGrpc {
               .addMethod(getGetMethod())
               .addMethod(getGetByValueMethod())
               .addMethod(getListMethod())
+              .addMethod(getListBySubnetMethod())
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())

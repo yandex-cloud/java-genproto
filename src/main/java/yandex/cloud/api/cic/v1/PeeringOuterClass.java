@@ -24,7 +24,7 @@ public final class PeeringOuterClass {
      * It's an ip with format ipPrefix/length where address part of ipPrefix is 0.
      * </pre>
      *
-     * <code>string peering_subnet = 1;</code>
+     * <code>string peering_subnet = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The peeringSubnet.
      */
     java.lang.String getPeeringSubnet();
@@ -34,7 +34,7 @@ public final class PeeringOuterClass {
      * It's an ip with format ipPrefix/length where address part of ipPrefix is 0.
      * </pre>
      *
-     * <code>string peering_subnet = 1;</code>
+     * <code>string peering_subnet = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for peeringSubnet.
      */
     com.google.protobuf.ByteString
@@ -46,7 +46,7 @@ public final class PeeringOuterClass {
      * It's an ip with just an ipAddress format without mask.
      * </pre>
      *
-     * <code>string peer_ip = 2;</code>
+     * <code>string peer_ip = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The peerIp.
      */
     java.lang.String getPeerIp();
@@ -56,7 +56,7 @@ public final class PeeringOuterClass {
      * It's an ip with just an ipAddress format without mask.
      * </pre>
      *
-     * <code>string peer_ip = 2;</code>
+     * <code>string peer_ip = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for peerIp.
      */
     com.google.protobuf.ByteString
@@ -68,7 +68,7 @@ public final class PeeringOuterClass {
      * It's an ip with just an ipAddress format without mask.
      * </pre>
      *
-     * <code>string cloud_ip = 3;</code>
+     * <code>string cloud_ip = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The cloudIp.
      */
     java.lang.String getCloudIp();
@@ -78,7 +78,7 @@ public final class PeeringOuterClass {
      * It's an ip with just an ipAddress format without mask.
      * </pre>
      *
-     * <code>string cloud_ip = 3;</code>
+     * <code>string cloud_ip = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for cloudIp.
      */
     com.google.protobuf.ByteString
@@ -90,7 +90,7 @@ public final class PeeringOuterClass {
      * PeerAsn excluding rfc5398 (excluding 64496 - 64511 and 65536 - 65551).
      * </pre>
      *
-     * <code>int64 peer_bgp_asn = 4;</code>
+     * <code>int64 peer_bgp_asn = 4 [(.yandex.cloud.required) = true];</code>
      * @return The peerBgpAsn.
      */
     long getPeerBgpAsn();
@@ -100,10 +100,11 @@ public final class PeeringOuterClass {
      * CloudBgpAsn.
      * </pre>
      *
-     * <code>int64 cloud_bgp_asn = 5;</code>
+     * <code>int64 cloud_bgp_asn = 5 [deprecated = true, (.yandex.cloud.required) = true];</code>
+     * @deprecated
      * @return The cloudBgpAsn.
      */
-    long getCloudBgpAsn();
+    @java.lang.Deprecated long getCloudBgpAsn();
 
     /**
      * <pre>
@@ -111,7 +112,7 @@ public final class PeeringOuterClass {
      * Optional.
      * </pre>
      *
-     * <code>string peer_bgp_md5_key = 6;</code>
+     * <code>string peer_bgp_md5_key = 6 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The peerBgpMd5Key.
      */
     java.lang.String getPeerBgpMd5Key();
@@ -121,7 +122,7 @@ public final class PeeringOuterClass {
      * Optional.
      * </pre>
      *
-     * <code>string peer_bgp_md5_key = 6;</code>
+     * <code>string peer_bgp_md5_key = 6 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for peerBgpMd5Key.
      */
     com.google.protobuf.ByteString
@@ -250,7 +251,7 @@ public final class PeeringOuterClass {
      * It's an ip with format ipPrefix/length where address part of ipPrefix is 0.
      * </pre>
      *
-     * <code>string peering_subnet = 1;</code>
+     * <code>string peering_subnet = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The peeringSubnet.
      */
     @java.lang.Override
@@ -272,7 +273,7 @@ public final class PeeringOuterClass {
      * It's an ip with format ipPrefix/length where address part of ipPrefix is 0.
      * </pre>
      *
-     * <code>string peering_subnet = 1;</code>
+     * <code>string peering_subnet = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for peeringSubnet.
      */
     @java.lang.Override
@@ -298,7 +299,7 @@ public final class PeeringOuterClass {
      * It's an ip with just an ipAddress format without mask.
      * </pre>
      *
-     * <code>string peer_ip = 2;</code>
+     * <code>string peer_ip = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The peerIp.
      */
     @java.lang.Override
@@ -320,7 +321,7 @@ public final class PeeringOuterClass {
      * It's an ip with just an ipAddress format without mask.
      * </pre>
      *
-     * <code>string peer_ip = 2;</code>
+     * <code>string peer_ip = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for peerIp.
      */
     @java.lang.Override
@@ -346,7 +347,7 @@ public final class PeeringOuterClass {
      * It's an ip with just an ipAddress format without mask.
      * </pre>
      *
-     * <code>string cloud_ip = 3;</code>
+     * <code>string cloud_ip = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The cloudIp.
      */
     @java.lang.Override
@@ -368,7 +369,7 @@ public final class PeeringOuterClass {
      * It's an ip with just an ipAddress format without mask.
      * </pre>
      *
-     * <code>string cloud_ip = 3;</code>
+     * <code>string cloud_ip = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for cloudIp.
      */
     @java.lang.Override
@@ -394,7 +395,7 @@ public final class PeeringOuterClass {
      * PeerAsn excluding rfc5398 (excluding 64496 - 64511 and 65536 - 65551).
      * </pre>
      *
-     * <code>int64 peer_bgp_asn = 4;</code>
+     * <code>int64 peer_bgp_asn = 4 [(.yandex.cloud.required) = true];</code>
      * @return The peerBgpAsn.
      */
     @java.lang.Override
@@ -409,11 +410,12 @@ public final class PeeringOuterClass {
      * CloudBgpAsn.
      * </pre>
      *
-     * <code>int64 cloud_bgp_asn = 5;</code>
+     * <code>int64 cloud_bgp_asn = 5 [deprecated = true, (.yandex.cloud.required) = true];</code>
+     * @deprecated
      * @return The cloudBgpAsn.
      */
     @java.lang.Override
-    public long getCloudBgpAsn() {
+    @java.lang.Deprecated public long getCloudBgpAsn() {
       return cloudBgpAsn_;
     }
 
@@ -425,7 +427,7 @@ public final class PeeringOuterClass {
      * Optional.
      * </pre>
      *
-     * <code>string peer_bgp_md5_key = 6;</code>
+     * <code>string peer_bgp_md5_key = 6 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The peerBgpMd5Key.
      */
     @java.lang.Override
@@ -447,7 +449,7 @@ public final class PeeringOuterClass {
      * Optional.
      * </pre>
      *
-     * <code>string peer_bgp_md5_key = 6;</code>
+     * <code>string peer_bgp_md5_key = 6 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for peerBgpMd5Key.
      */
     @java.lang.Override
@@ -861,7 +863,7 @@ public final class PeeringOuterClass {
        * It's an ip with format ipPrefix/length where address part of ipPrefix is 0.
        * </pre>
        *
-       * <code>string peering_subnet = 1;</code>
+       * <code>string peering_subnet = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The peeringSubnet.
        */
       public java.lang.String getPeeringSubnet() {
@@ -882,7 +884,7 @@ public final class PeeringOuterClass {
        * It's an ip with format ipPrefix/length where address part of ipPrefix is 0.
        * </pre>
        *
-       * <code>string peering_subnet = 1;</code>
+       * <code>string peering_subnet = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for peeringSubnet.
        */
       public com.google.protobuf.ByteString
@@ -904,7 +906,7 @@ public final class PeeringOuterClass {
        * It's an ip with format ipPrefix/length where address part of ipPrefix is 0.
        * </pre>
        *
-       * <code>string peering_subnet = 1;</code>
+       * <code>string peering_subnet = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The peeringSubnet to set.
        * @return This builder for chaining.
        */
@@ -924,7 +926,7 @@ public final class PeeringOuterClass {
        * It's an ip with format ipPrefix/length where address part of ipPrefix is 0.
        * </pre>
        *
-       * <code>string peering_subnet = 1;</code>
+       * <code>string peering_subnet = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPeeringSubnet() {
@@ -939,7 +941,7 @@ public final class PeeringOuterClass {
        * It's an ip with format ipPrefix/length where address part of ipPrefix is 0.
        * </pre>
        *
-       * <code>string peering_subnet = 1;</code>
+       * <code>string peering_subnet = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for peeringSubnet to set.
        * @return This builder for chaining.
        */
@@ -962,7 +964,7 @@ public final class PeeringOuterClass {
        * It's an ip with just an ipAddress format without mask.
        * </pre>
        *
-       * <code>string peer_ip = 2;</code>
+       * <code>string peer_ip = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The peerIp.
        */
       public java.lang.String getPeerIp() {
@@ -983,7 +985,7 @@ public final class PeeringOuterClass {
        * It's an ip with just an ipAddress format without mask.
        * </pre>
        *
-       * <code>string peer_ip = 2;</code>
+       * <code>string peer_ip = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for peerIp.
        */
       public com.google.protobuf.ByteString
@@ -1005,7 +1007,7 @@ public final class PeeringOuterClass {
        * It's an ip with just an ipAddress format without mask.
        * </pre>
        *
-       * <code>string peer_ip = 2;</code>
+       * <code>string peer_ip = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The peerIp to set.
        * @return This builder for chaining.
        */
@@ -1025,7 +1027,7 @@ public final class PeeringOuterClass {
        * It's an ip with just an ipAddress format without mask.
        * </pre>
        *
-       * <code>string peer_ip = 2;</code>
+       * <code>string peer_ip = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPeerIp() {
@@ -1040,7 +1042,7 @@ public final class PeeringOuterClass {
        * It's an ip with just an ipAddress format without mask.
        * </pre>
        *
-       * <code>string peer_ip = 2;</code>
+       * <code>string peer_ip = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for peerIp to set.
        * @return This builder for chaining.
        */
@@ -1063,7 +1065,7 @@ public final class PeeringOuterClass {
        * It's an ip with just an ipAddress format without mask.
        * </pre>
        *
-       * <code>string cloud_ip = 3;</code>
+       * <code>string cloud_ip = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The cloudIp.
        */
       public java.lang.String getCloudIp() {
@@ -1084,7 +1086,7 @@ public final class PeeringOuterClass {
        * It's an ip with just an ipAddress format without mask.
        * </pre>
        *
-       * <code>string cloud_ip = 3;</code>
+       * <code>string cloud_ip = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for cloudIp.
        */
       public com.google.protobuf.ByteString
@@ -1106,7 +1108,7 @@ public final class PeeringOuterClass {
        * It's an ip with just an ipAddress format without mask.
        * </pre>
        *
-       * <code>string cloud_ip = 3;</code>
+       * <code>string cloud_ip = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The cloudIp to set.
        * @return This builder for chaining.
        */
@@ -1126,7 +1128,7 @@ public final class PeeringOuterClass {
        * It's an ip with just an ipAddress format without mask.
        * </pre>
        *
-       * <code>string cloud_ip = 3;</code>
+       * <code>string cloud_ip = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearCloudIp() {
@@ -1141,7 +1143,7 @@ public final class PeeringOuterClass {
        * It's an ip with just an ipAddress format without mask.
        * </pre>
        *
-       * <code>string cloud_ip = 3;</code>
+       * <code>string cloud_ip = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for cloudIp to set.
        * @return This builder for chaining.
        */
@@ -1164,7 +1166,7 @@ public final class PeeringOuterClass {
        * PeerAsn excluding rfc5398 (excluding 64496 - 64511 and 65536 - 65551).
        * </pre>
        *
-       * <code>int64 peer_bgp_asn = 4;</code>
+       * <code>int64 peer_bgp_asn = 4 [(.yandex.cloud.required) = true];</code>
        * @return The peerBgpAsn.
        */
       @java.lang.Override
@@ -1177,7 +1179,7 @@ public final class PeeringOuterClass {
        * PeerAsn excluding rfc5398 (excluding 64496 - 64511 and 65536 - 65551).
        * </pre>
        *
-       * <code>int64 peer_bgp_asn = 4;</code>
+       * <code>int64 peer_bgp_asn = 4 [(.yandex.cloud.required) = true];</code>
        * @param value The peerBgpAsn to set.
        * @return This builder for chaining.
        */
@@ -1193,7 +1195,7 @@ public final class PeeringOuterClass {
        * PeerAsn excluding rfc5398 (excluding 64496 - 64511 and 65536 - 65551).
        * </pre>
        *
-       * <code>int64 peer_bgp_asn = 4;</code>
+       * <code>int64 peer_bgp_asn = 4 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearPeerBgpAsn() {
@@ -1209,11 +1211,12 @@ public final class PeeringOuterClass {
        * CloudBgpAsn.
        * </pre>
        *
-       * <code>int64 cloud_bgp_asn = 5;</code>
+       * <code>int64 cloud_bgp_asn = 5 [deprecated = true, (.yandex.cloud.required) = true];</code>
+       * @deprecated
        * @return The cloudBgpAsn.
        */
       @java.lang.Override
-      public long getCloudBgpAsn() {
+      @java.lang.Deprecated public long getCloudBgpAsn() {
         return cloudBgpAsn_;
       }
       /**
@@ -1221,11 +1224,12 @@ public final class PeeringOuterClass {
        * CloudBgpAsn.
        * </pre>
        *
-       * <code>int64 cloud_bgp_asn = 5;</code>
+       * <code>int64 cloud_bgp_asn = 5 [deprecated = true, (.yandex.cloud.required) = true];</code>
+       * @deprecated
        * @param value The cloudBgpAsn to set.
        * @return This builder for chaining.
        */
-      public Builder setCloudBgpAsn(long value) {
+      @java.lang.Deprecated public Builder setCloudBgpAsn(long value) {
         
         cloudBgpAsn_ = value;
         onChanged();
@@ -1236,10 +1240,11 @@ public final class PeeringOuterClass {
        * CloudBgpAsn.
        * </pre>
        *
-       * <code>int64 cloud_bgp_asn = 5;</code>
+       * <code>int64 cloud_bgp_asn = 5 [deprecated = true, (.yandex.cloud.required) = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearCloudBgpAsn() {
+      @java.lang.Deprecated public Builder clearCloudBgpAsn() {
         
         cloudBgpAsn_ = 0L;
         onChanged();
@@ -1253,7 +1258,7 @@ public final class PeeringOuterClass {
        * Optional.
        * </pre>
        *
-       * <code>string peer_bgp_md5_key = 6;</code>
+       * <code>string peer_bgp_md5_key = 6 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The peerBgpMd5Key.
        */
       public java.lang.String getPeerBgpMd5Key() {
@@ -1274,7 +1279,7 @@ public final class PeeringOuterClass {
        * Optional.
        * </pre>
        *
-       * <code>string peer_bgp_md5_key = 6;</code>
+       * <code>string peer_bgp_md5_key = 6 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The bytes for peerBgpMd5Key.
        */
       public com.google.protobuf.ByteString
@@ -1296,7 +1301,7 @@ public final class PeeringOuterClass {
        * Optional.
        * </pre>
        *
-       * <code>string peer_bgp_md5_key = 6;</code>
+       * <code>string peer_bgp_md5_key = 6 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The peerBgpMd5Key to set.
        * @return This builder for chaining.
        */
@@ -1316,7 +1321,7 @@ public final class PeeringOuterClass {
        * Optional.
        * </pre>
        *
-       * <code>string peer_bgp_md5_key = 6;</code>
+       * <code>string peer_bgp_md5_key = 6 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPeerBgpMd5Key() {
@@ -1331,7 +1336,7 @@ public final class PeeringOuterClass {
        * Optional.
        * </pre>
        *
-       * <code>string peer_bgp_md5_key = 6;</code>
+       * <code>string peer_bgp_md5_key = 6 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The bytes for peerBgpMd5Key to set.
        * @return This builder for chaining.
        */
@@ -1414,17 +1419,20 @@ public final class PeeringOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n!yandex/cloud/cic/v1/peering.proto\022\023yan" +
-      "dex.cloud.cic.v1\"\213\001\n\007Peering\022\026\n\016peering_" +
-      "subnet\030\001 \001(\t\022\017\n\007peer_ip\030\002 \001(\t\022\020\n\010cloud_i" +
-      "p\030\003 \001(\t\022\024\n\014peer_bgp_asn\030\004 \001(\003\022\025\n\rcloud_b" +
-      "gp_asn\030\005 \001(\003\022\030\n\020peer_bgp_md5_key\030\006 \001(\tBV" +
-      "\n\027yandex.cloud.api.cic.v1Z;github.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/cic/" +
-      "v1;cicb\006proto3"
+      "dex.cloud.cic.v1\032\035yandex/cloud/validatio" +
+      "n.proto\"\316\001\n\007Peering\022$\n\016peering_subnet\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\007peer_ip\030\002 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\022\036\n\010cloud_ip\030\003 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022\032\n\014peer_bgp_asn\030\004 \001(\003B\004\350\3071\001\022\035\n\rcloud_bg" +
+      "p_asn\030\005 \001(\003B\006\030\001\350\3071\001\022#\n\020peer_bgp_md5_key\030" +
+      "\006 \001(\tB\t\212\3101\005<=200BV\n\027yandex.cloud.api.cic" +
+      ".v1Z;github.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/cic/v1;cicb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_cic_v1_Peering_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1432,6 +1440,13 @@ public final class PeeringOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cic_v1_Peering_descriptor,
         new java.lang.String[] { "PeeringSubnet", "PeerIp", "CloudIp", "PeerBgpAsn", "CloudBgpAsn", "PeerBgpMd5Key", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.required);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

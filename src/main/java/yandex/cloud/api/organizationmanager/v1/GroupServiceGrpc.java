@@ -514,6 +514,37 @@ public final class GroupServiceGrpc {
     return getUpdateAccessBindingsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest,
+      yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse> getListEffectiveMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListEffective",
+      requestType = yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest.class,
+      responseType = yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest,
+      yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse> getListEffectiveMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse> getListEffectiveMethod;
+    if ((getListEffectiveMethod = GroupServiceGrpc.getListEffectiveMethod) == null) {
+      synchronized (GroupServiceGrpc.class) {
+        if ((getListEffectiveMethod = GroupServiceGrpc.getListEffectiveMethod) == null) {
+          GroupServiceGrpc.getListEffectiveMethod = getListEffectiveMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListEffective"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new GroupServiceMethodDescriptorSupplier("ListEffective"))
+              .build();
+        }
+      }
+    }
+    return getListEffectiveMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -726,6 +757,16 @@ public final class GroupServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Returns groups that the subject belongs to within a specific organization.
+     * </pre>
+     */
+    public void listEffective(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListEffectiveMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -840,6 +881,13 @@ public final class GroupServiceGrpc {
                 yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE_ACCESS_BINDINGS)))
+          .addMethod(
+            getListEffectiveMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest,
+                yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse>(
+                  this, METHODID_LIST_EFFECTIVE)))
           .build();
     }
   }
@@ -1037,6 +1085,17 @@ public final class GroupServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Returns groups that the subject belongs to within a specific organization.
+     * </pre>
+     */
+    public void listEffective(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListEffectiveMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1215,6 +1274,16 @@ public final class GroupServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAccessBindingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns groups that the subject belongs to within a specific organization.
+     * </pre>
+     */
+    public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse listEffective(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListEffectiveMethod(), getCallOptions(), request);
     }
   }
 
@@ -1411,6 +1480,17 @@ public final class GroupServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Returns groups that the subject belongs to within a specific organization.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse> listEffective(
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListEffectiveMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -1429,6 +1509,7 @@ public final class GroupServiceGrpc {
   private static final int METHODID_LIST_ACCESS_BINDINGS = 13;
   private static final int METHODID_SET_ACCESS_BINDINGS = 14;
   private static final int METHODID_UPDATE_ACCESS_BINDINGS = 15;
+  private static final int METHODID_LIST_EFFECTIVE = 16;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1511,6 +1592,10 @@ public final class GroupServiceGrpc {
           serviceImpl.updateAccessBindings((yandex.cloud.api.access.Access.UpdateAccessBindingsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
+        case METHODID_LIST_EFFECTIVE:
+          serviceImpl.listEffective((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -1588,6 +1673,7 @@ public final class GroupServiceGrpc {
               .addMethod(getListAccessBindingsMethod())
               .addMethod(getSetAccessBindingsMethod())
               .addMethod(getUpdateAccessBindingsMethod())
+              .addMethod(getListEffectiveMethod())
               .build();
         }
       }

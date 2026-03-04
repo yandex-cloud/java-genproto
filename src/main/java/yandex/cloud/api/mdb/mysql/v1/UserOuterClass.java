@@ -624,6 +624,27 @@ public final class UserOuterClass {
      * <code>.yandex.cloud.mdb.mysql.v1.ConnectionManager connection_manager = 7;</code>
      */
     yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionManagerOrBuilder getConnectionManagerOrBuilder();
+
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 8;</code>
+     * @return The enum numeric value on the wire for deletionProtectionMode.
+     */
+    int getDeletionProtectionModeValue();
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 8;</code>
+     * @return The deletionProtectionMode.
+     */
+    yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode getDeletionProtectionMode();
   }
   /**
    * <pre>
@@ -648,6 +669,7 @@ public final class UserOuterClass {
       permissions_ = java.util.Collections.emptyList();
       globalPermissions_ = java.util.Collections.emptyList();
       authenticationPlugin_ = 0;
+      deletionProtectionMode_ = 0;
     }
 
     @java.lang.Override
@@ -755,6 +777,12 @@ public final class UserOuterClass {
                 connectionManager_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 64: {
+              int rawValue = input.readEnum();
+
+              deletionProtectionMode_ = rawValue;
               break;
             }
             default: {
@@ -1128,6 +1156,35 @@ public final class UserOuterClass {
       return getConnectionManager();
     }
 
+    public static final int DELETION_PROTECTION_MODE_FIELD_NUMBER = 8;
+    private int deletionProtectionMode_;
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 8;</code>
+     * @return The enum numeric value on the wire for deletionProtectionMode.
+     */
+    @java.lang.Override public int getDeletionProtectionModeValue() {
+      return deletionProtectionMode_;
+    }
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 8;</code>
+     * @return The deletionProtectionMode.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode getDeletionProtectionMode() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode result = yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode.valueOf(deletionProtectionMode_);
+      return result == null ? yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1167,6 +1224,9 @@ public final class UserOuterClass {
       }
       if (connectionManager_ != null) {
         output.writeMessage(7, getConnectionManager());
+      }
+      if (deletionProtectionMode_ != yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode.DELETION_PROTECTION_MODE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(8, deletionProtectionMode_);
       }
       unknownFields.writeTo(output);
     }
@@ -1211,6 +1271,10 @@ public final class UserOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getConnectionManager());
       }
+      if (deletionProtectionMode_ != yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode.DELETION_PROTECTION_MODE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, deletionProtectionMode_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1244,6 +1308,7 @@ public final class UserOuterClass {
         if (!getConnectionManager()
             .equals(other.getConnectionManager())) return false;
       }
+      if (deletionProtectionMode_ != other.deletionProtectionMode_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1277,6 +1342,8 @@ public final class UserOuterClass {
         hash = (37 * hash) + CONNECTION_MANAGER_FIELD_NUMBER;
         hash = (53 * hash) + getConnectionManager().hashCode();
       }
+      hash = (37 * hash) + DELETION_PROTECTION_MODE_FIELD_NUMBER;
+      hash = (53 * hash) + deletionProtectionMode_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1442,6 +1509,8 @@ public final class UserOuterClass {
           connectionManager_ = null;
           connectionManagerBuilder_ = null;
         }
+        deletionProtectionMode_ = 0;
+
         return this;
       }
 
@@ -1496,6 +1565,7 @@ public final class UserOuterClass {
         } else {
           result.connectionManager_ = connectionManagerBuilder_.build();
         }
+        result.deletionProtectionMode_ = deletionProtectionMode_;
         onBuilt();
         return result;
       }
@@ -1596,6 +1666,9 @@ public final class UserOuterClass {
         }
         if (other.hasConnectionManager()) {
           mergeConnectionManager(other.getConnectionManager());
+        }
+        if (other.deletionProtectionMode_ != 0) {
+          setDeletionProtectionModeValue(other.getDeletionProtectionModeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2701,6 +2774,85 @@ public final class UserOuterClass {
           connectionManager_ = null;
         }
         return connectionManagerBuilder_;
+      }
+
+      private int deletionProtectionMode_ = 0;
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 8;</code>
+       * @return The enum numeric value on the wire for deletionProtectionMode.
+       */
+      @java.lang.Override public int getDeletionProtectionModeValue() {
+        return deletionProtectionMode_;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 8;</code>
+       * @param value The enum numeric value on the wire for deletionProtectionMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeletionProtectionModeValue(int value) {
+        
+        deletionProtectionMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 8;</code>
+       * @return The deletionProtectionMode.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode getDeletionProtectionMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode result = yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode.valueOf(deletionProtectionMode_);
+        return result == null ? yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 8;</code>
+       * @param value The deletionProtectionMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeletionProtectionMode(yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        deletionProtectionMode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeletionProtectionMode() {
+        
+        deletionProtectionMode_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6487,6 +6639,27 @@ public final class UserOuterClass {
      * <code>.google.protobuf.BoolValue generate_password = 7;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getGeneratePasswordOrBuilder();
+
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 8;</code>
+     * @return The enum numeric value on the wire for deletionProtectionMode.
+     */
+    int getDeletionProtectionModeValue();
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 8;</code>
+     * @return The deletionProtectionMode.
+     */
+    yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode getDeletionProtectionMode();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.UserSpec}
@@ -6506,6 +6679,7 @@ public final class UserOuterClass {
       permissions_ = java.util.Collections.emptyList();
       globalPermissions_ = java.util.Collections.emptyList();
       authenticationPlugin_ = 0;
+      deletionProtectionMode_ = 0;
     }
 
     @java.lang.Override
@@ -6613,6 +6787,12 @@ public final class UserOuterClass {
                 generatePassword_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 64: {
+              int rawValue = input.readEnum();
+
+              deletionProtectionMode_ = rawValue;
               break;
             }
             default: {
@@ -6996,6 +7176,35 @@ public final class UserOuterClass {
       return getGeneratePassword();
     }
 
+    public static final int DELETION_PROTECTION_MODE_FIELD_NUMBER = 8;
+    private int deletionProtectionMode_;
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 8;</code>
+     * @return The enum numeric value on the wire for deletionProtectionMode.
+     */
+    @java.lang.Override public int getDeletionProtectionModeValue() {
+      return deletionProtectionMode_;
+    }
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 8;</code>
+     * @return The deletionProtectionMode.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode getDeletionProtectionMode() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode result = yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode.valueOf(deletionProtectionMode_);
+      return result == null ? yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7035,6 +7244,9 @@ public final class UserOuterClass {
       }
       if (generatePassword_ != null) {
         output.writeMessage(7, getGeneratePassword());
+      }
+      if (deletionProtectionMode_ != yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode.DELETION_PROTECTION_MODE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(8, deletionProtectionMode_);
       }
       unknownFields.writeTo(output);
     }
@@ -7079,6 +7291,10 @@ public final class UserOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getGeneratePassword());
       }
+      if (deletionProtectionMode_ != yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode.DELETION_PROTECTION_MODE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, deletionProtectionMode_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7112,6 +7328,7 @@ public final class UserOuterClass {
         if (!getGeneratePassword()
             .equals(other.getGeneratePassword())) return false;
       }
+      if (deletionProtectionMode_ != other.deletionProtectionMode_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7145,6 +7362,8 @@ public final class UserOuterClass {
         hash = (37 * hash) + GENERATE_PASSWORD_FIELD_NUMBER;
         hash = (53 * hash) + getGeneratePassword().hashCode();
       }
+      hash = (37 * hash) + DELETION_PROTECTION_MODE_FIELD_NUMBER;
+      hash = (53 * hash) + deletionProtectionMode_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7305,6 +7524,8 @@ public final class UserOuterClass {
           generatePassword_ = null;
           generatePasswordBuilder_ = null;
         }
+        deletionProtectionMode_ = 0;
+
         return this;
       }
 
@@ -7359,6 +7580,7 @@ public final class UserOuterClass {
         } else {
           result.generatePassword_ = generatePasswordBuilder_.build();
         }
+        result.deletionProtectionMode_ = deletionProtectionMode_;
         onBuilt();
         return result;
       }
@@ -7459,6 +7681,9 @@ public final class UserOuterClass {
         }
         if (other.hasGeneratePassword()) {
           mergeGeneratePassword(other.getGeneratePassword());
+        }
+        if (other.deletionProtectionMode_ != 0) {
+          setDeletionProtectionModeValue(other.getDeletionProtectionModeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8601,6 +8826,85 @@ public final class UserOuterClass {
         }
         return generatePasswordBuilder_;
       }
+
+      private int deletionProtectionMode_ = 0;
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 8;</code>
+       * @return The enum numeric value on the wire for deletionProtectionMode.
+       */
+      @java.lang.Override public int getDeletionProtectionModeValue() {
+        return deletionProtectionMode_;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 8;</code>
+       * @param value The enum numeric value on the wire for deletionProtectionMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeletionProtectionModeValue(int value) {
+        
+        deletionProtectionMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 8;</code>
+       * @return The deletionProtectionMode.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode getDeletionProtectionMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode result = yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode.valueOf(deletionProtectionMode_);
+        return result == null ? yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 8;</code>
+       * @param value The deletionProtectionMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeletionProtectionMode(yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        deletionProtectionMode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeletionProtectionMode() {
+        
+        deletionProtectionMode_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8691,71 +8995,77 @@ public final class UserOuterClass {
       "\n$yandex/cloud/mdb/mysql/v1/user.proto\022\031" +
       "yandex.cloud.mdb.mysql.v1\032\036google/protob" +
       "uf/wrappers.proto\032\035yandex/cloud/validati" +
-      "on.proto\"\205\003\n\004User\022\014\n\004name\030\001 \001(\t\022\022\n\nclust" +
-      "er_id\030\002 \001(\t\022:\n\013permissions\030\003 \003(\0132%.yande" +
-      "x.cloud.mdb.mysql.v1.Permission\022G\n\022globa" +
-      "l_permissions\030\004 \003(\0162+.yandex.cloud.mdb.m" +
-      "ysql.v1.GlobalPermission\022F\n\021connection_l" +
-      "imits\030\005 \001(\0132+.yandex.cloud.mdb.mysql.v1." +
-      "ConnectionLimits\022D\n\025authentication_plugi" +
-      "n\030\006 \001(\0162%.yandex.cloud.mdb.mysql.v1.Auth" +
-      "Plugin\022H\n\022connection_manager\030\007 \001(\0132,.yan" +
-      "dex.cloud.mdb.mysql.v1.ConnectionManager" +
-      "\"\257\003\n\nPermission\022\025\n\rdatabase_name\030\001 \001(\t\022G" +
-      "\n\005roles\030\002 \003(\0162/.yandex.cloud.mdb.mysql.v" +
-      "1.Permission.PrivilegeB\007\202\3101\003>=1\"\300\002\n\tPriv" +
-      "ilege\022\031\n\025PRIVILEGE_UNSPECIFIED\020\000\022\022\n\016ALL_" +
-      "PRIVILEGES\020\001\022\t\n\005ALTER\020\002\022\021\n\rALTER_ROUTINE" +
-      "\020\003\022\n\n\006CREATE\020\004\022\022\n\016CREATE_ROUTINE\020\005\022\033\n\027CR" +
-      "EATE_TEMPORARY_TABLES\020\006\022\017\n\013CREATE_VIEW\020\007" +
-      "\022\n\n\006DELETE\020\010\022\010\n\004DROP\020\t\022\t\n\005EVENT\020\n\022\013\n\007EXE" +
-      "CUTE\020\013\022\t\n\005INDEX\020\014\022\n\n\006INSERT\020\r\022\017\n\013LOCK_TA" +
-      "BLES\020\016\022\n\n\006SELECT\020\017\022\r\n\tSHOW_VIEW\020\020\022\013\n\007TRI" +
-      "GGER\020\021\022\n\n\006UPDATE\020\022\022\016\n\nREFERENCES\020\023\"\250\002\n\020C" +
-      "onnectionLimits\022D\n\026max_questions_per_hou" +
-      "r\030\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
-      "1\003>=0\022B\n\024max_updates_per_hour\030\002 \001(\0132\033.go" +
-      "ogle.protobuf.Int64ValueB\007\372\3071\003>=0\022F\n\030max" +
-      "_connections_per_hour\030\003 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\007\372\3071\003>=0\022B\n\024max_user_co" +
-      "nnections\030\004 \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\007\372\3071\003>=0\"*\n\021ConnectionManager\022\025\n\rco" +
-      "nnection_id\030\001 \001(\t\"\243\003\n\010UserSpec\022,\n\004name\030\001" +
-      " \001(\tB\036\350\3071\001\212\3101\004<=32\362\3071\016[a-zA-Z0-9_-]*\022\037\n\010" +
-      "password\030\002 \001(\tB\r\350\3071\001\212\3101\0058-128\022:\n\013permiss" +
-      "ions\030\003 \003(\0132%.yandex.cloud.mdb.mysql.v1.P" +
-      "ermission\022G\n\022global_permissions\030\004 \003(\0162+." +
-      "yandex.cloud.mdb.mysql.v1.GlobalPermissi" +
-      "on\022F\n\021connection_limits\030\005 \001(\0132+.yandex.c" +
-      "loud.mdb.mysql.v1.ConnectionLimits\022D\n\025au" +
-      "thentication_plugin\030\006 \001(\0162%.yandex.cloud" +
-      ".mdb.mysql.v1.AuthPlugin\0225\n\021generate_pas" +
-      "sword\030\007 \001(\0132\032.google.protobuf.BoolValue*" +
-      "\255\001\n\020GlobalPermission\022!\n\035GLOBAL_PERMISSIO" +
-      "N_UNSPECIFIED\020\000\022\026\n\022REPLICATION_CLIENT\020\001\022" +
-      "\025\n\021REPLICATION_SLAVE\020\002\022\013\n\007PROCESS\020\003\022\031\n\025F" +
-      "LUSH_OPTIMIZER_COSTS\020\004\022\020\n\014SHOW_ROUTINE\020\005" +
-      "\022\r\n\tMDB_ADMIN\020\006*\237\001\n\nAuthPlugin\022\033\n\027AUTH_P" +
-      "LUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NATIVE_PASS" +
-      "WORD\020\001\022\031\n\025CACHING_SHA2_PASSWORD\020\002\022\023\n\017SHA" +
-      "256_PASSWORD\020\003\022\022\n\016MYSQL_NO_LOGIN\020\004\022\025\n\021MD" +
-      "B_IAMPROXY_AUTH\020\005Bd\n\035yandex.cloud.api.md" +
-      "b.mysql.v1ZCgithub.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/mdb/mysql/v1;mysqlb" +
-      "\006proto3"
+      "on.proto\0323yandex/cloud/mdb/mysql/v1/dele" +
+      "tion_protection.proto\"\332\003\n\004User\022\014\n\004name\030\001" +
+      " \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022:\n\013permissions\030" +
+      "\003 \003(\0132%.yandex.cloud.mdb.mysql.v1.Permis" +
+      "sion\022G\n\022global_permissions\030\004 \003(\0162+.yande" +
+      "x.cloud.mdb.mysql.v1.GlobalPermission\022F\n" +
+      "\021connection_limits\030\005 \001(\0132+.yandex.cloud." +
+      "mdb.mysql.v1.ConnectionLimits\022D\n\025authent" +
+      "ication_plugin\030\006 \001(\0162%.yandex.cloud.mdb." +
+      "mysql.v1.AuthPlugin\022H\n\022connection_manage" +
+      "r\030\007 \001(\0132,.yandex.cloud.mdb.mysql.v1.Conn" +
+      "ectionManager\022S\n\030deletion_protection_mod" +
+      "e\030\010 \001(\01621.yandex.cloud.mdb.mysql.v1.Dele" +
+      "tionProtectionMode\"\257\003\n\nPermission\022\025\n\rdat" +
+      "abase_name\030\001 \001(\t\022G\n\005roles\030\002 \003(\0162/.yandex" +
+      ".cloud.mdb.mysql.v1.Permission.Privilege" +
+      "B\007\202\3101\003>=1\"\300\002\n\tPrivilege\022\031\n\025PRIVILEGE_UNS" +
+      "PECIFIED\020\000\022\022\n\016ALL_PRIVILEGES\020\001\022\t\n\005ALTER\020" +
+      "\002\022\021\n\rALTER_ROUTINE\020\003\022\n\n\006CREATE\020\004\022\022\n\016CREA" +
+      "TE_ROUTINE\020\005\022\033\n\027CREATE_TEMPORARY_TABLES\020" +
+      "\006\022\017\n\013CREATE_VIEW\020\007\022\n\n\006DELETE\020\010\022\010\n\004DROP\020\t" +
+      "\022\t\n\005EVENT\020\n\022\013\n\007EXECUTE\020\013\022\t\n\005INDEX\020\014\022\n\n\006I" +
+      "NSERT\020\r\022\017\n\013LOCK_TABLES\020\016\022\n\n\006SELECT\020\017\022\r\n\t" +
+      "SHOW_VIEW\020\020\022\013\n\007TRIGGER\020\021\022\n\n\006UPDATE\020\022\022\016\n\n" +
+      "REFERENCES\020\023\"\250\002\n\020ConnectionLimits\022D\n\026max" +
+      "_questions_per_hour\030\001 \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\007\372\3071\003>=0\022B\n\024max_updates_p" +
+      "er_hour\030\002 \001(\0132\033.google.protobuf.Int64Val" +
+      "ueB\007\372\3071\003>=0\022F\n\030max_connections_per_hour\030" +
+      "\003 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003" +
+      ">=0\022B\n\024max_user_connections\030\004 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\007\372\3071\003>=0\"*\n\021Conne" +
+      "ctionManager\022\025\n\rconnection_id\030\001 \001(\t\"\370\003\n\010" +
+      "UserSpec\022,\n\004name\030\001 \001(\tB\036\350\3071\001\212\3101\004<=32\362\3071\016" +
+      "[a-zA-Z0-9_-]*\022\037\n\010password\030\002 \001(\tB\r\350\3071\001\212\310" +
+      "1\0058-128\022:\n\013permissions\030\003 \003(\0132%.yandex.cl" +
+      "oud.mdb.mysql.v1.Permission\022G\n\022global_pe" +
+      "rmissions\030\004 \003(\0162+.yandex.cloud.mdb.mysql" +
+      ".v1.GlobalPermission\022F\n\021connection_limit" +
+      "s\030\005 \001(\0132+.yandex.cloud.mdb.mysql.v1.Conn" +
+      "ectionLimits\022D\n\025authentication_plugin\030\006 " +
+      "\001(\0162%.yandex.cloud.mdb.mysql.v1.AuthPlug" +
+      "in\0225\n\021generate_password\030\007 \001(\0132\032.google.p" +
+      "rotobuf.BoolValue\022S\n\030deletion_protection" +
+      "_mode\030\010 \001(\01621.yandex.cloud.mdb.mysql.v1." +
+      "DeletionProtectionMode*\255\001\n\020GlobalPermiss" +
+      "ion\022!\n\035GLOBAL_PERMISSION_UNSPECIFIED\020\000\022\026" +
+      "\n\022REPLICATION_CLIENT\020\001\022\025\n\021REPLICATION_SL" +
+      "AVE\020\002\022\013\n\007PROCESS\020\003\022\031\n\025FLUSH_OPTIMIZER_CO" +
+      "STS\020\004\022\020\n\014SHOW_ROUTINE\020\005\022\r\n\tMDB_ADMIN\020\006*\237" +
+      "\001\n\nAuthPlugin\022\033\n\027AUTH_PLUGIN_UNSPECIFIED" +
+      "\020\000\022\031\n\025MYSQL_NATIVE_PASSWORD\020\001\022\031\n\025CACHING" +
+      "_SHA2_PASSWORD\020\002\022\023\n\017SHA256_PASSWORD\020\003\022\022\n" +
+      "\016MYSQL_NO_LOGIN\020\004\022\025\n\021MDB_IAMPROXY_AUTH\020\005" +
+      "Bd\n\035yandex.cloud.api.mdb.mysql.v1ZCgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/mdb/mysql/v1;mysqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
+          yandex.cloud.api.mdb.mysql.v1.DeletionProtection.getDescriptor(),
         });
     internal_static_yandex_cloud_mdb_mysql_v1_User_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_mysql_v1_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_User_descriptor,
-        new java.lang.String[] { "Name", "ClusterId", "Permissions", "GlobalPermissions", "ConnectionLimits", "AuthenticationPlugin", "ConnectionManager", });
+        new java.lang.String[] { "Name", "ClusterId", "Permissions", "GlobalPermissions", "ConnectionLimits", "AuthenticationPlugin", "ConnectionManager", "DeletionProtectionMode", });
     internal_static_yandex_cloud_mdb_mysql_v1_Permission_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_mysql_v1_Permission_fieldAccessorTable = new
@@ -8779,7 +9089,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_mysql_v1_UserSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_UserSpec_descriptor,
-        new java.lang.String[] { "Name", "Password", "Permissions", "GlobalPermissions", "ConnectionLimits", "AuthenticationPlugin", "GeneratePassword", });
+        new java.lang.String[] { "Name", "Password", "Permissions", "GlobalPermissions", "ConnectionLimits", "AuthenticationPlugin", "GeneratePassword", "DeletionProtectionMode", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);
@@ -8791,6 +9101,7 @@ public final class UserOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
+    yandex.cloud.api.mdb.mysql.v1.DeletionProtection.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

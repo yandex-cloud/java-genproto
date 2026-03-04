@@ -211,6 +211,73 @@ public final class BackupOuterClass {
      * @return The status.
      */
     yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupStatus getStatus();
+
+    /**
+     * <pre>
+     * ID of assigned BackupRetentionPolicy.
+     * </pre>
+     *
+     * <code>string retention_policy_id = 11;</code>
+     * @return The retentionPolicyId.
+     */
+    java.lang.String getRetentionPolicyId();
+    /**
+     * <pre>
+     * ID of assigned BackupRetentionPolicy.
+     * </pre>
+     *
+     * <code>string retention_policy_id = 11;</code>
+     * @return The bytes for retentionPolicyId.
+     */
+    com.google.protobuf.ByteString
+        getRetentionPolicyIdBytes();
+
+    /**
+     * <pre>
+     * Name of assigned BackupRetentionPolicy.
+     * </pre>
+     *
+     * <code>string retention_policy_name = 12;</code>
+     * @return The retentionPolicyName.
+     */
+    java.lang.String getRetentionPolicyName();
+    /**
+     * <pre>
+     * Name of assigned BackupRetentionPolicy.
+     * </pre>
+     *
+     * <code>string retention_policy_name = 12;</code>
+     * @return The bytes for retentionPolicyName.
+     */
+    com.google.protobuf.ByteString
+        getRetentionPolicyNameBytes();
+
+    /**
+     * <pre>
+     * Expiration timestamp of the backup set by the BackupRetentionPolicy.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp retain_until = 13;</code>
+     * @return Whether the retainUntil field is set.
+     */
+    boolean hasRetainUntil();
+    /**
+     * <pre>
+     * Expiration timestamp of the backup set by the BackupRetentionPolicy.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp retain_until = 13;</code>
+     * @return The retainUntil.
+     */
+    com.google.protobuf.Timestamp getRetainUntil();
+    /**
+     * <pre>
+     * Expiration timestamp of the backup set by the BackupRetentionPolicy.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp retain_until = 13;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getRetainUntilOrBuilder();
   }
   /**
    * <pre>
@@ -236,6 +303,8 @@ public final class BackupOuterClass {
       type_ = 0;
       method_ = 0;
       status_ = 0;
+      retentionPolicyId_ = "";
+      retentionPolicyName_ = "";
     }
 
     @java.lang.Override
@@ -338,6 +407,31 @@ public final class BackupOuterClass {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              retentionPolicyId_ = s;
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              retentionPolicyName_ = s;
+              break;
+            }
+            case 106: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (retainUntil_ != null) {
+                subBuilder = retainUntil_.toBuilder();
+              }
+              retainUntil_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(retainUntil_);
+                retainUntil_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1099,6 +1193,136 @@ public final class BackupOuterClass {
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupStatus.UNRECOGNIZED : result;
     }
 
+    public static final int RETENTION_POLICY_ID_FIELD_NUMBER = 11;
+    private volatile java.lang.Object retentionPolicyId_;
+    /**
+     * <pre>
+     * ID of assigned BackupRetentionPolicy.
+     * </pre>
+     *
+     * <code>string retention_policy_id = 11;</code>
+     * @return The retentionPolicyId.
+     */
+    @java.lang.Override
+    public java.lang.String getRetentionPolicyId() {
+      java.lang.Object ref = retentionPolicyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        retentionPolicyId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of assigned BackupRetentionPolicy.
+     * </pre>
+     *
+     * <code>string retention_policy_id = 11;</code>
+     * @return The bytes for retentionPolicyId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRetentionPolicyIdBytes() {
+      java.lang.Object ref = retentionPolicyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        retentionPolicyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RETENTION_POLICY_NAME_FIELD_NUMBER = 12;
+    private volatile java.lang.Object retentionPolicyName_;
+    /**
+     * <pre>
+     * Name of assigned BackupRetentionPolicy.
+     * </pre>
+     *
+     * <code>string retention_policy_name = 12;</code>
+     * @return The retentionPolicyName.
+     */
+    @java.lang.Override
+    public java.lang.String getRetentionPolicyName() {
+      java.lang.Object ref = retentionPolicyName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        retentionPolicyName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of assigned BackupRetentionPolicy.
+     * </pre>
+     *
+     * <code>string retention_policy_name = 12;</code>
+     * @return The bytes for retentionPolicyName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRetentionPolicyNameBytes() {
+      java.lang.Object ref = retentionPolicyName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        retentionPolicyName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RETAIN_UNTIL_FIELD_NUMBER = 13;
+    private com.google.protobuf.Timestamp retainUntil_;
+    /**
+     * <pre>
+     * Expiration timestamp of the backup set by the BackupRetentionPolicy.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp retain_until = 13;</code>
+     * @return Whether the retainUntil field is set.
+     */
+    @java.lang.Override
+    public boolean hasRetainUntil() {
+      return retainUntil_ != null;
+    }
+    /**
+     * <pre>
+     * Expiration timestamp of the backup set by the BackupRetentionPolicy.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp retain_until = 13;</code>
+     * @return The retainUntil.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getRetainUntil() {
+      return retainUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : retainUntil_;
+    }
+    /**
+     * <pre>
+     * Expiration timestamp of the backup set by the BackupRetentionPolicy.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp retain_until = 13;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getRetainUntilOrBuilder() {
+      return getRetainUntil();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1142,6 +1366,15 @@ public final class BackupOuterClass {
       }
       if (status_ != yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupStatus.BACKUP_STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(10, status_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(retentionPolicyId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, retentionPolicyId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(retentionPolicyName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, retentionPolicyName_);
+      }
+      if (retainUntil_ != null) {
+        output.writeMessage(13, getRetainUntil());
       }
       unknownFields.writeTo(output);
     }
@@ -1189,6 +1422,16 @@ public final class BackupOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(10, status_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(retentionPolicyId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, retentionPolicyId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(retentionPolicyName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, retentionPolicyName_);
+      }
+      if (retainUntil_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getRetainUntil());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1227,6 +1470,15 @@ public final class BackupOuterClass {
       if (getJournalSize()
           != other.getJournalSize()) return false;
       if (status_ != other.status_) return false;
+      if (!getRetentionPolicyId()
+          .equals(other.getRetentionPolicyId())) return false;
+      if (!getRetentionPolicyName()
+          .equals(other.getRetentionPolicyName())) return false;
+      if (hasRetainUntil() != other.hasRetainUntil()) return false;
+      if (hasRetainUntil()) {
+        if (!getRetainUntil()
+            .equals(other.getRetainUntil())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1264,6 +1516,14 @@ public final class BackupOuterClass {
           getJournalSize());
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      hash = (37 * hash) + RETENTION_POLICY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRetentionPolicyId().hashCode();
+      hash = (37 * hash) + RETENTION_POLICY_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getRetentionPolicyName().hashCode();
+      if (hasRetainUntil()) {
+        hash = (37 * hash) + RETAIN_UNTIL_FIELD_NUMBER;
+        hash = (53 * hash) + getRetainUntil().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1430,6 +1690,16 @@ public final class BackupOuterClass {
 
         status_ = 0;
 
+        retentionPolicyId_ = "";
+
+        retentionPolicyName_ = "";
+
+        if (retainUntilBuilder_ == null) {
+          retainUntil_ = null;
+        } else {
+          retainUntil_ = null;
+          retainUntilBuilder_ = null;
+        }
         return this;
       }
 
@@ -1474,6 +1744,13 @@ public final class BackupOuterClass {
         result.method_ = method_;
         result.journalSize_ = journalSize_;
         result.status_ = status_;
+        result.retentionPolicyId_ = retentionPolicyId_;
+        result.retentionPolicyName_ = retentionPolicyName_;
+        if (retainUntilBuilder_ == null) {
+          result.retainUntil_ = retainUntil_;
+        } else {
+          result.retainUntil_ = retainUntilBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1554,6 +1831,17 @@ public final class BackupOuterClass {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (!other.getRetentionPolicyId().isEmpty()) {
+          retentionPolicyId_ = other.retentionPolicyId_;
+          onChanged();
+        }
+        if (!other.getRetentionPolicyName().isEmpty()) {
+          retentionPolicyName_ = other.retentionPolicyName_;
+          onChanged();
+        }
+        if (other.hasRetainUntil()) {
+          mergeRetainUntil(other.getRetainUntil());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2498,6 +2786,353 @@ public final class BackupOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object retentionPolicyId_ = "";
+      /**
+       * <pre>
+       * ID of assigned BackupRetentionPolicy.
+       * </pre>
+       *
+       * <code>string retention_policy_id = 11;</code>
+       * @return The retentionPolicyId.
+       */
+      public java.lang.String getRetentionPolicyId() {
+        java.lang.Object ref = retentionPolicyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          retentionPolicyId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of assigned BackupRetentionPolicy.
+       * </pre>
+       *
+       * <code>string retention_policy_id = 11;</code>
+       * @return The bytes for retentionPolicyId.
+       */
+      public com.google.protobuf.ByteString
+          getRetentionPolicyIdBytes() {
+        java.lang.Object ref = retentionPolicyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          retentionPolicyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of assigned BackupRetentionPolicy.
+       * </pre>
+       *
+       * <code>string retention_policy_id = 11;</code>
+       * @param value The retentionPolicyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetentionPolicyId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        retentionPolicyId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of assigned BackupRetentionPolicy.
+       * </pre>
+       *
+       * <code>string retention_policy_id = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetentionPolicyId() {
+        
+        retentionPolicyId_ = getDefaultInstance().getRetentionPolicyId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of assigned BackupRetentionPolicy.
+       * </pre>
+       *
+       * <code>string retention_policy_id = 11;</code>
+       * @param value The bytes for retentionPolicyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetentionPolicyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        retentionPolicyId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object retentionPolicyName_ = "";
+      /**
+       * <pre>
+       * Name of assigned BackupRetentionPolicy.
+       * </pre>
+       *
+       * <code>string retention_policy_name = 12;</code>
+       * @return The retentionPolicyName.
+       */
+      public java.lang.String getRetentionPolicyName() {
+        java.lang.Object ref = retentionPolicyName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          retentionPolicyName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of assigned BackupRetentionPolicy.
+       * </pre>
+       *
+       * <code>string retention_policy_name = 12;</code>
+       * @return The bytes for retentionPolicyName.
+       */
+      public com.google.protobuf.ByteString
+          getRetentionPolicyNameBytes() {
+        java.lang.Object ref = retentionPolicyName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          retentionPolicyName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of assigned BackupRetentionPolicy.
+       * </pre>
+       *
+       * <code>string retention_policy_name = 12;</code>
+       * @param value The retentionPolicyName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetentionPolicyName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        retentionPolicyName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of assigned BackupRetentionPolicy.
+       * </pre>
+       *
+       * <code>string retention_policy_name = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetentionPolicyName() {
+        
+        retentionPolicyName_ = getDefaultInstance().getRetentionPolicyName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of assigned BackupRetentionPolicy.
+       * </pre>
+       *
+       * <code>string retention_policy_name = 12;</code>
+       * @param value The bytes for retentionPolicyName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetentionPolicyNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        retentionPolicyName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp retainUntil_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> retainUntilBuilder_;
+      /**
+       * <pre>
+       * Expiration timestamp of the backup set by the BackupRetentionPolicy.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp retain_until = 13;</code>
+       * @return Whether the retainUntil field is set.
+       */
+      public boolean hasRetainUntil() {
+        return retainUntilBuilder_ != null || retainUntil_ != null;
+      }
+      /**
+       * <pre>
+       * Expiration timestamp of the backup set by the BackupRetentionPolicy.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp retain_until = 13;</code>
+       * @return The retainUntil.
+       */
+      public com.google.protobuf.Timestamp getRetainUntil() {
+        if (retainUntilBuilder_ == null) {
+          return retainUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : retainUntil_;
+        } else {
+          return retainUntilBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Expiration timestamp of the backup set by the BackupRetentionPolicy.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp retain_until = 13;</code>
+       */
+      public Builder setRetainUntil(com.google.protobuf.Timestamp value) {
+        if (retainUntilBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          retainUntil_ = value;
+          onChanged();
+        } else {
+          retainUntilBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Expiration timestamp of the backup set by the BackupRetentionPolicy.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp retain_until = 13;</code>
+       */
+      public Builder setRetainUntil(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (retainUntilBuilder_ == null) {
+          retainUntil_ = builderForValue.build();
+          onChanged();
+        } else {
+          retainUntilBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Expiration timestamp of the backup set by the BackupRetentionPolicy.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp retain_until = 13;</code>
+       */
+      public Builder mergeRetainUntil(com.google.protobuf.Timestamp value) {
+        if (retainUntilBuilder_ == null) {
+          if (retainUntil_ != null) {
+            retainUntil_ =
+              com.google.protobuf.Timestamp.newBuilder(retainUntil_).mergeFrom(value).buildPartial();
+          } else {
+            retainUntil_ = value;
+          }
+          onChanged();
+        } else {
+          retainUntilBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Expiration timestamp of the backup set by the BackupRetentionPolicy.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp retain_until = 13;</code>
+       */
+      public Builder clearRetainUntil() {
+        if (retainUntilBuilder_ == null) {
+          retainUntil_ = null;
+          onChanged();
+        } else {
+          retainUntil_ = null;
+          retainUntilBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Expiration timestamp of the backup set by the BackupRetentionPolicy.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp retain_until = 13;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getRetainUntilBuilder() {
+        
+        onChanged();
+        return getRetainUntilFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Expiration timestamp of the backup set by the BackupRetentionPolicy.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp retain_until = 13;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getRetainUntilOrBuilder() {
+        if (retainUntilBuilder_ != null) {
+          return retainUntilBuilder_.getMessageOrBuilder();
+        } else {
+          return retainUntil_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : retainUntil_;
+        }
+      }
+      /**
+       * <pre>
+       * Expiration timestamp of the backup set by the BackupRetentionPolicy.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp retain_until = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getRetainUntilFieldBuilder() {
+        if (retainUntilBuilder_ == null) {
+          retainUntilBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getRetainUntil(),
+                  getParentForChildren(),
+                  isClean());
+          retainUntil_ = null;
+        }
+        return retainUntilBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2567,7 +3202,7 @@ public final class BackupOuterClass {
     java.lang.String[] descriptorData = {
       "\n+yandex/cloud/mdb/postgresql/v1/backup." +
       "proto\022\036yandex.cloud.mdb.postgresql.v1\032\037g" +
-      "oogle/protobuf/timestamp.proto\"\201\005\n\006Backu" +
+      "oogle/protobuf/timestamp.proto\"\357\005\n\006Backu" +
       "p\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncrea" +
       "ted_at\030\003 \001(\0132\032.google.protobuf.Timestamp" +
       "\022\031\n\021source_cluster_id\030\004 \001(\t\022.\n\nstarted_a" +
@@ -2578,15 +3213,18 @@ public final class BackupOuterClass {
       "stgresql.v1.Backup.BackupMethod\022\024\n\014journ" +
       "al_size\030\t \001(\003\022C\n\006status\030\n \001(\01623.yandex.c" +
       "loud.mdb.postgresql.v1.Backup.BackupStat" +
-      "us\"H\n\014BackupMethod\022\035\n\031BACKUP_METHOD_UNSP" +
-      "ECIFIED\020\000\022\010\n\004BASE\020\001\022\017\n\013INCREMENTAL\020\002\"U\n\022" +
-      "BackupCreationType\022$\n BACKUP_CREATION_TY" +
-      "PE_UNSPECIFIED\020\000\022\r\n\tAUTOMATED\020\001\022\n\n\006MANUA" +
-      "L\020\002\"E\n\014BackupStatus\022\035\n\031BACKUP_STATUS_UNS" +
-      "PECIFIED\020\000\022\010\n\004DONE\020\001\022\014\n\010CREATING\020\002Bs\n\"ya" +
-      "ndex.cloud.api.mdb.postgresql.v1ZMgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/mdb/postgresql/v1;postgresqlb\006proto3"
+      "us\022\033\n\023retention_policy_id\030\013 \001(\t\022\035\n\025reten" +
+      "tion_policy_name\030\014 \001(\t\0220\n\014retain_until\030\r" +
+      " \001(\0132\032.google.protobuf.Timestamp\"H\n\014Back" +
+      "upMethod\022\035\n\031BACKUP_METHOD_UNSPECIFIED\020\000\022" +
+      "\010\n\004BASE\020\001\022\017\n\013INCREMENTAL\020\002\"U\n\022BackupCrea" +
+      "tionType\022$\n BACKUP_CREATION_TYPE_UNSPECI" +
+      "FIED\020\000\022\r\n\tAUTOMATED\020\001\022\n\n\006MANUAL\020\002\"E\n\014Bac" +
+      "kupStatus\022\035\n\031BACKUP_STATUS_UNSPECIFIED\020\000" +
+      "\022\010\n\004DONE\020\001\022\014\n\010CREATING\020\002Bs\n\"yandex.cloud" +
+      ".api.mdb.postgresql.v1ZMgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/mdb/pos" +
+      "tgresql/v1;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2598,7 +3236,7 @@ public final class BackupOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_Backup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_Backup_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "SourceClusterId", "StartedAt", "Size", "Type", "Method", "JournalSize", "Status", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "SourceClusterId", "StartedAt", "Size", "Type", "Method", "JournalSize", "Status", "RetentionPolicyId", "RetentionPolicyName", "RetainUntil", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

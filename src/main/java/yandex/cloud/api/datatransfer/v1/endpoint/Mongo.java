@@ -19,23 +19,39 @@ public final class Mongo {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Host names of the replica set
+     * </pre>
+     *
      * <code>repeated string hosts = 1;</code>
      * @return A list containing the hosts.
      */
     java.util.List<java.lang.String>
         getHostsList();
     /**
+     * <pre>
+     * Host names of the replica set
+     * </pre>
+     *
      * <code>repeated string hosts = 1;</code>
      * @return The count of hosts.
      */
     int getHostsCount();
     /**
+     * <pre>
+     * Host names of the replica set
+     * </pre>
+     *
      * <code>repeated string hosts = 1;</code>
      * @param index The index of the element to return.
      * @return The hosts at the given index.
      */
     java.lang.String getHosts(int index);
     /**
+     * <pre>
+     * Host names of the replica set
+     * </pre>
+     *
      * <code>repeated string hosts = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the hosts at the given index.
@@ -44,17 +60,29 @@ public final class Mongo {
         getHostsBytes(int index);
 
     /**
+     * <pre>
+     * TCP Port number
+     * </pre>
+     *
      * <code>int64 port = 2;</code>
      * @return The port.
      */
     long getPort();
 
     /**
+     * <pre>
+     * Replica set name
+     * </pre>
+     *
      * <code>string replica_set = 5;</code>
      * @return The replicaSet.
      */
     java.lang.String getReplicaSet();
     /**
+     * <pre>
+     * Replica set name
+     * </pre>
+     *
      * <code>string replica_set = 5;</code>
      * @return The bytes for replicaSet.
      */
@@ -62,16 +90,28 @@ public final class Mongo {
         getReplicaSetBytes();
 
     /**
+     * <pre>
+     * TLS settings for the server connection. Empty implies plaintext connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
      * @return Whether the tlsMode field is set.
      */
     boolean hasTlsMode();
     /**
+     * <pre>
+     * TLS settings for the server connection. Empty implies plaintext connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
      * @return The tlsMode.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode getTlsMode();
     /**
+     * <pre>
+     * TLS settings for the server connection. Empty implies plaintext connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder getTlsModeOrBuilder();
@@ -195,6 +235,10 @@ public final class Mongo {
     public static final int HOSTS_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList hosts_;
     /**
+     * <pre>
+     * Host names of the replica set
+     * </pre>
+     *
      * <code>repeated string hosts = 1;</code>
      * @return A list containing the hosts.
      */
@@ -203,6 +247,10 @@ public final class Mongo {
       return hosts_;
     }
     /**
+     * <pre>
+     * Host names of the replica set
+     * </pre>
+     *
      * <code>repeated string hosts = 1;</code>
      * @return The count of hosts.
      */
@@ -210,6 +258,10 @@ public final class Mongo {
       return hosts_.size();
     }
     /**
+     * <pre>
+     * Host names of the replica set
+     * </pre>
+     *
      * <code>repeated string hosts = 1;</code>
      * @param index The index of the element to return.
      * @return The hosts at the given index.
@@ -218,6 +270,10 @@ public final class Mongo {
       return hosts_.get(index);
     }
     /**
+     * <pre>
+     * Host names of the replica set
+     * </pre>
+     *
      * <code>repeated string hosts = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the hosts at the given index.
@@ -230,6 +286,10 @@ public final class Mongo {
     public static final int PORT_FIELD_NUMBER = 2;
     private long port_;
     /**
+     * <pre>
+     * TCP Port number
+     * </pre>
+     *
      * <code>int64 port = 2;</code>
      * @return The port.
      */
@@ -241,6 +301,10 @@ public final class Mongo {
     public static final int REPLICA_SET_FIELD_NUMBER = 5;
     private volatile java.lang.Object replicaSet_;
     /**
+     * <pre>
+     * Replica set name
+     * </pre>
+     *
      * <code>string replica_set = 5;</code>
      * @return The replicaSet.
      */
@@ -258,6 +322,10 @@ public final class Mongo {
       }
     }
     /**
+     * <pre>
+     * Replica set name
+     * </pre>
+     *
      * <code>string replica_set = 5;</code>
      * @return The bytes for replicaSet.
      */
@@ -279,6 +347,10 @@ public final class Mongo {
     public static final int TLS_MODE_FIELD_NUMBER = 6;
     private yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode tlsMode_;
     /**
+     * <pre>
+     * TLS settings for the server connection. Empty implies plaintext connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
      * @return Whether the tlsMode field is set.
      */
@@ -287,6 +359,10 @@ public final class Mongo {
       return tlsMode_ != null;
     }
     /**
+     * <pre>
+     * TLS settings for the server connection. Empty implies plaintext connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
      * @return The tlsMode.
      */
@@ -295,6 +371,10 @@ public final class Mongo {
       return tlsMode_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.getDefaultInstance() : tlsMode_;
     }
     /**
+     * <pre>
+     * TLS settings for the server connection. Empty implies plaintext connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
      */
     @java.lang.Override
@@ -696,6 +776,10 @@ public final class Mongo {
          }
       }
       /**
+       * <pre>
+       * Host names of the replica set
+       * </pre>
+       *
        * <code>repeated string hosts = 1;</code>
        * @return A list containing the hosts.
        */
@@ -704,6 +788,10 @@ public final class Mongo {
         return hosts_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * Host names of the replica set
+       * </pre>
+       *
        * <code>repeated string hosts = 1;</code>
        * @return The count of hosts.
        */
@@ -711,6 +799,10 @@ public final class Mongo {
         return hosts_.size();
       }
       /**
+       * <pre>
+       * Host names of the replica set
+       * </pre>
+       *
        * <code>repeated string hosts = 1;</code>
        * @param index The index of the element to return.
        * @return The hosts at the given index.
@@ -719,6 +811,10 @@ public final class Mongo {
         return hosts_.get(index);
       }
       /**
+       * <pre>
+       * Host names of the replica set
+       * </pre>
+       *
        * <code>repeated string hosts = 1;</code>
        * @param index The index of the value to return.
        * @return The bytes of the hosts at the given index.
@@ -728,6 +824,10 @@ public final class Mongo {
         return hosts_.getByteString(index);
       }
       /**
+       * <pre>
+       * Host names of the replica set
+       * </pre>
+       *
        * <code>repeated string hosts = 1;</code>
        * @param index The index to set the value at.
        * @param value The hosts to set.
@@ -744,6 +844,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Host names of the replica set
+       * </pre>
+       *
        * <code>repeated string hosts = 1;</code>
        * @param value The hosts to add.
        * @return This builder for chaining.
@@ -759,6 +863,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Host names of the replica set
+       * </pre>
+       *
        * <code>repeated string hosts = 1;</code>
        * @param values The hosts to add.
        * @return This builder for chaining.
@@ -772,6 +880,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Host names of the replica set
+       * </pre>
+       *
        * <code>repeated string hosts = 1;</code>
        * @return This builder for chaining.
        */
@@ -782,6 +894,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Host names of the replica set
+       * </pre>
+       *
        * <code>repeated string hosts = 1;</code>
        * @param value The bytes of the hosts to add.
        * @return This builder for chaining.
@@ -800,6 +916,10 @@ public final class Mongo {
 
       private long port_ ;
       /**
+       * <pre>
+       * TCP Port number
+       * </pre>
+       *
        * <code>int64 port = 2;</code>
        * @return The port.
        */
@@ -808,6 +928,10 @@ public final class Mongo {
         return port_;
       }
       /**
+       * <pre>
+       * TCP Port number
+       * </pre>
+       *
        * <code>int64 port = 2;</code>
        * @param value The port to set.
        * @return This builder for chaining.
@@ -819,6 +943,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * TCP Port number
+       * </pre>
+       *
        * <code>int64 port = 2;</code>
        * @return This builder for chaining.
        */
@@ -831,6 +959,10 @@ public final class Mongo {
 
       private java.lang.Object replicaSet_ = "";
       /**
+       * <pre>
+       * Replica set name
+       * </pre>
+       *
        * <code>string replica_set = 5;</code>
        * @return The replicaSet.
        */
@@ -847,6 +979,10 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Replica set name
+       * </pre>
+       *
        * <code>string replica_set = 5;</code>
        * @return The bytes for replicaSet.
        */
@@ -864,6 +1000,10 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Replica set name
+       * </pre>
+       *
        * <code>string replica_set = 5;</code>
        * @param value The replicaSet to set.
        * @return This builder for chaining.
@@ -879,6 +1019,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Replica set name
+       * </pre>
+       *
        * <code>string replica_set = 5;</code>
        * @return This builder for chaining.
        */
@@ -889,6 +1033,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Replica set name
+       * </pre>
+       *
        * <code>string replica_set = 5;</code>
        * @param value The bytes for replicaSet to set.
        * @return This builder for chaining.
@@ -909,6 +1057,10 @@ public final class Mongo {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode, yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder> tlsModeBuilder_;
       /**
+       * <pre>
+       * TLS settings for the server connection. Empty implies plaintext connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
        * @return Whether the tlsMode field is set.
        */
@@ -916,6 +1068,10 @@ public final class Mongo {
         return tlsModeBuilder_ != null || tlsMode_ != null;
       }
       /**
+       * <pre>
+       * TLS settings for the server connection. Empty implies plaintext connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
        * @return The tlsMode.
        */
@@ -927,6 +1083,10 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * TLS settings for the server connection. Empty implies plaintext connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
        */
       public Builder setTlsMode(yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode value) {
@@ -943,6 +1103,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * TLS settings for the server connection. Empty implies plaintext connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
        */
       public Builder setTlsMode(
@@ -957,6 +1121,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * TLS settings for the server connection. Empty implies plaintext connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
        */
       public Builder mergeTlsMode(yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode value) {
@@ -975,6 +1143,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * TLS settings for the server connection. Empty implies plaintext connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
        */
       public Builder clearTlsMode() {
@@ -989,6 +1161,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * TLS settings for the server connection. Empty implies plaintext connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.Builder getTlsModeBuilder() {
@@ -997,6 +1173,10 @@ public final class Mongo {
         return getTlsModeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * TLS settings for the server connection. Empty implies plaintext connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder getTlsModeOrBuilder() {
@@ -1008,6 +1188,10 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * TLS settings for the server connection. Empty implies plaintext connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1081,16 +1265,31 @@ public final class Mongo {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Identifier of the Yandex StoreDoc cluster
+     * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
      * <code>string mdb_cluster_id = 1;</code>
      * @return Whether the mdbClusterId field is set.
      */
     boolean hasMdbClusterId();
     /**
+     * <pre>
+     * Identifier of the Yandex StoreDoc cluster
+     * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
      * <code>string mdb_cluster_id = 1;</code>
      * @return The mdbClusterId.
      */
     java.lang.String getMdbClusterId();
     /**
+     * <pre>
+     * Identifier of the Yandex StoreDoc cluster
+     * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
      * <code>string mdb_cluster_id = 1;</code>
      * @return The bytes for mdbClusterId.
      */
@@ -1098,38 +1297,68 @@ public final class Mongo {
         getMdbClusterIdBytes();
 
     /**
+     * <pre>
+     * Connection settings of the on-premise MongoDB server
+     * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMongo on_premise = 2;</code>
      * @return Whether the onPremise field is set.
      */
     boolean hasOnPremise();
     /**
+     * <pre>
+     * Connection settings of the on-premise MongoDB server
+     * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMongo on_premise = 2;</code>
      * @return The onPremise.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mongo.OnPremiseMongo getOnPremise();
     /**
+     * <pre>
+     * Connection settings of the on-premise MongoDB server
+     * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMongo on_premise = 2;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mongo.OnPremiseMongoOrBuilder getOnPremiseOrBuilder();
 
     /**
+     * <pre>
+     * Get StoreDoc/MongoDB installation params and credentials from Connection Manager
+     * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
      * @return Whether the connectionManagerConnection field is set.
      */
     boolean hasConnectionManagerConnection();
     /**
+     * <pre>
+     * Get StoreDoc/MongoDB installation params and credentials from Connection Manager
+     * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
      * @return The connectionManagerConnection.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection getConnectionManagerConnection();
     /**
+     * <pre>
+     * Get StoreDoc/MongoDB installation params and credentials from Connection Manager
+     * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnectionOrBuilder getConnectionManagerConnectionOrBuilder();
 
     /**
      * <pre>
-     * User name
+     * User name, required unless connection_manager_connection is used
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -1138,7 +1367,7 @@ public final class Mongo {
     java.lang.String getUser();
     /**
      * <pre>
-     * User name
+     * User name, required unless connection_manager_connection is used
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -1379,6 +1608,11 @@ public final class Mongo {
 
     public static final int MDB_CLUSTER_ID_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Identifier of the Yandex StoreDoc cluster
+     * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
      * <code>string mdb_cluster_id = 1;</code>
      * @return Whether the mdbClusterId field is set.
      */
@@ -1386,6 +1620,11 @@ public final class Mongo {
       return addressCase_ == 1;
     }
     /**
+     * <pre>
+     * Identifier of the Yandex StoreDoc cluster
+     * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
      * <code>string mdb_cluster_id = 1;</code>
      * @return The mdbClusterId.
      */
@@ -1407,6 +1646,11 @@ public final class Mongo {
       }
     }
     /**
+     * <pre>
+     * Identifier of the Yandex StoreDoc cluster
+     * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
      * <code>string mdb_cluster_id = 1;</code>
      * @return The bytes for mdbClusterId.
      */
@@ -1431,6 +1675,11 @@ public final class Mongo {
 
     public static final int ON_PREMISE_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Connection settings of the on-premise MongoDB server
+     * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMongo on_premise = 2;</code>
      * @return Whether the onPremise field is set.
      */
@@ -1439,6 +1688,11 @@ public final class Mongo {
       return addressCase_ == 2;
     }
     /**
+     * <pre>
+     * Connection settings of the on-premise MongoDB server
+     * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMongo on_premise = 2;</code>
      * @return The onPremise.
      */
@@ -1450,6 +1704,11 @@ public final class Mongo {
       return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.OnPremiseMongo.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Connection settings of the on-premise MongoDB server
+     * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMongo on_premise = 2;</code>
      */
     @java.lang.Override
@@ -1462,6 +1721,11 @@ public final class Mongo {
 
     public static final int CONNECTION_MANAGER_CONNECTION_FIELD_NUMBER = 6;
     /**
+     * <pre>
+     * Get StoreDoc/MongoDB installation params and credentials from Connection Manager
+     * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
      * @return Whether the connectionManagerConnection field is set.
      */
@@ -1470,6 +1734,11 @@ public final class Mongo {
       return addressCase_ == 6;
     }
     /**
+     * <pre>
+     * Get StoreDoc/MongoDB installation params and credentials from Connection Manager
+     * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
      * @return The connectionManagerConnection.
      */
@@ -1481,6 +1750,11 @@ public final class Mongo {
       return yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Get StoreDoc/MongoDB installation params and credentials from Connection Manager
+     * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
      */
     @java.lang.Override
@@ -1495,7 +1769,7 @@ public final class Mongo {
     private volatile java.lang.Object user_;
     /**
      * <pre>
-     * User name
+     * User name, required unless connection_manager_connection is used
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -1516,7 +1790,7 @@ public final class Mongo {
     }
     /**
      * <pre>
-     * User name
+     * User name, required unless connection_manager_connection is used
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -2078,6 +2352,11 @@ public final class Mongo {
 
 
       /**
+       * <pre>
+       * Identifier of the Yandex StoreDoc cluster
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>string mdb_cluster_id = 1;</code>
        * @return Whether the mdbClusterId field is set.
        */
@@ -2086,6 +2365,11 @@ public final class Mongo {
         return addressCase_ == 1;
       }
       /**
+       * <pre>
+       * Identifier of the Yandex StoreDoc cluster
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>string mdb_cluster_id = 1;</code>
        * @return The mdbClusterId.
        */
@@ -2108,6 +2392,11 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Identifier of the Yandex StoreDoc cluster
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>string mdb_cluster_id = 1;</code>
        * @return The bytes for mdbClusterId.
        */
@@ -2131,6 +2420,11 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Identifier of the Yandex StoreDoc cluster
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>string mdb_cluster_id = 1;</code>
        * @param value The mdbClusterId to set.
        * @return This builder for chaining.
@@ -2146,6 +2440,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the Yandex StoreDoc cluster
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>string mdb_cluster_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -2158,6 +2457,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the Yandex StoreDoc cluster
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>string mdb_cluster_id = 1;</code>
        * @param value The bytes for mdbClusterId to set.
        * @return This builder for chaining.
@@ -2177,6 +2481,11 @@ public final class Mongo {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Mongo.OnPremiseMongo, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.OnPremiseMongo.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.OnPremiseMongoOrBuilder> onPremiseBuilder_;
       /**
+       * <pre>
+       * Connection settings of the on-premise MongoDB server
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMongo on_premise = 2;</code>
        * @return Whether the onPremise field is set.
        */
@@ -2185,6 +2494,11 @@ public final class Mongo {
         return addressCase_ == 2;
       }
       /**
+       * <pre>
+       * Connection settings of the on-premise MongoDB server
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMongo on_premise = 2;</code>
        * @return The onPremise.
        */
@@ -2203,6 +2517,11 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Connection settings of the on-premise MongoDB server
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMongo on_premise = 2;</code>
        */
       public Builder setOnPremise(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.OnPremiseMongo value) {
@@ -2219,6 +2538,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings of the on-premise MongoDB server
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMongo on_premise = 2;</code>
        */
       public Builder setOnPremise(
@@ -2233,6 +2557,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings of the on-premise MongoDB server
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMongo on_premise = 2;</code>
        */
       public Builder mergeOnPremise(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.OnPremiseMongo value) {
@@ -2255,6 +2584,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings of the on-premise MongoDB server
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMongo on_premise = 2;</code>
        */
       public Builder clearOnPremise() {
@@ -2274,12 +2608,22 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings of the on-premise MongoDB server
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMongo on_premise = 2;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.OnPremiseMongo.Builder getOnPremiseBuilder() {
         return getOnPremiseFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Connection settings of the on-premise MongoDB server
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMongo on_premise = 2;</code>
        */
       @java.lang.Override
@@ -2294,6 +2638,11 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Connection settings of the on-premise MongoDB server
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseMongo on_premise = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2318,6 +2667,11 @@ public final class Mongo {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnectionOrBuilder> connectionManagerConnectionBuilder_;
       /**
+       * <pre>
+       * Get StoreDoc/MongoDB installation params and credentials from Connection Manager
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
        * @return Whether the connectionManagerConnection field is set.
        */
@@ -2326,6 +2680,11 @@ public final class Mongo {
         return addressCase_ == 6;
       }
       /**
+       * <pre>
+       * Get StoreDoc/MongoDB installation params and credentials from Connection Manager
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
        * @return The connectionManagerConnection.
        */
@@ -2344,6 +2703,11 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Get StoreDoc/MongoDB installation params and credentials from Connection Manager
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
        */
       public Builder setConnectionManagerConnection(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection value) {
@@ -2360,6 +2724,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Get StoreDoc/MongoDB installation params and credentials from Connection Manager
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
        */
       public Builder setConnectionManagerConnection(
@@ -2374,6 +2743,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Get StoreDoc/MongoDB installation params and credentials from Connection Manager
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
        */
       public Builder mergeConnectionManagerConnection(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection value) {
@@ -2396,6 +2770,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Get StoreDoc/MongoDB installation params and credentials from Connection Manager
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
        */
       public Builder clearConnectionManagerConnection() {
@@ -2415,12 +2794,22 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Get StoreDoc/MongoDB installation params and credentials from Connection Manager
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionManagerConnection.Builder getConnectionManagerConnectionBuilder() {
         return getConnectionManagerConnectionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Get StoreDoc/MongoDB installation params and credentials from Connection Manager
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
        */
       @java.lang.Override
@@ -2435,6 +2824,11 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Get StoreDoc/MongoDB installation params and credentials from Connection Manager
+       * Use one of:  mdb_cluster_id/on_premise/connection_manager_connection
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnectionManagerConnection connection_manager_connection = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2459,7 +2853,7 @@ public final class Mongo {
       private java.lang.Object user_ = "";
       /**
        * <pre>
-       * User name
+       * User name, required unless connection_manager_connection is used
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -2479,7 +2873,7 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * User name
+       * User name, required unless connection_manager_connection is used
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -2500,7 +2894,7 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * User name
+       * User name, required unless connection_manager_connection is used
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -2519,7 +2913,7 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * User name
+       * User name, required unless connection_manager_connection is used
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -2533,7 +2927,7 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * User name
+       * User name, required unless connection_manager_connection is used
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -4296,26 +4690,50 @@ public final class Mongo {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
      * @return Whether the connection field is set.
      */
     boolean hasConnection();
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
      * @return The connection.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnection getConnection();
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionOrBuilder getConnectionOrBuilder();
 
     /**
+     * <pre>
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
+     * </pre>
+     *
      * <code>string subnet_id = 2;</code>
      * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
+     * <pre>
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
+     * </pre>
+     *
      * <code>string subnet_id = 2;</code>
      * @return The bytes for subnetId.
      */
@@ -4422,7 +4840,8 @@ public final class Mongo {
 
     /**
      * <pre>
-     * Read mode for mongo client
+     * Read mode for mongo client: whether the secondary server should be preferred to
+     * the primary when copying data
      * </pre>
      *
      * <code>bool secondary_preferred_mode = 8;</code>
@@ -4432,7 +4851,8 @@ public final class Mongo {
 
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 11;</code>
@@ -4442,7 +4862,8 @@ public final class Mongo {
         getSecurityGroupsList();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 11;</code>
@@ -4451,7 +4872,8 @@ public final class Mongo {
     int getSecurityGroupsCount();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 11;</code>
@@ -4461,7 +4883,8 @@ public final class Mongo {
     java.lang.String getSecurityGroups(int index);
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 11;</code>
@@ -4472,6 +4895,10 @@ public final class Mongo {
         getSecurityGroupsBytes(int index);
   }
   /**
+   * <pre>
+   * Settings specific to the MongoDB source endpoint
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MongoSource}
    */
   public static final class MongoSource extends
@@ -4616,6 +5043,10 @@ public final class Mongo {
     public static final int CONNECTION_FIELD_NUMBER = 1;
     private yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnection connection_;
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
      * @return Whether the connection field is set.
      */
@@ -4624,6 +5055,10 @@ public final class Mongo {
       return connection_ != null;
     }
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
      * @return The connection.
      */
@@ -4632,6 +5067,10 @@ public final class Mongo {
       return connection_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnection.getDefaultInstance() : connection_;
     }
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
      */
     @java.lang.Override
@@ -4642,6 +5081,12 @@ public final class Mongo {
     public static final int SUBNET_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object subnetId_;
     /**
+     * <pre>
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
+     * </pre>
+     *
      * <code>string subnet_id = 2;</code>
      * @return The subnetId.
      */
@@ -4659,6 +5104,12 @@ public final class Mongo {
       }
     }
     /**
+     * <pre>
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
+     * </pre>
+     *
      * <code>string subnet_id = 2;</code>
      * @return The bytes for subnetId.
      */
@@ -4811,7 +5262,8 @@ public final class Mongo {
     private boolean secondaryPreferredMode_;
     /**
      * <pre>
-     * Read mode for mongo client
+     * Read mode for mongo client: whether the secondary server should be preferred to
+     * the primary when copying data
      * </pre>
      *
      * <code>bool secondary_preferred_mode = 8;</code>
@@ -4826,7 +5278,8 @@ public final class Mongo {
     private com.google.protobuf.LazyStringList securityGroups_;
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 11;</code>
@@ -4838,7 +5291,8 @@ public final class Mongo {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 11;</code>
@@ -4849,7 +5303,8 @@ public final class Mongo {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 11;</code>
@@ -4861,7 +5316,8 @@ public final class Mongo {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 11;</code>
@@ -5099,6 +5555,10 @@ public final class Mongo {
       return builder;
     }
     /**
+     * <pre>
+     * Settings specific to the MongoDB source endpoint
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MongoSource}
      */
     public static final class Builder extends
@@ -5373,6 +5833,10 @@ public final class Mongo {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnection, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionOrBuilder> connectionBuilder_;
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
        * @return Whether the connection field is set.
        */
@@ -5380,6 +5844,10 @@ public final class Mongo {
         return connectionBuilder_ != null || connection_ != null;
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
        * @return The connection.
        */
@@ -5391,6 +5859,10 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
        */
       public Builder setConnection(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnection value) {
@@ -5407,6 +5879,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
        */
       public Builder setConnection(
@@ -5421,6 +5897,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
        */
       public Builder mergeConnection(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnection value) {
@@ -5439,6 +5919,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
        */
       public Builder clearConnection() {
@@ -5453,6 +5937,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnection.Builder getConnectionBuilder() {
@@ -5461,6 +5949,10 @@ public final class Mongo {
         return getConnectionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionOrBuilder getConnectionOrBuilder() {
@@ -5472,6 +5964,10 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5490,6 +5986,12 @@ public final class Mongo {
 
       private java.lang.Object subnetId_ = "";
       /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
        * <code>string subnet_id = 2;</code>
        * @return The subnetId.
        */
@@ -5506,6 +6008,12 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
        * <code>string subnet_id = 2;</code>
        * @return The bytes for subnetId.
        */
@@ -5523,6 +6031,12 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
        * <code>string subnet_id = 2;</code>
        * @param value The subnetId to set.
        * @return This builder for chaining.
@@ -5538,6 +6052,12 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
        * <code>string subnet_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -5548,6 +6068,12 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
        * <code>string subnet_id = 2;</code>
        * @param value The bytes for subnetId to set.
        * @return This builder for chaining.
@@ -6227,7 +6753,8 @@ public final class Mongo {
       private boolean secondaryPreferredMode_ ;
       /**
        * <pre>
-       * Read mode for mongo client
+       * Read mode for mongo client: whether the secondary server should be preferred to
+       * the primary when copying data
        * </pre>
        *
        * <code>bool secondary_preferred_mode = 8;</code>
@@ -6239,7 +6766,8 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Read mode for mongo client
+       * Read mode for mongo client: whether the secondary server should be preferred to
+       * the primary when copying data
        * </pre>
        *
        * <code>bool secondary_preferred_mode = 8;</code>
@@ -6254,7 +6782,8 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Read mode for mongo client
+       * Read mode for mongo client: whether the secondary server should be preferred to
+       * the primary when copying data
        * </pre>
        *
        * <code>bool secondary_preferred_mode = 8;</code>
@@ -6276,7 +6805,8 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 11;</code>
@@ -6288,7 +6818,8 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 11;</code>
@@ -6299,7 +6830,8 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 11;</code>
@@ -6311,7 +6843,8 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 11;</code>
@@ -6324,7 +6857,8 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 11;</code>
@@ -6344,7 +6878,8 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 11;</code>
@@ -6363,7 +6898,8 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 11;</code>
@@ -6380,7 +6916,8 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 11;</code>
@@ -6394,7 +6931,8 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 11;</code>
@@ -6470,23 +7008,37 @@ public final class Mongo {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
      * @return Whether the connection field is set.
      */
     boolean hasConnection();
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
      * @return The connection.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnection getConnection();
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionOrBuilder getConnectionOrBuilder();
 
     /**
      * <pre>
-     * Database name
+     * Database name. If not empty, then all the data will be written to the database
+     * with the specified name; otherwise the database name is the same as in the
+     * source endpoint
      * </pre>
      *
      * <code>string database = 2;</code>
@@ -6495,7 +7047,9 @@ public final class Mongo {
     java.lang.String getDatabase();
     /**
      * <pre>
-     * Database name
+     * Database name. If not empty, then all the data will be written to the database
+     * with the specified name; otherwise the database name is the same as in the
+     * source endpoint
      * </pre>
      *
      * <code>string database = 2;</code>
@@ -6505,22 +7059,44 @@ public final class Mongo {
         getDatabaseBytes();
 
     /**
+     * <pre>
+     * How to clean collections when activating the transfer. One of `DISABLED`, `DROP`
+     * or `TRUNCATE`
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
      * @return The enum numeric value on the wire for cleanupPolicy.
      */
     int getCleanupPolicyValue();
     /**
+     * <pre>
+     * How to clean collections when activating the transfer. One of `DISABLED`, `DROP`
+     * or `TRUNCATE`
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
      * @return The cleanupPolicy.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy getCleanupPolicy();
 
     /**
+     * <pre>
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
+     * </pre>
+     *
      * <code>string subnet_id = 7;</code>
      * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
+     * <pre>
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
+     * </pre>
+     *
      * <code>string subnet_id = 7;</code>
      * @return The bytes for subnetId.
      */
@@ -6529,7 +7105,8 @@ public final class Mongo {
 
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 8;</code>
@@ -6539,7 +7116,8 @@ public final class Mongo {
         getSecurityGroupsList();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 8;</code>
@@ -6548,7 +7126,8 @@ public final class Mongo {
     int getSecurityGroupsCount();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 8;</code>
@@ -6558,7 +7137,8 @@ public final class Mongo {
     java.lang.String getSecurityGroups(int index);
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 8;</code>
@@ -6569,6 +7149,10 @@ public final class Mongo {
         getSecurityGroupsBytes(int index);
   }
   /**
+   * <pre>
+   * Settings specific to the MongoDB target endpoint
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MongoTarget}
    */
   public static final class MongoTarget extends
@@ -6696,6 +7280,10 @@ public final class Mongo {
     public static final int CONNECTION_FIELD_NUMBER = 1;
     private yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnection connection_;
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
      * @return Whether the connection field is set.
      */
@@ -6704,6 +7292,10 @@ public final class Mongo {
       return connection_ != null;
     }
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
      * @return The connection.
      */
@@ -6712,6 +7304,10 @@ public final class Mongo {
       return connection_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnection.getDefaultInstance() : connection_;
     }
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
      */
     @java.lang.Override
@@ -6723,7 +7319,9 @@ public final class Mongo {
     private volatile java.lang.Object database_;
     /**
      * <pre>
-     * Database name
+     * Database name. If not empty, then all the data will be written to the database
+     * with the specified name; otherwise the database name is the same as in the
+     * source endpoint
      * </pre>
      *
      * <code>string database = 2;</code>
@@ -6744,7 +7342,9 @@ public final class Mongo {
     }
     /**
      * <pre>
-     * Database name
+     * Database name. If not empty, then all the data will be written to the database
+     * with the specified name; otherwise the database name is the same as in the
+     * source endpoint
      * </pre>
      *
      * <code>string database = 2;</code>
@@ -6768,6 +7368,11 @@ public final class Mongo {
     public static final int CLEANUP_POLICY_FIELD_NUMBER = 6;
     private int cleanupPolicy_;
     /**
+     * <pre>
+     * How to clean collections when activating the transfer. One of `DISABLED`, `DROP`
+     * or `TRUNCATE`
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
      * @return The enum numeric value on the wire for cleanupPolicy.
      */
@@ -6775,6 +7380,11 @@ public final class Mongo {
       return cleanupPolicy_;
     }
     /**
+     * <pre>
+     * How to clean collections when activating the transfer. One of `DISABLED`, `DROP`
+     * or `TRUNCATE`
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
      * @return The cleanupPolicy.
      */
@@ -6787,6 +7397,12 @@ public final class Mongo {
     public static final int SUBNET_ID_FIELD_NUMBER = 7;
     private volatile java.lang.Object subnetId_;
     /**
+     * <pre>
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
+     * </pre>
+     *
      * <code>string subnet_id = 7;</code>
      * @return The subnetId.
      */
@@ -6804,6 +7420,12 @@ public final class Mongo {
       }
     }
     /**
+     * <pre>
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
+     * </pre>
+     *
      * <code>string subnet_id = 7;</code>
      * @return The bytes for subnetId.
      */
@@ -6826,7 +7448,8 @@ public final class Mongo {
     private com.google.protobuf.LazyStringList securityGroups_;
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 8;</code>
@@ -6838,7 +7461,8 @@ public final class Mongo {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 8;</code>
@@ -6849,7 +7473,8 @@ public final class Mongo {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 8;</code>
@@ -6861,7 +7486,8 @@ public final class Mongo {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 8;</code>
@@ -7081,6 +7707,10 @@ public final class Mongo {
       return builder;
     }
     /**
+     * <pre>
+     * Settings specific to the MongoDB target endpoint
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MongoTarget}
      */
     public static final class Builder extends
@@ -7278,6 +7908,10 @@ public final class Mongo {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnection, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionOrBuilder> connectionBuilder_;
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
        * @return Whether the connection field is set.
        */
@@ -7285,6 +7919,10 @@ public final class Mongo {
         return connectionBuilder_ != null || connection_ != null;
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
        * @return The connection.
        */
@@ -7296,6 +7934,10 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
        */
       public Builder setConnection(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnection value) {
@@ -7312,6 +7954,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
        */
       public Builder setConnection(
@@ -7326,6 +7972,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
        */
       public Builder mergeConnection(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnection value) {
@@ -7344,6 +7994,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
        */
       public Builder clearConnection() {
@@ -7358,6 +8012,10 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnection.Builder getConnectionBuilder() {
@@ -7366,6 +8024,10 @@ public final class Mongo {
         return getConnectionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionOrBuilder getConnectionOrBuilder() {
@@ -7377,6 +8039,10 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MongoConnection connection = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7396,7 +8062,9 @@ public final class Mongo {
       private java.lang.Object database_ = "";
       /**
        * <pre>
-       * Database name
+       * Database name. If not empty, then all the data will be written to the database
+       * with the specified name; otherwise the database name is the same as in the
+       * source endpoint
        * </pre>
        *
        * <code>string database = 2;</code>
@@ -7416,7 +8084,9 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Database name
+       * Database name. If not empty, then all the data will be written to the database
+       * with the specified name; otherwise the database name is the same as in the
+       * source endpoint
        * </pre>
        *
        * <code>string database = 2;</code>
@@ -7437,7 +8107,9 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Database name
+       * Database name. If not empty, then all the data will be written to the database
+       * with the specified name; otherwise the database name is the same as in the
+       * source endpoint
        * </pre>
        *
        * <code>string database = 2;</code>
@@ -7456,7 +8128,9 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Database name
+       * Database name. If not empty, then all the data will be written to the database
+       * with the specified name; otherwise the database name is the same as in the
+       * source endpoint
        * </pre>
        *
        * <code>string database = 2;</code>
@@ -7470,7 +8144,9 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Database name
+       * Database name. If not empty, then all the data will be written to the database
+       * with the specified name; otherwise the database name is the same as in the
+       * source endpoint
        * </pre>
        *
        * <code>string database = 2;</code>
@@ -7491,6 +8167,11 @@ public final class Mongo {
 
       private int cleanupPolicy_ = 0;
       /**
+       * <pre>
+       * How to clean collections when activating the transfer. One of `DISABLED`, `DROP`
+       * or `TRUNCATE`
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
        * @return The enum numeric value on the wire for cleanupPolicy.
        */
@@ -7498,6 +8179,11 @@ public final class Mongo {
         return cleanupPolicy_;
       }
       /**
+       * <pre>
+       * How to clean collections when activating the transfer. One of `DISABLED`, `DROP`
+       * or `TRUNCATE`
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
        * @param value The enum numeric value on the wire for cleanupPolicy to set.
        * @return This builder for chaining.
@@ -7509,6 +8195,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * How to clean collections when activating the transfer. One of `DISABLED`, `DROP`
+       * or `TRUNCATE`
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
        * @return The cleanupPolicy.
        */
@@ -7519,6 +8210,11 @@ public final class Mongo {
         return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * How to clean collections when activating the transfer. One of `DISABLED`, `DROP`
+       * or `TRUNCATE`
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
        * @param value The cleanupPolicy to set.
        * @return This builder for chaining.
@@ -7533,6 +8229,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * How to clean collections when activating the transfer. One of `DISABLED`, `DROP`
+       * or `TRUNCATE`
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
        * @return This builder for chaining.
        */
@@ -7545,6 +8246,12 @@ public final class Mongo {
 
       private java.lang.Object subnetId_ = "";
       /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
        * <code>string subnet_id = 7;</code>
        * @return The subnetId.
        */
@@ -7561,6 +8268,12 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
        * <code>string subnet_id = 7;</code>
        * @return The bytes for subnetId.
        */
@@ -7578,6 +8291,12 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
        * <code>string subnet_id = 7;</code>
        * @param value The subnetId to set.
        * @return This builder for chaining.
@@ -7593,6 +8312,12 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
        * <code>string subnet_id = 7;</code>
        * @return This builder for chaining.
        */
@@ -7603,6 +8328,12 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
        * <code>string subnet_id = 7;</code>
        * @param value The bytes for subnetId to set.
        * @return This builder for chaining.
@@ -7628,7 +8359,8 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 8;</code>
@@ -7640,7 +8372,8 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 8;</code>
@@ -7651,7 +8384,8 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 8;</code>
@@ -7663,7 +8397,8 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 8;</code>
@@ -7676,7 +8411,8 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 8;</code>
@@ -7696,7 +8432,8 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 8;</code>
@@ -7715,7 +8452,8 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 8;</code>
@@ -7732,7 +8470,8 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 8;</code>
@@ -7746,7 +8485,8 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 8;</code>
@@ -7822,11 +8562,21 @@ public final class Mongo {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of connectionmanager connection with mongodb/Yandex Storedoc installation
+     * parameters and credentials
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The connectionId.
      */
     java.lang.String getConnectionId();
     /**
+     * <pre>
+     * ID of connectionmanager connection with mongodb/Yandex Storedoc installation
+     * parameters and credentials
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The bytes for connectionId.
      */
@@ -7835,7 +8585,7 @@ public final class Mongo {
 
     /**
      * <pre>
-     * Used only for on-premise connections
+     * Replica set name, used only for on-premise mongodb installations
      * </pre>
      *
      * <code>string replica_set = 2;</code>
@@ -7844,7 +8594,7 @@ public final class Mongo {
     java.lang.String getReplicaSet();
     /**
      * <pre>
-     * Used only for on-premise connections
+     * Replica set name, used only for on-premise mongodb installations
      * </pre>
      *
      * <code>string replica_set = 2;</code>
@@ -7947,6 +8697,11 @@ public final class Mongo {
     public static final int CONNECTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object connectionId_;
     /**
+     * <pre>
+     * ID of connectionmanager connection with mongodb/Yandex Storedoc installation
+     * parameters and credentials
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The connectionId.
      */
@@ -7964,6 +8719,11 @@ public final class Mongo {
       }
     }
     /**
+     * <pre>
+     * ID of connectionmanager connection with mongodb/Yandex Storedoc installation
+     * parameters and credentials
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The bytes for connectionId.
      */
@@ -7986,7 +8746,7 @@ public final class Mongo {
     private volatile java.lang.Object replicaSet_;
     /**
      * <pre>
-     * Used only for on-premise connections
+     * Replica set name, used only for on-premise mongodb installations
      * </pre>
      *
      * <code>string replica_set = 2;</code>
@@ -8007,7 +8767,7 @@ public final class Mongo {
     }
     /**
      * <pre>
-     * Used only for on-premise connections
+     * Replica set name, used only for on-premise mongodb installations
      * </pre>
      *
      * <code>string replica_set = 2;</code>
@@ -8349,6 +9109,11 @@ public final class Mongo {
 
       private java.lang.Object connectionId_ = "";
       /**
+       * <pre>
+       * ID of connectionmanager connection with mongodb/Yandex Storedoc installation
+       * parameters and credentials
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return The connectionId.
        */
@@ -8365,6 +9130,11 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * ID of connectionmanager connection with mongodb/Yandex Storedoc installation
+       * parameters and credentials
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return The bytes for connectionId.
        */
@@ -8382,6 +9152,11 @@ public final class Mongo {
         }
       }
       /**
+       * <pre>
+       * ID of connectionmanager connection with mongodb/Yandex Storedoc installation
+       * parameters and credentials
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @param value The connectionId to set.
        * @return This builder for chaining.
@@ -8397,6 +9172,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * ID of connectionmanager connection with mongodb/Yandex Storedoc installation
+       * parameters and credentials
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -8407,6 +9187,11 @@ public final class Mongo {
         return this;
       }
       /**
+       * <pre>
+       * ID of connectionmanager connection with mongodb/Yandex Storedoc installation
+       * parameters and credentials
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @param value The bytes for connectionId to set.
        * @return This builder for chaining.
@@ -8426,7 +9211,7 @@ public final class Mongo {
       private java.lang.Object replicaSet_ = "";
       /**
        * <pre>
-       * Used only for on-premise connections
+       * Replica set name, used only for on-premise mongodb installations
        * </pre>
        *
        * <code>string replica_set = 2;</code>
@@ -8446,7 +9231,7 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Used only for on-premise connections
+       * Replica set name, used only for on-premise mongodb installations
        * </pre>
        *
        * <code>string replica_set = 2;</code>
@@ -8467,7 +9252,7 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Used only for on-premise connections
+       * Replica set name, used only for on-premise mongodb installations
        * </pre>
        *
        * <code>string replica_set = 2;</code>
@@ -8486,7 +9271,7 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Used only for on-premise connections
+       * Replica set name, used only for on-premise mongodb installations
        * </pre>
        *
        * <code>string replica_set = 2;</code>
@@ -8500,7 +9285,7 @@ public final class Mongo {
       }
       /**
        * <pre>
-       * Used only for on-premise connections
+       * Replica set name, used only for on-premise mongodb installations
        * </pre>
        *
        * <code>string replica_set = 2;</code>

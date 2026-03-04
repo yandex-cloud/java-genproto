@@ -2910,7 +2910,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -2921,7 +2921,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -2932,7 +2932,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Optional description of the trunkConnection. 0-256 characters long.
      * </pre>
      *
-     * <code>string description = 2;</code>
+     * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
@@ -2941,7 +2941,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Optional description of the trunkConnection. 0-256 characters long.
      * </pre>
      *
-     * <code>string description = 2;</code>
+     * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
     com.google.protobuf.ByteString
@@ -2952,7 +2952,7 @@ public final class TrunkConnectionServiceOuterClass {
      * ID of the folder that the trunkConnection belongs to.
      * </pre>
      *
-     * <code>string folder_id = 4;</code>
+     * <code>string folder_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
@@ -2961,7 +2961,7 @@ public final class TrunkConnectionServiceOuterClass {
      * ID of the folder that the trunkConnection belongs to.
      * </pre>
      *
-     * <code>string folder_id = 4;</code>
+     * <code>string folder_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
@@ -2972,62 +2972,100 @@ public final class TrunkConnectionServiceOuterClass {
      * ID of the region that the trunkConnection belongs to.
      * </pre>
      *
-     * <code>string region_id = 5;</code>
+     * <code>string region_id = 5 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @deprecated
      * @return The regionId.
      */
-    java.lang.String getRegionId();
+    @java.lang.Deprecated java.lang.String getRegionId();
     /**
      * <pre>
      * ID of the region that the trunkConnection belongs to.
      * </pre>
      *
-     * <code>string region_id = 5;</code>
+     * <code>string region_id = 5 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @deprecated
      * @return The bytes for regionId.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getRegionIdBytes();
 
     /**
+     * <pre>
+     * Single port trunkConnection config
+     * </pre>
+     *
      * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.SinglePortDirectJoint single_port_direct_joint = 10;</code>
      * @return Whether the singlePortDirectJoint field is set.
      */
     boolean hasSinglePortDirectJoint();
     /**
+     * <pre>
+     * Single port trunkConnection config
+     * </pre>
+     *
      * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.SinglePortDirectJoint single_port_direct_joint = 10;</code>
      * @return The singlePortDirectJoint.
      */
     yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.SinglePortDirectJoint getSinglePortDirectJoint();
     /**
+     * <pre>
+     * Single port trunkConnection config
+     * </pre>
+     *
      * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.SinglePortDirectJoint single_port_direct_joint = 10;</code>
      */
     yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.SinglePortDirectJointOrBuilder getSinglePortDirectJointOrBuilder();
 
     /**
+     * <pre>
+     * LAG trunkConnection config
+     * </pre>
+     *
      * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.LagDirectJoint lag_direct_joint = 11;</code>
      * @return Whether the lagDirectJoint field is set.
      */
     boolean hasLagDirectJoint();
     /**
+     * <pre>
+     * LAG trunkConnection config
+     * </pre>
+     *
      * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.LagDirectJoint lag_direct_joint = 11;</code>
      * @return The lagDirectJoint.
      */
     yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.LagDirectJoint getLagDirectJoint();
     /**
+     * <pre>
+     * LAG trunkConnection config
+     * </pre>
+     *
      * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.LagDirectJoint lag_direct_joint = 11;</code>
      */
     yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.LagDirectJointOrBuilder getLagDirectJointOrBuilder();
 
     /**
+     * <pre>
+     * PartnerJoint trunkConnection config
+     * </pre>
+     *
      * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.PartnerJoint partner_joint_info = 12;</code>
      * @return Whether the partnerJointInfo field is set.
      */
     boolean hasPartnerJointInfo();
     /**
+     * <pre>
+     * PartnerJoint trunkConnection config
+     * </pre>
+     *
      * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.PartnerJoint partner_joint_info = 12;</code>
      * @return The partnerJointInfo.
      */
     yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.PartnerJoint getPartnerJointInfo();
     /**
+     * <pre>
+     * PartnerJoint trunkConnection config
+     * </pre>
+     *
      * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.PartnerJoint partner_joint_info = 12;</code>
      */
     yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.PartnerJointOrBuilder getPartnerJointInfoOrBuilder();
@@ -3035,33 +3073,27 @@ public final class TrunkConnectionServiceOuterClass {
     /**
      * <pre>
      * ID of pointOfPresence that the trunkConnection is deployed on.
-     * Optional.
-     * If is not set scheduler selects it by himself.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+     * <code>.google.protobuf.StringValue point_of_presence_id = 13 [(.yandex.cloud.required) = true];</code>
      * @return Whether the pointOfPresenceId field is set.
      */
     boolean hasPointOfPresenceId();
     /**
      * <pre>
      * ID of pointOfPresence that the trunkConnection is deployed on.
-     * Optional.
-     * If is not set scheduler selects it by himself.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+     * <code>.google.protobuf.StringValue point_of_presence_id = 13 [(.yandex.cloud.required) = true];</code>
      * @return The pointOfPresenceId.
      */
     com.google.protobuf.StringValue getPointOfPresenceId();
     /**
      * <pre>
      * ID of pointOfPresence that the trunkConnection is deployed on.
-     * Optional.
-     * If is not set scheduler selects it by himself.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+     * <code>.google.protobuf.StringValue point_of_presence_id = 13 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.StringValueOrBuilder getPointOfPresenceIdOrBuilder();
 
@@ -3070,7 +3102,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Capacity of the trunkConnection
      * </pre>
      *
-     * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17;</code>
+     * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17 [(.yandex.cloud.required) = true];</code>
      * @return The enum numeric value on the wire for capacity.
      */
     int getCapacityValue();
@@ -3079,7 +3111,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Capacity of the trunkConnection
      * </pre>
      *
-     * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17;</code>
+     * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17 [(.yandex.cloud.required) = true];</code>
      * @return The capacity.
      */
     yandex.cloud.api.cic.v1.TrunkConnectionOuterClass.TrunkConnection.Capacity getCapacity();
@@ -3384,7 +3416,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Type of transceiver that the trunkConnection is deployed on.
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1;</code>
+       * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1 [(.yandex.cloud.required) = true];</code>
        * @return The enum numeric value on the wire for transceiverType.
        */
       int getTransceiverTypeValue();
@@ -3393,7 +3425,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Type of transceiver that the trunkConnection is deployed on.
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1;</code>
+       * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1 [(.yandex.cloud.required) = true];</code>
        * @return The transceiverType.
        */
       yandex.cloud.api.cic.v1.common.TransceiverTypeOuterClass.TransceiverType getTransceiverType();
@@ -3493,7 +3525,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Type of transceiver that the trunkConnection is deployed on.
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1;</code>
+       * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1 [(.yandex.cloud.required) = true];</code>
        * @return The enum numeric value on the wire for transceiverType.
        */
       @java.lang.Override public int getTransceiverTypeValue() {
@@ -3504,7 +3536,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Type of transceiver that the trunkConnection is deployed on.
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1;</code>
+       * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1 [(.yandex.cloud.required) = true];</code>
        * @return The transceiverType.
        */
       @java.lang.Override public yandex.cloud.api.cic.v1.common.TransceiverTypeOuterClass.TransceiverType getTransceiverType() {
@@ -3824,7 +3856,7 @@ public final class TrunkConnectionServiceOuterClass {
          * Type of transceiver that the trunkConnection is deployed on.
          * </pre>
          *
-         * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1;</code>
+         * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1 [(.yandex.cloud.required) = true];</code>
          * @return The enum numeric value on the wire for transceiverType.
          */
         @java.lang.Override public int getTransceiverTypeValue() {
@@ -3835,7 +3867,7 @@ public final class TrunkConnectionServiceOuterClass {
          * Type of transceiver that the trunkConnection is deployed on.
          * </pre>
          *
-         * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1;</code>
+         * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1 [(.yandex.cloud.required) = true];</code>
          * @param value The enum numeric value on the wire for transceiverType to set.
          * @return This builder for chaining.
          */
@@ -3850,7 +3882,7 @@ public final class TrunkConnectionServiceOuterClass {
          * Type of transceiver that the trunkConnection is deployed on.
          * </pre>
          *
-         * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1;</code>
+         * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1 [(.yandex.cloud.required) = true];</code>
          * @return The transceiverType.
          */
         @java.lang.Override
@@ -3864,7 +3896,7 @@ public final class TrunkConnectionServiceOuterClass {
          * Type of transceiver that the trunkConnection is deployed on.
          * </pre>
          *
-         * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1;</code>
+         * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1 [(.yandex.cloud.required) = true];</code>
          * @param value The transceiverType to set.
          * @return This builder for chaining.
          */
@@ -3882,7 +3914,7 @@ public final class TrunkConnectionServiceOuterClass {
          * Type of transceiver that the trunkConnection is deployed on.
          * </pre>
          *
-         * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1;</code>
+         * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1 [(.yandex.cloud.required) = true];</code>
          * @return This builder for chaining.
          */
         public Builder clearTransceiverType() {
@@ -3953,7 +3985,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Type of transceiver that the trunkConnection is deployed on.
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1;</code>
+       * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1 [(.yandex.cloud.required) = true];</code>
        * @return The enum numeric value on the wire for transceiverType.
        */
       int getTransceiverTypeValue();
@@ -3962,7 +3994,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Type of transceiver that the trunkConnection is deployed on.
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1;</code>
+       * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1 [(.yandex.cloud.required) = true];</code>
        * @return The transceiverType.
        */
       yandex.cloud.api.cic.v1.common.TransceiverTypeOuterClass.TransceiverType getTransceiverType();
@@ -3972,7 +4004,7 @@ public final class TrunkConnectionServiceOuterClass {
        * LAG allocation settings that the trunkConnection is deployed on.
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+       * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3 [(.yandex.cloud.required) = true];</code>
        * @return Whether the lagAllocationSettings field is set.
        */
       boolean hasLagAllocationSettings();
@@ -3981,7 +4013,7 @@ public final class TrunkConnectionServiceOuterClass {
        * LAG allocation settings that the trunkConnection is deployed on.
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+       * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3 [(.yandex.cloud.required) = true];</code>
        * @return The lagAllocationSettings.
        */
       yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest getLagAllocationSettings();
@@ -3990,7 +4022,7 @@ public final class TrunkConnectionServiceOuterClass {
        * LAG allocation settings that the trunkConnection is deployed on.
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+       * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3 [(.yandex.cloud.required) = true];</code>
        */
       yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequestOrBuilder getLagAllocationSettingsOrBuilder();
     }
@@ -4102,7 +4134,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Type of transceiver that the trunkConnection is deployed on.
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1;</code>
+       * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1 [(.yandex.cloud.required) = true];</code>
        * @return The enum numeric value on the wire for transceiverType.
        */
       @java.lang.Override public int getTransceiverTypeValue() {
@@ -4113,7 +4145,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Type of transceiver that the trunkConnection is deployed on.
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1;</code>
+       * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1 [(.yandex.cloud.required) = true];</code>
        * @return The transceiverType.
        */
       @java.lang.Override public yandex.cloud.api.cic.v1.common.TransceiverTypeOuterClass.TransceiverType getTransceiverType() {
@@ -4129,7 +4161,7 @@ public final class TrunkConnectionServiceOuterClass {
        * LAG allocation settings that the trunkConnection is deployed on.
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+       * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3 [(.yandex.cloud.required) = true];</code>
        * @return Whether the lagAllocationSettings field is set.
        */
       @java.lang.Override
@@ -4141,7 +4173,7 @@ public final class TrunkConnectionServiceOuterClass {
        * LAG allocation settings that the trunkConnection is deployed on.
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+       * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3 [(.yandex.cloud.required) = true];</code>
        * @return The lagAllocationSettings.
        */
       @java.lang.Override
@@ -4153,7 +4185,7 @@ public final class TrunkConnectionServiceOuterClass {
        * LAG allocation settings that the trunkConnection is deployed on.
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+       * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3 [(.yandex.cloud.required) = true];</code>
        */
       @java.lang.Override
       public yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequestOrBuilder getLagAllocationSettingsOrBuilder() {
@@ -4501,7 +4533,7 @@ public final class TrunkConnectionServiceOuterClass {
          * Type of transceiver that the trunkConnection is deployed on.
          * </pre>
          *
-         * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1;</code>
+         * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1 [(.yandex.cloud.required) = true];</code>
          * @return The enum numeric value on the wire for transceiverType.
          */
         @java.lang.Override public int getTransceiverTypeValue() {
@@ -4512,7 +4544,7 @@ public final class TrunkConnectionServiceOuterClass {
          * Type of transceiver that the trunkConnection is deployed on.
          * </pre>
          *
-         * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1;</code>
+         * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1 [(.yandex.cloud.required) = true];</code>
          * @param value The enum numeric value on the wire for transceiverType to set.
          * @return This builder for chaining.
          */
@@ -4527,7 +4559,7 @@ public final class TrunkConnectionServiceOuterClass {
          * Type of transceiver that the trunkConnection is deployed on.
          * </pre>
          *
-         * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1;</code>
+         * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1 [(.yandex.cloud.required) = true];</code>
          * @return The transceiverType.
          */
         @java.lang.Override
@@ -4541,7 +4573,7 @@ public final class TrunkConnectionServiceOuterClass {
          * Type of transceiver that the trunkConnection is deployed on.
          * </pre>
          *
-         * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1;</code>
+         * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1 [(.yandex.cloud.required) = true];</code>
          * @param value The transceiverType to set.
          * @return This builder for chaining.
          */
@@ -4559,7 +4591,7 @@ public final class TrunkConnectionServiceOuterClass {
          * Type of transceiver that the trunkConnection is deployed on.
          * </pre>
          *
-         * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1;</code>
+         * <code>.yandex.cloud.cic.v1.common.TransceiverType transceiver_type = 1 [(.yandex.cloud.required) = true];</code>
          * @return This builder for chaining.
          */
         public Builder clearTransceiverType() {
@@ -4577,7 +4609,7 @@ public final class TrunkConnectionServiceOuterClass {
          * LAG allocation settings that the trunkConnection is deployed on.
          * </pre>
          *
-         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3 [(.yandex.cloud.required) = true];</code>
          * @return Whether the lagAllocationSettings field is set.
          */
         public boolean hasLagAllocationSettings() {
@@ -4588,7 +4620,7 @@ public final class TrunkConnectionServiceOuterClass {
          * LAG allocation settings that the trunkConnection is deployed on.
          * </pre>
          *
-         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3 [(.yandex.cloud.required) = true];</code>
          * @return The lagAllocationSettings.
          */
         public yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest getLagAllocationSettings() {
@@ -4603,7 +4635,7 @@ public final class TrunkConnectionServiceOuterClass {
          * LAG allocation settings that the trunkConnection is deployed on.
          * </pre>
          *
-         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3 [(.yandex.cloud.required) = true];</code>
          */
         public Builder setLagAllocationSettings(yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest value) {
           if (lagAllocationSettingsBuilder_ == null) {
@@ -4623,7 +4655,7 @@ public final class TrunkConnectionServiceOuterClass {
          * LAG allocation settings that the trunkConnection is deployed on.
          * </pre>
          *
-         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3 [(.yandex.cloud.required) = true];</code>
          */
         public Builder setLagAllocationSettings(
             yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest.Builder builderForValue) {
@@ -4641,7 +4673,7 @@ public final class TrunkConnectionServiceOuterClass {
          * LAG allocation settings that the trunkConnection is deployed on.
          * </pre>
          *
-         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3 [(.yandex.cloud.required) = true];</code>
          */
         public Builder mergeLagAllocationSettings(yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest value) {
           if (lagAllocationSettingsBuilder_ == null) {
@@ -4663,7 +4695,7 @@ public final class TrunkConnectionServiceOuterClass {
          * LAG allocation settings that the trunkConnection is deployed on.
          * </pre>
          *
-         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3 [(.yandex.cloud.required) = true];</code>
          */
         public Builder clearLagAllocationSettings() {
           if (lagAllocationSettingsBuilder_ == null) {
@@ -4681,7 +4713,7 @@ public final class TrunkConnectionServiceOuterClass {
          * LAG allocation settings that the trunkConnection is deployed on.
          * </pre>
          *
-         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3 [(.yandex.cloud.required) = true];</code>
          */
         public yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest.Builder getLagAllocationSettingsBuilder() {
           
@@ -4693,7 +4725,7 @@ public final class TrunkConnectionServiceOuterClass {
          * LAG allocation settings that the trunkConnection is deployed on.
          * </pre>
          *
-         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3 [(.yandex.cloud.required) = true];</code>
          */
         public yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequestOrBuilder getLagAllocationSettingsOrBuilder() {
           if (lagAllocationSettingsBuilder_ != null) {
@@ -4708,7 +4740,7 @@ public final class TrunkConnectionServiceOuterClass {
          * LAG allocation settings that the trunkConnection is deployed on.
          * </pre>
          *
-         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3;</code>
+         * <code>.yandex.cloud.cic.v1.common.LagAllocationSettingsRequest lag_allocation_settings = 3 [(.yandex.cloud.required) = true];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest, yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequest.Builder, yandex.cloud.api.cic.v1.common.LagAllocationSettingsOuterClass.LagAllocationSettingsRequestOrBuilder> 
@@ -4783,33 +4815,27 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of partner that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.    
        * </pre>
        *
-       * <code>.google.protobuf.StringValue partner_id = 4;</code>
+       * <code>.google.protobuf.StringValue partner_id = 4 [(.yandex.cloud.required) = true];</code>
        * @return Whether the partnerId field is set.
        */
       boolean hasPartnerId();
       /**
        * <pre>
        * ID of partner that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.    
        * </pre>
        *
-       * <code>.google.protobuf.StringValue partner_id = 4;</code>
+       * <code>.google.protobuf.StringValue partner_id = 4 [(.yandex.cloud.required) = true];</code>
        * @return The partnerId.
        */
       com.google.protobuf.StringValue getPartnerId();
       /**
        * <pre>
        * ID of partner that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.    
        * </pre>
        *
-       * <code>.google.protobuf.StringValue partner_id = 4;</code>
+       * <code>.google.protobuf.StringValue partner_id = 4 [(.yandex.cloud.required) = true];</code>
        */
       com.google.protobuf.StringValueOrBuilder getPartnerIdOrBuilder();
     }
@@ -4912,11 +4938,9 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of partner that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.    
        * </pre>
        *
-       * <code>.google.protobuf.StringValue partner_id = 4;</code>
+       * <code>.google.protobuf.StringValue partner_id = 4 [(.yandex.cloud.required) = true];</code>
        * @return Whether the partnerId field is set.
        */
       @java.lang.Override
@@ -4926,11 +4950,9 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of partner that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.    
        * </pre>
        *
-       * <code>.google.protobuf.StringValue partner_id = 4;</code>
+       * <code>.google.protobuf.StringValue partner_id = 4 [(.yandex.cloud.required) = true];</code>
        * @return The partnerId.
        */
       @java.lang.Override
@@ -4940,11 +4962,9 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of partner that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.    
        * </pre>
        *
-       * <code>.google.protobuf.StringValue partner_id = 4;</code>
+       * <code>.google.protobuf.StringValue partner_id = 4 [(.yandex.cloud.required) = true];</code>
        */
       @java.lang.Override
       public com.google.protobuf.StringValueOrBuilder getPartnerIdOrBuilder() {
@@ -5276,11 +5296,9 @@ public final class TrunkConnectionServiceOuterClass {
         /**
          * <pre>
          * ID of partner that the trunkConnection is deployed on.
-         * Optional.
-         * If is not set scheduler selects it by himself.    
          * </pre>
          *
-         * <code>.google.protobuf.StringValue partner_id = 4;</code>
+         * <code>.google.protobuf.StringValue partner_id = 4 [(.yandex.cloud.required) = true];</code>
          * @return Whether the partnerId field is set.
          */
         public boolean hasPartnerId() {
@@ -5289,11 +5307,9 @@ public final class TrunkConnectionServiceOuterClass {
         /**
          * <pre>
          * ID of partner that the trunkConnection is deployed on.
-         * Optional.
-         * If is not set scheduler selects it by himself.    
          * </pre>
          *
-         * <code>.google.protobuf.StringValue partner_id = 4;</code>
+         * <code>.google.protobuf.StringValue partner_id = 4 [(.yandex.cloud.required) = true];</code>
          * @return The partnerId.
          */
         public com.google.protobuf.StringValue getPartnerId() {
@@ -5306,11 +5322,9 @@ public final class TrunkConnectionServiceOuterClass {
         /**
          * <pre>
          * ID of partner that the trunkConnection is deployed on.
-         * Optional.
-         * If is not set scheduler selects it by himself.    
          * </pre>
          *
-         * <code>.google.protobuf.StringValue partner_id = 4;</code>
+         * <code>.google.protobuf.StringValue partner_id = 4 [(.yandex.cloud.required) = true];</code>
          */
         public Builder setPartnerId(com.google.protobuf.StringValue value) {
           if (partnerIdBuilder_ == null) {
@@ -5328,11 +5342,9 @@ public final class TrunkConnectionServiceOuterClass {
         /**
          * <pre>
          * ID of partner that the trunkConnection is deployed on.
-         * Optional.
-         * If is not set scheduler selects it by himself.    
          * </pre>
          *
-         * <code>.google.protobuf.StringValue partner_id = 4;</code>
+         * <code>.google.protobuf.StringValue partner_id = 4 [(.yandex.cloud.required) = true];</code>
          */
         public Builder setPartnerId(
             com.google.protobuf.StringValue.Builder builderForValue) {
@@ -5348,11 +5360,9 @@ public final class TrunkConnectionServiceOuterClass {
         /**
          * <pre>
          * ID of partner that the trunkConnection is deployed on.
-         * Optional.
-         * If is not set scheduler selects it by himself.    
          * </pre>
          *
-         * <code>.google.protobuf.StringValue partner_id = 4;</code>
+         * <code>.google.protobuf.StringValue partner_id = 4 [(.yandex.cloud.required) = true];</code>
          */
         public Builder mergePartnerId(com.google.protobuf.StringValue value) {
           if (partnerIdBuilder_ == null) {
@@ -5372,11 +5382,9 @@ public final class TrunkConnectionServiceOuterClass {
         /**
          * <pre>
          * ID of partner that the trunkConnection is deployed on.
-         * Optional.
-         * If is not set scheduler selects it by himself.    
          * </pre>
          *
-         * <code>.google.protobuf.StringValue partner_id = 4;</code>
+         * <code>.google.protobuf.StringValue partner_id = 4 [(.yandex.cloud.required) = true];</code>
          */
         public Builder clearPartnerId() {
           if (partnerIdBuilder_ == null) {
@@ -5392,11 +5400,9 @@ public final class TrunkConnectionServiceOuterClass {
         /**
          * <pre>
          * ID of partner that the trunkConnection is deployed on.
-         * Optional.
-         * If is not set scheduler selects it by himself.    
          * </pre>
          *
-         * <code>.google.protobuf.StringValue partner_id = 4;</code>
+         * <code>.google.protobuf.StringValue partner_id = 4 [(.yandex.cloud.required) = true];</code>
          */
         public com.google.protobuf.StringValue.Builder getPartnerIdBuilder() {
           
@@ -5406,11 +5412,9 @@ public final class TrunkConnectionServiceOuterClass {
         /**
          * <pre>
          * ID of partner that the trunkConnection is deployed on.
-         * Optional.
-         * If is not set scheduler selects it by himself.    
          * </pre>
          *
-         * <code>.google.protobuf.StringValue partner_id = 4;</code>
+         * <code>.google.protobuf.StringValue partner_id = 4 [(.yandex.cloud.required) = true];</code>
          */
         public com.google.protobuf.StringValueOrBuilder getPartnerIdOrBuilder() {
           if (partnerIdBuilder_ != null) {
@@ -5423,11 +5427,9 @@ public final class TrunkConnectionServiceOuterClass {
         /**
          * <pre>
          * ID of partner that the trunkConnection is deployed on.
-         * Optional.
-         * If is not set scheduler selects it by himself.    
          * </pre>
          *
-         * <code>.google.protobuf.StringValue partner_id = 4;</code>
+         * <code>.google.protobuf.StringValue partner_id = 4 [(.yandex.cloud.required) = true];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -5547,7 +5549,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -5570,7 +5572,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -5595,7 +5597,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Optional description of the trunkConnection. 0-256 characters long.
      * </pre>
      *
-     * <code>string description = 2;</code>
+     * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     @java.lang.Override
@@ -5616,7 +5618,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Optional description of the trunkConnection. 0-256 characters long.
      * </pre>
      *
-     * <code>string description = 2;</code>
+     * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
     @java.lang.Override
@@ -5641,7 +5643,7 @@ public final class TrunkConnectionServiceOuterClass {
      * ID of the folder that the trunkConnection belongs to.
      * </pre>
      *
-     * <code>string folder_id = 4;</code>
+     * <code>string folder_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     @java.lang.Override
@@ -5662,7 +5664,7 @@ public final class TrunkConnectionServiceOuterClass {
      * ID of the folder that the trunkConnection belongs to.
      * </pre>
      *
-     * <code>string folder_id = 4;</code>
+     * <code>string folder_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
     @java.lang.Override
@@ -5687,11 +5689,12 @@ public final class TrunkConnectionServiceOuterClass {
      * ID of the region that the trunkConnection belongs to.
      * </pre>
      *
-     * <code>string region_id = 5;</code>
+     * <code>string region_id = 5 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @deprecated
      * @return The regionId.
      */
     @java.lang.Override
-    public java.lang.String getRegionId() {
+    @java.lang.Deprecated public java.lang.String getRegionId() {
       java.lang.Object ref = regionId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -5708,11 +5711,12 @@ public final class TrunkConnectionServiceOuterClass {
      * ID of the region that the trunkConnection belongs to.
      * </pre>
      *
-     * <code>string region_id = 5;</code>
+     * <code>string region_id = 5 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @deprecated
      * @return The bytes for regionId.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getRegionIdBytes() {
       java.lang.Object ref = regionId_;
       if (ref instanceof java.lang.String) {
@@ -5728,6 +5732,10 @@ public final class TrunkConnectionServiceOuterClass {
 
     public static final int SINGLE_PORT_DIRECT_JOINT_FIELD_NUMBER = 10;
     /**
+     * <pre>
+     * Single port trunkConnection config
+     * </pre>
+     *
      * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.SinglePortDirectJoint single_port_direct_joint = 10;</code>
      * @return Whether the singlePortDirectJoint field is set.
      */
@@ -5736,6 +5744,10 @@ public final class TrunkConnectionServiceOuterClass {
       return jointCase_ == 10;
     }
     /**
+     * <pre>
+     * Single port trunkConnection config
+     * </pre>
+     *
      * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.SinglePortDirectJoint single_port_direct_joint = 10;</code>
      * @return The singlePortDirectJoint.
      */
@@ -5747,6 +5759,10 @@ public final class TrunkConnectionServiceOuterClass {
       return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.SinglePortDirectJoint.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Single port trunkConnection config
+     * </pre>
+     *
      * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.SinglePortDirectJoint single_port_direct_joint = 10;</code>
      */
     @java.lang.Override
@@ -5759,6 +5775,10 @@ public final class TrunkConnectionServiceOuterClass {
 
     public static final int LAG_DIRECT_JOINT_FIELD_NUMBER = 11;
     /**
+     * <pre>
+     * LAG trunkConnection config
+     * </pre>
+     *
      * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.LagDirectJoint lag_direct_joint = 11;</code>
      * @return Whether the lagDirectJoint field is set.
      */
@@ -5767,6 +5787,10 @@ public final class TrunkConnectionServiceOuterClass {
       return jointCase_ == 11;
     }
     /**
+     * <pre>
+     * LAG trunkConnection config
+     * </pre>
+     *
      * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.LagDirectJoint lag_direct_joint = 11;</code>
      * @return The lagDirectJoint.
      */
@@ -5778,6 +5802,10 @@ public final class TrunkConnectionServiceOuterClass {
       return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.LagDirectJoint.getDefaultInstance();
     }
     /**
+     * <pre>
+     * LAG trunkConnection config
+     * </pre>
+     *
      * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.LagDirectJoint lag_direct_joint = 11;</code>
      */
     @java.lang.Override
@@ -5790,6 +5818,10 @@ public final class TrunkConnectionServiceOuterClass {
 
     public static final int PARTNER_JOINT_INFO_FIELD_NUMBER = 12;
     /**
+     * <pre>
+     * PartnerJoint trunkConnection config
+     * </pre>
+     *
      * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.PartnerJoint partner_joint_info = 12;</code>
      * @return Whether the partnerJointInfo field is set.
      */
@@ -5798,6 +5830,10 @@ public final class TrunkConnectionServiceOuterClass {
       return jointCase_ == 12;
     }
     /**
+     * <pre>
+     * PartnerJoint trunkConnection config
+     * </pre>
+     *
      * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.PartnerJoint partner_joint_info = 12;</code>
      * @return The partnerJointInfo.
      */
@@ -5809,6 +5845,10 @@ public final class TrunkConnectionServiceOuterClass {
       return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.PartnerJoint.getDefaultInstance();
     }
     /**
+     * <pre>
+     * PartnerJoint trunkConnection config
+     * </pre>
+     *
      * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.PartnerJoint partner_joint_info = 12;</code>
      */
     @java.lang.Override
@@ -5824,11 +5864,9 @@ public final class TrunkConnectionServiceOuterClass {
     /**
      * <pre>
      * ID of pointOfPresence that the trunkConnection is deployed on.
-     * Optional.
-     * If is not set scheduler selects it by himself.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+     * <code>.google.protobuf.StringValue point_of_presence_id = 13 [(.yandex.cloud.required) = true];</code>
      * @return Whether the pointOfPresenceId field is set.
      */
     @java.lang.Override
@@ -5838,11 +5876,9 @@ public final class TrunkConnectionServiceOuterClass {
     /**
      * <pre>
      * ID of pointOfPresence that the trunkConnection is deployed on.
-     * Optional.
-     * If is not set scheduler selects it by himself.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+     * <code>.google.protobuf.StringValue point_of_presence_id = 13 [(.yandex.cloud.required) = true];</code>
      * @return The pointOfPresenceId.
      */
     @java.lang.Override
@@ -5852,11 +5888,9 @@ public final class TrunkConnectionServiceOuterClass {
     /**
      * <pre>
      * ID of pointOfPresence that the trunkConnection is deployed on.
-     * Optional.
-     * If is not set scheduler selects it by himself.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+     * <code>.google.protobuf.StringValue point_of_presence_id = 13 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getPointOfPresenceIdOrBuilder() {
@@ -5870,7 +5904,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Capacity of the trunkConnection
      * </pre>
      *
-     * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17;</code>
+     * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17 [(.yandex.cloud.required) = true];</code>
      * @return The enum numeric value on the wire for capacity.
      */
     @java.lang.Override public int getCapacityValue() {
@@ -5881,7 +5915,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Capacity of the trunkConnection
      * </pre>
      *
-     * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17;</code>
+     * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17 [(.yandex.cloud.required) = true];</code>
      * @return The capacity.
      */
     @java.lang.Override public yandex.cloud.api.cic.v1.TrunkConnectionOuterClass.TrunkConnection.Capacity getCapacity() {
@@ -6610,7 +6644,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -6632,7 +6666,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -6655,7 +6689,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -6676,7 +6710,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -6692,7 +6726,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -6714,7 +6748,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Optional description of the trunkConnection. 0-256 characters long.
        * </pre>
        *
-       * <code>string description = 2;</code>
+       * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The description.
        */
       public java.lang.String getDescription() {
@@ -6734,7 +6768,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Optional description of the trunkConnection. 0-256 characters long.
        * </pre>
        *
-       * <code>string description = 2;</code>
+       * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
@@ -6755,7 +6789,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Optional description of the trunkConnection. 0-256 characters long.
        * </pre>
        *
-       * <code>string description = 2;</code>
+       * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
        */
@@ -6774,7 +6808,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Optional description of the trunkConnection. 0-256 characters long.
        * </pre>
        *
-       * <code>string description = 2;</code>
+       * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
@@ -6788,7 +6822,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Optional description of the trunkConnection. 0-256 characters long.
        * </pre>
        *
-       * <code>string description = 2;</code>
+       * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
@@ -6810,7 +6844,7 @@ public final class TrunkConnectionServiceOuterClass {
        * ID of the folder that the trunkConnection belongs to.
        * </pre>
        *
-       * <code>string folder_id = 4;</code>
+       * <code>string folder_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The folderId.
        */
       public java.lang.String getFolderId() {
@@ -6830,7 +6864,7 @@ public final class TrunkConnectionServiceOuterClass {
        * ID of the folder that the trunkConnection belongs to.
        * </pre>
        *
-       * <code>string folder_id = 4;</code>
+       * <code>string folder_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
@@ -6851,7 +6885,7 @@ public final class TrunkConnectionServiceOuterClass {
        * ID of the folder that the trunkConnection belongs to.
        * </pre>
        *
-       * <code>string folder_id = 4;</code>
+       * <code>string folder_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
        */
@@ -6870,7 +6904,7 @@ public final class TrunkConnectionServiceOuterClass {
        * ID of the folder that the trunkConnection belongs to.
        * </pre>
        *
-       * <code>string folder_id = 4;</code>
+       * <code>string folder_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFolderId() {
@@ -6884,7 +6918,7 @@ public final class TrunkConnectionServiceOuterClass {
        * ID of the folder that the trunkConnection belongs to.
        * </pre>
        *
-       * <code>string folder_id = 4;</code>
+       * <code>string folder_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
        */
@@ -6906,10 +6940,11 @@ public final class TrunkConnectionServiceOuterClass {
        * ID of the region that the trunkConnection belongs to.
        * </pre>
        *
-       * <code>string region_id = 5;</code>
+       * <code>string region_id = 5 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @deprecated
        * @return The regionId.
        */
-      public java.lang.String getRegionId() {
+      @java.lang.Deprecated public java.lang.String getRegionId() {
         java.lang.Object ref = regionId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -6926,10 +6961,11 @@ public final class TrunkConnectionServiceOuterClass {
        * ID of the region that the trunkConnection belongs to.
        * </pre>
        *
-       * <code>string region_id = 5;</code>
+       * <code>string region_id = 5 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @deprecated
        * @return The bytes for regionId.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getRegionIdBytes() {
         java.lang.Object ref = regionId_;
         if (ref instanceof String) {
@@ -6947,11 +6983,12 @@ public final class TrunkConnectionServiceOuterClass {
        * ID of the region that the trunkConnection belongs to.
        * </pre>
        *
-       * <code>string region_id = 5;</code>
+       * <code>string region_id = 5 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @deprecated
        * @param value The regionId to set.
        * @return This builder for chaining.
        */
-      public Builder setRegionId(
+      @java.lang.Deprecated public Builder setRegionId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -6966,10 +7003,11 @@ public final class TrunkConnectionServiceOuterClass {
        * ID of the region that the trunkConnection belongs to.
        * </pre>
        *
-       * <code>string region_id = 5;</code>
+       * <code>string region_id = 5 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearRegionId() {
+      @java.lang.Deprecated public Builder clearRegionId() {
         
         regionId_ = getDefaultInstance().getRegionId();
         onChanged();
@@ -6980,11 +7018,12 @@ public final class TrunkConnectionServiceOuterClass {
        * ID of the region that the trunkConnection belongs to.
        * </pre>
        *
-       * <code>string region_id = 5;</code>
+       * <code>string region_id = 5 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @deprecated
        * @param value The bytes for regionId to set.
        * @return This builder for chaining.
        */
-      public Builder setRegionIdBytes(
+      @java.lang.Deprecated public Builder setRegionIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -6999,6 +7038,10 @@ public final class TrunkConnectionServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.SinglePortDirectJoint, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.SinglePortDirectJoint.Builder, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.SinglePortDirectJointOrBuilder> singlePortDirectJointBuilder_;
       /**
+       * <pre>
+       * Single port trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.SinglePortDirectJoint single_port_direct_joint = 10;</code>
        * @return Whether the singlePortDirectJoint field is set.
        */
@@ -7007,6 +7050,10 @@ public final class TrunkConnectionServiceOuterClass {
         return jointCase_ == 10;
       }
       /**
+       * <pre>
+       * Single port trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.SinglePortDirectJoint single_port_direct_joint = 10;</code>
        * @return The singlePortDirectJoint.
        */
@@ -7025,6 +7072,10 @@ public final class TrunkConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Single port trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.SinglePortDirectJoint single_port_direct_joint = 10;</code>
        */
       public Builder setSinglePortDirectJoint(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.SinglePortDirectJoint value) {
@@ -7041,6 +7092,10 @@ public final class TrunkConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Single port trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.SinglePortDirectJoint single_port_direct_joint = 10;</code>
        */
       public Builder setSinglePortDirectJoint(
@@ -7055,6 +7110,10 @@ public final class TrunkConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Single port trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.SinglePortDirectJoint single_port_direct_joint = 10;</code>
        */
       public Builder mergeSinglePortDirectJoint(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.SinglePortDirectJoint value) {
@@ -7077,6 +7136,10 @@ public final class TrunkConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Single port trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.SinglePortDirectJoint single_port_direct_joint = 10;</code>
        */
       public Builder clearSinglePortDirectJoint() {
@@ -7096,12 +7159,20 @@ public final class TrunkConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Single port trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.SinglePortDirectJoint single_port_direct_joint = 10;</code>
        */
       public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.SinglePortDirectJoint.Builder getSinglePortDirectJointBuilder() {
         return getSinglePortDirectJointFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Single port trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.SinglePortDirectJoint single_port_direct_joint = 10;</code>
        */
       @java.lang.Override
@@ -7116,6 +7187,10 @@ public final class TrunkConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Single port trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.SinglePortDirectJoint single_port_direct_joint = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7140,6 +7215,10 @@ public final class TrunkConnectionServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.LagDirectJoint, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.LagDirectJoint.Builder, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.LagDirectJointOrBuilder> lagDirectJointBuilder_;
       /**
+       * <pre>
+       * LAG trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.LagDirectJoint lag_direct_joint = 11;</code>
        * @return Whether the lagDirectJoint field is set.
        */
@@ -7148,6 +7227,10 @@ public final class TrunkConnectionServiceOuterClass {
         return jointCase_ == 11;
       }
       /**
+       * <pre>
+       * LAG trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.LagDirectJoint lag_direct_joint = 11;</code>
        * @return The lagDirectJoint.
        */
@@ -7166,6 +7249,10 @@ public final class TrunkConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * LAG trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.LagDirectJoint lag_direct_joint = 11;</code>
        */
       public Builder setLagDirectJoint(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.LagDirectJoint value) {
@@ -7182,6 +7269,10 @@ public final class TrunkConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * LAG trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.LagDirectJoint lag_direct_joint = 11;</code>
        */
       public Builder setLagDirectJoint(
@@ -7196,6 +7287,10 @@ public final class TrunkConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * LAG trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.LagDirectJoint lag_direct_joint = 11;</code>
        */
       public Builder mergeLagDirectJoint(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.LagDirectJoint value) {
@@ -7218,6 +7313,10 @@ public final class TrunkConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * LAG trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.LagDirectJoint lag_direct_joint = 11;</code>
        */
       public Builder clearLagDirectJoint() {
@@ -7237,12 +7336,20 @@ public final class TrunkConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * LAG trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.LagDirectJoint lag_direct_joint = 11;</code>
        */
       public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.LagDirectJoint.Builder getLagDirectJointBuilder() {
         return getLagDirectJointFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * LAG trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.LagDirectJoint lag_direct_joint = 11;</code>
        */
       @java.lang.Override
@@ -7257,6 +7364,10 @@ public final class TrunkConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * LAG trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.LagDirectJoint lag_direct_joint = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7281,6 +7392,10 @@ public final class TrunkConnectionServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.PartnerJoint, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.PartnerJoint.Builder, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.PartnerJointOrBuilder> partnerJointInfoBuilder_;
       /**
+       * <pre>
+       * PartnerJoint trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.PartnerJoint partner_joint_info = 12;</code>
        * @return Whether the partnerJointInfo field is set.
        */
@@ -7289,6 +7404,10 @@ public final class TrunkConnectionServiceOuterClass {
         return jointCase_ == 12;
       }
       /**
+       * <pre>
+       * PartnerJoint trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.PartnerJoint partner_joint_info = 12;</code>
        * @return The partnerJointInfo.
        */
@@ -7307,6 +7426,10 @@ public final class TrunkConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * PartnerJoint trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.PartnerJoint partner_joint_info = 12;</code>
        */
       public Builder setPartnerJointInfo(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.PartnerJoint value) {
@@ -7323,6 +7446,10 @@ public final class TrunkConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * PartnerJoint trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.PartnerJoint partner_joint_info = 12;</code>
        */
       public Builder setPartnerJointInfo(
@@ -7337,6 +7464,10 @@ public final class TrunkConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * PartnerJoint trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.PartnerJoint partner_joint_info = 12;</code>
        */
       public Builder mergePartnerJointInfo(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.PartnerJoint value) {
@@ -7359,6 +7490,10 @@ public final class TrunkConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * PartnerJoint trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.PartnerJoint partner_joint_info = 12;</code>
        */
       public Builder clearPartnerJointInfo() {
@@ -7378,12 +7513,20 @@ public final class TrunkConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * PartnerJoint trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.PartnerJoint partner_joint_info = 12;</code>
        */
       public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.CreateTrunkConnectionRequest.PartnerJoint.Builder getPartnerJointInfoBuilder() {
         return getPartnerJointInfoFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * PartnerJoint trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.PartnerJoint partner_joint_info = 12;</code>
        */
       @java.lang.Override
@@ -7398,6 +7541,10 @@ public final class TrunkConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * PartnerJoint trunkConnection config
+       * </pre>
+       *
        * <code>.yandex.cloud.cic.v1.CreateTrunkConnectionRequest.PartnerJoint partner_joint_info = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7425,11 +7572,9 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+       * <code>.google.protobuf.StringValue point_of_presence_id = 13 [(.yandex.cloud.required) = true];</code>
        * @return Whether the pointOfPresenceId field is set.
        */
       public boolean hasPointOfPresenceId() {
@@ -7438,11 +7583,9 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+       * <code>.google.protobuf.StringValue point_of_presence_id = 13 [(.yandex.cloud.required) = true];</code>
        * @return The pointOfPresenceId.
        */
       public com.google.protobuf.StringValue getPointOfPresenceId() {
@@ -7455,11 +7598,9 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+       * <code>.google.protobuf.StringValue point_of_presence_id = 13 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setPointOfPresenceId(com.google.protobuf.StringValue value) {
         if (pointOfPresenceIdBuilder_ == null) {
@@ -7477,11 +7618,9 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+       * <code>.google.protobuf.StringValue point_of_presence_id = 13 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setPointOfPresenceId(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -7497,11 +7636,9 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+       * <code>.google.protobuf.StringValue point_of_presence_id = 13 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergePointOfPresenceId(com.google.protobuf.StringValue value) {
         if (pointOfPresenceIdBuilder_ == null) {
@@ -7521,11 +7658,9 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+       * <code>.google.protobuf.StringValue point_of_presence_id = 13 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearPointOfPresenceId() {
         if (pointOfPresenceIdBuilder_ == null) {
@@ -7541,11 +7676,9 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+       * <code>.google.protobuf.StringValue point_of_presence_id = 13 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.StringValue.Builder getPointOfPresenceIdBuilder() {
         
@@ -7555,11 +7688,9 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+       * <code>.google.protobuf.StringValue point_of_presence_id = 13 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.StringValueOrBuilder getPointOfPresenceIdOrBuilder() {
         if (pointOfPresenceIdBuilder_ != null) {
@@ -7572,11 +7703,9 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+       * <code>.google.protobuf.StringValue point_of_presence_id = 13 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -7598,7 +7727,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Capacity of the trunkConnection
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17;</code>
+       * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17 [(.yandex.cloud.required) = true];</code>
        * @return The enum numeric value on the wire for capacity.
        */
       @java.lang.Override public int getCapacityValue() {
@@ -7609,7 +7738,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Capacity of the trunkConnection
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17;</code>
+       * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17 [(.yandex.cloud.required) = true];</code>
        * @param value The enum numeric value on the wire for capacity to set.
        * @return This builder for chaining.
        */
@@ -7624,7 +7753,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Capacity of the trunkConnection
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17;</code>
+       * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17 [(.yandex.cloud.required) = true];</code>
        * @return The capacity.
        */
       @java.lang.Override
@@ -7638,7 +7767,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Capacity of the trunkConnection
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17;</code>
+       * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17 [(.yandex.cloud.required) = true];</code>
        * @param value The capacity to set.
        * @return This builder for chaining.
        */
@@ -7656,7 +7785,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Capacity of the trunkConnection
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17;</code>
+       * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearCapacity() {
@@ -8623,7 +8752,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
-     * <code>string name = 3;</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -8634,7 +8763,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
-     * <code>string name = 3;</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -8645,7 +8774,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Optional description of the trunkConnection. 0-256 characters long.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
@@ -8654,7 +8783,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Optional description of the trunkConnection. 0-256 characters long.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
     com.google.protobuf.ByteString
@@ -8665,60 +8794,58 @@ public final class TrunkConnectionServiceOuterClass {
      * ID of the region that the trunkConnection belongs to.
      * </pre>
      *
-     * <code>string region_id = 7;</code>
+     * <code>string region_id = 7 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @deprecated
      * @return The regionId.
      */
-    java.lang.String getRegionId();
+    @java.lang.Deprecated java.lang.String getRegionId();
     /**
      * <pre>
      * ID of the region that the trunkConnection belongs to.
      * </pre>
      *
-     * <code>string region_id = 7;</code>
+     * <code>string region_id = 7 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @deprecated
      * @return The bytes for regionId.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getRegionIdBytes();
 
     /**
      * <pre>
      * ID of pointOfPresence that the trunkConnection is deployed on.
-     * Optional.
-     * If is not set scheduler selects it by himself.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+     * <code>.google.protobuf.StringValue point_of_presence_id = 13 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the pointOfPresenceId field is set.
      */
-    boolean hasPointOfPresenceId();
+    @java.lang.Deprecated boolean hasPointOfPresenceId();
     /**
      * <pre>
      * ID of pointOfPresence that the trunkConnection is deployed on.
-     * Optional.
-     * If is not set scheduler selects it by himself.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+     * <code>.google.protobuf.StringValue point_of_presence_id = 13 [deprecated = true];</code>
+     * @deprecated
      * @return The pointOfPresenceId.
      */
-    com.google.protobuf.StringValue getPointOfPresenceId();
+    @java.lang.Deprecated com.google.protobuf.StringValue getPointOfPresenceId();
     /**
      * <pre>
      * ID of pointOfPresence that the trunkConnection is deployed on.
-     * Optional.
-     * If is not set scheduler selects it by himself.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+     * <code>.google.protobuf.StringValue point_of_presence_id = 13 [deprecated = true];</code>
      */
-    com.google.protobuf.StringValueOrBuilder getPointOfPresenceIdOrBuilder();
+    @java.lang.Deprecated com.google.protobuf.StringValueOrBuilder getPointOfPresenceIdOrBuilder();
 
     /**
      * <pre>
      * Capacity of the trunkConnection
      * </pre>
      *
-     * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17;</code>
+     * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17 [(.yandex.cloud.required) = true];</code>
      * @return The enum numeric value on the wire for capacity.
      */
     int getCapacityValue();
@@ -8727,7 +8854,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Capacity of the trunkConnection
      * </pre>
      *
-     * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17;</code>
+     * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17 [(.yandex.cloud.required) = true];</code>
      * @return The capacity.
      */
     yandex.cloud.api.cic.v1.TrunkConnectionOuterClass.TrunkConnection.Capacity getCapacity();
@@ -9085,7 +9212,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
-     * <code>string name = 3;</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -9108,7 +9235,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
-     * <code>string name = 3;</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -9133,7 +9260,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Optional description of the trunkConnection. 0-256 characters long.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     @java.lang.Override
@@ -9154,7 +9281,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Optional description of the trunkConnection. 0-256 characters long.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
     @java.lang.Override
@@ -9179,11 +9306,12 @@ public final class TrunkConnectionServiceOuterClass {
      * ID of the region that the trunkConnection belongs to.
      * </pre>
      *
-     * <code>string region_id = 7;</code>
+     * <code>string region_id = 7 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @deprecated
      * @return The regionId.
      */
     @java.lang.Override
-    public java.lang.String getRegionId() {
+    @java.lang.Deprecated public java.lang.String getRegionId() {
       java.lang.Object ref = regionId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -9200,11 +9328,12 @@ public final class TrunkConnectionServiceOuterClass {
      * ID of the region that the trunkConnection belongs to.
      * </pre>
      *
-     * <code>string region_id = 7;</code>
+     * <code>string region_id = 7 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @deprecated
      * @return The bytes for regionId.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getRegionIdBytes() {
       java.lang.Object ref = regionId_;
       if (ref instanceof java.lang.String) {
@@ -9223,42 +9352,38 @@ public final class TrunkConnectionServiceOuterClass {
     /**
      * <pre>
      * ID of pointOfPresence that the trunkConnection is deployed on.
-     * Optional.
-     * If is not set scheduler selects it by himself.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+     * <code>.google.protobuf.StringValue point_of_presence_id = 13 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the pointOfPresenceId field is set.
      */
     @java.lang.Override
-    public boolean hasPointOfPresenceId() {
+    @java.lang.Deprecated public boolean hasPointOfPresenceId() {
       return pointOfPresenceId_ != null;
     }
     /**
      * <pre>
      * ID of pointOfPresence that the trunkConnection is deployed on.
-     * Optional.
-     * If is not set scheduler selects it by himself.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+     * <code>.google.protobuf.StringValue point_of_presence_id = 13 [deprecated = true];</code>
+     * @deprecated
      * @return The pointOfPresenceId.
      */
     @java.lang.Override
-    public com.google.protobuf.StringValue getPointOfPresenceId() {
+    @java.lang.Deprecated public com.google.protobuf.StringValue getPointOfPresenceId() {
       return pointOfPresenceId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : pointOfPresenceId_;
     }
     /**
      * <pre>
      * ID of pointOfPresence that the trunkConnection is deployed on.
-     * Optional.
-     * If is not set scheduler selects it by himself.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+     * <code>.google.protobuf.StringValue point_of_presence_id = 13 [deprecated = true];</code>
      */
     @java.lang.Override
-    public com.google.protobuf.StringValueOrBuilder getPointOfPresenceIdOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.StringValueOrBuilder getPointOfPresenceIdOrBuilder() {
       return getPointOfPresenceId();
     }
 
@@ -9269,7 +9394,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Capacity of the trunkConnection
      * </pre>
      *
-     * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17;</code>
+     * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17 [(.yandex.cloud.required) = true];</code>
      * @return The enum numeric value on the wire for capacity.
      */
     @java.lang.Override public int getCapacityValue() {
@@ -9280,7 +9405,7 @@ public final class TrunkConnectionServiceOuterClass {
      * Capacity of the trunkConnection
      * </pre>
      *
-     * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17;</code>
+     * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17 [(.yandex.cloud.required) = true];</code>
      * @return The capacity.
      */
     @java.lang.Override public yandex.cloud.api.cic.v1.TrunkConnectionOuterClass.TrunkConnection.Capacity getCapacity() {
@@ -10180,7 +10305,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
-       * <code>string name = 3;</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -10202,7 +10327,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
-       * <code>string name = 3;</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -10225,7 +10350,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
-       * <code>string name = 3;</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -10246,7 +10371,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
-       * <code>string name = 3;</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -10262,7 +10387,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
-       * <code>string name = 3;</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -10284,7 +10409,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Optional description of the trunkConnection. 0-256 characters long.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The description.
        */
       public java.lang.String getDescription() {
@@ -10304,7 +10429,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Optional description of the trunkConnection. 0-256 characters long.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
@@ -10325,7 +10450,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Optional description of the trunkConnection. 0-256 characters long.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
        */
@@ -10344,7 +10469,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Optional description of the trunkConnection. 0-256 characters long.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
@@ -10358,7 +10483,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Optional description of the trunkConnection. 0-256 characters long.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
@@ -10380,10 +10505,11 @@ public final class TrunkConnectionServiceOuterClass {
        * ID of the region that the trunkConnection belongs to.
        * </pre>
        *
-       * <code>string region_id = 7;</code>
+       * <code>string region_id = 7 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @deprecated
        * @return The regionId.
        */
-      public java.lang.String getRegionId() {
+      @java.lang.Deprecated public java.lang.String getRegionId() {
         java.lang.Object ref = regionId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -10400,10 +10526,11 @@ public final class TrunkConnectionServiceOuterClass {
        * ID of the region that the trunkConnection belongs to.
        * </pre>
        *
-       * <code>string region_id = 7;</code>
+       * <code>string region_id = 7 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @deprecated
        * @return The bytes for regionId.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getRegionIdBytes() {
         java.lang.Object ref = regionId_;
         if (ref instanceof String) {
@@ -10421,11 +10548,12 @@ public final class TrunkConnectionServiceOuterClass {
        * ID of the region that the trunkConnection belongs to.
        * </pre>
        *
-       * <code>string region_id = 7;</code>
+       * <code>string region_id = 7 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @deprecated
        * @param value The regionId to set.
        * @return This builder for chaining.
        */
-      public Builder setRegionId(
+      @java.lang.Deprecated public Builder setRegionId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -10440,10 +10568,11 @@ public final class TrunkConnectionServiceOuterClass {
        * ID of the region that the trunkConnection belongs to.
        * </pre>
        *
-       * <code>string region_id = 7;</code>
+       * <code>string region_id = 7 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearRegionId() {
+      @java.lang.Deprecated public Builder clearRegionId() {
         
         regionId_ = getDefaultInstance().getRegionId();
         onChanged();
@@ -10454,11 +10583,12 @@ public final class TrunkConnectionServiceOuterClass {
        * ID of the region that the trunkConnection belongs to.
        * </pre>
        *
-       * <code>string region_id = 7;</code>
+       * <code>string region_id = 7 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @deprecated
        * @param value The bytes for regionId to set.
        * @return This builder for chaining.
        */
-      public Builder setRegionIdBytes(
+      @java.lang.Deprecated public Builder setRegionIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -10476,27 +10606,25 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+       * <code>.google.protobuf.StringValue point_of_presence_id = 13 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the pointOfPresenceId field is set.
        */
-      public boolean hasPointOfPresenceId() {
+      @java.lang.Deprecated public boolean hasPointOfPresenceId() {
         return pointOfPresenceIdBuilder_ != null || pointOfPresenceId_ != null;
       }
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+       * <code>.google.protobuf.StringValue point_of_presence_id = 13 [deprecated = true];</code>
+       * @deprecated
        * @return The pointOfPresenceId.
        */
-      public com.google.protobuf.StringValue getPointOfPresenceId() {
+      @java.lang.Deprecated public com.google.protobuf.StringValue getPointOfPresenceId() {
         if (pointOfPresenceIdBuilder_ == null) {
           return pointOfPresenceId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : pointOfPresenceId_;
         } else {
@@ -10506,13 +10634,11 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+       * <code>.google.protobuf.StringValue point_of_presence_id = 13 [deprecated = true];</code>
        */
-      public Builder setPointOfPresenceId(com.google.protobuf.StringValue value) {
+      @java.lang.Deprecated public Builder setPointOfPresenceId(com.google.protobuf.StringValue value) {
         if (pointOfPresenceIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10528,13 +10654,11 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+       * <code>.google.protobuf.StringValue point_of_presence_id = 13 [deprecated = true];</code>
        */
-      public Builder setPointOfPresenceId(
+      @java.lang.Deprecated public Builder setPointOfPresenceId(
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (pointOfPresenceIdBuilder_ == null) {
           pointOfPresenceId_ = builderForValue.build();
@@ -10548,13 +10672,11 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+       * <code>.google.protobuf.StringValue point_of_presence_id = 13 [deprecated = true];</code>
        */
-      public Builder mergePointOfPresenceId(com.google.protobuf.StringValue value) {
+      @java.lang.Deprecated public Builder mergePointOfPresenceId(com.google.protobuf.StringValue value) {
         if (pointOfPresenceIdBuilder_ == null) {
           if (pointOfPresenceId_ != null) {
             pointOfPresenceId_ =
@@ -10572,13 +10694,11 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+       * <code>.google.protobuf.StringValue point_of_presence_id = 13 [deprecated = true];</code>
        */
-      public Builder clearPointOfPresenceId() {
+      @java.lang.Deprecated public Builder clearPointOfPresenceId() {
         if (pointOfPresenceIdBuilder_ == null) {
           pointOfPresenceId_ = null;
           onChanged();
@@ -10592,13 +10712,11 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+       * <code>.google.protobuf.StringValue point_of_presence_id = 13 [deprecated = true];</code>
        */
-      public com.google.protobuf.StringValue.Builder getPointOfPresenceIdBuilder() {
+      @java.lang.Deprecated public com.google.protobuf.StringValue.Builder getPointOfPresenceIdBuilder() {
         
         onChanged();
         return getPointOfPresenceIdFieldBuilder().getBuilder();
@@ -10606,13 +10724,11 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+       * <code>.google.protobuf.StringValue point_of_presence_id = 13 [deprecated = true];</code>
        */
-      public com.google.protobuf.StringValueOrBuilder getPointOfPresenceIdOrBuilder() {
+      @java.lang.Deprecated public com.google.protobuf.StringValueOrBuilder getPointOfPresenceIdOrBuilder() {
         if (pointOfPresenceIdBuilder_ != null) {
           return pointOfPresenceIdBuilder_.getMessageOrBuilder();
         } else {
@@ -10623,11 +10739,9 @@ public final class TrunkConnectionServiceOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue point_of_presence_id = 13;</code>
+       * <code>.google.protobuf.StringValue point_of_presence_id = 13 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -10649,7 +10763,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Capacity of the trunkConnection
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17;</code>
+       * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17 [(.yandex.cloud.required) = true];</code>
        * @return The enum numeric value on the wire for capacity.
        */
       @java.lang.Override public int getCapacityValue() {
@@ -10660,7 +10774,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Capacity of the trunkConnection
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17;</code>
+       * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17 [(.yandex.cloud.required) = true];</code>
        * @param value The enum numeric value on the wire for capacity to set.
        * @return This builder for chaining.
        */
@@ -10675,7 +10789,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Capacity of the trunkConnection
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17;</code>
+       * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17 [(.yandex.cloud.required) = true];</code>
        * @return The capacity.
        */
       @java.lang.Override
@@ -10689,7 +10803,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Capacity of the trunkConnection
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17;</code>
+       * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17 [(.yandex.cloud.required) = true];</code>
        * @param value The capacity to set.
        * @return This builder for chaining.
        */
@@ -10707,7 +10821,7 @@ public final class TrunkConnectionServiceOuterClass {
        * Capacity of the trunkConnection
        * </pre>
        *
-       * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17;</code>
+       * <code>.yandex.cloud.cic.v1.TrunkConnection.Capacity capacity = 17 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearCapacity() {
@@ -12824,6 +12938,1418 @@ public final class TrunkConnectionServiceOuterClass {
 
   }
 
+  public interface MoveTrunkConnectionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.MoveTrunkConnectionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the TrunkConnection resource to move.
+     * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The trunkConnectionId.
+     */
+    java.lang.String getTrunkConnectionId();
+    /**
+     * <pre>
+     * ID of the TrunkConnection resource to move.
+     * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for trunkConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getTrunkConnectionIdBytes();
+
+    /**
+     * <pre>
+     * ID of the folder to which trunkConnection will be moved.
+     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The destinationFolderId.
+     */
+    java.lang.String getDestinationFolderId();
+    /**
+     * <pre>
+     * ID of the folder to which trunkConnection will be moved.
+     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for destinationFolderId.
+     */
+    com.google.protobuf.ByteString
+        getDestinationFolderIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.MoveTrunkConnectionRequest}
+   */
+  public static final class MoveTrunkConnectionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.MoveTrunkConnectionRequest)
+      MoveTrunkConnectionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MoveTrunkConnectionRequest.newBuilder() to construct.
+    private MoveTrunkConnectionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MoveTrunkConnectionRequest() {
+      trunkConnectionId_ = "";
+      destinationFolderId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MoveTrunkConnectionRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MoveTrunkConnectionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              trunkConnectionId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              destinationFolderId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest.class, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest.Builder.class);
+    }
+
+    public static final int TRUNK_CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object trunkConnectionId_;
+    /**
+     * <pre>
+     * ID of the TrunkConnection resource to move.
+     * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The trunkConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getTrunkConnectionId() {
+      java.lang.Object ref = trunkConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        trunkConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the TrunkConnection resource to move.
+     * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for trunkConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTrunkConnectionIdBytes() {
+      java.lang.Object ref = trunkConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        trunkConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESTINATION_FOLDER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object destinationFolderId_;
+    /**
+     * <pre>
+     * ID of the folder to which trunkConnection will be moved.
+     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The destinationFolderId.
+     */
+    @java.lang.Override
+    public java.lang.String getDestinationFolderId() {
+      java.lang.Object ref = destinationFolderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destinationFolderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the folder to which trunkConnection will be moved.
+     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for destinationFolderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDestinationFolderIdBytes() {
+      java.lang.Object ref = destinationFolderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destinationFolderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(trunkConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, trunkConnectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationFolderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, destinationFolderId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(trunkConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, trunkConnectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationFolderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, destinationFolderId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest other = (yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest) obj;
+
+      if (!getTrunkConnectionId()
+          .equals(other.getTrunkConnectionId())) return false;
+      if (!getDestinationFolderId()
+          .equals(other.getDestinationFolderId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TRUNK_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTrunkConnectionId().hashCode();
+      hash = (37 * hash) + DESTINATION_FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDestinationFolderId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.MoveTrunkConnectionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.MoveTrunkConnectionRequest)
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest.class, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        trunkConnectionId_ = "";
+
+        destinationFolderId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest build() {
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest buildPartial() {
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest result = new yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest(this);
+        result.trunkConnectionId_ = trunkConnectionId_;
+        result.destinationFolderId_ = destinationFolderId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest) {
+          return mergeFrom((yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest other) {
+        if (other == yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest.getDefaultInstance()) return this;
+        if (!other.getTrunkConnectionId().isEmpty()) {
+          trunkConnectionId_ = other.trunkConnectionId_;
+          onChanged();
+        }
+        if (!other.getDestinationFolderId().isEmpty()) {
+          destinationFolderId_ = other.destinationFolderId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object trunkConnectionId_ = "";
+      /**
+       * <pre>
+       * ID of the TrunkConnection resource to move.
+       * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The trunkConnectionId.
+       */
+      public java.lang.String getTrunkConnectionId() {
+        java.lang.Object ref = trunkConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          trunkConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the TrunkConnection resource to move.
+       * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for trunkConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getTrunkConnectionIdBytes() {
+        java.lang.Object ref = trunkConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          trunkConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the TrunkConnection resource to move.
+       * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The trunkConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrunkConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        trunkConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the TrunkConnection resource to move.
+       * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTrunkConnectionId() {
+        
+        trunkConnectionId_ = getDefaultInstance().getTrunkConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the TrunkConnection resource to move.
+       * To get the trunkConnection ID use a [TrunkConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for trunkConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrunkConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        trunkConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object destinationFolderId_ = "";
+      /**
+       * <pre>
+       * ID of the folder to which trunkConnection will be moved.
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The destinationFolderId.
+       */
+      public java.lang.String getDestinationFolderId() {
+        java.lang.Object ref = destinationFolderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          destinationFolderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder to which trunkConnection will be moved.
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for destinationFolderId.
+       */
+      public com.google.protobuf.ByteString
+          getDestinationFolderIdBytes() {
+        java.lang.Object ref = destinationFolderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          destinationFolderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder to which trunkConnection will be moved.
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The destinationFolderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        destinationFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder to which trunkConnection will be moved.
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDestinationFolderId() {
+        
+        destinationFolderId_ = getDefaultInstance().getDestinationFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder to which trunkConnection will be moved.
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for destinationFolderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        destinationFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.MoveTrunkConnectionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.MoveTrunkConnectionRequest)
+    private static final yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest();
+    }
+
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MoveTrunkConnectionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MoveTrunkConnectionRequest>() {
+      @java.lang.Override
+      public MoveTrunkConnectionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MoveTrunkConnectionRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MoveTrunkConnectionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MoveTrunkConnectionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MoveTrunkConnectionMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.MoveTrunkConnectionMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the trunkConnection that is being moved.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 1;</code>
+     * @return The trunkConnectionId.
+     */
+    java.lang.String getTrunkConnectionId();
+    /**
+     * <pre>
+     * ID of the trunkConnection that is being moved.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 1;</code>
+     * @return The bytes for trunkConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getTrunkConnectionIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.MoveTrunkConnectionMetadata}
+   */
+  public static final class MoveTrunkConnectionMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.MoveTrunkConnectionMetadata)
+      MoveTrunkConnectionMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MoveTrunkConnectionMetadata.newBuilder() to construct.
+    private MoveTrunkConnectionMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MoveTrunkConnectionMetadata() {
+      trunkConnectionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MoveTrunkConnectionMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MoveTrunkConnectionMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              trunkConnectionId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata.class, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata.Builder.class);
+    }
+
+    public static final int TRUNK_CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object trunkConnectionId_;
+    /**
+     * <pre>
+     * ID of the trunkConnection that is being moved.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 1;</code>
+     * @return The trunkConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getTrunkConnectionId() {
+      java.lang.Object ref = trunkConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        trunkConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the trunkConnection that is being moved.
+     * </pre>
+     *
+     * <code>string trunk_connection_id = 1;</code>
+     * @return The bytes for trunkConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTrunkConnectionIdBytes() {
+      java.lang.Object ref = trunkConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        trunkConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(trunkConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, trunkConnectionId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(trunkConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, trunkConnectionId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata other = (yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata) obj;
+
+      if (!getTrunkConnectionId()
+          .equals(other.getTrunkConnectionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TRUNK_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTrunkConnectionId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.MoveTrunkConnectionMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.MoveTrunkConnectionMetadata)
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata.class, yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        trunkConnectionId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata build() {
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata buildPartial() {
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata result = new yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata(this);
+        result.trunkConnectionId_ = trunkConnectionId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata) {
+          return mergeFrom((yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata other) {
+        if (other == yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata.getDefaultInstance()) return this;
+        if (!other.getTrunkConnectionId().isEmpty()) {
+          trunkConnectionId_ = other.trunkConnectionId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object trunkConnectionId_ = "";
+      /**
+       * <pre>
+       * ID of the trunkConnection that is being moved.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 1;</code>
+       * @return The trunkConnectionId.
+       */
+      public java.lang.String getTrunkConnectionId() {
+        java.lang.Object ref = trunkConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          trunkConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the trunkConnection that is being moved.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 1;</code>
+       * @return The bytes for trunkConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getTrunkConnectionIdBytes() {
+        java.lang.Object ref = trunkConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          trunkConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the trunkConnection that is being moved.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 1;</code>
+       * @param value The trunkConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrunkConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        trunkConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the trunkConnection that is being moved.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTrunkConnectionId() {
+        
+        trunkConnectionId_ = getDefaultInstance().getTrunkConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the trunkConnection that is being moved.
+       * </pre>
+       *
+       * <code>string trunk_connection_id = 1;</code>
+       * @param value The bytes for trunkConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrunkConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        trunkConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.MoveTrunkConnectionMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.MoveTrunkConnectionMetadata)
+    private static final yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata();
+    }
+
+    public static yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MoveTrunkConnectionMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<MoveTrunkConnectionMetadata>() {
+      @java.lang.Override
+      public MoveTrunkConnectionMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MoveTrunkConnectionMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MoveTrunkConnectionMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MoveTrunkConnectionMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ListTrunkConnectionOperationsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.ListTrunkConnectionOperationsRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -12856,7 +14382,7 @@ public final class TrunkConnectionServiceOuterClass {
      * that can be used to get the next page of results in subsequent list requests. Default value: 100.  
      * </pre>
      *
-     * <code>int64 page_size = 2;</code>
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     long getPageSize();
@@ -12867,7 +14393,7 @@ public final class TrunkConnectionServiceOuterClass {
      * [ListTrunkConnectionOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3;</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -12877,7 +14403,7 @@ public final class TrunkConnectionServiceOuterClass {
      * [ListTrunkConnectionOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3;</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -13035,7 +14561,7 @@ public final class TrunkConnectionServiceOuterClass {
      * that can be used to get the next page of results in subsequent list requests. Default value: 100.  
      * </pre>
      *
-     * <code>int64 page_size = 2;</code>
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     @java.lang.Override
@@ -13051,7 +14577,7 @@ public final class TrunkConnectionServiceOuterClass {
      * [ListTrunkConnectionOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3;</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -13073,7 +14599,7 @@ public final class TrunkConnectionServiceOuterClass {
      * [ListTrunkConnectionOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3;</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -13533,7 +15059,7 @@ public final class TrunkConnectionServiceOuterClass {
        * that can be used to get the next page of results in subsequent list requests. Default value: 100.  
        * </pre>
        *
-       * <code>int64 page_size = 2;</code>
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return The pageSize.
        */
       @java.lang.Override
@@ -13548,7 +15074,7 @@ public final class TrunkConnectionServiceOuterClass {
        * that can be used to get the next page of results in subsequent list requests. Default value: 100.  
        * </pre>
        *
-       * <code>int64 page_size = 2;</code>
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
        */
@@ -13566,7 +15092,7 @@ public final class TrunkConnectionServiceOuterClass {
        * that can be used to get the next page of results in subsequent list requests. Default value: 100.  
        * </pre>
        *
-       * <code>int64 page_size = 2;</code>
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageSize() {
@@ -13583,7 +15109,7 @@ public final class TrunkConnectionServiceOuterClass {
        * [ListTrunkConnectionOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3;</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -13604,7 +15130,7 @@ public final class TrunkConnectionServiceOuterClass {
        * [ListTrunkConnectionOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3;</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -13626,7 +15152,7 @@ public final class TrunkConnectionServiceOuterClass {
        * [ListTrunkConnectionOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3;</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -13646,7 +15172,7 @@ public final class TrunkConnectionServiceOuterClass {
        * [ListTrunkConnectionOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3;</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -13661,7 +15187,7 @@ public final class TrunkConnectionServiceOuterClass {
        * [ListTrunkConnectionOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3;</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -14936,6 +16462,16 @@ public final class TrunkConnectionServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_cic_v1_DeleteTrunkConnectionMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_cic_v1_ListTrunkConnectionOperationsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14973,92 +16509,108 @@ public final class TrunkConnectionServiceOuterClass {
       "(\tB\n\212\3101\006<=1000\"x\n\034ListTrunkConnectionsRe" +
       "sponse\022?\n\021trunk_connections\030\001 \003(\0132$.yand" +
       "ex.cloud.cic.v1.TrunkConnection\022\027\n\017next_" +
-      "page_token\030\002 \001(\t\"\364\010\n\034CreateTrunkConnecti" +
-      "onRequest\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002" +
-      " \001(\t\022\021\n\tfolder_id\030\004 \001(\t\022\021\n\tregion_id\030\005 \001" +
-      "(\t\022k\n\030single_port_direct_joint\030\n \001(\0132G.y" +
-      "andex.cloud.cic.v1.CreateTrunkConnection" +
-      "Request.SinglePortDirectJointH\000\022\\\n\020lag_d" +
-      "irect_joint\030\013 \001(\0132@.yandex.cloud.cic.v1." +
-      "CreateTrunkConnectionRequest.LagDirectJo" +
-      "intH\000\022\\\n\022partner_joint_info\030\014 \001(\0132>.yand" +
-      "ex.cloud.cic.v1.CreateTrunkConnectionReq" +
-      "uest.PartnerJointH\000\022:\n\024point_of_presence" +
-      "_id\030\r \001(\0132\034.google.protobuf.StringValue\022" +
-      "?\n\010capacity\030\021 \001(\0162-.yandex.cloud.cic.v1." +
-      "TrunkConnection.Capacity\022\216\001\n\006labels\030\022 \003(" +
-      "\0132=.yandex.cloud.cic.v1.CreateTrunkConne" +
-      "ctionRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=" +
-      "63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-" +
-      "_0-9a-z]*\022\033\n\023deletion_protection\030\024 \001(\010\032-" +
-      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\032d\n\025SinglePortDirectJoint\022E\n\020transc" +
-      "eiver_type\030\001 \001(\0162+.yandex.cloud.cic.v1.c" +
-      "ommon.TransceiverTypeJ\004\010\002\020\005\032\270\001\n\016LagDirec" +
-      "tJoint\022E\n\020transceiver_type\030\001 \001(\0162+.yande" +
-      "x.cloud.cic.v1.common.TransceiverType\022Y\n" +
-      "\027lag_allocation_settings\030\003 \001(\01328.yandex." +
-      "cloud.cic.v1.common.LagAllocationSetting" +
-      "sRequestJ\004\010\002\020\003\032F\n\014PartnerJoint\0220\n\npartne" +
-      "r_id\030\004 \001(\0132\034.google.protobuf.StringValue" +
-      "J\004\010\001\020\004B\007\n\005jointJ\004\010\003\020\004J\004\010\006\020\nJ\004\010\016\020\021J\004\010\023\020\024\"" +
-      "<\n\035CreateTrunkConnectionMetadata\022\033\n\023trun" +
-      "k_connection_id\030\001 \001(\t\"\242\004\n\034UpdateTrunkCon" +
-      "nectionRequest\022)\n\023trunk_connection_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032" +
-      ".google.protobuf.FieldMask\022\014\n\004name\030\003 \001(\t" +
-      "\022\023\n\013description\030\004 \001(\t\022\021\n\tregion_id\030\007 \001(\t" +
-      "\022:\n\024point_of_presence_id\030\r \001(\0132\034.google." +
-      "protobuf.StringValue\022?\n\010capacity\030\021 \001(\0162-" +
-      ".yandex.cloud.cic.v1.TrunkConnection.Cap" +
-      "acity\022\216\001\n\006labels\030\022 \003(\0132=.yandex.cloud.ci" +
-      "c.v1.UpdateTrunkConnectionRequest.Labels" +
-      "EntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\310" +
-      "1\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\033\n\023deleti" +
-      "on_protection\030\024 \001(\010\032-\n\013LabelsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005\020\007J\004\010\010\020\rJ\004" +
-      "\010\016\020\021J\004\010\023\020\024\"<\n\035UpdateTrunkConnectionMetad" +
-      "ata\022\033\n\023trunk_connection_id\030\001 \001(\t\"I\n\034Dele" +
-      "teTrunkConnectionRequest\022)\n\023trunk_connec" +
-      "tion_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"<\n\035DeleteTru" +
-      "nkConnectionMetadata\022\033\n\023trunk_connection" +
-      "_id\030\001 \001(\t\"x\n$ListTrunkConnectionOperatio" +
-      "nsRequest\022)\n\023trunk_connection_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_" +
-      "token\030\003 \001(\t\"w\n%ListTrunkConnectionOperat" +
-      "ionsResponse\0225\n\noperations\030\001 \003(\0132!.yande" +
-      "x.cloud.operation.Operation\022\027\n\017next_page" +
-      "_token\030\002 \001(\t2\350\010\n\026TrunkConnectionService\022" +
-      "\223\001\n\003Get\022..yandex.cloud.cic.v1.GetTrunkCo" +
-      "nnectionRequest\032$.yandex.cloud.cic.v1.Tr" +
-      "unkConnection\"6\202\323\344\223\0020\022./cic/v1/trunkConn" +
-      "ections/{trunk_connection_id}\022\215\001\n\004List\0220" +
-      ".yandex.cloud.cic.v1.ListTrunkConnection" +
-      "sRequest\0321.yandex.cloud.cic.v1.ListTrunk" +
-      "ConnectionsResponse\" \202\323\344\223\002\032\022\030/cic/v1/tru" +
-      "nkConnections\022\267\001\n\006Create\0221.yandex.cloud." +
-      "cic.v1.CreateTrunkConnectionRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"W\262\322*0\n\035Cr" +
-      "eateTrunkConnectionMetadata\022\017TrunkConnec" +
-      "tion\202\323\344\223\002\035\"\030/cic/v1/trunkConnections:\001*\022" +
-      "\315\001\n\006Update\0221.yandex.cloud.cic.v1.UpdateT" +
-      "runkConnectionRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"m\262\322*0\n\035UpdateTrunkConne" +
-      "ctionMetadata\022\017TrunkConnection\202\323\344\223\00232./c" +
-      "ic/v1/trunkConnections/{trunk_connection" +
-      "_id}:\001*\022\320\001\n\006Delete\0221.yandex.cloud.cic.v1" +
-      ".DeleteTrunkConnectionRequest\032!.yandex.c" +
-      "loud.operation.Operation\"p\262\322*6\n\035DeleteTr" +
-      "unkConnectionMetadata\022\025google.protobuf.E" +
-      "mpty\202\323\344\223\0020*./cic/v1/trunkConnections/{tr" +
-      "unk_connection_id}\022\312\001\n\016ListOperations\0229." +
-      "yandex.cloud.cic.v1.ListTrunkConnectionO" +
-      "perationsRequest\032:.yandex.cloud.cic.v1.L" +
-      "istTrunkConnectionOperationsResponse\"A\202\323" +
-      "\344\223\002;\0229/cic/v1/trunkConnections/{trunk_co" +
-      "nnection_id}/operationsBV\n\027yandex.cloud." +
-      "api.cic.v1Z;github.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/cic/v1;cicb\006proto3"
+      "page_token\030\002 \001(\t\"\355\t\n\034CreateTrunkConnecti" +
+      "onRequest\022<\n\004name\030\001 \001(\tB.\362\3071*|[a-zA-Z]([" +
+      "-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?\022\036\n\013descr" +
+      "iption\030\002 \001(\tB\t\212\3101\005<=256\022\037\n\tfolder_id\030\004 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tregion_id\030\005 \001(\tB\n\030\001\212" +
+      "\3101\004<=50\022k\n\030single_port_direct_joint\030\n \001(" +
+      "\0132G.yandex.cloud.cic.v1.CreateTrunkConne" +
+      "ctionRequest.SinglePortDirectJointH\000\022\\\n\020" +
+      "lag_direct_joint\030\013 \001(\0132@.yandex.cloud.ci" +
+      "c.v1.CreateTrunkConnectionRequest.LagDir" +
+      "ectJointH\000\022\\\n\022partner_joint_info\030\014 \001(\0132>" +
+      ".yandex.cloud.cic.v1.CreateTrunkConnecti" +
+      "onRequest.PartnerJointH\000\022@\n\024point_of_pre" +
+      "sence_id\030\r \001(\0132\034.google.protobuf.StringV" +
+      "alueB\004\350\3071\001\022E\n\010capacity\030\021 \001(\0162-.yandex.cl" +
+      "oud.cic.v1.TrunkConnection.CapacityB\004\350\3071" +
+      "\001\022\216\001\n\006labels\030\022 \003(\0132=.yandex.cloud.cic.v1" +
+      ".CreateTrunkConnectionRequest.LabelsEntr" +
+      "yB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004" +
+      "1-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\033\n\023deletion_p" +
+      "rotection\030\024 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032j\n\025SinglePortDire" +
+      "ctJoint\022K\n\020transceiver_type\030\001 \001(\0162+.yand" +
+      "ex.cloud.cic.v1.common.TransceiverTypeB\004" +
+      "\350\3071\001J\004\010\002\020\005\032\304\001\n\016LagDirectJoint\022K\n\020transce" +
+      "iver_type\030\001 \001(\0162+.yandex.cloud.cic.v1.co" +
+      "mmon.TransceiverTypeB\004\350\3071\001\022_\n\027lag_alloca" +
+      "tion_settings\030\003 \001(\01328.yandex.cloud.cic.v" +
+      "1.common.LagAllocationSettingsRequestB\004\350" +
+      "\3071\001J\004\010\002\020\003\032L\n\014PartnerJoint\0226\n\npartner_id\030" +
+      "\004 \001(\0132\034.google.protobuf.StringValueB\004\350\3071" +
+      "\001J\004\010\001\020\004B\007\n\005jointJ\004\010\003\020\004J\004\010\006\020\nJ\004\010\016\020\021J\004\010\023\020\024" +
+      "\"<\n\035CreateTrunkConnectionMetadata\022\033\n\023tru" +
+      "nk_connection_id\030\001 \001(\t\"\363\004\n\034UpdateTrunkCo" +
+      "nnectionRequest\022)\n\023trunk_connection_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132" +
+      "\032.google.protobuf.FieldMask\022<\n\004name\030\003 \001(" +
+      "\tB.\362\3071*|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-z" +
+      "A-Z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=25" +
+      "6\022\035\n\tregion_id\030\007 \001(\tB\n\030\001\212\3101\004<=50\022>\n\024poin" +
+      "t_of_presence_id\030\r \001(\0132\034.google.protobuf" +
+      ".StringValueB\002\030\001\022E\n\010capacity\030\021 \001(\0162-.yan" +
+      "dex.cloud.cic.v1.TrunkConnection.Capacit" +
+      "yB\004\350\3071\001\022\216\001\n\006labels\030\022 \003(\0132=.yandex.cloud." +
+      "cic.v1.UpdateTrunkConnectionRequest.Labe" +
+      "lsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*" +
+      "\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\033\n\023dele" +
+      "tion_protection\030\024 \001(\010\032-\n\013LabelsEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005\020\007J\004\010\010\020\r" +
+      "J\004\010\016\020\021J\004\010\023\020\024\"<\n\035UpdateTrunkConnectionMet" +
+      "adata\022\033\n\023trunk_connection_id\030\001 \001(\t\"I\n\034De" +
+      "leteTrunkConnectionRequest\022)\n\023trunk_conn" +
+      "ection_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"<\n\035DeleteT" +
+      "runkConnectionMetadata\022\033\n\023trunk_connecti" +
+      "on_id\030\001 \001(\t\"t\n\032MoveTrunkConnectionReques" +
+      "t\022)\n\023trunk_connection_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022+\n\025destination_folder_id\030\002 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\":\n\033MoveTrunkConnectionMetadata" +
+      "\022\033\n\023trunk_connection_id\030\001 \001(\t\"\217\001\n$ListTr" +
+      "unkConnectionOperationsRequest\022)\n\023trunk_" +
+      "connection_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpag" +
+      "e_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003" +
+      " \001(\tB\t\212\3101\005<=100\"w\n%ListTrunkConnectionOp" +
+      "erationsResponse\0225\n\noperations\030\001 \003(\0132!.y" +
+      "andex.cloud.operation.Operation\022\027\n\017next_" +
+      "page_token\030\002 \001(\t2\267\n\n\026TrunkConnectionServ" +
+      "ice\022\223\001\n\003Get\022..yandex.cloud.cic.v1.GetTru" +
+      "nkConnectionRequest\032$.yandex.cloud.cic.v" +
+      "1.TrunkConnection\"6\202\323\344\223\0020\022./cic/v1/trunk" +
+      "Connections/{trunk_connection_id}\022\215\001\n\004Li" +
+      "st\0220.yandex.cloud.cic.v1.ListTrunkConnec" +
+      "tionsRequest\0321.yandex.cloud.cic.v1.ListT" +
+      "runkConnectionsResponse\" \202\323\344\223\002\032\022\030/cic/v1" +
+      "/trunkConnections\022\267\001\n\006Create\0221.yandex.cl" +
+      "oud.cic.v1.CreateTrunkConnectionRequest\032" +
+      "!.yandex.cloud.operation.Operation\"W\262\322*0" +
+      "\n\035CreateTrunkConnectionMetadata\022\017TrunkCo" +
+      "nnection\202\323\344\223\002\035\"\030/cic/v1/trunkConnections" +
+      ":\001*\022\315\001\n\006Update\0221.yandex.cloud.cic.v1.Upd" +
+      "ateTrunkConnectionRequest\032!.yandex.cloud" +
+      ".operation.Operation\"m\262\322*0\n\035UpdateTrunkC" +
+      "onnectionMetadata\022\017TrunkConnection\202\323\344\223\0023" +
+      "2./cic/v1/trunkConnections/{trunk_connec" +
+      "tion_id}:\001*\022\320\001\n\006Delete\0221.yandex.cloud.ci" +
+      "c.v1.DeleteTrunkConnectionRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"p\262\322*6\n\035Dele" +
+      "teTrunkConnectionMetadata\022\025google.protob" +
+      "uf.Empty\202\323\344\223\0020*./cic/v1/trunkConnections" +
+      "/{trunk_connection_id}\022\314\001\n\004Move\022/.yandex" +
+      ".cloud.cic.v1.MoveTrunkConnectionRequest" +
+      "\032!.yandex.cloud.operation.Operation\"p\202\323\344" +
+      "\223\0028\"3/cic/v1/trunkConnections/{trunk_con" +
+      "nection_id}:move:\001*\262\322*.\n\033MoveTrunkConnec" +
+      "tionMetadata\022\017TrunkConnection\022\312\001\n\016ListOp" +
+      "erations\0229.yandex.cloud.cic.v1.ListTrunk" +
+      "ConnectionOperationsRequest\032:.yandex.clo" +
+      "ud.cic.v1.ListTrunkConnectionOperationsR" +
+      "esponse\"A\202\323\344\223\002;\0229/cic/v1/trunkConnection" +
+      "s/{trunk_connection_id}/operationsBV\n\027ya" +
+      "ndex.cloud.api.cic.v1Z;github.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/cic/v1;c" +
+      "icb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15157,14 +16709,26 @@ public final class TrunkConnectionServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cic_v1_DeleteTrunkConnectionMetadata_descriptor,
         new java.lang.String[] { "TrunkConnectionId", });
-    internal_static_yandex_cloud_cic_v1_ListTrunkConnectionOperationsRequest_descriptor =
+    internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionRequest_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionRequest_descriptor,
+        new java.lang.String[] { "TrunkConnectionId", "DestinationFolderId", });
+    internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_MoveTrunkConnectionMetadata_descriptor,
+        new java.lang.String[] { "TrunkConnectionId", });
+    internal_static_yandex_cloud_cic_v1_ListTrunkConnectionOperationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_cic_v1_ListTrunkConnectionOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cic_v1_ListTrunkConnectionOperationsRequest_descriptor,
         new java.lang.String[] { "TrunkConnectionId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_cic_v1_ListTrunkConnectionOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_cic_v1_ListTrunkConnectionOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cic_v1_ListTrunkConnectionOperationsResponse_descriptor,

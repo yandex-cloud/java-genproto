@@ -19,6 +19,10 @@ public final class Serializers {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * Empty block. Select data serialization format automatically
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.SerializerAuto}
    */
   public static final class SerializerAuto extends
@@ -240,6 +244,10 @@ public final class Serializers {
       return builder;
     }
     /**
+     * <pre>
+     * Empty block. Select data serialization format automatically
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.SerializerAuto}
      */
     public static final class Builder extends
@@ -437,6 +445,10 @@ public final class Serializers {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * Empty block. Serialize data in json format
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.SerializerJSON}
    */
   public static final class SerializerJSON extends
@@ -658,6 +670,10 @@ public final class Serializers {
       return builder;
     }
     /**
+     * <pre>
+     * Empty block. Serialize data in json format
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.SerializerJSON}
      */
     public static final class Builder extends
@@ -1646,7 +1662,8 @@ public final class Serializers {
 
     /**
      * <pre>
-     * Settings of sterilization parameters as key-value pairs
+     * A list of Debezium parameters set by the structure of the `key` and `value`
+     * string fields
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -1655,7 +1672,8 @@ public final class Serializers {
         getSerializerParametersList();
     /**
      * <pre>
-     * Settings of sterilization parameters as key-value pairs
+     * A list of Debezium parameters set by the structure of the `key` and `value`
+     * string fields
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -1663,7 +1681,8 @@ public final class Serializers {
     yandex.cloud.api.datatransfer.v1.endpoint.Serializers.DebeziumSerializerParameter getSerializerParameters(int index);
     /**
      * <pre>
-     * Settings of sterilization parameters as key-value pairs
+     * A list of Debezium parameters set by the structure of the `key` and `value`
+     * string fields
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -1671,7 +1690,8 @@ public final class Serializers {
     int getSerializerParametersCount();
     /**
      * <pre>
-     * Settings of sterilization parameters as key-value pairs
+     * A list of Debezium parameters set by the structure of the `key` and `value`
+     * string fields
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -1680,7 +1700,8 @@ public final class Serializers {
         getSerializerParametersOrBuilderList();
     /**
      * <pre>
-     * Settings of sterilization parameters as key-value pairs
+     * A list of Debezium parameters set by the structure of the `key` and `value`
+     * string fields
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -1689,6 +1710,10 @@ public final class Serializers {
         int index);
   }
   /**
+   * <pre>
+   * Serialize data in json format
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.SerializerDebezium}
    */
   public static final class SerializerDebezium extends
@@ -1783,7 +1808,8 @@ public final class Serializers {
     private java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Serializers.DebeziumSerializerParameter> serializerParameters_;
     /**
      * <pre>
-     * Settings of sterilization parameters as key-value pairs
+     * A list of Debezium parameters set by the structure of the `key` and `value`
+     * string fields
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -1794,7 +1820,8 @@ public final class Serializers {
     }
     /**
      * <pre>
-     * Settings of sterilization parameters as key-value pairs
+     * A list of Debezium parameters set by the structure of the `key` and `value`
+     * string fields
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -1806,7 +1833,8 @@ public final class Serializers {
     }
     /**
      * <pre>
-     * Settings of sterilization parameters as key-value pairs
+     * A list of Debezium parameters set by the structure of the `key` and `value`
+     * string fields
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -1817,7 +1845,8 @@ public final class Serializers {
     }
     /**
      * <pre>
-     * Settings of sterilization parameters as key-value pairs
+     * A list of Debezium parameters set by the structure of the `key` and `value`
+     * string fields
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -1828,7 +1857,8 @@ public final class Serializers {
     }
     /**
      * <pre>
-     * Settings of sterilization parameters as key-value pairs
+     * A list of Debezium parameters set by the structure of the `key` and `value`
+     * string fields
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -1997,6 +2027,10 @@ public final class Serializers {
       return builder;
     }
     /**
+     * <pre>
+     * Serialize data in json format
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.SerializerDebezium}
      */
     public static final class Builder extends
@@ -2195,7 +2229,8 @@ public final class Serializers {
 
       /**
        * <pre>
-       * Settings of sterilization parameters as key-value pairs
+       * A list of Debezium parameters set by the structure of the `key` and `value`
+       * string fields
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -2209,7 +2244,8 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Settings of sterilization parameters as key-value pairs
+       * A list of Debezium parameters set by the structure of the `key` and `value`
+       * string fields
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -2223,7 +2259,8 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Settings of sterilization parameters as key-value pairs
+       * A list of Debezium parameters set by the structure of the `key` and `value`
+       * string fields
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -2237,7 +2274,8 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Settings of sterilization parameters as key-value pairs
+       * A list of Debezium parameters set by the structure of the `key` and `value`
+       * string fields
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -2258,7 +2296,8 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Settings of sterilization parameters as key-value pairs
+       * A list of Debezium parameters set by the structure of the `key` and `value`
+       * string fields
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -2276,7 +2315,8 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Settings of sterilization parameters as key-value pairs
+       * A list of Debezium parameters set by the structure of the `key` and `value`
+       * string fields
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -2296,7 +2336,8 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Settings of sterilization parameters as key-value pairs
+       * A list of Debezium parameters set by the structure of the `key` and `value`
+       * string fields
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -2317,7 +2358,8 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Settings of sterilization parameters as key-value pairs
+       * A list of Debezium parameters set by the structure of the `key` and `value`
+       * string fields
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -2335,7 +2377,8 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Settings of sterilization parameters as key-value pairs
+       * A list of Debezium parameters set by the structure of the `key` and `value`
+       * string fields
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -2353,7 +2396,8 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Settings of sterilization parameters as key-value pairs
+       * A list of Debezium parameters set by the structure of the `key` and `value`
+       * string fields
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -2372,7 +2416,8 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Settings of sterilization parameters as key-value pairs
+       * A list of Debezium parameters set by the structure of the `key` and `value`
+       * string fields
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -2389,7 +2434,8 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Settings of sterilization parameters as key-value pairs
+       * A list of Debezium parameters set by the structure of the `key` and `value`
+       * string fields
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -2406,7 +2452,8 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Settings of sterilization parameters as key-value pairs
+       * A list of Debezium parameters set by the structure of the `key` and `value`
+       * string fields
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -2417,7 +2464,8 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Settings of sterilization parameters as key-value pairs
+       * A list of Debezium parameters set by the structure of the `key` and `value`
+       * string fields
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -2431,7 +2479,8 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Settings of sterilization parameters as key-value pairs
+       * A list of Debezium parameters set by the structure of the `key` and `value`
+       * string fields
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -2446,7 +2495,8 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Settings of sterilization parameters as key-value pairs
+       * A list of Debezium parameters set by the structure of the `key` and `value`
+       * string fields
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -2457,7 +2507,8 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Settings of sterilization parameters as key-value pairs
+       * A list of Debezium parameters set by the structure of the `key` and `value`
+       * string fields
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -2469,7 +2520,8 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Settings of sterilization parameters as key-value pairs
+       * A list of Debezium parameters set by the structure of the `key` and `value`
+       * string fields
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.DebeziumSerializerParameter serializer_parameters = 1;</code>
@@ -2551,7 +2603,7 @@ public final class Serializers {
 
     /**
      * <pre>
-     * Select the serialization format automatically
+     * Empty block. Select the serialization format automatically
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerAuto serializer_auto = 1;</code>
@@ -2560,7 +2612,7 @@ public final class Serializers {
     boolean hasSerializerAuto();
     /**
      * <pre>
-     * Select the serialization format automatically
+     * Empty block. Select the serialization format automatically
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerAuto serializer_auto = 1;</code>
@@ -2569,7 +2621,7 @@ public final class Serializers {
     yandex.cloud.api.datatransfer.v1.endpoint.Serializers.SerializerAuto getSerializerAuto();
     /**
      * <pre>
-     * Select the serialization format automatically
+     * Empty block. Select the serialization format automatically
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerAuto serializer_auto = 1;</code>
@@ -2578,7 +2630,7 @@ public final class Serializers {
 
     /**
      * <pre>
-     * Serialize data in json format
+     * Empty block. Serialize data in json format
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerJSON serializer_json = 2;</code>
@@ -2587,7 +2639,7 @@ public final class Serializers {
     boolean hasSerializerJson();
     /**
      * <pre>
-     * Serialize data in json format
+     * Empty block. Serialize data in json format
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerJSON serializer_json = 2;</code>
@@ -2596,7 +2648,7 @@ public final class Serializers {
     yandex.cloud.api.datatransfer.v1.endpoint.Serializers.SerializerJSON getSerializerJson();
     /**
      * <pre>
-     * Serialize data in json format
+     * Empty block. Serialize data in json format
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerJSON serializer_json = 2;</code>
@@ -2605,7 +2657,7 @@ public final class Serializers {
 
     /**
      * <pre>
-     * Serialize data in debezium format
+     * Serialize data in debezium json format
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerDebezium serializer_debezium = 3;</code>
@@ -2614,7 +2666,7 @@ public final class Serializers {
     boolean hasSerializerDebezium();
     /**
      * <pre>
-     * Serialize data in debezium format
+     * Serialize data in debezium json format
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerDebezium serializer_debezium = 3;</code>
@@ -2623,7 +2675,7 @@ public final class Serializers {
     yandex.cloud.api.datatransfer.v1.endpoint.Serializers.SerializerDebezium getSerializerDebezium();
     /**
      * <pre>
-     * Serialize data in debezium format
+     * Serialize data in debezium json format
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerDebezium serializer_debezium = 3;</code>
@@ -2801,7 +2853,7 @@ public final class Serializers {
     public static final int SERIALIZER_AUTO_FIELD_NUMBER = 1;
     /**
      * <pre>
-     * Select the serialization format automatically
+     * Empty block. Select the serialization format automatically
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerAuto serializer_auto = 1;</code>
@@ -2813,7 +2865,7 @@ public final class Serializers {
     }
     /**
      * <pre>
-     * Select the serialization format automatically
+     * Empty block. Select the serialization format automatically
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerAuto serializer_auto = 1;</code>
@@ -2828,7 +2880,7 @@ public final class Serializers {
     }
     /**
      * <pre>
-     * Select the serialization format automatically
+     * Empty block. Select the serialization format automatically
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerAuto serializer_auto = 1;</code>
@@ -2844,7 +2896,7 @@ public final class Serializers {
     public static final int SERIALIZER_JSON_FIELD_NUMBER = 2;
     /**
      * <pre>
-     * Serialize data in json format
+     * Empty block. Serialize data in json format
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerJSON serializer_json = 2;</code>
@@ -2856,7 +2908,7 @@ public final class Serializers {
     }
     /**
      * <pre>
-     * Serialize data in json format
+     * Empty block. Serialize data in json format
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerJSON serializer_json = 2;</code>
@@ -2871,7 +2923,7 @@ public final class Serializers {
     }
     /**
      * <pre>
-     * Serialize data in json format
+     * Empty block. Serialize data in json format
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerJSON serializer_json = 2;</code>
@@ -2887,7 +2939,7 @@ public final class Serializers {
     public static final int SERIALIZER_DEBEZIUM_FIELD_NUMBER = 3;
     /**
      * <pre>
-     * Serialize data in debezium format
+     * Serialize data in debezium json format
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerDebezium serializer_debezium = 3;</code>
@@ -2899,7 +2951,7 @@ public final class Serializers {
     }
     /**
      * <pre>
-     * Serialize data in debezium format
+     * Serialize data in debezium json format
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerDebezium serializer_debezium = 3;</code>
@@ -2914,7 +2966,7 @@ public final class Serializers {
     }
     /**
      * <pre>
-     * Serialize data in debezium format
+     * Serialize data in debezium json format
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerDebezium serializer_debezium = 3;</code>
@@ -3330,7 +3382,7 @@ public final class Serializers {
           yandex.cloud.api.datatransfer.v1.endpoint.Serializers.SerializerAuto, yandex.cloud.api.datatransfer.v1.endpoint.Serializers.SerializerAuto.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Serializers.SerializerAutoOrBuilder> serializerAutoBuilder_;
       /**
        * <pre>
-       * Select the serialization format automatically
+       * Empty block. Select the serialization format automatically
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerAuto serializer_auto = 1;</code>
@@ -3342,7 +3394,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Select the serialization format automatically
+       * Empty block. Select the serialization format automatically
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerAuto serializer_auto = 1;</code>
@@ -3364,7 +3416,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Select the serialization format automatically
+       * Empty block. Select the serialization format automatically
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerAuto serializer_auto = 1;</code>
@@ -3384,7 +3436,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Select the serialization format automatically
+       * Empty block. Select the serialization format automatically
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerAuto serializer_auto = 1;</code>
@@ -3402,7 +3454,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Select the serialization format automatically
+       * Empty block. Select the serialization format automatically
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerAuto serializer_auto = 1;</code>
@@ -3428,7 +3480,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Select the serialization format automatically
+       * Empty block. Select the serialization format automatically
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerAuto serializer_auto = 1;</code>
@@ -3451,7 +3503,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Select the serialization format automatically
+       * Empty block. Select the serialization format automatically
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerAuto serializer_auto = 1;</code>
@@ -3461,7 +3513,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Select the serialization format automatically
+       * Empty block. Select the serialization format automatically
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerAuto serializer_auto = 1;</code>
@@ -3479,7 +3531,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Select the serialization format automatically
+       * Empty block. Select the serialization format automatically
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerAuto serializer_auto = 1;</code>
@@ -3507,7 +3559,7 @@ public final class Serializers {
           yandex.cloud.api.datatransfer.v1.endpoint.Serializers.SerializerJSON, yandex.cloud.api.datatransfer.v1.endpoint.Serializers.SerializerJSON.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Serializers.SerializerJSONOrBuilder> serializerJsonBuilder_;
       /**
        * <pre>
-       * Serialize data in json format
+       * Empty block. Serialize data in json format
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerJSON serializer_json = 2;</code>
@@ -3519,7 +3571,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Serialize data in json format
+       * Empty block. Serialize data in json format
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerJSON serializer_json = 2;</code>
@@ -3541,7 +3593,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Serialize data in json format
+       * Empty block. Serialize data in json format
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerJSON serializer_json = 2;</code>
@@ -3561,7 +3613,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Serialize data in json format
+       * Empty block. Serialize data in json format
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerJSON serializer_json = 2;</code>
@@ -3579,7 +3631,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Serialize data in json format
+       * Empty block. Serialize data in json format
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerJSON serializer_json = 2;</code>
@@ -3605,7 +3657,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Serialize data in json format
+       * Empty block. Serialize data in json format
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerJSON serializer_json = 2;</code>
@@ -3628,7 +3680,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Serialize data in json format
+       * Empty block. Serialize data in json format
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerJSON serializer_json = 2;</code>
@@ -3638,7 +3690,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Serialize data in json format
+       * Empty block. Serialize data in json format
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerJSON serializer_json = 2;</code>
@@ -3656,7 +3708,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Serialize data in json format
+       * Empty block. Serialize data in json format
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerJSON serializer_json = 2;</code>
@@ -3684,7 +3736,7 @@ public final class Serializers {
           yandex.cloud.api.datatransfer.v1.endpoint.Serializers.SerializerDebezium, yandex.cloud.api.datatransfer.v1.endpoint.Serializers.SerializerDebezium.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Serializers.SerializerDebeziumOrBuilder> serializerDebeziumBuilder_;
       /**
        * <pre>
-       * Serialize data in debezium format
+       * Serialize data in debezium json format
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerDebezium serializer_debezium = 3;</code>
@@ -3696,7 +3748,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Serialize data in debezium format
+       * Serialize data in debezium json format
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerDebezium serializer_debezium = 3;</code>
@@ -3718,7 +3770,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Serialize data in debezium format
+       * Serialize data in debezium json format
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerDebezium serializer_debezium = 3;</code>
@@ -3738,7 +3790,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Serialize data in debezium format
+       * Serialize data in debezium json format
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerDebezium serializer_debezium = 3;</code>
@@ -3756,7 +3808,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Serialize data in debezium format
+       * Serialize data in debezium json format
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerDebezium serializer_debezium = 3;</code>
@@ -3782,7 +3834,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Serialize data in debezium format
+       * Serialize data in debezium json format
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerDebezium serializer_debezium = 3;</code>
@@ -3805,7 +3857,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Serialize data in debezium format
+       * Serialize data in debezium json format
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerDebezium serializer_debezium = 3;</code>
@@ -3815,7 +3867,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Serialize data in debezium format
+       * Serialize data in debezium json format
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerDebezium serializer_debezium = 3;</code>
@@ -3833,7 +3885,7 @@ public final class Serializers {
       }
       /**
        * <pre>
-       * Serialize data in debezium format
+       * Serialize data in debezium json format
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.SerializerDebezium serializer_debezium = 3;</code>

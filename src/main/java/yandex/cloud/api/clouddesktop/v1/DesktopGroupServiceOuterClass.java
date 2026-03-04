@@ -7808,11 +7808,19 @@ public final class DesktopGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the desktop group to update.
+     * </pre>
+     *
      * <code>string desktop_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The desktopGroupId.
      */
     java.lang.String getDesktopGroupId();
     /**
+     * <pre>
+     * ID of the desktop group to update.
+     * </pre>
+     *
      * <code>string desktop_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for desktopGroupId.
      */
@@ -7820,26 +7828,46 @@ public final class DesktopGroupServiceOuterClass {
         getDesktopGroupIdBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which fields of the desktop group should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which fields of the desktop group should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which fields of the desktop group should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * New desktop image ID.
+     * </pre>
+     *
      * <code>string desktop_image_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The desktopImageId.
      */
     java.lang.String getDesktopImageId();
     /**
+     * <pre>
+     * New desktop image ID.
+     * </pre>
+     *
      * <code>string desktop_image_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for desktopImageId.
      */
@@ -7847,11 +7875,19 @@ public final class DesktopGroupServiceOuterClass {
         getDesktopImageIdBytes();
 
     /**
+     * <pre>
+     * New desktop group name.
+     * </pre>
+     *
      * <code>string name = 4 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * New desktop group name.
+     * </pre>
+     *
      * <code>string name = 4 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
      * @return The bytes for name.
      */
@@ -7859,11 +7895,19 @@ public final class DesktopGroupServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * New desktop group description.
+     * </pre>
+     *
      * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * New desktop group description.
+     * </pre>
+     *
      * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
      * @return The bytes for description.
      */
@@ -7871,10 +7915,18 @@ public final class DesktopGroupServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * New desktop group labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * New desktop group labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -7886,11 +7938,19 @@ public final class DesktopGroupServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * New desktop group labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * New desktop group labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -7898,6 +7958,10 @@ public final class DesktopGroupServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * New desktop group labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -7905,16 +7969,28 @@ public final class DesktopGroupServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Resources specification of the desktop group.
+     * </pre>
+     *
      * <code>.yandex.cloud.clouddesktop.v1.api.ResourcesSpec resources_spec = 7;</code>
      * @return Whether the resourcesSpec field is set.
      */
     boolean hasResourcesSpec();
     /**
+     * <pre>
+     * Resources specification of the desktop group.
+     * </pre>
+     *
      * <code>.yandex.cloud.clouddesktop.v1.api.ResourcesSpec resources_spec = 7;</code>
      * @return The resourcesSpec.
      */
     yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ResourcesSpec getResourcesSpec();
     /**
+     * <pre>
+     * Resources specification of the desktop group.
+     * </pre>
+     *
      * <code>.yandex.cloud.clouddesktop.v1.api.ResourcesSpec resources_spec = 7;</code>
      */
     yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ResourcesSpecOrBuilder getResourcesSpecOrBuilder();
@@ -8001,31 +8077,55 @@ public final class DesktopGroupServiceOuterClass {
     yandex.cloud.api.clouddesktop.v1.PADD.DiskSpecOrBuilder getDataDiskSpecOrBuilder();
 
     /**
+     * <pre>
+     * Update automatically
+     * </pre>
+     *
      * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 13;</code>
      * @return Whether the autoUpdatePolicy field is set.
      */
     boolean hasAutoUpdatePolicy();
     /**
+     * <pre>
+     * Update automatically
+     * </pre>
+     *
      * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 13;</code>
      * @return The autoUpdatePolicy.
      */
     yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy getAutoUpdatePolicy();
     /**
+     * <pre>
+     * Update automatically
+     * </pre>
+     *
      * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 13;</code>
      */
     yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicyOrBuilder getAutoUpdatePolicyOrBuilder();
 
     /**
+     * <pre>
+     * Update manually
+     * </pre>
+     *
      * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 14;</code>
      * @return Whether the manualUpdatePolicy field is set.
      */
     boolean hasManualUpdatePolicy();
     /**
+     * <pre>
+     * Update manually
+     * </pre>
+     *
      * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 14;</code>
      * @return The manualUpdatePolicy.
      */
     yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy getManualUpdatePolicy();
     /**
+     * <pre>
+     * Update manually
+     * </pre>
+     *
      * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 14;</code>
      */
     yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicyOrBuilder getManualUpdatePolicyOrBuilder();
@@ -8300,6 +8400,10 @@ public final class DesktopGroupServiceOuterClass {
     public static final int DESKTOP_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object desktopGroupId_;
     /**
+     * <pre>
+     * ID of the desktop group to update.
+     * </pre>
+     *
      * <code>string desktop_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The desktopGroupId.
      */
@@ -8317,6 +8421,10 @@ public final class DesktopGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the desktop group to update.
+     * </pre>
+     *
      * <code>string desktop_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for desktopGroupId.
      */
@@ -8338,6 +8446,10 @@ public final class DesktopGroupServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask that specifies which fields of the desktop group should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return Whether the updateMask field is set.
      */
@@ -8346,6 +8458,10 @@ public final class DesktopGroupServiceOuterClass {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which fields of the desktop group should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return The updateMask.
      */
@@ -8354,6 +8470,10 @@ public final class DesktopGroupServiceOuterClass {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which fields of the desktop group should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     @java.lang.Override
@@ -8364,6 +8484,10 @@ public final class DesktopGroupServiceOuterClass {
     public static final int DESKTOP_IMAGE_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object desktopImageId_;
     /**
+     * <pre>
+     * New desktop image ID.
+     * </pre>
+     *
      * <code>string desktop_image_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The desktopImageId.
      */
@@ -8381,6 +8505,10 @@ public final class DesktopGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New desktop image ID.
+     * </pre>
+     *
      * <code>string desktop_image_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for desktopImageId.
      */
@@ -8402,6 +8530,10 @@ public final class DesktopGroupServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 4;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * New desktop group name.
+     * </pre>
+     *
      * <code>string name = 4 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
      * @return The name.
      */
@@ -8419,6 +8551,10 @@ public final class DesktopGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New desktop group name.
+     * </pre>
+     *
      * <code>string name = 4 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
      * @return The bytes for name.
      */
@@ -8440,6 +8576,10 @@ public final class DesktopGroupServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 5;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * New desktop group description.
+     * </pre>
+     *
      * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
      * @return The description.
      */
@@ -8457,6 +8597,10 @@ public final class DesktopGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New desktop group description.
+     * </pre>
+     *
      * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
      * @return The bytes for description.
      */
@@ -8502,6 +8646,10 @@ public final class DesktopGroupServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * New desktop group labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -8520,6 +8668,10 @@ public final class DesktopGroupServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * New desktop group labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -8528,6 +8680,10 @@ public final class DesktopGroupServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * New desktop group labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -8541,6 +8697,10 @@ public final class DesktopGroupServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * New desktop group labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -8559,6 +8719,10 @@ public final class DesktopGroupServiceOuterClass {
     public static final int RESOURCES_SPEC_FIELD_NUMBER = 7;
     private yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ResourcesSpec resourcesSpec_;
     /**
+     * <pre>
+     * Resources specification of the desktop group.
+     * </pre>
+     *
      * <code>.yandex.cloud.clouddesktop.v1.api.ResourcesSpec resources_spec = 7;</code>
      * @return Whether the resourcesSpec field is set.
      */
@@ -8567,6 +8731,10 @@ public final class DesktopGroupServiceOuterClass {
       return resourcesSpec_ != null;
     }
     /**
+     * <pre>
+     * Resources specification of the desktop group.
+     * </pre>
+     *
      * <code>.yandex.cloud.clouddesktop.v1.api.ResourcesSpec resources_spec = 7;</code>
      * @return The resourcesSpec.
      */
@@ -8575,6 +8743,10 @@ public final class DesktopGroupServiceOuterClass {
       return resourcesSpec_ == null ? yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ResourcesSpec.getDefaultInstance() : resourcesSpec_;
     }
     /**
+     * <pre>
+     * Resources specification of the desktop group.
+     * </pre>
+     *
      * <code>.yandex.cloud.clouddesktop.v1.api.ResourcesSpec resources_spec = 7;</code>
      */
     @java.lang.Override
@@ -8698,6 +8870,10 @@ public final class DesktopGroupServiceOuterClass {
 
     public static final int AUTO_UPDATE_POLICY_FIELD_NUMBER = 13;
     /**
+     * <pre>
+     * Update automatically
+     * </pre>
+     *
      * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 13;</code>
      * @return Whether the autoUpdatePolicy field is set.
      */
@@ -8706,6 +8882,10 @@ public final class DesktopGroupServiceOuterClass {
       return updatePolicyCase_ == 13;
     }
     /**
+     * <pre>
+     * Update automatically
+     * </pre>
+     *
      * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 13;</code>
      * @return The autoUpdatePolicy.
      */
@@ -8717,6 +8897,10 @@ public final class DesktopGroupServiceOuterClass {
       return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Update automatically
+     * </pre>
+     *
      * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 13;</code>
      */
     @java.lang.Override
@@ -8729,6 +8913,10 @@ public final class DesktopGroupServiceOuterClass {
 
     public static final int MANUAL_UPDATE_POLICY_FIELD_NUMBER = 14;
     /**
+     * <pre>
+     * Update manually
+     * </pre>
+     *
      * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 14;</code>
      * @return Whether the manualUpdatePolicy field is set.
      */
@@ -8737,6 +8925,10 @@ public final class DesktopGroupServiceOuterClass {
       return updatePolicyCase_ == 14;
     }
     /**
+     * <pre>
+     * Update manually
+     * </pre>
+     *
      * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 14;</code>
      * @return The manualUpdatePolicy.
      */
@@ -8748,6 +8940,10 @@ public final class DesktopGroupServiceOuterClass {
       return yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Update manually
+     * </pre>
+     *
      * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 14;</code>
      */
     @java.lang.Override
@@ -9398,6 +9594,10 @@ public final class DesktopGroupServiceOuterClass {
 
       private java.lang.Object desktopGroupId_ = "";
       /**
+       * <pre>
+       * ID of the desktop group to update.
+       * </pre>
+       *
        * <code>string desktop_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The desktopGroupId.
        */
@@ -9414,6 +9614,10 @@ public final class DesktopGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the desktop group to update.
+       * </pre>
+       *
        * <code>string desktop_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for desktopGroupId.
        */
@@ -9431,6 +9635,10 @@ public final class DesktopGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the desktop group to update.
+       * </pre>
+       *
        * <code>string desktop_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The desktopGroupId to set.
        * @return This builder for chaining.
@@ -9446,6 +9654,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the desktop group to update.
+       * </pre>
+       *
        * <code>string desktop_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -9456,6 +9668,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the desktop group to update.
+       * </pre>
+       *
        * <code>string desktop_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for desktopGroupId to set.
        * @return This builder for chaining.
@@ -9476,6 +9692,10 @@ public final class DesktopGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which fields of the desktop group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        * @return Whether the updateMask field is set.
        */
@@ -9483,6 +9703,10 @@ public final class DesktopGroupServiceOuterClass {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the desktop group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        * @return The updateMask.
        */
@@ -9494,6 +9718,10 @@ public final class DesktopGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the desktop group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -9510,6 +9738,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the desktop group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(
@@ -9524,6 +9756,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the desktop group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -9542,6 +9778,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the desktop group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder clearUpdateMask() {
@@ -9556,6 +9796,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the desktop group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -9564,6 +9808,10 @@ public final class DesktopGroupServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the desktop group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -9575,6 +9823,10 @@ public final class DesktopGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the desktop group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -9593,6 +9845,10 @@ public final class DesktopGroupServiceOuterClass {
 
       private java.lang.Object desktopImageId_ = "";
       /**
+       * <pre>
+       * New desktop image ID.
+       * </pre>
+       *
        * <code>string desktop_image_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The desktopImageId.
        */
@@ -9609,6 +9865,10 @@ public final class DesktopGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New desktop image ID.
+       * </pre>
+       *
        * <code>string desktop_image_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for desktopImageId.
        */
@@ -9626,6 +9886,10 @@ public final class DesktopGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New desktop image ID.
+       * </pre>
+       *
        * <code>string desktop_image_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The desktopImageId to set.
        * @return This builder for chaining.
@@ -9641,6 +9905,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New desktop image ID.
+       * </pre>
+       *
        * <code>string desktop_image_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -9651,6 +9919,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New desktop image ID.
+       * </pre>
+       *
        * <code>string desktop_image_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for desktopImageId to set.
        * @return This builder for chaining.
@@ -9669,6 +9941,10 @@ public final class DesktopGroupServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * New desktop group name.
+       * </pre>
+       *
        * <code>string name = 4 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
        * @return The name.
        */
@@ -9685,6 +9961,10 @@ public final class DesktopGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New desktop group name.
+       * </pre>
+       *
        * <code>string name = 4 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
        * @return The bytes for name.
        */
@@ -9702,6 +9982,10 @@ public final class DesktopGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New desktop group name.
+       * </pre>
+       *
        * <code>string name = 4 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -9717,6 +10001,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New desktop group name.
+       * </pre>
+       *
        * <code>string name = 4 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
        * @return This builder for chaining.
        */
@@ -9727,6 +10015,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New desktop group name.
+       * </pre>
+       *
        * <code>string name = 4 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -9745,6 +10037,10 @@ public final class DesktopGroupServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * New desktop group description.
+       * </pre>
+       *
        * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
        * @return The description.
        */
@@ -9761,6 +10057,10 @@ public final class DesktopGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New desktop group description.
+       * </pre>
+       *
        * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
        * @return The bytes for description.
        */
@@ -9778,6 +10078,10 @@ public final class DesktopGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New desktop group description.
+       * </pre>
+       *
        * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -9793,6 +10097,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New desktop group description.
+       * </pre>
+       *
        * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
        * @return This builder for chaining.
        */
@@ -9803,6 +10111,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New desktop group description.
+       * </pre>
+       *
        * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -9846,6 +10158,10 @@ public final class DesktopGroupServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * New desktop group labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -9864,6 +10180,10 @@ public final class DesktopGroupServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * New desktop group labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -9872,6 +10192,10 @@ public final class DesktopGroupServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * New desktop group labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -9885,6 +10209,10 @@ public final class DesktopGroupServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * New desktop group labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -9906,6 +10234,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New desktop group labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -9925,6 +10257,10 @@ public final class DesktopGroupServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * New desktop group labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -9940,6 +10276,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New desktop group labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -9954,6 +10294,10 @@ public final class DesktopGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ResourcesSpec, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ResourcesSpec.Builder, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ResourcesSpecOrBuilder> resourcesSpecBuilder_;
       /**
+       * <pre>
+       * Resources specification of the desktop group.
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.ResourcesSpec resources_spec = 7;</code>
        * @return Whether the resourcesSpec field is set.
        */
@@ -9961,6 +10305,10 @@ public final class DesktopGroupServiceOuterClass {
         return resourcesSpecBuilder_ != null || resourcesSpec_ != null;
       }
       /**
+       * <pre>
+       * Resources specification of the desktop group.
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.ResourcesSpec resources_spec = 7;</code>
        * @return The resourcesSpec.
        */
@@ -9972,6 +10320,10 @@ public final class DesktopGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Resources specification of the desktop group.
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.ResourcesSpec resources_spec = 7;</code>
        */
       public Builder setResourcesSpec(yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ResourcesSpec value) {
@@ -9988,6 +10340,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resources specification of the desktop group.
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.ResourcesSpec resources_spec = 7;</code>
        */
       public Builder setResourcesSpec(
@@ -10002,6 +10358,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resources specification of the desktop group.
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.ResourcesSpec resources_spec = 7;</code>
        */
       public Builder mergeResourcesSpec(yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ResourcesSpec value) {
@@ -10020,6 +10380,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resources specification of the desktop group.
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.ResourcesSpec resources_spec = 7;</code>
        */
       public Builder clearResourcesSpec() {
@@ -10034,6 +10398,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resources specification of the desktop group.
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.ResourcesSpec resources_spec = 7;</code>
        */
       public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ResourcesSpec.Builder getResourcesSpecBuilder() {
@@ -10042,6 +10410,10 @@ public final class DesktopGroupServiceOuterClass {
         return getResourcesSpecFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Resources specification of the desktop group.
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.ResourcesSpec resources_spec = 7;</code>
        */
       public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ResourcesSpecOrBuilder getResourcesSpecOrBuilder() {
@@ -10053,6 +10425,10 @@ public final class DesktopGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Resources specification of the desktop group.
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.ResourcesSpec resources_spec = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -10537,6 +10913,10 @@ public final class DesktopGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.Builder, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicyOrBuilder> autoUpdatePolicyBuilder_;
       /**
+       * <pre>
+       * Update automatically
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 13;</code>
        * @return Whether the autoUpdatePolicy field is set.
        */
@@ -10545,6 +10925,10 @@ public final class DesktopGroupServiceOuterClass {
         return updatePolicyCase_ == 13;
       }
       /**
+       * <pre>
+       * Update automatically
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 13;</code>
        * @return The autoUpdatePolicy.
        */
@@ -10563,6 +10947,10 @@ public final class DesktopGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Update automatically
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 13;</code>
        */
       public Builder setAutoUpdatePolicy(yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy value) {
@@ -10579,6 +10967,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update automatically
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 13;</code>
        */
       public Builder setAutoUpdatePolicy(
@@ -10593,6 +10985,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update automatically
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 13;</code>
        */
       public Builder mergeAutoUpdatePolicy(yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy value) {
@@ -10615,6 +11011,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update automatically
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 13;</code>
        */
       public Builder clearAutoUpdatePolicy() {
@@ -10634,12 +11034,20 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update automatically
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 13;</code>
        */
       public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.AutoUpdatePolicy.Builder getAutoUpdatePolicyBuilder() {
         return getAutoUpdatePolicyFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Update automatically
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 13;</code>
        */
       @java.lang.Override
@@ -10654,6 +11062,10 @@ public final class DesktopGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Update automatically
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.AutoUpdatePolicy auto_update_policy = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -10678,6 +11090,10 @@ public final class DesktopGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.Builder, yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicyOrBuilder> manualUpdatePolicyBuilder_;
       /**
+       * <pre>
+       * Update manually
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 14;</code>
        * @return Whether the manualUpdatePolicy field is set.
        */
@@ -10686,6 +11102,10 @@ public final class DesktopGroupServiceOuterClass {
         return updatePolicyCase_ == 14;
       }
       /**
+       * <pre>
+       * Update manually
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 14;</code>
        * @return The manualUpdatePolicy.
        */
@@ -10704,6 +11124,10 @@ public final class DesktopGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Update manually
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 14;</code>
        */
       public Builder setManualUpdatePolicy(yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy value) {
@@ -10720,6 +11144,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update manually
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 14;</code>
        */
       public Builder setManualUpdatePolicy(
@@ -10734,6 +11162,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update manually
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 14;</code>
        */
       public Builder mergeManualUpdatePolicy(yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy value) {
@@ -10756,6 +11188,10 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update manually
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 14;</code>
        */
       public Builder clearManualUpdatePolicy() {
@@ -10775,12 +11211,20 @@ public final class DesktopGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update manually
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 14;</code>
        */
       public yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.ManualUpdatePolicy.Builder getManualUpdatePolicyBuilder() {
         return getManualUpdatePolicyFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Update manually
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 14;</code>
        */
       @java.lang.Override
@@ -10795,6 +11239,10 @@ public final class DesktopGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Update manually
+       * </pre>
+       *
        * <code>.yandex.cloud.clouddesktop.v1.api.ManualUpdatePolicy manual_update_policy = 14;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -11090,6 +11538,60 @@ public final class DesktopGroupServiceOuterClass {
      * <code>.yandex.cloud.clouddesktop.v1.api.DesktopGroupConfiguration group_config = 25;</code>
      */
     yandex.cloud.api.clouddesktop.v1.DesktopGroupOuterClass.DesktopGroupConfigurationOrBuilder getGroupConfigOrBuilder();
+
+    /**
+     * <pre>
+     * Desktop group labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Desktop group labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Desktop group labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Desktop group labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Desktop group labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code yandex.cloud.clouddesktop.v1.api.CreateDesktopGroupRequest}
@@ -11130,6 +11632,7 @@ public final class DesktopGroupServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11229,6 +11732,19 @@ public final class DesktopGroupServiceOuterClass {
 
               break;
             }
+            case 210: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -11253,6 +11769,18 @@ public final class DesktopGroupServiceOuterClass {
       return yandex.cloud.api.clouddesktop.v1.DesktopGroupServiceOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopGroupRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 26:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -11639,6 +12167,103 @@ public final class DesktopGroupServiceOuterClass {
       return getGroupConfig();
     }
 
+    public static final int LABELS_FIELD_NUMBER = 26;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.clouddesktop.v1.DesktopGroupServiceOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopGroupRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Desktop group labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Desktop group labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Desktop group labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Desktop group labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11680,6 +12305,12 @@ public final class DesktopGroupServiceOuterClass {
       if (groupConfig_ != null) {
         output.writeMessage(25, getGroupConfig());
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          26);
       unknownFields.writeTo(output);
     }
 
@@ -11720,6 +12351,16 @@ public final class DesktopGroupServiceOuterClass {
       if (groupConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(25, getGroupConfig());
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(26, labels__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11769,6 +12410,8 @@ public final class DesktopGroupServiceOuterClass {
         if (!getGroupConfig()
             .equals(other.getGroupConfig())) return false;
       }
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11807,6 +12450,10 @@ public final class DesktopGroupServiceOuterClass {
       if (hasGroupConfig()) {
         hash = (37 * hash) + GROUP_CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + getGroupConfig().hashCode();
+      }
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -11915,6 +12562,28 @@ public final class DesktopGroupServiceOuterClass {
         return yandex.cloud.api.clouddesktop.v1.DesktopGroupServiceOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopGroupRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 26:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 26:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -11979,6 +12648,7 @@ public final class DesktopGroupServiceOuterClass {
           groupConfig_ = null;
           groupConfigBuilder_ = null;
         }
+        internalGetMutableLabels().clear();
         return this;
       }
 
@@ -12005,6 +12675,7 @@ public final class DesktopGroupServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.clouddesktop.v1.DesktopGroupServiceOuterClass.CreateDesktopGroupRequest buildPartial() {
         yandex.cloud.api.clouddesktop.v1.DesktopGroupServiceOuterClass.CreateDesktopGroupRequest result = new yandex.cloud.api.clouddesktop.v1.DesktopGroupServiceOuterClass.CreateDesktopGroupRequest(this);
+        int from_bitField0_ = bitField0_;
         result.folderId_ = folderId_;
         result.desktopImageId_ = desktopImageId_;
         result.name_ = name_;
@@ -12034,6 +12705,8 @@ public final class DesktopGroupServiceOuterClass {
         } else {
           result.groupConfig_ = groupConfigBuilder_.build();
         }
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -12113,6 +12786,8 @@ public final class DesktopGroupServiceOuterClass {
         if (other.hasGroupConfig()) {
           mergeGroupConfig(other.getGroupConfig());
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -12141,6 +12816,7 @@ public final class DesktopGroupServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object folderId_ = "";
       /**
@@ -13309,6 +13985,165 @@ public final class DesktopGroupServiceOuterClass {
           groupConfig_ = null;
         }
         return groupConfigBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Desktop group labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Desktop group labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Desktop group labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Desktop group labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Desktop group labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Desktop group labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Desktop group labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 26 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -15839,6 +16674,11 @@ public final class DesktopGroupServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopGroupRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopGroupRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopGroupRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopGroupMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -15926,7 +16766,7 @@ public final class DesktopGroupServiceOuterClass {
       "\01324.yandex.cloud.clouddesktop.v1.api.Man" +
       "ualUpdatePolicyH\000\032-\n\013LabelsEntry\022\013\n\003key\030" +
       "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\017\n\rupdate_polic" +
-      "yJ\004\010\010\020\n\"\277\004\n\031CreateDesktopGroupRequest\022\037\n" +
+      "yJ\004\010\010\020\n\"\211\006\n\031CreateDesktopGroupRequest\022\037\n" +
       "\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022&\n\020deskto" +
       "p_image_id\030\003 \001(\tB\014\350\3071\001\212\3101\004<=50\0220\n\004name\030\013" +
       " \001(\tB\"\362\3071\036[a-z]([-a-z0-9]{0,61}[a-z0-9])" +
@@ -15940,70 +16780,75 @@ public final class DesktopGroupServiceOuterClass {
       "\030\030 \001(\0132*.yandex.cloud.clouddesktop.v1.ap" +
       "i.DiskSpec\022Q\n\014group_config\030\031 \001(\0132;.yande" +
       "x.cloud.clouddesktop.v1.api.DesktopGroup" +
-      "ConfigurationJ\004\010\r\020\025J\004\010\004\020\013\"6\n\032CreateDeskt" +
-      "opGroupMetadata\022\030\n\020desktop_group_id\030\001 \001(" +
-      "\t\"C\n\031DeleteDesktopGroupRequest\022&\n\020deskto" +
-      "p_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"6\n\032Delete" +
-      "DesktopGroupMetadata\022\030\n\020desktop_group_id" +
-      "\030\001 \001(\t\"6\n\032UpdateDesktopGroupMetadata\022\030\n\020" +
-      "desktop_group_id\030\001 \001(\t2\346\020\n\023DesktopGroupS" +
-      "ervice\022\253\001\n\003Get\0228.yandex.cloud.clouddeskt" +
-      "op.v1.api.GetDesktopGroupRequest\032..yande" +
-      "x.cloud.clouddesktop.v1.api.DesktopGroup" +
-      "\":\202\323\344\223\0024\0222/cloud-desktop/v1/desktopGroup" +
-      "s/{desktop_group_id}\022\250\001\n\004List\022:.yandex.c" +
-      "loud.clouddesktop.v1.api.ListDesktopGrou" +
-      "psRequest\032;.yandex.cloud.clouddesktop.v1" +
-      ".api.ListDesktopGroupsResponse\"\'\202\323\344\223\002!\022\037" +
-      "/cloud-desktop/v1/desktopGroups\022\332\001\n\014List" +
-      "Desktops\022A.yandex.cloud.clouddesktop.v1." +
-      "api.ListDesktopGroupDesktopsRequest\032B.ya" +
-      "ndex.cloud.clouddesktop.v1.api.ListDeskt" +
-      "opGroupDesktopsResponse\"C\202\323\344\223\002=\022;/cloud-" +
-      "desktop/v1/desktopGroups/{desktop_group_" +
-      "id}/desktops\022\342\001\n\016ListOperations\022C.yandex" +
+      "Configuration\022\230\001\n\006labels\030\032 \003(\0132G.yandex." +
+      "cloud.clouddesktop.v1.api.CreateDesktopG" +
+      "roupRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=6" +
+      "3\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_" +
+      "0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001J\004\010\r\020\025J\004\010\004\020\013\"6\n\032CreateDes" +
+      "ktopGroupMetadata\022\030\n\020desktop_group_id\030\001 " +
+      "\001(\t\"C\n\031DeleteDesktopGroupRequest\022&\n\020desk" +
+      "top_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"6\n\032Dele" +
+      "teDesktopGroupMetadata\022\030\n\020desktop_group_" +
+      "id\030\001 \001(\t\"6\n\032UpdateDesktopGroupMetadata\022\030" +
+      "\n\020desktop_group_id\030\001 \001(\t2\346\020\n\023DesktopGrou" +
+      "pService\022\253\001\n\003Get\0228.yandex.cloud.clouddes" +
+      "ktop.v1.api.GetDesktopGroupRequest\032..yan" +
+      "dex.cloud.clouddesktop.v1.api.DesktopGro" +
+      "up\":\202\323\344\223\0024\0222/cloud-desktop/v1/desktopGro" +
+      "ups/{desktop_group_id}\022\250\001\n\004List\022:.yandex" +
       ".cloud.clouddesktop.v1.api.ListDesktopGr" +
-      "oupOperationsRequest\032D.yandex.cloud.clou" +
-      "ddesktop.v1.api.ListDesktopGroupOperatio" +
-      "nsResponse\"E\202\323\344\223\002?\022=/cloud-desktop/v1/de" +
-      "sktopGroups/{desktop_group_id}/operation" +
-      "s\022\302\001\n\006Create\022;.yandex.cloud.clouddesktop" +
-      ".v1.api.CreateDesktopGroupRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"X\202\323\344\223\002$\"\037/c" +
-      "loud-desktop/v1/desktopGroups:\001*\262\322**\n\032Cr" +
-      "eateDesktopGroupMetadata\022\014DesktopGroup\022\336" +
-      "\001\n\006Update\022;.yandex.cloud.clouddesktop.v1" +
-      ".api.UpdateDesktopGroupRequest\032!.yandex." +
-      "cloud.operation.Operation\"t\202\323\344\223\002722/clou" +
+      "oupsRequest\032;.yandex.cloud.clouddesktop." +
+      "v1.api.ListDesktopGroupsResponse\"\'\202\323\344\223\002!" +
+      "\022\037/cloud-desktop/v1/desktopGroups\022\332\001\n\014Li" +
+      "stDesktops\022A.yandex.cloud.clouddesktop.v" +
+      "1.api.ListDesktopGroupDesktopsRequest\032B." +
+      "yandex.cloud.clouddesktop.v1.api.ListDes" +
+      "ktopGroupDesktopsResponse\"C\202\323\344\223\002=\022;/clou" +
       "d-desktop/v1/desktopGroups/{desktop_grou" +
-      "p_id}:\001*\262\322*3\n\032UpdateDesktopGroupMetadata" +
-      "\022\025google.protobuf.Empty\022\333\001\n\006Delete\022;.yan" +
-      "dex.cloud.clouddesktop.v1.api.DeleteDesk" +
-      "topGroupRequest\032!.yandex.cloud.operation" +
-      ".Operation\"q\202\323\344\223\0024*2/cloud-desktop/v1/de" +
-      "sktopGroups/{desktop_group_id}\262\322*3\n\032Dele" +
-      "teDesktopGroupMetadata\022\025google.protobuf." +
-      "Empty\022\277\001\n\022ListAccessBindings\022..yandex.cl" +
-      "oud.access.ListAccessBindingsRequest\032/.y" +
-      "andex.cloud.access.ListAccessBindingsRes" +
-      "ponse\"H\202\323\344\223\002B\022@/cloud-desktop/v1/desktop" +
-      "Groups/{resource_id}:listAccessBindings\022" +
-      "\357\001\n\021SetAccessBindings\022-.yandex.cloud.acc" +
-      "ess.SetAccessBindingsRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"\207\001\202\323\344\223\002D\"?/cloud" +
-      "-desktop/v1/desktopGroups/{resource_id}:" +
-      "setAccessBindings:\001*\262\322*9\n access.SetAcce" +
-      "ssBindingsMetadata\022\025google.protobuf.Empt" +
-      "y\022\373\001\n\024UpdateAccessBindings\0220.yandex.clou" +
-      "d.access.UpdateAccessBindingsRequest\032!.y" +
-      "andex.cloud.operation.Operation\"\215\001\202\323\344\223\002G" +
-      "\"B/cloud-desktop/v1/desktopGroups/{resou" +
-      "rce_id}:updateAccessBindings:\001*\262\322*<\n#acc" +
-      "ess.UpdateAccessBindingsMetadata\022\025google" +
-      ".protobuf.EmptyBq\n yandex.cloud.api.clou" +
-      "ddesktop.v1ZMgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/clouddesktop/v1;cl" +
-      "ouddesktopb\006proto3"
+      "p_id}/desktops\022\342\001\n\016ListOperations\022C.yand" +
+      "ex.cloud.clouddesktop.v1.api.ListDesktop" +
+      "GroupOperationsRequest\032D.yandex.cloud.cl" +
+      "ouddesktop.v1.api.ListDesktopGroupOperat" +
+      "ionsResponse\"E\202\323\344\223\002?\022=/cloud-desktop/v1/" +
+      "desktopGroups/{desktop_group_id}/operati" +
+      "ons\022\302\001\n\006Create\022;.yandex.cloud.clouddeskt" +
+      "op.v1.api.CreateDesktopGroupRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"X\202\323\344\223\002$\"\037" +
+      "/cloud-desktop/v1/desktopGroups:\001*\262\322**\n\032" +
+      "CreateDesktopGroupMetadata\022\014DesktopGroup" +
+      "\022\336\001\n\006Update\022;.yandex.cloud.clouddesktop." +
+      "v1.api.UpdateDesktopGroupRequest\032!.yande" +
+      "x.cloud.operation.Operation\"t\202\323\344\223\002722/cl" +
+      "oud-desktop/v1/desktopGroups/{desktop_gr" +
+      "oup_id}:\001*\262\322*3\n\032UpdateDesktopGroupMetada" +
+      "ta\022\025google.protobuf.Empty\022\333\001\n\006Delete\022;.y" +
+      "andex.cloud.clouddesktop.v1.api.DeleteDe" +
+      "sktopGroupRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"q\202\323\344\223\0024*2/cloud-desktop/v1/" +
+      "desktopGroups/{desktop_group_id}\262\322*3\n\032De" +
+      "leteDesktopGroupMetadata\022\025google.protobu" +
+      "f.Empty\022\277\001\n\022ListAccessBindings\022..yandex." +
+      "cloud.access.ListAccessBindingsRequest\032/" +
+      ".yandex.cloud.access.ListAccessBindingsR" +
+      "esponse\"H\202\323\344\223\002B\022@/cloud-desktop/v1/deskt" +
+      "opGroups/{resource_id}:listAccessBinding" +
+      "s\022\357\001\n\021SetAccessBindings\022-.yandex.cloud.a" +
+      "ccess.SetAccessBindingsRequest\032!.yandex." +
+      "cloud.operation.Operation\"\207\001\202\323\344\223\002D\"?/clo" +
+      "ud-desktop/v1/desktopGroups/{resource_id" +
+      "}:setAccessBindings:\001*\262\322*9\n access.SetAc" +
+      "cessBindingsMetadata\022\025google.protobuf.Em" +
+      "pty\022\373\001\n\024UpdateAccessBindings\0220.yandex.cl" +
+      "oud.access.UpdateAccessBindingsRequest\032!" +
+      ".yandex.cloud.operation.Operation\"\215\001\202\323\344\223" +
+      "\002G\"B/cloud-desktop/v1/desktopGroups/{res" +
+      "ource_id}:updateAccessBindings:\001*\262\322*<\n#a" +
+      "ccess.UpdateAccessBindingsMetadata\022\025goog" +
+      "le.protobuf.EmptyBq\n yandex.cloud.api.cl" +
+      "ouddesktop.v1ZMgithub.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/clouddesktop/v1;" +
+      "clouddesktopb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16077,7 +16922,13 @@ public final class DesktopGroupServiceOuterClass {
     internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopGroupRequest_descriptor,
-        new java.lang.String[] { "FolderId", "DesktopImageId", "Name", "Description", "ResourcesSpec", "NetworkInterfaceSpec", "BootDiskSpec", "DataDiskSpec", "GroupConfig", });
+        new java.lang.String[] { "FolderId", "DesktopImageId", "Name", "Description", "ResourcesSpec", "NetworkInterfaceSpec", "BootDiskSpec", "DataDiskSpec", "GroupConfig", "Labels", });
+    internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopGroupRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopGroupRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopGroupRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopGroupRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopGroupMetadata_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopGroupMetadata_fieldAccessorTable = new

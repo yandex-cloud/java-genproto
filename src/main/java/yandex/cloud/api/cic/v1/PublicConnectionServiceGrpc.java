@@ -80,6 +80,37 @@ public final class PublicConnectionServiceGrpc {
     return getListMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Move",
+      requestType = yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod;
+    if ((getMoveMethod = PublicConnectionServiceGrpc.getMoveMethod) == null) {
+      synchronized (PublicConnectionServiceGrpc.class) {
+        if ((getMoveMethod = PublicConnectionServiceGrpc.getMoveMethod) == null) {
+          PublicConnectionServiceGrpc.getMoveMethod = getMoveMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Move"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new PublicConnectionServiceMethodDescriptorSupplier("Move"))
+              .build();
+        }
+      }
+    }
+    return getMoveMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -152,6 +183,16 @@ public final class PublicConnectionServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Moves the specified PublicConnection to another folder.
+     * </pre>
+     */
+    public void move(yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -168,6 +209,13 @@ public final class PublicConnectionServiceGrpc {
                 yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.ListPublicConnectionsRequest,
                 yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.ListPublicConnectionsResponse>(
                   this, METHODID_LIST)))
+          .addMethod(
+            getMoveMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_MOVE)))
           .build();
     }
   }
@@ -211,6 +259,17 @@ public final class PublicConnectionServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Moves the specified PublicConnection to another folder.
+     * </pre>
+     */
+    public void move(yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getMoveMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -249,6 +308,16 @@ public final class PublicConnectionServiceGrpc {
     public yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.ListPublicConnectionsResponse list(yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.ListPublicConnectionsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Moves the specified PublicConnection to another folder.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMoveMethod(), getCallOptions(), request);
     }
   }
 
@@ -291,10 +360,22 @@ public final class PublicConnectionServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Moves the specified PublicConnection to another folder.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> move(
+        yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getMoveMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
   private static final int METHODID_LIST = 1;
+  private static final int METHODID_MOVE = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -320,6 +401,10 @@ public final class PublicConnectionServiceGrpc {
         case METHODID_LIST:
           serviceImpl.list((yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.ListPublicConnectionsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.ListPublicConnectionsResponse>) responseObserver);
+          break;
+        case METHODID_MOVE:
+          serviceImpl.move((yandex.cloud.api.cic.v1.PublicConnectionServiceOuterClass.MovePublicConnectionRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -384,6 +469,7 @@ public final class PublicConnectionServiceGrpc {
               .setSchemaDescriptor(new PublicConnectionServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
               .addMethod(getListMethod())
+              .addMethod(getMoveMethod())
               .build();
         }
       }

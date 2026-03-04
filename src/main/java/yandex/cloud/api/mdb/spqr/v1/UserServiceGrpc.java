@@ -80,37 +80,6 @@ public final class UserServiceGrpc {
     return getListMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest,
-      yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersResponse> getListAtRevisionMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListAtRevision",
-      requestType = yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest.class,
-      responseType = yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest,
-      yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersResponse> getListAtRevisionMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest, yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersResponse> getListAtRevisionMethod;
-    if ((getListAtRevisionMethod = UserServiceGrpc.getListAtRevisionMethod) == null) {
-      synchronized (UserServiceGrpc.class) {
-        if ((getListAtRevisionMethod = UserServiceGrpc.getListAtRevisionMethod) == null) {
-          UserServiceGrpc.getListAtRevisionMethod = getListAtRevisionMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest, yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAtRevision"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("ListAtRevision"))
-              .build();
-        }
-      }
-    }
-    return getListAtRevisionMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.CreateUserRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
 
@@ -278,16 +247,6 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of SPQR User resources in the specified cluster at revision.
-     * </pre>
-     */
-    public void listAtRevision(yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAtRevisionMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * Creates a SPQR user in the specified cluster.
      * </pre>
      */
@@ -332,13 +291,6 @@ public final class UserServiceGrpc {
                 yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersRequest,
                 yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersResponse>(
                   this, METHODID_LIST)))
-          .addMethod(
-            getListAtRevisionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest,
-                yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersResponse>(
-                  this, METHODID_LIST_AT_REVISION)))
           .addMethod(
             getCreateMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -402,17 +354,6 @@ public final class UserServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Retrieves the list of SPQR User resources in the specified cluster at revision.
-     * </pre>
-     */
-    public void listAtRevision(yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListAtRevisionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -489,16 +430,6 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of SPQR User resources in the specified cluster at revision.
-     * </pre>
-     */
-    public yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersResponse listAtRevision(yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListAtRevisionMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * Creates a SPQR user in the specified cluster.
      * </pre>
      */
@@ -570,17 +501,6 @@ public final class UserServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of SPQR User resources in the specified cluster at revision.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersResponse> listAtRevision(
-        yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListAtRevisionMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * Creates a SPQR user in the specified cluster.
      * </pre>
      */
@@ -615,10 +535,9 @@ public final class UserServiceGrpc {
 
   private static final int METHODID_GET = 0;
   private static final int METHODID_LIST = 1;
-  private static final int METHODID_LIST_AT_REVISION = 2;
-  private static final int METHODID_CREATE = 3;
-  private static final int METHODID_UPDATE = 4;
-  private static final int METHODID_DELETE = 5;
+  private static final int METHODID_CREATE = 2;
+  private static final int METHODID_UPDATE = 3;
+  private static final int METHODID_DELETE = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -643,10 +562,6 @@ public final class UserServiceGrpc {
           break;
         case METHODID_LIST:
           serviceImpl.list((yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersResponse>) responseObserver);
-          break;
-        case METHODID_LIST_AT_REVISION:
-          serviceImpl.listAtRevision((yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersResponse>) responseObserver);
           break;
         case METHODID_CREATE:
@@ -724,7 +639,6 @@ public final class UserServiceGrpc {
               .setSchemaDescriptor(new UserServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
               .addMethod(getListMethod())
-              .addMethod(getListAtRevisionMethod())
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())

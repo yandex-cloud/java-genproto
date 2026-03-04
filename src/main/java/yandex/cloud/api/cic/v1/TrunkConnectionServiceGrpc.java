@@ -173,6 +173,37 @@ public final class TrunkConnectionServiceGrpc {
     return getDeleteMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Move",
+      requestType = yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod;
+    if ((getMoveMethod = TrunkConnectionServiceGrpc.getMoveMethod) == null) {
+      synchronized (TrunkConnectionServiceGrpc.class) {
+        if ((getMoveMethod = TrunkConnectionServiceGrpc.getMoveMethod) == null) {
+          TrunkConnectionServiceGrpc.getMoveMethod = getMoveMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Move"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new TrunkConnectionServiceMethodDescriptorSupplier("Move"))
+              .build();
+        }
+      }
+    }
+    return getMoveMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionOperationsRequest,
       yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.ListTrunkConnectionOperationsResponse> getListOperationsMethod;
 
@@ -311,6 +342,16 @@ public final class TrunkConnectionServiceGrpc {
 
     /**
      * <pre>
+     * Moves the specified TrunkConnection to another folder.
+     * </pre>
+     */
+    public void move(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified TrunkConnection.
      * </pre>
      */
@@ -356,6 +397,13 @@ public final class TrunkConnectionServiceGrpc {
                 yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.DeleteTrunkConnectionRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
+          .addMethod(
+            getMoveMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_MOVE)))
           .addMethod(
             getListOperationsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -445,6 +493,17 @@ public final class TrunkConnectionServiceGrpc {
 
     /**
      * <pre>
+     * Moves the specified TrunkConnection to another folder.
+     * </pre>
+     */
+    public void move(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getMoveMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified TrunkConnection.
      * </pre>
      */
@@ -524,6 +583,16 @@ public final class TrunkConnectionServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.DeleteTrunkConnectionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Moves the specified TrunkConnection to another folder.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMoveMethod(), getCallOptions(), request);
     }
 
     /**
@@ -615,6 +684,17 @@ public final class TrunkConnectionServiceGrpc {
 
     /**
      * <pre>
+     * Moves the specified TrunkConnection to another folder.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> move(
+        yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getMoveMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified TrunkConnection.
      * </pre>
      */
@@ -630,7 +710,8 @@ public final class TrunkConnectionServiceGrpc {
   private static final int METHODID_CREATE = 2;
   private static final int METHODID_UPDATE = 3;
   private static final int METHODID_DELETE = 4;
-  private static final int METHODID_LIST_OPERATIONS = 5;
+  private static final int METHODID_MOVE = 5;
+  private static final int METHODID_LIST_OPERATIONS = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -667,6 +748,10 @@ public final class TrunkConnectionServiceGrpc {
           break;
         case METHODID_DELETE:
           serviceImpl.delete((yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.DeleteTrunkConnectionRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_MOVE:
+          serviceImpl.move((yandex.cloud.api.cic.v1.TrunkConnectionServiceOuterClass.MoveTrunkConnectionRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_LIST_OPERATIONS:
@@ -739,6 +824,7 @@ public final class TrunkConnectionServiceGrpc {
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
+              .addMethod(getMoveMethod())
               .addMethod(getListOperationsMethod())
               .build();
         }

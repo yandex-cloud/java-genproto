@@ -122,6 +122,69 @@ public final class VrfOuterClass {
 
     /**
      * <pre>
+     * Status of the VRF.  
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.Vrf.Status status = 6;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <pre>
+     * Status of the VRF.  
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.Vrf.Status status = 6;</code>
+     * @return The status.
+     */
+    yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.Vrf.Status getStatus();
+
+    /**
+     * <pre>
+     * Static routes.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+     */
+    java.util.List<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute> 
+        getStaticRoutesList();
+    /**
+     * <pre>
+     * Static routes.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+     */
+    yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute getStaticRoutes(int index);
+    /**
+     * <pre>
+     * Static routes.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+     */
+    int getStaticRoutesCount();
+    /**
+     * <pre>
+     * Static routes.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder> 
+        getStaticRoutesOrBuilderList();
+    /**
+     * <pre>
+     * Static routes.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+     */
+    yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder getStaticRoutesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
      * Creation timestamp.
      * </pre>
      *
@@ -219,6 +282,8 @@ public final class VrfOuterClass {
       folderId_ = "";
       name_ = "";
       description_ = "";
+      status_ = 0;
+      staticRoutes_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -282,6 +347,21 @@ public final class VrfOuterClass {
               description_ = s;
               break;
             }
+            case 48: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                staticRoutes_ = new java.util.ArrayList<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              staticRoutes_.add(
+                  input.readMessage(yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.parser(), extensionRegistry));
+              break;
+            }
             case 802: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
               if (createdAt_ != null) {
@@ -296,10 +376,10 @@ public final class VrfOuterClass {
               break;
             }
             case 1602: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000002;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -323,6 +403,9 @@ public final class VrfOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          staticRoutes_ = java.util.Collections.unmodifiableList(staticRoutes_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -350,6 +433,147 @@ public final class VrfOuterClass {
       return yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_Vrf_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.Vrf.class, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.Vrf.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.baremetal.v1alpha.Vrf.Status}
+     */
+    public enum Status
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * Unspecified VRF status.
+       * </pre>
+       *
+       * <code>STATUS_UNSPECIFIED = 0;</code>
+       */
+      STATUS_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * VRF is ready to use.
+       * </pre>
+       *
+       * <code>ACTIVE = 1;</code>
+       */
+      ACTIVE(1),
+      /**
+       * <pre>
+       * VRF is being updated.
+       * </pre>
+       *
+       * <code>UPDATING = 2;</code>
+       */
+      UPDATING(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * Unspecified VRF status.
+       * </pre>
+       *
+       * <code>STATUS_UNSPECIFIED = 0;</code>
+       */
+      public static final int STATUS_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * VRF is ready to use.
+       * </pre>
+       *
+       * <code>ACTIVE = 1;</code>
+       */
+      public static final int ACTIVE_VALUE = 1;
+      /**
+       * <pre>
+       * VRF is being updated.
+       * </pre>
+       *
+       * <code>UPDATING = 2;</code>
+       */
+      public static final int UPDATING_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Status valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Status forNumber(int value) {
+        switch (value) {
+          case 0: return STATUS_UNSPECIFIED;
+          case 1: return ACTIVE;
+          case 2: return UPDATING;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Status>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Status> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Status>() {
+              public Status findValueByNumber(int number) {
+                return Status.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.Vrf.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Status[] VALUES = values();
+
+      public static Status valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Status(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.baremetal.v1alpha.Vrf.Status)
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -584,6 +808,93 @@ public final class VrfOuterClass {
       }
     }
 
+    public static final int STATUS_FIELD_NUMBER = 6;
+    private int status_;
+    /**
+     * <pre>
+     * Status of the VRF.  
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.Vrf.Status status = 6;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * Status of the VRF.  
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.Vrf.Status status = 6;</code>
+     * @return The status.
+     */
+    @java.lang.Override public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.Vrf.Status getStatus() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.Vrf.Status result = yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.Vrf.Status.valueOf(status_);
+      return result == null ? yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.Vrf.Status.UNRECOGNIZED : result;
+    }
+
+    public static final int STATIC_ROUTES_FIELD_NUMBER = 7;
+    private java.util.List<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute> staticRoutes_;
+    /**
+     * <pre>
+     * Static routes.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute> getStaticRoutesList() {
+      return staticRoutes_;
+    }
+    /**
+     * <pre>
+     * Static routes.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder> 
+        getStaticRoutesOrBuilderList() {
+      return staticRoutes_;
+    }
+    /**
+     * <pre>
+     * Static routes.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+     */
+    @java.lang.Override
+    public int getStaticRoutesCount() {
+      return staticRoutes_.size();
+    }
+    /**
+     * <pre>
+     * Static routes.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute getStaticRoutes(int index) {
+      return staticRoutes_.get(index);
+    }
+    /**
+     * <pre>
+     * Static routes.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder getStaticRoutesOrBuilder(
+        int index) {
+      return staticRoutes_.get(index);
+    }
+
     public static final int CREATED_AT_FIELD_NUMBER = 100;
     private com.google.protobuf.Timestamp createdAt_;
     /**
@@ -748,6 +1059,12 @@ public final class VrfOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
+      if (status_ != yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.Vrf.Status.STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(6, status_);
+      }
+      for (int i = 0; i < staticRoutes_.size(); i++) {
+        output.writeMessage(7, staticRoutes_.get(i));
+      }
       if (createdAt_ != null) {
         output.writeMessage(100, getCreatedAt());
       }
@@ -780,6 +1097,14 @@ public final class VrfOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
+      }
+      if (status_ != yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.Vrf.Status.STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(6, status_);
+      }
+      for (int i = 0; i < staticRoutes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, staticRoutes_.get(i));
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -820,6 +1145,9 @@ public final class VrfOuterClass {
           .equals(other.getName())) return false;
       if (!getDescription()
           .equals(other.getDescription())) return false;
+      if (status_ != other.status_) return false;
+      if (!getStaticRoutesList()
+          .equals(other.getStaticRoutesList())) return false;
       if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
         if (!getCreatedAt()
@@ -848,6 +1176,12 @@ public final class VrfOuterClass {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      if (getStaticRoutesCount() > 0) {
+        hash = (37 * hash) + STATIC_ROUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getStaticRoutesList().hashCode();
+      }
       if (hasCreatedAt()) {
         hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getCreatedAt().hashCode();
@@ -1006,6 +1340,7 @@ public final class VrfOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getStaticRoutesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -1021,6 +1356,14 @@ public final class VrfOuterClass {
 
         description_ = "";
 
+        status_ = 0;
+
+        if (staticRoutesBuilder_ == null) {
+          staticRoutes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          staticRoutesBuilder_.clear();
+        }
         if (createdAtBuilder_ == null) {
           createdAt_ = null;
         } else {
@@ -1060,6 +1403,16 @@ public final class VrfOuterClass {
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.description_ = description_;
+        result.status_ = status_;
+        if (staticRoutesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            staticRoutes_ = java.util.Collections.unmodifiableList(staticRoutes_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.staticRoutes_ = staticRoutes_;
+        } else {
+          result.staticRoutes_ = staticRoutesBuilder_.build();
+        }
         if (createdAtBuilder_ == null) {
           result.createdAt_ = createdAt_;
         } else {
@@ -1134,6 +1487,35 @@ public final class VrfOuterClass {
         if (!other.getDescription().isEmpty()) {
           description_ = other.description_;
           onChanged();
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (staticRoutesBuilder_ == null) {
+          if (!other.staticRoutes_.isEmpty()) {
+            if (staticRoutes_.isEmpty()) {
+              staticRoutes_ = other.staticRoutes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureStaticRoutesIsMutable();
+              staticRoutes_.addAll(other.staticRoutes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.staticRoutes_.isEmpty()) {
+            if (staticRoutesBuilder_.isEmpty()) {
+              staticRoutesBuilder_.dispose();
+              staticRoutesBuilder_ = null;
+              staticRoutes_ = other.staticRoutes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              staticRoutesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getStaticRoutesFieldBuilder() : null;
+            } else {
+              staticRoutesBuilder_.addAllMessages(other.staticRoutes_);
+            }
+          }
         }
         if (other.hasCreatedAt()) {
           mergeCreatedAt(other.getCreatedAt());
@@ -1655,6 +2037,392 @@ public final class VrfOuterClass {
         return this;
       }
 
+      private int status_ = 0;
+      /**
+       * <pre>
+       * Status of the VRF.  
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.Vrf.Status status = 6;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * Status of the VRF.  
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.Vrf.Status status = 6;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of the VRF.  
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.Vrf.Status status = 6;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.Vrf.Status getStatus() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.Vrf.Status result = yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.Vrf.Status.valueOf(status_);
+        return result == null ? yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.Vrf.Status.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Status of the VRF.  
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.Vrf.Status status = 6;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.Vrf.Status value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of the VRF.  
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.Vrf.Status status = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute> staticRoutes_ =
+        java.util.Collections.emptyList();
+      private void ensureStaticRoutesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          staticRoutes_ = new java.util.ArrayList<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute>(staticRoutes_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder> staticRoutesBuilder_;
+
+      /**
+       * <pre>
+       * Static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+       */
+      public java.util.List<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute> getStaticRoutesList() {
+        if (staticRoutesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(staticRoutes_);
+        } else {
+          return staticRoutesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+       */
+      public int getStaticRoutesCount() {
+        if (staticRoutesBuilder_ == null) {
+          return staticRoutes_.size();
+        } else {
+          return staticRoutesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute getStaticRoutes(int index) {
+        if (staticRoutesBuilder_ == null) {
+          return staticRoutes_.get(index);
+        } else {
+          return staticRoutesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+       */
+      public Builder setStaticRoutes(
+          int index, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute value) {
+        if (staticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.set(index, value);
+          onChanged();
+        } else {
+          staticRoutesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+       */
+      public Builder setStaticRoutes(
+          int index, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder builderForValue) {
+        if (staticRoutesBuilder_ == null) {
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          staticRoutesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+       */
+      public Builder addStaticRoutes(yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute value) {
+        if (staticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.add(value);
+          onChanged();
+        } else {
+          staticRoutesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+       */
+      public Builder addStaticRoutes(
+          int index, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute value) {
+        if (staticRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.add(index, value);
+          onChanged();
+        } else {
+          staticRoutesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+       */
+      public Builder addStaticRoutes(
+          yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder builderForValue) {
+        if (staticRoutesBuilder_ == null) {
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          staticRoutesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+       */
+      public Builder addStaticRoutes(
+          int index, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder builderForValue) {
+        if (staticRoutesBuilder_ == null) {
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          staticRoutesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+       */
+      public Builder addAllStaticRoutes(
+          java.lang.Iterable<? extends yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute> values) {
+        if (staticRoutesBuilder_ == null) {
+          ensureStaticRoutesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, staticRoutes_);
+          onChanged();
+        } else {
+          staticRoutesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+       */
+      public Builder clearStaticRoutes() {
+        if (staticRoutesBuilder_ == null) {
+          staticRoutes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          staticRoutesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+       */
+      public Builder removeStaticRoutes(int index) {
+        if (staticRoutesBuilder_ == null) {
+          ensureStaticRoutesIsMutable();
+          staticRoutes_.remove(index);
+          onChanged();
+        } else {
+          staticRoutesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder getStaticRoutesBuilder(
+          int index) {
+        return getStaticRoutesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder getStaticRoutesOrBuilder(
+          int index) {
+        if (staticRoutesBuilder_ == null) {
+          return staticRoutes_.get(index);  } else {
+          return staticRoutesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder> 
+           getStaticRoutesOrBuilderList() {
+        if (staticRoutesBuilder_ != null) {
+          return staticRoutesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(staticRoutes_);
+        }
+      }
+      /**
+       * <pre>
+       * Static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder addStaticRoutesBuilder() {
+        return getStaticRoutesFieldBuilder().addBuilder(
+            yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder addStaticRoutesBuilder(
+          int index) {
+        return getStaticRoutesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Static routes.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.StaticRoute static_routes = 7;</code>
+       */
+      public java.util.List<yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder> 
+           getStaticRoutesBuilderList() {
+        return getStaticRoutesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder> 
+          getStaticRoutesFieldBuilder() {
+        if (staticRoutesBuilder_ == null) {
+          staticRoutesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder>(
+                  staticRoutes_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          staticRoutes_ = null;
+        }
+        return staticRoutesBuilder_;
+      }
+
       private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
@@ -2021,6 +2789,1080 @@ public final class VrfOuterClass {
 
   }
 
+  public interface StaticRouteOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.baremetal.v1alpha.StaticRoute)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Destination network CIDR block.
+     * </pre>
+     *
+     * <code>string destination_cidr = 1;</code>
+     * @return The destinationCidr.
+     */
+    java.lang.String getDestinationCidr();
+    /**
+     * <pre>
+     * Destination network CIDR block.
+     * </pre>
+     *
+     * <code>string destination_cidr = 1;</code>
+     * @return The bytes for destinationCidr.
+     */
+    com.google.protobuf.ByteString
+        getDestinationCidrBytes();
+
+    /**
+     * <pre>
+     * Next hop host IP address.
+     * </pre>
+     *
+     * <code>string next_hop_ip_address = 2;</code>
+     * @return The nextHopIpAddress.
+     */
+    java.lang.String getNextHopIpAddress();
+    /**
+     * <pre>
+     * Next hop host IP address.
+     * </pre>
+     *
+     * <code>string next_hop_ip_address = 2;</code>
+     * @return The bytes for nextHopIpAddress.
+     */
+    com.google.protobuf.ByteString
+        getNextHopIpAddressBytes();
+
+    /**
+     * <pre>
+     * Redistribution type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.StaticRoute.RedistributionType redistribution_type = 3;</code>
+     * @return The enum numeric value on the wire for redistributionType.
+     */
+    int getRedistributionTypeValue();
+    /**
+     * <pre>
+     * Redistribution type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.StaticRoute.RedistributionType redistribution_type = 3;</code>
+     * @return The redistributionType.
+     */
+    yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.RedistributionType getRedistributionType();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.baremetal.v1alpha.StaticRoute}
+   */
+  public static final class StaticRoute extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.baremetal.v1alpha.StaticRoute)
+      StaticRouteOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StaticRoute.newBuilder() to construct.
+    private StaticRoute(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StaticRoute() {
+      destinationCidr_ = "";
+      nextHopIpAddress_ = "";
+      redistributionType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StaticRoute();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StaticRoute(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              destinationCidr_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextHopIpAddress_ = s;
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              redistributionType_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_StaticRoute_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_StaticRoute_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.class, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.baremetal.v1alpha.StaticRoute.RedistributionType}
+     */
+    public enum RedistributionType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * Unspecified redistribution type.
+       * </pre>
+       *
+       * <code>REDISTRIBUTION_TYPE_UNSPECIFIED = 0;</code>
+       */
+      REDISTRIBUTION_TYPE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Static route announcements outside BareMetal VRF disabled.
+       * </pre>
+       *
+       * <code>DISABLED = 1;</code>
+       */
+      DISABLED(1),
+      /**
+       * <pre>
+       * Static route announcements outside BareMetal VRF enabled.
+       * </pre>
+       *
+       * <code>ENABLED = 2;</code>
+       */
+      ENABLED(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * Unspecified redistribution type.
+       * </pre>
+       *
+       * <code>REDISTRIBUTION_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int REDISTRIBUTION_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Static route announcements outside BareMetal VRF disabled.
+       * </pre>
+       *
+       * <code>DISABLED = 1;</code>
+       */
+      public static final int DISABLED_VALUE = 1;
+      /**
+       * <pre>
+       * Static route announcements outside BareMetal VRF enabled.
+       * </pre>
+       *
+       * <code>ENABLED = 2;</code>
+       */
+      public static final int ENABLED_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static RedistributionType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static RedistributionType forNumber(int value) {
+        switch (value) {
+          case 0: return REDISTRIBUTION_TYPE_UNSPECIFIED;
+          case 1: return DISABLED;
+          case 2: return ENABLED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<RedistributionType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          RedistributionType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<RedistributionType>() {
+              public RedistributionType findValueByNumber(int number) {
+                return RedistributionType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final RedistributionType[] VALUES = values();
+
+      public static RedistributionType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private RedistributionType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.baremetal.v1alpha.StaticRoute.RedistributionType)
+    }
+
+    public static final int DESTINATION_CIDR_FIELD_NUMBER = 1;
+    private volatile java.lang.Object destinationCidr_;
+    /**
+     * <pre>
+     * Destination network CIDR block.
+     * </pre>
+     *
+     * <code>string destination_cidr = 1;</code>
+     * @return The destinationCidr.
+     */
+    @java.lang.Override
+    public java.lang.String getDestinationCidr() {
+      java.lang.Object ref = destinationCidr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destinationCidr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Destination network CIDR block.
+     * </pre>
+     *
+     * <code>string destination_cidr = 1;</code>
+     * @return The bytes for destinationCidr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDestinationCidrBytes() {
+      java.lang.Object ref = destinationCidr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destinationCidr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEXT_HOP_IP_ADDRESS_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextHopIpAddress_;
+    /**
+     * <pre>
+     * Next hop host IP address.
+     * </pre>
+     *
+     * <code>string next_hop_ip_address = 2;</code>
+     * @return The nextHopIpAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getNextHopIpAddress() {
+      java.lang.Object ref = nextHopIpAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextHopIpAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Next hop host IP address.
+     * </pre>
+     *
+     * <code>string next_hop_ip_address = 2;</code>
+     * @return The bytes for nextHopIpAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextHopIpAddressBytes() {
+      java.lang.Object ref = nextHopIpAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextHopIpAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REDISTRIBUTION_TYPE_FIELD_NUMBER = 3;
+    private int redistributionType_;
+    /**
+     * <pre>
+     * Redistribution type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.StaticRoute.RedistributionType redistribution_type = 3;</code>
+     * @return The enum numeric value on the wire for redistributionType.
+     */
+    @java.lang.Override public int getRedistributionTypeValue() {
+      return redistributionType_;
+    }
+    /**
+     * <pre>
+     * Redistribution type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.StaticRoute.RedistributionType redistribution_type = 3;</code>
+     * @return The redistributionType.
+     */
+    @java.lang.Override public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.RedistributionType getRedistributionType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.RedistributionType result = yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.RedistributionType.valueOf(redistributionType_);
+      return result == null ? yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.RedistributionType.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationCidr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, destinationCidr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextHopIpAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextHopIpAddress_);
+      }
+      if (redistributionType_ != yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.RedistributionType.REDISTRIBUTION_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, redistributionType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationCidr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, destinationCidr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextHopIpAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextHopIpAddress_);
+      }
+      if (redistributionType_ != yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.RedistributionType.REDISTRIBUTION_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, redistributionType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute other = (yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute) obj;
+
+      if (!getDestinationCidr()
+          .equals(other.getDestinationCidr())) return false;
+      if (!getNextHopIpAddress()
+          .equals(other.getNextHopIpAddress())) return false;
+      if (redistributionType_ != other.redistributionType_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DESTINATION_CIDR_FIELD_NUMBER;
+      hash = (53 * hash) + getDestinationCidr().hashCode();
+      hash = (37 * hash) + NEXT_HOP_IP_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getNextHopIpAddress().hashCode();
+      hash = (37 * hash) + REDISTRIBUTION_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + redistributionType_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.baremetal.v1alpha.StaticRoute}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.baremetal.v1alpha.StaticRoute)
+        yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRouteOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_StaticRoute_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_StaticRoute_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.class, yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        destinationCidr_ = "";
+
+        nextHopIpAddress_ = "";
+
+        redistributionType_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_StaticRoute_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute getDefaultInstanceForType() {
+        return yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute build() {
+        yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute buildPartial() {
+        yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute result = new yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute(this);
+        result.destinationCidr_ = destinationCidr_;
+        result.nextHopIpAddress_ = nextHopIpAddress_;
+        result.redistributionType_ = redistributionType_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute) {
+          return mergeFrom((yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute other) {
+        if (other == yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.getDefaultInstance()) return this;
+        if (!other.getDestinationCidr().isEmpty()) {
+          destinationCidr_ = other.destinationCidr_;
+          onChanged();
+        }
+        if (!other.getNextHopIpAddress().isEmpty()) {
+          nextHopIpAddress_ = other.nextHopIpAddress_;
+          onChanged();
+        }
+        if (other.redistributionType_ != 0) {
+          setRedistributionTypeValue(other.getRedistributionTypeValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object destinationCidr_ = "";
+      /**
+       * <pre>
+       * Destination network CIDR block.
+       * </pre>
+       *
+       * <code>string destination_cidr = 1;</code>
+       * @return The destinationCidr.
+       */
+      public java.lang.String getDestinationCidr() {
+        java.lang.Object ref = destinationCidr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          destinationCidr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Destination network CIDR block.
+       * </pre>
+       *
+       * <code>string destination_cidr = 1;</code>
+       * @return The bytes for destinationCidr.
+       */
+      public com.google.protobuf.ByteString
+          getDestinationCidrBytes() {
+        java.lang.Object ref = destinationCidr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          destinationCidr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Destination network CIDR block.
+       * </pre>
+       *
+       * <code>string destination_cidr = 1;</code>
+       * @param value The destinationCidr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationCidr(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        destinationCidr_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Destination network CIDR block.
+       * </pre>
+       *
+       * <code>string destination_cidr = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDestinationCidr() {
+        
+        destinationCidr_ = getDefaultInstance().getDestinationCidr();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Destination network CIDR block.
+       * </pre>
+       *
+       * <code>string destination_cidr = 1;</code>
+       * @param value The bytes for destinationCidr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationCidrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        destinationCidr_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nextHopIpAddress_ = "";
+      /**
+       * <pre>
+       * Next hop host IP address.
+       * </pre>
+       *
+       * <code>string next_hop_ip_address = 2;</code>
+       * @return The nextHopIpAddress.
+       */
+      public java.lang.String getNextHopIpAddress() {
+        java.lang.Object ref = nextHopIpAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextHopIpAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Next hop host IP address.
+       * </pre>
+       *
+       * <code>string next_hop_ip_address = 2;</code>
+       * @return The bytes for nextHopIpAddress.
+       */
+      public com.google.protobuf.ByteString
+          getNextHopIpAddressBytes() {
+        java.lang.Object ref = nextHopIpAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextHopIpAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Next hop host IP address.
+       * </pre>
+       *
+       * <code>string next_hop_ip_address = 2;</code>
+       * @param value The nextHopIpAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextHopIpAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextHopIpAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Next hop host IP address.
+       * </pre>
+       *
+       * <code>string next_hop_ip_address = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextHopIpAddress() {
+        
+        nextHopIpAddress_ = getDefaultInstance().getNextHopIpAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Next hop host IP address.
+       * </pre>
+       *
+       * <code>string next_hop_ip_address = 2;</code>
+       * @param value The bytes for nextHopIpAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextHopIpAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextHopIpAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int redistributionType_ = 0;
+      /**
+       * <pre>
+       * Redistribution type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.StaticRoute.RedistributionType redistribution_type = 3;</code>
+       * @return The enum numeric value on the wire for redistributionType.
+       */
+      @java.lang.Override public int getRedistributionTypeValue() {
+        return redistributionType_;
+      }
+      /**
+       * <pre>
+       * Redistribution type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.StaticRoute.RedistributionType redistribution_type = 3;</code>
+       * @param value The enum numeric value on the wire for redistributionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRedistributionTypeValue(int value) {
+        
+        redistributionType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Redistribution type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.StaticRoute.RedistributionType redistribution_type = 3;</code>
+       * @return The redistributionType.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.RedistributionType getRedistributionType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.RedistributionType result = yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.RedistributionType.valueOf(redistributionType_);
+        return result == null ? yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.RedistributionType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Redistribution type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.StaticRoute.RedistributionType redistribution_type = 3;</code>
+       * @param value The redistributionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRedistributionType(yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute.RedistributionType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        redistributionType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Redistribution type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.StaticRoute.RedistributionType redistribution_type = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRedistributionType() {
+        
+        redistributionType_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.baremetal.v1alpha.StaticRoute)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.baremetal.v1alpha.StaticRoute)
+    private static final yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute();
+    }
+
+    public static yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StaticRoute>
+        PARSER = new com.google.protobuf.AbstractParser<StaticRoute>() {
+      @java.lang.Override
+      public StaticRoute parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StaticRoute(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StaticRoute> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StaticRoute> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.VrfOuterClass.StaticRoute getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_baremetal_v1alpha_Vrf_descriptor;
   private static final 
@@ -2031,6 +3873,11 @@ public final class VrfOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_baremetal_v1alpha_Vrf_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_baremetal_v1alpha_StaticRoute_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_baremetal_v1alpha_StaticRoute_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2042,17 +3889,28 @@ public final class VrfOuterClass {
     java.lang.String[] descriptorData = {
       "\n(yandex/cloud/baremetal/v1alpha/vrf.pro" +
       "to\022\036yandex.cloud.baremetal.v1alpha\032\037goog" +
-      "le/protobuf/timestamp.proto\"\207\002\n\003Vrf\022\n\n\002i" +
+      "le/protobuf/timestamp.proto\"\303\003\n\003Vrf\022\n\n\002i" +
       "d\030\001 \001(\t\022\020\n\010cloud_id\030\002 \001(\t\022\021\n\tfolder_id\030\003" +
       " \001(\t\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022" +
-      ".\n\ncreated_at\030d \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\022@\n\006labels\030\310\001 \003(\0132/.yandex.cloud." +
-      "baremetal.v1alpha.Vrf.LabelsEntry\032-\n\013Lab" +
-      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "J\004\010\006\020dJ\005\010e\020\310\001Br\n\"yandex.cloud.api.bareme" +
-      "tal.v1alphaZLgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/baremetal/v1alpha;" +
-      "baremetalb\006proto3"
+      ":\n\006status\030\006 \001(\0162*.yandex.cloud.baremetal" +
+      ".v1alpha.Vrf.Status\022B\n\rstatic_routes\030\007 \003" +
+      "(\0132+.yandex.cloud.baremetal.v1alpha.Stat" +
+      "icRoute\022.\n\ncreated_at\030d \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\022@\n\006labels\030\310\001 \003(\0132/.yande" +
+      "x.cloud.baremetal.v1alpha.Vrf.LabelsEntr" +
+      "y\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\":\n\006Status\022\026\n\022STATUS_UNSPECIFIED" +
+      "\020\000\022\n\n\006ACTIVE\020\001\022\014\n\010UPDATING\020\002J\004\010\010\020dJ\005\010e\020\310" +
+      "\001\"\367\001\n\013StaticRoute\022\030\n\020destination_cidr\030\001 " +
+      "\001(\t\022\033\n\023next_hop_ip_address\030\002 \001(\t\022[\n\023redi" +
+      "stribution_type\030\003 \001(\0162>.yandex.cloud.bar" +
+      "emetal.v1alpha.StaticRoute.Redistributio" +
+      "nType\"T\n\022RedistributionType\022#\n\037REDISTRIB" +
+      "UTION_TYPE_UNSPECIFIED\020\000\022\014\n\010DISABLED\020\001\022\013" +
+      "\n\007ENABLED\020\002Br\n\"yandex.cloud.api.baremeta" +
+      "l.v1alphaZLgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/baremetal/v1alpha;ba" +
+      "remetalb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2064,13 +3922,19 @@ public final class VrfOuterClass {
     internal_static_yandex_cloud_baremetal_v1alpha_Vrf_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_baremetal_v1alpha_Vrf_descriptor,
-        new java.lang.String[] { "Id", "CloudId", "FolderId", "Name", "Description", "CreatedAt", "Labels", });
+        new java.lang.String[] { "Id", "CloudId", "FolderId", "Name", "Description", "Status", "StaticRoutes", "CreatedAt", "Labels", });
     internal_static_yandex_cloud_baremetal_v1alpha_Vrf_LabelsEntry_descriptor =
       internal_static_yandex_cloud_baremetal_v1alpha_Vrf_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_baremetal_v1alpha_Vrf_LabelsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_baremetal_v1alpha_Vrf_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_baremetal_v1alpha_StaticRoute_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_baremetal_v1alpha_StaticRoute_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_baremetal_v1alpha_StaticRoute_descriptor,
+        new java.lang.String[] { "DestinationCidr", "NextHopIpAddress", "RedistributionType", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

@@ -20,6 +20,10 @@ public final class Common {
   public enum CompressionType
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     * <pre>
+     * codec is unspecified.
+     * </pre>
+     *
      * <code>COMPRESSION_TYPE_UNSPECIFIED = 0;</code>
      */
     COMPRESSION_TYPE_UNSPECIFIED(0),
@@ -75,6 +79,10 @@ public final class Common {
     ;
 
     /**
+     * <pre>
+     * codec is unspecified.
+     * </pre>
+     *
      * <code>COMPRESSION_TYPE_UNSPECIFIED = 0;</code>
      */
     public static final int COMPRESSION_TYPE_UNSPECIFIED_VALUE = 0;
@@ -221,14 +229,26 @@ public final class Common {
   public enum SaslMechanism
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     * <pre>
+     * SASL mechanism is unspecified.
+     * </pre>
+     *
      * <code>SASL_MECHANISM_UNSPECIFIED = 0;</code>
      */
     SASL_MECHANISM_UNSPECIFIED(0),
     /**
+     * <pre>
+     * SHA_256.
+     * </pre>
+     *
      * <code>SASL_MECHANISM_SCRAM_SHA_256 = 1;</code>
      */
     SASL_MECHANISM_SCRAM_SHA_256(1),
     /**
+     * <pre>
+     * SHA_512.
+     * </pre>
+     *
      * <code>SASL_MECHANISM_SCRAM_SHA_512 = 2;</code>
      */
     SASL_MECHANISM_SCRAM_SHA_512(2),
@@ -236,14 +256,26 @@ public final class Common {
     ;
 
     /**
+     * <pre>
+     * SASL mechanism is unspecified.
+     * </pre>
+     *
      * <code>SASL_MECHANISM_UNSPECIFIED = 0;</code>
      */
     public static final int SASL_MECHANISM_UNSPECIFIED_VALUE = 0;
     /**
+     * <pre>
+     * SHA_256.
+     * </pre>
+     *
      * <code>SASL_MECHANISM_SCRAM_SHA_256 = 1;</code>
      */
     public static final int SASL_MECHANISM_SCRAM_SHA_256_VALUE = 1;
     /**
+     * <pre>
+     * SHA_512.
+     * </pre>
+     *
      * <code>SASL_MECHANISM_SCRAM_SHA_512 = 2;</code>
      */
     public static final int SASL_MECHANISM_SCRAM_SHA_512_VALUE = 2;
@@ -332,6 +364,147 @@ public final class Common {
     // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.kafka.v1.SaslMechanism)
   }
 
+  /**
+   * Protobuf enum {@code yandex.cloud.mdb.kafka.v1.MessageTimestampType}
+   */
+  public enum MessageTimestampType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * Message timestamp type is unspecified.
+     * </pre>
+     *
+     * <code>MESSAGE_TIMESTAMP_TYPE_UNSPECIFIED = 0;</code>
+     */
+    MESSAGE_TIMESTAMP_TYPE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * Message timestamp type is create time. 
+     * </pre>
+     *
+     * <code>MESSAGE_TIMESTAMP_TYPE_CREATE_TIME = 1;</code>
+     */
+    MESSAGE_TIMESTAMP_TYPE_CREATE_TIME(1),
+    /**
+     * <pre>
+     * Message timestamp type is log append time.
+     * </pre>
+     *
+     * <code>MESSAGE_TIMESTAMP_TYPE_LOG_APPEND_TIME = 2;</code>
+     */
+    MESSAGE_TIMESTAMP_TYPE_LOG_APPEND_TIME(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * Message timestamp type is unspecified.
+     * </pre>
+     *
+     * <code>MESSAGE_TIMESTAMP_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int MESSAGE_TIMESTAMP_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * Message timestamp type is create time. 
+     * </pre>
+     *
+     * <code>MESSAGE_TIMESTAMP_TYPE_CREATE_TIME = 1;</code>
+     */
+    public static final int MESSAGE_TIMESTAMP_TYPE_CREATE_TIME_VALUE = 1;
+    /**
+     * <pre>
+     * Message timestamp type is log append time.
+     * </pre>
+     *
+     * <code>MESSAGE_TIMESTAMP_TYPE_LOG_APPEND_TIME = 2;</code>
+     */
+    public static final int MESSAGE_TIMESTAMP_TYPE_LOG_APPEND_TIME_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static MessageTimestampType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static MessageTimestampType forNumber(int value) {
+      switch (value) {
+        case 0: return MESSAGE_TIMESTAMP_TYPE_UNSPECIFIED;
+        case 1: return MESSAGE_TIMESTAMP_TYPE_CREATE_TIME;
+        case 2: return MESSAGE_TIMESTAMP_TYPE_LOG_APPEND_TIME;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<MessageTimestampType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        MessageTimestampType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<MessageTimestampType>() {
+            public MessageTimestampType findValueByNumber(int number) {
+              return MessageTimestampType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.Common.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final MessageTimestampType[] VALUES = values();
+
+    public static MessageTimestampType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private MessageTimestampType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.kafka.v1.MessageTimestampType)
+  }
+
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -351,10 +524,13 @@ public final class Common {
       "_TYPE_PRODUCER\020\006*s\n\rSaslMechanism\022\036\n\032SAS" +
       "L_MECHANISM_UNSPECIFIED\020\000\022 \n\034SASL_MECHAN" +
       "ISM_SCRAM_SHA_256\020\001\022 \n\034SASL_MECHANISM_SC" +
-      "RAM_SHA_512\020\002Bd\n\035yandex.cloud.api.mdb.ka" +
-      "fka.v1ZCgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/mdb/kafka/v1;kafkab\006pro" +
-      "to3"
+      "RAM_SHA_512\020\002*\222\001\n\024MessageTimestampType\022&" +
+      "\n\"MESSAGE_TIMESTAMP_TYPE_UNSPECIFIED\020\000\022&" +
+      "\n\"MESSAGE_TIMESTAMP_TYPE_CREATE_TIME\020\001\022*" +
+      "\n&MESSAGE_TIMESTAMP_TYPE_LOG_APPEND_TIME" +
+      "\020\002Bd\n\035yandex.cloud.api.mdb.kafka.v1ZCgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/mdb/kafka/v1;kafkab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

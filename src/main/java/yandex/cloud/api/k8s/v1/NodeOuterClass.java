@@ -20,6 +20,10 @@ public final class NodeOuterClass {
   public enum IpVersion
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     * <pre>
+     * IP version is not specified.
+     * </pre>
+     *
      * <code>IP_VERSION_UNSPECIFIED = 0;</code>
      */
     IP_VERSION_UNSPECIFIED(0),
@@ -43,6 +47,10 @@ public final class NodeOuterClass {
     ;
 
     /**
+     * <pre>
+     * IP version is not specified.
+     * </pre>
+     *
      * <code>IP_VERSION_UNSPECIFIED = 0;</code>
      */
     public static final int IP_VERSION_UNSPECIFIED_VALUE = 0;
@@ -390,6 +398,10 @@ public final class NodeOuterClass {
     public enum Status
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Status is not specified.
+       * </pre>
+       *
        * <code>STATUS_UNSPECIFIED = 0;</code>
        */
       STATUS_UNSPECIFIED(0),
@@ -456,6 +468,10 @@ public final class NodeOuterClass {
       ;
 
       /**
+       * <pre>
+       * Status is not specified.
+       * </pre>
+       *
        * <code>STATUS_UNSPECIFIED = 0;</code>
        */
       public static final int STATUS_UNSPECIFIED_VALUE = 0;
@@ -7455,6 +7471,10 @@ public final class NodeOuterClass {
     public enum Effect
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Effect is not specified.
+       * </pre>
+       *
        * <code>EFFECT_UNSPECIFIED = 0;</code>
        */
       EFFECT_UNSPECIFIED(0),
@@ -7490,6 +7510,10 @@ public final class NodeOuterClass {
       ;
 
       /**
+       * <pre>
+       * Effect is not specified.
+       * </pre>
+       *
        * <code>EFFECT_UNSPECIFIED = 0;</code>
        */
       public static final int EFFECT_UNSPECIFIED_VALUE = 0;
@@ -9345,6 +9369,26 @@ public final class NodeOuterClass {
 
     /**
      * <pre>
+     * ID of the reserved instance pool.
+     * </pre>
+     *
+     * <code>string reserved_instance_pool_id = 19;</code>
+     * @return The reservedInstancePoolId.
+     */
+    java.lang.String getReservedInstancePoolId();
+    /**
+     * <pre>
+     * ID of the reserved instance pool.
+     * </pre>
+     *
+     * <code>string reserved_instance_pool_id = 19;</code>
+     * @return The bytes for reservedInstancePoolId.
+     */
+    com.google.protobuf.ByteString
+        getReservedInstancePoolIdBytes();
+
+    /**
+     * <pre>
      * The metadata as `key:value` pairs assigned to this instance template. Only SSH keys are supported as metadata.
      * For more information, see [Connecting to a node over SSH](/docs/managed-kubernetes/operations/node-connect-ssh).
      * </pre>
@@ -9511,16 +9555,31 @@ public final class NodeOuterClass {
         int index);
 
     /**
+     * <pre>
+     * Placement policy configuration that controls physical placement of node group instances
+     * in the cloud infrastructure for optimizing performance and reliability.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
      * @return Whether the placementPolicy field is set.
      */
     boolean hasPlacementPolicy();
     /**
+     * <pre>
+     * Placement policy configuration that controls physical placement of node group instances
+     * in the cloud infrastructure for optimizing performance and reliability.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
      * @return The placementPolicy.
      */
     yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy getPlacementPolicy();
     /**
+     * <pre>
+     * Placement policy configuration that controls physical placement of node group instances
+     * in the cloud infrastructure for optimizing performance and reliability.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
      */
     yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicyOrBuilder getPlacementPolicyOrBuilder();
@@ -9553,31 +9612,55 @@ public final class NodeOuterClass {
     yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.NetworkSettingsOrBuilder getNetworkSettingsOrBuilder();
 
     /**
+     * <pre>
+     * Container runtime settings for the node template.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings container_runtime_settings = 12;</code>
      * @return Whether the containerRuntimeSettings field is set.
      */
     boolean hasContainerRuntimeSettings();
     /**
+     * <pre>
+     * Container runtime settings for the node template.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings container_runtime_settings = 12;</code>
      * @return The containerRuntimeSettings.
      */
     yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerRuntimeSettings getContainerRuntimeSettings();
     /**
+     * <pre>
+     * Container runtime settings for the node template.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings container_runtime_settings = 12;</code>
      */
     yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerRuntimeSettingsOrBuilder getContainerRuntimeSettingsOrBuilder();
 
     /**
+     * <pre>
+     * Container network settings for the node template.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
      * @return Whether the containerNetworkSettings field is set.
      */
     boolean hasContainerNetworkSettings();
     /**
+     * <pre>
+     * Container network settings for the node template.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
      * @return The containerNetworkSettings.
      */
     yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings getContainerNetworkSettings();
     /**
+     * <pre>
+     * Container network settings for the node template.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
      */
     yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettingsOrBuilder getContainerNetworkSettingsOrBuilder();
@@ -9624,6 +9707,7 @@ public final class NodeOuterClass {
     private NodeTemplate() {
       name_ = "";
       platformId_ = "";
+      reservedInstancePoolId_ = "";
       networkInterfaceSpecs_ = java.util.Collections.emptyList();
     }
 
@@ -9822,6 +9906,12 @@ public final class NodeOuterClass {
 
               break;
             }
+            case 154: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              reservedInstancePoolId_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -9876,11 +9966,19 @@ public final class NodeOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Network type that specifies the network configuration for the node group instances.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.NetworkSettings.Type type = 1 [(.yandex.cloud.required) = true];</code>
        * @return The enum numeric value on the wire for type.
        */
       int getTypeValue();
       /**
+       * <pre>
+       * Network type that specifies the network configuration for the node group instances.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.NetworkSettings.Type type = 1 [(.yandex.cloud.required) = true];</code>
        * @return The type.
        */
@@ -9976,17 +10074,24 @@ public final class NodeOuterClass {
       public enum Type
           implements com.google.protobuf.ProtocolMessageEnum {
         /**
+         * <pre>
+         * Network type is not specified.
+         * </pre>
+         *
          * <code>TYPE_UNSPECIFIED = 0;</code>
          */
         TYPE_UNSPECIFIED(0),
         /**
+         * <pre>
+         * Standard network.
+         * </pre>
+         *
          * <code>STANDARD = 1;</code>
          */
         STANDARD(1),
         /**
          * <pre>
-         * unsupported yet, commented for possible future utilization.
-         *HARDWARE_ACCELERATED = 3;
+         * Software accelerated network.
          * </pre>
          *
          * <code>SOFTWARE_ACCELERATED = 2;</code>
@@ -9996,17 +10101,24 @@ public final class NodeOuterClass {
         ;
 
         /**
+         * <pre>
+         * Network type is not specified.
+         * </pre>
+         *
          * <code>TYPE_UNSPECIFIED = 0;</code>
          */
         public static final int TYPE_UNSPECIFIED_VALUE = 0;
         /**
+         * <pre>
+         * Standard network.
+         * </pre>
+         *
          * <code>STANDARD = 1;</code>
          */
         public static final int STANDARD_VALUE = 1;
         /**
          * <pre>
-         * unsupported yet, commented for possible future utilization.
-         *HARDWARE_ACCELERATED = 3;
+         * Software accelerated network.
          * </pre>
          *
          * <code>SOFTWARE_ACCELERATED = 2;</code>
@@ -10100,6 +10212,10 @@ public final class NodeOuterClass {
       public static final int TYPE_FIELD_NUMBER = 1;
       private int type_;
       /**
+       * <pre>
+       * Network type that specifies the network configuration for the node group instances.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.NetworkSettings.Type type = 1 [(.yandex.cloud.required) = true];</code>
        * @return The enum numeric value on the wire for type.
        */
@@ -10107,6 +10223,10 @@ public final class NodeOuterClass {
         return type_;
       }
       /**
+       * <pre>
+       * Network type that specifies the network configuration for the node group instances.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.NetworkSettings.Type type = 1 [(.yandex.cloud.required) = true];</code>
        * @return The type.
        */
@@ -10419,6 +10539,10 @@ public final class NodeOuterClass {
 
         private int type_ = 0;
         /**
+         * <pre>
+         * Network type that specifies the network configuration for the node group instances.
+         * </pre>
+         *
          * <code>.yandex.cloud.k8s.v1.NodeTemplate.NetworkSettings.Type type = 1 [(.yandex.cloud.required) = true];</code>
          * @return The enum numeric value on the wire for type.
          */
@@ -10426,6 +10550,10 @@ public final class NodeOuterClass {
           return type_;
         }
         /**
+         * <pre>
+         * Network type that specifies the network configuration for the node group instances.
+         * </pre>
+         *
          * <code>.yandex.cloud.k8s.v1.NodeTemplate.NetworkSettings.Type type = 1 [(.yandex.cloud.required) = true];</code>
          * @param value The enum numeric value on the wire for type to set.
          * @return This builder for chaining.
@@ -10437,6 +10565,10 @@ public final class NodeOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Network type that specifies the network configuration for the node group instances.
+         * </pre>
+         *
          * <code>.yandex.cloud.k8s.v1.NodeTemplate.NetworkSettings.Type type = 1 [(.yandex.cloud.required) = true];</code>
          * @return The type.
          */
@@ -10447,6 +10579,10 @@ public final class NodeOuterClass {
           return result == null ? yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.NetworkSettings.Type.UNRECOGNIZED : result;
         }
         /**
+         * <pre>
+         * Network type that specifies the network configuration for the node group instances.
+         * </pre>
+         *
          * <code>.yandex.cloud.k8s.v1.NodeTemplate.NetworkSettings.Type type = 1 [(.yandex.cloud.required) = true];</code>
          * @param value The type to set.
          * @return This builder for chaining.
@@ -10461,6 +10597,10 @@ public final class NodeOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Network type that specifies the network configuration for the node group instances.
+         * </pre>
+         *
          * <code>.yandex.cloud.k8s.v1.NodeTemplate.NetworkSettings.Type type = 1 [(.yandex.cloud.required) = true];</code>
          * @return This builder for chaining.
          */
@@ -10528,11 +10668,19 @@ public final class NodeOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Type of container runtime.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings.Type type = 1 [(.yandex.cloud.required) = true];</code>
        * @return The enum numeric value on the wire for type.
        */
       int getTypeValue();
       /**
+       * <pre>
+       * Type of container runtime.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings.Type type = 1 [(.yandex.cloud.required) = true];</code>
        * @return The type.
        */
@@ -10628,14 +10776,26 @@ public final class NodeOuterClass {
       public enum Type
           implements com.google.protobuf.ProtocolMessageEnum {
         /**
+         * <pre>
+         * Container runtime type is not specified.
+         * </pre>
+         *
          * <code>TYPE_UNSPECIFIED = 0;</code>
          */
         TYPE_UNSPECIFIED(0),
         /**
+         * <pre>
+         * Docker container runtime.
+         * </pre>
+         *
          * <code>DOCKER = 1;</code>
          */
         DOCKER(1),
         /**
+         * <pre>
+         * Containerd container runtime.
+         * </pre>
+         *
          * <code>CONTAINERD = 2;</code>
          */
         CONTAINERD(2),
@@ -10643,14 +10803,26 @@ public final class NodeOuterClass {
         ;
 
         /**
+         * <pre>
+         * Container runtime type is not specified.
+         * </pre>
+         *
          * <code>TYPE_UNSPECIFIED = 0;</code>
          */
         public static final int TYPE_UNSPECIFIED_VALUE = 0;
         /**
+         * <pre>
+         * Docker container runtime.
+         * </pre>
+         *
          * <code>DOCKER = 1;</code>
          */
         public static final int DOCKER_VALUE = 1;
         /**
+         * <pre>
+         * Containerd container runtime.
+         * </pre>
+         *
          * <code>CONTAINERD = 2;</code>
          */
         public static final int CONTAINERD_VALUE = 2;
@@ -10742,6 +10914,10 @@ public final class NodeOuterClass {
       public static final int TYPE_FIELD_NUMBER = 1;
       private int type_;
       /**
+       * <pre>
+       * Type of container runtime.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings.Type type = 1 [(.yandex.cloud.required) = true];</code>
        * @return The enum numeric value on the wire for type.
        */
@@ -10749,6 +10925,10 @@ public final class NodeOuterClass {
         return type_;
       }
       /**
+       * <pre>
+       * Type of container runtime.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings.Type type = 1 [(.yandex.cloud.required) = true];</code>
        * @return The type.
        */
@@ -11061,6 +11241,10 @@ public final class NodeOuterClass {
 
         private int type_ = 0;
         /**
+         * <pre>
+         * Type of container runtime.
+         * </pre>
+         *
          * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings.Type type = 1 [(.yandex.cloud.required) = true];</code>
          * @return The enum numeric value on the wire for type.
          */
@@ -11068,6 +11252,10 @@ public final class NodeOuterClass {
           return type_;
         }
         /**
+         * <pre>
+         * Type of container runtime.
+         * </pre>
+         *
          * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings.Type type = 1 [(.yandex.cloud.required) = true];</code>
          * @param value The enum numeric value on the wire for type to set.
          * @return This builder for chaining.
@@ -11079,6 +11267,10 @@ public final class NodeOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Type of container runtime.
+         * </pre>
+         *
          * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings.Type type = 1 [(.yandex.cloud.required) = true];</code>
          * @return The type.
          */
@@ -11089,6 +11281,10 @@ public final class NodeOuterClass {
           return result == null ? yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerRuntimeSettings.Type.UNRECOGNIZED : result;
         }
         /**
+         * <pre>
+         * Type of container runtime.
+         * </pre>
+         *
          * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings.Type type = 1 [(.yandex.cloud.required) = true];</code>
          * @param value The type to set.
          * @return This builder for chaining.
@@ -11103,6 +11299,10 @@ public final class NodeOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Type of container runtime.
+         * </pre>
+         *
          * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings.Type type = 1 [(.yandex.cloud.required) = true];</code>
          * @return This builder for chaining.
          */
@@ -11170,6 +11370,10 @@ public final class NodeOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * MTU (Maximum Transmission Unit) size for pod network interfaces.
+       * </pre>
+       *
        * <code>int64 pod_mtu = 1;</code>
        * @return The podMtu.
        */
@@ -11260,6 +11464,10 @@ public final class NodeOuterClass {
       public static final int POD_MTU_FIELD_NUMBER = 1;
       private long podMtu_;
       /**
+       * <pre>
+       * MTU (Maximum Transmission Unit) size for pod network interfaces.
+       * </pre>
+       *
        * <code>int64 pod_mtu = 1;</code>
        * @return The podMtu.
        */
@@ -11573,6 +11781,10 @@ public final class NodeOuterClass {
 
         private long podMtu_ ;
         /**
+         * <pre>
+         * MTU (Maximum Transmission Unit) size for pod network interfaces.
+         * </pre>
+         *
          * <code>int64 pod_mtu = 1;</code>
          * @return The podMtu.
          */
@@ -11581,6 +11793,10 @@ public final class NodeOuterClass {
           return podMtu_;
         }
         /**
+         * <pre>
+         * MTU (Maximum Transmission Unit) size for pod network interfaces.
+         * </pre>
+         *
          * <code>int64 pod_mtu = 1;</code>
          * @param value The podMtu to set.
          * @return This builder for chaining.
@@ -11592,6 +11808,10 @@ public final class NodeOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * MTU (Maximum Transmission Unit) size for pod network interfaces.
+         * </pre>
+         *
          * <code>int64 pod_mtu = 1;</code>
          * @return This builder for chaining.
          */
@@ -11933,6 +12153,52 @@ public final class NodeOuterClass {
       return getBootDiskSpec();
     }
 
+    public static final int RESERVED_INSTANCE_POOL_ID_FIELD_NUMBER = 19;
+    private volatile java.lang.Object reservedInstancePoolId_;
+    /**
+     * <pre>
+     * ID of the reserved instance pool.
+     * </pre>
+     *
+     * <code>string reserved_instance_pool_id = 19;</code>
+     * @return The reservedInstancePoolId.
+     */
+    @java.lang.Override
+    public java.lang.String getReservedInstancePoolId() {
+      java.lang.Object ref = reservedInstancePoolId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reservedInstancePoolId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the reserved instance pool.
+     * </pre>
+     *
+     * <code>string reserved_instance_pool_id = 19;</code>
+     * @return The bytes for reservedInstancePoolId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReservedInstancePoolIdBytes() {
+      java.lang.Object ref = reservedInstancePoolId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reservedInstancePoolId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int METADATA_FIELD_NUMBER = 4;
     private static final class MetadataDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
@@ -12183,6 +12449,11 @@ public final class NodeOuterClass {
     public static final int PLACEMENT_POLICY_FIELD_NUMBER = 10;
     private yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy placementPolicy_;
     /**
+     * <pre>
+     * Placement policy configuration that controls physical placement of node group instances
+     * in the cloud infrastructure for optimizing performance and reliability.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
      * @return Whether the placementPolicy field is set.
      */
@@ -12191,6 +12462,11 @@ public final class NodeOuterClass {
       return placementPolicy_ != null;
     }
     /**
+     * <pre>
+     * Placement policy configuration that controls physical placement of node group instances
+     * in the cloud infrastructure for optimizing performance and reliability.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
      * @return The placementPolicy.
      */
@@ -12199,6 +12475,11 @@ public final class NodeOuterClass {
       return placementPolicy_ == null ? yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.getDefaultInstance() : placementPolicy_;
     }
     /**
+     * <pre>
+     * Placement policy configuration that controls physical placement of node group instances
+     * in the cloud infrastructure for optimizing performance and reliability.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
      */
     @java.lang.Override
@@ -12247,6 +12528,10 @@ public final class NodeOuterClass {
     public static final int CONTAINER_RUNTIME_SETTINGS_FIELD_NUMBER = 12;
     private yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerRuntimeSettings containerRuntimeSettings_;
     /**
+     * <pre>
+     * Container runtime settings for the node template.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings container_runtime_settings = 12;</code>
      * @return Whether the containerRuntimeSettings field is set.
      */
@@ -12255,6 +12540,10 @@ public final class NodeOuterClass {
       return containerRuntimeSettings_ != null;
     }
     /**
+     * <pre>
+     * Container runtime settings for the node template.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings container_runtime_settings = 12;</code>
      * @return The containerRuntimeSettings.
      */
@@ -12263,6 +12552,10 @@ public final class NodeOuterClass {
       return containerRuntimeSettings_ == null ? yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerRuntimeSettings.getDefaultInstance() : containerRuntimeSettings_;
     }
     /**
+     * <pre>
+     * Container runtime settings for the node template.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings container_runtime_settings = 12;</code>
      */
     @java.lang.Override
@@ -12273,6 +12566,10 @@ public final class NodeOuterClass {
     public static final int CONTAINER_NETWORK_SETTINGS_FIELD_NUMBER = 16;
     private yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings containerNetworkSettings_;
     /**
+     * <pre>
+     * Container network settings for the node template.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
      * @return Whether the containerNetworkSettings field is set.
      */
@@ -12281,6 +12578,10 @@ public final class NodeOuterClass {
       return containerNetworkSettings_ != null;
     }
     /**
+     * <pre>
+     * Container network settings for the node template.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
      * @return The containerNetworkSettings.
      */
@@ -12289,6 +12590,10 @@ public final class NodeOuterClass {
       return containerNetworkSettings_ == null ? yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.getDefaultInstance() : containerNetworkSettings_;
     }
     /**
+     * <pre>
+     * Container network settings for the node template.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
      */
     @java.lang.Override
@@ -12396,6 +12701,9 @@ public final class NodeOuterClass {
       if (gpuSettings_ != null) {
         output.writeMessage(18, getGpuSettings());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reservedInstancePoolId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 19, reservedInstancePoolId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12471,6 +12779,9 @@ public final class NodeOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(18, getGpuSettings());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reservedInstancePoolId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, reservedInstancePoolId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -12502,6 +12813,8 @@ public final class NodeOuterClass {
         if (!getBootDiskSpec()
             .equals(other.getBootDiskSpec())) return false;
       }
+      if (!getReservedInstancePoolId()
+          .equals(other.getReservedInstancePoolId())) return false;
       if (!internalGetMetadata().equals(
           other.internalGetMetadata())) return false;
       if (hasV4AddressSpec() != other.hasV4AddressSpec()) return false;
@@ -12568,6 +12881,8 @@ public final class NodeOuterClass {
         hash = (37 * hash) + BOOT_DISK_SPEC_FIELD_NUMBER;
         hash = (53 * hash) + getBootDiskSpec().hashCode();
       }
+      hash = (37 * hash) + RESERVED_INSTANCE_POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getReservedInstancePoolId().hashCode();
       if (!internalGetMetadata().getMap().isEmpty()) {
         hash = (37 * hash) + METADATA_FIELD_NUMBER;
         hash = (53 * hash) + internalGetMetadata().hashCode();
@@ -12781,6 +13096,8 @@ public final class NodeOuterClass {
           bootDiskSpec_ = null;
           bootDiskSpecBuilder_ = null;
         }
+        reservedInstancePoolId_ = "";
+
         internalGetMutableMetadata().clear();
         if (v4AddressSpecBuilder_ == null) {
           v4AddressSpec_ = null;
@@ -12871,6 +13188,7 @@ public final class NodeOuterClass {
         } else {
           result.bootDiskSpec_ = bootDiskSpecBuilder_.build();
         }
+        result.reservedInstancePoolId_ = reservedInstancePoolId_;
         result.metadata_ = internalGetMetadata();
         result.metadata_.makeImmutable();
         if (v4AddressSpecBuilder_ == null) {
@@ -12980,6 +13298,10 @@ public final class NodeOuterClass {
         }
         if (other.hasBootDiskSpec()) {
           mergeBootDiskSpec(other.getBootDiskSpec());
+        }
+        if (!other.getReservedInstancePoolId().isEmpty()) {
+          reservedInstancePoolId_ = other.reservedInstancePoolId_;
+          onChanged();
         }
         internalGetMutableMetadata().mergeFrom(
             other.internalGetMetadata());
@@ -13754,6 +14076,102 @@ public final class NodeOuterClass {
           bootDiskSpec_ = null;
         }
         return bootDiskSpecBuilder_;
+      }
+
+      private java.lang.Object reservedInstancePoolId_ = "";
+      /**
+       * <pre>
+       * ID of the reserved instance pool.
+       * </pre>
+       *
+       * <code>string reserved_instance_pool_id = 19;</code>
+       * @return The reservedInstancePoolId.
+       */
+      public java.lang.String getReservedInstancePoolId() {
+        java.lang.Object ref = reservedInstancePoolId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reservedInstancePoolId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the reserved instance pool.
+       * </pre>
+       *
+       * <code>string reserved_instance_pool_id = 19;</code>
+       * @return The bytes for reservedInstancePoolId.
+       */
+      public com.google.protobuf.ByteString
+          getReservedInstancePoolIdBytes() {
+        java.lang.Object ref = reservedInstancePoolId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reservedInstancePoolId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the reserved instance pool.
+       * </pre>
+       *
+       * <code>string reserved_instance_pool_id = 19;</code>
+       * @param value The reservedInstancePoolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReservedInstancePoolId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        reservedInstancePoolId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the reserved instance pool.
+       * </pre>
+       *
+       * <code>string reserved_instance_pool_id = 19;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReservedInstancePoolId() {
+        
+        reservedInstancePoolId_ = getDefaultInstance().getReservedInstancePoolId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the reserved instance pool.
+       * </pre>
+       *
+       * <code>string reserved_instance_pool_id = 19;</code>
+       * @param value The bytes for reservedInstancePoolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReservedInstancePoolIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        reservedInstancePoolId_ = value;
+        onChanged();
+        return this;
       }
 
       private com.google.protobuf.MapField<
@@ -14577,6 +14995,11 @@ public final class NodeOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy, yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicyOrBuilder> placementPolicyBuilder_;
       /**
+       * <pre>
+       * Placement policy configuration that controls physical placement of node group instances
+       * in the cloud infrastructure for optimizing performance and reliability.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
        * @return Whether the placementPolicy field is set.
        */
@@ -14584,6 +15007,11 @@ public final class NodeOuterClass {
         return placementPolicyBuilder_ != null || placementPolicy_ != null;
       }
       /**
+       * <pre>
+       * Placement policy configuration that controls physical placement of node group instances
+       * in the cloud infrastructure for optimizing performance and reliability.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
        * @return The placementPolicy.
        */
@@ -14595,6 +15023,11 @@ public final class NodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Placement policy configuration that controls physical placement of node group instances
+       * in the cloud infrastructure for optimizing performance and reliability.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
        */
       public Builder setPlacementPolicy(yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy value) {
@@ -14611,6 +15044,11 @@ public final class NodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Placement policy configuration that controls physical placement of node group instances
+       * in the cloud infrastructure for optimizing performance and reliability.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
        */
       public Builder setPlacementPolicy(
@@ -14625,6 +15063,11 @@ public final class NodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Placement policy configuration that controls physical placement of node group instances
+       * in the cloud infrastructure for optimizing performance and reliability.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
        */
       public Builder mergePlacementPolicy(yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy value) {
@@ -14643,6 +15086,11 @@ public final class NodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Placement policy configuration that controls physical placement of node group instances
+       * in the cloud infrastructure for optimizing performance and reliability.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
        */
       public Builder clearPlacementPolicy() {
@@ -14657,6 +15105,11 @@ public final class NodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Placement policy configuration that controls physical placement of node group instances
+       * in the cloud infrastructure for optimizing performance and reliability.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
        */
       public yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.Builder getPlacementPolicyBuilder() {
@@ -14665,6 +15118,11 @@ public final class NodeOuterClass {
         return getPlacementPolicyFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Placement policy configuration that controls physical placement of node group instances
+       * in the cloud infrastructure for optimizing performance and reliability.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
        */
       public yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicyOrBuilder getPlacementPolicyOrBuilder() {
@@ -14676,6 +15134,11 @@ public final class NodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Placement policy configuration that controls physical placement of node group instances
+       * in the cloud infrastructure for optimizing performance and reliability.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -14851,6 +15314,10 @@ public final class NodeOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerRuntimeSettings, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerRuntimeSettings.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerRuntimeSettingsOrBuilder> containerRuntimeSettingsBuilder_;
       /**
+       * <pre>
+       * Container runtime settings for the node template.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings container_runtime_settings = 12;</code>
        * @return Whether the containerRuntimeSettings field is set.
        */
@@ -14858,6 +15325,10 @@ public final class NodeOuterClass {
         return containerRuntimeSettingsBuilder_ != null || containerRuntimeSettings_ != null;
       }
       /**
+       * <pre>
+       * Container runtime settings for the node template.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings container_runtime_settings = 12;</code>
        * @return The containerRuntimeSettings.
        */
@@ -14869,6 +15340,10 @@ public final class NodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Container runtime settings for the node template.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings container_runtime_settings = 12;</code>
        */
       public Builder setContainerRuntimeSettings(yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerRuntimeSettings value) {
@@ -14885,6 +15360,10 @@ public final class NodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Container runtime settings for the node template.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings container_runtime_settings = 12;</code>
        */
       public Builder setContainerRuntimeSettings(
@@ -14899,6 +15378,10 @@ public final class NodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Container runtime settings for the node template.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings container_runtime_settings = 12;</code>
        */
       public Builder mergeContainerRuntimeSettings(yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerRuntimeSettings value) {
@@ -14917,6 +15400,10 @@ public final class NodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Container runtime settings for the node template.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings container_runtime_settings = 12;</code>
        */
       public Builder clearContainerRuntimeSettings() {
@@ -14931,6 +15418,10 @@ public final class NodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Container runtime settings for the node template.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings container_runtime_settings = 12;</code>
        */
       public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerRuntimeSettings.Builder getContainerRuntimeSettingsBuilder() {
@@ -14939,6 +15430,10 @@ public final class NodeOuterClass {
         return getContainerRuntimeSettingsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Container runtime settings for the node template.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings container_runtime_settings = 12;</code>
        */
       public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerRuntimeSettingsOrBuilder getContainerRuntimeSettingsOrBuilder() {
@@ -14950,6 +15445,10 @@ public final class NodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Container runtime settings for the node template.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerRuntimeSettings container_runtime_settings = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -14970,6 +15469,10 @@ public final class NodeOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettingsOrBuilder> containerNetworkSettingsBuilder_;
       /**
+       * <pre>
+       * Container network settings for the node template.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
        * @return Whether the containerNetworkSettings field is set.
        */
@@ -14977,6 +15480,10 @@ public final class NodeOuterClass {
         return containerNetworkSettingsBuilder_ != null || containerNetworkSettings_ != null;
       }
       /**
+       * <pre>
+       * Container network settings for the node template.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
        * @return The containerNetworkSettings.
        */
@@ -14988,6 +15495,10 @@ public final class NodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Container network settings for the node template.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
        */
       public Builder setContainerNetworkSettings(yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings value) {
@@ -15004,6 +15515,10 @@ public final class NodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Container network settings for the node template.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
        */
       public Builder setContainerNetworkSettings(
@@ -15018,6 +15533,10 @@ public final class NodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Container network settings for the node template.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
        */
       public Builder mergeContainerNetworkSettings(yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings value) {
@@ -15036,6 +15555,10 @@ public final class NodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Container network settings for the node template.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
        */
       public Builder clearContainerNetworkSettings() {
@@ -15050,6 +15573,10 @@ public final class NodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Container network settings for the node template.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
        */
       public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettings.Builder getContainerNetworkSettingsBuilder() {
@@ -15058,6 +15585,10 @@ public final class NodeOuterClass {
         return getContainerNetworkSettingsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Container network settings for the node template.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
        */
       public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate.ContainerNetworkSettingsOrBuilder getContainerNetworkSettingsOrBuilder() {
@@ -15069,6 +15600,10 @@ public final class NodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Container network settings for the node template.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeTemplate.ContainerNetworkSettings container_network_settings = 16;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -23157,7 +23692,7 @@ public final class NodeOuterClass {
       "ect\"Y\n\006Effect\022\026\n\022EFFECT_UNSPECIFIED\020\000\022\017\n" +
       "\013NO_SCHEDULE\020\001\022\026\n\022PREFER_NO_SCHEDULE\020\002\022\016" +
       "\n\nNO_EXECUTE\020\003\"<\n\016AttachedVolume\022\023\n\013driv" +
-      "er_name\030\001 \001(\t\022\025\n\rvolume_handle\030\002 \001(\t\"\345\013\n" +
+      "er_name\030\001 \001(\t\022\025\n\rvolume_handle\030\002 \001(\t\"\210\014\n" +
       "\014NodeTemplate\022\027\n\004name\030\r \001(\tB\t\212\3101\005<=128\022t" +
       "\n\006labels\030\017 \003(\0132-.yandex.cloud.k8s.v1.Nod" +
       "eTemplate.LabelsEntryB5\202\3101\004<=32\212\3101\005<=128" +
@@ -23165,68 +23700,69 @@ public final class NodeOuterClass {
       "platform_id\030\001 \001(\t\022:\n\016resources_spec\030\002 \001(" +
       "\0132\".yandex.cloud.k8s.v1.ResourcesSpec\0225\n" +
       "\016boot_disk_spec\030\003 \001(\0132\035.yandex.cloud.k8s" +
-      ".v1.DiskSpec\022w\n\010metadata\030\004 \003(\0132/.yandex." +
-      "cloud.k8s.v1.NodeTemplate.MetadataEntryB" +
-      "4\202\3101\004<=64\212\3101\010<=131072\262\3101\006\032\0041-63\262\3101\022\022\020[a-" +
-      "z][-_0-9a-z]*\022A\n\017v4_address_spec\030\005 \001(\0132$" +
-      ".yandex.cloud.k8s.v1.NodeAddressSpecB\002\030\001" +
-      "\022@\n\021scheduling_policy\030\006 \001(\0132%.yandex.clo" +
-      "ud.k8s.v1.SchedulingPolicy\022J\n\027network_in" +
-      "terface_specs\030\007 \003(\0132).yandex.cloud.k8s.v" +
-      "1.NetworkInterfaceSpec\022>\n\020placement_poli" +
-      "cy\030\n \001(\0132$.yandex.cloud.k8s.v1.Placement" +
-      "Policy\022K\n\020network_settings\030\013 \001(\01321.yande" +
-      "x.cloud.k8s.v1.NodeTemplate.NetworkSetti" +
-      "ngs\022^\n\032container_runtime_settings\030\014 \001(\0132" +
-      ":.yandex.cloud.k8s.v1.NodeTemplate.Conta" +
-      "inerRuntimeSettings\022^\n\032container_network" +
-      "_settings\030\020 \001(\0132:.yandex.cloud.k8s.v1.No" +
-      "deTemplate.ContainerNetworkSettings\0226\n\014g" +
-      "pu_settings\030\022 \001(\0132 .yandex.cloud.k8s.v1." +
-      "GpuSettings\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMetadataEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\243\001\n\017NetworkS" +
-      "ettings\022J\n\004type\030\001 \001(\01626.yandex.cloud.k8s" +
-      ".v1.NodeTemplate.NetworkSettings.TypeB\004\350" +
-      "\3071\001\"D\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010STA" +
-      "NDARD\020\001\022\030\n\024SOFTWARE_ACCELERATED\020\002\032\251\001\n\030Co" +
-      "ntainerRuntimeSettings\022S\n\004type\030\001 \001(\0162?.y" +
-      "andex.cloud.k8s.v1.NodeTemplate.Containe" +
-      "rRuntimeSettings.TypeB\004\350\3071\001\"8\n\004Type\022\024\n\020T" +
-      "YPE_UNSPECIFIED\020\000\022\n\n\006DOCKER\020\001\022\016\n\nCONTAIN" +
-      "ERD\020\002\032+\n\030ContainerNetworkSettings\022\017\n\007pod" +
-      "_mtu\030\001 \001(\003J\004\010\016\020\017J\004\010\021\020\022J\004\010\010\020\n\"\303\001\n\013GpuSett" +
-      "ings\022\026\n\016gpu_cluster_id\030\001 \001(\t\022H\n\017gpu_envi" +
-      "ronment\030\002 \001(\0162/.yandex.cloud.k8s.v1.GpuS" +
-      "ettings.GpuEnvironment\"R\n\016GpuEnvironment" +
-      "\022\037\n\033GPU_ENVIRONMENT_UNSPECIFIED\020\000\022\025\n\021RUN" +
-      "C_DRIVERS_CUDA\020\001\022\010\n\004RUNC\020\002\"\324\001\n\024NetworkIn" +
-      "terfaceSpec\022\022\n\nsubnet_ids\030\002 \003(\t\022E\n\027prima" +
-      "ry_v4_address_spec\030\003 \001(\0132$.yandex.cloud." +
-      "k8s.v1.NodeAddressSpec\022E\n\027primary_v6_add" +
-      "ress_spec\030\004 \001(\0132$.yandex.cloud.k8s.v1.No" +
-      "deAddressSpec\022\032\n\022security_group_ids\030\005 \003(" +
-      "\t\"\222\001\n\017NodeAddressSpec\022A\n\023one_to_one_nat_" +
-      "spec\030\001 \001(\0132$.yandex.cloud.k8s.v1.OneToOn" +
-      "eNatSpec\022<\n\020dns_record_specs\030\002 \003(\0132\".yan" +
-      "dex.cloud.k8s.v1.DnsRecordSpec\"_\n\rDnsRec" +
-      "ordSpec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_" +
-      "id\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003pt" +
-      "r\030\004 \001(\010\"E\n\017OneToOneNatSpec\0222\n\nip_version" +
-      "\030\001 \001(\0162\036.yandex.cloud.k8s.v1.IpVersion\"y" +
-      "\n\rResourcesSpec\022\027\n\006memory\030\001 \001(\003B\007\372\3071\003>=0" +
-      "\022\026\n\005cores\030\002 \001(\003B\007\372\3071\003>=0\022 \n\rcore_fractio" +
-      "n\030\003 \001(\003B\t\372\3071\0050-100\022\025\n\004gpus\030\004 \001(\003B\007\372\3071\003>=" +
-      "0\"\222\001\n\010DiskSpec\022^\n\014disk_type_id\030\001 \001(\tBH\362\307" +
-      "1D|network-ssd|network-hdd|network-ssd-n" +
-      "onreplicated|network-ssd-io-m3\022&\n\tdisk_s" +
-      "ize\030\002 \001(\003B\023\372\3071\0170-4398046511104\"\'\n\020Schedu" +
-      "lingPolicy\022\023\n\013preemptible\030\001 \001(\010\"-\n\017Place" +
-      "mentPolicy\022\032\n\022placement_group_id\030\001 \001(\t*;" +
-      "\n\tIpVersion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022" +
-      "\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002BV\n\027yandex.cloud.api." +
-      "k8s.v1Z;github.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/k8s/v1;k8sb\006proto3"
+      ".v1.DiskSpec\022!\n\031reserved_instance_pool_i" +
+      "d\030\023 \001(\t\022w\n\010metadata\030\004 \003(\0132/.yandex.cloud" +
+      ".k8s.v1.NodeTemplate.MetadataEntryB4\202\3101\004" +
+      "<=64\212\3101\010<=131072\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_" +
+      "0-9a-z]*\022A\n\017v4_address_spec\030\005 \001(\0132$.yand" +
+      "ex.cloud.k8s.v1.NodeAddressSpecB\002\030\001\022@\n\021s" +
+      "cheduling_policy\030\006 \001(\0132%.yandex.cloud.k8" +
+      "s.v1.SchedulingPolicy\022J\n\027network_interfa" +
+      "ce_specs\030\007 \003(\0132).yandex.cloud.k8s.v1.Net" +
+      "workInterfaceSpec\022>\n\020placement_policy\030\n " +
+      "\001(\0132$.yandex.cloud.k8s.v1.PlacementPolic" +
+      "y\022K\n\020network_settings\030\013 \001(\01321.yandex.clo" +
+      "ud.k8s.v1.NodeTemplate.NetworkSettings\022^" +
+      "\n\032container_runtime_settings\030\014 \001(\0132:.yan" +
+      "dex.cloud.k8s.v1.NodeTemplate.ContainerR" +
+      "untimeSettings\022^\n\032container_network_sett" +
+      "ings\030\020 \001(\0132:.yandex.cloud.k8s.v1.NodeTem" +
+      "plate.ContainerNetworkSettings\0226\n\014gpu_se" +
+      "ttings\030\022 \001(\0132 .yandex.cloud.k8s.v1.GpuSe" +
+      "ttings\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\032/\n\rMetadataEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\243\001\n\017NetworkSettin" +
+      "gs\022J\n\004type\030\001 \001(\01626.yandex.cloud.k8s.v1.N" +
+      "odeTemplate.NetworkSettings.TypeB\004\350\3071\001\"D" +
+      "\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010STANDARD" +
+      "\020\001\022\030\n\024SOFTWARE_ACCELERATED\020\002\032\251\001\n\030Contain" +
+      "erRuntimeSettings\022S\n\004type\030\001 \001(\0162?.yandex" +
+      ".cloud.k8s.v1.NodeTemplate.ContainerRunt" +
+      "imeSettings.TypeB\004\350\3071\001\"8\n\004Type\022\024\n\020TYPE_U" +
+      "NSPECIFIED\020\000\022\n\n\006DOCKER\020\001\022\016\n\nCONTAINERD\020\002" +
+      "\032+\n\030ContainerNetworkSettings\022\017\n\007pod_mtu\030" +
+      "\001 \001(\003J\004\010\016\020\017J\004\010\021\020\022J\004\010\010\020\n\"\303\001\n\013GpuSettings\022" +
+      "\026\n\016gpu_cluster_id\030\001 \001(\t\022H\n\017gpu_environme" +
+      "nt\030\002 \001(\0162/.yandex.cloud.k8s.v1.GpuSettin" +
+      "gs.GpuEnvironment\"R\n\016GpuEnvironment\022\037\n\033G" +
+      "PU_ENVIRONMENT_UNSPECIFIED\020\000\022\025\n\021RUNC_DRI" +
+      "VERS_CUDA\020\001\022\010\n\004RUNC\020\002\"\324\001\n\024NetworkInterfa" +
+      "ceSpec\022\022\n\nsubnet_ids\030\002 \003(\t\022E\n\027primary_v4" +
+      "_address_spec\030\003 \001(\0132$.yandex.cloud.k8s.v" +
+      "1.NodeAddressSpec\022E\n\027primary_v6_address_" +
+      "spec\030\004 \001(\0132$.yandex.cloud.k8s.v1.NodeAdd" +
+      "ressSpec\022\032\n\022security_group_ids\030\005 \003(\t\"\222\001\n" +
+      "\017NodeAddressSpec\022A\n\023one_to_one_nat_spec\030" +
+      "\001 \001(\0132$.yandex.cloud.k8s.v1.OneToOneNatS" +
+      "pec\022<\n\020dns_record_specs\030\002 \003(\0132\".yandex.c" +
+      "loud.k8s.v1.DnsRecordSpec\"_\n\rDnsRecordSp" +
+      "ec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 " +
+      "\001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001" +
+      "(\010\"E\n\017OneToOneNatSpec\0222\n\nip_version\030\001 \001(" +
+      "\0162\036.yandex.cloud.k8s.v1.IpVersion\"y\n\rRes" +
+      "ourcesSpec\022\027\n\006memory\030\001 \001(\003B\007\372\3071\003>=0\022\026\n\005c" +
+      "ores\030\002 \001(\003B\007\372\3071\003>=0\022 \n\rcore_fraction\030\003 \001" +
+      "(\003B\t\372\3071\0050-100\022\025\n\004gpus\030\004 \001(\003B\007\372\3071\003>=0\"\222\001\n" +
+      "\010DiskSpec\022^\n\014disk_type_id\030\001 \001(\tBH\362\3071D|ne" +
+      "twork-ssd|network-hdd|network-ssd-nonrep" +
+      "licated|network-ssd-io-m3\022&\n\tdisk_size\030\002" +
+      " \001(\003B\023\372\3071\0170-4398046511104\"\'\n\020SchedulingP" +
+      "olicy\022\023\n\013preemptible\030\001 \001(\010\"-\n\017PlacementP" +
+      "olicy\022\032\n\022placement_group_id\030\001 \001(\t*;\n\tIpV" +
+      "ersion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IP" +
+      "V4\020\001\022\010\n\004IPV6\020\002BV\n\027yandex.cloud.api.k8s.v" +
+      "1Z;github.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/k8s/v1;k8sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -23281,7 +23817,7 @@ public final class NodeOuterClass {
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_NodeTemplate_descriptor,
-        new java.lang.String[] { "Name", "Labels", "PlatformId", "ResourcesSpec", "BootDiskSpec", "Metadata", "V4AddressSpec", "SchedulingPolicy", "NetworkInterfaceSpecs", "PlacementPolicy", "NetworkSettings", "ContainerRuntimeSettings", "ContainerNetworkSettings", "GpuSettings", });
+        new java.lang.String[] { "Name", "Labels", "PlatformId", "ResourcesSpec", "BootDiskSpec", "ReservedInstancePoolId", "Metadata", "V4AddressSpec", "SchedulingPolicy", "NetworkInterfaceSpecs", "PlacementPolicy", "NetworkSettings", "ContainerRuntimeSettings", "ContainerNetworkSettings", "GpuSettings", });
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_LabelsEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_NodeTemplate_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_LabelsEntry_fieldAccessorTable = new

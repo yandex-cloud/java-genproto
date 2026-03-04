@@ -6244,6 +6244,33 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
+     * Configuration of a MySQL 8.4 server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_4 mysql_config_8_4 = 10 [json_name = "mysqlConfig_8_4"];</code>
+     * @return Whether the mysqlConfig84 field is set.
+     */
+    boolean hasMysqlConfig84();
+    /**
+     * <pre>
+     * Configuration of a MySQL 8.4 server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_4 mysql_config_8_4 = 10 [json_name = "mysqlConfig_8_4"];</code>
+     * @return The mysqlConfig84.
+     */
+    yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4 getMysqlConfig84();
+    /**
+     * <pre>
+     * Configuration of a MySQL 8.4 server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_4 mysql_config_8_4 = 10 [json_name = "mysqlConfig_8_4"];</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4OrBuilder getMysqlConfig84OrBuilder();
+
+    /**
+     * <pre>
      * Resource preset for the cluster hosts.
      * </pre>
      *
@@ -6404,6 +6431,26 @@ public final class ClusterOuterClass {
      */
     yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
 
+    /**
+     * <pre>
+     * Full version
+     * </pre>
+     *
+     * <code>string full_version = 11;</code>
+     * @return The fullVersion.
+     */
+    java.lang.String getFullVersion();
+    /**
+     * <pre>
+     * Full version
+     * </pre>
+     *
+     * <code>string full_version = 11;</code>
+     * @return The bytes for fullVersion.
+     */
+    com.google.protobuf.ByteString
+        getFullVersionBytes();
+
     public yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.ClusterConfig.MysqlConfigCase getMysqlConfigCase();
   }
   /**
@@ -6420,6 +6467,7 @@ public final class ClusterOuterClass {
     }
     private ClusterConfig() {
       version_ = "";
+      fullVersion_ = "";
     }
 
     @java.lang.Override
@@ -6564,6 +6612,26 @@ public final class ClusterOuterClass {
 
               break;
             }
+            case 82: {
+              yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4.Builder subBuilder = null;
+              if (mysqlConfigCase_ == 10) {
+                subBuilder = ((yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4) mysqlConfig_).toBuilder();
+              }
+              mysqlConfig_ =
+                  input.readMessage(yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4) mysqlConfig_);
+                mysqlConfig_ = subBuilder.buildPartial();
+              }
+              mysqlConfigCase_ = 10;
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fullVersion_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -6603,6 +6671,7 @@ public final class ClusterOuterClass {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       MYSQL_CONFIG_5_7(2),
       MYSQL_CONFIG_8_0(6),
+      MYSQL_CONFIG_8_4(10),
       MYSQLCONFIG_NOT_SET(0);
       private final int value;
       private MysqlConfigCase(int value) {
@@ -6622,6 +6691,7 @@ public final class ClusterOuterClass {
         switch (value) {
           case 2: return MYSQL_CONFIG_5_7;
           case 6: return MYSQL_CONFIG_8_0;
+          case 10: return MYSQL_CONFIG_8_4;
           case 0: return MYSQLCONFIG_NOT_SET;
           default: return null;
         }
@@ -6767,6 +6837,49 @@ public final class ClusterOuterClass {
          return (yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfigSet8_0) mysqlConfig_;
       }
       return yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfigSet8_0.getDefaultInstance();
+    }
+
+    public static final int MYSQL_CONFIG_8_4_FIELD_NUMBER = 10;
+    /**
+     * <pre>
+     * Configuration of a MySQL 8.4 server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_4 mysql_config_8_4 = 10 [json_name = "mysqlConfig_8_4"];</code>
+     * @return Whether the mysqlConfig84 field is set.
+     */
+    @java.lang.Override
+    public boolean hasMysqlConfig84() {
+      return mysqlConfigCase_ == 10;
+    }
+    /**
+     * <pre>
+     * Configuration of a MySQL 8.4 server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_4 mysql_config_8_4 = 10 [json_name = "mysqlConfig_8_4"];</code>
+     * @return The mysqlConfig84.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4 getMysqlConfig84() {
+      if (mysqlConfigCase_ == 10) {
+         return (yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4) mysqlConfig_;
+      }
+      return yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration of a MySQL 8.4 server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_4 mysql_config_8_4 = 10 [json_name = "mysqlConfig_8_4"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4OrBuilder getMysqlConfig84OrBuilder() {
+      if (mysqlConfigCase_ == 10) {
+         return (yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4) mysqlConfig_;
+      }
+      return yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4.getDefaultInstance();
     }
 
     public static final int RESOURCES_FIELD_NUMBER = 3;
@@ -6997,6 +7110,52 @@ public final class ClusterOuterClass {
       return getDiskSizeAutoscaling();
     }
 
+    public static final int FULL_VERSION_FIELD_NUMBER = 11;
+    private volatile java.lang.Object fullVersion_;
+    /**
+     * <pre>
+     * Full version
+     * </pre>
+     *
+     * <code>string full_version = 11;</code>
+     * @return The fullVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getFullVersion() {
+      java.lang.Object ref = fullVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fullVersion_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Full version
+     * </pre>
+     *
+     * <code>string full_version = 11;</code>
+     * @return The bytes for fullVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFullVersionBytes() {
+      java.lang.Object ref = fullVersion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fullVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7037,6 +7196,12 @@ public final class ClusterOuterClass {
       }
       if (diskSizeAutoscaling_ != null) {
         output.writeMessage(9, getDiskSizeAutoscaling());
+      }
+      if (mysqlConfigCase_ == 10) {
+        output.writeMessage(10, (yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4) mysqlConfig_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fullVersion_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, fullVersion_);
       }
       unknownFields.writeTo(output);
     }
@@ -7081,6 +7246,13 @@ public final class ClusterOuterClass {
       if (diskSizeAutoscaling_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getDiskSizeAutoscaling());
+      }
+      if (mysqlConfigCase_ == 10) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, (yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4) mysqlConfig_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fullVersion_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, fullVersion_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7129,6 +7301,8 @@ public final class ClusterOuterClass {
         if (!getDiskSizeAutoscaling()
             .equals(other.getDiskSizeAutoscaling())) return false;
       }
+      if (!getFullVersion()
+          .equals(other.getFullVersion())) return false;
       if (!getMysqlConfigCase().equals(other.getMysqlConfigCase())) return false;
       switch (mysqlConfigCase_) {
         case 2:
@@ -7138,6 +7312,10 @@ public final class ClusterOuterClass {
         case 6:
           if (!getMysqlConfig80()
               .equals(other.getMysqlConfig80())) return false;
+          break;
+        case 10:
+          if (!getMysqlConfig84()
+              .equals(other.getMysqlConfig84())) return false;
           break;
         case 0:
         default:
@@ -7179,6 +7357,8 @@ public final class ClusterOuterClass {
         hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
         hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
       }
+      hash = (37 * hash) + FULL_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getFullVersion().hashCode();
       switch (mysqlConfigCase_) {
         case 2:
           hash = (37 * hash) + MYSQL_CONFIG_5_7_FIELD_NUMBER;
@@ -7187,6 +7367,10 @@ public final class ClusterOuterClass {
         case 6:
           hash = (37 * hash) + MYSQL_CONFIG_8_0_FIELD_NUMBER;
           hash = (53 * hash) + getMysqlConfig80().hashCode();
+          break;
+        case 10:
+          hash = (37 * hash) + MYSQL_CONFIG_8_4_FIELD_NUMBER;
+          hash = (53 * hash) + getMysqlConfig84().hashCode();
           break;
         case 0:
         default:
@@ -7362,6 +7546,8 @@ public final class ClusterOuterClass {
           diskSizeAutoscaling_ = null;
           diskSizeAutoscalingBuilder_ = null;
         }
+        fullVersion_ = "";
+
         mysqlConfigCase_ = 0;
         mysqlConfig_ = null;
         return this;
@@ -7405,6 +7591,13 @@ public final class ClusterOuterClass {
             result.mysqlConfig_ = mysqlConfig80Builder_.build();
           }
         }
+        if (mysqlConfigCase_ == 10) {
+          if (mysqlConfig84Builder_ == null) {
+            result.mysqlConfig_ = mysqlConfig_;
+          } else {
+            result.mysqlConfig_ = mysqlConfig84Builder_.build();
+          }
+        }
         if (resourcesBuilder_ == null) {
           result.resources_ = resources_;
         } else {
@@ -7435,6 +7628,7 @@ public final class ClusterOuterClass {
         } else {
           result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
         }
+        result.fullVersion_ = fullVersion_;
         result.mysqlConfigCase_ = mysqlConfigCase_;
         onBuilt();
         return result;
@@ -7506,6 +7700,10 @@ public final class ClusterOuterClass {
         if (other.hasDiskSizeAutoscaling()) {
           mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
         }
+        if (!other.getFullVersion().isEmpty()) {
+          fullVersion_ = other.fullVersion_;
+          onChanged();
+        }
         switch (other.getMysqlConfigCase()) {
           case MYSQL_CONFIG_5_7: {
             mergeMysqlConfig57(other.getMysqlConfig57());
@@ -7513,6 +7711,10 @@ public final class ClusterOuterClass {
           }
           case MYSQL_CONFIG_8_0: {
             mergeMysqlConfig80(other.getMysqlConfig80());
+            break;
+          }
+          case MYSQL_CONFIG_8_4: {
+            mergeMysqlConfig84(other.getMysqlConfig84());
             break;
           }
           case MYSQLCONFIG_NOT_SET: {
@@ -8011,6 +8213,183 @@ public final class ClusterOuterClass {
         mysqlConfigCase_ = 6;
         onChanged();;
         return mysqlConfig80Builder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4, yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4.Builder, yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4OrBuilder> mysqlConfig84Builder_;
+      /**
+       * <pre>
+       * Configuration of a MySQL 8.4 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_4 mysql_config_8_4 = 10 [json_name = "mysqlConfig_8_4"];</code>
+       * @return Whether the mysqlConfig84 field is set.
+       */
+      @java.lang.Override
+      public boolean hasMysqlConfig84() {
+        return mysqlConfigCase_ == 10;
+      }
+      /**
+       * <pre>
+       * Configuration of a MySQL 8.4 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_4 mysql_config_8_4 = 10 [json_name = "mysqlConfig_8_4"];</code>
+       * @return The mysqlConfig84.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4 getMysqlConfig84() {
+        if (mysqlConfig84Builder_ == null) {
+          if (mysqlConfigCase_ == 10) {
+            return (yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4) mysqlConfig_;
+          }
+          return yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4.getDefaultInstance();
+        } else {
+          if (mysqlConfigCase_ == 10) {
+            return mysqlConfig84Builder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of a MySQL 8.4 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_4 mysql_config_8_4 = 10 [json_name = "mysqlConfig_8_4"];</code>
+       */
+      public Builder setMysqlConfig84(yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4 value) {
+        if (mysqlConfig84Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mysqlConfig_ = value;
+          onChanged();
+        } else {
+          mysqlConfig84Builder_.setMessage(value);
+        }
+        mysqlConfigCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of a MySQL 8.4 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_4 mysql_config_8_4 = 10 [json_name = "mysqlConfig_8_4"];</code>
+       */
+      public Builder setMysqlConfig84(
+          yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4.Builder builderForValue) {
+        if (mysqlConfig84Builder_ == null) {
+          mysqlConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          mysqlConfig84Builder_.setMessage(builderForValue.build());
+        }
+        mysqlConfigCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of a MySQL 8.4 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_4 mysql_config_8_4 = 10 [json_name = "mysqlConfig_8_4"];</code>
+       */
+      public Builder mergeMysqlConfig84(yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4 value) {
+        if (mysqlConfig84Builder_ == null) {
+          if (mysqlConfigCase_ == 10 &&
+              mysqlConfig_ != yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4.getDefaultInstance()) {
+            mysqlConfig_ = yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4.newBuilder((yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4) mysqlConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            mysqlConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (mysqlConfigCase_ == 10) {
+            mysqlConfig84Builder_.mergeFrom(value);
+          }
+          mysqlConfig84Builder_.setMessage(value);
+        }
+        mysqlConfigCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of a MySQL 8.4 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_4 mysql_config_8_4 = 10 [json_name = "mysqlConfig_8_4"];</code>
+       */
+      public Builder clearMysqlConfig84() {
+        if (mysqlConfig84Builder_ == null) {
+          if (mysqlConfigCase_ == 10) {
+            mysqlConfigCase_ = 0;
+            mysqlConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (mysqlConfigCase_ == 10) {
+            mysqlConfigCase_ = 0;
+            mysqlConfig_ = null;
+          }
+          mysqlConfig84Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of a MySQL 8.4 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_4 mysql_config_8_4 = 10 [json_name = "mysqlConfig_8_4"];</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4.Builder getMysqlConfig84Builder() {
+        return getMysqlConfig84FieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of a MySQL 8.4 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_4 mysql_config_8_4 = 10 [json_name = "mysqlConfig_8_4"];</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4OrBuilder getMysqlConfig84OrBuilder() {
+        if ((mysqlConfigCase_ == 10) && (mysqlConfig84Builder_ != null)) {
+          return mysqlConfig84Builder_.getMessageOrBuilder();
+        } else {
+          if (mysqlConfigCase_ == 10) {
+            return (yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4) mysqlConfig_;
+          }
+          return yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of a MySQL 8.4 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_4 mysql_config_8_4 = 10 [json_name = "mysqlConfig_8_4"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4, yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4.Builder, yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4OrBuilder> 
+          getMysqlConfig84FieldBuilder() {
+        if (mysqlConfig84Builder_ == null) {
+          if (!(mysqlConfigCase_ == 10)) {
+            mysqlConfig_ = yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4.getDefaultInstance();
+          }
+          mysqlConfig84Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4, yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4.Builder, yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4OrBuilder>(
+                  (yandex.cloud.api.mdb.mysql.v1.config.Mysql84.MysqlConfigSet8_4) mysqlConfig_,
+                  getParentForChildren(),
+                  isClean());
+          mysqlConfig_ = null;
+        }
+        mysqlConfigCase_ = 10;
+        onChanged();;
+        return mysqlConfig84Builder_;
       }
 
       private yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Resources resources_;
@@ -8941,6 +9320,102 @@ public final class ClusterOuterClass {
           diskSizeAutoscaling_ = null;
         }
         return diskSizeAutoscalingBuilder_;
+      }
+
+      private java.lang.Object fullVersion_ = "";
+      /**
+       * <pre>
+       * Full version
+       * </pre>
+       *
+       * <code>string full_version = 11;</code>
+       * @return The fullVersion.
+       */
+      public java.lang.String getFullVersion() {
+        java.lang.Object ref = fullVersion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fullVersion_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Full version
+       * </pre>
+       *
+       * <code>string full_version = 11;</code>
+       * @return The bytes for fullVersion.
+       */
+      public com.google.protobuf.ByteString
+          getFullVersionBytes() {
+        java.lang.Object ref = fullVersion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fullVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Full version
+       * </pre>
+       *
+       * <code>string full_version = 11;</code>
+       * @param value The fullVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFullVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        fullVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Full version
+       * </pre>
+       *
+       * <code>string full_version = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFullVersion() {
+        
+        fullVersion_ = getDefaultInstance().getFullVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Full version
+       * </pre>
+       *
+       * <code>string full_version = 11;</code>
+       * @param value The bytes for fullVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFullVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        fullVersion_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -16164,87 +16639,92 @@ public final class ClusterOuterClass {
       "to\032\035yandex/cloud/validation.proto\032/yande" +
       "x/cloud/mdb/mysql/v1/config/mysql5_7.pro" +
       "to\032/yandex/cloud/mdb/mysql/v1/config/mys" +
-      "ql8_0.proto\032+yandex/cloud/mdb/mysql/v1/m" +
-      "aintenance.proto\"\340\010\n\007Cluster\022\n\n\002id\030\001 \001(\t" +
-      "\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022\014\n\004name\030\004 \001(" +
-      "\t\022\023\n\013description\030\005 \001(\t\022>\n\006labels\030\006 \003(\0132." +
-      ".yandex.cloud.mdb.mysql.v1.Cluster.Label" +
-      "sEntry\022C\n\013environment\030\007 \001(\0162..yandex.clo" +
-      "ud.mdb.mysql.v1.Cluster.Environment\0229\n\nm" +
-      "onitoring\030\010 \003(\0132%.yandex.cloud.mdb.mysql" +
-      ".v1.Monitoring\0228\n\006config\030\t \001(\0132(.yandex." +
-      "cloud.mdb.mysql.v1.ClusterConfig\022\022\n\nnetw" +
-      "ork_id\030\n \001(\t\0229\n\006health\030\013 \001(\0162).yandex.cl" +
-      "oud.mdb.mysql.v1.Cluster.Health\0229\n\006statu" +
-      "s\030\014 \001(\0162).yandex.cloud.mdb.mysql.v1.Clus" +
-      "ter.Status\022H\n\022maintenance_window\030\r \001(\0132," +
-      ".yandex.cloud.mdb.mysql.v1.MaintenanceWi" +
-      "ndow\022J\n\021planned_operation\030\016 \001(\0132/.yandex" +
-      ".cloud.mdb.mysql.v1.MaintenanceOperation" +
-      "\022\032\n\022security_group_ids\030\017 \003(\t\022\033\n\023deletion" +
-      "_protection\030\020 \001(\010\022\026\n\016host_group_ids\030\021 \003(" +
-      "\t\022<\n\026disk_encryption_key_id\030\023 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\032-\n\013LabelsEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013Enviro" +
-      "nment\022\033\n\027ENVIRONMENT_UNSPECIFIED\020\000\022\016\n\nPR" +
-      "ODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Health\022\022\n\016H" +
-      "EALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010" +
-      "DEGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000" +
-      "\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014" +
-      "\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022" +
-      "\014\n\010STARTING\020\007J\004\010\022\020\023\"=\n\nMonitoring\022\014\n\004nam" +
-      "e\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001" +
-      "(\t\"\202\005\n\rClusterConfig\022\017\n\007version\030\001 \001(\t\022`\n" +
-      "\020mysql_config_5_7\030\002 \001(\01323.yandex.cloud.m" +
-      "db.mysql.v1.config.MysqlConfigSet5_7H\000R\017" +
-      "mysqlConfig_5_7\022`\n\020mysql_config_8_0\030\006 \001(" +
-      "\01323.yandex.cloud.mdb.mysql.v1.config.Mys" +
-      "qlConfigSet8_0H\000R\017mysqlConfig_8_0\0227\n\tres" +
-      "ources\030\003 \001(\0132$.yandex.cloud.mdb.mysql.v1" +
-      ".Resources\0223\n\023backup_window_start\030\004 \001(\0132" +
-      "\026.google.type.TimeOfDay\0221\n\006access\030\005 \001(\0132" +
-      "!.yandex.cloud.mdb.mysql.v1.Access\022R\n\027pe" +
-      "rformance_diagnostics\030\007 \001(\01321.yandex.clo" +
-      "ud.mdb.mysql.v1.PerformanceDiagnostics\022H" +
-      "\n\031backup_retain_period_days\030\010 \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueB\010\372\3071\0047-60\022M\n\025disk" +
-      "_size_autoscaling\030\t \001(\0132..yandex.cloud.m" +
-      "db.mysql.v1.DiskSizeAutoscalingB\016\n\014mysql" +
-      "_config\"\240\004\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluste" +
-      "r_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0227\n\tresources" +
-      "\030\004 \001(\0132$.yandex.cloud.mdb.mysql.v1.Resou" +
-      "rces\0222\n\004role\030\005 \001(\0162$.yandex.cloud.mdb.my" +
-      "sql.v1.Host.Role\0226\n\006health\030\006 \001(\0162&.yande" +
-      "x.cloud.mdb.mysql.v1.Host.Health\0224\n\010serv" +
-      "ices\030\007 \003(\0132\".yandex.cloud.mdb.mysql.v1.S" +
-      "ervice\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_publ" +
-      "ic_ip\030\t \001(\010\022\032\n\022replication_source\030\n \001(\t\022" +
-      "\"\n\017backup_priority\030\013 \001(\003B\t\372\3071\0050-100\022\033\n\010p" +
-      "riority\030\014 \001(\003B\t\372\3071\0050-100\"1\n\004Role\022\020\n\014ROLE" +
-      "_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"M\n\006H" +
-      "ealth\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004" +
-      "DEAD\020\002\022\014\n\010DEGRADED\020\003\022\014\n\010READONLY\020\004\"\345\001\n\007S" +
-      "ervice\0225\n\004type\030\001 \001(\0162\'.yandex.cloud.mdb." +
-      "mysql.v1.Service.Type\0229\n\006health\030\002 \001(\0162)." +
-      "yandex.cloud.mdb.mysql.v1.Service.Health" +
-      "\"\'\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005MYSQL\020" +
-      "\001\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE" +
-      "\020\001\022\010\n\004DEAD\020\002\022\014\n\010READONLY\020\003\"P\n\tResources\022" +
-      "\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_size" +
-      "\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"Y\n\006Access\022\021" +
-      "\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\025\n\rda" +
-      "ta_transfer\030\003 \001(\010\022\024\n\014yandex_query\030\004 \001(\010\"" +
-      "\215\001\n\026PerformanceDiagnostics\022\017\n\007enabled\030\001 " +
-      "\001(\010\022/\n\032sessions_sampling_interval\030\002 \001(\003B" +
-      "\013\372\3071\0071-86400\0221\n\034statements_sampling_inte" +
-      "rval\030\003 \001(\003B\013\372\3071\0071-86400\"\220\001\n\023DiskSizeAuto" +
-      "scaling\022.\n\027planned_usage_threshold\030\001 \001(\003" +
-      "B\r\350\3071\000\372\3071\0050-100\0220\n\031emergency_usage_thres" +
-      "hold\030\002 \001(\003B\r\350\3071\000\372\3071\0050-100\022\027\n\017disk_size_l" +
-      "imit\030\003 \001(\003Bd\n\035yandex.cloud.api.mdb.mysql" +
-      ".v1ZCgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/mdb/mysql/v1;mysqlb\006proto3"
+      "ql8_0.proto\032/yandex/cloud/mdb/mysql/v1/c" +
+      "onfig/mysql8_4.proto\032+yandex/cloud/mdb/m" +
+      "ysql/v1/maintenance.proto\"\340\010\n\007Cluster\022\n\n" +
+      "\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_" +
+      "at\030\003 \001(\0132\032.google.protobuf.Timestamp\022\014\n\004" +
+      "name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022>\n\006label" +
+      "s\030\006 \003(\0132..yandex.cloud.mdb.mysql.v1.Clus" +
+      "ter.LabelsEntry\022C\n\013environment\030\007 \001(\0162..y" +
+      "andex.cloud.mdb.mysql.v1.Cluster.Environ" +
+      "ment\0229\n\nmonitoring\030\010 \003(\0132%.yandex.cloud." +
+      "mdb.mysql.v1.Monitoring\0228\n\006config\030\t \001(\0132" +
+      "(.yandex.cloud.mdb.mysql.v1.ClusterConfi" +
+      "g\022\022\n\nnetwork_id\030\n \001(\t\0229\n\006health\030\013 \001(\0162)." +
+      "yandex.cloud.mdb.mysql.v1.Cluster.Health" +
+      "\0229\n\006status\030\014 \001(\0162).yandex.cloud.mdb.mysq" +
+      "l.v1.Cluster.Status\022H\n\022maintenance_windo" +
+      "w\030\r \001(\0132,.yandex.cloud.mdb.mysql.v1.Main" +
+      "tenanceWindow\022J\n\021planned_operation\030\016 \001(\013" +
+      "2/.yandex.cloud.mdb.mysql.v1.Maintenance" +
+      "Operation\022\032\n\022security_group_ids\030\017 \003(\t\022\033\n" +
+      "\023deletion_protection\030\020 \001(\010\022\026\n\016host_group" +
+      "_ids\030\021 \003(\t\022<\n\026disk_encryption_key_id\030\023 \001" +
+      "(\0132\034.google.protobuf.StringValue\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "I\n\013Environment\022\033\n\027ENVIRONMENT_UNSPECIFIE" +
+      "D\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006He" +
+      "alth\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004D" +
+      "EAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_" +
+      "UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005" +
+      "ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007S" +
+      "TOPPED\020\006\022\014\n\010STARTING\020\007J\004\010\022\020\023\"=\n\nMonitori" +
+      "ng\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n" +
+      "\004link\030\003 \001(\t\"\372\005\n\rClusterConfig\022\017\n\007version" +
+      "\030\001 \001(\t\022`\n\020mysql_config_5_7\030\002 \001(\01323.yande" +
+      "x.cloud.mdb.mysql.v1.config.MysqlConfigS" +
+      "et5_7H\000R\017mysqlConfig_5_7\022`\n\020mysql_config" +
+      "_8_0\030\006 \001(\01323.yandex.cloud.mdb.mysql.v1.c" +
+      "onfig.MysqlConfigSet8_0H\000R\017mysqlConfig_8" +
+      "_0\022`\n\020mysql_config_8_4\030\n \001(\01323.yandex.cl" +
+      "oud.mdb.mysql.v1.config.MysqlConfigSet8_" +
+      "4H\000R\017mysqlConfig_8_4\0227\n\tresources\030\003 \001(\0132" +
+      "$.yandex.cloud.mdb.mysql.v1.Resources\0223\n" +
+      "\023backup_window_start\030\004 \001(\0132\026.google.type" +
+      ".TimeOfDay\0221\n\006access\030\005 \001(\0132!.yandex.clou" +
+      "d.mdb.mysql.v1.Access\022R\n\027performance_dia" +
+      "gnostics\030\007 \001(\01321.yandex.cloud.mdb.mysql." +
+      "v1.PerformanceDiagnostics\022H\n\031backup_reta" +
+      "in_period_days\030\010 \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\010\372\3071\0047-60\022M\n\025disk_size_autosca" +
+      "ling\030\t \001(\0132..yandex.cloud.mdb.mysql.v1.D" +
+      "iskSizeAutoscaling\022\024\n\014full_version\030\013 \001(\t" +
+      "B\016\n\014mysql_config\"\240\004\n\004Host\022\014\n\004name\030\001 \001(\t\022" +
+      "\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0227\n\t" +
+      "resources\030\004 \001(\0132$.yandex.cloud.mdb.mysql" +
+      ".v1.Resources\0222\n\004role\030\005 \001(\0162$.yandex.clo" +
+      "ud.mdb.mysql.v1.Host.Role\0226\n\006health\030\006 \001(" +
+      "\0162&.yandex.cloud.mdb.mysql.v1.Host.Healt" +
+      "h\0224\n\010services\030\007 \003(\0132\".yandex.cloud.mdb.m" +
+      "ysql.v1.Service\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020as" +
+      "sign_public_ip\030\t \001(\010\022\032\n\022replication_sour" +
+      "ce\030\n \001(\t\022\"\n\017backup_priority\030\013 \001(\003B\t\372\3071\0050" +
+      "-100\022\033\n\010priority\030\014 \001(\003B\t\372\3071\0050-100\"1\n\004Rol" +
+      "e\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007REPLI" +
+      "CA\020\002\"M\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005AL" +
+      "IVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\022\014\n\010READONL" +
+      "Y\020\004\"\345\001\n\007Service\0225\n\004type\030\001 \001(\0162\'.yandex.c" +
+      "loud.mdb.mysql.v1.Service.Type\0229\n\006health" +
+      "\030\002 \001(\0162).yandex.cloud.mdb.mysql.v1.Servi" +
+      "ce.Health\"\'\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022" +
+      "\t\n\005MYSQL\020\001\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000" +
+      "\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010READONLY\020\003\"P\n\tR" +
+      "esources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\t" +
+      "disk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"Y\n" +
+      "\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 " +
+      "\001(\010\022\025\n\rdata_transfer\030\003 \001(\010\022\024\n\014yandex_que" +
+      "ry\030\004 \001(\010\"\215\001\n\026PerformanceDiagnostics\022\017\n\007e" +
+      "nabled\030\001 \001(\010\022/\n\032sessions_sampling_interv" +
+      "al\030\002 \001(\003B\013\372\3071\0071-86400\0221\n\034statements_samp" +
+      "ling_interval\030\003 \001(\003B\013\372\3071\0071-86400\"\220\001\n\023Dis" +
+      "kSizeAutoscaling\022.\n\027planned_usage_thresh" +
+      "old\030\001 \001(\003B\r\350\3071\000\372\3071\0050-100\0220\n\031emergency_us" +
+      "age_threshold\030\002 \001(\003B\r\350\3071\000\372\3071\0050-100\022\027\n\017di" +
+      "sk_size_limit\030\003 \001(\003Bd\n\035yandex.cloud.api." +
+      "mdb.mysql.v1ZCgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/mdb/mysql/v1;mysq" +
+      "lb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16255,6 +16735,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.mdb.mysql.v1.config.Mysql57.getDescriptor(),
           yandex.cloud.api.mdb.mysql.v1.config.Mysql80.getDescriptor(),
+          yandex.cloud.api.mdb.mysql.v1.config.Mysql84.getDescriptor(),
           yandex.cloud.api.mdb.mysql.v1.Maintenance.getDescriptor(),
         });
     internal_static_yandex_cloud_mdb_mysql_v1_Cluster_descriptor =
@@ -16280,7 +16761,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mysql_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "Version", "MysqlConfig57", "MysqlConfig80", "Resources", "BackupWindowStart", "Access", "PerformanceDiagnostics", "BackupRetainPeriodDays", "DiskSizeAutoscaling", "MysqlConfig", });
+        new java.lang.String[] { "Version", "MysqlConfig57", "MysqlConfig80", "MysqlConfig84", "Resources", "BackupWindowStart", "Access", "PerformanceDiagnostics", "BackupRetainPeriodDays", "DiskSizeAutoscaling", "FullVersion", "MysqlConfig", });
     internal_static_yandex_cloud_mdb_mysql_v1_Host_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_mysql_v1_Host_fieldAccessorTable = new
@@ -16329,6 +16810,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.mdb.mysql.v1.config.Mysql57.getDescriptor();
     yandex.cloud.api.mdb.mysql.v1.config.Mysql80.getDescriptor();
+    yandex.cloud.api.mdb.mysql.v1.config.Mysql84.getDescriptor();
     yandex.cloud.api.mdb.mysql.v1.Maintenance.getDescriptor();
   }
 

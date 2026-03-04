@@ -969,16 +969,28 @@ public final class Clickhouse {
     long getNativePort();
 
     /**
+     * <pre>
+     * TLS settings for server connection. Disabled by default
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 8;</code>
      * @return Whether the tlsMode field is set.
      */
     boolean hasTlsMode();
     /**
+     * <pre>
+     * TLS settings for server connection. Disabled by default
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 8;</code>
      * @return The tlsMode.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode getTlsMode();
     /**
+     * <pre>
+     * TLS settings for server connection. Disabled by default
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 8;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder getTlsModeOrBuilder();
@@ -1162,6 +1174,10 @@ public final class Clickhouse {
     public static final int TLS_MODE_FIELD_NUMBER = 8;
     private yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode tlsMode_;
     /**
+     * <pre>
+     * TLS settings for server connection. Disabled by default
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 8;</code>
      * @return Whether the tlsMode field is set.
      */
@@ -1170,6 +1186,10 @@ public final class Clickhouse {
       return tlsMode_ != null;
     }
     /**
+     * <pre>
+     * TLS settings for server connection. Disabled by default
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 8;</code>
      * @return The tlsMode.
      */
@@ -1178,6 +1198,10 @@ public final class Clickhouse {
       return tlsMode_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.getDefaultInstance() : tlsMode_;
     }
     /**
+     * <pre>
+     * TLS settings for server connection. Disabled by default
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 8;</code>
      */
     @java.lang.Override
@@ -1899,6 +1923,10 @@ public final class Clickhouse {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode, yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder> tlsModeBuilder_;
       /**
+       * <pre>
+       * TLS settings for server connection. Disabled by default
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 8;</code>
        * @return Whether the tlsMode field is set.
        */
@@ -1906,6 +1934,10 @@ public final class Clickhouse {
         return tlsModeBuilder_ != null || tlsMode_ != null;
       }
       /**
+       * <pre>
+       * TLS settings for server connection. Disabled by default
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 8;</code>
        * @return The tlsMode.
        */
@@ -1917,6 +1949,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * TLS settings for server connection. Disabled by default
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 8;</code>
        */
       public Builder setTlsMode(yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode value) {
@@ -1933,6 +1969,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * TLS settings for server connection. Disabled by default
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 8;</code>
        */
       public Builder setTlsMode(
@@ -1947,6 +1987,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * TLS settings for server connection. Disabled by default
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 8;</code>
        */
       public Builder mergeTlsMode(yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode value) {
@@ -1965,6 +2009,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * TLS settings for server connection. Disabled by default
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 8;</code>
        */
       public Builder clearTlsMode() {
@@ -1979,6 +2027,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * TLS settings for server connection. Disabled by default
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 8;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.Builder getTlsModeBuilder() {
@@ -1987,6 +2039,10 @@ public final class Clickhouse {
         return getTlsModeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * TLS settings for server connection. Disabled by default
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 8;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder getTlsModeOrBuilder() {
@@ -1998,6 +2054,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * TLS settings for server connection. Disabled by default
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2071,46 +2131,82 @@ public final class Clickhouse {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Connection settings of the on-premise ClickHouse server
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
      * @return Whether the onPremise field is set.
      */
     boolean hasOnPremise();
     /**
+     * <pre>
+     * Connection settings of the on-premise ClickHouse server
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
      * @return The onPremise.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse getOnPremise();
     /**
+     * <pre>
+     * Connection settings of the on-premise ClickHouse server
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouseOrBuilder getOnPremiseOrBuilder();
 
     /**
+     * <pre>
+     * Get ClickHouse installation params and credentials from Connection Manager
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
      * @return Whether the connectionManagerConnection field is set.
      */
     boolean hasConnectionManagerConnection();
     /**
+     * <pre>
+     * Get ClickHouse installation params and credentials from Connection Manager
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
      * @return The connectionManagerConnection.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection getConnectionManagerConnection();
     /**
+     * <pre>
+     * Get ClickHouse installation params and credentials from Connection Manager
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder getConnectionManagerConnectionOrBuilder();
 
     /**
+     * <pre>
+     * Identifier of the Managed ClickHouse cluster
+     * </pre>
+     *
      * <code>string mdb_cluster_id = 5;</code>
      * @return Whether the mdbClusterId field is set.
      */
     boolean hasMdbClusterId();
     /**
+     * <pre>
+     * Identifier of the Managed ClickHouse cluster
+     * </pre>
+     *
      * <code>string mdb_cluster_id = 5;</code>
      * @return The mdbClusterId.
      */
     java.lang.String getMdbClusterId();
     /**
+     * <pre>
+     * Identifier of the Managed ClickHouse cluster
+     * </pre>
+     *
      * <code>string mdb_cluster_id = 5;</code>
      * @return The bytes for mdbClusterId.
      */
@@ -2118,11 +2214,19 @@ public final class Clickhouse {
         getMdbClusterIdBytes();
 
     /**
+     * <pre>
+     * User for database access. Required unless connection_manager_connection is used
+     * </pre>
+     *
      * <code>string user = 6;</code>
      * @return The user.
      */
     java.lang.String getUser();
     /**
+     * <pre>
+     * User for database access. Required unless connection_manager_connection is used
+     * </pre>
+     *
      * <code>string user = 6;</code>
      * @return The bytes for user.
      */
@@ -2130,23 +2234,35 @@ public final class Clickhouse {
         getUserBytes();
 
     /**
+     * <pre>
+     * Password for the database access
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 7;</code>
      * @return Whether the password field is set.
      */
     boolean hasPassword();
     /**
+     * <pre>
+     * Password for the database access
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 7;</code>
      * @return The password.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret getPassword();
     /**
+     * <pre>
+     * Password for the database access
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 7;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder getPasswordOrBuilder();
 
     /**
      * <pre>
-     * Database
+     * Database name
      * </pre>
      *
      * <code>string database = 8;</code>
@@ -2155,7 +2271,7 @@ public final class Clickhouse {
     java.lang.String getDatabase();
     /**
      * <pre>
-     * Database
+     * Database name
      * </pre>
      *
      * <code>string database = 8;</code>
@@ -2349,6 +2465,10 @@ public final class Clickhouse {
 
     public static final int ON_PREMISE_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Connection settings of the on-premise ClickHouse server
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
      * @return Whether the onPremise field is set.
      */
@@ -2357,6 +2477,10 @@ public final class Clickhouse {
       return addressCase_ == 2;
     }
     /**
+     * <pre>
+     * Connection settings of the on-premise ClickHouse server
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
      * @return The onPremise.
      */
@@ -2368,6 +2492,10 @@ public final class Clickhouse {
       return yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Connection settings of the on-premise ClickHouse server
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
      */
     @java.lang.Override
@@ -2380,6 +2508,10 @@ public final class Clickhouse {
 
     public static final int CONNECTION_MANAGER_CONNECTION_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * Get ClickHouse installation params and credentials from Connection Manager
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
      * @return Whether the connectionManagerConnection field is set.
      */
@@ -2388,6 +2520,10 @@ public final class Clickhouse {
       return addressCase_ == 3;
     }
     /**
+     * <pre>
+     * Get ClickHouse installation params and credentials from Connection Manager
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
      * @return The connectionManagerConnection.
      */
@@ -2399,6 +2535,10 @@ public final class Clickhouse {
       return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Get ClickHouse installation params and credentials from Connection Manager
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
      */
     @java.lang.Override
@@ -2411,6 +2551,10 @@ public final class Clickhouse {
 
     public static final int MDB_CLUSTER_ID_FIELD_NUMBER = 5;
     /**
+     * <pre>
+     * Identifier of the Managed ClickHouse cluster
+     * </pre>
+     *
      * <code>string mdb_cluster_id = 5;</code>
      * @return Whether the mdbClusterId field is set.
      */
@@ -2418,6 +2562,10 @@ public final class Clickhouse {
       return addressCase_ == 5;
     }
     /**
+     * <pre>
+     * Identifier of the Managed ClickHouse cluster
+     * </pre>
+     *
      * <code>string mdb_cluster_id = 5;</code>
      * @return The mdbClusterId.
      */
@@ -2439,6 +2587,10 @@ public final class Clickhouse {
       }
     }
     /**
+     * <pre>
+     * Identifier of the Managed ClickHouse cluster
+     * </pre>
+     *
      * <code>string mdb_cluster_id = 5;</code>
      * @return The bytes for mdbClusterId.
      */
@@ -2464,6 +2616,10 @@ public final class Clickhouse {
     public static final int USER_FIELD_NUMBER = 6;
     private volatile java.lang.Object user_;
     /**
+     * <pre>
+     * User for database access. Required unless connection_manager_connection is used
+     * </pre>
+     *
      * <code>string user = 6;</code>
      * @return The user.
      */
@@ -2481,6 +2637,10 @@ public final class Clickhouse {
       }
     }
     /**
+     * <pre>
+     * User for database access. Required unless connection_manager_connection is used
+     * </pre>
+     *
      * <code>string user = 6;</code>
      * @return The bytes for user.
      */
@@ -2502,6 +2662,10 @@ public final class Clickhouse {
     public static final int PASSWORD_FIELD_NUMBER = 7;
     private yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret password_;
     /**
+     * <pre>
+     * Password for the database access
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 7;</code>
      * @return Whether the password field is set.
      */
@@ -2510,6 +2674,10 @@ public final class Clickhouse {
       return password_ != null;
     }
     /**
+     * <pre>
+     * Password for the database access
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 7;</code>
      * @return The password.
      */
@@ -2518,6 +2686,10 @@ public final class Clickhouse {
       return password_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret.getDefaultInstance() : password_;
     }
     /**
+     * <pre>
+     * Password for the database access
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 7;</code>
      */
     @java.lang.Override
@@ -2529,7 +2701,7 @@ public final class Clickhouse {
     private volatile java.lang.Object database_;
     /**
      * <pre>
-     * Database
+     * Database name
      * </pre>
      *
      * <code>string database = 8;</code>
@@ -2550,7 +2722,7 @@ public final class Clickhouse {
     }
     /**
      * <pre>
-     * Database
+     * Database name
      * </pre>
      *
      * <code>string database = 8;</code>
@@ -3030,6 +3202,10 @@ public final class Clickhouse {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouseOrBuilder> onPremiseBuilder_;
       /**
+       * <pre>
+       * Connection settings of the on-premise ClickHouse server
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
        * @return Whether the onPremise field is set.
        */
@@ -3038,6 +3214,10 @@ public final class Clickhouse {
         return addressCase_ == 2;
       }
       /**
+       * <pre>
+       * Connection settings of the on-premise ClickHouse server
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
        * @return The onPremise.
        */
@@ -3056,6 +3236,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Connection settings of the on-premise ClickHouse server
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
        */
       public Builder setOnPremise(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse value) {
@@ -3072,6 +3256,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings of the on-premise ClickHouse server
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
        */
       public Builder setOnPremise(
@@ -3086,6 +3274,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings of the on-premise ClickHouse server
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
        */
       public Builder mergeOnPremise(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse value) {
@@ -3108,6 +3300,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings of the on-premise ClickHouse server
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
        */
       public Builder clearOnPremise() {
@@ -3127,12 +3323,20 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings of the on-premise ClickHouse server
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse.Builder getOnPremiseBuilder() {
         return getOnPremiseFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Connection settings of the on-premise ClickHouse server
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
        */
       @java.lang.Override
@@ -3147,6 +3351,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Connection settings of the on-premise ClickHouse server
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3171,6 +3379,10 @@ public final class Clickhouse {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder> connectionManagerConnectionBuilder_;
       /**
+       * <pre>
+       * Get ClickHouse installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        * @return Whether the connectionManagerConnection field is set.
        */
@@ -3179,6 +3391,10 @@ public final class Clickhouse {
         return addressCase_ == 3;
       }
       /**
+       * <pre>
+       * Get ClickHouse installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        * @return The connectionManagerConnection.
        */
@@ -3197,6 +3413,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Get ClickHouse installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       public Builder setConnectionManagerConnection(yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection value) {
@@ -3213,6 +3433,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Get ClickHouse installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       public Builder setConnectionManagerConnection(
@@ -3227,6 +3451,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Get ClickHouse installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       public Builder mergeConnectionManagerConnection(yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection value) {
@@ -3249,6 +3477,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Get ClickHouse installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       public Builder clearConnectionManagerConnection() {
@@ -3268,12 +3500,20 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Get ClickHouse installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder getConnectionManagerConnectionBuilder() {
         return getConnectionManagerConnectionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Get ClickHouse installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       @java.lang.Override
@@ -3288,6 +3528,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Get ClickHouse installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3310,6 +3554,10 @@ public final class Clickhouse {
       }
 
       /**
+       * <pre>
+       * Identifier of the Managed ClickHouse cluster
+       * </pre>
+       *
        * <code>string mdb_cluster_id = 5;</code>
        * @return Whether the mdbClusterId field is set.
        */
@@ -3318,6 +3566,10 @@ public final class Clickhouse {
         return addressCase_ == 5;
       }
       /**
+       * <pre>
+       * Identifier of the Managed ClickHouse cluster
+       * </pre>
+       *
        * <code>string mdb_cluster_id = 5;</code>
        * @return The mdbClusterId.
        */
@@ -3340,6 +3592,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Identifier of the Managed ClickHouse cluster
+       * </pre>
+       *
        * <code>string mdb_cluster_id = 5;</code>
        * @return The bytes for mdbClusterId.
        */
@@ -3363,6 +3619,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Identifier of the Managed ClickHouse cluster
+       * </pre>
+       *
        * <code>string mdb_cluster_id = 5;</code>
        * @param value The mdbClusterId to set.
        * @return This builder for chaining.
@@ -3378,6 +3638,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the Managed ClickHouse cluster
+       * </pre>
+       *
        * <code>string mdb_cluster_id = 5;</code>
        * @return This builder for chaining.
        */
@@ -3390,6 +3654,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the Managed ClickHouse cluster
+       * </pre>
+       *
        * <code>string mdb_cluster_id = 5;</code>
        * @param value The bytes for mdbClusterId to set.
        * @return This builder for chaining.
@@ -3408,6 +3676,10 @@ public final class Clickhouse {
 
       private java.lang.Object user_ = "";
       /**
+       * <pre>
+       * User for database access. Required unless connection_manager_connection is used
+       * </pre>
+       *
        * <code>string user = 6;</code>
        * @return The user.
        */
@@ -3424,6 +3696,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * User for database access. Required unless connection_manager_connection is used
+       * </pre>
+       *
        * <code>string user = 6;</code>
        * @return The bytes for user.
        */
@@ -3441,6 +3717,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * User for database access. Required unless connection_manager_connection is used
+       * </pre>
+       *
        * <code>string user = 6;</code>
        * @param value The user to set.
        * @return This builder for chaining.
@@ -3456,6 +3736,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * User for database access. Required unless connection_manager_connection is used
+       * </pre>
+       *
        * <code>string user = 6;</code>
        * @return This builder for chaining.
        */
@@ -3466,6 +3750,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * User for database access. Required unless connection_manager_connection is used
+       * </pre>
+       *
        * <code>string user = 6;</code>
        * @param value The bytes for user to set.
        * @return This builder for chaining.
@@ -3486,6 +3774,10 @@ public final class Clickhouse {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret, yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder> passwordBuilder_;
       /**
+       * <pre>
+       * Password for the database access
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 7;</code>
        * @return Whether the password field is set.
        */
@@ -3493,6 +3785,10 @@ public final class Clickhouse {
         return passwordBuilder_ != null || password_ != null;
       }
       /**
+       * <pre>
+       * Password for the database access
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 7;</code>
        * @return The password.
        */
@@ -3504,6 +3800,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Password for the database access
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 7;</code>
        */
       public Builder setPassword(yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret value) {
@@ -3520,6 +3820,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Password for the database access
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 7;</code>
        */
       public Builder setPassword(
@@ -3534,6 +3838,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Password for the database access
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 7;</code>
        */
       public Builder mergePassword(yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret value) {
@@ -3552,6 +3860,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Password for the database access
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 7;</code>
        */
       public Builder clearPassword() {
@@ -3566,6 +3878,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Password for the database access
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 7;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret.Builder getPasswordBuilder() {
@@ -3574,6 +3890,10 @@ public final class Clickhouse {
         return getPasswordFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Password for the database access
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 7;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder getPasswordOrBuilder() {
@@ -3585,6 +3905,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Password for the database access
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3604,7 +3928,7 @@ public final class Clickhouse {
       private java.lang.Object database_ = "";
       /**
        * <pre>
-       * Database
+       * Database name
        * </pre>
        *
        * <code>string database = 8;</code>
@@ -3624,7 +3948,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Database
+       * Database name
        * </pre>
        *
        * <code>string database = 8;</code>
@@ -3645,7 +3969,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Database
+       * Database name
        * </pre>
        *
        * <code>string database = 8;</code>
@@ -3664,7 +3988,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Database
+       * Database name
        * </pre>
        *
        * <code>string database = 8;</code>
@@ -3678,7 +4002,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Database
+       * Database name
        * </pre>
        *
        * <code>string database = 8;</code>
@@ -4472,61 +4796,112 @@ public final class Clickhouse {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Shard data by the hash value of the specified column
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueHash column_value_hash = 1;</code>
      * @return Whether the columnValueHash field is set.
      */
     boolean hasColumnValueHash();
     /**
+     * <pre>
+     * Shard data by the hash value of the specified column
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueHash column_value_hash = 1;</code>
      * @return The columnValueHash.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueHash getColumnValueHash();
     /**
+     * <pre>
+     * Shard data by the hash value of the specified column
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueHash column_value_hash = 1;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueHashOrBuilder getColumnValueHashOrBuilder();
 
     /**
+     * <pre>
+     * A custom shard mapping by the value of the specified column
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping custom_mapping = 2;</code>
      * @return Whether the customMapping field is set.
      */
     boolean hasCustomMapping();
     /**
+     * <pre>
+     * A custom shard mapping by the value of the specified column
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping custom_mapping = 2;</code>
      * @return The customMapping.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping getCustomMapping();
     /**
+     * <pre>
+     * A custom shard mapping by the value of the specified column
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping custom_mapping = 2;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMappingOrBuilder getCustomMappingOrBuilder();
 
     /**
+     * <pre>
+     * Shard data by ID of the transfer
+     * </pre>
+     *
      * <code>.google.protobuf.Empty transfer_id = 3;</code>
      * @return Whether the transferId field is set.
      */
     boolean hasTransferId();
     /**
+     * <pre>
+     * Shard data by ID of the transfer
+     * </pre>
+     *
      * <code>.google.protobuf.Empty transfer_id = 3;</code>
      * @return The transferId.
      */
     com.google.protobuf.Empty getTransferId();
     /**
+     * <pre>
+     * Shard data by ID of the transfer
+     * </pre>
+     *
      * <code>.google.protobuf.Empty transfer_id = 3;</code>
      */
     com.google.protobuf.EmptyOrBuilder getTransferIdOrBuilder();
 
     /**
+     * <pre>
+     * Distribute incoming rows between ClickHouse shards in a round-robin manner.
+     * Specify as an empty block to enable
+     * </pre>
+     *
      * <code>.google.protobuf.Empty round_robin = 4;</code>
      * @return Whether the roundRobin field is set.
      */
     boolean hasRoundRobin();
     /**
+     * <pre>
+     * Distribute incoming rows between ClickHouse shards in a round-robin manner.
+     * Specify as an empty block to enable
+     * </pre>
+     *
      * <code>.google.protobuf.Empty round_robin = 4;</code>
      * @return The roundRobin.
      */
     com.google.protobuf.Empty getRoundRobin();
     /**
+     * <pre>
+     * Distribute incoming rows between ClickHouse shards in a round-robin manner.
+     * Specify as an empty block to enable
+     * </pre>
+     *
      * <code>.google.protobuf.Empty round_robin = 4;</code>
      */
     com.google.protobuf.EmptyOrBuilder getRoundRobinOrBuilder();
@@ -4671,11 +5046,19 @@ public final class Clickhouse {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * The name of the column to calculate hash from
+       * </pre>
+       *
        * <code>string column_name = 1;</code>
        * @return The columnName.
        */
       java.lang.String getColumnName();
       /**
+       * <pre>
+       * The name of the column to calculate hash from
+       * </pre>
+       *
        * <code>string column_name = 1;</code>
        * @return The bytes for columnName.
        */
@@ -4769,6 +5152,10 @@ public final class Clickhouse {
       public static final int COLUMN_NAME_FIELD_NUMBER = 1;
       private volatile java.lang.Object columnName_;
       /**
+       * <pre>
+       * The name of the column to calculate hash from
+       * </pre>
+       *
        * <code>string column_name = 1;</code>
        * @return The columnName.
        */
@@ -4786,6 +5173,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * The name of the column to calculate hash from
+       * </pre>
+       *
        * <code>string column_name = 1;</code>
        * @return The bytes for columnName.
        */
@@ -5108,6 +5499,10 @@ public final class Clickhouse {
 
         private java.lang.Object columnName_ = "";
         /**
+         * <pre>
+         * The name of the column to calculate hash from
+         * </pre>
+         *
          * <code>string column_name = 1;</code>
          * @return The columnName.
          */
@@ -5124,6 +5519,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * The name of the column to calculate hash from
+         * </pre>
+         *
          * <code>string column_name = 1;</code>
          * @return The bytes for columnName.
          */
@@ -5141,6 +5540,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * The name of the column to calculate hash from
+         * </pre>
+         *
          * <code>string column_name = 1;</code>
          * @param value The columnName to set.
          * @return This builder for chaining.
@@ -5156,6 +5559,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * The name of the column to calculate hash from
+         * </pre>
+         *
          * <code>string column_name = 1;</code>
          * @return This builder for chaining.
          */
@@ -5166,6 +5573,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * The name of the column to calculate hash from
+         * </pre>
+         *
          * <code>string column_name = 1;</code>
          * @param value The bytes for columnName to set.
          * @return This builder for chaining.
@@ -5239,11 +5650,21 @@ public final class Clickhouse {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * The name of the column to inspect when deciding the shard to chose for an
+       * incoming row
+       * </pre>
+       *
        * <code>string column_name = 1;</code>
        * @return The columnName.
        */
       java.lang.String getColumnName();
       /**
+       * <pre>
+       * The name of the column to inspect when deciding the shard to chose for an
+       * incoming row
+       * </pre>
+       *
        * <code>string column_name = 1;</code>
        * @return The bytes for columnName.
        */
@@ -5251,24 +5672,44 @@ public final class Clickhouse {
           getColumnNameBytes();
 
       /**
+       * <pre>
+       * The mapping of the specified column values to the shard names
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
        */
       java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.ValueToShard> 
           getMappingList();
       /**
+       * <pre>
+       * The mapping of the specified column values to the shard names
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
        */
       yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.ValueToShard getMapping(int index);
       /**
+       * <pre>
+       * The mapping of the specified column values to the shard names
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
        */
       int getMappingCount();
       /**
+       * <pre>
+       * The mapping of the specified column values to the shard names
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
        */
       java.util.List<? extends yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.ValueToShardOrBuilder> 
           getMappingOrBuilderList();
       /**
+       * <pre>
+       * The mapping of the specified column values to the shard names
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
        */
       yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.ValueToShardOrBuilder getMappingOrBuilder(
@@ -5377,26 +5818,48 @@ public final class Clickhouse {
           com.google.protobuf.MessageOrBuilder {
 
         /**
+         * <pre>
+         * The value of the column. Currently only the string columns are supported
+         * </pre>
+         *
          * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnValue column_value = 1;</code>
          * @return Whether the columnValue field is set.
          */
         boolean hasColumnValue();
         /**
+         * <pre>
+         * The value of the column. Currently only the string columns are supported
+         * </pre>
+         *
          * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnValue column_value = 1;</code>
          * @return The columnValue.
          */
         yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValue getColumnValue();
         /**
+         * <pre>
+         * The value of the column. Currently only the string columns are supported
+         * </pre>
+         *
          * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnValue column_value = 1;</code>
          */
         yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValueOrBuilder getColumnValueOrBuilder();
 
         /**
+         * <pre>
+         * The name of the shard into which all the rows with the specified `column_value`
+         * will be written
+         * </pre>
+         *
          * <code>string shard_name = 2;</code>
          * @return The shardName.
          */
         java.lang.String getShardName();
         /**
+         * <pre>
+         * The name of the shard into which all the rows with the specified `column_value`
+         * will be written
+         * </pre>
+         *
          * <code>string shard_name = 2;</code>
          * @return The bytes for shardName.
          */
@@ -5503,6 +5966,10 @@ public final class Clickhouse {
         public static final int COLUMN_VALUE_FIELD_NUMBER = 1;
         private yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValue columnValue_;
         /**
+         * <pre>
+         * The value of the column. Currently only the string columns are supported
+         * </pre>
+         *
          * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnValue column_value = 1;</code>
          * @return Whether the columnValue field is set.
          */
@@ -5511,6 +5978,10 @@ public final class Clickhouse {
           return columnValue_ != null;
         }
         /**
+         * <pre>
+         * The value of the column. Currently only the string columns are supported
+         * </pre>
+         *
          * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnValue column_value = 1;</code>
          * @return The columnValue.
          */
@@ -5519,6 +5990,10 @@ public final class Clickhouse {
           return columnValue_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValue.getDefaultInstance() : columnValue_;
         }
         /**
+         * <pre>
+         * The value of the column. Currently only the string columns are supported
+         * </pre>
+         *
          * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnValue column_value = 1;</code>
          */
         @java.lang.Override
@@ -5529,6 +6004,11 @@ public final class Clickhouse {
         public static final int SHARD_NAME_FIELD_NUMBER = 2;
         private volatile java.lang.Object shardName_;
         /**
+         * <pre>
+         * The name of the shard into which all the rows with the specified `column_value`
+         * will be written
+         * </pre>
+         *
          * <code>string shard_name = 2;</code>
          * @return The shardName.
          */
@@ -5546,6 +6026,11 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * The name of the shard into which all the rows with the specified `column_value`
+         * will be written
+         * </pre>
+         *
          * <code>string shard_name = 2;</code>
          * @return The bytes for shardName.
          */
@@ -5900,6 +6385,10 @@ public final class Clickhouse {
           private com.google.protobuf.SingleFieldBuilderV3<
               yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValue, yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValue.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValueOrBuilder> columnValueBuilder_;
           /**
+           * <pre>
+           * The value of the column. Currently only the string columns are supported
+           * </pre>
+           *
            * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnValue column_value = 1;</code>
            * @return Whether the columnValue field is set.
            */
@@ -5907,6 +6396,10 @@ public final class Clickhouse {
             return columnValueBuilder_ != null || columnValue_ != null;
           }
           /**
+           * <pre>
+           * The value of the column. Currently only the string columns are supported
+           * </pre>
+           *
            * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnValue column_value = 1;</code>
            * @return The columnValue.
            */
@@ -5918,6 +6411,10 @@ public final class Clickhouse {
             }
           }
           /**
+           * <pre>
+           * The value of the column. Currently only the string columns are supported
+           * </pre>
+           *
            * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnValue column_value = 1;</code>
            */
           public Builder setColumnValue(yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValue value) {
@@ -5934,6 +6431,10 @@ public final class Clickhouse {
             return this;
           }
           /**
+           * <pre>
+           * The value of the column. Currently only the string columns are supported
+           * </pre>
+           *
            * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnValue column_value = 1;</code>
            */
           public Builder setColumnValue(
@@ -5948,6 +6449,10 @@ public final class Clickhouse {
             return this;
           }
           /**
+           * <pre>
+           * The value of the column. Currently only the string columns are supported
+           * </pre>
+           *
            * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnValue column_value = 1;</code>
            */
           public Builder mergeColumnValue(yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValue value) {
@@ -5966,6 +6471,10 @@ public final class Clickhouse {
             return this;
           }
           /**
+           * <pre>
+           * The value of the column. Currently only the string columns are supported
+           * </pre>
+           *
            * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnValue column_value = 1;</code>
            */
           public Builder clearColumnValue() {
@@ -5980,6 +6489,10 @@ public final class Clickhouse {
             return this;
           }
           /**
+           * <pre>
+           * The value of the column. Currently only the string columns are supported
+           * </pre>
+           *
            * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnValue column_value = 1;</code>
            */
           public yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValue.Builder getColumnValueBuilder() {
@@ -5988,6 +6501,10 @@ public final class Clickhouse {
             return getColumnValueFieldBuilder().getBuilder();
           }
           /**
+           * <pre>
+           * The value of the column. Currently only the string columns are supported
+           * </pre>
+           *
            * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnValue column_value = 1;</code>
            */
           public yandex.cloud.api.datatransfer.v1.endpoint.Common.ColumnValueOrBuilder getColumnValueOrBuilder() {
@@ -5999,6 +6516,10 @@ public final class Clickhouse {
             }
           }
           /**
+           * <pre>
+           * The value of the column. Currently only the string columns are supported
+           * </pre>
+           *
            * <code>.yandex.cloud.datatransfer.v1.endpoint.ColumnValue column_value = 1;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
@@ -6017,6 +6538,11 @@ public final class Clickhouse {
 
           private java.lang.Object shardName_ = "";
           /**
+           * <pre>
+           * The name of the shard into which all the rows with the specified `column_value`
+           * will be written
+           * </pre>
+           *
            * <code>string shard_name = 2;</code>
            * @return The shardName.
            */
@@ -6033,6 +6559,11 @@ public final class Clickhouse {
             }
           }
           /**
+           * <pre>
+           * The name of the shard into which all the rows with the specified `column_value`
+           * will be written
+           * </pre>
+           *
            * <code>string shard_name = 2;</code>
            * @return The bytes for shardName.
            */
@@ -6050,6 +6581,11 @@ public final class Clickhouse {
             }
           }
           /**
+           * <pre>
+           * The name of the shard into which all the rows with the specified `column_value`
+           * will be written
+           * </pre>
+           *
            * <code>string shard_name = 2;</code>
            * @param value The shardName to set.
            * @return This builder for chaining.
@@ -6065,6 +6601,11 @@ public final class Clickhouse {
             return this;
           }
           /**
+           * <pre>
+           * The name of the shard into which all the rows with the specified `column_value`
+           * will be written
+           * </pre>
+           *
            * <code>string shard_name = 2;</code>
            * @return This builder for chaining.
            */
@@ -6075,6 +6616,11 @@ public final class Clickhouse {
             return this;
           }
           /**
+           * <pre>
+           * The name of the shard into which all the rows with the specified `column_value`
+           * will be written
+           * </pre>
+           *
            * <code>string shard_name = 2;</code>
            * @param value The bytes for shardName to set.
            * @return This builder for chaining.
@@ -6146,6 +6692,11 @@ public final class Clickhouse {
       public static final int COLUMN_NAME_FIELD_NUMBER = 1;
       private volatile java.lang.Object columnName_;
       /**
+       * <pre>
+       * The name of the column to inspect when deciding the shard to chose for an
+       * incoming row
+       * </pre>
+       *
        * <code>string column_name = 1;</code>
        * @return The columnName.
        */
@@ -6163,6 +6714,11 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * The name of the column to inspect when deciding the shard to chose for an
+       * incoming row
+       * </pre>
+       *
        * <code>string column_name = 1;</code>
        * @return The bytes for columnName.
        */
@@ -6184,6 +6740,10 @@ public final class Clickhouse {
       public static final int MAPPING_FIELD_NUMBER = 2;
       private java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.ValueToShard> mapping_;
       /**
+       * <pre>
+       * The mapping of the specified column values to the shard names
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
        */
       @java.lang.Override
@@ -6191,6 +6751,10 @@ public final class Clickhouse {
         return mapping_;
       }
       /**
+       * <pre>
+       * The mapping of the specified column values to the shard names
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
        */
       @java.lang.Override
@@ -6199,6 +6763,10 @@ public final class Clickhouse {
         return mapping_;
       }
       /**
+       * <pre>
+       * The mapping of the specified column values to the shard names
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
        */
       @java.lang.Override
@@ -6206,6 +6774,10 @@ public final class Clickhouse {
         return mapping_.size();
       }
       /**
+       * <pre>
+       * The mapping of the specified column values to the shard names
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
        */
       @java.lang.Override
@@ -6213,6 +6785,10 @@ public final class Clickhouse {
         return mapping_.get(index);
       }
       /**
+       * <pre>
+       * The mapping of the specified column values to the shard names
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
        */
       @java.lang.Override
@@ -6582,6 +7158,11 @@ public final class Clickhouse {
 
         private java.lang.Object columnName_ = "";
         /**
+         * <pre>
+         * The name of the column to inspect when deciding the shard to chose for an
+         * incoming row
+         * </pre>
+         *
          * <code>string column_name = 1;</code>
          * @return The columnName.
          */
@@ -6598,6 +7179,11 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * The name of the column to inspect when deciding the shard to chose for an
+         * incoming row
+         * </pre>
+         *
          * <code>string column_name = 1;</code>
          * @return The bytes for columnName.
          */
@@ -6615,6 +7201,11 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * The name of the column to inspect when deciding the shard to chose for an
+         * incoming row
+         * </pre>
+         *
          * <code>string column_name = 1;</code>
          * @param value The columnName to set.
          * @return This builder for chaining.
@@ -6630,6 +7221,11 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * The name of the column to inspect when deciding the shard to chose for an
+         * incoming row
+         * </pre>
+         *
          * <code>string column_name = 1;</code>
          * @return This builder for chaining.
          */
@@ -6640,6 +7236,11 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * The name of the column to inspect when deciding the shard to chose for an
+         * incoming row
+         * </pre>
+         *
          * <code>string column_name = 1;</code>
          * @param value The bytes for columnName to set.
          * @return This builder for chaining.
@@ -6669,6 +7270,10 @@ public final class Clickhouse {
             yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.ValueToShard, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.ValueToShard.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.ValueToShardOrBuilder> mappingBuilder_;
 
         /**
+         * <pre>
+         * The mapping of the specified column values to the shard names
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
          */
         public java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.ValueToShard> getMappingList() {
@@ -6679,6 +7284,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * The mapping of the specified column values to the shard names
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
          */
         public int getMappingCount() {
@@ -6689,6 +7298,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * The mapping of the specified column values to the shard names
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
          */
         public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.ValueToShard getMapping(int index) {
@@ -6699,6 +7312,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * The mapping of the specified column values to the shard names
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
          */
         public Builder setMapping(
@@ -6716,6 +7333,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * The mapping of the specified column values to the shard names
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
          */
         public Builder setMapping(
@@ -6730,6 +7351,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * The mapping of the specified column values to the shard names
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
          */
         public Builder addMapping(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.ValueToShard value) {
@@ -6746,6 +7371,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * The mapping of the specified column values to the shard names
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
          */
         public Builder addMapping(
@@ -6763,6 +7392,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * The mapping of the specified column values to the shard names
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
          */
         public Builder addMapping(
@@ -6777,6 +7410,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * The mapping of the specified column values to the shard names
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
          */
         public Builder addMapping(
@@ -6791,6 +7428,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * The mapping of the specified column values to the shard names
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
          */
         public Builder addAllMapping(
@@ -6806,6 +7447,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * The mapping of the specified column values to the shard names
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
          */
         public Builder clearMapping() {
@@ -6819,6 +7464,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * The mapping of the specified column values to the shard names
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
          */
         public Builder removeMapping(int index) {
@@ -6832,6 +7481,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * The mapping of the specified column values to the shard names
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
          */
         public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.ValueToShard.Builder getMappingBuilder(
@@ -6839,6 +7492,10 @@ public final class Clickhouse {
           return getMappingFieldBuilder().getBuilder(index);
         }
         /**
+         * <pre>
+         * The mapping of the specified column values to the shard names
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
          */
         public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.ValueToShardOrBuilder getMappingOrBuilder(
@@ -6849,6 +7506,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * The mapping of the specified column values to the shard names
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
          */
         public java.util.List<? extends yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.ValueToShardOrBuilder> 
@@ -6860,6 +7521,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * The mapping of the specified column values to the shard names
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
          */
         public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.ValueToShard.Builder addMappingBuilder() {
@@ -6867,6 +7532,10 @@ public final class Clickhouse {
               yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.ValueToShard.getDefaultInstance());
         }
         /**
+         * <pre>
+         * The mapping of the specified column values to the shard names
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
          */
         public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.ValueToShard.Builder addMappingBuilder(
@@ -6875,6 +7544,10 @@ public final class Clickhouse {
               index, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.ValueToShard.getDefaultInstance());
         }
         /**
+         * <pre>
+         * The mapping of the specified column values to the shard names
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping.ValueToShard mapping = 2;</code>
          */
         public java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.ValueToShard.Builder> 
@@ -6995,6 +7668,10 @@ public final class Clickhouse {
 
     public static final int COLUMN_VALUE_HASH_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Shard data by the hash value of the specified column
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueHash column_value_hash = 1;</code>
      * @return Whether the columnValueHash field is set.
      */
@@ -7003,6 +7680,10 @@ public final class Clickhouse {
       return shardingCase_ == 1;
     }
     /**
+     * <pre>
+     * Shard data by the hash value of the specified column
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueHash column_value_hash = 1;</code>
      * @return The columnValueHash.
      */
@@ -7014,6 +7695,10 @@ public final class Clickhouse {
       return yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueHash.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Shard data by the hash value of the specified column
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueHash column_value_hash = 1;</code>
      */
     @java.lang.Override
@@ -7026,6 +7711,10 @@ public final class Clickhouse {
 
     public static final int CUSTOM_MAPPING_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * A custom shard mapping by the value of the specified column
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping custom_mapping = 2;</code>
      * @return Whether the customMapping field is set.
      */
@@ -7034,6 +7723,10 @@ public final class Clickhouse {
       return shardingCase_ == 2;
     }
     /**
+     * <pre>
+     * A custom shard mapping by the value of the specified column
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping custom_mapping = 2;</code>
      * @return The customMapping.
      */
@@ -7045,6 +7738,10 @@ public final class Clickhouse {
       return yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.getDefaultInstance();
     }
     /**
+     * <pre>
+     * A custom shard mapping by the value of the specified column
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping custom_mapping = 2;</code>
      */
     @java.lang.Override
@@ -7057,6 +7754,10 @@ public final class Clickhouse {
 
     public static final int TRANSFER_ID_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * Shard data by ID of the transfer
+     * </pre>
+     *
      * <code>.google.protobuf.Empty transfer_id = 3;</code>
      * @return Whether the transferId field is set.
      */
@@ -7065,6 +7766,10 @@ public final class Clickhouse {
       return shardingCase_ == 3;
     }
     /**
+     * <pre>
+     * Shard data by ID of the transfer
+     * </pre>
+     *
      * <code>.google.protobuf.Empty transfer_id = 3;</code>
      * @return The transferId.
      */
@@ -7076,6 +7781,10 @@ public final class Clickhouse {
       return com.google.protobuf.Empty.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Shard data by ID of the transfer
+     * </pre>
+     *
      * <code>.google.protobuf.Empty transfer_id = 3;</code>
      */
     @java.lang.Override
@@ -7088,6 +7797,11 @@ public final class Clickhouse {
 
     public static final int ROUND_ROBIN_FIELD_NUMBER = 4;
     /**
+     * <pre>
+     * Distribute incoming rows between ClickHouse shards in a round-robin manner.
+     * Specify as an empty block to enable
+     * </pre>
+     *
      * <code>.google.protobuf.Empty round_robin = 4;</code>
      * @return Whether the roundRobin field is set.
      */
@@ -7096,6 +7810,11 @@ public final class Clickhouse {
       return shardingCase_ == 4;
     }
     /**
+     * <pre>
+     * Distribute incoming rows between ClickHouse shards in a round-robin manner.
+     * Specify as an empty block to enable
+     * </pre>
+     *
      * <code>.google.protobuf.Empty round_robin = 4;</code>
      * @return The roundRobin.
      */
@@ -7107,6 +7826,11 @@ public final class Clickhouse {
       return com.google.protobuf.Empty.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Distribute incoming rows between ClickHouse shards in a round-robin manner.
+     * Specify as an empty block to enable
+     * </pre>
+     *
      * <code>.google.protobuf.Empty round_robin = 4;</code>
      */
     @java.lang.Override
@@ -7541,6 +8265,10 @@ public final class Clickhouse {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueHash, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueHash.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueHashOrBuilder> columnValueHashBuilder_;
       /**
+       * <pre>
+       * Shard data by the hash value of the specified column
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueHash column_value_hash = 1;</code>
        * @return Whether the columnValueHash field is set.
        */
@@ -7549,6 +8277,10 @@ public final class Clickhouse {
         return shardingCase_ == 1;
       }
       /**
+       * <pre>
+       * Shard data by the hash value of the specified column
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueHash column_value_hash = 1;</code>
        * @return The columnValueHash.
        */
@@ -7567,6 +8299,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Shard data by the hash value of the specified column
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueHash column_value_hash = 1;</code>
        */
       public Builder setColumnValueHash(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueHash value) {
@@ -7583,6 +8319,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Shard data by the hash value of the specified column
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueHash column_value_hash = 1;</code>
        */
       public Builder setColumnValueHash(
@@ -7597,6 +8337,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Shard data by the hash value of the specified column
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueHash column_value_hash = 1;</code>
        */
       public Builder mergeColumnValueHash(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueHash value) {
@@ -7619,6 +8363,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Shard data by the hash value of the specified column
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueHash column_value_hash = 1;</code>
        */
       public Builder clearColumnValueHash() {
@@ -7638,12 +8386,20 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Shard data by the hash value of the specified column
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueHash column_value_hash = 1;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueHash.Builder getColumnValueHashBuilder() {
         return getColumnValueHashFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Shard data by the hash value of the specified column
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueHash column_value_hash = 1;</code>
        */
       @java.lang.Override
@@ -7658,6 +8414,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Shard data by the hash value of the specified column
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueHash column_value_hash = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7682,6 +8442,10 @@ public final class Clickhouse {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMappingOrBuilder> customMappingBuilder_;
       /**
+       * <pre>
+       * A custom shard mapping by the value of the specified column
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping custom_mapping = 2;</code>
        * @return Whether the customMapping field is set.
        */
@@ -7690,6 +8454,10 @@ public final class Clickhouse {
         return shardingCase_ == 2;
       }
       /**
+       * <pre>
+       * A custom shard mapping by the value of the specified column
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping custom_mapping = 2;</code>
        * @return The customMapping.
        */
@@ -7708,6 +8476,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * A custom shard mapping by the value of the specified column
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping custom_mapping = 2;</code>
        */
       public Builder setCustomMapping(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping value) {
@@ -7724,6 +8496,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * A custom shard mapping by the value of the specified column
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping custom_mapping = 2;</code>
        */
       public Builder setCustomMapping(
@@ -7738,6 +8514,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * A custom shard mapping by the value of the specified column
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping custom_mapping = 2;</code>
        */
       public Builder mergeCustomMapping(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping value) {
@@ -7760,6 +8540,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * A custom shard mapping by the value of the specified column
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping custom_mapping = 2;</code>
        */
       public Builder clearCustomMapping() {
@@ -7779,12 +8563,20 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * A custom shard mapping by the value of the specified column
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping custom_mapping = 2;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ColumnValueMapping.Builder getCustomMappingBuilder() {
         return getCustomMappingFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * A custom shard mapping by the value of the specified column
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping custom_mapping = 2;</code>
        */
       @java.lang.Override
@@ -7799,6 +8591,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * A custom shard mapping by the value of the specified column
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding.ColumnValueMapping custom_mapping = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7823,6 +8619,10 @@ public final class Clickhouse {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Empty, com.google.protobuf.Empty.Builder, com.google.protobuf.EmptyOrBuilder> transferIdBuilder_;
       /**
+       * <pre>
+       * Shard data by ID of the transfer
+       * </pre>
+       *
        * <code>.google.protobuf.Empty transfer_id = 3;</code>
        * @return Whether the transferId field is set.
        */
@@ -7831,6 +8631,10 @@ public final class Clickhouse {
         return shardingCase_ == 3;
       }
       /**
+       * <pre>
+       * Shard data by ID of the transfer
+       * </pre>
+       *
        * <code>.google.protobuf.Empty transfer_id = 3;</code>
        * @return The transferId.
        */
@@ -7849,6 +8653,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Shard data by ID of the transfer
+       * </pre>
+       *
        * <code>.google.protobuf.Empty transfer_id = 3;</code>
        */
       public Builder setTransferId(com.google.protobuf.Empty value) {
@@ -7865,6 +8673,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Shard data by ID of the transfer
+       * </pre>
+       *
        * <code>.google.protobuf.Empty transfer_id = 3;</code>
        */
       public Builder setTransferId(
@@ -7879,6 +8691,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Shard data by ID of the transfer
+       * </pre>
+       *
        * <code>.google.protobuf.Empty transfer_id = 3;</code>
        */
       public Builder mergeTransferId(com.google.protobuf.Empty value) {
@@ -7901,6 +8717,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Shard data by ID of the transfer
+       * </pre>
+       *
        * <code>.google.protobuf.Empty transfer_id = 3;</code>
        */
       public Builder clearTransferId() {
@@ -7920,12 +8740,20 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Shard data by ID of the transfer
+       * </pre>
+       *
        * <code>.google.protobuf.Empty transfer_id = 3;</code>
        */
       public com.google.protobuf.Empty.Builder getTransferIdBuilder() {
         return getTransferIdFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Shard data by ID of the transfer
+       * </pre>
+       *
        * <code>.google.protobuf.Empty transfer_id = 3;</code>
        */
       @java.lang.Override
@@ -7940,6 +8768,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Shard data by ID of the transfer
+       * </pre>
+       *
        * <code>.google.protobuf.Empty transfer_id = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7964,6 +8796,11 @@ public final class Clickhouse {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Empty, com.google.protobuf.Empty.Builder, com.google.protobuf.EmptyOrBuilder> roundRobinBuilder_;
       /**
+       * <pre>
+       * Distribute incoming rows between ClickHouse shards in a round-robin manner.
+       * Specify as an empty block to enable
+       * </pre>
+       *
        * <code>.google.protobuf.Empty round_robin = 4;</code>
        * @return Whether the roundRobin field is set.
        */
@@ -7972,6 +8809,11 @@ public final class Clickhouse {
         return shardingCase_ == 4;
       }
       /**
+       * <pre>
+       * Distribute incoming rows between ClickHouse shards in a round-robin manner.
+       * Specify as an empty block to enable
+       * </pre>
+       *
        * <code>.google.protobuf.Empty round_robin = 4;</code>
        * @return The roundRobin.
        */
@@ -7990,6 +8832,11 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Distribute incoming rows between ClickHouse shards in a round-robin manner.
+       * Specify as an empty block to enable
+       * </pre>
+       *
        * <code>.google.protobuf.Empty round_robin = 4;</code>
        */
       public Builder setRoundRobin(com.google.protobuf.Empty value) {
@@ -8006,6 +8853,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Distribute incoming rows between ClickHouse shards in a round-robin manner.
+       * Specify as an empty block to enable
+       * </pre>
+       *
        * <code>.google.protobuf.Empty round_robin = 4;</code>
        */
       public Builder setRoundRobin(
@@ -8020,6 +8872,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Distribute incoming rows between ClickHouse shards in a round-robin manner.
+       * Specify as an empty block to enable
+       * </pre>
+       *
        * <code>.google.protobuf.Empty round_robin = 4;</code>
        */
       public Builder mergeRoundRobin(com.google.protobuf.Empty value) {
@@ -8042,6 +8899,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Distribute incoming rows between ClickHouse shards in a round-robin manner.
+       * Specify as an empty block to enable
+       * </pre>
+       *
        * <code>.google.protobuf.Empty round_robin = 4;</code>
        */
       public Builder clearRoundRobin() {
@@ -8061,12 +8923,22 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Distribute incoming rows between ClickHouse shards in a round-robin manner.
+       * Specify as an empty block to enable
+       * </pre>
+       *
        * <code>.google.protobuf.Empty round_robin = 4;</code>
        */
       public com.google.protobuf.Empty.Builder getRoundRobinBuilder() {
         return getRoundRobinFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Distribute incoming rows between ClickHouse shards in a round-robin manner.
+       * Specify as an empty block to enable
+       * </pre>
+       *
        * <code>.google.protobuf.Empty round_robin = 4;</code>
        */
       @java.lang.Override
@@ -8081,6 +8953,11 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Distribute incoming rows between ClickHouse shards in a round-robin manner.
+       * Specify as an empty block to enable
+       * </pre>
+       *
        * <code>.google.protobuf.Empty round_robin = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8159,16 +9036,28 @@ public final class Clickhouse {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 1;</code>
      * @return Whether the connection field is set.
      */
     boolean hasConnection();
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 1;</code>
      * @return The connection.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnection getConnection();
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 1;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnectionOrBuilder getConnectionOrBuilder();
@@ -8264,11 +9153,23 @@ public final class Clickhouse {
         getExcludeTablesBytes(int index);
 
     /**
+     * <pre>
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database.
+     * If omitted, the server has to be accessible via Internet
+     * </pre>
+     *
      * <code>string subnet_id = 9;</code>
      * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
+     * <pre>
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database.
+     * If omitted, the server has to be accessible via Internet
+     * </pre>
+     *
      * <code>string subnet_id = 9;</code>
      * @return The bytes for subnetId.
      */
@@ -8276,23 +9177,43 @@ public final class Clickhouse {
         getSubnetIdBytes();
 
     /**
+     * <pre>
+     * List of security groups that the transfer associated with this endpoint should
+     * use
+     * </pre>
+     *
      * <code>repeated string security_groups = 10;</code>
      * @return A list containing the securityGroups.
      */
     java.util.List<java.lang.String>
         getSecurityGroupsList();
     /**
+     * <pre>
+     * List of security groups that the transfer associated with this endpoint should
+     * use
+     * </pre>
+     *
      * <code>repeated string security_groups = 10;</code>
      * @return The count of securityGroups.
      */
     int getSecurityGroupsCount();
     /**
+     * <pre>
+     * List of security groups that the transfer associated with this endpoint should
+     * use
+     * </pre>
+     *
      * <code>repeated string security_groups = 10;</code>
      * @param index The index of the element to return.
      * @return The securityGroups at the given index.
      */
     java.lang.String getSecurityGroups(int index);
     /**
+     * <pre>
+     * List of security groups that the transfer associated with this endpoint should
+     * use
+     * </pre>
+     *
      * <code>repeated string security_groups = 10;</code>
      * @param index The index of the value to return.
      * @return The bytes of the securityGroups at the given index.
@@ -8303,7 +9224,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
-     * ShardGroup.
+     * ShardGroup or managed cluster ID by default
      * </pre>
      *
      * <code>string clickhouse_cluster_name = 11;</code>
@@ -8313,7 +9234,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
-     * ShardGroup.
+     * ShardGroup or managed cluster ID by default
      * </pre>
      *
      * <code>string clickhouse_cluster_name = 11;</code>
@@ -8323,6 +9244,10 @@ public final class Clickhouse {
         getClickhouseClusterNameBytes();
   }
   /**
+   * <pre>
+   * Settings specific to the ClickHouse source endpoint
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource}
    */
   public static final class ClickhouseSource extends
@@ -8469,6 +9394,10 @@ public final class Clickhouse {
     public static final int CONNECTION_FIELD_NUMBER = 1;
     private yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnection connection_;
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 1;</code>
      * @return Whether the connection field is set.
      */
@@ -8477,6 +9406,10 @@ public final class Clickhouse {
       return connection_ != null;
     }
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 1;</code>
      * @return The connection.
      */
@@ -8485,6 +9418,10 @@ public final class Clickhouse {
       return connection_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnection.getDefaultInstance() : connection_;
     }
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 1;</code>
      */
     @java.lang.Override
@@ -8605,6 +9542,12 @@ public final class Clickhouse {
     public static final int SUBNET_ID_FIELD_NUMBER = 9;
     private volatile java.lang.Object subnetId_;
     /**
+     * <pre>
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database.
+     * If omitted, the server has to be accessible via Internet
+     * </pre>
+     *
      * <code>string subnet_id = 9;</code>
      * @return The subnetId.
      */
@@ -8622,6 +9565,12 @@ public final class Clickhouse {
       }
     }
     /**
+     * <pre>
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database.
+     * If omitted, the server has to be accessible via Internet
+     * </pre>
+     *
      * <code>string subnet_id = 9;</code>
      * @return The bytes for subnetId.
      */
@@ -8643,6 +9592,11 @@ public final class Clickhouse {
     public static final int SECURITY_GROUPS_FIELD_NUMBER = 10;
     private com.google.protobuf.LazyStringList securityGroups_;
     /**
+     * <pre>
+     * List of security groups that the transfer associated with this endpoint should
+     * use
+     * </pre>
+     *
      * <code>repeated string security_groups = 10;</code>
      * @return A list containing the securityGroups.
      */
@@ -8651,6 +9605,11 @@ public final class Clickhouse {
       return securityGroups_;
     }
     /**
+     * <pre>
+     * List of security groups that the transfer associated with this endpoint should
+     * use
+     * </pre>
+     *
      * <code>repeated string security_groups = 10;</code>
      * @return The count of securityGroups.
      */
@@ -8658,6 +9617,11 @@ public final class Clickhouse {
       return securityGroups_.size();
     }
     /**
+     * <pre>
+     * List of security groups that the transfer associated with this endpoint should
+     * use
+     * </pre>
+     *
      * <code>repeated string security_groups = 10;</code>
      * @param index The index of the element to return.
      * @return The securityGroups at the given index.
@@ -8666,6 +9630,11 @@ public final class Clickhouse {
       return securityGroups_.get(index);
     }
     /**
+     * <pre>
+     * List of security groups that the transfer associated with this endpoint should
+     * use
+     * </pre>
+     *
      * <code>repeated string security_groups = 10;</code>
      * @param index The index of the value to return.
      * @return The bytes of the securityGroups at the given index.
@@ -8680,7 +9649,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
-     * ShardGroup.
+     * ShardGroup or managed cluster ID by default
      * </pre>
      *
      * <code>string clickhouse_cluster_name = 11;</code>
@@ -8702,7 +9671,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
-     * ShardGroup.
+     * ShardGroup or managed cluster ID by default
      * </pre>
      *
      * <code>string clickhouse_cluster_name = 11;</code>
@@ -8955,6 +9924,10 @@ public final class Clickhouse {
       return builder;
     }
     /**
+     * <pre>
+     * Settings specific to the ClickHouse source endpoint
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource}
      */
     public static final class Builder extends
@@ -9180,6 +10153,10 @@ public final class Clickhouse {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnection, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnectionOrBuilder> connectionBuilder_;
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 1;</code>
        * @return Whether the connection field is set.
        */
@@ -9187,6 +10164,10 @@ public final class Clickhouse {
         return connectionBuilder_ != null || connection_ != null;
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 1;</code>
        * @return The connection.
        */
@@ -9198,6 +10179,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 1;</code>
        */
       public Builder setConnection(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnection value) {
@@ -9214,6 +10199,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 1;</code>
        */
       public Builder setConnection(
@@ -9228,6 +10217,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 1;</code>
        */
       public Builder mergeConnection(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnection value) {
@@ -9246,6 +10239,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 1;</code>
        */
       public Builder clearConnection() {
@@ -9260,6 +10257,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 1;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnection.Builder getConnectionBuilder() {
@@ -9268,6 +10269,10 @@ public final class Clickhouse {
         return getConnectionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 1;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnectionOrBuilder getConnectionOrBuilder() {
@@ -9279,6 +10284,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -9607,6 +10616,12 @@ public final class Clickhouse {
 
       private java.lang.Object subnetId_ = "";
       /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database.
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
        * <code>string subnet_id = 9;</code>
        * @return The subnetId.
        */
@@ -9623,6 +10638,12 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database.
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
        * <code>string subnet_id = 9;</code>
        * @return The bytes for subnetId.
        */
@@ -9640,6 +10661,12 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database.
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
        * <code>string subnet_id = 9;</code>
        * @param value The subnetId to set.
        * @return This builder for chaining.
@@ -9655,6 +10682,12 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database.
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
        * <code>string subnet_id = 9;</code>
        * @return This builder for chaining.
        */
@@ -9665,6 +10698,12 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database.
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
        * <code>string subnet_id = 9;</code>
        * @param value The bytes for subnetId to set.
        * @return This builder for chaining.
@@ -9689,6 +10728,11 @@ public final class Clickhouse {
          }
       }
       /**
+       * <pre>
+       * List of security groups that the transfer associated with this endpoint should
+       * use
+       * </pre>
+       *
        * <code>repeated string security_groups = 10;</code>
        * @return A list containing the securityGroups.
        */
@@ -9697,6 +10741,11 @@ public final class Clickhouse {
         return securityGroups_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of security groups that the transfer associated with this endpoint should
+       * use
+       * </pre>
+       *
        * <code>repeated string security_groups = 10;</code>
        * @return The count of securityGroups.
        */
@@ -9704,6 +10753,11 @@ public final class Clickhouse {
         return securityGroups_.size();
       }
       /**
+       * <pre>
+       * List of security groups that the transfer associated with this endpoint should
+       * use
+       * </pre>
+       *
        * <code>repeated string security_groups = 10;</code>
        * @param index The index of the element to return.
        * @return The securityGroups at the given index.
@@ -9712,6 +10766,11 @@ public final class Clickhouse {
         return securityGroups_.get(index);
       }
       /**
+       * <pre>
+       * List of security groups that the transfer associated with this endpoint should
+       * use
+       * </pre>
+       *
        * <code>repeated string security_groups = 10;</code>
        * @param index The index of the value to return.
        * @return The bytes of the securityGroups at the given index.
@@ -9721,6 +10780,11 @@ public final class Clickhouse {
         return securityGroups_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of security groups that the transfer associated with this endpoint should
+       * use
+       * </pre>
+       *
        * <code>repeated string security_groups = 10;</code>
        * @param index The index to set the value at.
        * @param value The securityGroups to set.
@@ -9737,6 +10801,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * List of security groups that the transfer associated with this endpoint should
+       * use
+       * </pre>
+       *
        * <code>repeated string security_groups = 10;</code>
        * @param value The securityGroups to add.
        * @return This builder for chaining.
@@ -9752,6 +10821,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * List of security groups that the transfer associated with this endpoint should
+       * use
+       * </pre>
+       *
        * <code>repeated string security_groups = 10;</code>
        * @param values The securityGroups to add.
        * @return This builder for chaining.
@@ -9765,6 +10839,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * List of security groups that the transfer associated with this endpoint should
+       * use
+       * </pre>
+       *
        * <code>repeated string security_groups = 10;</code>
        * @return This builder for chaining.
        */
@@ -9775,6 +10854,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * List of security groups that the transfer associated with this endpoint should
+       * use
+       * </pre>
+       *
        * <code>repeated string security_groups = 10;</code>
        * @param value The bytes of the securityGroups to add.
        * @return This builder for chaining.
@@ -9795,7 +10879,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
-       * ShardGroup.
+       * ShardGroup or managed cluster ID by default
        * </pre>
        *
        * <code>string clickhouse_cluster_name = 11;</code>
@@ -9816,7 +10900,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
-       * ShardGroup.
+       * ShardGroup or managed cluster ID by default
        * </pre>
        *
        * <code>string clickhouse_cluster_name = 11;</code>
@@ -9838,7 +10922,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
-       * ShardGroup.
+       * ShardGroup or managed cluster ID by default
        * </pre>
        *
        * <code>string clickhouse_cluster_name = 11;</code>
@@ -9858,7 +10942,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
-       * ShardGroup.
+       * ShardGroup or managed cluster ID by default
        * </pre>
        *
        * <code>string clickhouse_cluster_name = 11;</code>
@@ -9873,7 +10957,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
-       * ShardGroup.
+       * ShardGroup or managed cluster ID by default
        * </pre>
        *
        * <code>string clickhouse_cluster_name = 11;</code>
@@ -9949,26 +11033,50 @@ public final class Clickhouse {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 2;</code>
      * @return Whether the connection field is set.
      */
     boolean hasConnection();
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 2;</code>
      * @return The connection.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnection getConnection();
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 2;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnectionOrBuilder getConnectionOrBuilder();
 
     /**
+     * <pre>
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database.
+     * If omitted, the server has to be accessible via Internet
+     * </pre>
+     *
      * <code>string subnet_id = 12;</code>
      * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
+     * <pre>
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database.
+     * If omitted, the server has to be accessible via Internet
+     * </pre>
+     *
      * <code>string subnet_id = 12;</code>
      * @return The bytes for subnetId.
      */
@@ -9977,7 +11085,7 @@ public final class Clickhouse {
 
     /**
      * <pre>
-     * Alternative table names in target
+     * Table renaming rules in target
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -9986,7 +11094,7 @@ public final class Clickhouse {
         getAltNamesList();
     /**
      * <pre>
-     * Alternative table names in target
+     * Table renaming rules in target
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -9994,7 +11102,7 @@ public final class Clickhouse {
     yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName getAltNames(int index);
     /**
      * <pre>
-     * Alternative table names in target
+     * Table renaming rules in target
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -10002,7 +11110,7 @@ public final class Clickhouse {
     int getAltNamesCount();
     /**
      * <pre>
-     * Alternative table names in target
+     * Table renaming rules in target
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -10011,7 +11119,7 @@ public final class Clickhouse {
         getAltNamesOrBuilderList();
     /**
      * <pre>
-     * Alternative table names in target
+     * Table renaming rules in target
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -10020,32 +11128,58 @@ public final class Clickhouse {
         int index);
 
     /**
+     * <pre>
+     * How to clean collections when activating the transfer. One of
+     * `CLICKHOUSE_CLEANUP_POLICY_DISABLED` or `CLICKHOUSE_CLEANUP_POLICY_DROP`
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
      * @return The enum numeric value on the wire for cleanupPolicy.
      */
     int getCleanupPolicyValue();
     /**
+     * <pre>
+     * How to clean collections when activating the transfer. One of
+     * `CLICKHOUSE_CLEANUP_POLICY_DISABLED` or `CLICKHOUSE_CLEANUP_POLICY_DROP`
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
      * @return The cleanupPolicy.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy getCleanupPolicy();
 
     /**
+     * <pre>
+     * Shard selection rules for the data being transferred
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding sharding = 22;</code>
      * @return Whether the sharding field is set.
      */
     boolean hasSharding();
     /**
+     * <pre>
+     * Shard selection rules for the data being transferred
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding sharding = 22;</code>
      * @return The sharding.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding getSharding();
     /**
+     * <pre>
+     * Shard selection rules for the data being transferred
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding sharding = 22;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseShardingOrBuilder getShardingOrBuilder();
 
     /**
+     * <pre>
+     * Whether can change table schema if schema changed on source
+     * </pre>
+     *
      * <code>bool is_schema_migration_disabled = 35;</code>
      * @return The isSchemaMigrationDisabled.
      */
@@ -10054,7 +11188,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
-     * ShardGroup.
+     * ShardGroup or managed cluster ID by default.
      * </pre>
      *
      * <code>string clickhouse_cluster_name = 50;</code>
@@ -10064,7 +11198,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
-     * ShardGroup.
+     * ShardGroup or managed cluster ID by default.
      * </pre>
      *
      * <code>string clickhouse_cluster_name = 50;</code>
@@ -10074,23 +11208,43 @@ public final class Clickhouse {
         getClickhouseClusterNameBytes();
 
     /**
+     * <pre>
+     * List of security groups that the transfer associated with this endpoint should
+     * use
+     * </pre>
+     *
      * <code>repeated string security_groups = 51;</code>
      * @return A list containing the securityGroups.
      */
     java.util.List<java.lang.String>
         getSecurityGroupsList();
     /**
+     * <pre>
+     * List of security groups that the transfer associated with this endpoint should
+     * use
+     * </pre>
+     *
      * <code>repeated string security_groups = 51;</code>
      * @return The count of securityGroups.
      */
     int getSecurityGroupsCount();
     /**
+     * <pre>
+     * List of security groups that the transfer associated with this endpoint should
+     * use
+     * </pre>
+     *
      * <code>repeated string security_groups = 51;</code>
      * @param index The index of the element to return.
      * @return The securityGroups at the given index.
      */
     java.lang.String getSecurityGroups(int index);
     /**
+     * <pre>
+     * List of security groups that the transfer associated with this endpoint should
+     * use
+     * </pre>
+     *
      * <code>repeated string security_groups = 51;</code>
      * @param index The index of the value to return.
      * @return The bytes of the securityGroups at the given index.
@@ -10099,6 +11253,10 @@ public final class Clickhouse {
         getSecurityGroupsBytes(int index);
   }
   /**
+   * <pre>
+   * Settings specific to the ClickHouse target endpoint
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget}
    */
   public static final class ClickhouseTarget extends
@@ -10257,6 +11415,10 @@ public final class Clickhouse {
     public static final int CONNECTION_FIELD_NUMBER = 2;
     private yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnection connection_;
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 2;</code>
      * @return Whether the connection field is set.
      */
@@ -10265,6 +11427,10 @@ public final class Clickhouse {
       return connection_ != null;
     }
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 2;</code>
      * @return The connection.
      */
@@ -10273,6 +11439,10 @@ public final class Clickhouse {
       return connection_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnection.getDefaultInstance() : connection_;
     }
     /**
+     * <pre>
+     * Connection settings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 2;</code>
      */
     @java.lang.Override
@@ -10283,6 +11453,12 @@ public final class Clickhouse {
     public static final int SUBNET_ID_FIELD_NUMBER = 12;
     private volatile java.lang.Object subnetId_;
     /**
+     * <pre>
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database.
+     * If omitted, the server has to be accessible via Internet
+     * </pre>
+     *
      * <code>string subnet_id = 12;</code>
      * @return The subnetId.
      */
@@ -10300,6 +11476,12 @@ public final class Clickhouse {
       }
     }
     /**
+     * <pre>
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database.
+     * If omitted, the server has to be accessible via Internet
+     * </pre>
+     *
      * <code>string subnet_id = 12;</code>
      * @return The bytes for subnetId.
      */
@@ -10322,7 +11504,7 @@ public final class Clickhouse {
     private java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName> altNames_;
     /**
      * <pre>
-     * Alternative table names in target
+     * Table renaming rules in target
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -10333,7 +11515,7 @@ public final class Clickhouse {
     }
     /**
      * <pre>
-     * Alternative table names in target
+     * Table renaming rules in target
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -10345,7 +11527,7 @@ public final class Clickhouse {
     }
     /**
      * <pre>
-     * Alternative table names in target
+     * Table renaming rules in target
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -10356,7 +11538,7 @@ public final class Clickhouse {
     }
     /**
      * <pre>
-     * Alternative table names in target
+     * Table renaming rules in target
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -10367,7 +11549,7 @@ public final class Clickhouse {
     }
     /**
      * <pre>
-     * Alternative table names in target
+     * Table renaming rules in target
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -10381,6 +11563,11 @@ public final class Clickhouse {
     public static final int CLEANUP_POLICY_FIELD_NUMBER = 21;
     private int cleanupPolicy_;
     /**
+     * <pre>
+     * How to clean collections when activating the transfer. One of
+     * `CLICKHOUSE_CLEANUP_POLICY_DISABLED` or `CLICKHOUSE_CLEANUP_POLICY_DROP`
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
      * @return The enum numeric value on the wire for cleanupPolicy.
      */
@@ -10388,6 +11575,11 @@ public final class Clickhouse {
       return cleanupPolicy_;
     }
     /**
+     * <pre>
+     * How to clean collections when activating the transfer. One of
+     * `CLICKHOUSE_CLEANUP_POLICY_DISABLED` or `CLICKHOUSE_CLEANUP_POLICY_DROP`
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
      * @return The cleanupPolicy.
      */
@@ -10400,6 +11592,10 @@ public final class Clickhouse {
     public static final int SHARDING_FIELD_NUMBER = 22;
     private yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding sharding_;
     /**
+     * <pre>
+     * Shard selection rules for the data being transferred
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding sharding = 22;</code>
      * @return Whether the sharding field is set.
      */
@@ -10408,6 +11604,10 @@ public final class Clickhouse {
       return sharding_ != null;
     }
     /**
+     * <pre>
+     * Shard selection rules for the data being transferred
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding sharding = 22;</code>
      * @return The sharding.
      */
@@ -10416,6 +11616,10 @@ public final class Clickhouse {
       return sharding_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.getDefaultInstance() : sharding_;
     }
     /**
+     * <pre>
+     * Shard selection rules for the data being transferred
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding sharding = 22;</code>
      */
     @java.lang.Override
@@ -10426,6 +11630,10 @@ public final class Clickhouse {
     public static final int IS_SCHEMA_MIGRATION_DISABLED_FIELD_NUMBER = 35;
     private boolean isSchemaMigrationDisabled_;
     /**
+     * <pre>
+     * Whether can change table schema if schema changed on source
+     * </pre>
+     *
      * <code>bool is_schema_migration_disabled = 35;</code>
      * @return The isSchemaMigrationDisabled.
      */
@@ -10439,7 +11647,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
-     * ShardGroup.
+     * ShardGroup or managed cluster ID by default.
      * </pre>
      *
      * <code>string clickhouse_cluster_name = 50;</code>
@@ -10461,7 +11669,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
-     * ShardGroup.
+     * ShardGroup or managed cluster ID by default.
      * </pre>
      *
      * <code>string clickhouse_cluster_name = 50;</code>
@@ -10485,6 +11693,11 @@ public final class Clickhouse {
     public static final int SECURITY_GROUPS_FIELD_NUMBER = 51;
     private com.google.protobuf.LazyStringList securityGroups_;
     /**
+     * <pre>
+     * List of security groups that the transfer associated with this endpoint should
+     * use
+     * </pre>
+     *
      * <code>repeated string security_groups = 51;</code>
      * @return A list containing the securityGroups.
      */
@@ -10493,6 +11706,11 @@ public final class Clickhouse {
       return securityGroups_;
     }
     /**
+     * <pre>
+     * List of security groups that the transfer associated with this endpoint should
+     * use
+     * </pre>
+     *
      * <code>repeated string security_groups = 51;</code>
      * @return The count of securityGroups.
      */
@@ -10500,6 +11718,11 @@ public final class Clickhouse {
       return securityGroups_.size();
     }
     /**
+     * <pre>
+     * List of security groups that the transfer associated with this endpoint should
+     * use
+     * </pre>
+     *
      * <code>repeated string security_groups = 51;</code>
      * @param index The index of the element to return.
      * @return The securityGroups at the given index.
@@ -10508,6 +11731,11 @@ public final class Clickhouse {
       return securityGroups_.get(index);
     }
     /**
+     * <pre>
+     * List of security groups that the transfer associated with this endpoint should
+     * use
+     * </pre>
+     *
      * <code>repeated string security_groups = 51;</code>
      * @param index The index of the value to return.
      * @return The bytes of the securityGroups at the given index.
@@ -10766,6 +11994,10 @@ public final class Clickhouse {
       return builder;
     }
     /**
+     * <pre>
+     * Settings specific to the ClickHouse target endpoint
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget}
      */
     public static final class Builder extends
@@ -11025,6 +12257,10 @@ public final class Clickhouse {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnection, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnectionOrBuilder> connectionBuilder_;
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 2;</code>
        * @return Whether the connection field is set.
        */
@@ -11032,6 +12268,10 @@ public final class Clickhouse {
         return connectionBuilder_ != null || connection_ != null;
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 2;</code>
        * @return The connection.
        */
@@ -11043,6 +12283,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 2;</code>
        */
       public Builder setConnection(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnection value) {
@@ -11059,6 +12303,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 2;</code>
        */
       public Builder setConnection(
@@ -11073,6 +12321,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 2;</code>
        */
       public Builder mergeConnection(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnection value) {
@@ -11091,6 +12343,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 2;</code>
        */
       public Builder clearConnection() {
@@ -11105,6 +12361,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 2;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnection.Builder getConnectionBuilder() {
@@ -11113,6 +12373,10 @@ public final class Clickhouse {
         return getConnectionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 2;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnectionOrBuilder getConnectionOrBuilder() {
@@ -11124,6 +12388,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Connection settings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseConnection connection = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -11142,6 +12410,12 @@ public final class Clickhouse {
 
       private java.lang.Object subnetId_ = "";
       /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database.
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
        * <code>string subnet_id = 12;</code>
        * @return The subnetId.
        */
@@ -11158,6 +12432,12 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database.
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
        * <code>string subnet_id = 12;</code>
        * @return The bytes for subnetId.
        */
@@ -11175,6 +12455,12 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database.
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
        * <code>string subnet_id = 12;</code>
        * @param value The subnetId to set.
        * @return This builder for chaining.
@@ -11190,6 +12476,12 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database.
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
        * <code>string subnet_id = 12;</code>
        * @return This builder for chaining.
        */
@@ -11200,6 +12492,12 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database.
+       * If omitted, the server has to be accessible via Internet
+       * </pre>
+       *
        * <code>string subnet_id = 12;</code>
        * @param value The bytes for subnetId to set.
        * @return This builder for chaining.
@@ -11230,7 +12528,7 @@ public final class Clickhouse {
 
       /**
        * <pre>
-       * Alternative table names in target
+       * Table renaming rules in target
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -11244,7 +12542,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Alternative table names in target
+       * Table renaming rules in target
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -11258,7 +12556,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Alternative table names in target
+       * Table renaming rules in target
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -11272,7 +12570,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Alternative table names in target
+       * Table renaming rules in target
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -11293,7 +12591,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Alternative table names in target
+       * Table renaming rules in target
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -11311,7 +12609,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Alternative table names in target
+       * Table renaming rules in target
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -11331,7 +12629,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Alternative table names in target
+       * Table renaming rules in target
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -11352,7 +12650,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Alternative table names in target
+       * Table renaming rules in target
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -11370,7 +12668,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Alternative table names in target
+       * Table renaming rules in target
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -11388,7 +12686,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Alternative table names in target
+       * Table renaming rules in target
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -11407,7 +12705,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Alternative table names in target
+       * Table renaming rules in target
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -11424,7 +12722,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Alternative table names in target
+       * Table renaming rules in target
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -11441,7 +12739,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Alternative table names in target
+       * Table renaming rules in target
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -11452,7 +12750,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Alternative table names in target
+       * Table renaming rules in target
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -11466,7 +12764,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Alternative table names in target
+       * Table renaming rules in target
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -11481,7 +12779,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Alternative table names in target
+       * Table renaming rules in target
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -11492,7 +12790,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Alternative table names in target
+       * Table renaming rules in target
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -11504,7 +12802,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Alternative table names in target
+       * Table renaming rules in target
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.AltName alt_names = 17;</code>
@@ -11530,6 +12828,11 @@ public final class Clickhouse {
 
       private int cleanupPolicy_ = 0;
       /**
+       * <pre>
+       * How to clean collections when activating the transfer. One of
+       * `CLICKHOUSE_CLEANUP_POLICY_DISABLED` or `CLICKHOUSE_CLEANUP_POLICY_DROP`
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
        * @return The enum numeric value on the wire for cleanupPolicy.
        */
@@ -11537,6 +12840,11 @@ public final class Clickhouse {
         return cleanupPolicy_;
       }
       /**
+       * <pre>
+       * How to clean collections when activating the transfer. One of
+       * `CLICKHOUSE_CLEANUP_POLICY_DISABLED` or `CLICKHOUSE_CLEANUP_POLICY_DROP`
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
        * @param value The enum numeric value on the wire for cleanupPolicy to set.
        * @return This builder for chaining.
@@ -11548,6 +12856,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * How to clean collections when activating the transfer. One of
+       * `CLICKHOUSE_CLEANUP_POLICY_DISABLED` or `CLICKHOUSE_CLEANUP_POLICY_DROP`
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
        * @return The cleanupPolicy.
        */
@@ -11558,6 +12871,11 @@ public final class Clickhouse {
         return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * How to clean collections when activating the transfer. One of
+       * `CLICKHOUSE_CLEANUP_POLICY_DISABLED` or `CLICKHOUSE_CLEANUP_POLICY_DROP`
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
        * @param value The cleanupPolicy to set.
        * @return This builder for chaining.
@@ -11572,6 +12890,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * How to clean collections when activating the transfer. One of
+       * `CLICKHOUSE_CLEANUP_POLICY_DISABLED` or `CLICKHOUSE_CLEANUP_POLICY_DROP`
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
        * @return This builder for chaining.
        */
@@ -11586,6 +12909,10 @@ public final class Clickhouse {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseShardingOrBuilder> shardingBuilder_;
       /**
+       * <pre>
+       * Shard selection rules for the data being transferred
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding sharding = 22;</code>
        * @return Whether the sharding field is set.
        */
@@ -11593,6 +12920,10 @@ public final class Clickhouse {
         return shardingBuilder_ != null || sharding_ != null;
       }
       /**
+       * <pre>
+       * Shard selection rules for the data being transferred
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding sharding = 22;</code>
        * @return The sharding.
        */
@@ -11604,6 +12935,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Shard selection rules for the data being transferred
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding sharding = 22;</code>
        */
       public Builder setSharding(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding value) {
@@ -11620,6 +12955,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Shard selection rules for the data being transferred
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding sharding = 22;</code>
        */
       public Builder setSharding(
@@ -11634,6 +12973,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Shard selection rules for the data being transferred
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding sharding = 22;</code>
        */
       public Builder mergeSharding(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding value) {
@@ -11652,6 +12995,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Shard selection rules for the data being transferred
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding sharding = 22;</code>
        */
       public Builder clearSharding() {
@@ -11666,6 +13013,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Shard selection rules for the data being transferred
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding sharding = 22;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.Builder getShardingBuilder() {
@@ -11674,6 +13025,10 @@ public final class Clickhouse {
         return getShardingFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Shard selection rules for the data being transferred
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding sharding = 22;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseShardingOrBuilder getShardingOrBuilder() {
@@ -11685,6 +13040,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Shard selection rules for the data being transferred
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding sharding = 22;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -11703,6 +13062,10 @@ public final class Clickhouse {
 
       private boolean isSchemaMigrationDisabled_ ;
       /**
+       * <pre>
+       * Whether can change table schema if schema changed on source
+       * </pre>
+       *
        * <code>bool is_schema_migration_disabled = 35;</code>
        * @return The isSchemaMigrationDisabled.
        */
@@ -11711,6 +13074,10 @@ public final class Clickhouse {
         return isSchemaMigrationDisabled_;
       }
       /**
+       * <pre>
+       * Whether can change table schema if schema changed on source
+       * </pre>
+       *
        * <code>bool is_schema_migration_disabled = 35;</code>
        * @param value The isSchemaMigrationDisabled to set.
        * @return This builder for chaining.
@@ -11722,6 +13089,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Whether can change table schema if schema changed on source
+       * </pre>
+       *
        * <code>bool is_schema_migration_disabled = 35;</code>
        * @return This builder for chaining.
        */
@@ -11736,7 +13107,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
-       * ShardGroup.
+       * ShardGroup or managed cluster ID by default.
        * </pre>
        *
        * <code>string clickhouse_cluster_name = 50;</code>
@@ -11757,7 +13128,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
-       * ShardGroup.
+       * ShardGroup or managed cluster ID by default.
        * </pre>
        *
        * <code>string clickhouse_cluster_name = 50;</code>
@@ -11779,7 +13150,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
-       * ShardGroup.
+       * ShardGroup or managed cluster ID by default.
        * </pre>
        *
        * <code>string clickhouse_cluster_name = 50;</code>
@@ -11799,7 +13170,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
-       * ShardGroup.
+       * ShardGroup or managed cluster ID by default.
        * </pre>
        *
        * <code>string clickhouse_cluster_name = 50;</code>
@@ -11814,7 +13185,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
-       * ShardGroup.
+       * ShardGroup or managed cluster ID by default.
        * </pre>
        *
        * <code>string clickhouse_cluster_name = 50;</code>
@@ -11841,6 +13212,11 @@ public final class Clickhouse {
          }
       }
       /**
+       * <pre>
+       * List of security groups that the transfer associated with this endpoint should
+       * use
+       * </pre>
+       *
        * <code>repeated string security_groups = 51;</code>
        * @return A list containing the securityGroups.
        */
@@ -11849,6 +13225,11 @@ public final class Clickhouse {
         return securityGroups_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of security groups that the transfer associated with this endpoint should
+       * use
+       * </pre>
+       *
        * <code>repeated string security_groups = 51;</code>
        * @return The count of securityGroups.
        */
@@ -11856,6 +13237,11 @@ public final class Clickhouse {
         return securityGroups_.size();
       }
       /**
+       * <pre>
+       * List of security groups that the transfer associated with this endpoint should
+       * use
+       * </pre>
+       *
        * <code>repeated string security_groups = 51;</code>
        * @param index The index of the element to return.
        * @return The securityGroups at the given index.
@@ -11864,6 +13250,11 @@ public final class Clickhouse {
         return securityGroups_.get(index);
       }
       /**
+       * <pre>
+       * List of security groups that the transfer associated with this endpoint should
+       * use
+       * </pre>
+       *
        * <code>repeated string security_groups = 51;</code>
        * @param index The index of the value to return.
        * @return The bytes of the securityGroups at the given index.
@@ -11873,6 +13264,11 @@ public final class Clickhouse {
         return securityGroups_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of security groups that the transfer associated with this endpoint should
+       * use
+       * </pre>
+       *
        * <code>repeated string security_groups = 51;</code>
        * @param index The index to set the value at.
        * @param value The securityGroups to set.
@@ -11889,6 +13285,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * List of security groups that the transfer associated with this endpoint should
+       * use
+       * </pre>
+       *
        * <code>repeated string security_groups = 51;</code>
        * @param value The securityGroups to add.
        * @return This builder for chaining.
@@ -11904,6 +13305,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * List of security groups that the transfer associated with this endpoint should
+       * use
+       * </pre>
+       *
        * <code>repeated string security_groups = 51;</code>
        * @param values The securityGroups to add.
        * @return This builder for chaining.
@@ -11917,6 +13323,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * List of security groups that the transfer associated with this endpoint should
+       * use
+       * </pre>
+       *
        * <code>repeated string security_groups = 51;</code>
        * @return This builder for chaining.
        */
@@ -11927,6 +13338,11 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * List of security groups that the transfer associated with this endpoint should
+       * use
+       * </pre>
+       *
        * <code>repeated string security_groups = 51;</code>
        * @param value The bytes of the securityGroups to add.
        * @return This builder for chaining.

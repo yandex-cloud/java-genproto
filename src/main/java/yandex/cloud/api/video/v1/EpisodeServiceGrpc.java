@@ -489,6 +489,8 @@ public final class EpisodeServiceGrpc {
      * Retrieves the manifest URLs for the episode's media content.
      * Manifests provide players with necessary information
      * for streaming the content with different quality levels and formats.
+     * Manifests and its url MUST not be cached.
+     * The player MUST request a fresh manifest every time playback starts.
      * </pre>
      */
     public void getManifests(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest request,
@@ -705,6 +707,8 @@ public final class EpisodeServiceGrpc {
      * Retrieves the manifest URLs for the episode's media content.
      * Manifests provide players with necessary information
      * for streaming the content with different quality levels and formats.
+     * Manifests and its url MUST not be cached.
+     * The player MUST request a fresh manifest every time playback starts.
      * </pre>
      */
     public void getManifests(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest request,
@@ -838,6 +842,8 @@ public final class EpisodeServiceGrpc {
      * Retrieves the manifest URLs for the episode's media content.
      * Manifests provide players with necessary information
      * for streaming the content with different quality levels and formats.
+     * Manifests and its url MUST not be cached.
+     * The player MUST request a fresh manifest every time playback starts.
      * </pre>
      */
     public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsResponse getManifests(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest request) {
@@ -979,6 +985,8 @@ public final class EpisodeServiceGrpc {
      * Retrieves the manifest URLs for the episode's media content.
      * Manifests provide players with necessary information
      * for streaming the content with different quality levels and formats.
+     * Manifests and its url MUST not be cached.
+     * The player MUST request a fresh manifest every time playback starts.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsResponse> getManifests(

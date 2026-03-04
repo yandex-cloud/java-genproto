@@ -2011,6 +2011,33 @@ public final class ResourceOuterClass {
      */
     com.google.protobuf.ByteString
         getProviderCnameBytes();
+
+    /**
+     * <pre>
+     * TLS configuration for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS tls = 16;</code>
+     * @return Whether the tls field is set.
+     */
+    boolean hasTls();
+    /**
+     * <pre>
+     * TLS configuration for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS tls = 16;</code>
+     * @return The tls.
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS getTls();
+    /**
+     * <pre>
+     * TLS configuration for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS tls = 16;</code>
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.TLSOrBuilder getTlsOrBuilder();
   }
   /**
    * <pre>
@@ -2194,6 +2221,19 @@ public final class ResourceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               providerCname_ = s;
+              break;
+            }
+            case 130: {
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Builder subBuilder = null;
+              if (tls_ != null) {
+                subBuilder = tls_.toBuilder();
+              }
+              tls_ = input.readMessage(yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tls_);
+                tls_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -2878,6 +2918,44 @@ public final class ResourceOuterClass {
       }
     }
 
+    public static final int TLS_FIELD_NUMBER = 16;
+    private yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS tls_;
+    /**
+     * <pre>
+     * TLS configuration for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS tls = 16;</code>
+     * @return Whether the tls field is set.
+     */
+    @java.lang.Override
+    public boolean hasTls() {
+      return tls_ != null;
+    }
+    /**
+     * <pre>
+     * TLS configuration for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS tls = 16;</code>
+     * @return The tls.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS getTls() {
+      return tls_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.getDefaultInstance() : tls_;
+    }
+    /**
+     * <pre>
+     * TLS configuration for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS tls = 16;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLSOrBuilder getTlsOrBuilder() {
+      return getTls();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2939,6 +3017,9 @@ public final class ResourceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerCname_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 15, providerCname_);
+      }
+      if (tls_ != null) {
+        output.writeMessage(16, getTls());
       }
       unknownFields.writeTo(output);
     }
@@ -3013,6 +3094,10 @@ public final class ResourceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerCname_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, providerCname_);
       }
+      if (tls_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getTls());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3069,6 +3154,11 @@ public final class ResourceOuterClass {
           .equals(other.getProviderType())) return false;
       if (!getProviderCname()
           .equals(other.getProviderCname())) return false;
+      if (hasTls() != other.hasTls()) return false;
+      if (hasTls()) {
+        if (!getTls()
+            .equals(other.getTls())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3124,6 +3214,10 @@ public final class ResourceOuterClass {
       hash = (53 * hash) + getProviderType().hashCode();
       hash = (37 * hash) + PROVIDER_CNAME_FIELD_NUMBER;
       hash = (53 * hash) + getProviderCname().hashCode();
+      if (hasTls()) {
+        hash = (37 * hash) + TLS_FIELD_NUMBER;
+        hash = (53 * hash) + getTls().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3328,6 +3422,12 @@ public final class ResourceOuterClass {
 
         providerCname_ = "";
 
+        if (tlsBuilder_ == null) {
+          tls_ = null;
+        } else {
+          tls_ = null;
+          tlsBuilder_ = null;
+        }
         return this;
       }
 
@@ -3391,6 +3491,11 @@ public final class ResourceOuterClass {
         result.labels_.makeImmutable();
         result.providerType_ = providerType_;
         result.providerCname_ = providerCname_;
+        if (tlsBuilder_ == null) {
+          result.tls_ = tls_;
+        } else {
+          result.tls_ = tlsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -3495,6 +3600,9 @@ public final class ResourceOuterClass {
         if (!other.getProviderCname().isEmpty()) {
           providerCname_ = other.providerCname_;
           onChanged();
+        }
+        if (other.hasTls()) {
+          mergeTls(other.getTls());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5192,6 +5300,161 @@ public final class ResourceOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS tls_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS, yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.TLSOrBuilder> tlsBuilder_;
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 16;</code>
+       * @return Whether the tls field is set.
+       */
+      public boolean hasTls() {
+        return tlsBuilder_ != null || tls_ != null;
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 16;</code>
+       * @return The tls.
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS getTls() {
+        if (tlsBuilder_ == null) {
+          return tls_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.getDefaultInstance() : tls_;
+        } else {
+          return tlsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 16;</code>
+       */
+      public Builder setTls(yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS value) {
+        if (tlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tls_ = value;
+          onChanged();
+        } else {
+          tlsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 16;</code>
+       */
+      public Builder setTls(
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Builder builderForValue) {
+        if (tlsBuilder_ == null) {
+          tls_ = builderForValue.build();
+          onChanged();
+        } else {
+          tlsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 16;</code>
+       */
+      public Builder mergeTls(yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS value) {
+        if (tlsBuilder_ == null) {
+          if (tls_ != null) {
+            tls_ =
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.newBuilder(tls_).mergeFrom(value).buildPartial();
+          } else {
+            tls_ = value;
+          }
+          onChanged();
+        } else {
+          tlsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 16;</code>
+       */
+      public Builder clearTls() {
+        if (tlsBuilder_ == null) {
+          tls_ = null;
+          onChanged();
+        } else {
+          tls_ = null;
+          tlsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 16;</code>
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Builder getTlsBuilder() {
+        
+        onChanged();
+        return getTlsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 16;</code>
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLSOrBuilder getTlsOrBuilder() {
+        if (tlsBuilder_ != null) {
+          return tlsBuilder_.getMessageOrBuilder();
+        } else {
+          return tls_ == null ?
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.getDefaultInstance() : tls_;
+        }
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS, yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.TLSOrBuilder> 
+          getTlsFieldBuilder() {
+        if (tlsBuilder_ == null) {
+          tlsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS, yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.TLSOrBuilder>(
+                  getTls(),
+                  getParentForChildren(),
+                  isClean());
+          tls_ = null;
+        }
+        return tlsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5872,6 +6135,177 @@ public final class ResourceOuterClass {
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.IPAddressACLOption ip_address_acl = 21;</code>
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.IPAddressACLOptionOrBuilder getIpAddressAclOrBuilder();
+
+    /**
+     * <pre>
+     * Manage the state of the Redirection from origin option.
+     * If the source returns a redirect, the option lets CDN pull the requested content from the source that was returned in the redirect.
+     * This option works only when origin shielding is activated.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption follow_redirects = 22;</code>
+     * @return Whether the followRedirects field is set.
+     */
+    boolean hasFollowRedirects();
+    /**
+     * <pre>
+     * Manage the state of the Redirection from origin option.
+     * If the source returns a redirect, the option lets CDN pull the requested content from the source that was returned in the redirect.
+     * This option works only when origin shielding is activated.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption follow_redirects = 22;</code>
+     * @return The followRedirects.
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption getFollowRedirects();
+    /**
+     * <pre>
+     * Manage the state of the Redirection from origin option.
+     * If the source returns a redirect, the option lets CDN pull the requested content from the source that was returned in the redirect.
+     * This option works only when origin shielding is activated.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption follow_redirects = 22;</code>
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOptionOrBuilder getFollowRedirectsOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration for WebSocket protocol support.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption websockets = 23;</code>
+     * @return Whether the websockets field is set.
+     */
+    boolean hasWebsockets();
+    /**
+     * <pre>
+     * Configuration for WebSocket protocol support.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption websockets = 23;</code>
+     * @return The websockets.
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption getWebsockets();
+    /**
+     * <pre>
+     * Configuration for WebSocket protocol support.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption websockets = 23;</code>
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOptionOrBuilder getWebsocketsOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration for HTTP response header filtering.
+     * This feature allows controlling which headers from the origin are passed to end users.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption header_filter = 24;</code>
+     * @return Whether the headerFilter field is set.
+     */
+    boolean hasHeaderFilter();
+    /**
+     * <pre>
+     * Configuration for HTTP response header filtering.
+     * This feature allows controlling which headers from the origin are passed to end users.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption header_filter = 24;</code>
+     * @return The headerFilter.
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption getHeaderFilter();
+    /**
+     * <pre>
+     * Configuration for HTTP response header filtering.
+     * This feature allows controlling which headers from the origin are passed to end users.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption header_filter = 24;</code>
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOptionOrBuilder getHeaderFilterOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration for geographic access control.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption geo_acl = 25;</code>
+     * @return Whether the geoAcl field is set.
+     */
+    boolean hasGeoAcl();
+    /**
+     * <pre>
+     * Configuration for geographic access control.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption geo_acl = 25;</code>
+     * @return The geoAcl.
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption getGeoAcl();
+    /**
+     * <pre>
+     * Configuration for geographic access control.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption geo_acl = 25;</code>
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOptionOrBuilder getGeoAclOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration for referrer-based access control.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption referrer_acl = 26;</code>
+     * @return Whether the referrerAcl field is set.
+     */
+    boolean hasReferrerAcl();
+    /**
+     * <pre>
+     * Configuration for referrer-based access control.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption referrer_acl = 26;</code>
+     * @return The referrerAcl.
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption getReferrerAcl();
+    /**
+     * <pre>
+     * Configuration for referrer-based access control.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption referrer_acl = 26;</code>
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOptionOrBuilder getReferrerAclOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration for serving a static HTTP response instead of fetching from origin.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption static_response = 27;</code>
+     * @return Whether the staticResponse field is set.
+     */
+    boolean hasStaticResponse();
+    /**
+     * <pre>
+     * Configuration for serving a static HTTP response instead of fetching from origin.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption static_response = 27;</code>
+     * @return The staticResponse.
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption getStaticResponse();
+    /**
+     * <pre>
+     * Configuration for serving a static HTTP response instead of fetching from origin.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption static_response = 27;</code>
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOptionOrBuilder getStaticResponseOrBuilder();
   }
   /**
    * <pre>
@@ -6191,6 +6625,84 @@ public final class ResourceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(ipAddressAcl_);
                 ipAddressAcl_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 178: {
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption.Builder subBuilder = null;
+              if (followRedirects_ != null) {
+                subBuilder = followRedirects_.toBuilder();
+              }
+              followRedirects_ = input.readMessage(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(followRedirects_);
+                followRedirects_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 186: {
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption.Builder subBuilder = null;
+              if (websockets_ != null) {
+                subBuilder = websockets_.toBuilder();
+              }
+              websockets_ = input.readMessage(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(websockets_);
+                websockets_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 194: {
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption.Builder subBuilder = null;
+              if (headerFilter_ != null) {
+                subBuilder = headerFilter_.toBuilder();
+              }
+              headerFilter_ = input.readMessage(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(headerFilter_);
+                headerFilter_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 202: {
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.Builder subBuilder = null;
+              if (geoAcl_ != null) {
+                subBuilder = geoAcl_.toBuilder();
+              }
+              geoAcl_ = input.readMessage(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(geoAcl_);
+                geoAcl_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 210: {
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.Builder subBuilder = null;
+              if (referrerAcl_ != null) {
+                subBuilder = referrerAcl_.toBuilder();
+              }
+              referrerAcl_ = input.readMessage(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(referrerAcl_);
+                referrerAcl_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 218: {
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption.Builder subBuilder = null;
+              if (staticResponse_ != null) {
+                subBuilder = staticResponse_.toBuilder();
+              }
+              staticResponse_ = input.readMessage(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(staticResponse_);
+                staticResponse_ = subBuilder.buildPartial();
               }
 
               break;
@@ -15285,29 +15797,34 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
+       * Deprecated: Use of redirect_https_to_http is deprecated.
        * </pre>
        *
-       * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the redirectHttpsToHttp field is set.
        */
-      boolean hasRedirectHttpsToHttp();
+      @java.lang.Deprecated boolean hasRedirectHttpsToHttp();
       /**
        * <pre>
        * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
+       * Deprecated: Use of redirect_https_to_http is deprecated.
        * </pre>
        *
-       * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2 [deprecated = true];</code>
+       * @deprecated
        * @return The redirectHttpsToHttp.
        */
-      yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getRedirectHttpsToHttp();
+      @java.lang.Deprecated yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getRedirectHttpsToHttp();
       /**
        * <pre>
        * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
+       * Deprecated: Use of redirect_https_to_http is deprecated.
        * </pre>
        *
-       * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2 [deprecated = true];</code>
        */
-      yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getRedirectHttpsToHttpOrBuilder();
+      @java.lang.Deprecated yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getRedirectHttpsToHttpOrBuilder();
 
       public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RedirectOptions.RedirectVariantCase getRedirectVariantCase();
     }
@@ -15426,7 +15943,7 @@ public final class ResourceOuterClass {
           implements com.google.protobuf.Internal.EnumLite,
               com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         REDIRECT_HTTP_TO_HTTPS(1),
-        REDIRECT_HTTPS_TO_HTTP(2),
+        @java.lang.Deprecated REDIRECT_HTTPS_TO_HTTP(2),
         REDIRECTVARIANT_NOT_SET(0);
         private final int value;
         private RedirectVariantCase(int value) {
@@ -15508,25 +16025,29 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
+       * Deprecated: Use of redirect_https_to_http is deprecated.
        * </pre>
        *
-       * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the redirectHttpsToHttp field is set.
        */
       @java.lang.Override
-      public boolean hasRedirectHttpsToHttp() {
+      @java.lang.Deprecated public boolean hasRedirectHttpsToHttp() {
         return redirectVariantCase_ == 2;
       }
       /**
        * <pre>
        * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
+       * Deprecated: Use of redirect_https_to_http is deprecated.
        * </pre>
        *
-       * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2 [deprecated = true];</code>
+       * @deprecated
        * @return The redirectHttpsToHttp.
        */
       @java.lang.Override
-      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getRedirectHttpsToHttp() {
+      @java.lang.Deprecated public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getRedirectHttpsToHttp() {
         if (redirectVariantCase_ == 2) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption) redirectVariant_;
         }
@@ -15535,12 +16056,13 @@ public final class ResourceOuterClass {
       /**
        * <pre>
        * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
+       * Deprecated: Use of redirect_https_to_http is deprecated.
        * </pre>
        *
-       * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2 [deprecated = true];</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getRedirectHttpsToHttpOrBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getRedirectHttpsToHttpOrBuilder() {
         if (redirectVariantCase_ == 2) {
            return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption) redirectVariant_;
         }
@@ -16102,25 +16624,29 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
+         * Deprecated: Use of redirect_https_to_http is deprecated.
          * </pre>
          *
-         * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+         * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2 [deprecated = true];</code>
+         * @deprecated
          * @return Whether the redirectHttpsToHttp field is set.
          */
         @java.lang.Override
-        public boolean hasRedirectHttpsToHttp() {
+        @java.lang.Deprecated public boolean hasRedirectHttpsToHttp() {
           return redirectVariantCase_ == 2;
         }
         /**
          * <pre>
          * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
+         * Deprecated: Use of redirect_https_to_http is deprecated.
          * </pre>
          *
-         * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+         * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2 [deprecated = true];</code>
+         * @deprecated
          * @return The redirectHttpsToHttp.
          */
         @java.lang.Override
-        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getRedirectHttpsToHttp() {
+        @java.lang.Deprecated public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption getRedirectHttpsToHttp() {
           if (redirectHttpsToHttpBuilder_ == null) {
             if (redirectVariantCase_ == 2) {
               return (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption) redirectVariant_;
@@ -16136,11 +16662,12 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
+         * Deprecated: Use of redirect_https_to_http is deprecated.
          * </pre>
          *
-         * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+         * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2 [deprecated = true];</code>
          */
-        public Builder setRedirectHttpsToHttp(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption value) {
+        @java.lang.Deprecated public Builder setRedirectHttpsToHttp(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption value) {
           if (redirectHttpsToHttpBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -16156,11 +16683,12 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
+         * Deprecated: Use of redirect_https_to_http is deprecated.
          * </pre>
          *
-         * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+         * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2 [deprecated = true];</code>
          */
-        public Builder setRedirectHttpsToHttp(
+        @java.lang.Deprecated public Builder setRedirectHttpsToHttp(
             yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption.Builder builderForValue) {
           if (redirectHttpsToHttpBuilder_ == null) {
             redirectVariant_ = builderForValue.build();
@@ -16174,11 +16702,12 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
+         * Deprecated: Use of redirect_https_to_http is deprecated.
          * </pre>
          *
-         * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+         * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2 [deprecated = true];</code>
          */
-        public Builder mergeRedirectHttpsToHttp(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption value) {
+        @java.lang.Deprecated public Builder mergeRedirectHttpsToHttp(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption value) {
           if (redirectHttpsToHttpBuilder_ == null) {
             if (redirectVariantCase_ == 2 &&
                 redirectVariant_ != yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption.getDefaultInstance()) {
@@ -16200,11 +16729,12 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
+         * Deprecated: Use of redirect_https_to_http is deprecated.
          * </pre>
          *
-         * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+         * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2 [deprecated = true];</code>
          */
-        public Builder clearRedirectHttpsToHttp() {
+        @java.lang.Deprecated public Builder clearRedirectHttpsToHttp() {
           if (redirectHttpsToHttpBuilder_ == null) {
             if (redirectVariantCase_ == 2) {
               redirectVariantCase_ = 0;
@@ -16223,22 +16753,24 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
+         * Deprecated: Use of redirect_https_to_http is deprecated.
          * </pre>
          *
-         * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+         * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2 [deprecated = true];</code>
          */
-        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption.Builder getRedirectHttpsToHttpBuilder() {
+        @java.lang.Deprecated public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption.Builder getRedirectHttpsToHttpBuilder() {
           return getRedirectHttpsToHttpFieldBuilder().getBuilder();
         }
         /**
          * <pre>
          * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
+         * Deprecated: Use of redirect_https_to_http is deprecated.
          * </pre>
          *
-         * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+         * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2 [deprecated = true];</code>
          */
         @java.lang.Override
-        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getRedirectHttpsToHttpOrBuilder() {
+        @java.lang.Deprecated public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder getRedirectHttpsToHttpOrBuilder() {
           if ((redirectVariantCase_ == 2) && (redirectHttpsToHttpBuilder_ != null)) {
             return redirectHttpsToHttpBuilder_.getMessageOrBuilder();
           } else {
@@ -16251,9 +16783,10 @@ public final class ResourceOuterClass {
         /**
          * <pre>
          * Using [BoolOption]. Set up a redirect from HTTP to HTTPS.
+         * Deprecated: Use of redirect_https_to_http is deprecated.
          * </pre>
          *
-         * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2;</code>
+         * <code>.yandex.cloud.cdn.v1.ResourceOptions.BoolOption redirect_https_to_http = 2 [deprecated = true];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOptionOrBuilder> 
@@ -21542,6 +22075,5184 @@ public final class ResourceOuterClass {
 
     }
 
+    public interface FollowRedirectsOptionOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * True - the option is enabled and its [flag] is applied to the resource.
+       * False - the option is disabled and its default value of the [flag] is used for the resource.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      boolean getEnabled();
+
+      /**
+       * <pre>
+       * Add the redirect HTTP status codes that the source returns.
+       * </pre>
+       *
+       * <code>repeated int64 codes = 2;</code>
+       * @return A list containing the codes.
+       */
+      java.util.List<java.lang.Long> getCodesList();
+      /**
+       * <pre>
+       * Add the redirect HTTP status codes that the source returns.
+       * </pre>
+       *
+       * <code>repeated int64 codes = 2;</code>
+       * @return The count of codes.
+       */
+      int getCodesCount();
+      /**
+       * <pre>
+       * Add the redirect HTTP status codes that the source returns.
+       * </pre>
+       *
+       * <code>repeated int64 codes = 2;</code>
+       * @param index The index of the element to return.
+       * @return The codes at the given index.
+       */
+      long getCodes(int index);
+
+      /**
+       * <pre>
+       * Use the redirect target domain as a Host header, or leave it the same as the value of the Change Host header option.
+       * </pre>
+       *
+       * <code>bool use_custom_host = 3;</code>
+       * @return The useCustomHost.
+       */
+      boolean getUseCustomHost();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption}
+     */
+    public static final class FollowRedirectsOption extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption)
+        FollowRedirectsOptionOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use FollowRedirectsOption.newBuilder() to construct.
+      private FollowRedirectsOption(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private FollowRedirectsOption() {
+        codes_ = emptyLongList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new FollowRedirectsOption();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private FollowRedirectsOption(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                enabled_ = input.readBool();
+                break;
+              }
+              case 16: {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  codes_ = newLongList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                codes_.addLong(input.readInt64());
+                break;
+              }
+              case 18: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                  codes_ = newLongList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                while (input.getBytesUntilLimit() > 0) {
+                  codes_.addLong(input.readInt64());
+                }
+                input.popLimit(limit);
+                break;
+              }
+              case 24: {
+
+                useCustomHost_ = input.readBool();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            codes_.makeImmutable(); // C
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_FollowRedirectsOption_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_FollowRedirectsOption_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption.class, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption.Builder.class);
+      }
+
+      public static final int ENABLED_FIELD_NUMBER = 1;
+      private boolean enabled_;
+      /**
+       * <pre>
+       * True - the option is enabled and its [flag] is applied to the resource.
+       * False - the option is disabled and its default value of the [flag] is used for the resource.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+
+      public static final int CODES_FIELD_NUMBER = 2;
+      private com.google.protobuf.Internal.LongList codes_;
+      /**
+       * <pre>
+       * Add the redirect HTTP status codes that the source returns.
+       * </pre>
+       *
+       * <code>repeated int64 codes = 2;</code>
+       * @return A list containing the codes.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.Long>
+          getCodesList() {
+        return codes_;
+      }
+      /**
+       * <pre>
+       * Add the redirect HTTP status codes that the source returns.
+       * </pre>
+       *
+       * <code>repeated int64 codes = 2;</code>
+       * @return The count of codes.
+       */
+      public int getCodesCount() {
+        return codes_.size();
+      }
+      /**
+       * <pre>
+       * Add the redirect HTTP status codes that the source returns.
+       * </pre>
+       *
+       * <code>repeated int64 codes = 2;</code>
+       * @param index The index of the element to return.
+       * @return The codes at the given index.
+       */
+      public long getCodes(int index) {
+        return codes_.getLong(index);
+      }
+      private int codesMemoizedSerializedSize = -1;
+
+      public static final int USE_CUSTOM_HOST_FIELD_NUMBER = 3;
+      private boolean useCustomHost_;
+      /**
+       * <pre>
+       * Use the redirect target domain as a Host header, or leave it the same as the value of the Change Host header option.
+       * </pre>
+       *
+       * <code>bool use_custom_host = 3;</code>
+       * @return The useCustomHost.
+       */
+      @java.lang.Override
+      public boolean getUseCustomHost() {
+        return useCustomHost_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (enabled_ != false) {
+          output.writeBool(1, enabled_);
+        }
+        if (getCodesList().size() > 0) {
+          output.writeUInt32NoTag(18);
+          output.writeUInt32NoTag(codesMemoizedSerializedSize);
+        }
+        for (int i = 0; i < codes_.size(); i++) {
+          output.writeInt64NoTag(codes_.getLong(i));
+        }
+        if (useCustomHost_ != false) {
+          output.writeBool(3, useCustomHost_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (enabled_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, enabled_);
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < codes_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeInt64SizeNoTag(codes_.getLong(i));
+          }
+          size += dataSize;
+          if (!getCodesList().isEmpty()) {
+            size += 1;
+            size += com.google.protobuf.CodedOutputStream
+                .computeInt32SizeNoTag(dataSize);
+          }
+          codesMemoizedSerializedSize = dataSize;
+        }
+        if (useCustomHost_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(3, useCustomHost_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption) obj;
+
+        if (getEnabled()
+            != other.getEnabled()) return false;
+        if (!getCodesList()
+            .equals(other.getCodesList())) return false;
+        if (getUseCustomHost()
+            != other.getUseCustomHost()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnabled());
+        if (getCodesCount() > 0) {
+          hash = (37 * hash) + CODES_FIELD_NUMBER;
+          hash = (53 * hash) + getCodesList().hashCode();
+        }
+        hash = (37 * hash) + USE_CUSTOM_HOST_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getUseCustomHost());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption)
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOptionOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_FollowRedirectsOption_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_FollowRedirectsOption_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption.class, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          enabled_ = false;
+
+          codes_ = emptyLongList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          useCustomHost_ = false;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_FollowRedirectsOption_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption getDefaultInstanceForType() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption build() {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption buildPartial() {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption result = new yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption(this);
+          int from_bitField0_ = bitField0_;
+          result.enabled_ = enabled_;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            codes_.makeImmutable();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.codes_ = codes_;
+          result.useCustomHost_ = useCustomHost_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption) {
+            return mergeFrom((yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption other) {
+          if (other == yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption.getDefaultInstance()) return this;
+          if (other.getEnabled() != false) {
+            setEnabled(other.getEnabled());
+          }
+          if (!other.codes_.isEmpty()) {
+            if (codes_.isEmpty()) {
+              codes_ = other.codes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCodesIsMutable();
+              codes_.addAll(other.codes_);
+            }
+            onChanged();
+          }
+          if (other.getUseCustomHost() != false) {
+            setUseCustomHost(other.getUseCustomHost());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private boolean enabled_ ;
+        /**
+         * <pre>
+         * True - the option is enabled and its [flag] is applied to the resource.
+         * False - the option is disabled and its default value of the [flag] is used for the resource.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @return The enabled.
+         */
+        @java.lang.Override
+        public boolean getEnabled() {
+          return enabled_;
+        }
+        /**
+         * <pre>
+         * True - the option is enabled and its [flag] is applied to the resource.
+         * False - the option is disabled and its default value of the [flag] is used for the resource.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @param value The enabled to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEnabled(boolean value) {
+          
+          enabled_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * True - the option is enabled and its [flag] is applied to the resource.
+         * False - the option is disabled and its default value of the [flag] is used for the resource.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEnabled() {
+          
+          enabled_ = false;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.Internal.LongList codes_ = emptyLongList();
+        private void ensureCodesIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            codes_ = mutableCopy(codes_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <pre>
+         * Add the redirect HTTP status codes that the source returns.
+         * </pre>
+         *
+         * <code>repeated int64 codes = 2;</code>
+         * @return A list containing the codes.
+         */
+        public java.util.List<java.lang.Long>
+            getCodesList() {
+          return ((bitField0_ & 0x00000001) != 0) ?
+                   java.util.Collections.unmodifiableList(codes_) : codes_;
+        }
+        /**
+         * <pre>
+         * Add the redirect HTTP status codes that the source returns.
+         * </pre>
+         *
+         * <code>repeated int64 codes = 2;</code>
+         * @return The count of codes.
+         */
+        public int getCodesCount() {
+          return codes_.size();
+        }
+        /**
+         * <pre>
+         * Add the redirect HTTP status codes that the source returns.
+         * </pre>
+         *
+         * <code>repeated int64 codes = 2;</code>
+         * @param index The index of the element to return.
+         * @return The codes at the given index.
+         */
+        public long getCodes(int index) {
+          return codes_.getLong(index);
+        }
+        /**
+         * <pre>
+         * Add the redirect HTTP status codes that the source returns.
+         * </pre>
+         *
+         * <code>repeated int64 codes = 2;</code>
+         * @param index The index to set the value at.
+         * @param value The codes to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCodes(
+            int index, long value) {
+          ensureCodesIsMutable();
+          codes_.setLong(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Add the redirect HTTP status codes that the source returns.
+         * </pre>
+         *
+         * <code>repeated int64 codes = 2;</code>
+         * @param value The codes to add.
+         * @return This builder for chaining.
+         */
+        public Builder addCodes(long value) {
+          ensureCodesIsMutable();
+          codes_.addLong(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Add the redirect HTTP status codes that the source returns.
+         * </pre>
+         *
+         * <code>repeated int64 codes = 2;</code>
+         * @param values The codes to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllCodes(
+            java.lang.Iterable<? extends java.lang.Long> values) {
+          ensureCodesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, codes_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Add the redirect HTTP status codes that the source returns.
+         * </pre>
+         *
+         * <code>repeated int64 codes = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCodes() {
+          codes_ = emptyLongList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+
+        private boolean useCustomHost_ ;
+        /**
+         * <pre>
+         * Use the redirect target domain as a Host header, or leave it the same as the value of the Change Host header option.
+         * </pre>
+         *
+         * <code>bool use_custom_host = 3;</code>
+         * @return The useCustomHost.
+         */
+        @java.lang.Override
+        public boolean getUseCustomHost() {
+          return useCustomHost_;
+        }
+        /**
+         * <pre>
+         * Use the redirect target domain as a Host header, or leave it the same as the value of the Change Host header option.
+         * </pre>
+         *
+         * <code>bool use_custom_host = 3;</code>
+         * @param value The useCustomHost to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUseCustomHost(boolean value) {
+          
+          useCustomHost_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Use the redirect target domain as a Host header, or leave it the same as the value of the Change Host header option.
+         * </pre>
+         *
+         * <code>bool use_custom_host = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUseCustomHost() {
+          
+          useCustomHost_ = false;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption)
+      private static final yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption();
+      }
+
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<FollowRedirectsOption>
+          PARSER = new com.google.protobuf.AbstractParser<FollowRedirectsOption>() {
+        @java.lang.Override
+        public FollowRedirectsOption parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new FollowRedirectsOption(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<FollowRedirectsOption> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<FollowRedirectsOption> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface WebsocketsOptionOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Enables or disables feature.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      boolean getEnabled();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption}
+     */
+    public static final class WebsocketsOption extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption)
+        WebsocketsOptionOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use WebsocketsOption.newBuilder() to construct.
+      private WebsocketsOption(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private WebsocketsOption() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new WebsocketsOption();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private WebsocketsOption(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                enabled_ = input.readBool();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_WebsocketsOption_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_WebsocketsOption_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption.class, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption.Builder.class);
+      }
+
+      public static final int ENABLED_FIELD_NUMBER = 1;
+      private boolean enabled_;
+      /**
+       * <pre>
+       * Enables or disables feature.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (enabled_ != false) {
+          output.writeBool(1, enabled_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (enabled_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, enabled_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption) obj;
+
+        if (getEnabled()
+            != other.getEnabled()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnabled());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption)
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOptionOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_WebsocketsOption_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_WebsocketsOption_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption.class, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          enabled_ = false;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_WebsocketsOption_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption getDefaultInstanceForType() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption build() {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption buildPartial() {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption result = new yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption(this);
+          result.enabled_ = enabled_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption) {
+            return mergeFrom((yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption other) {
+          if (other == yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption.getDefaultInstance()) return this;
+          if (other.getEnabled() != false) {
+            setEnabled(other.getEnabled());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private boolean enabled_ ;
+        /**
+         * <pre>
+         * Enables or disables feature.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @return The enabled.
+         */
+        @java.lang.Override
+        public boolean getEnabled() {
+          return enabled_;
+        }
+        /**
+         * <pre>
+         * Enables or disables feature.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @param value The enabled to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEnabled(boolean value) {
+          
+          enabled_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables or disables feature.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEnabled() {
+          
+          enabled_ = false;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption)
+      private static final yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption();
+      }
+
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<WebsocketsOption>
+          PARSER = new com.google.protobuf.AbstractParser<WebsocketsOption>() {
+        @java.lang.Override
+        public WebsocketsOption parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new WebsocketsOption(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<WebsocketsOption> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<WebsocketsOption> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface HeaderFilterOptionOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Enables or disables feature.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      boolean getEnabled();
+
+      /**
+       * <pre>
+       * Whitelist of headers.
+       * </pre>
+       *
+       * <code>repeated string headers = 2;</code>
+       * @return A list containing the headers.
+       */
+      java.util.List<java.lang.String>
+          getHeadersList();
+      /**
+       * <pre>
+       * Whitelist of headers.
+       * </pre>
+       *
+       * <code>repeated string headers = 2;</code>
+       * @return The count of headers.
+       */
+      int getHeadersCount();
+      /**
+       * <pre>
+       * Whitelist of headers.
+       * </pre>
+       *
+       * <code>repeated string headers = 2;</code>
+       * @param index The index of the element to return.
+       * @return The headers at the given index.
+       */
+      java.lang.String getHeaders(int index);
+      /**
+       * <pre>
+       * Whitelist of headers.
+       * </pre>
+       *
+       * <code>repeated string headers = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the headers at the given index.
+       */
+      com.google.protobuf.ByteString
+          getHeadersBytes(int index);
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption}
+     */
+    public static final class HeaderFilterOption extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption)
+        HeaderFilterOptionOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use HeaderFilterOption.newBuilder() to construct.
+      private HeaderFilterOption(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private HeaderFilterOption() {
+        headers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new HeaderFilterOption();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private HeaderFilterOption(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                enabled_ = input.readBool();
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  headers_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                headers_.add(s);
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            headers_ = headers_.getUnmodifiableView();
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_HeaderFilterOption_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_HeaderFilterOption_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption.class, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption.Builder.class);
+      }
+
+      public static final int ENABLED_FIELD_NUMBER = 1;
+      private boolean enabled_;
+      /**
+       * <pre>
+       * Enables or disables feature.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+
+      public static final int HEADERS_FIELD_NUMBER = 2;
+      private com.google.protobuf.LazyStringList headers_;
+      /**
+       * <pre>
+       * Whitelist of headers.
+       * </pre>
+       *
+       * <code>repeated string headers = 2;</code>
+       * @return A list containing the headers.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getHeadersList() {
+        return headers_;
+      }
+      /**
+       * <pre>
+       * Whitelist of headers.
+       * </pre>
+       *
+       * <code>repeated string headers = 2;</code>
+       * @return The count of headers.
+       */
+      public int getHeadersCount() {
+        return headers_.size();
+      }
+      /**
+       * <pre>
+       * Whitelist of headers.
+       * </pre>
+       *
+       * <code>repeated string headers = 2;</code>
+       * @param index The index of the element to return.
+       * @return The headers at the given index.
+       */
+      public java.lang.String getHeaders(int index) {
+        return headers_.get(index);
+      }
+      /**
+       * <pre>
+       * Whitelist of headers.
+       * </pre>
+       *
+       * <code>repeated string headers = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the headers at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getHeadersBytes(int index) {
+        return headers_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (enabled_ != false) {
+          output.writeBool(1, enabled_);
+        }
+        for (int i = 0; i < headers_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, headers_.getRaw(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (enabled_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, enabled_);
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < headers_.size(); i++) {
+            dataSize += computeStringSizeNoTag(headers_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getHeadersList().size();
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption) obj;
+
+        if (getEnabled()
+            != other.getEnabled()) return false;
+        if (!getHeadersList()
+            .equals(other.getHeadersList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnabled());
+        if (getHeadersCount() > 0) {
+          hash = (37 * hash) + HEADERS_FIELD_NUMBER;
+          hash = (53 * hash) + getHeadersList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption)
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOptionOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_HeaderFilterOption_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_HeaderFilterOption_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption.class, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          enabled_ = false;
+
+          headers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_HeaderFilterOption_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption getDefaultInstanceForType() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption build() {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption buildPartial() {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption result = new yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption(this);
+          int from_bitField0_ = bitField0_;
+          result.enabled_ = enabled_;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            headers_ = headers_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.headers_ = headers_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption) {
+            return mergeFrom((yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption other) {
+          if (other == yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption.getDefaultInstance()) return this;
+          if (other.getEnabled() != false) {
+            setEnabled(other.getEnabled());
+          }
+          if (!other.headers_.isEmpty()) {
+            if (headers_.isEmpty()) {
+              headers_ = other.headers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureHeadersIsMutable();
+              headers_.addAll(other.headers_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private boolean enabled_ ;
+        /**
+         * <pre>
+         * Enables or disables feature.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @return The enabled.
+         */
+        @java.lang.Override
+        public boolean getEnabled() {
+          return enabled_;
+        }
+        /**
+         * <pre>
+         * Enables or disables feature.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @param value The enabled to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEnabled(boolean value) {
+          
+          enabled_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables or disables feature.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEnabled() {
+          
+          enabled_ = false;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.LazyStringList headers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureHeadersIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            headers_ = new com.google.protobuf.LazyStringArrayList(headers_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <pre>
+         * Whitelist of headers.
+         * </pre>
+         *
+         * <code>repeated string headers = 2;</code>
+         * @return A list containing the headers.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getHeadersList() {
+          return headers_.getUnmodifiableView();
+        }
+        /**
+         * <pre>
+         * Whitelist of headers.
+         * </pre>
+         *
+         * <code>repeated string headers = 2;</code>
+         * @return The count of headers.
+         */
+        public int getHeadersCount() {
+          return headers_.size();
+        }
+        /**
+         * <pre>
+         * Whitelist of headers.
+         * </pre>
+         *
+         * <code>repeated string headers = 2;</code>
+         * @param index The index of the element to return.
+         * @return The headers at the given index.
+         */
+        public java.lang.String getHeaders(int index) {
+          return headers_.get(index);
+        }
+        /**
+         * <pre>
+         * Whitelist of headers.
+         * </pre>
+         *
+         * <code>repeated string headers = 2;</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the headers at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getHeadersBytes(int index) {
+          return headers_.getByteString(index);
+        }
+        /**
+         * <pre>
+         * Whitelist of headers.
+         * </pre>
+         *
+         * <code>repeated string headers = 2;</code>
+         * @param index The index to set the value at.
+         * @param value The headers to set.
+         * @return This builder for chaining.
+         */
+        public Builder setHeaders(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHeadersIsMutable();
+          headers_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Whitelist of headers.
+         * </pre>
+         *
+         * <code>repeated string headers = 2;</code>
+         * @param value The headers to add.
+         * @return This builder for chaining.
+         */
+        public Builder addHeaders(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHeadersIsMutable();
+          headers_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Whitelist of headers.
+         * </pre>
+         *
+         * <code>repeated string headers = 2;</code>
+         * @param values The headers to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllHeaders(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureHeadersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, headers_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Whitelist of headers.
+         * </pre>
+         *
+         * <code>repeated string headers = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearHeaders() {
+          headers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Whitelist of headers.
+         * </pre>
+         *
+         * <code>repeated string headers = 2;</code>
+         * @param value The bytes of the headers to add.
+         * @return This builder for chaining.
+         */
+        public Builder addHeadersBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureHeadersIsMutable();
+          headers_.add(value);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption)
+      private static final yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption();
+      }
+
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<HeaderFilterOption>
+          PARSER = new com.google.protobuf.AbstractParser<HeaderFilterOption>() {
+        @java.lang.Override
+        public HeaderFilterOption parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new HeaderFilterOption(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<HeaderFilterOption> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<HeaderFilterOption> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface GeoACLOptionOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Enables or disables the Geo ACL option.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      boolean getEnabled();
+
+      /**
+       * <pre>
+       * Mode of the Geo ACL.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption.Mode mode = 2;</code>
+       * @return The enum numeric value on the wire for mode.
+       */
+      int getModeValue();
+      /**
+       * <pre>
+       * Mode of the Geo ACL.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption.Mode mode = 2;</code>
+       * @return The mode.
+       */
+      yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.Mode getMode();
+
+      /**
+       * <pre>
+       * List of country codes (ISO 3166, uppercase).
+       * </pre>
+       *
+       * <code>repeated string countries = 3;</code>
+       * @return A list containing the countries.
+       */
+      java.util.List<java.lang.String>
+          getCountriesList();
+      /**
+       * <pre>
+       * List of country codes (ISO 3166, uppercase).
+       * </pre>
+       *
+       * <code>repeated string countries = 3;</code>
+       * @return The count of countries.
+       */
+      int getCountriesCount();
+      /**
+       * <pre>
+       * List of country codes (ISO 3166, uppercase).
+       * </pre>
+       *
+       * <code>repeated string countries = 3;</code>
+       * @param index The index of the element to return.
+       * @return The countries at the given index.
+       */
+      java.lang.String getCountries(int index);
+      /**
+       * <pre>
+       * List of country codes (ISO 3166, uppercase).
+       * </pre>
+       *
+       * <code>repeated string countries = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the countries at the given index.
+       */
+      com.google.protobuf.ByteString
+          getCountriesBytes(int index);
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption}
+     */
+    public static final class GeoACLOption extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption)
+        GeoACLOptionOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use GeoACLOption.newBuilder() to construct.
+      private GeoACLOption(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private GeoACLOption() {
+        mode_ = 0;
+        countries_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new GeoACLOption();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private GeoACLOption(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                enabled_ = input.readBool();
+                break;
+              }
+              case 16: {
+                int rawValue = input.readEnum();
+
+                mode_ = rawValue;
+                break;
+              }
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  countries_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                countries_.add(s);
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            countries_ = countries_.getUnmodifiableView();
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_GeoACLOption_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_GeoACLOption_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.class, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.Builder.class);
+      }
+
+      /**
+       * Protobuf enum {@code yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption.Mode}
+       */
+      public enum Mode
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>MODE_UNSPECIFIED = 0;</code>
+         */
+        MODE_UNSPECIFIED(0),
+        /**
+         * <pre>
+         * Allow access to all specified countries.
+         * </pre>
+         *
+         * <code>MODE_ALLOW = 1;</code>
+         */
+        MODE_ALLOW(1),
+        /**
+         * <pre>
+         * Deny access to all specified countries.
+         * </pre>
+         *
+         * <code>MODE_DENY = 2;</code>
+         */
+        MODE_DENY(2),
+        UNRECOGNIZED(-1),
+        ;
+
+        /**
+         * <code>MODE_UNSPECIFIED = 0;</code>
+         */
+        public static final int MODE_UNSPECIFIED_VALUE = 0;
+        /**
+         * <pre>
+         * Allow access to all specified countries.
+         * </pre>
+         *
+         * <code>MODE_ALLOW = 1;</code>
+         */
+        public static final int MODE_ALLOW_VALUE = 1;
+        /**
+         * <pre>
+         * Deny access to all specified countries.
+         * </pre>
+         *
+         * <code>MODE_DENY = 2;</code>
+         */
+        public static final int MODE_DENY_VALUE = 2;
+
+
+        public final int getNumber() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalArgumentException(
+                "Can't get the number of an unknown enum value.");
+          }
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static Mode valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static Mode forNumber(int value) {
+          switch (value) {
+            case 0: return MODE_UNSPECIFIED;
+            case 1: return MODE_ALLOW;
+            case 2: return MODE_DENY;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<Mode>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            Mode> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<Mode>() {
+                public Mode findValueByNumber(int number) {
+                  return Mode.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalStateException(
+                "Can't get the descriptor of an unrecognized enum value.");
+          }
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.getDescriptor().getEnumTypes().get(0);
+        }
+
+        private static final Mode[] VALUES = values();
+
+        public static Mode valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          if (desc.getIndex() == -1) {
+            return UNRECOGNIZED;
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private Mode(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption.Mode)
+      }
+
+      public static final int ENABLED_FIELD_NUMBER = 1;
+      private boolean enabled_;
+      /**
+       * <pre>
+       * Enables or disables the Geo ACL option.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+
+      public static final int MODE_FIELD_NUMBER = 2;
+      private int mode_;
+      /**
+       * <pre>
+       * Mode of the Geo ACL.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption.Mode mode = 2;</code>
+       * @return The enum numeric value on the wire for mode.
+       */
+      @java.lang.Override public int getModeValue() {
+        return mode_;
+      }
+      /**
+       * <pre>
+       * Mode of the Geo ACL.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption.Mode mode = 2;</code>
+       * @return The mode.
+       */
+      @java.lang.Override public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.Mode getMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.Mode result = yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.Mode.valueOf(mode_);
+        return result == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.Mode.UNRECOGNIZED : result;
+      }
+
+      public static final int COUNTRIES_FIELD_NUMBER = 3;
+      private com.google.protobuf.LazyStringList countries_;
+      /**
+       * <pre>
+       * List of country codes (ISO 3166, uppercase).
+       * </pre>
+       *
+       * <code>repeated string countries = 3;</code>
+       * @return A list containing the countries.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getCountriesList() {
+        return countries_;
+      }
+      /**
+       * <pre>
+       * List of country codes (ISO 3166, uppercase).
+       * </pre>
+       *
+       * <code>repeated string countries = 3;</code>
+       * @return The count of countries.
+       */
+      public int getCountriesCount() {
+        return countries_.size();
+      }
+      /**
+       * <pre>
+       * List of country codes (ISO 3166, uppercase).
+       * </pre>
+       *
+       * <code>repeated string countries = 3;</code>
+       * @param index The index of the element to return.
+       * @return The countries at the given index.
+       */
+      public java.lang.String getCountries(int index) {
+        return countries_.get(index);
+      }
+      /**
+       * <pre>
+       * List of country codes (ISO 3166, uppercase).
+       * </pre>
+       *
+       * <code>repeated string countries = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the countries at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getCountriesBytes(int index) {
+        return countries_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (enabled_ != false) {
+          output.writeBool(1, enabled_);
+        }
+        if (mode_ != yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.Mode.MODE_UNSPECIFIED.getNumber()) {
+          output.writeEnum(2, mode_);
+        }
+        for (int i = 0; i < countries_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, countries_.getRaw(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (enabled_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, enabled_);
+        }
+        if (mode_ != yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.Mode.MODE_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(2, mode_);
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < countries_.size(); i++) {
+            dataSize += computeStringSizeNoTag(countries_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getCountriesList().size();
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption) obj;
+
+        if (getEnabled()
+            != other.getEnabled()) return false;
+        if (mode_ != other.mode_) return false;
+        if (!getCountriesList()
+            .equals(other.getCountriesList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnabled());
+        hash = (37 * hash) + MODE_FIELD_NUMBER;
+        hash = (53 * hash) + mode_;
+        if (getCountriesCount() > 0) {
+          hash = (37 * hash) + COUNTRIES_FIELD_NUMBER;
+          hash = (53 * hash) + getCountriesList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption)
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOptionOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_GeoACLOption_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_GeoACLOption_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.class, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          enabled_ = false;
+
+          mode_ = 0;
+
+          countries_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_GeoACLOption_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption getDefaultInstanceForType() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption build() {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption buildPartial() {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption result = new yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption(this);
+          int from_bitField0_ = bitField0_;
+          result.enabled_ = enabled_;
+          result.mode_ = mode_;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            countries_ = countries_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.countries_ = countries_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption) {
+            return mergeFrom((yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption other) {
+          if (other == yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.getDefaultInstance()) return this;
+          if (other.getEnabled() != false) {
+            setEnabled(other.getEnabled());
+          }
+          if (other.mode_ != 0) {
+            setModeValue(other.getModeValue());
+          }
+          if (!other.countries_.isEmpty()) {
+            if (countries_.isEmpty()) {
+              countries_ = other.countries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCountriesIsMutable();
+              countries_.addAll(other.countries_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private boolean enabled_ ;
+        /**
+         * <pre>
+         * Enables or disables the Geo ACL option.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @return The enabled.
+         */
+        @java.lang.Override
+        public boolean getEnabled() {
+          return enabled_;
+        }
+        /**
+         * <pre>
+         * Enables or disables the Geo ACL option.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @param value The enabled to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEnabled(boolean value) {
+          
+          enabled_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables or disables the Geo ACL option.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEnabled() {
+          
+          enabled_ = false;
+          onChanged();
+          return this;
+        }
+
+        private int mode_ = 0;
+        /**
+         * <pre>
+         * Mode of the Geo ACL.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption.Mode mode = 2;</code>
+         * @return The enum numeric value on the wire for mode.
+         */
+        @java.lang.Override public int getModeValue() {
+          return mode_;
+        }
+        /**
+         * <pre>
+         * Mode of the Geo ACL.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption.Mode mode = 2;</code>
+         * @param value The enum numeric value on the wire for mode to set.
+         * @return This builder for chaining.
+         */
+        public Builder setModeValue(int value) {
+          
+          mode_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Mode of the Geo ACL.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption.Mode mode = 2;</code>
+         * @return The mode.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.Mode getMode() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.Mode result = yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.Mode.valueOf(mode_);
+          return result == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.Mode.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * Mode of the Geo ACL.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption.Mode mode = 2;</code>
+         * @param value The mode to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMode(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.Mode value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          mode_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Mode of the Geo ACL.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption.Mode mode = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMode() {
+          
+          mode_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.LazyStringList countries_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureCountriesIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            countries_ = new com.google.protobuf.LazyStringArrayList(countries_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <pre>
+         * List of country codes (ISO 3166, uppercase).
+         * </pre>
+         *
+         * <code>repeated string countries = 3;</code>
+         * @return A list containing the countries.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getCountriesList() {
+          return countries_.getUnmodifiableView();
+        }
+        /**
+         * <pre>
+         * List of country codes (ISO 3166, uppercase).
+         * </pre>
+         *
+         * <code>repeated string countries = 3;</code>
+         * @return The count of countries.
+         */
+        public int getCountriesCount() {
+          return countries_.size();
+        }
+        /**
+         * <pre>
+         * List of country codes (ISO 3166, uppercase).
+         * </pre>
+         *
+         * <code>repeated string countries = 3;</code>
+         * @param index The index of the element to return.
+         * @return The countries at the given index.
+         */
+        public java.lang.String getCountries(int index) {
+          return countries_.get(index);
+        }
+        /**
+         * <pre>
+         * List of country codes (ISO 3166, uppercase).
+         * </pre>
+         *
+         * <code>repeated string countries = 3;</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the countries at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getCountriesBytes(int index) {
+          return countries_.getByteString(index);
+        }
+        /**
+         * <pre>
+         * List of country codes (ISO 3166, uppercase).
+         * </pre>
+         *
+         * <code>repeated string countries = 3;</code>
+         * @param index The index to set the value at.
+         * @param value The countries to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCountries(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCountriesIsMutable();
+          countries_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * List of country codes (ISO 3166, uppercase).
+         * </pre>
+         *
+         * <code>repeated string countries = 3;</code>
+         * @param value The countries to add.
+         * @return This builder for chaining.
+         */
+        public Builder addCountries(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCountriesIsMutable();
+          countries_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * List of country codes (ISO 3166, uppercase).
+         * </pre>
+         *
+         * <code>repeated string countries = 3;</code>
+         * @param values The countries to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllCountries(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureCountriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, countries_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * List of country codes (ISO 3166, uppercase).
+         * </pre>
+         *
+         * <code>repeated string countries = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCountries() {
+          countries_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * List of country codes (ISO 3166, uppercase).
+         * </pre>
+         *
+         * <code>repeated string countries = 3;</code>
+         * @param value The bytes of the countries to add.
+         * @return This builder for chaining.
+         */
+        public Builder addCountriesBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureCountriesIsMutable();
+          countries_.add(value);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption)
+      private static final yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption();
+      }
+
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<GeoACLOption>
+          PARSER = new com.google.protobuf.AbstractParser<GeoACLOption>() {
+        @java.lang.Override
+        public GeoACLOption parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new GeoACLOption(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<GeoACLOption> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<GeoACLOption> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface ReferrerACLOptionOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Enables or disables feature.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      boolean getEnabled();
+
+      /**
+       * <pre>
+       * Access mode for the referrer list.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption.Mode mode = 2;</code>
+       * @return The enum numeric value on the wire for mode.
+       */
+      int getModeValue();
+      /**
+       * <pre>
+       * Access mode for the referrer list.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption.Mode mode = 2;</code>
+       * @return The mode.
+       */
+      yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.Mode getMode();
+
+      /**
+       * <pre>
+       * List of referer patterns. Supports three types of values:
+       * 1. Domain without scheme with or without query, e.g. "google.com", "ya.ru/abc"
+       * 2. Wildcard pattern with dot separator, e.g. "*.hello.com", "staging.*"
+       *    Note: dot must be present before or after `*` (so "*abc.com" is NOT valid)
+       * 3. Regular expression starting with `~`, e.g. "~^prod&#92;..*&#92;.company.org/abc"
+       * </pre>
+       *
+       * <code>repeated string referrers = 3;</code>
+       * @return A list containing the referrers.
+       */
+      java.util.List<java.lang.String>
+          getReferrersList();
+      /**
+       * <pre>
+       * List of referer patterns. Supports three types of values:
+       * 1. Domain without scheme with or without query, e.g. "google.com", "ya.ru/abc"
+       * 2. Wildcard pattern with dot separator, e.g. "*.hello.com", "staging.*"
+       *    Note: dot must be present before or after `*` (so "*abc.com" is NOT valid)
+       * 3. Regular expression starting with `~`, e.g. "~^prod&#92;..*&#92;.company.org/abc"
+       * </pre>
+       *
+       * <code>repeated string referrers = 3;</code>
+       * @return The count of referrers.
+       */
+      int getReferrersCount();
+      /**
+       * <pre>
+       * List of referer patterns. Supports three types of values:
+       * 1. Domain without scheme with or without query, e.g. "google.com", "ya.ru/abc"
+       * 2. Wildcard pattern with dot separator, e.g. "*.hello.com", "staging.*"
+       *    Note: dot must be present before or after `*` (so "*abc.com" is NOT valid)
+       * 3. Regular expression starting with `~`, e.g. "~^prod&#92;..*&#92;.company.org/abc"
+       * </pre>
+       *
+       * <code>repeated string referrers = 3;</code>
+       * @param index The index of the element to return.
+       * @return The referrers at the given index.
+       */
+      java.lang.String getReferrers(int index);
+      /**
+       * <pre>
+       * List of referer patterns. Supports three types of values:
+       * 1. Domain without scheme with or without query, e.g. "google.com", "ya.ru/abc"
+       * 2. Wildcard pattern with dot separator, e.g. "*.hello.com", "staging.*"
+       *    Note: dot must be present before or after `*` (so "*abc.com" is NOT valid)
+       * 3. Regular expression starting with `~`, e.g. "~^prod&#92;..*&#92;.company.org/abc"
+       * </pre>
+       *
+       * <code>repeated string referrers = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the referrers at the given index.
+       */
+      com.google.protobuf.ByteString
+          getReferrersBytes(int index);
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption}
+     */
+    public static final class ReferrerACLOption extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption)
+        ReferrerACLOptionOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ReferrerACLOption.newBuilder() to construct.
+      private ReferrerACLOption(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ReferrerACLOption() {
+        mode_ = 0;
+        referrers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ReferrerACLOption();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ReferrerACLOption(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                enabled_ = input.readBool();
+                break;
+              }
+              case 16: {
+                int rawValue = input.readEnum();
+
+                mode_ = rawValue;
+                break;
+              }
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  referrers_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                referrers_.add(s);
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            referrers_ = referrers_.getUnmodifiableView();
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_ReferrerACLOption_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_ReferrerACLOption_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.class, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.Builder.class);
+      }
+
+      /**
+       * Protobuf enum {@code yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption.Mode}
+       */
+      public enum Mode
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>MODE_UNSPECIFIED = 0;</code>
+         */
+        MODE_UNSPECIFIED(0),
+        /**
+         * <pre>
+         * Allow access to all specified referrers.
+         * </pre>
+         *
+         * <code>MODE_ALLOW = 1;</code>
+         */
+        MODE_ALLOW(1),
+        /**
+         * <pre>
+         * Deny access to all specified referrers.
+         * </pre>
+         *
+         * <code>MODE_DENY = 2;</code>
+         */
+        MODE_DENY(2),
+        UNRECOGNIZED(-1),
+        ;
+
+        /**
+         * <code>MODE_UNSPECIFIED = 0;</code>
+         */
+        public static final int MODE_UNSPECIFIED_VALUE = 0;
+        /**
+         * <pre>
+         * Allow access to all specified referrers.
+         * </pre>
+         *
+         * <code>MODE_ALLOW = 1;</code>
+         */
+        public static final int MODE_ALLOW_VALUE = 1;
+        /**
+         * <pre>
+         * Deny access to all specified referrers.
+         * </pre>
+         *
+         * <code>MODE_DENY = 2;</code>
+         */
+        public static final int MODE_DENY_VALUE = 2;
+
+
+        public final int getNumber() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalArgumentException(
+                "Can't get the number of an unknown enum value.");
+          }
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static Mode valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static Mode forNumber(int value) {
+          switch (value) {
+            case 0: return MODE_UNSPECIFIED;
+            case 1: return MODE_ALLOW;
+            case 2: return MODE_DENY;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<Mode>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            Mode> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<Mode>() {
+                public Mode findValueByNumber(int number) {
+                  return Mode.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalStateException(
+                "Can't get the descriptor of an unrecognized enum value.");
+          }
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.getDescriptor().getEnumTypes().get(0);
+        }
+
+        private static final Mode[] VALUES = values();
+
+        public static Mode valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          if (desc.getIndex() == -1) {
+            return UNRECOGNIZED;
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private Mode(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption.Mode)
+      }
+
+      public static final int ENABLED_FIELD_NUMBER = 1;
+      private boolean enabled_;
+      /**
+       * <pre>
+       * Enables or disables feature.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+
+      public static final int MODE_FIELD_NUMBER = 2;
+      private int mode_;
+      /**
+       * <pre>
+       * Access mode for the referrer list.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption.Mode mode = 2;</code>
+       * @return The enum numeric value on the wire for mode.
+       */
+      @java.lang.Override public int getModeValue() {
+        return mode_;
+      }
+      /**
+       * <pre>
+       * Access mode for the referrer list.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption.Mode mode = 2;</code>
+       * @return The mode.
+       */
+      @java.lang.Override public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.Mode getMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.Mode result = yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.Mode.valueOf(mode_);
+        return result == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.Mode.UNRECOGNIZED : result;
+      }
+
+      public static final int REFERRERS_FIELD_NUMBER = 3;
+      private com.google.protobuf.LazyStringList referrers_;
+      /**
+       * <pre>
+       * List of referer patterns. Supports three types of values:
+       * 1. Domain without scheme with or without query, e.g. "google.com", "ya.ru/abc"
+       * 2. Wildcard pattern with dot separator, e.g. "*.hello.com", "staging.*"
+       *    Note: dot must be present before or after `*` (so "*abc.com" is NOT valid)
+       * 3. Regular expression starting with `~`, e.g. "~^prod&#92;..*&#92;.company.org/abc"
+       * </pre>
+       *
+       * <code>repeated string referrers = 3;</code>
+       * @return A list containing the referrers.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getReferrersList() {
+        return referrers_;
+      }
+      /**
+       * <pre>
+       * List of referer patterns. Supports three types of values:
+       * 1. Domain without scheme with or without query, e.g. "google.com", "ya.ru/abc"
+       * 2. Wildcard pattern with dot separator, e.g. "*.hello.com", "staging.*"
+       *    Note: dot must be present before or after `*` (so "*abc.com" is NOT valid)
+       * 3. Regular expression starting with `~`, e.g. "~^prod&#92;..*&#92;.company.org/abc"
+       * </pre>
+       *
+       * <code>repeated string referrers = 3;</code>
+       * @return The count of referrers.
+       */
+      public int getReferrersCount() {
+        return referrers_.size();
+      }
+      /**
+       * <pre>
+       * List of referer patterns. Supports three types of values:
+       * 1. Domain without scheme with or without query, e.g. "google.com", "ya.ru/abc"
+       * 2. Wildcard pattern with dot separator, e.g. "*.hello.com", "staging.*"
+       *    Note: dot must be present before or after `*` (so "*abc.com" is NOT valid)
+       * 3. Regular expression starting with `~`, e.g. "~^prod&#92;..*&#92;.company.org/abc"
+       * </pre>
+       *
+       * <code>repeated string referrers = 3;</code>
+       * @param index The index of the element to return.
+       * @return The referrers at the given index.
+       */
+      public java.lang.String getReferrers(int index) {
+        return referrers_.get(index);
+      }
+      /**
+       * <pre>
+       * List of referer patterns. Supports three types of values:
+       * 1. Domain without scheme with or without query, e.g. "google.com", "ya.ru/abc"
+       * 2. Wildcard pattern with dot separator, e.g. "*.hello.com", "staging.*"
+       *    Note: dot must be present before or after `*` (so "*abc.com" is NOT valid)
+       * 3. Regular expression starting with `~`, e.g. "~^prod&#92;..*&#92;.company.org/abc"
+       * </pre>
+       *
+       * <code>repeated string referrers = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the referrers at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getReferrersBytes(int index) {
+        return referrers_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (enabled_ != false) {
+          output.writeBool(1, enabled_);
+        }
+        if (mode_ != yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.Mode.MODE_UNSPECIFIED.getNumber()) {
+          output.writeEnum(2, mode_);
+        }
+        for (int i = 0; i < referrers_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, referrers_.getRaw(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (enabled_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, enabled_);
+        }
+        if (mode_ != yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.Mode.MODE_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(2, mode_);
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < referrers_.size(); i++) {
+            dataSize += computeStringSizeNoTag(referrers_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getReferrersList().size();
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption) obj;
+
+        if (getEnabled()
+            != other.getEnabled()) return false;
+        if (mode_ != other.mode_) return false;
+        if (!getReferrersList()
+            .equals(other.getReferrersList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnabled());
+        hash = (37 * hash) + MODE_FIELD_NUMBER;
+        hash = (53 * hash) + mode_;
+        if (getReferrersCount() > 0) {
+          hash = (37 * hash) + REFERRERS_FIELD_NUMBER;
+          hash = (53 * hash) + getReferrersList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption)
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOptionOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_ReferrerACLOption_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_ReferrerACLOption_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.class, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          enabled_ = false;
+
+          mode_ = 0;
+
+          referrers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_ReferrerACLOption_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption getDefaultInstanceForType() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption build() {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption buildPartial() {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption result = new yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption(this);
+          int from_bitField0_ = bitField0_;
+          result.enabled_ = enabled_;
+          result.mode_ = mode_;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            referrers_ = referrers_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.referrers_ = referrers_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption) {
+            return mergeFrom((yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption other) {
+          if (other == yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.getDefaultInstance()) return this;
+          if (other.getEnabled() != false) {
+            setEnabled(other.getEnabled());
+          }
+          if (other.mode_ != 0) {
+            setModeValue(other.getModeValue());
+          }
+          if (!other.referrers_.isEmpty()) {
+            if (referrers_.isEmpty()) {
+              referrers_ = other.referrers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureReferrersIsMutable();
+              referrers_.addAll(other.referrers_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private boolean enabled_ ;
+        /**
+         * <pre>
+         * Enables or disables feature.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @return The enabled.
+         */
+        @java.lang.Override
+        public boolean getEnabled() {
+          return enabled_;
+        }
+        /**
+         * <pre>
+         * Enables or disables feature.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @param value The enabled to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEnabled(boolean value) {
+          
+          enabled_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables or disables feature.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEnabled() {
+          
+          enabled_ = false;
+          onChanged();
+          return this;
+        }
+
+        private int mode_ = 0;
+        /**
+         * <pre>
+         * Access mode for the referrer list.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption.Mode mode = 2;</code>
+         * @return The enum numeric value on the wire for mode.
+         */
+        @java.lang.Override public int getModeValue() {
+          return mode_;
+        }
+        /**
+         * <pre>
+         * Access mode for the referrer list.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption.Mode mode = 2;</code>
+         * @param value The enum numeric value on the wire for mode to set.
+         * @return This builder for chaining.
+         */
+        public Builder setModeValue(int value) {
+          
+          mode_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Access mode for the referrer list.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption.Mode mode = 2;</code>
+         * @return The mode.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.Mode getMode() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.Mode result = yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.Mode.valueOf(mode_);
+          return result == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.Mode.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * Access mode for the referrer list.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption.Mode mode = 2;</code>
+         * @param value The mode to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMode(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.Mode value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          mode_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Access mode for the referrer list.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption.Mode mode = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMode() {
+          
+          mode_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.LazyStringList referrers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureReferrersIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            referrers_ = new com.google.protobuf.LazyStringArrayList(referrers_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <pre>
+         * List of referer patterns. Supports three types of values:
+         * 1. Domain without scheme with or without query, e.g. "google.com", "ya.ru/abc"
+         * 2. Wildcard pattern with dot separator, e.g. "*.hello.com", "staging.*"
+         *    Note: dot must be present before or after `*` (so "*abc.com" is NOT valid)
+         * 3. Regular expression starting with `~`, e.g. "~^prod&#92;..*&#92;.company.org/abc"
+         * </pre>
+         *
+         * <code>repeated string referrers = 3;</code>
+         * @return A list containing the referrers.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getReferrersList() {
+          return referrers_.getUnmodifiableView();
+        }
+        /**
+         * <pre>
+         * List of referer patterns. Supports three types of values:
+         * 1. Domain without scheme with or without query, e.g. "google.com", "ya.ru/abc"
+         * 2. Wildcard pattern with dot separator, e.g. "*.hello.com", "staging.*"
+         *    Note: dot must be present before or after `*` (so "*abc.com" is NOT valid)
+         * 3. Regular expression starting with `~`, e.g. "~^prod&#92;..*&#92;.company.org/abc"
+         * </pre>
+         *
+         * <code>repeated string referrers = 3;</code>
+         * @return The count of referrers.
+         */
+        public int getReferrersCount() {
+          return referrers_.size();
+        }
+        /**
+         * <pre>
+         * List of referer patterns. Supports three types of values:
+         * 1. Domain without scheme with or without query, e.g. "google.com", "ya.ru/abc"
+         * 2. Wildcard pattern with dot separator, e.g. "*.hello.com", "staging.*"
+         *    Note: dot must be present before or after `*` (so "*abc.com" is NOT valid)
+         * 3. Regular expression starting with `~`, e.g. "~^prod&#92;..*&#92;.company.org/abc"
+         * </pre>
+         *
+         * <code>repeated string referrers = 3;</code>
+         * @param index The index of the element to return.
+         * @return The referrers at the given index.
+         */
+        public java.lang.String getReferrers(int index) {
+          return referrers_.get(index);
+        }
+        /**
+         * <pre>
+         * List of referer patterns. Supports three types of values:
+         * 1. Domain without scheme with or without query, e.g. "google.com", "ya.ru/abc"
+         * 2. Wildcard pattern with dot separator, e.g. "*.hello.com", "staging.*"
+         *    Note: dot must be present before or after `*` (so "*abc.com" is NOT valid)
+         * 3. Regular expression starting with `~`, e.g. "~^prod&#92;..*&#92;.company.org/abc"
+         * </pre>
+         *
+         * <code>repeated string referrers = 3;</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the referrers at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getReferrersBytes(int index) {
+          return referrers_.getByteString(index);
+        }
+        /**
+         * <pre>
+         * List of referer patterns. Supports three types of values:
+         * 1. Domain without scheme with or without query, e.g. "google.com", "ya.ru/abc"
+         * 2. Wildcard pattern with dot separator, e.g. "*.hello.com", "staging.*"
+         *    Note: dot must be present before or after `*` (so "*abc.com" is NOT valid)
+         * 3. Regular expression starting with `~`, e.g. "~^prod&#92;..*&#92;.company.org/abc"
+         * </pre>
+         *
+         * <code>repeated string referrers = 3;</code>
+         * @param index The index to set the value at.
+         * @param value The referrers to set.
+         * @return This builder for chaining.
+         */
+        public Builder setReferrers(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureReferrersIsMutable();
+          referrers_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * List of referer patterns. Supports three types of values:
+         * 1. Domain without scheme with or without query, e.g. "google.com", "ya.ru/abc"
+         * 2. Wildcard pattern with dot separator, e.g. "*.hello.com", "staging.*"
+         *    Note: dot must be present before or after `*` (so "*abc.com" is NOT valid)
+         * 3. Regular expression starting with `~`, e.g. "~^prod&#92;..*&#92;.company.org/abc"
+         * </pre>
+         *
+         * <code>repeated string referrers = 3;</code>
+         * @param value The referrers to add.
+         * @return This builder for chaining.
+         */
+        public Builder addReferrers(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureReferrersIsMutable();
+          referrers_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * List of referer patterns. Supports three types of values:
+         * 1. Domain without scheme with or without query, e.g. "google.com", "ya.ru/abc"
+         * 2. Wildcard pattern with dot separator, e.g. "*.hello.com", "staging.*"
+         *    Note: dot must be present before or after `*` (so "*abc.com" is NOT valid)
+         * 3. Regular expression starting with `~`, e.g. "~^prod&#92;..*&#92;.company.org/abc"
+         * </pre>
+         *
+         * <code>repeated string referrers = 3;</code>
+         * @param values The referrers to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllReferrers(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureReferrersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, referrers_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * List of referer patterns. Supports three types of values:
+         * 1. Domain without scheme with or without query, e.g. "google.com", "ya.ru/abc"
+         * 2. Wildcard pattern with dot separator, e.g. "*.hello.com", "staging.*"
+         *    Note: dot must be present before or after `*` (so "*abc.com" is NOT valid)
+         * 3. Regular expression starting with `~`, e.g. "~^prod&#92;..*&#92;.company.org/abc"
+         * </pre>
+         *
+         * <code>repeated string referrers = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearReferrers() {
+          referrers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * List of referer patterns. Supports three types of values:
+         * 1. Domain without scheme with or without query, e.g. "google.com", "ya.ru/abc"
+         * 2. Wildcard pattern with dot separator, e.g. "*.hello.com", "staging.*"
+         *    Note: dot must be present before or after `*` (so "*abc.com" is NOT valid)
+         * 3. Regular expression starting with `~`, e.g. "~^prod&#92;..*&#92;.company.org/abc"
+         * </pre>
+         *
+         * <code>repeated string referrers = 3;</code>
+         * @param value The bytes of the referrers to add.
+         * @return This builder for chaining.
+         */
+        public Builder addReferrersBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureReferrersIsMutable();
+          referrers_.add(value);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption)
+      private static final yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption();
+      }
+
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<ReferrerACLOption>
+          PARSER = new com.google.protobuf.AbstractParser<ReferrerACLOption>() {
+        @java.lang.Override
+        public ReferrerACLOption parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ReferrerACLOption(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ReferrerACLOption> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ReferrerACLOption> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface StaticResponseOptionOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Enables or disables feature.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      boolean getEnabled();
+
+      /**
+       * <pre>
+       * HTTP status code.
+       * </pre>
+       *
+       * <code>int64 code = 2;</code>
+       * @return The code.
+       */
+      long getCode();
+
+      /**
+       * <pre>
+       * A string containing the response content.
+       * For 3xx - Location header
+       * For other codes - body
+       * </pre>
+       *
+       * <code>string content = 3;</code>
+       * @return The content.
+       */
+      java.lang.String getContent();
+      /**
+       * <pre>
+       * A string containing the response content.
+       * For 3xx - Location header
+       * For other codes - body
+       * </pre>
+       *
+       * <code>string content = 3;</code>
+       * @return The bytes for content.
+       */
+      com.google.protobuf.ByteString
+          getContentBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption}
+     */
+    public static final class StaticResponseOption extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption)
+        StaticResponseOptionOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use StaticResponseOption.newBuilder() to construct.
+      private StaticResponseOption(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private StaticResponseOption() {
+        content_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new StaticResponseOption();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private StaticResponseOption(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                enabled_ = input.readBool();
+                break;
+              }
+              case 16: {
+
+                code_ = input.readInt64();
+                break;
+              }
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                content_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_StaticResponseOption_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_StaticResponseOption_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption.class, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption.Builder.class);
+      }
+
+      public static final int ENABLED_FIELD_NUMBER = 1;
+      private boolean enabled_;
+      /**
+       * <pre>
+       * Enables or disables feature.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+
+      public static final int CODE_FIELD_NUMBER = 2;
+      private long code_;
+      /**
+       * <pre>
+       * HTTP status code.
+       * </pre>
+       *
+       * <code>int64 code = 2;</code>
+       * @return The code.
+       */
+      @java.lang.Override
+      public long getCode() {
+        return code_;
+      }
+
+      public static final int CONTENT_FIELD_NUMBER = 3;
+      private volatile java.lang.Object content_;
+      /**
+       * <pre>
+       * A string containing the response content.
+       * For 3xx - Location header
+       * For other codes - body
+       * </pre>
+       *
+       * <code>string content = 3;</code>
+       * @return The content.
+       */
+      @java.lang.Override
+      public java.lang.String getContent() {
+        java.lang.Object ref = content_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          content_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * A string containing the response content.
+       * For 3xx - Location header
+       * For other codes - body
+       * </pre>
+       *
+       * <code>string content = 3;</code>
+       * @return The bytes for content.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getContentBytes() {
+        java.lang.Object ref = content_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          content_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (enabled_ != false) {
+          output.writeBool(1, enabled_);
+        }
+        if (code_ != 0L) {
+          output.writeInt64(2, code_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, content_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (enabled_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, enabled_);
+        }
+        if (code_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(2, code_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, content_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption) obj;
+
+        if (getEnabled()
+            != other.getEnabled()) return false;
+        if (getCode()
+            != other.getCode()) return false;
+        if (!getContent()
+            .equals(other.getContent())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnabled());
+        hash = (37 * hash) + CODE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getCode());
+        hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+        hash = (53 * hash) + getContent().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption)
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOptionOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_StaticResponseOption_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_StaticResponseOption_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption.class, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          enabled_ = false;
+
+          code_ = 0L;
+
+          content_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_StaticResponseOption_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption getDefaultInstanceForType() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption build() {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption buildPartial() {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption result = new yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption(this);
+          result.enabled_ = enabled_;
+          result.code_ = code_;
+          result.content_ = content_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption) {
+            return mergeFrom((yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption other) {
+          if (other == yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption.getDefaultInstance()) return this;
+          if (other.getEnabled() != false) {
+            setEnabled(other.getEnabled());
+          }
+          if (other.getCode() != 0L) {
+            setCode(other.getCode());
+          }
+          if (!other.getContent().isEmpty()) {
+            content_ = other.content_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private boolean enabled_ ;
+        /**
+         * <pre>
+         * Enables or disables feature.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @return The enabled.
+         */
+        @java.lang.Override
+        public boolean getEnabled() {
+          return enabled_;
+        }
+        /**
+         * <pre>
+         * Enables or disables feature.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @param value The enabled to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEnabled(boolean value) {
+          
+          enabled_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Enables or disables feature.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEnabled() {
+          
+          enabled_ = false;
+          onChanged();
+          return this;
+        }
+
+        private long code_ ;
+        /**
+         * <pre>
+         * HTTP status code.
+         * </pre>
+         *
+         * <code>int64 code = 2;</code>
+         * @return The code.
+         */
+        @java.lang.Override
+        public long getCode() {
+          return code_;
+        }
+        /**
+         * <pre>
+         * HTTP status code.
+         * </pre>
+         *
+         * <code>int64 code = 2;</code>
+         * @param value The code to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCode(long value) {
+          
+          code_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * HTTP status code.
+         * </pre>
+         *
+         * <code>int64 code = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCode() {
+          
+          code_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object content_ = "";
+        /**
+         * <pre>
+         * A string containing the response content.
+         * For 3xx - Location header
+         * For other codes - body
+         * </pre>
+         *
+         * <code>string content = 3;</code>
+         * @return The content.
+         */
+        public java.lang.String getContent() {
+          java.lang.Object ref = content_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            content_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * A string containing the response content.
+         * For 3xx - Location header
+         * For other codes - body
+         * </pre>
+         *
+         * <code>string content = 3;</code>
+         * @return The bytes for content.
+         */
+        public com.google.protobuf.ByteString
+            getContentBytes() {
+          java.lang.Object ref = content_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            content_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * A string containing the response content.
+         * For 3xx - Location header
+         * For other codes - body
+         * </pre>
+         *
+         * <code>string content = 3;</code>
+         * @param value The content to set.
+         * @return This builder for chaining.
+         */
+        public Builder setContent(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          content_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * A string containing the response content.
+         * For 3xx - Location header
+         * For other codes - body
+         * </pre>
+         *
+         * <code>string content = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearContent() {
+          
+          content_ = getDefaultInstance().getContent();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * A string containing the response content.
+         * For 3xx - Location header
+         * For other codes - body
+         * </pre>
+         *
+         * <code>string content = 3;</code>
+         * @param value The bytes for content to set.
+         * @return This builder for chaining.
+         */
+        public Builder setContentBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          content_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption)
+      private static final yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption();
+      }
+
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<StaticResponseOption>
+          PARSER = new com.google.protobuf.AbstractParser<StaticResponseOption>() {
+        @java.lang.Override
+        public StaticResponseOption parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new StaticResponseOption(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<StaticResponseOption> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<StaticResponseOption> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int DISABLE_CACHE_FIELD_NUMBER = 1;
     private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption disableCache_;
     /**
@@ -22397,6 +28108,243 @@ public final class ResourceOuterClass {
       return getIpAddressAcl();
     }
 
+    public static final int FOLLOW_REDIRECTS_FIELD_NUMBER = 22;
+    private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption followRedirects_;
+    /**
+     * <pre>
+     * Manage the state of the Redirection from origin option.
+     * If the source returns a redirect, the option lets CDN pull the requested content from the source that was returned in the redirect.
+     * This option works only when origin shielding is activated.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption follow_redirects = 22;</code>
+     * @return Whether the followRedirects field is set.
+     */
+    @java.lang.Override
+    public boolean hasFollowRedirects() {
+      return followRedirects_ != null;
+    }
+    /**
+     * <pre>
+     * Manage the state of the Redirection from origin option.
+     * If the source returns a redirect, the option lets CDN pull the requested content from the source that was returned in the redirect.
+     * This option works only when origin shielding is activated.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption follow_redirects = 22;</code>
+     * @return The followRedirects.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption getFollowRedirects() {
+      return followRedirects_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption.getDefaultInstance() : followRedirects_;
+    }
+    /**
+     * <pre>
+     * Manage the state of the Redirection from origin option.
+     * If the source returns a redirect, the option lets CDN pull the requested content from the source that was returned in the redirect.
+     * This option works only when origin shielding is activated.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption follow_redirects = 22;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOptionOrBuilder getFollowRedirectsOrBuilder() {
+      return getFollowRedirects();
+    }
+
+    public static final int WEBSOCKETS_FIELD_NUMBER = 23;
+    private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption websockets_;
+    /**
+     * <pre>
+     * Configuration for WebSocket protocol support.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption websockets = 23;</code>
+     * @return Whether the websockets field is set.
+     */
+    @java.lang.Override
+    public boolean hasWebsockets() {
+      return websockets_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for WebSocket protocol support.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption websockets = 23;</code>
+     * @return The websockets.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption getWebsockets() {
+      return websockets_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption.getDefaultInstance() : websockets_;
+    }
+    /**
+     * <pre>
+     * Configuration for WebSocket protocol support.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption websockets = 23;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOptionOrBuilder getWebsocketsOrBuilder() {
+      return getWebsockets();
+    }
+
+    public static final int HEADER_FILTER_FIELD_NUMBER = 24;
+    private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption headerFilter_;
+    /**
+     * <pre>
+     * Configuration for HTTP response header filtering.
+     * This feature allows controlling which headers from the origin are passed to end users.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption header_filter = 24;</code>
+     * @return Whether the headerFilter field is set.
+     */
+    @java.lang.Override
+    public boolean hasHeaderFilter() {
+      return headerFilter_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for HTTP response header filtering.
+     * This feature allows controlling which headers from the origin are passed to end users.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption header_filter = 24;</code>
+     * @return The headerFilter.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption getHeaderFilter() {
+      return headerFilter_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption.getDefaultInstance() : headerFilter_;
+    }
+    /**
+     * <pre>
+     * Configuration for HTTP response header filtering.
+     * This feature allows controlling which headers from the origin are passed to end users.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption header_filter = 24;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOptionOrBuilder getHeaderFilterOrBuilder() {
+      return getHeaderFilter();
+    }
+
+    public static final int GEO_ACL_FIELD_NUMBER = 25;
+    private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption geoAcl_;
+    /**
+     * <pre>
+     * Configuration for geographic access control.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption geo_acl = 25;</code>
+     * @return Whether the geoAcl field is set.
+     */
+    @java.lang.Override
+    public boolean hasGeoAcl() {
+      return geoAcl_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for geographic access control.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption geo_acl = 25;</code>
+     * @return The geoAcl.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption getGeoAcl() {
+      return geoAcl_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.getDefaultInstance() : geoAcl_;
+    }
+    /**
+     * <pre>
+     * Configuration for geographic access control.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption geo_acl = 25;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOptionOrBuilder getGeoAclOrBuilder() {
+      return getGeoAcl();
+    }
+
+    public static final int REFERRER_ACL_FIELD_NUMBER = 26;
+    private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption referrerAcl_;
+    /**
+     * <pre>
+     * Configuration for referrer-based access control.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption referrer_acl = 26;</code>
+     * @return Whether the referrerAcl field is set.
+     */
+    @java.lang.Override
+    public boolean hasReferrerAcl() {
+      return referrerAcl_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for referrer-based access control.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption referrer_acl = 26;</code>
+     * @return The referrerAcl.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption getReferrerAcl() {
+      return referrerAcl_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.getDefaultInstance() : referrerAcl_;
+    }
+    /**
+     * <pre>
+     * Configuration for referrer-based access control.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption referrer_acl = 26;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOptionOrBuilder getReferrerAclOrBuilder() {
+      return getReferrerAcl();
+    }
+
+    public static final int STATIC_RESPONSE_FIELD_NUMBER = 27;
+    private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption staticResponse_;
+    /**
+     * <pre>
+     * Configuration for serving a static HTTP response instead of fetching from origin.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption static_response = 27;</code>
+     * @return Whether the staticResponse field is set.
+     */
+    @java.lang.Override
+    public boolean hasStaticResponse() {
+      return staticResponse_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for serving a static HTTP response instead of fetching from origin.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption static_response = 27;</code>
+     * @return The staticResponse.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption getStaticResponse() {
+      return staticResponse_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption.getDefaultInstance() : staticResponse_;
+    }
+    /**
+     * <pre>
+     * Configuration for serving a static HTTP response instead of fetching from origin.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption static_response = 27;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOptionOrBuilder getStaticResponseOrBuilder() {
+      return getStaticResponse();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -22473,6 +28421,24 @@ public final class ResourceOuterClass {
       }
       if (ipAddressAcl_ != null) {
         output.writeMessage(21, getIpAddressAcl());
+      }
+      if (followRedirects_ != null) {
+        output.writeMessage(22, getFollowRedirects());
+      }
+      if (websockets_ != null) {
+        output.writeMessage(23, getWebsockets());
+      }
+      if (headerFilter_ != null) {
+        output.writeMessage(24, getHeaderFilter());
+      }
+      if (geoAcl_ != null) {
+        output.writeMessage(25, getGeoAcl());
+      }
+      if (referrerAcl_ != null) {
+        output.writeMessage(26, getReferrerAcl());
+      }
+      if (staticResponse_ != null) {
+        output.writeMessage(27, getStaticResponse());
       }
       unknownFields.writeTo(output);
     }
@@ -22566,6 +28532,30 @@ public final class ResourceOuterClass {
       if (ipAddressAcl_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(21, getIpAddressAcl());
+      }
+      if (followRedirects_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(22, getFollowRedirects());
+      }
+      if (websockets_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(23, getWebsockets());
+      }
+      if (headerFilter_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(24, getHeaderFilter());
+      }
+      if (geoAcl_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(25, getGeoAcl());
+      }
+      if (referrerAcl_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(26, getReferrerAcl());
+      }
+      if (staticResponse_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(27, getStaticResponse());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -22687,6 +28677,36 @@ public final class ResourceOuterClass {
         if (!getIpAddressAcl()
             .equals(other.getIpAddressAcl())) return false;
       }
+      if (hasFollowRedirects() != other.hasFollowRedirects()) return false;
+      if (hasFollowRedirects()) {
+        if (!getFollowRedirects()
+            .equals(other.getFollowRedirects())) return false;
+      }
+      if (hasWebsockets() != other.hasWebsockets()) return false;
+      if (hasWebsockets()) {
+        if (!getWebsockets()
+            .equals(other.getWebsockets())) return false;
+      }
+      if (hasHeaderFilter() != other.hasHeaderFilter()) return false;
+      if (hasHeaderFilter()) {
+        if (!getHeaderFilter()
+            .equals(other.getHeaderFilter())) return false;
+      }
+      if (hasGeoAcl() != other.hasGeoAcl()) return false;
+      if (hasGeoAcl()) {
+        if (!getGeoAcl()
+            .equals(other.getGeoAcl())) return false;
+      }
+      if (hasReferrerAcl() != other.hasReferrerAcl()) return false;
+      if (hasReferrerAcl()) {
+        if (!getReferrerAcl()
+            .equals(other.getReferrerAcl())) return false;
+      }
+      if (hasStaticResponse() != other.hasStaticResponse()) return false;
+      if (hasStaticResponse()) {
+        if (!getStaticResponse()
+            .equals(other.getStaticResponse())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -22781,6 +28801,30 @@ public final class ResourceOuterClass {
       if (hasIpAddressAcl()) {
         hash = (37 * hash) + IP_ADDRESS_ACL_FIELD_NUMBER;
         hash = (53 * hash) + getIpAddressAcl().hashCode();
+      }
+      if (hasFollowRedirects()) {
+        hash = (37 * hash) + FOLLOW_REDIRECTS_FIELD_NUMBER;
+        hash = (53 * hash) + getFollowRedirects().hashCode();
+      }
+      if (hasWebsockets()) {
+        hash = (37 * hash) + WEBSOCKETS_FIELD_NUMBER;
+        hash = (53 * hash) + getWebsockets().hashCode();
+      }
+      if (hasHeaderFilter()) {
+        hash = (37 * hash) + HEADER_FILTER_FIELD_NUMBER;
+        hash = (53 * hash) + getHeaderFilter().hashCode();
+      }
+      if (hasGeoAcl()) {
+        hash = (37 * hash) + GEO_ACL_FIELD_NUMBER;
+        hash = (53 * hash) + getGeoAcl().hashCode();
+      }
+      if (hasReferrerAcl()) {
+        hash = (37 * hash) + REFERRER_ACL_FIELD_NUMBER;
+        hash = (53 * hash) + getReferrerAcl().hashCode();
+      }
+      if (hasStaticResponse()) {
+        hash = (37 * hash) + STATIC_RESPONSE_FIELD_NUMBER;
+        hash = (53 * hash) + getStaticResponse().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -23045,6 +29089,42 @@ public final class ResourceOuterClass {
           ipAddressAcl_ = null;
           ipAddressAclBuilder_ = null;
         }
+        if (followRedirectsBuilder_ == null) {
+          followRedirects_ = null;
+        } else {
+          followRedirects_ = null;
+          followRedirectsBuilder_ = null;
+        }
+        if (websocketsBuilder_ == null) {
+          websockets_ = null;
+        } else {
+          websockets_ = null;
+          websocketsBuilder_ = null;
+        }
+        if (headerFilterBuilder_ == null) {
+          headerFilter_ = null;
+        } else {
+          headerFilter_ = null;
+          headerFilterBuilder_ = null;
+        }
+        if (geoAclBuilder_ == null) {
+          geoAcl_ = null;
+        } else {
+          geoAcl_ = null;
+          geoAclBuilder_ = null;
+        }
+        if (referrerAclBuilder_ == null) {
+          referrerAcl_ = null;
+        } else {
+          referrerAcl_ = null;
+          referrerAclBuilder_ = null;
+        }
+        if (staticResponseBuilder_ == null) {
+          staticResponse_ = null;
+        } else {
+          staticResponse_ = null;
+          staticResponseBuilder_ = null;
+        }
         return this;
       }
 
@@ -23176,6 +29256,36 @@ public final class ResourceOuterClass {
         } else {
           result.ipAddressAcl_ = ipAddressAclBuilder_.build();
         }
+        if (followRedirectsBuilder_ == null) {
+          result.followRedirects_ = followRedirects_;
+        } else {
+          result.followRedirects_ = followRedirectsBuilder_.build();
+        }
+        if (websocketsBuilder_ == null) {
+          result.websockets_ = websockets_;
+        } else {
+          result.websockets_ = websocketsBuilder_.build();
+        }
+        if (headerFilterBuilder_ == null) {
+          result.headerFilter_ = headerFilter_;
+        } else {
+          result.headerFilter_ = headerFilterBuilder_.build();
+        }
+        if (geoAclBuilder_ == null) {
+          result.geoAcl_ = geoAcl_;
+        } else {
+          result.geoAcl_ = geoAclBuilder_.build();
+        }
+        if (referrerAclBuilder_ == null) {
+          result.referrerAcl_ = referrerAcl_;
+        } else {
+          result.referrerAcl_ = referrerAclBuilder_.build();
+        }
+        if (staticResponseBuilder_ == null) {
+          result.staticResponse_ = staticResponse_;
+        } else {
+          result.staticResponse_ = staticResponseBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -23286,6 +29396,24 @@ public final class ResourceOuterClass {
         }
         if (other.hasIpAddressAcl()) {
           mergeIpAddressAcl(other.getIpAddressAcl());
+        }
+        if (other.hasFollowRedirects()) {
+          mergeFollowRedirects(other.getFollowRedirects());
+        }
+        if (other.hasWebsockets()) {
+          mergeWebsockets(other.getWebsockets());
+        }
+        if (other.hasHeaderFilter()) {
+          mergeHeaderFilter(other.getHeaderFilter());
+        }
+        if (other.hasGeoAcl()) {
+          mergeGeoAcl(other.getGeoAcl());
+        }
+        if (other.hasReferrerAcl()) {
+          mergeReferrerAcl(other.getReferrerAcl());
+        }
+        if (other.hasStaticResponse()) {
+          mergeStaticResponse(other.getStaticResponse());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -26741,6 +32869,963 @@ public final class ResourceOuterClass {
         }
         return ipAddressAclBuilder_;
       }
+
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption followRedirects_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOptionOrBuilder> followRedirectsBuilder_;
+      /**
+       * <pre>
+       * Manage the state of the Redirection from origin option.
+       * If the source returns a redirect, the option lets CDN pull the requested content from the source that was returned in the redirect.
+       * This option works only when origin shielding is activated.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption follow_redirects = 22;</code>
+       * @return Whether the followRedirects field is set.
+       */
+      public boolean hasFollowRedirects() {
+        return followRedirectsBuilder_ != null || followRedirects_ != null;
+      }
+      /**
+       * <pre>
+       * Manage the state of the Redirection from origin option.
+       * If the source returns a redirect, the option lets CDN pull the requested content from the source that was returned in the redirect.
+       * This option works only when origin shielding is activated.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption follow_redirects = 22;</code>
+       * @return The followRedirects.
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption getFollowRedirects() {
+        if (followRedirectsBuilder_ == null) {
+          return followRedirects_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption.getDefaultInstance() : followRedirects_;
+        } else {
+          return followRedirectsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Manage the state of the Redirection from origin option.
+       * If the source returns a redirect, the option lets CDN pull the requested content from the source that was returned in the redirect.
+       * This option works only when origin shielding is activated.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption follow_redirects = 22;</code>
+       */
+      public Builder setFollowRedirects(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption value) {
+        if (followRedirectsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          followRedirects_ = value;
+          onChanged();
+        } else {
+          followRedirectsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Manage the state of the Redirection from origin option.
+       * If the source returns a redirect, the option lets CDN pull the requested content from the source that was returned in the redirect.
+       * This option works only when origin shielding is activated.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption follow_redirects = 22;</code>
+       */
+      public Builder setFollowRedirects(
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption.Builder builderForValue) {
+        if (followRedirectsBuilder_ == null) {
+          followRedirects_ = builderForValue.build();
+          onChanged();
+        } else {
+          followRedirectsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Manage the state of the Redirection from origin option.
+       * If the source returns a redirect, the option lets CDN pull the requested content from the source that was returned in the redirect.
+       * This option works only when origin shielding is activated.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption follow_redirects = 22;</code>
+       */
+      public Builder mergeFollowRedirects(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption value) {
+        if (followRedirectsBuilder_ == null) {
+          if (followRedirects_ != null) {
+            followRedirects_ =
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption.newBuilder(followRedirects_).mergeFrom(value).buildPartial();
+          } else {
+            followRedirects_ = value;
+          }
+          onChanged();
+        } else {
+          followRedirectsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Manage the state of the Redirection from origin option.
+       * If the source returns a redirect, the option lets CDN pull the requested content from the source that was returned in the redirect.
+       * This option works only when origin shielding is activated.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption follow_redirects = 22;</code>
+       */
+      public Builder clearFollowRedirects() {
+        if (followRedirectsBuilder_ == null) {
+          followRedirects_ = null;
+          onChanged();
+        } else {
+          followRedirects_ = null;
+          followRedirectsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Manage the state of the Redirection from origin option.
+       * If the source returns a redirect, the option lets CDN pull the requested content from the source that was returned in the redirect.
+       * This option works only when origin shielding is activated.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption follow_redirects = 22;</code>
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption.Builder getFollowRedirectsBuilder() {
+        
+        onChanged();
+        return getFollowRedirectsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Manage the state of the Redirection from origin option.
+       * If the source returns a redirect, the option lets CDN pull the requested content from the source that was returned in the redirect.
+       * This option works only when origin shielding is activated.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption follow_redirects = 22;</code>
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOptionOrBuilder getFollowRedirectsOrBuilder() {
+        if (followRedirectsBuilder_ != null) {
+          return followRedirectsBuilder_.getMessageOrBuilder();
+        } else {
+          return followRedirects_ == null ?
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption.getDefaultInstance() : followRedirects_;
+        }
+      }
+      /**
+       * <pre>
+       * Manage the state of the Redirection from origin option.
+       * If the source returns a redirect, the option lets CDN pull the requested content from the source that was returned in the redirect.
+       * This option works only when origin shielding is activated.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.FollowRedirectsOption follow_redirects = 22;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOptionOrBuilder> 
+          getFollowRedirectsFieldBuilder() {
+        if (followRedirectsBuilder_ == null) {
+          followRedirectsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.FollowRedirectsOptionOrBuilder>(
+                  getFollowRedirects(),
+                  getParentForChildren(),
+                  isClean());
+          followRedirects_ = null;
+        }
+        return followRedirectsBuilder_;
+      }
+
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption websockets_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOptionOrBuilder> websocketsBuilder_;
+      /**
+       * <pre>
+       * Configuration for WebSocket protocol support.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption websockets = 23;</code>
+       * @return Whether the websockets field is set.
+       */
+      public boolean hasWebsockets() {
+        return websocketsBuilder_ != null || websockets_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for WebSocket protocol support.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption websockets = 23;</code>
+       * @return The websockets.
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption getWebsockets() {
+        if (websocketsBuilder_ == null) {
+          return websockets_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption.getDefaultInstance() : websockets_;
+        } else {
+          return websocketsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for WebSocket protocol support.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption websockets = 23;</code>
+       */
+      public Builder setWebsockets(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption value) {
+        if (websocketsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          websockets_ = value;
+          onChanged();
+        } else {
+          websocketsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for WebSocket protocol support.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption websockets = 23;</code>
+       */
+      public Builder setWebsockets(
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption.Builder builderForValue) {
+        if (websocketsBuilder_ == null) {
+          websockets_ = builderForValue.build();
+          onChanged();
+        } else {
+          websocketsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for WebSocket protocol support.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption websockets = 23;</code>
+       */
+      public Builder mergeWebsockets(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption value) {
+        if (websocketsBuilder_ == null) {
+          if (websockets_ != null) {
+            websockets_ =
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption.newBuilder(websockets_).mergeFrom(value).buildPartial();
+          } else {
+            websockets_ = value;
+          }
+          onChanged();
+        } else {
+          websocketsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for WebSocket protocol support.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption websockets = 23;</code>
+       */
+      public Builder clearWebsockets() {
+        if (websocketsBuilder_ == null) {
+          websockets_ = null;
+          onChanged();
+        } else {
+          websockets_ = null;
+          websocketsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for WebSocket protocol support.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption websockets = 23;</code>
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption.Builder getWebsocketsBuilder() {
+        
+        onChanged();
+        return getWebsocketsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for WebSocket protocol support.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption websockets = 23;</code>
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOptionOrBuilder getWebsocketsOrBuilder() {
+        if (websocketsBuilder_ != null) {
+          return websocketsBuilder_.getMessageOrBuilder();
+        } else {
+          return websockets_ == null ?
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption.getDefaultInstance() : websockets_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for WebSocket protocol support.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.WebsocketsOption websockets = 23;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOptionOrBuilder> 
+          getWebsocketsFieldBuilder() {
+        if (websocketsBuilder_ == null) {
+          websocketsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.WebsocketsOptionOrBuilder>(
+                  getWebsockets(),
+                  getParentForChildren(),
+                  isClean());
+          websockets_ = null;
+        }
+        return websocketsBuilder_;
+      }
+
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption headerFilter_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOptionOrBuilder> headerFilterBuilder_;
+      /**
+       * <pre>
+       * Configuration for HTTP response header filtering.
+       * This feature allows controlling which headers from the origin are passed to end users.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption header_filter = 24;</code>
+       * @return Whether the headerFilter field is set.
+       */
+      public boolean hasHeaderFilter() {
+        return headerFilterBuilder_ != null || headerFilter_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for HTTP response header filtering.
+       * This feature allows controlling which headers from the origin are passed to end users.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption header_filter = 24;</code>
+       * @return The headerFilter.
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption getHeaderFilter() {
+        if (headerFilterBuilder_ == null) {
+          return headerFilter_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption.getDefaultInstance() : headerFilter_;
+        } else {
+          return headerFilterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for HTTP response header filtering.
+       * This feature allows controlling which headers from the origin are passed to end users.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption header_filter = 24;</code>
+       */
+      public Builder setHeaderFilter(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption value) {
+        if (headerFilterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          headerFilter_ = value;
+          onChanged();
+        } else {
+          headerFilterBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for HTTP response header filtering.
+       * This feature allows controlling which headers from the origin are passed to end users.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption header_filter = 24;</code>
+       */
+      public Builder setHeaderFilter(
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption.Builder builderForValue) {
+        if (headerFilterBuilder_ == null) {
+          headerFilter_ = builderForValue.build();
+          onChanged();
+        } else {
+          headerFilterBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for HTTP response header filtering.
+       * This feature allows controlling which headers from the origin are passed to end users.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption header_filter = 24;</code>
+       */
+      public Builder mergeHeaderFilter(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption value) {
+        if (headerFilterBuilder_ == null) {
+          if (headerFilter_ != null) {
+            headerFilter_ =
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption.newBuilder(headerFilter_).mergeFrom(value).buildPartial();
+          } else {
+            headerFilter_ = value;
+          }
+          onChanged();
+        } else {
+          headerFilterBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for HTTP response header filtering.
+       * This feature allows controlling which headers from the origin are passed to end users.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption header_filter = 24;</code>
+       */
+      public Builder clearHeaderFilter() {
+        if (headerFilterBuilder_ == null) {
+          headerFilter_ = null;
+          onChanged();
+        } else {
+          headerFilter_ = null;
+          headerFilterBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for HTTP response header filtering.
+       * This feature allows controlling which headers from the origin are passed to end users.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption header_filter = 24;</code>
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption.Builder getHeaderFilterBuilder() {
+        
+        onChanged();
+        return getHeaderFilterFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for HTTP response header filtering.
+       * This feature allows controlling which headers from the origin are passed to end users.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption header_filter = 24;</code>
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOptionOrBuilder getHeaderFilterOrBuilder() {
+        if (headerFilterBuilder_ != null) {
+          return headerFilterBuilder_.getMessageOrBuilder();
+        } else {
+          return headerFilter_ == null ?
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption.getDefaultInstance() : headerFilter_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for HTTP response header filtering.
+       * This feature allows controlling which headers from the origin are passed to end users.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.HeaderFilterOption header_filter = 24;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOptionOrBuilder> 
+          getHeaderFilterFieldBuilder() {
+        if (headerFilterBuilder_ == null) {
+          headerFilterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.HeaderFilterOptionOrBuilder>(
+                  getHeaderFilter(),
+                  getParentForChildren(),
+                  isClean());
+          headerFilter_ = null;
+        }
+        return headerFilterBuilder_;
+      }
+
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption geoAcl_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOptionOrBuilder> geoAclBuilder_;
+      /**
+       * <pre>
+       * Configuration for geographic access control.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption geo_acl = 25;</code>
+       * @return Whether the geoAcl field is set.
+       */
+      public boolean hasGeoAcl() {
+        return geoAclBuilder_ != null || geoAcl_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for geographic access control.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption geo_acl = 25;</code>
+       * @return The geoAcl.
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption getGeoAcl() {
+        if (geoAclBuilder_ == null) {
+          return geoAcl_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.getDefaultInstance() : geoAcl_;
+        } else {
+          return geoAclBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for geographic access control.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption geo_acl = 25;</code>
+       */
+      public Builder setGeoAcl(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption value) {
+        if (geoAclBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          geoAcl_ = value;
+          onChanged();
+        } else {
+          geoAclBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for geographic access control.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption geo_acl = 25;</code>
+       */
+      public Builder setGeoAcl(
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.Builder builderForValue) {
+        if (geoAclBuilder_ == null) {
+          geoAcl_ = builderForValue.build();
+          onChanged();
+        } else {
+          geoAclBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for geographic access control.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption geo_acl = 25;</code>
+       */
+      public Builder mergeGeoAcl(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption value) {
+        if (geoAclBuilder_ == null) {
+          if (geoAcl_ != null) {
+            geoAcl_ =
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.newBuilder(geoAcl_).mergeFrom(value).buildPartial();
+          } else {
+            geoAcl_ = value;
+          }
+          onChanged();
+        } else {
+          geoAclBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for geographic access control.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption geo_acl = 25;</code>
+       */
+      public Builder clearGeoAcl() {
+        if (geoAclBuilder_ == null) {
+          geoAcl_ = null;
+          onChanged();
+        } else {
+          geoAcl_ = null;
+          geoAclBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for geographic access control.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption geo_acl = 25;</code>
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.Builder getGeoAclBuilder() {
+        
+        onChanged();
+        return getGeoAclFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for geographic access control.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption geo_acl = 25;</code>
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOptionOrBuilder getGeoAclOrBuilder() {
+        if (geoAclBuilder_ != null) {
+          return geoAclBuilder_.getMessageOrBuilder();
+        } else {
+          return geoAcl_ == null ?
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.getDefaultInstance() : geoAcl_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for geographic access control.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.GeoACLOption geo_acl = 25;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOptionOrBuilder> 
+          getGeoAclFieldBuilder() {
+        if (geoAclBuilder_ == null) {
+          geoAclBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.GeoACLOptionOrBuilder>(
+                  getGeoAcl(),
+                  getParentForChildren(),
+                  isClean());
+          geoAcl_ = null;
+        }
+        return geoAclBuilder_;
+      }
+
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption referrerAcl_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOptionOrBuilder> referrerAclBuilder_;
+      /**
+       * <pre>
+       * Configuration for referrer-based access control.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption referrer_acl = 26;</code>
+       * @return Whether the referrerAcl field is set.
+       */
+      public boolean hasReferrerAcl() {
+        return referrerAclBuilder_ != null || referrerAcl_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for referrer-based access control.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption referrer_acl = 26;</code>
+       * @return The referrerAcl.
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption getReferrerAcl() {
+        if (referrerAclBuilder_ == null) {
+          return referrerAcl_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.getDefaultInstance() : referrerAcl_;
+        } else {
+          return referrerAclBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for referrer-based access control.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption referrer_acl = 26;</code>
+       */
+      public Builder setReferrerAcl(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption value) {
+        if (referrerAclBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          referrerAcl_ = value;
+          onChanged();
+        } else {
+          referrerAclBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for referrer-based access control.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption referrer_acl = 26;</code>
+       */
+      public Builder setReferrerAcl(
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.Builder builderForValue) {
+        if (referrerAclBuilder_ == null) {
+          referrerAcl_ = builderForValue.build();
+          onChanged();
+        } else {
+          referrerAclBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for referrer-based access control.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption referrer_acl = 26;</code>
+       */
+      public Builder mergeReferrerAcl(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption value) {
+        if (referrerAclBuilder_ == null) {
+          if (referrerAcl_ != null) {
+            referrerAcl_ =
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.newBuilder(referrerAcl_).mergeFrom(value).buildPartial();
+          } else {
+            referrerAcl_ = value;
+          }
+          onChanged();
+        } else {
+          referrerAclBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for referrer-based access control.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption referrer_acl = 26;</code>
+       */
+      public Builder clearReferrerAcl() {
+        if (referrerAclBuilder_ == null) {
+          referrerAcl_ = null;
+          onChanged();
+        } else {
+          referrerAcl_ = null;
+          referrerAclBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for referrer-based access control.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption referrer_acl = 26;</code>
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.Builder getReferrerAclBuilder() {
+        
+        onChanged();
+        return getReferrerAclFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for referrer-based access control.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption referrer_acl = 26;</code>
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOptionOrBuilder getReferrerAclOrBuilder() {
+        if (referrerAclBuilder_ != null) {
+          return referrerAclBuilder_.getMessageOrBuilder();
+        } else {
+          return referrerAcl_ == null ?
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.getDefaultInstance() : referrerAcl_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for referrer-based access control.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.ReferrerACLOption referrer_acl = 26;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOptionOrBuilder> 
+          getReferrerAclFieldBuilder() {
+        if (referrerAclBuilder_ == null) {
+          referrerAclBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.ReferrerACLOptionOrBuilder>(
+                  getReferrerAcl(),
+                  getParentForChildren(),
+                  isClean());
+          referrerAcl_ = null;
+        }
+        return referrerAclBuilder_;
+      }
+
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption staticResponse_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOptionOrBuilder> staticResponseBuilder_;
+      /**
+       * <pre>
+       * Configuration for serving a static HTTP response instead of fetching from origin.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption static_response = 27;</code>
+       * @return Whether the staticResponse field is set.
+       */
+      public boolean hasStaticResponse() {
+        return staticResponseBuilder_ != null || staticResponse_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for serving a static HTTP response instead of fetching from origin.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption static_response = 27;</code>
+       * @return The staticResponse.
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption getStaticResponse() {
+        if (staticResponseBuilder_ == null) {
+          return staticResponse_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption.getDefaultInstance() : staticResponse_;
+        } else {
+          return staticResponseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for serving a static HTTP response instead of fetching from origin.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption static_response = 27;</code>
+       */
+      public Builder setStaticResponse(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption value) {
+        if (staticResponseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          staticResponse_ = value;
+          onChanged();
+        } else {
+          staticResponseBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for serving a static HTTP response instead of fetching from origin.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption static_response = 27;</code>
+       */
+      public Builder setStaticResponse(
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption.Builder builderForValue) {
+        if (staticResponseBuilder_ == null) {
+          staticResponse_ = builderForValue.build();
+          onChanged();
+        } else {
+          staticResponseBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for serving a static HTTP response instead of fetching from origin.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption static_response = 27;</code>
+       */
+      public Builder mergeStaticResponse(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption value) {
+        if (staticResponseBuilder_ == null) {
+          if (staticResponse_ != null) {
+            staticResponse_ =
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption.newBuilder(staticResponse_).mergeFrom(value).buildPartial();
+          } else {
+            staticResponse_ = value;
+          }
+          onChanged();
+        } else {
+          staticResponseBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for serving a static HTTP response instead of fetching from origin.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption static_response = 27;</code>
+       */
+      public Builder clearStaticResponse() {
+        if (staticResponseBuilder_ == null) {
+          staticResponse_ = null;
+          onChanged();
+        } else {
+          staticResponse_ = null;
+          staticResponseBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for serving a static HTTP response instead of fetching from origin.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption static_response = 27;</code>
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption.Builder getStaticResponseBuilder() {
+        
+        onChanged();
+        return getStaticResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for serving a static HTTP response instead of fetching from origin.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption static_response = 27;</code>
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOptionOrBuilder getStaticResponseOrBuilder() {
+        if (staticResponseBuilder_ != null) {
+          return staticResponseBuilder_.getMessageOrBuilder();
+        } else {
+          return staticResponse_ == null ?
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption.getDefaultInstance() : staticResponse_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for serving a static HTTP response instead of fetching from origin.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.StaticResponseOption static_response = 27;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOptionOrBuilder> 
+          getStaticResponseFieldBuilder() {
+        if (staticResponseBuilder_ == null) {
+          staticResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.StaticResponseOptionOrBuilder>(
+                  getStaticResponse(),
+                  getParentForChildren(),
+                  isClean());
+          staticResponse_ = null;
+        }
+        return staticResponseBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -30014,6 +37099,734 @@ public final class ResourceOuterClass {
 
   }
 
+  public interface TLSOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cdn.v1.TLS)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * TLS profile used for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS.Profile profile = 1;</code>
+     * @return The enum numeric value on the wire for profile.
+     */
+    int getProfileValue();
+    /**
+     * <pre>
+     * TLS profile used for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS.Profile profile = 1;</code>
+     * @return The profile.
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Profile getProfile();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cdn.v1.TLS}
+   */
+  public static final class TLS extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.TLS)
+      TLSOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TLS.newBuilder() to construct.
+    private TLS(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TLS() {
+      profile_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TLS();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TLS(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              profile_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_TLS_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_TLS_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.class, yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.cdn.v1.TLS.Profile}
+     */
+    public enum Profile
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>PROFILE_UNSPECIFIED = 0;</code>
+       */
+      PROFILE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * TLSv1.2+, less secure
+       * </pre>
+       *
+       * <code>PROFILE_COMPATIBLE = 1;</code>
+       */
+      PROFILE_COMPATIBLE(1),
+      /**
+       * <pre>
+       * TLSv1+, excluding most vulnerable
+       * </pre>
+       *
+       * <code>PROFILE_LEGACY = 2;</code>
+       */
+      PROFILE_LEGACY(2),
+      /**
+       * <pre>
+       * TLSv1.2+, most secure
+       * </pre>
+       *
+       * <code>PROFILE_SECURE = 3;</code>
+       */
+      PROFILE_SECURE(3),
+      /**
+       * <pre>
+       * TLSv1.3 only
+       * </pre>
+       *
+       * <code>PROFILE_STRICT = 4;</code>
+       */
+      PROFILE_STRICT(4),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>PROFILE_UNSPECIFIED = 0;</code>
+       */
+      public static final int PROFILE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * TLSv1.2+, less secure
+       * </pre>
+       *
+       * <code>PROFILE_COMPATIBLE = 1;</code>
+       */
+      public static final int PROFILE_COMPATIBLE_VALUE = 1;
+      /**
+       * <pre>
+       * TLSv1+, excluding most vulnerable
+       * </pre>
+       *
+       * <code>PROFILE_LEGACY = 2;</code>
+       */
+      public static final int PROFILE_LEGACY_VALUE = 2;
+      /**
+       * <pre>
+       * TLSv1.2+, most secure
+       * </pre>
+       *
+       * <code>PROFILE_SECURE = 3;</code>
+       */
+      public static final int PROFILE_SECURE_VALUE = 3;
+      /**
+       * <pre>
+       * TLSv1.3 only
+       * </pre>
+       *
+       * <code>PROFILE_STRICT = 4;</code>
+       */
+      public static final int PROFILE_STRICT_VALUE = 4;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Profile valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Profile forNumber(int value) {
+        switch (value) {
+          case 0: return PROFILE_UNSPECIFIED;
+          case 1: return PROFILE_COMPATIBLE;
+          case 2: return PROFILE_LEGACY;
+          case 3: return PROFILE_SECURE;
+          case 4: return PROFILE_STRICT;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Profile>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Profile> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Profile>() {
+              public Profile findValueByNumber(int number) {
+                return Profile.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Profile[] VALUES = values();
+
+      public static Profile valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Profile(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.cdn.v1.TLS.Profile)
+    }
+
+    public static final int PROFILE_FIELD_NUMBER = 1;
+    private int profile_;
+    /**
+     * <pre>
+     * TLS profile used for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS.Profile profile = 1;</code>
+     * @return The enum numeric value on the wire for profile.
+     */
+    @java.lang.Override public int getProfileValue() {
+      return profile_;
+    }
+    /**
+     * <pre>
+     * TLS profile used for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS.Profile profile = 1;</code>
+     * @return The profile.
+     */
+    @java.lang.Override public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Profile getProfile() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Profile result = yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Profile.valueOf(profile_);
+      return result == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Profile.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (profile_ != yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Profile.PROFILE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, profile_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (profile_ != yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Profile.PROFILE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, profile_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS) obj;
+
+      if (profile_ != other.profile_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROFILE_FIELD_NUMBER;
+      hash = (53 * hash) + profile_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cdn.v1.TLS}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cdn.v1.TLS)
+        yandex.cloud.api.cdn.v1.ResourceOuterClass.TLSOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_TLS_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_TLS_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.class, yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        profile_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_TLS_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS getDefaultInstanceForType() {
+        return yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS build() {
+        yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS buildPartial() {
+        yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS result = new yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS(this);
+        result.profile_ = profile_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS) {
+          return mergeFrom((yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS other) {
+        if (other == yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.getDefaultInstance()) return this;
+        if (other.profile_ != 0) {
+          setProfileValue(other.getProfileValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int profile_ = 0;
+      /**
+       * <pre>
+       * TLS profile used for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS.Profile profile = 1;</code>
+       * @return The enum numeric value on the wire for profile.
+       */
+      @java.lang.Override public int getProfileValue() {
+        return profile_;
+      }
+      /**
+       * <pre>
+       * TLS profile used for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS.Profile profile = 1;</code>
+       * @param value The enum numeric value on the wire for profile to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProfileValue(int value) {
+        
+        profile_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * TLS profile used for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS.Profile profile = 1;</code>
+       * @return The profile.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Profile getProfile() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Profile result = yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Profile.valueOf(profile_);
+        return result == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Profile.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * TLS profile used for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS.Profile profile = 1;</code>
+       * @param value The profile to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProfile(yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Profile value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        profile_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * TLS profile used for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS.Profile profile = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProfile() {
+        
+        profile_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cdn.v1.TLS)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cdn.v1.TLS)
+    private static final yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS();
+    }
+
+    public static yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TLS>
+        PARSER = new com.google.protobuf.AbstractParser<TLS>() {
+      @java.lang.Override
+      public TLS parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TLS(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TLS> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TLS> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_cdn_v1_SecondaryHostnames_descriptor;
   private static final 
@@ -30130,6 +37943,36 @@ public final class ResourceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_cdn_v1_ResourceOptions_IPAddressACLOption_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_FollowRedirectsOption_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cdn_v1_ResourceOptions_FollowRedirectsOption_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_WebsocketsOption_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cdn_v1_ResourceOptions_WebsocketsOption_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_HeaderFilterOption_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cdn_v1_ResourceOptions_HeaderFilterOption_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_GeoACLOption_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cdn_v1_ResourceOptions_GeoACLOption_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_ReferrerACLOption_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cdn_v1_ResourceOptions_ReferrerACLOption_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_StaticResponseOption_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cdn_v1_ResourceOptions_StaticResponseOption_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_cdn_v1_SSLTargetCertificate_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -30149,6 +37992,11 @@ public final class ResourceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_cdn_v1_SSLCertificateCMData_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cdn_v1_TLS_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cdn_v1_TLS_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -30161,7 +38009,7 @@ public final class ResourceOuterClass {
       "\n\"yandex/cloud/cdn/v1/resource.proto\022\023ya" +
       "ndex.cloud.cdn.v1\032\037google/protobuf/times" +
       "tamp.proto\"$\n\022SecondaryHostnames\022\016\n\006valu" +
-      "es\030\001 \003(\t\"\305\004\n\010Resource\022\n\n\002id\030\001 \001(\t\022\021\n\tfol" +
+      "es\030\001 \003(\t\"\354\004\n\010Resource\022\n\n\002id\030\001 \001(\t\022\021\n\tfol" +
       "der_id\030\002 \001(\t\022\r\n\005cname\030\003 \001(\t\022.\n\ncreated_a" +
       "t\030\004 \001(\0132\032.google.protobuf.Timestamp\022.\n\nu" +
       "pdated_at\030\005 \001(\0132\032.google.protobuf.Timest" +
@@ -30174,139 +38022,172 @@ public final class ResourceOuterClass {
       "(\0132#.yandex.cloud.cdn.v1.SSLCertificate\022" +
       "9\n\006labels\030\r \003(\0132).yandex.cloud.cdn.v1.Re" +
       "source.LabelsEntry\022\025\n\rprovider_type\030\016 \001(" +
-      "\t\022\026\n\016provider_cname\030\017 \001(\t\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\346\037\n\017Res" +
-      "ourceOptions\022F\n\rdisable_cache\030\001 \001(\0132/.ya" +
-      "ndex.cloud.cdn.v1.ResourceOptions.BoolOp" +
-      "tion\022S\n\023edge_cache_settings\030\002 \001(\01326.yand" +
-      "ex.cloud.cdn.v1.ResourceOptions.EdgeCach" +
-      "eSettings\022P\n\026browser_cache_settings\030\003 \001(" +
-      "\01320.yandex.cloud.cdn.v1.ResourceOptions." +
-      "Int64Option\022R\n\022cache_http_headers\030\004 \001(\0132" +
-      "6.yandex.cloud.cdn.v1.ResourceOptions.St" +
-      "ringsListOption\022U\n\024query_params_options\030" +
-      "\005 \001(\01327.yandex.cloud.cdn.v1.ResourceOpti" +
-      "ons.QueryParamsOptions\022>\n\005slice\030\006 \001(\0132/." +
-      "yandex.cloud.cdn.v1.ResourceOptions.Bool" +
-      "Option\022T\n\023compression_options\030\007 \001(\01327.ya" +
-      "ndex.cloud.cdn.v1.ResourceOptions.Compre" +
-      "ssionOptions\022N\n\020redirect_options\030\010 \001(\01324" +
-      ".yandex.cloud.cdn.v1.ResourceOptions.Red" +
-      "irectOptions\022F\n\014host_options\030\t \001(\01320.yan" +
-      "dex.cloud.cdn.v1.ResourceOptions.HostOpt" +
-      "ions\022M\n\016static_headers\030\n \001(\01325.yandex.cl" +
+      "\t\022\026\n\016provider_cname\030\017 \001(\t\022%\n\003tls\030\020 \001(\0132\030" +
+      ".yandex.cloud.cdn.v1.TLS\032-\n\013LabelsEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\262(\n\017Reso" +
+      "urceOptions\022F\n\rdisable_cache\030\001 \001(\0132/.yan" +
+      "dex.cloud.cdn.v1.ResourceOptions.BoolOpt" +
+      "ion\022S\n\023edge_cache_settings\030\002 \001(\01326.yande" +
+      "x.cloud.cdn.v1.ResourceOptions.EdgeCache" +
+      "Settings\022P\n\026browser_cache_settings\030\003 \001(\013" +
+      "20.yandex.cloud.cdn.v1.ResourceOptions.I" +
+      "nt64Option\022R\n\022cache_http_headers\030\004 \001(\01326" +
+      ".yandex.cloud.cdn.v1.ResourceOptions.Str" +
+      "ingsListOption\022U\n\024query_params_options\030\005" +
+      " \001(\01327.yandex.cloud.cdn.v1.ResourceOptio" +
+      "ns.QueryParamsOptions\022>\n\005slice\030\006 \001(\0132/.y" +
+      "andex.cloud.cdn.v1.ResourceOptions.BoolO" +
+      "ption\022T\n\023compression_options\030\007 \001(\01327.yan" +
+      "dex.cloud.cdn.v1.ResourceOptions.Compres" +
+      "sionOptions\022N\n\020redirect_options\030\010 \001(\01324." +
+      "yandex.cloud.cdn.v1.ResourceOptions.Redi" +
+      "rectOptions\022F\n\014host_options\030\t \001(\01320.yand" +
+      "ex.cloud.cdn.v1.ResourceOptions.HostOpti" +
+      "ons\022M\n\016static_headers\030\n \001(\01325.yandex.clo" +
+      "ud.cdn.v1.ResourceOptions.StringsMapOpti" +
+      "on\022D\n\004cors\030\013 \001(\01326.yandex.cloud.cdn.v1.R" +
+      "esourceOptions.StringsListOption\022E\n\005stal" +
+      "e\030\014 \001(\01326.yandex.cloud.cdn.v1.ResourceOp" +
+      "tions.StringsListOption\022T\n\024allowed_http_" +
+      "methods\030\r \001(\01326.yandex.cloud.cdn.v1.Reso" +
+      "urceOptions.StringsListOption\022P\n\027proxy_c" +
+      "ache_methods_set\030\016 \001(\0132/.yandex.cloud.cd" +
+      "n.v1.ResourceOptions.BoolOption\022S\n\032disab" +
+      "le_proxy_force_ranges\030\017 \001(\0132/.yandex.clo" +
+      "ud.cdn.v1.ResourceOptions.BoolOption\022U\n\026" +
+      "static_request_headers\030\020 \001(\01325.yandex.cl" +
       "oud.cdn.v1.ResourceOptions.StringsMapOpt" +
-      "ion\022D\n\004cors\030\013 \001(\01326.yandex.cloud.cdn.v1." +
-      "ResourceOptions.StringsListOption\022E\n\005sta" +
-      "le\030\014 \001(\01326.yandex.cloud.cdn.v1.ResourceO" +
-      "ptions.StringsListOption\022T\n\024allowed_http" +
-      "_methods\030\r \001(\01326.yandex.cloud.cdn.v1.Res" +
-      "ourceOptions.StringsListOption\022P\n\027proxy_" +
-      "cache_methods_set\030\016 \001(\0132/.yandex.cloud.c" +
-      "dn.v1.ResourceOptions.BoolOption\022S\n\032disa" +
-      "ble_proxy_force_ranges\030\017 \001(\0132/.yandex.cl" +
-      "oud.cdn.v1.ResourceOptions.BoolOption\022U\n" +
-      "\026static_request_headers\030\020 \001(\01325.yandex.c" +
-      "loud.cdn.v1.ResourceOptions.StringsMapOp" +
-      "tion\022M\n\022custom_server_name\030\021 \001(\01321.yande" +
-      "x.cloud.cdn.v1.ResourceOptions.StringOpt" +
-      "ion\022F\n\rignore_cookie\030\022 \001(\0132/.yandex.clou" +
-      "d.cdn.v1.ResourceOptions.BoolOption\022C\n\007r" +
-      "ewrite\030\023 \001(\01322.yandex.cloud.cdn.v1.Resou" +
-      "rceOptions.RewriteOption\022H\n\nsecure_key\030\024" +
-      " \001(\01324.yandex.cloud.cdn.v1.ResourceOptio" +
-      "ns.SecureKeyOption\022O\n\016ip_address_acl\030\025 \001" +
+      "ion\022M\n\022custom_server_name\030\021 \001(\01321.yandex" +
+      ".cloud.cdn.v1.ResourceOptions.StringOpti" +
+      "on\022F\n\rignore_cookie\030\022 \001(\0132/.yandex.cloud" +
+      ".cdn.v1.ResourceOptions.BoolOption\022C\n\007re" +
+      "write\030\023 \001(\01322.yandex.cloud.cdn.v1.Resour" +
+      "ceOptions.RewriteOption\022H\n\nsecure_key\030\024 " +
+      "\001(\01324.yandex.cloud.cdn.v1.ResourceOption" +
+      "s.SecureKeyOption\022O\n\016ip_address_acl\030\025 \001(" +
+      "\01327.yandex.cloud.cdn.v1.ResourceOptions." +
+      "IPAddressACLOption\022T\n\020follow_redirects\030\026" +
+      " \001(\0132:.yandex.cloud.cdn.v1.ResourceOptio" +
+      "ns.FollowRedirectsOption\022I\n\nwebsockets\030\027" +
+      " \001(\01325.yandex.cloud.cdn.v1.ResourceOptio" +
+      "ns.WebsocketsOption\022N\n\rheader_filter\030\030 \001" +
       "(\01327.yandex.cloud.cdn.v1.ResourceOptions" +
-      ".IPAddressACLOption\032,\n\nBoolOption\022\017\n\007ena" +
-      "bled\030\001 \001(\010\022\r\n\005value\030\002 \001(\010\032.\n\014StringOptio" +
-      "n\022\017\n\007enabled\030\001 \001(\010\022\r\n\005value\030\002 \001(\t\032-\n\013Int" +
-      "64Option\022\017\n\007enabled\030\001 \001(\010\022\r\n\005value\030\002 \001(\003" +
-      "\0323\n\021StringsListOption\022\017\n\007enabled\030\001 \001(\010\022\r" +
-      "\n\005value\030\002 \003(\t\032\242\001\n\020StringsMapOption\022\017\n\007en" +
-      "abled\030\001 \001(\010\022O\n\005value\030\002 \003(\0132@.yandex.clou" +
-      "d.cdn.v1.ResourceOptions.StringsMapOptio" +
-      "n.ValueEntry\032,\n\nValueEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\032\265\001\n\014CachingTimes\022\024\n\014s" +
-      "imple_value\030\001 \001(\003\022Z\n\rcustom_values\030\002 \003(\013" +
-      "2C.yandex.cloud.cdn.v1.ResourceOptions.C" +
-      "achingTimes.CustomValuesEntry\0323\n\021CustomV" +
-      "aluesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\003:\002" +
-      "8\001\032\223\001\n\021EdgeCacheSettings\022\017\n\007enabled\030\001 \001(" +
-      "\010\022B\n\005value\030\002 \001(\01321.yandex.cloud.cdn.v1.R" +
-      "esourceOptions.CachingTimesH\000\022\027\n\rdefault" +
-      "_value\030\003 \001(\003H\000B\020\n\016values_variant\032\251\003\n\027Str" +
-      "ingVariableMapOption\022\017\n\007enabled\030\001 \001(\010\022V\n" +
-      "\005value\030\002 \003(\0132G.yandex.cloud.cdn.v1.Resou" +
-      "rceOptions.StringVariableMapOption.Value" +
-      "Entry\032\254\001\n\013OneofString\022B\n\005value\030\001 \001(\01321.y" +
-      "andex.cloud.cdn.v1.ResourceOptions.Strin" +
-      "gOptionH\000\022H\n\006values\030\002 \001(\01326.yandex.cloud" +
+      ".HeaderFilterOption\022B\n\007geo_acl\030\031 \001(\01321.y" +
+      "andex.cloud.cdn.v1.ResourceOptions.GeoAC" +
+      "LOption\022L\n\014referrer_acl\030\032 \001(\01326.yandex.c" +
+      "loud.cdn.v1.ResourceOptions.ReferrerACLO" +
+      "ption\022R\n\017static_response\030\033 \001(\01329.yandex." +
+      "cloud.cdn.v1.ResourceOptions.StaticRespo" +
+      "nseOption\032,\n\nBoolOption\022\017\n\007enabled\030\001 \001(\010" +
+      "\022\r\n\005value\030\002 \001(\010\032.\n\014StringOption\022\017\n\007enabl" +
+      "ed\030\001 \001(\010\022\r\n\005value\030\002 \001(\t\032-\n\013Int64Option\022\017" +
+      "\n\007enabled\030\001 \001(\010\022\r\n\005value\030\002 \001(\003\0323\n\021String" +
+      "sListOption\022\017\n\007enabled\030\001 \001(\010\022\r\n\005value\030\002 " +
+      "\003(\t\032\242\001\n\020StringsMapOption\022\017\n\007enabled\030\001 \001(" +
+      "\010\022O\n\005value\030\002 \003(\0132@.yandex.cloud.cdn.v1.R" +
+      "esourceOptions.StringsMapOption.ValueEnt" +
+      "ry\032,\n\nValueEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\032\265\001\n\014CachingTimes\022\024\n\014simple_valu" +
+      "e\030\001 \001(\003\022Z\n\rcustom_values\030\002 \003(\0132C.yandex." +
+      "cloud.cdn.v1.ResourceOptions.CachingTime" +
+      "s.CustomValuesEntry\0323\n\021CustomValuesEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\003:\0028\001\032\223\001\n\021Edg" +
+      "eCacheSettings\022\017\n\007enabled\030\001 \001(\010\022B\n\005value" +
+      "\030\002 \001(\01321.yandex.cloud.cdn.v1.ResourceOpt" +
+      "ions.CachingTimesH\000\022\027\n\rdefault_value\030\003 \001" +
+      "(\003H\000B\020\n\016values_variant\032\251\003\n\027StringVariabl" +
+      "eMapOption\022\017\n\007enabled\030\001 \001(\010\022V\n\005value\030\002 \003" +
+      "(\0132G.yandex.cloud.cdn.v1.ResourceOptions" +
+      ".StringVariableMapOption.ValueEntry\032\254\001\n\013" +
+      "OneofString\022B\n\005value\030\001 \001(\01321.yandex.clou" +
+      "d.cdn.v1.ResourceOptions.StringOptionH\000\022" +
+      "H\n\006values\030\002 \001(\01326.yandex.cloud.cdn.v1.Re" +
+      "sourceOptions.StringsListOptionH\000B\017\n\rstr" +
+      "ing_option\032v\n\nValueEntry\022\013\n\003key\030\001 \001(\t\022W\n" +
+      "\005value\030\002 \001(\0132H.yandex.cloud.cdn.v1.Resou" +
+      "rceOptions.StringVariableMapOption.Oneof" +
+      "String:\0028\001\032\260\002\n\022QueryParamsOptions\022N\n\023ign" +
+      "ore_query_string\030\001 \001(\0132/.yandex.cloud.cd" +
+      "n.v1.ResourceOptions.BoolOptionH\000\022X\n\026que" +
+      "ry_params_whitelist\030\002 \001(\01326.yandex.cloud" +
       ".cdn.v1.ResourceOptions.StringsListOptio" +
-      "nH\000B\017\n\rstring_option\032v\n\nValueEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022W\n\005value\030\002 \001(\0132H.yandex.cloud.cd" +
-      "n.v1.ResourceOptions.StringVariableMapOp" +
-      "tion.OneofString:\0028\001\032\260\002\n\022QueryParamsOpti" +
-      "ons\022N\n\023ignore_query_string\030\001 \001(\0132/.yande" +
-      "x.cloud.cdn.v1.ResourceOptions.BoolOptio" +
-      "nH\000\022X\n\026query_params_whitelist\030\002 \001(\01326.ya" +
+      "nH\000\022X\n\026query_params_blacklist\030\003 \001(\01326.ya" +
       "ndex.cloud.cdn.v1.ResourceOptions.String" +
-      "sListOptionH\000\022X\n\026query_params_blacklist\030" +
-      "\003 \001(\01326.yandex.cloud.cdn.v1.ResourceOpti" +
-      "ons.StringsListOptionH\000B\026\n\024query_params_" +
-      "variant\032\313\001\n\017RedirectOptions\022Q\n\026redirect_" +
-      "http_to_https\030\001 \001(\0132/.yandex.cloud.cdn.v" +
-      "1.ResourceOptions.BoolOptionH\000\022Q\n\026redire" +
-      "ct_https_to_http\030\002 \001(\0132/.yandex.cloud.cd" +
-      "n.v1.ResourceOptions.BoolOptionH\000B\022\n\020red" +
-      "irect_variant\032\260\001\n\013HostOptions\022A\n\004host\030\001 " +
-      "\001(\01321.yandex.cloud.cdn.v1.ResourceOption" +
-      "s.StringOptionH\000\022N\n\023forward_host_header\030" +
-      "\002 \001(\0132/.yandex.cloud.cdn.v1.ResourceOpti" +
-      "ons.BoolOptionH\000B\016\n\014host_variant\032\222\002\n\022Com" +
-      "pressionOptions\022K\n\020fetch_compressed\030\001 \001(" +
-      "\0132/.yandex.cloud.cdn.v1.ResourceOptions." +
-      "BoolOptionH\000\022B\n\007gzip_on\030\002 \001(\0132/.yandex.c" +
-      "loud.cdn.v1.ResourceOptions.BoolOptionH\000" +
-      "\022T\n\022brotli_compression\030\003 \001(\01326.yandex.cl" +
-      "oud.cdn.v1.ResourceOptions.StringsListOp" +
-      "tionH\000B\025\n\023compression_variant\032^\n\rRewrite" +
-      "Option\022\017\n\007enabled\030\001 \001(\010\022\014\n\004body\030\002 \001(\t\022.\n" +
-      "\004flag\030\003 \001(\0162 .yandex.cloud.cdn.v1.Rewrit" +
-      "eFlag\032d\n\017SecureKeyOption\022\017\n\007enabled\030\001 \001(" +
-      "\010\022\013\n\003key\030\002 \001(\t\0223\n\004type\030\003 \001(\0162%.yandex.cl" +
-      "oud.cdn.v1.SecureKeyURLType\032t\n\022IPAddress" +
-      "ACLOption\022\017\n\007enabled\030\001 \001(\010\0224\n\013policy_typ" +
-      "e\030\002 \001(\0162\037.yandex.cloud.cdn.v1.PolicyType" +
-      "\022\027\n\017excepted_values\030\003 \003(\t\"\204\001\n\024SSLTargetC" +
-      "ertificate\0225\n\004type\030\001 \001(\0162\'.yandex.cloud." +
-      "cdn.v1.SSLCertificateType\0225\n\004data\030\002 \001(\0132" +
-      "\'.yandex.cloud.cdn.v1.SSLCertificateData" +
-      "\"\271\001\n\016SSLCertificate\0225\n\004type\030\001 \001(\0162\'.yand" +
-      "ex.cloud.cdn.v1.SSLCertificateType\0229\n\006st" +
-      "atus\030\002 \001(\0162).yandex.cloud.cdn.v1.SSLCert" +
-      "ificateStatus\0225\n\004data\030\003 \001(\0132\'.yandex.clo" +
-      "ud.cdn.v1.SSLCertificateData\"m\n\022SSLCerti" +
-      "ficateData\0227\n\002cm\030\001 \001(\0132).yandex.cloud.cd" +
-      "n.v1.SSLCertificateCMDataH\000B\036\n\034ssl_certi" +
-      "ficate_data_variant\"\"\n\024SSLCertificateCMD" +
-      "ata\022\n\n\002id\030\001 \001(\t*Q\n\016OriginProtocol\022\037\n\033ORI" +
-      "GIN_PROTOCOL_UNSPECIFIED\020\000\022\010\n\004HTTP\020\001\022\t\n\005" +
-      "HTTPS\020\002\022\t\n\005MATCH\020\003*]\n\013RewriteFlag\022\034\n\030REW" +
-      "RITE_FLAG_UNSPECIFIED\020\000\022\010\n\004LAST\020\001\022\t\n\005BRE" +
-      "AK\020\002\022\014\n\010REDIRECT\020\003\022\r\n\tPERMANENT\020\004*f\n\020Sec" +
-      "ureKeyURLType\022#\n\037SECURE_KEY_URL_TYPE_UNS" +
-      "PECIFIED\020\000\022\025\n\021ENABLE_IP_SIGNING\020\001\022\026\n\022DIS" +
-      "ABLE_IP_SIGNING\020\002*V\n\nPolicyType\022\033\n\027POLIC" +
-      "Y_TYPE_UNSPECIFIED\020\000\022\025\n\021POLICY_TYPE_ALLO" +
-      "W\020\001\022\024\n\020POLICY_TYPE_DENY\020\002*l\n\022SSLCertific" +
-      "ateType\022$\n SSL_CERTIFICATE_TYPE_UNSPECIF" +
-      "IED\020\000\022\014\n\010DONT_USE\020\001\022\032\n\022LETS_ENCRYPT_GCOR" +
-      "E\020\002\032\002\010\001\022\006\n\002CM\020\003*[\n\024SSLCertificateStatus\022" +
-      "&\n\"SSL_CERTIFICATE_STATUS_UNSPECIFIED\020\000\022" +
-      "\t\n\005READY\020\001\022\020\n\010CREATING\020\002\032\002\010\001BV\n\027yandex.c" +
-      "loud.api.cdn.v1Z;github.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/cdn/v1;cdnb\006pr" +
-      "oto3"
+      "sListOptionH\000B\026\n\024query_params_variant\032\317\001" +
+      "\n\017RedirectOptions\022Q\n\026redirect_http_to_ht" +
+      "tps\030\001 \001(\0132/.yandex.cloud.cdn.v1.Resource" +
+      "Options.BoolOptionH\000\022U\n\026redirect_https_t" +
+      "o_http\030\002 \001(\0132/.yandex.cloud.cdn.v1.Resou" +
+      "rceOptions.BoolOptionB\002\030\001H\000B\022\n\020redirect_" +
+      "variant\032\260\001\n\013HostOptions\022A\n\004host\030\001 \001(\01321." +
+      "yandex.cloud.cdn.v1.ResourceOptions.Stri" +
+      "ngOptionH\000\022N\n\023forward_host_header\030\002 \001(\0132" +
+      "/.yandex.cloud.cdn.v1.ResourceOptions.Bo" +
+      "olOptionH\000B\016\n\014host_variant\032\222\002\n\022Compressi" +
+      "onOptions\022K\n\020fetch_compressed\030\001 \001(\0132/.ya" +
+      "ndex.cloud.cdn.v1.ResourceOptions.BoolOp" +
+      "tionH\000\022B\n\007gzip_on\030\002 \001(\0132/.yandex.cloud.c" +
+      "dn.v1.ResourceOptions.BoolOptionH\000\022T\n\022br" +
+      "otli_compression\030\003 \001(\01326.yandex.cloud.cd" +
+      "n.v1.ResourceOptions.StringsListOptionH\000" +
+      "B\025\n\023compression_variant\032^\n\rRewriteOption" +
+      "\022\017\n\007enabled\030\001 \001(\010\022\014\n\004body\030\002 \001(\t\022.\n\004flag\030" +
+      "\003 \001(\0162 .yandex.cloud.cdn.v1.RewriteFlag\032" +
+      "d\n\017SecureKeyOption\022\017\n\007enabled\030\001 \001(\010\022\013\n\003k" +
+      "ey\030\002 \001(\t\0223\n\004type\030\003 \001(\0162%.yandex.cloud.cd" +
+      "n.v1.SecureKeyURLType\032t\n\022IPAddressACLOpt" +
+      "ion\022\017\n\007enabled\030\001 \001(\010\0224\n\013policy_type\030\002 \001(" +
+      "\0162\037.yandex.cloud.cdn.v1.PolicyType\022\027\n\017ex" +
+      "cepted_values\030\003 \003(\t\032P\n\025FollowRedirectsOp" +
+      "tion\022\017\n\007enabled\030\001 \001(\010\022\r\n\005codes\030\002 \003(\003\022\027\n\017" +
+      "use_custom_host\030\003 \001(\010\032#\n\020WebsocketsOptio" +
+      "n\022\017\n\007enabled\030\001 \001(\010\0326\n\022HeaderFilterOption" +
+      "\022\017\n\007enabled\030\001 \001(\010\022\017\n\007headers\030\002 \003(\t\032\265\001\n\014G" +
+      "eoACLOption\022\017\n\007enabled\030\001 \001(\010\022D\n\004mode\030\002 \001" +
+      "(\01626.yandex.cloud.cdn.v1.ResourceOptions" +
+      ".GeoACLOption.Mode\022\021\n\tcountries\030\003 \003(\t\";\n" +
+      "\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\016\n\nMODE_ALLO" +
+      "W\020\001\022\r\n\tMODE_DENY\020\002\032\277\001\n\021ReferrerACLOption" +
+      "\022\017\n\007enabled\030\001 \001(\010\022I\n\004mode\030\002 \001(\0162;.yandex" +
+      ".cloud.cdn.v1.ResourceOptions.ReferrerAC" +
+      "LOption.Mode\022\021\n\treferrers\030\003 \003(\t\";\n\004Mode\022" +
+      "\024\n\020MODE_UNSPECIFIED\020\000\022\016\n\nMODE_ALLOW\020\001\022\r\n" +
+      "\tMODE_DENY\020\002\032F\n\024StaticResponseOption\022\017\n\007" +
+      "enabled\030\001 \001(\010\022\014\n\004code\030\002 \001(\003\022\017\n\007content\030\003" +
+      " \001(\t\"\204\001\n\024SSLTargetCertificate\0225\n\004type\030\001 " +
+      "\001(\0162\'.yandex.cloud.cdn.v1.SSLCertificate" +
+      "Type\0225\n\004data\030\002 \001(\0132\'.yandex.cloud.cdn.v1" +
+      ".SSLCertificateData\"\271\001\n\016SSLCertificate\0225" +
+      "\n\004type\030\001 \001(\0162\'.yandex.cloud.cdn.v1.SSLCe" +
+      "rtificateType\0229\n\006status\030\002 \001(\0162).yandex.c" +
+      "loud.cdn.v1.SSLCertificateStatus\0225\n\004data" +
+      "\030\003 \001(\0132\'.yandex.cloud.cdn.v1.SSLCertific" +
+      "ateData\"m\n\022SSLCertificateData\0227\n\002cm\030\001 \001(" +
+      "\0132).yandex.cloud.cdn.v1.SSLCertificateCM" +
+      "DataH\000B\036\n\034ssl_certificate_data_variant\"\"" +
+      "\n\024SSLCertificateCMData\022\n\n\002id\030\001 \001(\t\"\260\001\n\003T" +
+      "LS\0221\n\007profile\030\001 \001(\0162 .yandex.cloud.cdn.v" +
+      "1.TLS.Profile\"v\n\007Profile\022\027\n\023PROFILE_UNSP" +
+      "ECIFIED\020\000\022\026\n\022PROFILE_COMPATIBLE\020\001\022\022\n\016PRO" +
+      "FILE_LEGACY\020\002\022\022\n\016PROFILE_SECURE\020\003\022\022\n\016PRO" +
+      "FILE_STRICT\020\004*Q\n\016OriginProtocol\022\037\n\033ORIGI" +
+      "N_PROTOCOL_UNSPECIFIED\020\000\022\010\n\004HTTP\020\001\022\t\n\005HT" +
+      "TPS\020\002\022\t\n\005MATCH\020\003*]\n\013RewriteFlag\022\034\n\030REWRI" +
+      "TE_FLAG_UNSPECIFIED\020\000\022\010\n\004LAST\020\001\022\t\n\005BREAK" +
+      "\020\002\022\014\n\010REDIRECT\020\003\022\r\n\tPERMANENT\020\004*f\n\020Secur" +
+      "eKeyURLType\022#\n\037SECURE_KEY_URL_TYPE_UNSPE" +
+      "CIFIED\020\000\022\025\n\021ENABLE_IP_SIGNING\020\001\022\026\n\022DISAB" +
+      "LE_IP_SIGNING\020\002*V\n\nPolicyType\022\033\n\027POLICY_" +
+      "TYPE_UNSPECIFIED\020\000\022\025\n\021POLICY_TYPE_ALLOW\020" +
+      "\001\022\024\n\020POLICY_TYPE_DENY\020\002*l\n\022SSLCertificat" +
+      "eType\022$\n SSL_CERTIFICATE_TYPE_UNSPECIFIE" +
+      "D\020\000\022\014\n\010DONT_USE\020\001\022\032\n\022LETS_ENCRYPT_GCORE\020" +
+      "\002\032\002\010\001\022\006\n\002CM\020\003*[\n\024SSLCertificateStatus\022&\n" +
+      "\"SSL_CERTIFICATE_STATUS_UNSPECIFIED\020\000\022\t\n" +
+      "\005READY\020\001\022\020\n\010CREATING\020\002\032\002\010\001BV\n\027yandex.clo" +
+      "ud.api.cdn.v1Z;github.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/cdn/v1;cdnb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -30324,7 +38205,7 @@ public final class ResourceOuterClass {
     internal_static_yandex_cloud_cdn_v1_Resource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cdn_v1_Resource_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "Cname", "CreatedAt", "UpdatedAt", "Active", "Options", "SecondaryHostnames", "OriginGroupId", "OriginGroupName", "OriginProtocol", "SslCertificate", "Labels", "ProviderType", "ProviderCname", });
+        new java.lang.String[] { "Id", "FolderId", "Cname", "CreatedAt", "UpdatedAt", "Active", "Options", "SecondaryHostnames", "OriginGroupId", "OriginGroupName", "OriginProtocol", "SslCertificate", "Labels", "ProviderType", "ProviderCname", "Tls", });
     internal_static_yandex_cloud_cdn_v1_Resource_LabelsEntry_descriptor =
       internal_static_yandex_cloud_cdn_v1_Resource_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_cdn_v1_Resource_LabelsEntry_fieldAccessorTable = new
@@ -30336,7 +38217,7 @@ public final class ResourceOuterClass {
     internal_static_yandex_cloud_cdn_v1_ResourceOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cdn_v1_ResourceOptions_descriptor,
-        new java.lang.String[] { "DisableCache", "EdgeCacheSettings", "BrowserCacheSettings", "CacheHttpHeaders", "QueryParamsOptions", "Slice", "CompressionOptions", "RedirectOptions", "HostOptions", "StaticHeaders", "Cors", "Stale", "AllowedHttpMethods", "ProxyCacheMethodsSet", "DisableProxyForceRanges", "StaticRequestHeaders", "CustomServerName", "IgnoreCookie", "Rewrite", "SecureKey", "IpAddressAcl", });
+        new java.lang.String[] { "DisableCache", "EdgeCacheSettings", "BrowserCacheSettings", "CacheHttpHeaders", "QueryParamsOptions", "Slice", "CompressionOptions", "RedirectOptions", "HostOptions", "StaticHeaders", "Cors", "Stale", "AllowedHttpMethods", "ProxyCacheMethodsSet", "DisableProxyForceRanges", "StaticRequestHeaders", "CustomServerName", "IgnoreCookie", "Rewrite", "SecureKey", "IpAddressAcl", "FollowRedirects", "Websockets", "HeaderFilter", "GeoAcl", "ReferrerAcl", "StaticResponse", });
     internal_static_yandex_cloud_cdn_v1_ResourceOptions_BoolOption_descriptor =
       internal_static_yandex_cloud_cdn_v1_ResourceOptions_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_cdn_v1_ResourceOptions_BoolOption_fieldAccessorTable = new
@@ -30451,6 +38332,42 @@ public final class ResourceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cdn_v1_ResourceOptions_IPAddressACLOption_descriptor,
         new java.lang.String[] { "Enabled", "PolicyType", "ExceptedValues", });
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_FollowRedirectsOption_descriptor =
+      internal_static_yandex_cloud_cdn_v1_ResourceOptions_descriptor.getNestedTypes().get(15);
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_FollowRedirectsOption_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cdn_v1_ResourceOptions_FollowRedirectsOption_descriptor,
+        new java.lang.String[] { "Enabled", "Codes", "UseCustomHost", });
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_WebsocketsOption_descriptor =
+      internal_static_yandex_cloud_cdn_v1_ResourceOptions_descriptor.getNestedTypes().get(16);
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_WebsocketsOption_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cdn_v1_ResourceOptions_WebsocketsOption_descriptor,
+        new java.lang.String[] { "Enabled", });
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_HeaderFilterOption_descriptor =
+      internal_static_yandex_cloud_cdn_v1_ResourceOptions_descriptor.getNestedTypes().get(17);
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_HeaderFilterOption_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cdn_v1_ResourceOptions_HeaderFilterOption_descriptor,
+        new java.lang.String[] { "Enabled", "Headers", });
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_GeoACLOption_descriptor =
+      internal_static_yandex_cloud_cdn_v1_ResourceOptions_descriptor.getNestedTypes().get(18);
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_GeoACLOption_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cdn_v1_ResourceOptions_GeoACLOption_descriptor,
+        new java.lang.String[] { "Enabled", "Mode", "Countries", });
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_ReferrerACLOption_descriptor =
+      internal_static_yandex_cloud_cdn_v1_ResourceOptions_descriptor.getNestedTypes().get(19);
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_ReferrerACLOption_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cdn_v1_ResourceOptions_ReferrerACLOption_descriptor,
+        new java.lang.String[] { "Enabled", "Mode", "Referrers", });
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_StaticResponseOption_descriptor =
+      internal_static_yandex_cloud_cdn_v1_ResourceOptions_descriptor.getNestedTypes().get(20);
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_StaticResponseOption_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cdn_v1_ResourceOptions_StaticResponseOption_descriptor,
+        new java.lang.String[] { "Enabled", "Code", "Content", });
     internal_static_yandex_cloud_cdn_v1_SSLTargetCertificate_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_cdn_v1_SSLTargetCertificate_fieldAccessorTable = new
@@ -30475,6 +38392,12 @@ public final class ResourceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cdn_v1_SSLCertificateCMData_descriptor,
         new java.lang.String[] { "Id", });
+    internal_static_yandex_cloud_cdn_v1_TLS_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_yandex_cloud_cdn_v1_TLS_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cdn_v1_TLS_descriptor,
+        new java.lang.String[] { "Profile", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

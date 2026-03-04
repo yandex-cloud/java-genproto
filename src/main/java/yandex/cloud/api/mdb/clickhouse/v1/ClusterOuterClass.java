@@ -6326,6 +6326,26 @@ public final class ClusterOuterClass {
      * <code>.google.protobuf.Int64Value backup_retain_period_days = 10;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder();
+
+    /**
+     * <pre>
+     * Full version
+     * </pre>
+     *
+     * <code>string full_version = 11;</code>
+     * @return The fullVersion.
+     */
+    java.lang.String getFullVersion();
+    /**
+     * <pre>
+     * Full version
+     * </pre>
+     *
+     * <code>string full_version = 11;</code>
+     * @return The bytes for fullVersion.
+     */
+    com.google.protobuf.ByteString
+        getFullVersionBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.ClusterConfig}
@@ -6341,6 +6361,7 @@ public final class ClusterOuterClass {
     }
     private ClusterConfig() {
       version_ = "";
+      fullVersion_ = "";
     }
 
     @java.lang.Override
@@ -6494,6 +6515,12 @@ public final class ClusterOuterClass {
                 backupRetainPeriodDays_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fullVersion_ = s;
               break;
             }
             default: {
@@ -9055,6 +9082,52 @@ public final class ClusterOuterClass {
       return getBackupRetainPeriodDays();
     }
 
+    public static final int FULL_VERSION_FIELD_NUMBER = 11;
+    private volatile java.lang.Object fullVersion_;
+    /**
+     * <pre>
+     * Full version
+     * </pre>
+     *
+     * <code>string full_version = 11;</code>
+     * @return The fullVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getFullVersion() {
+      java.lang.Object ref = fullVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fullVersion_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Full version
+     * </pre>
+     *
+     * <code>string full_version = 11;</code>
+     * @return The bytes for fullVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFullVersionBytes() {
+      java.lang.Object ref = fullVersion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fullVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9098,6 +9171,9 @@ public final class ClusterOuterClass {
       }
       if (backupRetainPeriodDays_ != null) {
         output.writeMessage(10, getBackupRetainPeriodDays());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fullVersion_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, fullVersion_);
       }
       unknownFields.writeTo(output);
     }
@@ -9146,6 +9222,9 @@ public final class ClusterOuterClass {
       if (backupRetainPeriodDays_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getBackupRetainPeriodDays());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fullVersion_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, fullVersion_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9209,6 +9288,8 @@ public final class ClusterOuterClass {
         if (!getBackupRetainPeriodDays()
             .equals(other.getBackupRetainPeriodDays())) return false;
       }
+      if (!getFullVersion()
+          .equals(other.getFullVersion())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9258,6 +9339,8 @@ public final class ClusterOuterClass {
         hash = (37 * hash) + BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER;
         hash = (53 * hash) + getBackupRetainPeriodDays().hashCode();
       }
+      hash = (37 * hash) + FULL_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getFullVersion().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9447,6 +9530,8 @@ public final class ClusterOuterClass {
           backupRetainPeriodDays_ = null;
           backupRetainPeriodDaysBuilder_ = null;
         }
+        fullVersion_ = "";
+
         return this;
       }
 
@@ -9519,6 +9604,7 @@ public final class ClusterOuterClass {
         } else {
           result.backupRetainPeriodDays_ = backupRetainPeriodDaysBuilder_.build();
         }
+        result.fullVersion_ = fullVersion_;
         onBuilt();
         return result;
       }
@@ -9597,6 +9683,10 @@ public final class ClusterOuterClass {
         }
         if (other.hasBackupRetainPeriodDays()) {
           mergeBackupRetainPeriodDays(other.getBackupRetainPeriodDays());
+        }
+        if (!other.getFullVersion().isEmpty()) {
+          fullVersion_ = other.fullVersion_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11080,6 +11170,102 @@ public final class ClusterOuterClass {
           backupRetainPeriodDays_ = null;
         }
         return backupRetainPeriodDaysBuilder_;
+      }
+
+      private java.lang.Object fullVersion_ = "";
+      /**
+       * <pre>
+       * Full version
+       * </pre>
+       *
+       * <code>string full_version = 11;</code>
+       * @return The fullVersion.
+       */
+      public java.lang.String getFullVersion() {
+        java.lang.Object ref = fullVersion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fullVersion_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Full version
+       * </pre>
+       *
+       * <code>string full_version = 11;</code>
+       * @return The bytes for fullVersion.
+       */
+      public com.google.protobuf.ByteString
+          getFullVersionBytes() {
+        java.lang.Object ref = fullVersion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fullVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Full version
+       * </pre>
+       *
+       * <code>string full_version = 11;</code>
+       * @param value The fullVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFullVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        fullVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Full version
+       * </pre>
+       *
+       * <code>string full_version = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFullVersion() {
+        
+        fullVersion_ = getDefaultInstance().getFullVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Full version
+       * </pre>
+       *
+       * <code>string full_version = 11;</code>
+       * @param value The bytes for fullVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFullVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        fullVersion_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -16816,6 +17002,14 @@ public final class ClusterOuterClass {
        * <code>ZOOKEEPER = 2;</code>
        */
       ZOOKEEPER(2),
+      /**
+       * <pre>
+       * ClickHouse Keeper host.
+       * </pre>
+       *
+       * <code>KEEPER = 3;</code>
+       */
+      KEEPER(3),
       UNRECOGNIZED(-1),
       ;
 
@@ -16843,6 +17037,14 @@ public final class ClusterOuterClass {
        * <code>ZOOKEEPER = 2;</code>
        */
       public static final int ZOOKEEPER_VALUE = 2;
+      /**
+       * <pre>
+       * ClickHouse Keeper host.
+       * </pre>
+       *
+       * <code>KEEPER = 3;</code>
+       */
+      public static final int KEEPER_VALUE = 3;
 
 
       public final int getNumber() {
@@ -16872,6 +17074,7 @@ public final class ClusterOuterClass {
           case 0: return TYPE_UNSPECIFIED;
           case 1: return CLICKHOUSE;
           case 2: return ZOOKEEPER;
+          case 3: return KEEPER;
           default: return null;
         }
       }
@@ -19362,6 +19565,14 @@ public final class ClusterOuterClass {
        * <code>ZOOKEEPER = 2;</code>
        */
       ZOOKEEPER(2),
+      /**
+       * <pre>
+       * The host is a ClickHouse Keeper server.
+       * </pre>
+       *
+       * <code>KEEPER = 3;</code>
+       */
+      KEEPER(3),
       UNRECOGNIZED(-1),
       ;
 
@@ -19389,6 +19600,14 @@ public final class ClusterOuterClass {
        * <code>ZOOKEEPER = 2;</code>
        */
       public static final int ZOOKEEPER_VALUE = 2;
+      /**
+       * <pre>
+       * The host is a ClickHouse Keeper server.
+       * </pre>
+       *
+       * <code>KEEPER = 3;</code>
+       */
+      public static final int KEEPER_VALUE = 3;
 
 
       public final int getNumber() {
@@ -19418,6 +19637,7 @@ public final class ClusterOuterClass {
           case 0: return TYPE_UNSPECIFIED;
           case 1: return CLICKHOUSE;
           case 2: return ZOOKEEPER;
+          case 3: return KEEPER;
           default: return null;
         }
       }
@@ -24780,7 +25000,7 @@ public final class ClusterOuterClass {
       "NG\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPIN" +
       "G\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007J\004\010\022\020\023\"=\n\n" +
       "Monitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030" +
-      "\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\344\007\n\rClusterConfig\022\017\n" +
+      "\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\372\007\n\rClusterConfig\022\017\n" +
       "\007version\030\001 \001(\t\022L\n\nclickhouse\030\002 \001(\01328.yan" +
       "dex.cloud.mdb.clickhouse.v1.ClusterConfi" +
       "g.Clickhouse\022J\n\tzookeeper\030\003 \001(\01327.yandex" +
@@ -24795,73 +25015,74 @@ public final class ClusterOuterClass {
       "oogle.protobuf.BoolValue\0223\n\017embedded_kee" +
       "per\030\t \001(\0132\032.google.protobuf.BoolValue\022>\n" +
       "\031backup_retain_period_days\030\n \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\032\352\001\n\nClickhouse\022J\n\006" +
-      "config\030\001 \001(\0132:.yandex.cloud.mdb.clickhou" +
-      "se.v1.config.ClickhouseConfigSet\022<\n\treso" +
-      "urces\030\002 \001(\0132).yandex.cloud.mdb.clickhous" +
-      "e.v1.Resources\022R\n\025disk_size_autoscaling\030" +
-      "\003 \001(\01323.yandex.cloud.mdb.clickhouse.v1.D" +
-      "iskSizeAutoscaling\032\235\001\n\tZookeeper\022<\n\treso" +
-      "urces\030\001 \001(\0132).yandex.cloud.mdb.clickhous" +
-      "e.v1.Resources\022R\n\025disk_size_autoscaling\030" +
-      "\002 \001(\01323.yandex.cloud.mdb.clickhouse.v1.D" +
-      "iskSizeAutoscaling\"f\n\005Shard\022\014\n\004name\030\001 \001(" +
-      "\t\022\022\n\ncluster_id\030\002 \001(\t\022;\n\006config\030\003 \001(\0132+." +
-      "yandex.cloud.mdb.clickhouse.v1.ShardConf" +
-      "ig\"?\n\006Shards\0225\n\006shards\030\001 \003(\0132%.yandex.cl" +
-      "oud.mdb.clickhouse.v1.Shard\"X\n\nShardGrou" +
-      "p\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\023\n\013d" +
-      "escription\030\003 \001(\t\022\023\n\013shard_names\030\004 \003(\t\"\363\002" +
-      "\n\013ShardConfig\022J\n\nclickhouse\030\001 \001(\01326.yand" +
-      "ex.cloud.mdb.clickhouse.v1.ShardConfig.C" +
-      "lickhouse\032\227\002\n\nClickhouse\022J\n\006config\030\001 \001(\013" +
-      "2:.yandex.cloud.mdb.clickhouse.v1.config" +
-      ".ClickhouseConfigSet\022<\n\tresources\030\002 \001(\0132" +
-      ").yandex.cloud.mdb.clickhouse.v1.Resourc" +
-      "es\022+\n\006weight\030\003 \001(\0132\033.google.protobuf.Int" +
-      "64Value\022R\n\025disk_size_autoscaling\030\004 \001(\01323" +
-      ".yandex.cloud.mdb.clickhouse.v1.DiskSize" +
-      "Autoscaling\"\375\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncl" +
-      "uster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0227\n\004type\030" +
-      "\004 \001(\0162).yandex.cloud.mdb.clickhouse.v1.H" +
-      "ost.Type\022<\n\tresources\030\005 \001(\0132).yandex.clo" +
-      "ud.mdb.clickhouse.v1.Resources\022;\n\006health" +
-      "\030\006 \001(\0162+.yandex.cloud.mdb.clickhouse.v1." +
-      "Host.Health\0229\n\010services\030\007 \003(\0132\'.yandex.c" +
-      "loud.mdb.clickhouse.v1.Service\022\021\n\tsubnet" +
-      "_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\022\022\n\ns" +
-      "hard_name\030\n \001(\t\";\n\004Type\022\024\n\020TYPE_UNSPECIF" +
-      "IED\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\tZOOKEEPER\020\002\"U\n\006" +
-      "Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002" +
-      "\022\014\n\010DEGRADED\020\003\022\014\n\010READONLY\020\004\022\r\n\tRESTORIN" +
-      "G\020\005\"\213\002\n\007Service\022:\n\004type\030\001 \001(\0162,.yandex.c" +
-      "loud.mdb.clickhouse.v1.Service.Type\022>\n\006h" +
-      "ealth\030\002 \001(\0162..yandex.cloud.mdb.clickhous" +
-      "e.v1.Service.Health\";\n\004Type\022\024\n\020TYPE_UNSP" +
-      "ECIFIED\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\tZOOKEEPER\020\002" +
-      "\"G\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DE" +
-      "AD\020\002\022\014\n\010READONLY\020\003\022\r\n\tRESTORING\020\004\"P\n\tRes" +
-      "ources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdi" +
-      "sk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"~\n\006A" +
-      "ccess\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(" +
-      "\010\022\017\n\007metrika\030\003 \001(\010\022\022\n\nserverless\030\004 \001(\010\022\025" +
-      "\n\rdata_transfer\030\005 \001(\010\022\024\n\014yandex_query\030\006 " +
-      "\001(\010\"\206\002\n\014CloudStorage\022\017\n\007enabled\030\001 \001(\010\022:\n" +
-      "\013move_factor\030\002 \001(\0132\034.google.protobuf.Dou" +
-      "bleValueB\007\372\3071\0030-1\0226\n\022data_cache_enabled\030" +
-      "\003 \001(\0132\032.google.protobuf.BoolValue\0228\n\023dat" +
-      "a_cache_max_size\030\004 \001(\0132\033.google.protobuf" +
-      ".Int64Value\0227\n\023prefer_not_to_merge\030\005 \001(\013" +
-      "2\032.google.protobuf.BoolValue\"\347\001\n\023DiskSiz" +
-      "eAutoscaling\022K\n\027planned_usage_threshold\030" +
-      "\001 \001(\0132\033.google.protobuf.Int64ValueB\r\350\3071\000" +
-      "\372\3071\0050-100\022M\n\031emergency_usage_threshold\030\002" +
-      " \001(\0132\033.google.protobuf.Int64ValueB\r\350\3071\000\372" +
-      "\3071\0050-100\0224\n\017disk_size_limit\030\003 \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueBs\n\"yandex.cloud.a" +
-      "pi.mdb.clickhouse.v1ZMgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/mdb/click" +
-      "house/v1;clickhouseb\006proto3"
+      "e.protobuf.Int64Value\022\024\n\014full_version\030\013 " +
+      "\001(\t\032\352\001\n\nClickhouse\022J\n\006config\030\001 \001(\0132:.yan" +
+      "dex.cloud.mdb.clickhouse.v1.config.Click" +
+      "houseConfigSet\022<\n\tresources\030\002 \001(\0132).yand" +
+      "ex.cloud.mdb.clickhouse.v1.Resources\022R\n\025" +
+      "disk_size_autoscaling\030\003 \001(\01323.yandex.clo" +
+      "ud.mdb.clickhouse.v1.DiskSizeAutoscaling" +
+      "\032\235\001\n\tZookeeper\022<\n\tresources\030\001 \001(\0132).yand" +
+      "ex.cloud.mdb.clickhouse.v1.Resources\022R\n\025" +
+      "disk_size_autoscaling\030\002 \001(\01323.yandex.clo" +
+      "ud.mdb.clickhouse.v1.DiskSizeAutoscaling" +
+      "\"f\n\005Shard\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 " +
+      "\001(\t\022;\n\006config\030\003 \001(\0132+.yandex.cloud.mdb.c" +
+      "lickhouse.v1.ShardConfig\"?\n\006Shards\0225\n\006sh" +
+      "ards\030\001 \003(\0132%.yandex.cloud.mdb.clickhouse" +
+      ".v1.Shard\"X\n\nShardGroup\022\014\n\004name\030\001 \001(\t\022\022\n" +
+      "\ncluster_id\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\023" +
+      "\n\013shard_names\030\004 \003(\t\"\363\002\n\013ShardConfig\022J\n\nc" +
+      "lickhouse\030\001 \001(\01326.yandex.cloud.mdb.click" +
+      "house.v1.ShardConfig.Clickhouse\032\227\002\n\nClic" +
+      "khouse\022J\n\006config\030\001 \001(\0132:.yandex.cloud.md" +
+      "b.clickhouse.v1.config.ClickhouseConfigS" +
+      "et\022<\n\tresources\030\002 \001(\0132).yandex.cloud.mdb" +
+      ".clickhouse.v1.Resources\022+\n\006weight\030\003 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022R\n\025disk_si" +
+      "ze_autoscaling\030\004 \001(\01323.yandex.cloud.mdb." +
+      "clickhouse.v1.DiskSizeAutoscaling\"\211\004\n\004Ho" +
+      "st\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007" +
+      "zone_id\030\003 \001(\t\0227\n\004type\030\004 \001(\0162).yandex.clo" +
+      "ud.mdb.clickhouse.v1.Host.Type\022<\n\tresour" +
+      "ces\030\005 \001(\0132).yandex.cloud.mdb.clickhouse." +
+      "v1.Resources\022;\n\006health\030\006 \001(\0162+.yandex.cl" +
+      "oud.mdb.clickhouse.v1.Host.Health\0229\n\010ser" +
+      "vices\030\007 \003(\0132\'.yandex.cloud.mdb.clickhous" +
+      "e.v1.Service\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assig" +
+      "n_public_ip\030\t \001(\010\022\022\n\nshard_name\030\n \001(\t\"G\n" +
+      "\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\016\n\nCLICKHOUS" +
+      "E\020\001\022\r\n\tZOOKEEPER\020\002\022\n\n\006KEEPER\020\003\"U\n\006Health" +
+      "\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DE" +
+      "GRADED\020\003\022\014\n\010READONLY\020\004\022\r\n\tRESTORING\020\005\"\227\002" +
+      "\n\007Service\022:\n\004type\030\001 \001(\0162,.yandex.cloud.m" +
+      "db.clickhouse.v1.Service.Type\022>\n\006health\030" +
+      "\002 \001(\0162..yandex.cloud.mdb.clickhouse.v1.S" +
+      "ervice.Health\"G\n\004Type\022\024\n\020TYPE_UNSPECIFIE" +
+      "D\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\tZOOKEEPER\020\002\022\n\n\006KE" +
+      "EPER\020\003\"G\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001" +
+      "\022\010\n\004DEAD\020\002\022\014\n\010READONLY\020\003\022\r\n\tRESTORING\020\004\"" +
+      "P\n\tResources\022\032\n\022resource_preset_id\030\001 \001(\t" +
+      "\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(" +
+      "\t\"~\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sq" +
+      "l\030\002 \001(\010\022\017\n\007metrika\030\003 \001(\010\022\022\n\nserverless\030\004" +
+      " \001(\010\022\025\n\rdata_transfer\030\005 \001(\010\022\024\n\014yandex_qu" +
+      "ery\030\006 \001(\010\"\206\002\n\014CloudStorage\022\017\n\007enabled\030\001 " +
+      "\001(\010\022:\n\013move_factor\030\002 \001(\0132\034.google.protob" +
+      "uf.DoubleValueB\007\372\3071\0030-1\0226\n\022data_cache_en" +
+      "abled\030\003 \001(\0132\032.google.protobuf.BoolValue\022" +
+      "8\n\023data_cache_max_size\030\004 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\0227\n\023prefer_not_to_merge" +
+      "\030\005 \001(\0132\032.google.protobuf.BoolValue\"\347\001\n\023D" +
+      "iskSizeAutoscaling\022K\n\027planned_usage_thre" +
+      "shold\030\001 \001(\0132\033.google.protobuf.Int64Value" +
+      "B\r\350\3071\000\372\3071\0050-100\022M\n\031emergency_usage_thres" +
+      "hold\030\002 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\r\350\3071\000\372\3071\0050-100\0224\n\017disk_size_limit\030\003 \001(\0132" +
+      "\033.google.protobuf.Int64ValueBs\n\"yandex.c" +
+      "loud.api.mdb.clickhouse.v1ZMgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/mdb" +
+      "/clickhouse/v1;clickhouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24896,7 +25117,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "Version", "Clickhouse", "Zookeeper", "BackupWindowStart", "Access", "CloudStorage", "SqlDatabaseManagement", "SqlUserManagement", "EmbeddedKeeper", "BackupRetainPeriodDays", });
+        new java.lang.String[] { "Version", "Clickhouse", "Zookeeper", "BackupWindowStart", "Access", "CloudStorage", "SqlDatabaseManagement", "SqlUserManagement", "EmbeddedKeeper", "BackupRetainPeriodDays", "FullVersion", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ClusterConfig_Clickhouse_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_ClusterConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ClusterConfig_Clickhouse_fieldAccessorTable = new

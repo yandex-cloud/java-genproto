@@ -11508,7 +11508,7 @@ public final class FolderServiceOuterClass {
       "\3071\006<=1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=200" +
       "0\"n\n\034ListFolderOperationsResponse\0225\n\nope" +
       "rations\030\001 \003(\0132!.yandex.cloud.operation.O" +
-      "peration\022\027\n\017next_page_token\030\002 \001(\t2\204\016\n\rFo" +
+      "peration\022\027\n\017next_page_token\030\002 \001(\t2\243\026\n\rFo" +
       "lderService\022\223\001\n\003Get\0221.yandex.cloud.resou" +
       "rcemanager.v1.GetFolderRequest\032\'.yandex." +
       "cloud.resourcemanager.v1.Folder\"0\202\323\344\223\002*\022" +
@@ -11553,11 +11553,37 @@ public final class FolderServiceOuterClass {
       "\323\344\223\002D\"?/resource-manager/v1/folders/{res" +
       "ource_id}:updateAccessBindings:\001*\262\322*K\n#a" +
       "ccess.UpdateAccessBindingsMetadata\022$acce" +
-      "ss.AccessBindingsOperationResultBz\n#yand" +
-      "ex.cloud.api.resourcemanager.v1ZSgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/resourcemanager/v1;resourcemanagerb\006pr" +
-      "oto3"
+      "ss.AccessBindingsOperationResult\022\324\001\n\030Lis" +
+      "tAccessPolicyBindings\0224.yandex.cloud.acc" +
+      "ess.ListAccessPolicyBindingsRequest\0325.ya" +
+      "ndex.cloud.access.ListAccessPolicyBindin" +
+      "gsResponse\"K\202\323\344\223\002E\022C/resource-manager/v1" +
+      "/folders/{resource_id}:listAccessPolicyB" +
+      "indings\022\362\001\n\020BindAccessPolicy\022,.yandex.cl" +
+      "oud.access.BindAccessPolicyRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"\214\001\202\323\344\223\002@\";" +
+      "/resource-manager/v1/folders/{resource_i" +
+      "d}:bindAccessPolicy:\001*\262\322*B\n\037access.BindA" +
+      "ccessPolicyMetadata\022\037access.BindAccessPo" +
+      "licyResponse\022\374\001\n\022UnbindAccessPolicy\022..ya" +
+      "ndex.cloud.access.UnbindAccessPolicyRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"\222" +
+      "\001\202\323\344\223\002B\"=/resource-manager/v1/folders/{r" +
+      "esource_id}:unbindAccessPolicy:\001*\262\322*F\n!a" +
+      "ccess.UnbindAccessPolicyMetadata\022!access" +
+      ".UnbindAccessPolicyResponse\022\321\002\n#UpdateAc" +
+      "cessPolicyBindingParameters\022?.yandex.clo" +
+      "ud.access.UpdateAccessPolicyBindingParam" +
+      "etersRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"\305\001\202\323\344\223\002S2N/resource-manager/v1/f" +
+      "olders/{resource_id}:updateAccessPolicyB" +
+      "indingParameters:\001*\262\322*h\n2access.UpdateAc" +
+      "cessPolicyBindingParametersMetadata\0222acc" +
+      "ess.UpdateAccessPolicyBindingParametersR" +
+      "esponseBz\n#yandex.cloud.api.resourcemana" +
+      "ger.v1ZSgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/resourcemanager/v1;reso" +
+      "urcemanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

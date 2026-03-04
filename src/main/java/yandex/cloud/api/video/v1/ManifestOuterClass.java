@@ -62,6 +62,8 @@ public final class ManifestOuterClass {
    * Represents a streaming manifest file that defines how video content is delivered.
    * Manifests contain information about available video qualities, audio tracks,
    * and other metadata needed by video players to stream content efficiently.
+   * Manifests and its url MUST not be cached.
+   * The player MUST request a fresh manifest every time playback starts.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.video.v1.Manifest}
@@ -545,6 +547,8 @@ public final class ManifestOuterClass {
      * Represents a streaming manifest file that defines how video content is delivered.
      * Manifests contain information about available video qualities, audio tracks,
      * and other metadata needed by video players to stream content efficiently.
+     * Manifests and its url MUST not be cached.
+     * The player MUST request a fresh manifest every time playback starts.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.video.v1.Manifest}

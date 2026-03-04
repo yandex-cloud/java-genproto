@@ -6800,6 +6800,53 @@ public final class ClusterOuterClass {
      */
     com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder();
 
+    /**
+     * <pre>
+     * Valkey modules settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeyModules modules = 14;</code>
+     * @return Whether the modules field is set.
+     */
+    boolean hasModules();
+    /**
+     * <pre>
+     * Valkey modules settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeyModules modules = 14;</code>
+     * @return The modules.
+     */
+    yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules getModules();
+    /**
+     * <pre>
+     * Valkey modules settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeyModules modules = 14;</code>
+     */
+    yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModulesOrBuilder getModulesOrBuilder();
+
+    /**
+     * <pre>
+     * Full version
+     * </pre>
+     *
+     * <code>string full_version = 15;</code>
+     * @return The fullVersion.
+     */
+    java.lang.String getFullVersion();
+    /**
+     * <pre>
+     * Full version
+     * </pre>
+     *
+     * <code>string full_version = 15;</code>
+     * @return The bytes for fullVersion.
+     */
+    com.google.protobuf.ByteString
+        getFullVersionBytes();
+
     public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ClusterConfig.RedisConfigCase getRedisConfigCase();
   }
   /**
@@ -6816,6 +6863,7 @@ public final class ClusterOuterClass {
     }
     private ClusterConfig() {
       version_ = "";
+      fullVersion_ = "";
     }
 
     @java.lang.Override
@@ -6986,6 +7034,25 @@ public final class ClusterOuterClass {
                 backupRetainPeriodDays_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 114: {
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules.Builder subBuilder = null;
+              if (modules_ != null) {
+                subBuilder = modules_.toBuilder();
+              }
+              modules_ = input.readMessage(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(modules_);
+                modules_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fullVersion_ = s;
               break;
             }
             default: {
@@ -7511,6 +7578,90 @@ public final class ClusterOuterClass {
       return getBackupRetainPeriodDays();
     }
 
+    public static final int MODULES_FIELD_NUMBER = 14;
+    private yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules modules_;
+    /**
+     * <pre>
+     * Valkey modules settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeyModules modules = 14;</code>
+     * @return Whether the modules field is set.
+     */
+    @java.lang.Override
+    public boolean hasModules() {
+      return modules_ != null;
+    }
+    /**
+     * <pre>
+     * Valkey modules settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeyModules modules = 14;</code>
+     * @return The modules.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules getModules() {
+      return modules_ == null ? yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules.getDefaultInstance() : modules_;
+    }
+    /**
+     * <pre>
+     * Valkey modules settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeyModules modules = 14;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModulesOrBuilder getModulesOrBuilder() {
+      return getModules();
+    }
+
+    public static final int FULL_VERSION_FIELD_NUMBER = 15;
+    private volatile java.lang.Object fullVersion_;
+    /**
+     * <pre>
+     * Full version
+     * </pre>
+     *
+     * <code>string full_version = 15;</code>
+     * @return The fullVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getFullVersion() {
+      java.lang.Object ref = fullVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fullVersion_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Full version
+     * </pre>
+     *
+     * <code>string full_version = 15;</code>
+     * @return The bytes for fullVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFullVersionBytes() {
+      java.lang.Object ref = fullVersion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fullVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7557,6 +7708,12 @@ public final class ClusterOuterClass {
       }
       if (backupRetainPeriodDays_ != null) {
         output.writeMessage(13, getBackupRetainPeriodDays());
+      }
+      if (modules_ != null) {
+        output.writeMessage(14, getModules());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fullVersion_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, fullVersion_);
       }
       unknownFields.writeTo(output);
     }
@@ -7610,6 +7767,13 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getBackupRetainPeriodDays());
       }
+      if (modules_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getModules());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fullVersion_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, fullVersion_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7657,6 +7821,13 @@ public final class ClusterOuterClass {
         if (!getBackupRetainPeriodDays()
             .equals(other.getBackupRetainPeriodDays())) return false;
       }
+      if (hasModules() != other.hasModules()) return false;
+      if (hasModules()) {
+        if (!getModules()
+            .equals(other.getModules())) return false;
+      }
+      if (!getFullVersion()
+          .equals(other.getFullVersion())) return false;
       if (!getRedisConfigCase().equals(other.getRedisConfigCase())) return false;
       switch (redisConfigCase_) {
         case 2:
@@ -7715,6 +7886,12 @@ public final class ClusterOuterClass {
         hash = (37 * hash) + BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER;
         hash = (53 * hash) + getBackupRetainPeriodDays().hashCode();
       }
+      if (hasModules()) {
+        hash = (37 * hash) + MODULES_FIELD_NUMBER;
+        hash = (53 * hash) + getModules().hashCode();
+      }
+      hash = (37 * hash) + FULL_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getFullVersion().hashCode();
       switch (redisConfigCase_) {
         case 2:
           hash = (37 * hash) + REDIS_CONFIG_5_0_FIELD_NUMBER;
@@ -7906,6 +8083,14 @@ public final class ClusterOuterClass {
           backupRetainPeriodDays_ = null;
           backupRetainPeriodDaysBuilder_ = null;
         }
+        if (modulesBuilder_ == null) {
+          modules_ = null;
+        } else {
+          modules_ = null;
+          modulesBuilder_ = null;
+        }
+        fullVersion_ = "";
+
         redisConfigCase_ = 0;
         redisConfig_ = null;
         return this;
@@ -7993,6 +8178,12 @@ public final class ClusterOuterClass {
         } else {
           result.backupRetainPeriodDays_ = backupRetainPeriodDaysBuilder_.build();
         }
+        if (modulesBuilder_ == null) {
+          result.modules_ = modules_;
+        } else {
+          result.modules_ = modulesBuilder_.build();
+        }
+        result.fullVersion_ = fullVersion_;
         result.redisConfigCase_ = redisConfigCase_;
         onBuilt();
         return result;
@@ -8063,6 +8254,13 @@ public final class ClusterOuterClass {
         }
         if (other.hasBackupRetainPeriodDays()) {
           mergeBackupRetainPeriodDays(other.getBackupRetainPeriodDays());
+        }
+        if (other.hasModules()) {
+          mergeModules(other.getModules());
+        }
+        if (!other.getFullVersion().isEmpty()) {
+          fullVersion_ = other.fullVersion_;
+          onChanged();
         }
         switch (other.getRedisConfigCase()) {
           case REDIS_CONFIG_5_0: {
@@ -9861,6 +10059,257 @@ public final class ClusterOuterClass {
           backupRetainPeriodDays_ = null;
         }
         return backupRetainPeriodDaysBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules modules_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules.Builder, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModulesOrBuilder> modulesBuilder_;
+      /**
+       * <pre>
+       * Valkey modules settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyModules modules = 14;</code>
+       * @return Whether the modules field is set.
+       */
+      public boolean hasModules() {
+        return modulesBuilder_ != null || modules_ != null;
+      }
+      /**
+       * <pre>
+       * Valkey modules settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyModules modules = 14;</code>
+       * @return The modules.
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules getModules() {
+        if (modulesBuilder_ == null) {
+          return modules_ == null ? yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules.getDefaultInstance() : modules_;
+        } else {
+          return modulesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Valkey modules settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyModules modules = 14;</code>
+       */
+      public Builder setModules(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules value) {
+        if (modulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          modules_ = value;
+          onChanged();
+        } else {
+          modulesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Valkey modules settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyModules modules = 14;</code>
+       */
+      public Builder setModules(
+          yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules.Builder builderForValue) {
+        if (modulesBuilder_ == null) {
+          modules_ = builderForValue.build();
+          onChanged();
+        } else {
+          modulesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Valkey modules settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyModules modules = 14;</code>
+       */
+      public Builder mergeModules(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules value) {
+        if (modulesBuilder_ == null) {
+          if (modules_ != null) {
+            modules_ =
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules.newBuilder(modules_).mergeFrom(value).buildPartial();
+          } else {
+            modules_ = value;
+          }
+          onChanged();
+        } else {
+          modulesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Valkey modules settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyModules modules = 14;</code>
+       */
+      public Builder clearModules() {
+        if (modulesBuilder_ == null) {
+          modules_ = null;
+          onChanged();
+        } else {
+          modules_ = null;
+          modulesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Valkey modules settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyModules modules = 14;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules.Builder getModulesBuilder() {
+        
+        onChanged();
+        return getModulesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Valkey modules settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyModules modules = 14;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModulesOrBuilder getModulesOrBuilder() {
+        if (modulesBuilder_ != null) {
+          return modulesBuilder_.getMessageOrBuilder();
+        } else {
+          return modules_ == null ?
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules.getDefaultInstance() : modules_;
+        }
+      }
+      /**
+       * <pre>
+       * Valkey modules settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyModules modules = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules.Builder, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModulesOrBuilder> 
+          getModulesFieldBuilder() {
+        if (modulesBuilder_ == null) {
+          modulesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules.Builder, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModulesOrBuilder>(
+                  getModules(),
+                  getParentForChildren(),
+                  isClean());
+          modules_ = null;
+        }
+        return modulesBuilder_;
+      }
+
+      private java.lang.Object fullVersion_ = "";
+      /**
+       * <pre>
+       * Full version
+       * </pre>
+       *
+       * <code>string full_version = 15;</code>
+       * @return The fullVersion.
+       */
+      public java.lang.String getFullVersion() {
+        java.lang.Object ref = fullVersion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fullVersion_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Full version
+       * </pre>
+       *
+       * <code>string full_version = 15;</code>
+       * @return The bytes for fullVersion.
+       */
+      public com.google.protobuf.ByteString
+          getFullVersionBytes() {
+        java.lang.Object ref = fullVersion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fullVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Full version
+       * </pre>
+       *
+       * <code>string full_version = 15;</code>
+       * @param value The fullVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFullVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        fullVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Full version
+       * </pre>
+       *
+       * <code>string full_version = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFullVersion() {
+        
+        fullVersion_ = getDefaultInstance().getFullVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Full version
+       * </pre>
+       *
+       * <code>string full_version = 15;</code>
+       * @param value The bytes for fullVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFullVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        fullVersion_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -17490,6 +17939,3266 @@ public final class ClusterOuterClass {
 
   }
 
+  public interface ValkeyModulesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.redis.v1.ValkeyModules)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * valkey-search module settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeySearch valkey_search = 1;</code>
+     * @return Whether the valkeySearch field is set.
+     */
+    boolean hasValkeySearch();
+    /**
+     * <pre>
+     * valkey-search module settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeySearch valkey_search = 1;</code>
+     * @return The valkeySearch.
+     */
+    yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch getValkeySearch();
+    /**
+     * <pre>
+     * valkey-search module settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeySearch valkey_search = 1;</code>
+     */
+    yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearchOrBuilder getValkeySearchOrBuilder();
+
+    /**
+     * <pre>
+     * valkey-json module settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeyJson valkey_json = 2;</code>
+     * @return Whether the valkeyJson field is set.
+     */
+    boolean hasValkeyJson();
+    /**
+     * <pre>
+     * valkey-json module settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeyJson valkey_json = 2;</code>
+     * @return The valkeyJson.
+     */
+    yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson getValkeyJson();
+    /**
+     * <pre>
+     * valkey-json module settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeyJson valkey_json = 2;</code>
+     */
+    yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJsonOrBuilder getValkeyJsonOrBuilder();
+
+    /**
+     * <pre>
+     * valkey-bloom module settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeyBloom valkey_bloom = 3;</code>
+     * @return Whether the valkeyBloom field is set.
+     */
+    boolean hasValkeyBloom();
+    /**
+     * <pre>
+     * valkey-bloom module settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeyBloom valkey_bloom = 3;</code>
+     * @return The valkeyBloom.
+     */
+    yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom getValkeyBloom();
+    /**
+     * <pre>
+     * valkey-bloom module settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeyBloom valkey_bloom = 3;</code>
+     */
+    yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloomOrBuilder getValkeyBloomOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.redis.v1.ValkeyModules}
+   */
+  public static final class ValkeyModules extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.redis.v1.ValkeyModules)
+      ValkeyModulesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ValkeyModules.newBuilder() to construct.
+    private ValkeyModules(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ValkeyModules() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ValkeyModules();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ValkeyModules(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch.Builder subBuilder = null;
+              if (valkeySearch_ != null) {
+                subBuilder = valkeySearch_.toBuilder();
+              }
+              valkeySearch_ = input.readMessage(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(valkeySearch_);
+                valkeySearch_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson.Builder subBuilder = null;
+              if (valkeyJson_ != null) {
+                subBuilder = valkeyJson_.toBuilder();
+              }
+              valkeyJson_ = input.readMessage(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(valkeyJson_);
+                valkeyJson_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom.Builder subBuilder = null;
+              if (valkeyBloom_ != null) {
+                subBuilder = valkeyBloom_.toBuilder();
+              }
+              valkeyBloom_ = input.readMessage(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(valkeyBloom_);
+                valkeyBloom_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_ValkeyModules_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_ValkeyModules_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules.class, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules.Builder.class);
+    }
+
+    public static final int VALKEY_SEARCH_FIELD_NUMBER = 1;
+    private yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch valkeySearch_;
+    /**
+     * <pre>
+     * valkey-search module settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeySearch valkey_search = 1;</code>
+     * @return Whether the valkeySearch field is set.
+     */
+    @java.lang.Override
+    public boolean hasValkeySearch() {
+      return valkeySearch_ != null;
+    }
+    /**
+     * <pre>
+     * valkey-search module settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeySearch valkey_search = 1;</code>
+     * @return The valkeySearch.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch getValkeySearch() {
+      return valkeySearch_ == null ? yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch.getDefaultInstance() : valkeySearch_;
+    }
+    /**
+     * <pre>
+     * valkey-search module settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeySearch valkey_search = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearchOrBuilder getValkeySearchOrBuilder() {
+      return getValkeySearch();
+    }
+
+    public static final int VALKEY_JSON_FIELD_NUMBER = 2;
+    private yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson valkeyJson_;
+    /**
+     * <pre>
+     * valkey-json module settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeyJson valkey_json = 2;</code>
+     * @return Whether the valkeyJson field is set.
+     */
+    @java.lang.Override
+    public boolean hasValkeyJson() {
+      return valkeyJson_ != null;
+    }
+    /**
+     * <pre>
+     * valkey-json module settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeyJson valkey_json = 2;</code>
+     * @return The valkeyJson.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson getValkeyJson() {
+      return valkeyJson_ == null ? yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson.getDefaultInstance() : valkeyJson_;
+    }
+    /**
+     * <pre>
+     * valkey-json module settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeyJson valkey_json = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJsonOrBuilder getValkeyJsonOrBuilder() {
+      return getValkeyJson();
+    }
+
+    public static final int VALKEY_BLOOM_FIELD_NUMBER = 3;
+    private yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom valkeyBloom_;
+    /**
+     * <pre>
+     * valkey-bloom module settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeyBloom valkey_bloom = 3;</code>
+     * @return Whether the valkeyBloom field is set.
+     */
+    @java.lang.Override
+    public boolean hasValkeyBloom() {
+      return valkeyBloom_ != null;
+    }
+    /**
+     * <pre>
+     * valkey-bloom module settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeyBloom valkey_bloom = 3;</code>
+     * @return The valkeyBloom.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom getValkeyBloom() {
+      return valkeyBloom_ == null ? yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom.getDefaultInstance() : valkeyBloom_;
+    }
+    /**
+     * <pre>
+     * valkey-bloom module settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.ValkeyBloom valkey_bloom = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloomOrBuilder getValkeyBloomOrBuilder() {
+      return getValkeyBloom();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (valkeySearch_ != null) {
+        output.writeMessage(1, getValkeySearch());
+      }
+      if (valkeyJson_ != null) {
+        output.writeMessage(2, getValkeyJson());
+      }
+      if (valkeyBloom_ != null) {
+        output.writeMessage(3, getValkeyBloom());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (valkeySearch_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getValkeySearch());
+      }
+      if (valkeyJson_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getValkeyJson());
+      }
+      if (valkeyBloom_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getValkeyBloom());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules other = (yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules) obj;
+
+      if (hasValkeySearch() != other.hasValkeySearch()) return false;
+      if (hasValkeySearch()) {
+        if (!getValkeySearch()
+            .equals(other.getValkeySearch())) return false;
+      }
+      if (hasValkeyJson() != other.hasValkeyJson()) return false;
+      if (hasValkeyJson()) {
+        if (!getValkeyJson()
+            .equals(other.getValkeyJson())) return false;
+      }
+      if (hasValkeyBloom() != other.hasValkeyBloom()) return false;
+      if (hasValkeyBloom()) {
+        if (!getValkeyBloom()
+            .equals(other.getValkeyBloom())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasValkeySearch()) {
+        hash = (37 * hash) + VALKEY_SEARCH_FIELD_NUMBER;
+        hash = (53 * hash) + getValkeySearch().hashCode();
+      }
+      if (hasValkeyJson()) {
+        hash = (37 * hash) + VALKEY_JSON_FIELD_NUMBER;
+        hash = (53 * hash) + getValkeyJson().hashCode();
+      }
+      if (hasValkeyBloom()) {
+        hash = (37 * hash) + VALKEY_BLOOM_FIELD_NUMBER;
+        hash = (53 * hash) + getValkeyBloom().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.redis.v1.ValkeyModules}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.redis.v1.ValkeyModules)
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModulesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_ValkeyModules_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_ValkeyModules_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules.class, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (valkeySearchBuilder_ == null) {
+          valkeySearch_ = null;
+        } else {
+          valkeySearch_ = null;
+          valkeySearchBuilder_ = null;
+        }
+        if (valkeyJsonBuilder_ == null) {
+          valkeyJson_ = null;
+        } else {
+          valkeyJson_ = null;
+          valkeyJsonBuilder_ = null;
+        }
+        if (valkeyBloomBuilder_ == null) {
+          valkeyBloom_ = null;
+        } else {
+          valkeyBloom_ = null;
+          valkeyBloomBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_ValkeyModules_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules build() {
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules buildPartial() {
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules result = new yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules(this);
+        if (valkeySearchBuilder_ == null) {
+          result.valkeySearch_ = valkeySearch_;
+        } else {
+          result.valkeySearch_ = valkeySearchBuilder_.build();
+        }
+        if (valkeyJsonBuilder_ == null) {
+          result.valkeyJson_ = valkeyJson_;
+        } else {
+          result.valkeyJson_ = valkeyJsonBuilder_.build();
+        }
+        if (valkeyBloomBuilder_ == null) {
+          result.valkeyBloom_ = valkeyBloom_;
+        } else {
+          result.valkeyBloom_ = valkeyBloomBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules) {
+          return mergeFrom((yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules other) {
+        if (other == yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules.getDefaultInstance()) return this;
+        if (other.hasValkeySearch()) {
+          mergeValkeySearch(other.getValkeySearch());
+        }
+        if (other.hasValkeyJson()) {
+          mergeValkeyJson(other.getValkeyJson());
+        }
+        if (other.hasValkeyBloom()) {
+          mergeValkeyBloom(other.getValkeyBloom());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch valkeySearch_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch.Builder, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearchOrBuilder> valkeySearchBuilder_;
+      /**
+       * <pre>
+       * valkey-search module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeySearch valkey_search = 1;</code>
+       * @return Whether the valkeySearch field is set.
+       */
+      public boolean hasValkeySearch() {
+        return valkeySearchBuilder_ != null || valkeySearch_ != null;
+      }
+      /**
+       * <pre>
+       * valkey-search module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeySearch valkey_search = 1;</code>
+       * @return The valkeySearch.
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch getValkeySearch() {
+        if (valkeySearchBuilder_ == null) {
+          return valkeySearch_ == null ? yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch.getDefaultInstance() : valkeySearch_;
+        } else {
+          return valkeySearchBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * valkey-search module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeySearch valkey_search = 1;</code>
+       */
+      public Builder setValkeySearch(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch value) {
+        if (valkeySearchBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          valkeySearch_ = value;
+          onChanged();
+        } else {
+          valkeySearchBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * valkey-search module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeySearch valkey_search = 1;</code>
+       */
+      public Builder setValkeySearch(
+          yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch.Builder builderForValue) {
+        if (valkeySearchBuilder_ == null) {
+          valkeySearch_ = builderForValue.build();
+          onChanged();
+        } else {
+          valkeySearchBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * valkey-search module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeySearch valkey_search = 1;</code>
+       */
+      public Builder mergeValkeySearch(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch value) {
+        if (valkeySearchBuilder_ == null) {
+          if (valkeySearch_ != null) {
+            valkeySearch_ =
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch.newBuilder(valkeySearch_).mergeFrom(value).buildPartial();
+          } else {
+            valkeySearch_ = value;
+          }
+          onChanged();
+        } else {
+          valkeySearchBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * valkey-search module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeySearch valkey_search = 1;</code>
+       */
+      public Builder clearValkeySearch() {
+        if (valkeySearchBuilder_ == null) {
+          valkeySearch_ = null;
+          onChanged();
+        } else {
+          valkeySearch_ = null;
+          valkeySearchBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * valkey-search module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeySearch valkey_search = 1;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch.Builder getValkeySearchBuilder() {
+        
+        onChanged();
+        return getValkeySearchFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * valkey-search module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeySearch valkey_search = 1;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearchOrBuilder getValkeySearchOrBuilder() {
+        if (valkeySearchBuilder_ != null) {
+          return valkeySearchBuilder_.getMessageOrBuilder();
+        } else {
+          return valkeySearch_ == null ?
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch.getDefaultInstance() : valkeySearch_;
+        }
+      }
+      /**
+       * <pre>
+       * valkey-search module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeySearch valkey_search = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch.Builder, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearchOrBuilder> 
+          getValkeySearchFieldBuilder() {
+        if (valkeySearchBuilder_ == null) {
+          valkeySearchBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch.Builder, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearchOrBuilder>(
+                  getValkeySearch(),
+                  getParentForChildren(),
+                  isClean());
+          valkeySearch_ = null;
+        }
+        return valkeySearchBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson valkeyJson_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson.Builder, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJsonOrBuilder> valkeyJsonBuilder_;
+      /**
+       * <pre>
+       * valkey-json module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyJson valkey_json = 2;</code>
+       * @return Whether the valkeyJson field is set.
+       */
+      public boolean hasValkeyJson() {
+        return valkeyJsonBuilder_ != null || valkeyJson_ != null;
+      }
+      /**
+       * <pre>
+       * valkey-json module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyJson valkey_json = 2;</code>
+       * @return The valkeyJson.
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson getValkeyJson() {
+        if (valkeyJsonBuilder_ == null) {
+          return valkeyJson_ == null ? yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson.getDefaultInstance() : valkeyJson_;
+        } else {
+          return valkeyJsonBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * valkey-json module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyJson valkey_json = 2;</code>
+       */
+      public Builder setValkeyJson(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson value) {
+        if (valkeyJsonBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          valkeyJson_ = value;
+          onChanged();
+        } else {
+          valkeyJsonBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * valkey-json module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyJson valkey_json = 2;</code>
+       */
+      public Builder setValkeyJson(
+          yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson.Builder builderForValue) {
+        if (valkeyJsonBuilder_ == null) {
+          valkeyJson_ = builderForValue.build();
+          onChanged();
+        } else {
+          valkeyJsonBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * valkey-json module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyJson valkey_json = 2;</code>
+       */
+      public Builder mergeValkeyJson(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson value) {
+        if (valkeyJsonBuilder_ == null) {
+          if (valkeyJson_ != null) {
+            valkeyJson_ =
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson.newBuilder(valkeyJson_).mergeFrom(value).buildPartial();
+          } else {
+            valkeyJson_ = value;
+          }
+          onChanged();
+        } else {
+          valkeyJsonBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * valkey-json module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyJson valkey_json = 2;</code>
+       */
+      public Builder clearValkeyJson() {
+        if (valkeyJsonBuilder_ == null) {
+          valkeyJson_ = null;
+          onChanged();
+        } else {
+          valkeyJson_ = null;
+          valkeyJsonBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * valkey-json module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyJson valkey_json = 2;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson.Builder getValkeyJsonBuilder() {
+        
+        onChanged();
+        return getValkeyJsonFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * valkey-json module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyJson valkey_json = 2;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJsonOrBuilder getValkeyJsonOrBuilder() {
+        if (valkeyJsonBuilder_ != null) {
+          return valkeyJsonBuilder_.getMessageOrBuilder();
+        } else {
+          return valkeyJson_ == null ?
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson.getDefaultInstance() : valkeyJson_;
+        }
+      }
+      /**
+       * <pre>
+       * valkey-json module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyJson valkey_json = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson.Builder, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJsonOrBuilder> 
+          getValkeyJsonFieldBuilder() {
+        if (valkeyJsonBuilder_ == null) {
+          valkeyJsonBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson.Builder, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJsonOrBuilder>(
+                  getValkeyJson(),
+                  getParentForChildren(),
+                  isClean());
+          valkeyJson_ = null;
+        }
+        return valkeyJsonBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom valkeyBloom_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom.Builder, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloomOrBuilder> valkeyBloomBuilder_;
+      /**
+       * <pre>
+       * valkey-bloom module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyBloom valkey_bloom = 3;</code>
+       * @return Whether the valkeyBloom field is set.
+       */
+      public boolean hasValkeyBloom() {
+        return valkeyBloomBuilder_ != null || valkeyBloom_ != null;
+      }
+      /**
+       * <pre>
+       * valkey-bloom module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyBloom valkey_bloom = 3;</code>
+       * @return The valkeyBloom.
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom getValkeyBloom() {
+        if (valkeyBloomBuilder_ == null) {
+          return valkeyBloom_ == null ? yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom.getDefaultInstance() : valkeyBloom_;
+        } else {
+          return valkeyBloomBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * valkey-bloom module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyBloom valkey_bloom = 3;</code>
+       */
+      public Builder setValkeyBloom(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom value) {
+        if (valkeyBloomBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          valkeyBloom_ = value;
+          onChanged();
+        } else {
+          valkeyBloomBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * valkey-bloom module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyBloom valkey_bloom = 3;</code>
+       */
+      public Builder setValkeyBloom(
+          yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom.Builder builderForValue) {
+        if (valkeyBloomBuilder_ == null) {
+          valkeyBloom_ = builderForValue.build();
+          onChanged();
+        } else {
+          valkeyBloomBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * valkey-bloom module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyBloom valkey_bloom = 3;</code>
+       */
+      public Builder mergeValkeyBloom(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom value) {
+        if (valkeyBloomBuilder_ == null) {
+          if (valkeyBloom_ != null) {
+            valkeyBloom_ =
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom.newBuilder(valkeyBloom_).mergeFrom(value).buildPartial();
+          } else {
+            valkeyBloom_ = value;
+          }
+          onChanged();
+        } else {
+          valkeyBloomBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * valkey-bloom module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyBloom valkey_bloom = 3;</code>
+       */
+      public Builder clearValkeyBloom() {
+        if (valkeyBloomBuilder_ == null) {
+          valkeyBloom_ = null;
+          onChanged();
+        } else {
+          valkeyBloom_ = null;
+          valkeyBloomBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * valkey-bloom module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyBloom valkey_bloom = 3;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom.Builder getValkeyBloomBuilder() {
+        
+        onChanged();
+        return getValkeyBloomFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * valkey-bloom module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyBloom valkey_bloom = 3;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloomOrBuilder getValkeyBloomOrBuilder() {
+        if (valkeyBloomBuilder_ != null) {
+          return valkeyBloomBuilder_.getMessageOrBuilder();
+        } else {
+          return valkeyBloom_ == null ?
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom.getDefaultInstance() : valkeyBloom_;
+        }
+      }
+      /**
+       * <pre>
+       * valkey-bloom module settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.ValkeyBloom valkey_bloom = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom.Builder, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloomOrBuilder> 
+          getValkeyBloomFieldBuilder() {
+        if (valkeyBloomBuilder_ == null) {
+          valkeyBloomBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom.Builder, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloomOrBuilder>(
+                  getValkeyBloom(),
+                  getParentForChildren(),
+                  isClean());
+          valkeyBloom_ = null;
+        }
+        return valkeyBloomBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.redis.v1.ValkeyModules)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.redis.v1.ValkeyModules)
+    private static final yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules();
+    }
+
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ValkeyModules>
+        PARSER = new com.google.protobuf.AbstractParser<ValkeyModules>() {
+      @java.lang.Override
+      public ValkeyModules parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ValkeyModules(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ValkeyModules> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ValkeyModules> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyModules getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ValkeySearchOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.redis.v1.ValkeySearch)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Enable valkey-search module
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     * @return The enabled.
+     */
+    boolean getEnabled();
+
+    /**
+     * <pre>
+     * Controls the amount of threads executing queries
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value reader_threads = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the readerThreads field is set.
+     */
+    boolean hasReaderThreads();
+    /**
+     * <pre>
+     * Controls the amount of threads executing queries
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value reader_threads = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The readerThreads.
+     */
+    com.google.protobuf.Int64Value getReaderThreads();
+    /**
+     * <pre>
+     * Controls the amount of threads executing queries
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value reader_threads = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getReaderThreadsOrBuilder();
+
+    /**
+     * <pre>
+     * Controls the amount of threads processing index mutations
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value writer_threads = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the writerThreads field is set.
+     */
+    boolean hasWriterThreads();
+    /**
+     * <pre>
+     * Controls the amount of threads processing index mutations
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value writer_threads = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The writerThreads.
+     */
+    com.google.protobuf.Int64Value getWriterThreads();
+    /**
+     * <pre>
+     * Controls the amount of threads processing index mutations
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value writer_threads = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getWriterThreadsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.redis.v1.ValkeySearch}
+   */
+  public static final class ValkeySearch extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.redis.v1.ValkeySearch)
+      ValkeySearchOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ValkeySearch.newBuilder() to construct.
+    private ValkeySearch(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ValkeySearch() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ValkeySearch();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ValkeySearch(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              enabled_ = input.readBool();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (readerThreads_ != null) {
+                subBuilder = readerThreads_.toBuilder();
+              }
+              readerThreads_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(readerThreads_);
+                readerThreads_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (writerThreads_ != null) {
+                subBuilder = writerThreads_.toBuilder();
+              }
+              writerThreads_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(writerThreads_);
+                writerThreads_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_ValkeySearch_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_ValkeySearch_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch.class, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch.Builder.class);
+    }
+
+    public static final int ENABLED_FIELD_NUMBER = 1;
+    private boolean enabled_;
+    /**
+     * <pre>
+     * Enable valkey-search module
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     * @return The enabled.
+     */
+    @java.lang.Override
+    public boolean getEnabled() {
+      return enabled_;
+    }
+
+    public static final int READER_THREADS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Int64Value readerThreads_;
+    /**
+     * <pre>
+     * Controls the amount of threads executing queries
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value reader_threads = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the readerThreads field is set.
+     */
+    @java.lang.Override
+    public boolean hasReaderThreads() {
+      return readerThreads_ != null;
+    }
+    /**
+     * <pre>
+     * Controls the amount of threads executing queries
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value reader_threads = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The readerThreads.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getReaderThreads() {
+      return readerThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : readerThreads_;
+    }
+    /**
+     * <pre>
+     * Controls the amount of threads executing queries
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value reader_threads = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getReaderThreadsOrBuilder() {
+      return getReaderThreads();
+    }
+
+    public static final int WRITER_THREADS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Int64Value writerThreads_;
+    /**
+     * <pre>
+     * Controls the amount of threads processing index mutations
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value writer_threads = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the writerThreads field is set.
+     */
+    @java.lang.Override
+    public boolean hasWriterThreads() {
+      return writerThreads_ != null;
+    }
+    /**
+     * <pre>
+     * Controls the amount of threads processing index mutations
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value writer_threads = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The writerThreads.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getWriterThreads() {
+      return writerThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : writerThreads_;
+    }
+    /**
+     * <pre>
+     * Controls the amount of threads processing index mutations
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value writer_threads = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getWriterThreadsOrBuilder() {
+      return getWriterThreads();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enabled_ != false) {
+        output.writeBool(1, enabled_);
+      }
+      if (readerThreads_ != null) {
+        output.writeMessage(2, getReaderThreads());
+      }
+      if (writerThreads_ != null) {
+        output.writeMessage(3, getWriterThreads());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enabled_);
+      }
+      if (readerThreads_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getReaderThreads());
+      }
+      if (writerThreads_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getWriterThreads());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch other = (yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch) obj;
+
+      if (getEnabled()
+          != other.getEnabled()) return false;
+      if (hasReaderThreads() != other.hasReaderThreads()) return false;
+      if (hasReaderThreads()) {
+        if (!getReaderThreads()
+            .equals(other.getReaderThreads())) return false;
+      }
+      if (hasWriterThreads() != other.hasWriterThreads()) return false;
+      if (hasWriterThreads()) {
+        if (!getWriterThreads()
+            .equals(other.getWriterThreads())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnabled());
+      if (hasReaderThreads()) {
+        hash = (37 * hash) + READER_THREADS_FIELD_NUMBER;
+        hash = (53 * hash) + getReaderThreads().hashCode();
+      }
+      if (hasWriterThreads()) {
+        hash = (37 * hash) + WRITER_THREADS_FIELD_NUMBER;
+        hash = (53 * hash) + getWriterThreads().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.redis.v1.ValkeySearch}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.redis.v1.ValkeySearch)
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearchOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_ValkeySearch_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_ValkeySearch_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch.class, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        enabled_ = false;
+
+        if (readerThreadsBuilder_ == null) {
+          readerThreads_ = null;
+        } else {
+          readerThreads_ = null;
+          readerThreadsBuilder_ = null;
+        }
+        if (writerThreadsBuilder_ == null) {
+          writerThreads_ = null;
+        } else {
+          writerThreads_ = null;
+          writerThreadsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_ValkeySearch_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch build() {
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch buildPartial() {
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch result = new yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch(this);
+        result.enabled_ = enabled_;
+        if (readerThreadsBuilder_ == null) {
+          result.readerThreads_ = readerThreads_;
+        } else {
+          result.readerThreads_ = readerThreadsBuilder_.build();
+        }
+        if (writerThreadsBuilder_ == null) {
+          result.writerThreads_ = writerThreads_;
+        } else {
+          result.writerThreads_ = writerThreadsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch) {
+          return mergeFrom((yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch other) {
+        if (other == yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch.getDefaultInstance()) return this;
+        if (other.getEnabled() != false) {
+          setEnabled(other.getEnabled());
+        }
+        if (other.hasReaderThreads()) {
+          mergeReaderThreads(other.getReaderThreads());
+        }
+        if (other.hasWriterThreads()) {
+          mergeWriterThreads(other.getWriterThreads());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean enabled_ ;
+      /**
+       * <pre>
+       * Enable valkey-search module
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+      /**
+       * <pre>
+       * Enable valkey-search module
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @param value The enabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnabled(boolean value) {
+        
+        enabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable valkey-search module
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnabled() {
+        
+        enabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value readerThreads_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> readerThreadsBuilder_;
+      /**
+       * <pre>
+       * Controls the amount of threads executing queries
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value reader_threads = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the readerThreads field is set.
+       */
+      public boolean hasReaderThreads() {
+        return readerThreadsBuilder_ != null || readerThreads_ != null;
+      }
+      /**
+       * <pre>
+       * Controls the amount of threads executing queries
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value reader_threads = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The readerThreads.
+       */
+      public com.google.protobuf.Int64Value getReaderThreads() {
+        if (readerThreadsBuilder_ == null) {
+          return readerThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : readerThreads_;
+        } else {
+          return readerThreadsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Controls the amount of threads executing queries
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value reader_threads = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setReaderThreads(com.google.protobuf.Int64Value value) {
+        if (readerThreadsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          readerThreads_ = value;
+          onChanged();
+        } else {
+          readerThreadsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls the amount of threads executing queries
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value reader_threads = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setReaderThreads(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (readerThreadsBuilder_ == null) {
+          readerThreads_ = builderForValue.build();
+          onChanged();
+        } else {
+          readerThreadsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls the amount of threads executing queries
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value reader_threads = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeReaderThreads(com.google.protobuf.Int64Value value) {
+        if (readerThreadsBuilder_ == null) {
+          if (readerThreads_ != null) {
+            readerThreads_ =
+              com.google.protobuf.Int64Value.newBuilder(readerThreads_).mergeFrom(value).buildPartial();
+          } else {
+            readerThreads_ = value;
+          }
+          onChanged();
+        } else {
+          readerThreadsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls the amount of threads executing queries
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value reader_threads = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearReaderThreads() {
+        if (readerThreadsBuilder_ == null) {
+          readerThreads_ = null;
+          onChanged();
+        } else {
+          readerThreads_ = null;
+          readerThreadsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls the amount of threads executing queries
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value reader_threads = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getReaderThreadsBuilder() {
+        
+        onChanged();
+        return getReaderThreadsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Controls the amount of threads executing queries
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value reader_threads = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getReaderThreadsOrBuilder() {
+        if (readerThreadsBuilder_ != null) {
+          return readerThreadsBuilder_.getMessageOrBuilder();
+        } else {
+          return readerThreads_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : readerThreads_;
+        }
+      }
+      /**
+       * <pre>
+       * Controls the amount of threads executing queries
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value reader_threads = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getReaderThreadsFieldBuilder() {
+        if (readerThreadsBuilder_ == null) {
+          readerThreadsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getReaderThreads(),
+                  getParentForChildren(),
+                  isClean());
+          readerThreads_ = null;
+        }
+        return readerThreadsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value writerThreads_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> writerThreadsBuilder_;
+      /**
+       * <pre>
+       * Controls the amount of threads processing index mutations
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value writer_threads = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the writerThreads field is set.
+       */
+      public boolean hasWriterThreads() {
+        return writerThreadsBuilder_ != null || writerThreads_ != null;
+      }
+      /**
+       * <pre>
+       * Controls the amount of threads processing index mutations
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value writer_threads = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The writerThreads.
+       */
+      public com.google.protobuf.Int64Value getWriterThreads() {
+        if (writerThreadsBuilder_ == null) {
+          return writerThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : writerThreads_;
+        } else {
+          return writerThreadsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Controls the amount of threads processing index mutations
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value writer_threads = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setWriterThreads(com.google.protobuf.Int64Value value) {
+        if (writerThreadsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          writerThreads_ = value;
+          onChanged();
+        } else {
+          writerThreadsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls the amount of threads processing index mutations
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value writer_threads = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setWriterThreads(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (writerThreadsBuilder_ == null) {
+          writerThreads_ = builderForValue.build();
+          onChanged();
+        } else {
+          writerThreadsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls the amount of threads processing index mutations
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value writer_threads = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeWriterThreads(com.google.protobuf.Int64Value value) {
+        if (writerThreadsBuilder_ == null) {
+          if (writerThreads_ != null) {
+            writerThreads_ =
+              com.google.protobuf.Int64Value.newBuilder(writerThreads_).mergeFrom(value).buildPartial();
+          } else {
+            writerThreads_ = value;
+          }
+          onChanged();
+        } else {
+          writerThreadsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls the amount of threads processing index mutations
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value writer_threads = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearWriterThreads() {
+        if (writerThreadsBuilder_ == null) {
+          writerThreads_ = null;
+          onChanged();
+        } else {
+          writerThreads_ = null;
+          writerThreadsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls the amount of threads processing index mutations
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value writer_threads = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getWriterThreadsBuilder() {
+        
+        onChanged();
+        return getWriterThreadsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Controls the amount of threads processing index mutations
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value writer_threads = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getWriterThreadsOrBuilder() {
+        if (writerThreadsBuilder_ != null) {
+          return writerThreadsBuilder_.getMessageOrBuilder();
+        } else {
+          return writerThreads_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : writerThreads_;
+        }
+      }
+      /**
+       * <pre>
+       * Controls the amount of threads processing index mutations
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value writer_threads = 3 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getWriterThreadsFieldBuilder() {
+        if (writerThreadsBuilder_ == null) {
+          writerThreadsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getWriterThreads(),
+                  getParentForChildren(),
+                  isClean());
+          writerThreads_ = null;
+        }
+        return writerThreadsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.redis.v1.ValkeySearch)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.redis.v1.ValkeySearch)
+    private static final yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch();
+    }
+
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ValkeySearch>
+        PARSER = new com.google.protobuf.AbstractParser<ValkeySearch>() {
+      @java.lang.Override
+      public ValkeySearch parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ValkeySearch(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ValkeySearch> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ValkeySearch> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeySearch getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ValkeyJsonOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.redis.v1.ValkeyJson)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Enable valkey-json module
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     * @return The enabled.
+     */
+    boolean getEnabled();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.redis.v1.ValkeyJson}
+   */
+  public static final class ValkeyJson extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.redis.v1.ValkeyJson)
+      ValkeyJsonOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ValkeyJson.newBuilder() to construct.
+    private ValkeyJson(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ValkeyJson() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ValkeyJson();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ValkeyJson(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              enabled_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_ValkeyJson_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_ValkeyJson_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson.class, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson.Builder.class);
+    }
+
+    public static final int ENABLED_FIELD_NUMBER = 1;
+    private boolean enabled_;
+    /**
+     * <pre>
+     * Enable valkey-json module
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     * @return The enabled.
+     */
+    @java.lang.Override
+    public boolean getEnabled() {
+      return enabled_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enabled_ != false) {
+        output.writeBool(1, enabled_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enabled_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson other = (yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson) obj;
+
+      if (getEnabled()
+          != other.getEnabled()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnabled());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.redis.v1.ValkeyJson}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.redis.v1.ValkeyJson)
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJsonOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_ValkeyJson_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_ValkeyJson_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson.class, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        enabled_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_ValkeyJson_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson build() {
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson buildPartial() {
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson result = new yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson(this);
+        result.enabled_ = enabled_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson) {
+          return mergeFrom((yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson other) {
+        if (other == yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson.getDefaultInstance()) return this;
+        if (other.getEnabled() != false) {
+          setEnabled(other.getEnabled());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean enabled_ ;
+      /**
+       * <pre>
+       * Enable valkey-json module
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+      /**
+       * <pre>
+       * Enable valkey-json module
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @param value The enabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnabled(boolean value) {
+        
+        enabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable valkey-json module
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnabled() {
+        
+        enabled_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.redis.v1.ValkeyJson)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.redis.v1.ValkeyJson)
+    private static final yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson();
+    }
+
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ValkeyJson>
+        PARSER = new com.google.protobuf.AbstractParser<ValkeyJson>() {
+      @java.lang.Override
+      public ValkeyJson parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ValkeyJson(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ValkeyJson> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ValkeyJson> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyJson getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ValkeyBloomOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.redis.v1.ValkeyBloom)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Enable valkey-bloom module
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     * @return The enabled.
+     */
+    boolean getEnabled();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.redis.v1.ValkeyBloom}
+   */
+  public static final class ValkeyBloom extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.redis.v1.ValkeyBloom)
+      ValkeyBloomOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ValkeyBloom.newBuilder() to construct.
+    private ValkeyBloom(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ValkeyBloom() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ValkeyBloom();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ValkeyBloom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              enabled_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_ValkeyBloom_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_ValkeyBloom_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom.class, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom.Builder.class);
+    }
+
+    public static final int ENABLED_FIELD_NUMBER = 1;
+    private boolean enabled_;
+    /**
+     * <pre>
+     * Enable valkey-bloom module
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     * @return The enabled.
+     */
+    @java.lang.Override
+    public boolean getEnabled() {
+      return enabled_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enabled_ != false) {
+        output.writeBool(1, enabled_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enabled_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom other = (yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom) obj;
+
+      if (getEnabled()
+          != other.getEnabled()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnabled());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.redis.v1.ValkeyBloom}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.redis.v1.ValkeyBloom)
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloomOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_ValkeyBloom_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_ValkeyBloom_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom.class, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        enabled_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_ValkeyBloom_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom build() {
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom buildPartial() {
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom result = new yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom(this);
+        result.enabled_ = enabled_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom) {
+          return mergeFrom((yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom other) {
+        if (other == yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom.getDefaultInstance()) return this;
+        if (other.getEnabled() != false) {
+          setEnabled(other.getEnabled());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean enabled_ ;
+      /**
+       * <pre>
+       * Enable valkey-bloom module
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+      /**
+       * <pre>
+       * Enable valkey-bloom module
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @param value The enabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnabled(boolean value) {
+        
+        enabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable valkey-bloom module
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnabled() {
+        
+        enabled_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.redis.v1.ValkeyBloom)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.redis.v1.ValkeyBloom)
+    private static final yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom();
+    }
+
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ValkeyBloom>
+        PARSER = new com.google.protobuf.AbstractParser<ValkeyBloom>() {
+      @java.lang.Override
+      public ValkeyBloom parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ValkeyBloom(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ValkeyBloom> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ValkeyBloom> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ValkeyBloom getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_redis_v1_Cluster_descriptor;
   private static final 
@@ -17540,6 +21249,26 @@ public final class ClusterOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_redis_v1_DiskSizeAutoscaling_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_redis_v1_ValkeyModules_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_redis_v1_ValkeyModules_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_redis_v1_ValkeySearch_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_redis_v1_ValkeySearch_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_redis_v1_ValkeyJson_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_redis_v1_ValkeyJson_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_redis_v1_ValkeyBloom_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_redis_v1_ValkeyBloom_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -17595,7 +21324,7 @@ public final class ClusterOuterClass {
       "PPED\020\006\022\014\n\010STARTING\020\007\"3\n\017PersistenceMode\022" +
       "\006\n\002ON\020\000\022\007\n\003OFF\020\001\022\017\n\013ON_REPLICAS\020\002\"=\n\nMon" +
       "itoring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001" +
-      "(\t\022\014\n\004link\030\003 \001(\t\"\265\006\n\rClusterConfig\022\017\n\007ve" +
+      "(\t\022\014\n\004link\030\003 \001(\t\"\206\007\n\rClusterConfig\022\017\n\007ve" +
       "rsion\030\001 \001(\t\022`\n\020redis_config_5_0\030\002 \001(\01323." +
       "yandex.cloud.mdb.redis.v1.config.RedisCo" +
       "nfigSet5_0H\000R\017redisConfig_5_0\022`\n\020redis_c" +
@@ -17615,39 +21344,52 @@ public final class ClusterOuterClass {
       "ze_autoscaling\030\n \001(\0132..yandex.cloud.mdb." +
       "redis.v1.DiskSizeAutoscaling\022>\n\031backup_r" +
       "etain_period_days\030\r \001(\0132\033.google.protobu" +
-      "f.Int64ValueB\016\n\014redis_configJ\004\010\013\020\014J\004\010\014\020\r" +
-      "\")\n\005Shard\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 " +
-      "\001(\t\"\200\004\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id" +
-      "\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022\021\n\tsubnet_id\030\004 \001" +
-      "(\t\0227\n\tresources\030\005 \001(\0132$.yandex.cloud.mdb" +
-      ".redis.v1.Resources\0222\n\004role\030\006 \001(\0162$.yand" +
-      "ex.cloud.mdb.redis.v1.Host.Role\0226\n\006healt" +
-      "h\030\007 \001(\0162&.yandex.cloud.mdb.redis.v1.Host" +
-      ".Health\0224\n\010services\030\010 \003(\0132\".yandex.cloud" +
-      ".mdb.redis.v1.Service\022\022\n\nshard_name\030\t \001(" +
-      "\t\0225\n\020replica_priority\030\n \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022\030\n\020assign_public_ip\030\013 \001" +
-      "(\010\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001" +
-      "\022\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOW" +
-      "N\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\367" +
-      "\001\n\007Service\0225\n\004type\030\001 \001(\0162\'.yandex.cloud." +
-      "mdb.redis.v1.Service.Type\0229\n\006health\030\002 \001(" +
-      "\0162).yandex.cloud.mdb.redis.v1.Service.He" +
-      "alth\"G\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005RE" +
-      "DIS\020\001\022\013\n\007ARBITER\020\002\022\021\n\rREDIS_CLUSTER\020\003\"1\n" +
-      "\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010" +
-      "\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resource_preset" +
-      "_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_typ" +
-      "e_id\030\003 \001(\t\",\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022" +
-      "\017\n\007web_sql\030\002 \001(\010\"\347\001\n\023DiskSizeAutoscaling" +
-      "\022K\n\027planned_usage_threshold\030\001 \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueB\r\350\3071\000\372\3071\0050-100\022M\n" +
-      "\031emergency_usage_threshold\030\002 \001(\0132\033.googl" +
-      "e.protobuf.Int64ValueB\r\350\3071\000\372\3071\0050-100\0224\n\017" +
-      "disk_size_limit\030\003 \001(\0132\033.google.protobuf." +
-      "Int64ValueBd\n\035yandex.cloud.api.mdb.redis" +
-      ".v1ZCgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/mdb/redis/v1;redisb\006proto3"
+      "f.Int64Value\0229\n\007modules\030\016 \001(\0132(.yandex.c" +
+      "loud.mdb.redis.v1.ValkeyModules\022\024\n\014full_" +
+      "version\030\017 \001(\tB\016\n\014redis_configJ\004\010\013\020\014J\004\010\014\020" +
+      "\r\")\n\005Shard\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002" +
+      " \001(\t\"\200\004\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_i" +
+      "d\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022\021\n\tsubnet_id\030\004 " +
+      "\001(\t\0227\n\tresources\030\005 \001(\0132$.yandex.cloud.md" +
+      "b.redis.v1.Resources\0222\n\004role\030\006 \001(\0162$.yan" +
+      "dex.cloud.mdb.redis.v1.Host.Role\0226\n\006heal" +
+      "th\030\007 \001(\0162&.yandex.cloud.mdb.redis.v1.Hos" +
+      "t.Health\0224\n\010services\030\010 \003(\0132\".yandex.clou" +
+      "d.mdb.redis.v1.Service\022\022\n\nshard_name\030\t \001" +
+      "(\t\0225\n\020replica_priority\030\n \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022\030\n\020assign_public_ip\030\013 " +
+      "\001(\010\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020" +
+      "\001\022\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNO" +
+      "WN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"" +
+      "\367\001\n\007Service\0225\n\004type\030\001 \001(\0162\'.yandex.cloud" +
+      ".mdb.redis.v1.Service.Type\0229\n\006health\030\002 \001" +
+      "(\0162).yandex.cloud.mdb.redis.v1.Service.H" +
+      "ealth\"G\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005R" +
+      "EDIS\020\001\022\013\n\007ARBITER\020\002\022\021\n\rREDIS_CLUSTER\020\003\"1" +
+      "\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022" +
+      "\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resource_prese" +
+      "t_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_ty" +
+      "pe_id\030\003 \001(\t\",\n\006Access\022\021\n\tdata_lens\030\001 \001(\010" +
+      "\022\017\n\007web_sql\030\002 \001(\010\"\347\001\n\023DiskSizeAutoscalin" +
+      "g\022K\n\027planned_usage_threshold\030\001 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\r\350\3071\000\372\3071\0050-100\022M" +
+      "\n\031emergency_usage_threshold\030\002 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\r\350\3071\000\372\3071\0050-100\0224\n" +
+      "\017disk_size_limit\030\003 \001(\0132\033.google.protobuf" +
+      ".Int64Value\"\311\001\n\rValkeyModules\022>\n\rvalkey_" +
+      "search\030\001 \001(\0132\'.yandex.cloud.mdb.redis.v1" +
+      ".ValkeySearch\022:\n\013valkey_json\030\002 \001(\0132%.yan" +
+      "dex.cloud.mdb.redis.v1.ValkeyJson\022<\n\014val" +
+      "key_bloom\030\003 \001(\0132&.yandex.cloud.mdb.redis" +
+      ".v1.ValkeyBloom\"\243\001\n\014ValkeySearch\022\017\n\007enab" +
+      "led\030\001 \001(\010\022@\n\016reader_threads\030\002 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\013\350\3071\000\372\3071\003>=0\022@\n\016w" +
+      "riter_threads\030\003 \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\013\350\3071\000\372\3071\003>=0\"\035\n\nValkeyJson\022\017\n\007e" +
+      "nabled\030\001 \001(\010\"\036\n\013ValkeyBloom\022\017\n\007enabled\030\001" +
+      " \001(\010Bd\n\035yandex.cloud.api.mdb.redis.v1ZCg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/mdb/redis/v1;redisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17686,7 +21428,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_redis_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "Version", "RedisConfig50", "RedisConfig60", "RedisConfig62", "RedisConfig70", "Resources", "BackupWindowStart", "Access", "Redis", "DiskSizeAutoscaling", "BackupRetainPeriodDays", "RedisConfig", });
+        new java.lang.String[] { "Version", "RedisConfig50", "RedisConfig60", "RedisConfig62", "RedisConfig70", "Resources", "BackupWindowStart", "Access", "Redis", "DiskSizeAutoscaling", "BackupRetainPeriodDays", "Modules", "FullVersion", "RedisConfig", });
     internal_static_yandex_cloud_mdb_redis_v1_Shard_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_redis_v1_Shard_fieldAccessorTable = new
@@ -17723,6 +21465,30 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_DiskSizeAutoscaling_descriptor,
         new java.lang.String[] { "PlannedUsageThreshold", "EmergencyUsageThreshold", "DiskSizeLimit", });
+    internal_static_yandex_cloud_mdb_redis_v1_ValkeyModules_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_mdb_redis_v1_ValkeyModules_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_redis_v1_ValkeyModules_descriptor,
+        new java.lang.String[] { "ValkeySearch", "ValkeyJson", "ValkeyBloom", });
+    internal_static_yandex_cloud_mdb_redis_v1_ValkeySearch_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_mdb_redis_v1_ValkeySearch_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_redis_v1_ValkeySearch_descriptor,
+        new java.lang.String[] { "Enabled", "ReaderThreads", "WriterThreads", });
+    internal_static_yandex_cloud_mdb_redis_v1_ValkeyJson_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_mdb_redis_v1_ValkeyJson_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_redis_v1_ValkeyJson_descriptor,
+        new java.lang.String[] { "Enabled", });
+    internal_static_yandex_cloud_mdb_redis_v1_ValkeyBloom_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_mdb_redis_v1_ValkeyBloom_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_redis_v1_ValkeyBloom_descriptor,
+        new java.lang.String[] { "Enabled", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.required);

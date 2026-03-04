@@ -264,6 +264,16 @@ public final class WorkflowServiceOuterClass {
      * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 10;</code>
      */
     yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder getScheduleOrBuilder();
+
+    /**
+     * <pre>
+     * Ability of the Workflow to be executed without authentication.
+     * </pre>
+     *
+     * <code>bool is_public = 11;</code>
+     * @return The isPublic.
+     */
+    boolean getIsPublic();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.workflows.v1.CreateWorkflowRequest}
@@ -401,6 +411,11 @@ public final class WorkflowServiceOuterClass {
                 schedule_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 88: {
+
+              isPublic_ = input.readBool();
               break;
             }
             default: {
@@ -905,6 +920,21 @@ public final class WorkflowServiceOuterClass {
       return getSchedule();
     }
 
+    public static final int IS_PUBLIC_FIELD_NUMBER = 11;
+    private boolean isPublic_;
+    /**
+     * <pre>
+     * Ability of the Workflow to be executed without authentication.
+     * </pre>
+     *
+     * <code>bool is_public = 11;</code>
+     * @return The isPublic.
+     */
+    @java.lang.Override
+    public boolean getIsPublic() {
+      return isPublic_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -951,6 +981,9 @@ public final class WorkflowServiceOuterClass {
       }
       if (schedule_ != null) {
         output.writeMessage(10, getSchedule());
+      }
+      if (isPublic_ != false) {
+        output.writeBool(11, isPublic_);
       }
       unknownFields.writeTo(output);
     }
@@ -1002,6 +1035,10 @@ public final class WorkflowServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getSchedule());
       }
+      if (isPublic_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, isPublic_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1046,6 +1083,8 @@ public final class WorkflowServiceOuterClass {
         if (!getSchedule()
             .equals(other.getSchedule())) return false;
       }
+      if (getIsPublic()
+          != other.getIsPublic()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1086,6 +1125,9 @@ public final class WorkflowServiceOuterClass {
         hash = (37 * hash) + SCHEDULE_FIELD_NUMBER;
         hash = (53 * hash) + getSchedule().hashCode();
       }
+      hash = (37 * hash) + IS_PUBLIC_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsPublic());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1272,6 +1314,8 @@ public final class WorkflowServiceOuterClass {
           schedule_ = null;
           scheduleBuilder_ = null;
         }
+        isPublic_ = false;
+
         return this;
       }
 
@@ -1322,6 +1366,7 @@ public final class WorkflowServiceOuterClass {
         } else {
           result.schedule_ = scheduleBuilder_.build();
         }
+        result.isPublic_ = isPublic_;
         onBuilt();
         return result;
       }
@@ -1403,6 +1448,9 @@ public final class WorkflowServiceOuterClass {
         }
         if (other.hasSchedule()) {
           mergeSchedule(other.getSchedule());
+        }
+        if (other.getIsPublic() != false) {
+          setIsPublic(other.getIsPublic());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2585,6 +2633,49 @@ public final class WorkflowServiceOuterClass {
         }
         return scheduleBuilder_;
       }
+
+      private boolean isPublic_ ;
+      /**
+       * <pre>
+       * Ability of the Workflow to be executed without authentication.
+       * </pre>
+       *
+       * <code>bool is_public = 11;</code>
+       * @return The isPublic.
+       */
+      @java.lang.Override
+      public boolean getIsPublic() {
+        return isPublic_;
+      }
+      /**
+       * <pre>
+       * Ability of the Workflow to be executed without authentication.
+       * </pre>
+       *
+       * <code>bool is_public = 11;</code>
+       * @param value The isPublic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsPublic(boolean value) {
+        
+        isPublic_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Ability of the Workflow to be executed without authentication.
+       * </pre>
+       *
+       * <code>bool is_public = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsPublic() {
+        
+        isPublic_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3517,6 +3608,16 @@ public final class WorkflowServiceOuterClass {
      * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 11;</code>
      */
     yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder getScheduleOrBuilder();
+
+    /**
+     * <pre>
+     * Ability of the Workflow to be executed without authentication.
+     * </pre>
+     *
+     * <code>bool is_public = 12;</code>
+     * @return The isPublic.
+     */
+    boolean getIsPublic();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.workflows.v1.UpdateWorkflowRequest}
@@ -3667,6 +3768,11 @@ public final class WorkflowServiceOuterClass {
                 schedule_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 96: {
+
+              isPublic_ = input.readBool();
               break;
             }
             default: {
@@ -4207,6 +4313,21 @@ public final class WorkflowServiceOuterClass {
       return getSchedule();
     }
 
+    public static final int IS_PUBLIC_FIELD_NUMBER = 12;
+    private boolean isPublic_;
+    /**
+     * <pre>
+     * Ability of the Workflow to be executed without authentication.
+     * </pre>
+     *
+     * <code>bool is_public = 12;</code>
+     * @return The isPublic.
+     */
+    @java.lang.Override
+    public boolean getIsPublic() {
+      return isPublic_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4256,6 +4377,9 @@ public final class WorkflowServiceOuterClass {
       }
       if (schedule_ != null) {
         output.writeMessage(11, getSchedule());
+      }
+      if (isPublic_ != false) {
+        output.writeBool(12, isPublic_);
       }
       unknownFields.writeTo(output);
     }
@@ -4311,6 +4435,10 @@ public final class WorkflowServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getSchedule());
       }
+      if (isPublic_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, isPublic_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4360,6 +4488,8 @@ public final class WorkflowServiceOuterClass {
         if (!getSchedule()
             .equals(other.getSchedule())) return false;
       }
+      if (getIsPublic()
+          != other.getIsPublic()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4404,6 +4534,9 @@ public final class WorkflowServiceOuterClass {
         hash = (37 * hash) + SCHEDULE_FIELD_NUMBER;
         hash = (53 * hash) + getSchedule().hashCode();
       }
+      hash = (37 * hash) + IS_PUBLIC_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsPublic());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4596,6 +4729,8 @@ public final class WorkflowServiceOuterClass {
           schedule_ = null;
           scheduleBuilder_ = null;
         }
+        isPublic_ = false;
+
         return this;
       }
 
@@ -4651,6 +4786,7 @@ public final class WorkflowServiceOuterClass {
         } else {
           result.schedule_ = scheduleBuilder_.build();
         }
+        result.isPublic_ = isPublic_;
         onBuilt();
         return result;
       }
@@ -4735,6 +4871,9 @@ public final class WorkflowServiceOuterClass {
         }
         if (other.hasSchedule()) {
           mergeSchedule(other.getSchedule());
+        }
+        if (other.getIsPublic() != false) {
+          setIsPublic(other.getIsPublic());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6066,6 +6205,49 @@ public final class WorkflowServiceOuterClass {
           schedule_ = null;
         }
         return scheduleBuilder_;
+      }
+
+      private boolean isPublic_ ;
+      /**
+       * <pre>
+       * Ability of the Workflow to be executed without authentication.
+       * </pre>
+       *
+       * <code>bool is_public = 12;</code>
+       * @return The isPublic.
+       */
+      @java.lang.Override
+      public boolean getIsPublic() {
+        return isPublic_;
+      }
+      /**
+       * <pre>
+       * Ability of the Workflow to be executed without authentication.
+       * </pre>
+       *
+       * <code>bool is_public = 12;</code>
+       * @param value The isPublic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsPublic(boolean value) {
+        
+        isPublic_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Ability of the Workflow to be executed without authentication.
+       * </pre>
+       *
+       * <code>bool is_public = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsPublic() {
+        
+        isPublic_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13808,102 +13990,121 @@ public final class WorkflowServiceOuterClass {
       "orkflow_service.proto\022$yandex.cloud.serv" +
       "erless.workflows.v1\032 google/protobuf/fie" +
       "ld_mask.proto\032\034google/api/annotations.pr" +
-      "oto\032 yandex/cloud/api/operation.proto\032&y" +
-      "andex/cloud/operation/operation.proto\0323y" +
-      "andex/cloud/serverless/workflows/v1/work" +
-      "flow.proto\032\035yandex/cloud/validation.prot" +
-      "o\"\206\005\n\025CreateWorkflowRequest\022\027\n\tfolder_id" +
-      "\030\001 \001(\tB\004\350\3071\001\0226\n\004name\030\002 \001(\tB(\350\3071\001\362\3071 |[a-" +
-      "z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descript" +
-      "ion\030\003 \001(\tB\t\212\3101\005<=256\022\240\001\n\006labels\030\004 \003(\0132G." +
-      "yandex.cloud.serverless.workflows.v1.Cre" +
-      "ateWorkflowRequest.LabelsEntryBG\202\3101\004<=64" +
-      "\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101" +
-      "\026\022\024[a-z][-_./\\@0-9a-z]*\022X\n\rspecification" +
-      "\030\005 \001(\0132;.yandex.cloud.serverless.workflo" +
-      "ws.v1.WorkflowSpecificationB\004\350\3071\001\022E\n\013log" +
-      "_options\030\006 \001(\01320.yandex.cloud.serverless" +
-      ".workflows.v1.LogOptions\022\022\n\nnetwork_id\030\007" +
-      " \001(\t\022\032\n\022service_account_id\030\010 \001(\t\022\017\n\007expr" +
-      "ess\030\t \001(\010\022H\n\010schedule\030\n \001(\01326.yandex.clo" +
-      "ud.serverless.workflows.v1.WorkflowSched" +
-      "ule\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\"3\n\026CreateWorkflowMetadata\022\031\n\013" +
-      "workflow_id\030\001 \001(\tB\004\350\3071\001\"\257\005\n\025UpdateWorkfl" +
-      "owRequest\022\031\n\013workflow_id\030\001 \001(\tB\004\350\3071\001\0222\n\004" +
-      "name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a" +
-      "-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256" +
-      "\022\240\001\n\006labels\030\004 \003(\0132G.yandex.cloud.serverl" +
-      "ess.workflows.v1.UpdateWorkflowRequest.L" +
-      "abelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0" +
-      "-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-" +
-      "z]*\022R\n\rspecification\030\005 \001(\0132;.yandex.clou" +
-      "d.serverless.workflows.v1.WorkflowSpecif" +
-      "ication\022E\n\013log_options\030\006 \001(\01320.yandex.cl" +
-      "oud.serverless.workflows.v1.LogOptions\022\022" +
-      "\n\nnetwork_id\030\007 \001(\t\022\032\n\022service_account_id" +
-      "\030\010 \001(\t\022/\n\013update_mask\030\t \001(\0132\032.google.pro" +
-      "tobuf.FieldMask\022\017\n\007express\030\n \001(\010\022H\n\010sche" +
-      "dule\030\013 \001(\01326.yandex.cloud.serverless.wor" +
-      "kflows.v1.WorkflowSchedule\032-\n\013LabelsEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"3\n\026Upd" +
-      "ateWorkflowMetadata\022\031\n\013workflow_id\030\001 \001(\t" +
-      "B\004\350\3071\001\"/\n\022GetWorkflowRequest\022\031\n\013workflow" +
-      "_id\030\001 \001(\tB\004\350\3071\001\"W\n\023GetWorkflowResponse\022@" +
-      "\n\010workflow\030\001 \001(\0132..yandex.cloud.serverle" +
-      "ss.workflows.v1.Workflow\"2\n\025DeleteWorkfl" +
-      "owRequest\022\031\n\013workflow_id\030\001 \001(\tB\004\350\3071\001\"-\n\026" +
-      "DeleteWorkflowMetadata\022\023\n\013workflow_id\030\001 " +
-      "\001(\t\"f\n\024ListWorkflowsRequest\022\027\n\tfolder_id" +
-      "\030\001 \001(\tB\004\350\3071\001\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_" +
-      "token\030\003 \001(\t\022\016\n\006filter\030\004 \001(\t\"z\n\025ListWorkf" +
-      "lowsResponse\022H\n\tworkflows\030\001 \003(\01325.yandex" +
-      ".cloud.serverless.workflows.v1.WorkflowP" +
-      "review\022\027\n\017next_page_token\030\002 \001(\t\"\214\001\n\025List" +
-      "OperationsRequest\022\031\n\013workflow_id\030\001 \001(\tB\004" +
-      "\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\np" +
-      "age_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001" +
-      "(\tB\n\212\3101\006<=1000\"h\n\026ListOperationsResponse" +
-      "\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.oper" +
-      "ation.Operation\022\027\n\017next_page_token\030\002 \001(\t" +
-      "2\347\010\n\017WorkflowService\022\261\001\n\006Create\022;.yandex" +
+      "oto\032 yandex/cloud/access/access.proto\032 y" +
+      "andex/cloud/api/operation.proto\032&yandex/" +
+      "cloud/operation/operation.proto\0323yandex/" +
+      "cloud/serverless/workflows/v1/workflow.p" +
+      "roto\032\035yandex/cloud/validation.proto\"\231\005\n\025" +
+      "CreateWorkflowRequest\022\027\n\tfolder_id\030\001 \001(\t" +
+      "B\004\350\3071\001\0226\n\004name\030\002 \001(\tB(\350\3071\001\362\3071 |[a-z]([-a" +
+      "-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\003 " +
+      "\001(\tB\t\212\3101\005<=256\022\240\001\n\006labels\030\004 \003(\0132G.yandex" +
       ".cloud.serverless.workflows.v1.CreateWor" +
-      "kflowRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"G\202\323\344\223\002\033\"\026/workflows/v1/workflow:" +
-      "\001*\262\322*\"\n\026CreateWorkflowMetadata\022\010Workflow" +
-      "\022\277\001\n\006Update\022;.yandex.cloud.serverless.wo" +
-      "rkflows.v1.UpdateWorkflowRequest\032!.yande" +
-      "x.cloud.operation.Operation\"U\202\323\344\223\002)2$/wo" +
-      "rkflows/v1/workflow/{workflow_id}:\001*\262\322*\"" +
-      "\n\026UpdateWorkflowMetadata\022\010Workflow\022\250\001\n\003G" +
-      "et\0228.yandex.cloud.serverless.workflows.v" +
-      "1.GetWorkflowRequest\0329.yandex.cloud.serv" +
-      "erless.workflows.v1.GetWorkflowResponse\"" +
-      ",\202\323\344\223\002&\022$/workflows/v1/workflow/{workflo" +
-      "w_id}\022\311\001\n\006Delete\022;.yandex.cloud.serverle" +
-      "ss.workflows.v1.DeleteWorkflowRequest\032!." +
-      "yandex.cloud.operation.Operation\"_\202\323\344\223\002&" +
-      "*$/workflows/v1/workflow/{workflow_id}\262\322" +
-      "*/\n\026DeleteWorkflowMetadata\022\025google.proto" +
-      "buf.Empty\022\237\001\n\004List\022:.yandex.cloud.server" +
-      "less.workflows.v1.ListWorkflowsRequest\032;" +
-      ".yandex.cloud.serverless.workflows.v1.Li" +
-      "stWorkflowsResponse\"\036\202\323\344\223\002\030\022\026/workflows/" +
-      "v1/workflow\022\304\001\n\016ListOperations\022;.yandex." +
-      "cloud.serverless.workflows.v1.ListOperat" +
-      "ionsRequest\032<.yandex.cloud.serverless.wo" +
-      "rkflows.v1.ListOperationsResponse\"7\202\323\344\223\002" +
-      "1\022//workflows/v1/workflow/{workflow_id}/" +
-      "operationsB~\n(yandex.cloud.api.serverles" +
-      "s.workflows.v1ZRgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/serverless/work" +
-      "flows/v1;workflowsb\006proto3"
+      "kflowRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=" +
+      "63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-" +
+      "z][-_./\\@0-9a-z]*\022X\n\rspecification\030\005 \001(\013" +
+      "2;.yandex.cloud.serverless.workflows.v1." +
+      "WorkflowSpecificationB\004\350\3071\001\022E\n\013log_optio" +
+      "ns\030\006 \001(\01320.yandex.cloud.serverless.workf" +
+      "lows.v1.LogOptions\022\022\n\nnetwork_id\030\007 \001(\t\022\032" +
+      "\n\022service_account_id\030\010 \001(\t\022\017\n\007express\030\t " +
+      "\001(\010\022H\n\010schedule\030\n \001(\01326.yandex.cloud.ser" +
+      "verless.workflows.v1.WorkflowSchedule\022\021\n" +
+      "\tis_public\030\013 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"3\n\026CreateWorkflo" +
+      "wMetadata\022\031\n\013workflow_id\030\001 \001(\tB\004\350\3071\001\"\302\005\n" +
+      "\025UpdateWorkflowRequest\022\031\n\013workflow_id\030\001 " +
+      "\001(\tB\004\350\3071\001\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-" +
+      "z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\003 \001" +
+      "(\tB\t\212\3101\005<=256\022\240\001\n\006labels\030\004 \003(\0132G.yandex." +
+      "cloud.serverless.workflows.v1.UpdateWork" +
+      "flowRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=6" +
+      "3\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z" +
+      "][-_./\\@0-9a-z]*\022R\n\rspecification\030\005 \001(\0132" +
+      ";.yandex.cloud.serverless.workflows.v1.W" +
+      "orkflowSpecification\022E\n\013log_options\030\006 \001(" +
+      "\01320.yandex.cloud.serverless.workflows.v1" +
+      ".LogOptions\022\022\n\nnetwork_id\030\007 \001(\t\022\032\n\022servi" +
+      "ce_account_id\030\010 \001(\t\022/\n\013update_mask\030\t \001(\013" +
+      "2\032.google.protobuf.FieldMask\022\017\n\007express\030" +
+      "\n \001(\010\022H\n\010schedule\030\013 \001(\01326.yandex.cloud.s" +
+      "erverless.workflows.v1.WorkflowSchedule\022" +
+      "\021\n\tis_public\030\014 \001(\010\032-\n\013LabelsEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"3\n\026UpdateWorkf" +
+      "lowMetadata\022\031\n\013workflow_id\030\001 \001(\tB\004\350\3071\001\"/" +
+      "\n\022GetWorkflowRequest\022\031\n\013workflow_id\030\001 \001(" +
+      "\tB\004\350\3071\001\"W\n\023GetWorkflowResponse\022@\n\010workfl" +
+      "ow\030\001 \001(\0132..yandex.cloud.serverless.workf" +
+      "lows.v1.Workflow\"2\n\025DeleteWorkflowReques" +
+      "t\022\031\n\013workflow_id\030\001 \001(\tB\004\350\3071\001\"-\n\026DeleteWo" +
+      "rkflowMetadata\022\023\n\013workflow_id\030\001 \001(\t\"f\n\024L" +
+      "istWorkflowsRequest\022\027\n\tfolder_id\030\001 \001(\tB\004" +
+      "\350\3071\001\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003 " +
+      "\001(\t\022\016\n\006filter\030\004 \001(\t\"z\n\025ListWorkflowsResp" +
+      "onse\022H\n\tworkflows\030\001 \003(\01325.yandex.cloud.s" +
+      "erverless.workflows.v1.WorkflowPreview\022\027" +
+      "\n\017next_page_token\030\002 \001(\t\"\214\001\n\025ListOperatio" +
+      "nsRequest\022\031\n\013workflow_id\030\001 \001(\tB\004\350\3071\001\022\035\n\t" +
+      "page_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_toke" +
+      "n\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006" +
+      "<=1000\"h\n\026ListOperationsResponse\0225\n\noper" +
+      "ations\030\001 \003(\0132!.yandex.cloud.operation.Op" +
+      "eration\022\027\n\017next_page_token\030\002 \001(\t2\375\r\n\017Wor" +
+      "kflowService\022\261\001\n\006Create\022;.yandex.cloud.s" +
+      "erverless.workflows.v1.CreateWorkflowReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "G\202\323\344\223\002\033\"\026/workflows/v1/workflow:\001*\262\322*\"\n\026" +
+      "CreateWorkflowMetadata\022\010Workflow\022\277\001\n\006Upd" +
+      "ate\022;.yandex.cloud.serverless.workflows." +
+      "v1.UpdateWorkflowRequest\032!.yandex.cloud." +
+      "operation.Operation\"U\202\323\344\223\002)2$/workflows/" +
+      "v1/workflow/{workflow_id}:\001*\262\322*\"\n\026Update" +
+      "WorkflowMetadata\022\010Workflow\022\250\001\n\003Get\0228.yan" +
+      "dex.cloud.serverless.workflows.v1.GetWor" +
+      "kflowRequest\0329.yandex.cloud.serverless.w" +
+      "orkflows.v1.GetWorkflowResponse\",\202\323\344\223\002&\022" +
+      "$/workflows/v1/workflow/{workflow_id}\022\311\001" +
+      "\n\006Delete\022;.yandex.cloud.serverless.workf" +
+      "lows.v1.DeleteWorkflowRequest\032!.yandex.c" +
+      "loud.operation.Operation\"_\202\323\344\223\002&*$/workf" +
+      "lows/v1/workflow/{workflow_id}\262\322*/\n\026Dele" +
+      "teWorkflowMetadata\022\025google.protobuf.Empt" +
+      "y\022\237\001\n\004List\022:.yandex.cloud.serverless.wor" +
+      "kflows.v1.ListWorkflowsRequest\032;.yandex." +
+      "cloud.serverless.workflows.v1.ListWorkfl" +
+      "owsResponse\"\036\202\323\344\223\002\030\022\026/workflows/v1/workf" +
+      "low\022\304\001\n\016ListOperations\022;.yandex.cloud.se" +
+      "rverless.workflows.v1.ListOperationsRequ" +
+      "est\032<.yandex.cloud.serverless.workflows." +
+      "v1.ListOperationsResponse\"7\202\323\344\223\0021\022//work" +
+      "flows/v1/workflow/{workflow_id}/operatio" +
+      "ns\022\266\001\n\022ListAccessBindings\022..yandex.cloud" +
+      ".access.ListAccessBindingsRequest\032/.yand" +
+      "ex.cloud.access.ListAccessBindingsRespon" +
+      "se\"?\202\323\344\223\0029\0227/workflows/v1/workflow/{reso" +
+      "urce_id}:listAccessBindings\022\345\001\n\021SetAcces" +
+      "sBindings\022-.yandex.cloud.access.SetAcces" +
+      "sBindingsRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"~\202\323\344\223\002;\"6/workflows/v1/workf" +
+      "low/{resource_id}:setAccessBindings:\001*\262\322" +
+      "*9\n access.SetAccessBindingsMetadata\022\025go" +
+      "ogle.protobuf.Empty\022\362\001\n\024UpdateAccessBind" +
+      "ings\0220.yandex.cloud.access.UpdateAccessB" +
+      "indingsRequest\032!.yandex.cloud.operation." +
+      "Operation\"\204\001\202\323\344\223\002>\"9/workflows/v1/workfl" +
+      "ow/{resource_id}:updateAccessBindings:\001*" +
+      "\262\322*<\n#access.UpdateAccessBindingsMetadat" +
+      "a\022\025google.protobuf.EmptyB~\n(yandex.cloud" +
+      ".api.serverless.workflows.v1ZRgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/s" +
+      "erverless/workflows/v1;workflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.getDescriptor(),
@@ -13914,7 +14115,7 @@ public final class WorkflowServiceOuterClass {
     internal_static_yandex_cloud_serverless_workflows_v1_CreateWorkflowRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_workflows_v1_CreateWorkflowRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Specification", "LogOptions", "NetworkId", "ServiceAccountId", "Express", "Schedule", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Specification", "LogOptions", "NetworkId", "ServiceAccountId", "Express", "Schedule", "IsPublic", });
     internal_static_yandex_cloud_serverless_workflows_v1_CreateWorkflowRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_workflows_v1_CreateWorkflowRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_workflows_v1_CreateWorkflowRequest_LabelsEntry_fieldAccessorTable = new
@@ -13932,7 +14133,7 @@ public final class WorkflowServiceOuterClass {
     internal_static_yandex_cloud_serverless_workflows_v1_UpdateWorkflowRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_workflows_v1_UpdateWorkflowRequest_descriptor,
-        new java.lang.String[] { "WorkflowId", "Name", "Description", "Labels", "Specification", "LogOptions", "NetworkId", "ServiceAccountId", "UpdateMask", "Express", "Schedule", });
+        new java.lang.String[] { "WorkflowId", "Name", "Description", "Labels", "Specification", "LogOptions", "NetworkId", "ServiceAccountId", "UpdateMask", "Express", "Schedule", "IsPublic", });
     internal_static_yandex_cloud_serverless_workflows_v1_UpdateWorkflowRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_workflows_v1_UpdateWorkflowRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_workflows_v1_UpdateWorkflowRequest_LabelsEntry_fieldAccessorTable = new
@@ -14007,6 +14208,7 @@ public final class WorkflowServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.getDescriptor();

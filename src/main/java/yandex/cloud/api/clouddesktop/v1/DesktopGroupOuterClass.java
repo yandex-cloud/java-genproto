@@ -646,6 +646,14 @@ public final class DesktopGroupOuterClass {
        * <code>DELETING = 3;</code>
        */
       DELETING(3),
+      /**
+       * <pre>
+       * Desktop group is updating.
+       * </pre>
+       *
+       * <code>UPDATING = 4;</code>
+       */
+      UPDATING(4),
       UNRECOGNIZED(-1),
       ;
 
@@ -677,6 +685,14 @@ public final class DesktopGroupOuterClass {
        * <code>DELETING = 3;</code>
        */
       public static final int DELETING_VALUE = 3;
+      /**
+       * <pre>
+       * Desktop group is updating.
+       * </pre>
+       *
+       * <code>UPDATING = 4;</code>
+       */
+      public static final int UPDATING_VALUE = 4;
 
 
       public final int getNumber() {
@@ -707,6 +723,7 @@ public final class DesktopGroupOuterClass {
           case 1: return CREATING;
           case 2: return ACTIVE;
           case 3: return DELETING;
+          case 4: return UPDATING;
           default: return null;
         }
       }
@@ -7791,7 +7808,7 @@ public final class DesktopGroupOuterClass {
       ".api\032\037google/protobuf/timestamp.proto\032 y" +
       "andex/cloud/access/access.proto\032\035yandex/" +
       "cloud/validation.proto\032\'yandex/cloud/clo" +
-      "uddesktop/v1/disk.proto\"\323\007\n\014DesktopGroup" +
+      "uddesktop/v1/disk.proto\"\341\007\n\014DesktopGroup" +
       "\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreat" +
       "ed_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022" +
       "E\n\006status\030\004 \001(\01625.yandex.cloud.clouddesk" +
@@ -7813,27 +7830,28 @@ public final class DesktopGroupOuterClass {
       "yH\000\022T\n\024manual_update_policy\030\034 \001(\01324.yand" +
       "ex.cloud.clouddesktop.v1.api.ManualUpdat" +
       "ePolicyH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001\"H\n\006Status\022\026\n\022STATUS_UNS" +
+      "\005value\030\002 \001(\t:\0028\001\"V\n\006Status\022\026\n\022STATUS_UNS" +
       "PECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010" +
-      "DELETING\020\003B\025\n\rupdate_policy\022\004\300\3011\001J\004\010\r\020\025J" +
-      "\004\010\005\020\013\"\323\002\n\031DesktopGroupConfiguration\022%\n\022m" +
-      "in_ready_desktops\030\001 \001(\003B\t\372\3071\0051-512\022&\n\023ma" +
-      "x_desktops_amount\030\002 \001(\003B\t\372\3071\0050-512\022]\n\014de" +
-      "sktop_type\030\003 \001(\0162G.yandex.cloud.clouddes" +
-      "ktop.v1.api.DesktopGroupConfiguration.De" +
-      "sktopType\0227\n\007members\030\004 \003(\0132\034.yandex.clou" +
-      "d.access.SubjectB\010\202\3101\0040-10\"O\n\013DesktopTyp" +
-      "e\022\034\n\030DESKTOP_TYPE_UNSPECIFIED\020\000\022\016\n\nPERSI" +
-      "STENT\020\001\022\022\n\016NON_PERSISTENT\020\002\"b\n\rResources" +
-      "Spec\022\027\n\006memory\030\001 \001(\003B\007\372\3071\003>=1\022\026\n\005cores\030\002" +
-      " \001(\003B\007\372\3071\003>=1\022 \n\rcore_fraction\030\003 \001(\003B\t\372\307" +
-      "1\0050-100\"`\n\024NetworkInterfaceSpec\022 \n\nnetwo" +
-      "rk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022&\n\nsubnet_ids\030" +
-      "\002 \003(\tB\022\202\3101\002>0\212\3101\004<=50\220\3101\001\"\024\n\022ManualUpdat" +
-      "ePolicy\"\022\n\020AutoUpdatePolicyBq\n yandex.cl" +
-      "oud.api.clouddesktop.v1ZMgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/cloudd" +
-      "esktop/v1;clouddesktopb\006proto3"
+      "DELETING\020\003\022\014\n\010UPDATING\020\004B\025\n\rupdate_polic" +
+      "y\022\004\300\3011\001J\004\010\r\020\025J\004\010\005\020\013\"\323\002\n\031DesktopGroupConf" +
+      "iguration\022%\n\022min_ready_desktops\030\001 \001(\003B\t\372" +
+      "\3071\0051-512\022&\n\023max_desktops_amount\030\002 \001(\003B\t\372" +
+      "\3071\0050-512\022]\n\014desktop_type\030\003 \001(\0162G.yandex." +
+      "cloud.clouddesktop.v1.api.DesktopGroupCo" +
+      "nfiguration.DesktopType\0227\n\007members\030\004 \003(\013" +
+      "2\034.yandex.cloud.access.SubjectB\010\202\3101\0040-10" +
+      "\"O\n\013DesktopType\022\034\n\030DESKTOP_TYPE_UNSPECIF" +
+      "IED\020\000\022\016\n\nPERSISTENT\020\001\022\022\n\016NON_PERSISTENT\020" +
+      "\002\"b\n\rResourcesSpec\022\027\n\006memory\030\001 \001(\003B\007\372\3071\003" +
+      ">=1\022\026\n\005cores\030\002 \001(\003B\007\372\3071\003>=1\022 \n\rcore_frac" +
+      "tion\030\003 \001(\003B\t\372\3071\0050-100\"`\n\024NetworkInterfac" +
+      "eSpec\022 \n\nnetwork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "&\n\nsubnet_ids\030\002 \003(\tB\022\202\3101\002>0\212\3101\004<=50\220\3101\001\"" +
+      "\024\n\022ManualUpdatePolicy\"\022\n\020AutoUpdatePolic" +
+      "yBq\n yandex.cloud.api.clouddesktop.v1ZMg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/clouddesktop/v1;clouddesktopb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -19,17 +19,17 @@ public final class Postgresql17 {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+     * <code>.google.protobuf.Int64Value max_connections = 1 [(.yandex.cloud.value) = "&gt;=16"];</code>
      * @return Whether the maxConnections field is set.
      */
     boolean hasMaxConnections();
     /**
-     * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+     * <code>.google.protobuf.Int64Value max_connections = 1 [(.yandex.cloud.value) = "&gt;=16"];</code>
      * @return The maxConnections.
      */
     com.google.protobuf.Int64Value getMaxConnections();
     /**
-     * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+     * <code>.google.protobuf.Int64Value max_connections = 1 [(.yandex.cloud.value) = "&gt;=16"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder();
 
@@ -1018,7 +1018,7 @@ public final class Postgresql17 {
      * in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value deadlock_timeout = 56;</code>
+     * <code>.google.protobuf.Int64Value deadlock_timeout = 56 [(.yandex.cloud.value) = "1-2147483647"];</code>
      * @return Whether the deadlockTimeout field is set.
      */
     boolean hasDeadlockTimeout();
@@ -1027,7 +1027,7 @@ public final class Postgresql17 {
      * in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value deadlock_timeout = 56;</code>
+     * <code>.google.protobuf.Int64Value deadlock_timeout = 56 [(.yandex.cloud.value) = "1-2147483647"];</code>
      * @return The deadlockTimeout.
      */
     com.google.protobuf.Int64Value getDeadlockTimeout();
@@ -1036,7 +1036,7 @@ public final class Postgresql17 {
      * in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value deadlock_timeout = 56;</code>
+     * <code>.google.protobuf.Int64Value deadlock_timeout = 56 [(.yandex.cloud.value) = "1-2147483647"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getDeadlockTimeoutOrBuilder();
 
@@ -2870,7 +2870,7 @@ public final class Postgresql17 {
 
     /**
      * <pre>
-     * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_MD5 ``.
+     * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig17.PasswordEncryption password_encryption = 167;</code>
@@ -2879,7 +2879,7 @@ public final class Postgresql17 {
     int getPasswordEncryptionValue();
     /**
      * <pre>
-     * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_MD5 ``.
+     * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig17.PasswordEncryption password_encryption = 167;</code>
@@ -2965,6 +2965,33 @@ public final class Postgresql17 {
      * <code>.google.protobuf.Int64Value max_replication_slots = 172 [(.yandex.cloud.value) = "20-100"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxReplicationSlotsOrBuilder();
+
+    /**
+     * <pre>
+     * in milliseconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_session_timeout = 173 [(.yandex.cloud.value) = "0-2147483647"];</code>
+     * @return Whether the idleSessionTimeout field is set.
+     */
+    boolean hasIdleSessionTimeout();
+    /**
+     * <pre>
+     * in milliseconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_session_timeout = 173 [(.yandex.cloud.value) = "0-2147483647"];</code>
+     * @return The idleSessionTimeout.
+     */
+    com.google.protobuf.Int64Value getIdleSessionTimeout();
+    /**
+     * <pre>
+     * in milliseconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_session_timeout = 173 [(.yandex.cloud.value) = "0-2147483647"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getIdleSessionTimeoutOrBuilder();
   }
   /**
    * <pre>
@@ -5031,6 +5058,19 @@ public final class Postgresql17 {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(maxReplicationSlots_);
                 maxReplicationSlots_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1386: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (idleSessionTimeout_ != null) {
+                subBuilder = idleSessionTimeout_.toBuilder();
+              }
+              idleSessionTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(idleSessionTimeout_);
+                idleSessionTimeout_ = subBuilder.buildPartial();
               }
 
               break;
@@ -7368,7 +7408,7 @@ public final class Postgresql17 {
     public static final int MAX_CONNECTIONS_FIELD_NUMBER = 1;
     private com.google.protobuf.Int64Value maxConnections_;
     /**
-     * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+     * <code>.google.protobuf.Int64Value max_connections = 1 [(.yandex.cloud.value) = "&gt;=16"];</code>
      * @return Whether the maxConnections field is set.
      */
     @java.lang.Override
@@ -7376,7 +7416,7 @@ public final class Postgresql17 {
       return maxConnections_ != null;
     }
     /**
-     * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+     * <code>.google.protobuf.Int64Value max_connections = 1 [(.yandex.cloud.value) = "&gt;=16"];</code>
      * @return The maxConnections.
      */
     @java.lang.Override
@@ -7384,7 +7424,7 @@ public final class Postgresql17 {
       return maxConnections_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxConnections_;
     }
     /**
-     * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+     * <code>.google.protobuf.Int64Value max_connections = 1 [(.yandex.cloud.value) = "&gt;=16"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder() {
@@ -8937,7 +8977,7 @@ public final class Postgresql17 {
      * in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value deadlock_timeout = 56;</code>
+     * <code>.google.protobuf.Int64Value deadlock_timeout = 56 [(.yandex.cloud.value) = "1-2147483647"];</code>
      * @return Whether the deadlockTimeout field is set.
      */
     @java.lang.Override
@@ -8949,7 +8989,7 @@ public final class Postgresql17 {
      * in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value deadlock_timeout = 56;</code>
+     * <code>.google.protobuf.Int64Value deadlock_timeout = 56 [(.yandex.cloud.value) = "1-2147483647"];</code>
      * @return The deadlockTimeout.
      */
     @java.lang.Override
@@ -8961,7 +9001,7 @@ public final class Postgresql17 {
      * in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value deadlock_timeout = 56;</code>
+     * <code>.google.protobuf.Int64Value deadlock_timeout = 56 [(.yandex.cloud.value) = "1-2147483647"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getDeadlockTimeoutOrBuilder() {
@@ -11954,7 +11994,7 @@ public final class Postgresql17 {
     private int passwordEncryption_;
     /**
      * <pre>
-     * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_MD5 ``.
+     * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig17.PasswordEncryption password_encryption = 167;</code>
@@ -11965,7 +12005,7 @@ public final class Postgresql17 {
     }
     /**
      * <pre>
-     * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_MD5 ``.
+     * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig17.PasswordEncryption password_encryption = 167;</code>
@@ -12106,6 +12146,44 @@ public final class Postgresql17 {
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxReplicationSlotsOrBuilder() {
       return getMaxReplicationSlots();
+    }
+
+    public static final int IDLE_SESSION_TIMEOUT_FIELD_NUMBER = 173;
+    private com.google.protobuf.Int64Value idleSessionTimeout_;
+    /**
+     * <pre>
+     * in milliseconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_session_timeout = 173 [(.yandex.cloud.value) = "0-2147483647"];</code>
+     * @return Whether the idleSessionTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasIdleSessionTimeout() {
+      return idleSessionTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * in milliseconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_session_timeout = 173 [(.yandex.cloud.value) = "0-2147483647"];</code>
+     * @return The idleSessionTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getIdleSessionTimeout() {
+      return idleSessionTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : idleSessionTimeout_;
+    }
+    /**
+     * <pre>
+     * in milliseconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_session_timeout = 173 [(.yandex.cloud.value) = "0-2147483647"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getIdleSessionTimeoutOrBuilder() {
+      return getIdleSessionTimeout();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -12618,6 +12696,9 @@ public final class Postgresql17 {
       }
       if (maxReplicationSlots_ != null) {
         output.writeMessage(172, getMaxReplicationSlots());
+      }
+      if (idleSessionTimeout_ != null) {
+        output.writeMessage(173, getIdleSessionTimeout());
       }
       unknownFields.writeTo(output);
     }
@@ -13289,6 +13370,10 @@ public final class Postgresql17 {
       if (maxReplicationSlots_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(172, getMaxReplicationSlots());
+      }
+      if (idleSessionTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(173, getIdleSessionTimeout());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -14039,6 +14124,11 @@ public final class Postgresql17 {
         if (!getMaxReplicationSlots()
             .equals(other.getMaxReplicationSlots())) return false;
       }
+      if (hasIdleSessionTimeout() != other.hasIdleSessionTimeout()) return false;
+      if (hasIdleSessionTimeout()) {
+        if (!getIdleSessionTimeout()
+            .equals(other.getIdleSessionTimeout())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -14663,6 +14753,10 @@ public final class Postgresql17 {
       if (hasMaxReplicationSlots()) {
         hash = (37 * hash) + MAX_REPLICATION_SLOTS_FIELD_NUMBER;
         hash = (53 * hash) + getMaxReplicationSlots().hashCode();
+      }
+      if (hasIdleSessionTimeout()) {
+        hash = (37 * hash) + IDLE_SESSION_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getIdleSessionTimeout().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -15699,6 +15793,12 @@ public final class Postgresql17 {
           maxReplicationSlots_ = null;
           maxReplicationSlotsBuilder_ = null;
         }
+        if (idleSessionTimeoutBuilder_ == null) {
+          idleSessionTimeout_ = null;
+        } else {
+          idleSessionTimeout_ = null;
+          idleSessionTimeoutBuilder_ = null;
+        }
         return this;
       }
 
@@ -16462,6 +16562,11 @@ public final class Postgresql17 {
         } else {
           result.maxReplicationSlots_ = maxReplicationSlotsBuilder_.build();
         }
+        if (idleSessionTimeoutBuilder_ == null) {
+          result.idleSessionTimeout_ = idleSessionTimeout_;
+        } else {
+          result.idleSessionTimeout_ = idleSessionTimeoutBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -17011,6 +17116,9 @@ public final class Postgresql17 {
         if (other.hasMaxReplicationSlots()) {
           mergeMaxReplicationSlots(other.getMaxReplicationSlots());
         }
+        if (other.hasIdleSessionTimeout()) {
+          mergeIdleSessionTimeout(other.getIdleSessionTimeout());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -17045,14 +17153,14 @@ public final class Postgresql17 {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxConnectionsBuilder_;
       /**
-       * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       * <code>.google.protobuf.Int64Value max_connections = 1 [(.yandex.cloud.value) = "&gt;=16"];</code>
        * @return Whether the maxConnections field is set.
        */
       public boolean hasMaxConnections() {
         return maxConnectionsBuilder_ != null || maxConnections_ != null;
       }
       /**
-       * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       * <code>.google.protobuf.Int64Value max_connections = 1 [(.yandex.cloud.value) = "&gt;=16"];</code>
        * @return The maxConnections.
        */
       public com.google.protobuf.Int64Value getMaxConnections() {
@@ -17063,7 +17171,7 @@ public final class Postgresql17 {
         }
       }
       /**
-       * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       * <code>.google.protobuf.Int64Value max_connections = 1 [(.yandex.cloud.value) = "&gt;=16"];</code>
        */
       public Builder setMaxConnections(com.google.protobuf.Int64Value value) {
         if (maxConnectionsBuilder_ == null) {
@@ -17079,7 +17187,7 @@ public final class Postgresql17 {
         return this;
       }
       /**
-       * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       * <code>.google.protobuf.Int64Value max_connections = 1 [(.yandex.cloud.value) = "&gt;=16"];</code>
        */
       public Builder setMaxConnections(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -17093,7 +17201,7 @@ public final class Postgresql17 {
         return this;
       }
       /**
-       * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       * <code>.google.protobuf.Int64Value max_connections = 1 [(.yandex.cloud.value) = "&gt;=16"];</code>
        */
       public Builder mergeMaxConnections(com.google.protobuf.Int64Value value) {
         if (maxConnectionsBuilder_ == null) {
@@ -17111,7 +17219,7 @@ public final class Postgresql17 {
         return this;
       }
       /**
-       * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       * <code>.google.protobuf.Int64Value max_connections = 1 [(.yandex.cloud.value) = "&gt;=16"];</code>
        */
       public Builder clearMaxConnections() {
         if (maxConnectionsBuilder_ == null) {
@@ -17125,7 +17233,7 @@ public final class Postgresql17 {
         return this;
       }
       /**
-       * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       * <code>.google.protobuf.Int64Value max_connections = 1 [(.yandex.cloud.value) = "&gt;=16"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getMaxConnectionsBuilder() {
         
@@ -17133,7 +17241,7 @@ public final class Postgresql17 {
         return getMaxConnectionsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       * <code>.google.protobuf.Int64Value max_connections = 1 [(.yandex.cloud.value) = "&gt;=16"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder() {
         if (maxConnectionsBuilder_ != null) {
@@ -17144,7 +17252,7 @@ public final class Postgresql17 {
         }
       }
       /**
-       * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       * <code>.google.protobuf.Int64Value max_connections = 1 [(.yandex.cloud.value) = "&gt;=16"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -23307,7 +23415,7 @@ public final class Postgresql17 {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value deadlock_timeout = 56;</code>
+       * <code>.google.protobuf.Int64Value deadlock_timeout = 56 [(.yandex.cloud.value) = "1-2147483647"];</code>
        * @return Whether the deadlockTimeout field is set.
        */
       public boolean hasDeadlockTimeout() {
@@ -23318,7 +23426,7 @@ public final class Postgresql17 {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value deadlock_timeout = 56;</code>
+       * <code>.google.protobuf.Int64Value deadlock_timeout = 56 [(.yandex.cloud.value) = "1-2147483647"];</code>
        * @return The deadlockTimeout.
        */
       public com.google.protobuf.Int64Value getDeadlockTimeout() {
@@ -23333,7 +23441,7 @@ public final class Postgresql17 {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value deadlock_timeout = 56;</code>
+       * <code>.google.protobuf.Int64Value deadlock_timeout = 56 [(.yandex.cloud.value) = "1-2147483647"];</code>
        */
       public Builder setDeadlockTimeout(com.google.protobuf.Int64Value value) {
         if (deadlockTimeoutBuilder_ == null) {
@@ -23353,7 +23461,7 @@ public final class Postgresql17 {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value deadlock_timeout = 56;</code>
+       * <code>.google.protobuf.Int64Value deadlock_timeout = 56 [(.yandex.cloud.value) = "1-2147483647"];</code>
        */
       public Builder setDeadlockTimeout(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -23371,7 +23479,7 @@ public final class Postgresql17 {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value deadlock_timeout = 56;</code>
+       * <code>.google.protobuf.Int64Value deadlock_timeout = 56 [(.yandex.cloud.value) = "1-2147483647"];</code>
        */
       public Builder mergeDeadlockTimeout(com.google.protobuf.Int64Value value) {
         if (deadlockTimeoutBuilder_ == null) {
@@ -23393,7 +23501,7 @@ public final class Postgresql17 {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value deadlock_timeout = 56;</code>
+       * <code>.google.protobuf.Int64Value deadlock_timeout = 56 [(.yandex.cloud.value) = "1-2147483647"];</code>
        */
       public Builder clearDeadlockTimeout() {
         if (deadlockTimeoutBuilder_ == null) {
@@ -23411,7 +23519,7 @@ public final class Postgresql17 {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value deadlock_timeout = 56;</code>
+       * <code>.google.protobuf.Int64Value deadlock_timeout = 56 [(.yandex.cloud.value) = "1-2147483647"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getDeadlockTimeoutBuilder() {
         
@@ -23423,7 +23531,7 @@ public final class Postgresql17 {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value deadlock_timeout = 56;</code>
+       * <code>.google.protobuf.Int64Value deadlock_timeout = 56 [(.yandex.cloud.value) = "1-2147483647"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getDeadlockTimeoutOrBuilder() {
         if (deadlockTimeoutBuilder_ != null) {
@@ -23438,7 +23546,7 @@ public final class Postgresql17 {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value deadlock_timeout = 56;</code>
+       * <code>.google.protobuf.Int64Value deadlock_timeout = 56 [(.yandex.cloud.value) = "1-2147483647"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -36296,7 +36404,7 @@ public final class Postgresql17 {
       private int passwordEncryption_ = 0;
       /**
        * <pre>
-       * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_MD5 ``.
+       * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig17.PasswordEncryption password_encryption = 167;</code>
@@ -36307,7 +36415,7 @@ public final class Postgresql17 {
       }
       /**
        * <pre>
-       * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_MD5 ``.
+       * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig17.PasswordEncryption password_encryption = 167;</code>
@@ -36322,7 +36430,7 @@ public final class Postgresql17 {
       }
       /**
        * <pre>
-       * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_MD5 ``.
+       * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig17.PasswordEncryption password_encryption = 167;</code>
@@ -36336,7 +36444,7 @@ public final class Postgresql17 {
       }
       /**
        * <pre>
-       * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_MD5 ``.
+       * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig17.PasswordEncryption password_encryption = 167;</code>
@@ -36354,7 +36462,7 @@ public final class Postgresql17 {
       }
       /**
        * <pre>
-       * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_MD5 ``.
+       * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig17.PasswordEncryption password_encryption = 167;</code>
@@ -36915,6 +37023,161 @@ public final class Postgresql17 {
           maxReplicationSlots_ = null;
         }
         return maxReplicationSlotsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value idleSessionTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idleSessionTimeoutBuilder_;
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_session_timeout = 173 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       * @return Whether the idleSessionTimeout field is set.
+       */
+      public boolean hasIdleSessionTimeout() {
+        return idleSessionTimeoutBuilder_ != null || idleSessionTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_session_timeout = 173 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       * @return The idleSessionTimeout.
+       */
+      public com.google.protobuf.Int64Value getIdleSessionTimeout() {
+        if (idleSessionTimeoutBuilder_ == null) {
+          return idleSessionTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : idleSessionTimeout_;
+        } else {
+          return idleSessionTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_session_timeout = 173 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public Builder setIdleSessionTimeout(com.google.protobuf.Int64Value value) {
+        if (idleSessionTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          idleSessionTimeout_ = value;
+          onChanged();
+        } else {
+          idleSessionTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_session_timeout = 173 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public Builder setIdleSessionTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (idleSessionTimeoutBuilder_ == null) {
+          idleSessionTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          idleSessionTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_session_timeout = 173 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public Builder mergeIdleSessionTimeout(com.google.protobuf.Int64Value value) {
+        if (idleSessionTimeoutBuilder_ == null) {
+          if (idleSessionTimeout_ != null) {
+            idleSessionTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(idleSessionTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            idleSessionTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          idleSessionTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_session_timeout = 173 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public Builder clearIdleSessionTimeout() {
+        if (idleSessionTimeoutBuilder_ == null) {
+          idleSessionTimeout_ = null;
+          onChanged();
+        } else {
+          idleSessionTimeout_ = null;
+          idleSessionTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_session_timeout = 173 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getIdleSessionTimeoutBuilder() {
+        
+        onChanged();
+        return getIdleSessionTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_session_timeout = 173 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getIdleSessionTimeoutOrBuilder() {
+        if (idleSessionTimeoutBuilder_ != null) {
+          return idleSessionTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return idleSessionTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : idleSessionTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * in milliseconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_session_timeout = 173 [(.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getIdleSessionTimeoutFieldBuilder() {
+        if (idleSessionTimeoutBuilder_ == null) {
+          idleSessionTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getIdleSessionTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          idleSessionTimeout_ = null;
+        }
+        return idleSessionTimeoutBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -38214,379 +38477,382 @@ public final class Postgresql17 {
       "postgresql17.proto\022%yandex.cloud.mdb.pos" +
       "tgresql.v1.config\032\036google/protobuf/wrapp" +
       "ers.proto\032\035yandex/cloud/validation.proto" +
-      "\"\226q\n\022PostgresqlConfig17\0224\n\017max_connectio" +
-      "ns\030\001 \001(\0132\033.google.protobuf.Int64Value\0223\n" +
-      "\016shared_buffers\030\002 \001(\0132\033.google.protobuf." +
-      "Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\022>\n\031max_prepared_tr" +
-      "ansactions\030\004 \001(\0132\033.google.protobuf.Int64" +
-      "Value\022-\n\010work_mem\030\005 \001(\0132\033.google.protobu" +
-      "f.Int64Value\0229\n\024maintenance_work_mem\030\006 \001" +
-      "(\0132\033.google.protobuf.Int64Value\0228\n\023autov" +
-      "acuum_work_mem\030\007 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\0224\n\017temp_file_limit\030\010 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\0226\n\021vacuum_cost_d" +
-      "elay\030\t \001(\0132\033.google.protobuf.Int64Value\022" +
-      "9\n\024vacuum_cost_page_hit\030\n \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\022:\n\025vacuum_cost_page_m" +
-      "iss\030\013 \001(\0132\033.google.protobuf.Int64Value\022;" +
-      "\n\026vacuum_cost_page_dirty\030\014 \001(\0132\033.google." +
-      "protobuf.Int64Value\0226\n\021vacuum_cost_limit" +
-      "\030\r \001(\0132\033.google.protobuf.Int64Value\022A\n\016b" +
-      "gwriter_delay\030\016 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\014\372\3071\01010-10000\022:\n\025bgwriter_lru_m" +
-      "axpages\030\017 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022=\n\027bgwriter_lru_multiplier\030\020 \001(\0132\034.go" +
-      "ogle.protobuf.DoubleValue\022H\n\024bgwriter_fl" +
-      "ush_after\030\021 \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\r\372\3071\t0-2097152\022G\n\023backend_flush_aft" +
-      "er\030\022 \001(\0132\033.google.protobuf.Int64ValueB\r\372" +
-      "\3071\t0-2097152\022U\n\twal_level\030\024 \001(\0162B.yandex" +
-      ".cloud.mdb.postgresql.v1.config.Postgres" +
-      "qlConfig17.WalLevel\022g\n\022synchronous_commi" +
-      "t\030\025 \001(\0162K.yandex.cloud.mdb.postgresql.v1" +
-      ".config.PostgresqlConfig17.SynchronousCo" +
-      "mmit\022K\n\022checkpoint_timeout\030\026 \001(\0132\033.googl" +
-      "e.protobuf.Int64ValueB\022\372\3071\01630000-8640000" +
-      "0\022B\n\034checkpoint_completion_target\030\027 \001(\0132" +
-      "\034.google.protobuf.DoubleValue\022J\n\026checkpo" +
-      "int_flush_after\030\030 \001(\0132\033.google.protobuf." +
-      "Int64ValueB\r\372\3071\t0-2097152\0221\n\014max_wal_siz" +
-      "e\030\031 \001(\0132\033.google.protobuf.Int64Value\0221\n\014" +
-      "min_wal_size\030\032 \001(\0132\033.google.protobuf.Int" +
-      "64Value\022@\n\033max_standby_streaming_delay\030\033" +
-      " \001(\0132\033.google.protobuf.Int64Value\022>\n\031def" +
-      "ault_statistics_target\030\034 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\022k\n\024constraint_exclusio" +
-      "n\030\035 \001(\0162M.yandex.cloud.mdb.postgresql.v1" +
-      ".config.PostgresqlConfig17.ConstraintExc" +
-      "lusion\022;\n\025cursor_tuple_fraction\030\036 \001(\0132\034." +
-      "google.protobuf.DoubleValue\022J\n\023from_coll" +
-      "apse_limit\030\037 \001(\0132\033.google.protobuf.Int64" +
-      "ValueB\020\372\3071\0141-2147483647\022J\n\023join_collapse" +
-      "_limit\030  \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\020\372\3071\0141-2147483647\022j\n\024debug_parallel_qu" +
-      "ery\030! \001(\0162L.yandex.cloud.mdb.postgresql." +
-      "v1.config.PostgresqlConfig17.DebugParall" +
-      "elQuery\022_\n\023client_min_messages\030\" \001(\0162B.y" +
-      "andex.cloud.mdb.postgresql.v1.config.Pos" +
-      "tgresqlConfig17.LogLevel\022\\\n\020log_min_mess" +
-      "ages\030# \001(\0162B.yandex.cloud.mdb.postgresql" +
-      ".v1.config.PostgresqlConfig17.LogLevel\022c" +
-      "\n\027log_min_error_statement\030$ \001(\0162B.yandex" +
-      ".cloud.mdb.postgresql.v1.config.Postgres" +
-      "qlConfig17.LogLevel\022?\n\032log_min_duration_" +
-      "statement\030% \001(\0132\033.google.protobuf.Int64V" +
-      "alue\0223\n\017log_checkpoints\030& \001(\0132\032.google.p" +
-      "rotobuf.BoolValue\0223\n\017log_connections\030\' \001" +
-      "(\0132\032.google.protobuf.BoolValue\0226\n\022log_di" +
-      "sconnections\030( \001(\0132\032.google.protobuf.Boo" +
-      "lValue\0220\n\014log_duration\030) \001(\0132\032.google.pr" +
-      "otobuf.BoolValue\022h\n\023log_error_verbosity\030" +
-      "* \001(\0162K.yandex.cloud.mdb.postgresql.v1.c" +
-      "onfig.PostgresqlConfig17.LogErrorVerbosi" +
-      "ty\0222\n\016log_lock_waits\030+ \001(\0132\032.google.prot" +
-      "obuf.BoolValue\022]\n\rlog_statement\030, \001(\0162F." +
-      "yandex.cloud.mdb.postgresql.v1.config.Po" +
-      "stgresqlConfig17.LogStatement\0223\n\016log_tem" +
-      "p_files\030- \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022\023\n\013search_path\030. \001(\t\0220\n\014row_security\030" +
-      "/ \001(\0132\032.google.protobuf.BoolValue\022u\n\035def" +
-      "ault_transaction_isolation\0300 \001(\0162N.yande" +
-      "x.cloud.mdb.postgresql.v1.config.Postgre" +
-      "sqlConfig17.TransactionIsolation\0226\n\021stat" +
-      "ement_timeout\0301 \001(\0132\033.google.protobuf.In" +
-      "t64Value\022C\n\014lock_timeout\0302 \001(\0132\033.google." +
-      "protobuf.Int64ValueB\020\372\3071\0140-2147483647\022Z\n" +
-      "#idle_in_transaction_session_timeout\0303 \001" +
-      "(\0132\033.google.protobuf.Int64ValueB\020\372\3071\0140-2" +
-      "147483647\022[\n\014bytea_output\0304 \001(\0162E.yandex" +
-      ".cloud.mdb.postgresql.v1.config.Postgres" +
-      "qlConfig17.ByteaOutput\022V\n\txmlbinary\0305 \001(" +
-      "\0162C.yandex.cloud.mdb.postgresql.v1.confi" +
-      "g.PostgresqlConfig17.XmlBinary\022V\n\txmlopt" +
-      "ion\0306 \001(\0162C.yandex.cloud.mdb.postgresql." +
-      "v1.config.PostgresqlConfig17.XmlOption\022;" +
-      "\n\026gin_pending_list_limit\0307 \001(\0132\033.google." +
-      "protobuf.Int64Value\0225\n\020deadlock_timeout\030" +
-      "8 \001(\0132\033.google.protobuf.Int64Value\022>\n\031ma" +
-      "x_locks_per_transaction\0309 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\022C\n\036max_pred_locks_per" +
-      "_transaction\030: \001(\0132\033.google.protobuf.Int" +
-      "64Value\022/\n\013array_nulls\030; \001(\0132\032.google.pr" +
-      "otobuf.BoolValue\022a\n\017backslash_quote\030< \001(" +
-      "\0162H.yandex.cloud.mdb.postgresql.v1.confi" +
-      "g.PostgresqlConfig17.BackslashQuote\0225\n\021d" +
-      "efault_with_oids\030= \001(\0132\032.google.protobuf" +
-      ".BoolValue\0229\n\025escape_string_warning\030> \001(" +
-      "\0132\032.google.protobuf.BoolValue\0228\n\024lo_comp" +
-      "at_privileges\030? \001(\0132\032.google.protobuf.Bo" +
-      "olValue\0229\n\025quote_all_identifiers\030A \001(\0132\032" +
-      ".google.protobuf.BoolValue\022?\n\033standard_c" +
-      "onforming_strings\030B \001(\0132\032.google.protobu" +
-      "f.BoolValue\0228\n\024synchronize_seqscans\030C \001(" +
-      "\0132\032.google.protobuf.BoolValue\0229\n\025transfo" +
-      "rm_null_equals\030D \001(\0132\032.google.protobuf.B" +
-      "oolValue\0221\n\rexit_on_error\030E \001(\0132\032.google" +
-      ".protobuf.BoolValue\0223\n\rseq_page_cost\030F \001" +
-      "(\0132\034.google.protobuf.DoubleValue\0226\n\020rand" +
-      "om_page_cost\030G \001(\0132\034.google.protobuf.Dou" +
-      "bleValue\022E\n\026autovacuum_max_workers\030H \001(\013" +
-      "2\033.google.protobuf.Int64ValueB\010\372\3071\0041-32\022" +
-      "M\n\034autovacuum_vacuum_cost_delay\030I \001(\0132\033." +
-      "google.protobuf.Int64ValueB\n\372\3071\006-1-100\022O" +
-      "\n\034autovacuum_vacuum_cost_limit\030J \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\014\372\3071\010-1-10000\022" +
-      "J\n\022autovacuum_naptime\030K \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\021\372\3071\r1000-86400000\022H\n\017a" +
-      "rchive_timeout\030L \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\022\372\3071\01610000-86400000\022N\n\031track_a" +
-      "ctivity_query_size\030M \001(\0132\033.google.protob" +
-      "uf.Int64ValueB\016\372\3071\n100-102400\0225\n\021enable_" +
-      "bitmapscan\030P \001(\0132\032.google.protobuf.BoolV" +
-      "alue\0222\n\016enable_hashagg\030Q \001(\0132\032.google.pr" +
-      "otobuf.BoolValue\0223\n\017enable_hashjoin\030R \001(" +
-      "\0132\032.google.protobuf.BoolValue\0224\n\020enable_" +
-      "indexscan\030S \001(\0132\032.google.protobuf.BoolVa" +
-      "lue\0228\n\024enable_indexonlyscan\030T \001(\0132\032.goog" +
-      "le.protobuf.BoolValue\0223\n\017enable_material" +
-      "\030U \001(\0132\032.google.protobuf.BoolValue\0224\n\020en" +
-      "able_mergejoin\030V \001(\0132\032.google.protobuf.B" +
-      "oolValue\0223\n\017enable_nestloop\030W \001(\0132\032.goog" +
-      "le.protobuf.BoolValue\0222\n\016enable_seqscan\030" +
-      "X \001(\0132\032.google.protobuf.BoolValue\022/\n\013ena" +
-      "ble_sort\030Y \001(\0132\032.google.protobuf.BoolVal" +
-      "ue\0222\n\016enable_tidscan\030Z \001(\0132\032.google.prot" +
-      "obuf.BoolValue\022E\n\024max_worker_processes\030[" +
-      " \001(\0132\033.google.protobuf.Int64ValueB\n\372\3071\0060" +
-      "-1024\022E\n\024max_parallel_workers\030\\ \001(\0132\033.go" +
-      "ogle.protobuf.Int64ValueB\n\372\3071\0060-1024\022P\n\037" +
-      "max_parallel_workers_per_gather\030] \001(\0132\033." +
-      "google.protobuf.Int64ValueB\n\372\3071\0060-1024\022Q" +
-      "\n\036autovacuum_vacuum_scale_factor\030^ \001(\0132\034" +
-      ".google.protobuf.DoubleValueB\013\372\3071\0070.0-1." +
-      "0\022R\n\037autovacuum_analyze_scale_factor\030_ \001" +
-      "(\0132\034.google.protobuf.DoubleValueB\013\372\3071\0070." +
-      "0-1.0\022A\n\035default_transaction_read_only\030`" +
-      " \001(\0132\032.google.protobuf.BoolValue\022\020\n\010time" +
-      "zone\030a \001(\t\022:\n\026enable_parallel_append\030b \001" +
-      "(\0132\032.google.protobuf.BoolValue\0228\n\024enable" +
-      "_parallel_hash\030c \001(\0132\032.google.protobuf.B" +
-      "oolValue\022<\n\030enable_partition_pruning\030d \001" +
-      "(\0132\032.google.protobuf.BoolValue\022B\n\036enable" +
-      "_partitionwise_aggregate\030e \001(\0132\032.google." +
-      "protobuf.BoolValue\022=\n\031enable_partitionwi" +
-      "se_join\030f \001(\0132\032.google.protobuf.BoolValu" +
-      "e\022\'\n\003jit\030g \001(\0132\032.google.protobuf.BoolVal" +
-      "ue\022N\n max_parallel_maintenance_workers\030h" +
-      " \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>" +
-      "=0\022A\n\035parallel_leader_participation\030i \001(" +
-      "\0132\032.google.protobuf.BoolValue\022N\n\033log_tra" +
-      "nsaction_sample_rate\030k \001(\0132\034.google.prot" +
-      "obuf.DoubleValueB\013\372\3071\0070.0-1.0\022`\n\017plan_ca" +
-      "che_mode\030l \001(\0162G.yandex.cloud.mdb.postgr" +
-      "esql.v1.config.PostgresqlConfig17.PlanCa" +
-      "cheMode\022I\n\030effective_io_concurrency\030m \001(" +
-      "\0132\033.google.protobuf.Int64ValueB\n\372\3071\0060-10" +
-      "00\022M\n\024effective_cache_size\030n \001(\0132\033.googl" +
-      "e.protobuf.Int64ValueB\022\372\3071\0160-54975581388" +
-      "8\022r\n\030shared_preload_libraries\030o \003(\0162P.ya" +
-      "ndex.cloud.mdb.postgresql.v1.config.Post" +
-      "gresqlConfig17.SharedPreloadLibraries\022U\n" +
-      "\035auto_explain_log_min_duration\030p \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\021\372\3071\r-1-214748" +
-      "3647\022<\n\030auto_explain_log_analyze\030q \001(\0132\032" +
-      ".google.protobuf.BoolValue\022<\n\030auto_expla" +
-      "in_log_buffers\030r \001(\0132\032.google.protobuf.B" +
-      "oolValue\022;\n\027auto_explain_log_timing\030s \001(" +
-      "\0132\032.google.protobuf.BoolValue\022=\n\031auto_ex" +
-      "plain_log_triggers\030t \001(\0132\032.google.protob" +
-      "uf.BoolValue\022<\n\030auto_explain_log_verbose" +
-      "\030u \001(\0132\032.google.protobuf.BoolValue\022F\n\"au" +
-      "to_explain_log_nested_statements\030v \001(\0132\032" +
-      ".google.protobuf.BoolValue\022K\n\030auto_expla" +
-      "in_sample_rate\030w \001(\0132\034.google.protobuf.D" +
-      "oubleValueB\013\372\3071\0070.0-1.0\022<\n\030pg_hint_plan_" +
-      "enable_hint\030x \001(\0132\032.google.protobuf.Bool" +
-      "Value\022B\n\036pg_hint_plan_enable_hint_table\030" +
-      "y \001(\0132\032.google.protobuf.BoolValue\022p\n\030pg_" +
-      "hint_plan_debug_print\030z \001(\0162N.yandex.clo" +
-      "ud.mdb.postgresql.v1.config.PostgresqlCo" +
-      "nfig17.PgHintPlanDebugPrint\022f\n\032pg_hint_p" +
-      "lan_message_level\030{ \001(\0162B.yandex.cloud.m" +
+      "\"\200r\n\022PostgresqlConfig17\022>\n\017max_connectio" +
+      "ns\030\001 \001(\0132\033.google.protobuf.Int64ValueB\010\372" +
+      "\3071\004>=16\0223\n\016shared_buffers\030\002 \001(\0132\033.google" +
+      ".protobuf.Int64Value\0221\n\014temp_buffers\030\003 \001" +
+      "(\0132\033.google.protobuf.Int64Value\022>\n\031max_p" +
+      "repared_transactions\030\004 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022-\n\010work_mem\030\005 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\0229\n\024maintenance_wo" +
+      "rk_mem\030\006 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\0228\n\023autovacuum_work_mem\030\007 \001(\0132\033.google." +
+      "protobuf.Int64Value\0224\n\017temp_file_limit\030\010" +
+      " \001(\0132\033.google.protobuf.Int64Value\0226\n\021vac" +
+      "uum_cost_delay\030\t \001(\0132\033.google.protobuf.I" +
+      "nt64Value\0229\n\024vacuum_cost_page_hit\030\n \001(\0132" +
+      "\033.google.protobuf.Int64Value\022:\n\025vacuum_c" +
+      "ost_page_miss\030\013 \001(\0132\033.google.protobuf.In" +
+      "t64Value\022;\n\026vacuum_cost_page_dirty\030\014 \001(\013" +
+      "2\033.google.protobuf.Int64Value\0226\n\021vacuum_" +
+      "cost_limit\030\r \001(\0132\033.google.protobuf.Int64" +
+      "Value\022A\n\016bgwriter_delay\030\016 \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\014\372\3071\01010-10000\022:\n\025bgwr" +
+      "iter_lru_maxpages\030\017 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022=\n\027bgwriter_lru_multiplier\030" +
+      "\020 \001(\0132\034.google.protobuf.DoubleValue\022H\n\024b" +
+      "gwriter_flush_after\030\021 \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\r\372\3071\t0-2097152\022G\n\023backend" +
+      "_flush_after\030\022 \001(\0132\033.google.protobuf.Int" +
+      "64ValueB\r\372\3071\t0-2097152\022U\n\twal_level\030\024 \001(" +
+      "\0162B.yandex.cloud.mdb.postgresql.v1.confi" +
+      "g.PostgresqlConfig17.WalLevel\022g\n\022synchro" +
+      "nous_commit\030\025 \001(\0162K.yandex.cloud.mdb.pos" +
+      "tgresql.v1.config.PostgresqlConfig17.Syn" +
+      "chronousCommit\022K\n\022checkpoint_timeout\030\026 \001" +
+      "(\0132\033.google.protobuf.Int64ValueB\022\372\3071\016300" +
+      "00-86400000\022B\n\034checkpoint_completion_tar" +
+      "get\030\027 \001(\0132\034.google.protobuf.DoubleValue\022" +
+      "J\n\026checkpoint_flush_after\030\030 \001(\0132\033.google" +
+      ".protobuf.Int64ValueB\r\372\3071\t0-2097152\0221\n\014m" +
+      "ax_wal_size\030\031 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\0221\n\014min_wal_size\030\032 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022@\n\033max_standby_streami" +
+      "ng_delay\030\033 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022>\n\031default_statistics_target\030\034 \001(\0132\033" +
+      ".google.protobuf.Int64Value\022k\n\024constrain" +
+      "t_exclusion\030\035 \001(\0162M.yandex.cloud.mdb.pos" +
+      "tgresql.v1.config.PostgresqlConfig17.Con" +
+      "straintExclusion\022;\n\025cursor_tuple_fractio" +
+      "n\030\036 \001(\0132\034.google.protobuf.DoubleValue\022J\n" +
+      "\023from_collapse_limit\030\037 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\020\372\3071\0141-2147483647\022J\n\023joi" +
+      "n_collapse_limit\030  \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\020\372\3071\0141-2147483647\022j\n\024debug_p" +
+      "arallel_query\030! \001(\0162L.yandex.cloud.mdb.p" +
+      "ostgresql.v1.config.PostgresqlConfig17.D" +
+      "ebugParallelQuery\022_\n\023client_min_messages" +
+      "\030\" \001(\0162B.yandex.cloud.mdb.postgresql.v1." +
+      "config.PostgresqlConfig17.LogLevel\022\\\n\020lo" +
+      "g_min_messages\030# \001(\0162B.yandex.cloud.mdb." +
+      "postgresql.v1.config.PostgresqlConfig17." +
+      "LogLevel\022c\n\027log_min_error_statement\030$ \001(" +
+      "\0162B.yandex.cloud.mdb.postgresql.v1.confi" +
+      "g.PostgresqlConfig17.LogLevel\022?\n\032log_min" +
+      "_duration_statement\030% \001(\0132\033.google.proto" +
+      "buf.Int64Value\0223\n\017log_checkpoints\030& \001(\0132" +
+      "\032.google.protobuf.BoolValue\0223\n\017log_conne" +
+      "ctions\030\' \001(\0132\032.google.protobuf.BoolValue" +
+      "\0226\n\022log_disconnections\030( \001(\0132\032.google.pr" +
+      "otobuf.BoolValue\0220\n\014log_duration\030) \001(\0132\032" +
+      ".google.protobuf.BoolValue\022h\n\023log_error_" +
+      "verbosity\030* \001(\0162K.yandex.cloud.mdb.postg" +
+      "resql.v1.config.PostgresqlConfig17.LogEr" +
+      "rorVerbosity\0222\n\016log_lock_waits\030+ \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\022]\n\rlog_statemen" +
+      "t\030, \001(\0162F.yandex.cloud.mdb.postgresql.v1" +
+      ".config.PostgresqlConfig17.LogStatement\022" +
+      "3\n\016log_temp_files\030- \001(\0132\033.google.protobu" +
+      "f.Int64Value\022\023\n\013search_path\030. \001(\t\0220\n\014row" +
+      "_security\030/ \001(\0132\032.google.protobuf.BoolVa" +
+      "lue\022u\n\035default_transaction_isolation\0300 \001" +
+      "(\0162N.yandex.cloud.mdb.postgresql.v1.conf" +
+      "ig.PostgresqlConfig17.TransactionIsolati" +
+      "on\0226\n\021statement_timeout\0301 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022C\n\014lock_timeout\0302 \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\020\372\3071\0140-214" +
+      "7483647\022Z\n#idle_in_transaction_session_t" +
+      "imeout\0303 \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\020\372\3071\0140-2147483647\022[\n\014bytea_output\0304 \001(" +
+      "\0162E.yandex.cloud.mdb.postgresql.v1.confi" +
+      "g.PostgresqlConfig17.ByteaOutput\022V\n\txmlb" +
+      "inary\0305 \001(\0162C.yandex.cloud.mdb.postgresq" +
+      "l.v1.config.PostgresqlConfig17.XmlBinary" +
+      "\022V\n\txmloption\0306 \001(\0162C.yandex.cloud.mdb.p" +
+      "ostgresql.v1.config.PostgresqlConfig17.X" +
+      "mlOption\022;\n\026gin_pending_list_limit\0307 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022G\n\020deadloc" +
+      "k_timeout\0308 \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\020\372\3071\0141-2147483647\022>\n\031max_locks_per_" +
+      "transaction\0309 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022C\n\036max_pred_locks_per_transaction" +
+      "\030: \001(\0132\033.google.protobuf.Int64Value\022/\n\013a" +
+      "rray_nulls\030; \001(\0132\032.google.protobuf.BoolV" +
+      "alue\022a\n\017backslash_quote\030< \001(\0162H.yandex.c" +
+      "loud.mdb.postgresql.v1.config.Postgresql" +
+      "Config17.BackslashQuote\0225\n\021default_with_" +
+      "oids\030= \001(\0132\032.google.protobuf.BoolValue\0229" +
+      "\n\025escape_string_warning\030> \001(\0132\032.google.p" +
+      "rotobuf.BoolValue\0228\n\024lo_compat_privilege" +
+      "s\030? \001(\0132\032.google.protobuf.BoolValue\0229\n\025q" +
+      "uote_all_identifiers\030A \001(\0132\032.google.prot" +
+      "obuf.BoolValue\022?\n\033standard_conforming_st" +
+      "rings\030B \001(\0132\032.google.protobuf.BoolValue\022" +
+      "8\n\024synchronize_seqscans\030C \001(\0132\032.google.p" +
+      "rotobuf.BoolValue\0229\n\025transform_null_equa" +
+      "ls\030D \001(\0132\032.google.protobuf.BoolValue\0221\n\r" +
+      "exit_on_error\030E \001(\0132\032.google.protobuf.Bo" +
+      "olValue\0223\n\rseq_page_cost\030F \001(\0132\034.google." +
+      "protobuf.DoubleValue\0226\n\020random_page_cost" +
+      "\030G \001(\0132\034.google.protobuf.DoubleValue\022E\n\026" +
+      "autovacuum_max_workers\030H \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\010\372\3071\0041-32\022M\n\034autovacuu" +
+      "m_vacuum_cost_delay\030I \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\n\372\3071\006-1-100\022O\n\034autovacuum" +
+      "_vacuum_cost_limit\030J \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\014\372\3071\010-1-10000\022J\n\022autovacuu" +
+      "m_naptime\030K \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\021\372\3071\r1000-86400000\022H\n\017archive_timeo" +
+      "ut\030L \001(\0132\033.google.protobuf.Int64ValueB\022\372" +
+      "\3071\01610000-86400000\022N\n\031track_activity_quer" +
+      "y_size\030M \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\016\372\3071\n100-102400\0225\n\021enable_bitmapscan\030P" +
+      " \001(\0132\032.google.protobuf.BoolValue\0222\n\016enab" +
+      "le_hashagg\030Q \001(\0132\032.google.protobuf.BoolV" +
+      "alue\0223\n\017enable_hashjoin\030R \001(\0132\032.google.p" +
+      "rotobuf.BoolValue\0224\n\020enable_indexscan\030S " +
+      "\001(\0132\032.google.protobuf.BoolValue\0228\n\024enabl" +
+      "e_indexonlyscan\030T \001(\0132\032.google.protobuf." +
+      "BoolValue\0223\n\017enable_material\030U \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\0224\n\020enable_mergejo" +
+      "in\030V \001(\0132\032.google.protobuf.BoolValue\0223\n\017" +
+      "enable_nestloop\030W \001(\0132\032.google.protobuf." +
+      "BoolValue\0222\n\016enable_seqscan\030X \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\022/\n\013enable_sort\030Y \001" +
+      "(\0132\032.google.protobuf.BoolValue\0222\n\016enable" +
+      "_tidscan\030Z \001(\0132\032.google.protobuf.BoolVal" +
+      "ue\022E\n\024max_worker_processes\030[ \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\n\372\3071\0060-1024\022E\n\024max" +
+      "_parallel_workers\030\\ \001(\0132\033.google.protobu" +
+      "f.Int64ValueB\n\372\3071\0060-1024\022P\n\037max_parallel" +
+      "_workers_per_gather\030] \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\n\372\3071\0060-1024\022Q\n\036autovacuum" +
+      "_vacuum_scale_factor\030^ \001(\0132\034.google.prot" +
+      "obuf.DoubleValueB\013\372\3071\0070.0-1.0\022R\n\037autovac" +
+      "uum_analyze_scale_factor\030_ \001(\0132\034.google." +
+      "protobuf.DoubleValueB\013\372\3071\0070.0-1.0\022A\n\035def" +
+      "ault_transaction_read_only\030` \001(\0132\032.googl" +
+      "e.protobuf.BoolValue\022\020\n\010timezone\030a \001(\t\022:" +
+      "\n\026enable_parallel_append\030b \001(\0132\032.google." +
+      "protobuf.BoolValue\0228\n\024enable_parallel_ha" +
+      "sh\030c \001(\0132\032.google.protobuf.BoolValue\022<\n\030" +
+      "enable_partition_pruning\030d \001(\0132\032.google." +
+      "protobuf.BoolValue\022B\n\036enable_partitionwi" +
+      "se_aggregate\030e \001(\0132\032.google.protobuf.Boo" +
+      "lValue\022=\n\031enable_partitionwise_join\030f \001(" +
+      "\0132\032.google.protobuf.BoolValue\022\'\n\003jit\030g \001" +
+      "(\0132\032.google.protobuf.BoolValue\022N\n max_pa" +
+      "rallel_maintenance_workers\030h \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\007\372\3071\003>=0\022A\n\035parall" +
+      "el_leader_participation\030i \001(\0132\032.google.p" +
+      "rotobuf.BoolValue\022N\n\033log_transaction_sam" +
+      "ple_rate\030k \001(\0132\034.google.protobuf.DoubleV" +
+      "alueB\013\372\3071\0070.0-1.0\022`\n\017plan_cache_mode\030l \001" +
+      "(\0162G.yandex.cloud.mdb.postgresql.v1.conf" +
+      "ig.PostgresqlConfig17.PlanCacheMode\022I\n\030e" +
+      "ffective_io_concurrency\030m \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\n\372\3071\0060-1000\022M\n\024effect" +
+      "ive_cache_size\030n \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\022\372\3071\0160-549755813888\022r\n\030shared_" +
+      "preload_libraries\030o \003(\0162P.yandex.cloud.m" +
       "db.postgresql.v1.config.PostgresqlConfig" +
-      "17.LogLevel\022I\n\023hash_mem_multiplier\030| \001(\013" +
-      "2\034.google.protobuf.DoubleValueB\016\372\3071\n0.0-" +
-      "1000.0\022W\n\031logical_decoding_work_mem\030~ \001(" +
-      "\0132\033.google.protobuf.Int64ValueB\027\372\3071\0236553" +
-      "6-1099511627776\022K\n\032maintenance_io_concur" +
-      "rency\030\177 \001(\0132\033.google.protobuf.Int64Value" +
-      "B\n\372\3071\0060-1000\022U\n\026max_slot_wal_keep_size\030\200" +
-      "\001 \001(\0132\033.google.protobuf.Int64ValueB\027\372\3071\023" +
-      "-1-2251799812636672\022L\n\rwal_keep_size\030\201\001 " +
-      "\001(\0132\033.google.protobuf.Int64ValueB\027\372\3071\023-1" +
-      "-2251799812636672\022<\n\027enable_incremental_" +
-      "sort\030\202\001 \001(\0132\032.google.protobuf.BoolValue\022" +
-      "[\n\"autovacuum_vacuum_insert_threshold\030\203\001" +
-      " \001(\0132\033.google.protobuf.Int64ValueB\021\372\3071\r-" +
-      "1-2147483647\022[\n%autovacuum_vacuum_insert" +
-      "_scale_factor\030\204\001 \001(\0132\034.google.protobuf.D" +
-      "oubleValueB\r\372\3071\t0.0-100.0\022P\n\027log_min_dur" +
-      "ation_sample\030\205\001 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\021\372\3071\r-1-2147483647\022M\n\031log_state" +
-      "ment_sample_rate\030\206\001 \001(\0132\034.google.protobu" +
-      "f.DoubleValueB\013\372\3071\0070.0-1.0\022Q\n\030log_parame" +
-      "ter_max_length\030\207\001 \001(\0132\033.google.protobuf." +
-      "Int64ValueB\021\372\3071\r-1-2147483647\022Z\n!log_par" +
-      "ameter_max_length_on_error\030\210\001 \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueB\021\372\3071\r-1-214748364" +
-      "7\022Y\n client_connection_check_interval\030\211\001" +
-      " \001(\0132\033.google.protobuf.Int64ValueB\021\372\3071\r-" +
-      "1-2147483647\0228\n\023enable_async_append\030\212\001 \001" +
-      "(\0132\032.google.protobuf.BoolValue\0227\n\022enable" +
-      "_gathermerge\030\213\001 \001(\0132\032.google.protobuf.Bo" +
-      "olValue\0223\n\016enable_memoize\030\214\001 \001(\0132\032.googl" +
-      "e.protobuf.BoolValue\022@\n\033log_recovery_con" +
-      "flict_waits\030\215\001 \001(\0132\032.google.protobuf.Boo" +
-      "lValue\022L\n\023vacuum_failsafe_age\030\216\001 \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\021\372\3071\r-1-214748" +
-      "3647\022V\n\035vacuum_multixact_failsafe_age\030\217\001" +
-      " \001(\0132\033.google.protobuf.Int64ValueB\021\372\3071\r-" +
-      "1-2147483647\0229\n\024pg_qualstats_enabled\030\220\001 " +
-      "\001(\0132\032.google.protobuf.BoolValue\022A\n\034pg_qu" +
-      "alstats_track_constants\030\221\001 \001(\0132\032.google." +
-      "protobuf.BoolValue\0226\n\020pg_qualstats_max\030\222" +
-      "\001 \001(\0132\033.google.protobuf.Int64Value\022>\n\031pg" +
-      "_qualstats_resolve_oids\030\223\001 \001(\0132\032.google." +
-      "protobuf.BoolValue\022?\n\030pg_qualstats_sampl" +
-      "e_rate\030\224\001 \001(\0132\034.google.protobuf.DoubleVa" +
-      "lue\022J\n\017max_stack_depth\030\226\001 \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueB\023\372\3071\01765536-134217728\022" +
-      "?\n\032enable_group_by_reordering\030\227\001 \001(\0132\032.g" +
-      "oogle.protobuf.BoolValue\022)\n\004geqo\030\230\001 \001(\0132" +
-      "\032.google.protobuf.BoolValue\0224\n\016geqo_thre" +
-      "shold\030\231\001 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022;\n\013geqo_effort\030\232\001 \001(\0132\033.google.protobu" +
-      "f.Int64ValueB\010\372\3071\0041-10\0224\n\016geqo_pool_size" +
-      "\030\233\001 \001(\0132\033.google.protobuf.Int64Value\0226\n\020" +
-      "geqo_generations\030\234\001 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022G\n\023geqo_selection_bias\030\235\001 \001" +
-      "(\0132\034.google.protobuf.DoubleValueB\013\372\3071\0071." +
-      "5-2.0\022=\n\tgeqo_seed\030\236\001 \001(\0132\034.google.proto" +
-      "buf.DoubleValueB\013\372\3071\0070.0-1.0\022P\n\034pg_trgm_" +
-      "similarity_threshold\030\237\001 \001(\0132\034.google.pro" +
-      "tobuf.DoubleValueB\013\372\3071\0070.0-1.0\022U\n!pg_trg" +
-      "m_word_similarity_threshold\030\240\001 \001(\0132\034.goo" +
-      "gle.protobuf.DoubleValueB\013\372\3071\0070.0-1.0\022\\\n" +
-      "(pg_trgm_strict_word_similarity_threshol" +
-      "d\030\241\001 \001(\0132\034.google.protobuf.DoubleValueB\013" +
-      "\372\3071\0070.0-1.0\022?\n\031max_standby_archive_delay" +
-      "\030\242\001 \001(\0132\033.google.protobuf.Int64Value\022P\n\030" +
-      "session_duration_timeout\030\243\001 \001(\0132\033.google" +
-      ".protobuf.Int64ValueB\020\372\3071\0140-2147483647\022=" +
-      "\n\030log_replication_commands\030\244\001 \001(\0132\032.goog" +
-      "le.protobuf.BoolValue\022T\n\033log_autovacuum_" +
-      "min_duration\030\245\001 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\021\372\3071\r-1-2147483647\022j\n\023password_" +
-      "encryption\030\247\001 \001(\0162L.yandex.cloud.mdb.pos" +
-      "tgresql.v1.config.PostgresqlConfig17.Pas" +
-      "swordEncryption\022p\n\027auto_explain_log_form" +
-      "at\030\250\001 \001(\0162N.yandex.cloud.mdb.postgresql." +
-      "v1.config.PostgresqlConfig17.AutoExplain" +
-      "LogFormat\022;\n\026track_commit_timestamp\030\251\001 \001" +
-      "(\0132\032.google.protobuf.BoolValue\022P\n\037max_lo" +
-      "gical_replication_workers\030\252\001 \001(\0132\033.googl" +
-      "e.protobuf.Int64ValueB\t\372\3071\0054-100\022A\n\017max_" +
-      "wal_senders\030\253\001 \001(\0132\033.google.protobuf.Int" +
-      "64ValueB\n\372\3071\00620-100\022G\n\025max_replication_s" +
-      "lots\030\254\001 \001(\0132\033.google.protobuf.Int64Value" +
-      "B\n\372\3071\00620-100\"\306\001\n\024AutoExplainLogFormat\022\'\n" +
-      "#AUTO_EXPLAIN_LOG_FORMAT_UNSPECIFIED\020\000\022 " +
-      "\n\034AUTO_EXPLAIN_LOG_FORMAT_TEXT\020\001\022\037\n\033AUTO" +
-      "_EXPLAIN_LOG_FORMAT_XML\020\002\022 \n\034AUTO_EXPLAI" +
-      "N_LOG_FORMAT_JSON\020\003\022 \n\034AUTO_EXPLAIN_LOG_" +
-      "FORMAT_YAML\020\004\"\232\001\n\016BackslashQuote\022\037\n\033BACK" +
-      "SLASH_QUOTE_UNSPECIFIED\020\000\022\023\n\017BACKSLASH_Q" +
-      "UOTE\020\001\022\026\n\022BACKSLASH_QUOTE_ON\020\002\022\027\n\023BACKSL" +
-      "ASH_QUOTE_OFF\020\003\022!\n\035BACKSLASH_QUOTE_SAFE_" +
-      "ENCODING\020\004\"[\n\013ByteaOutput\022\034\n\030BYTEA_OUTPU" +
-      "T_UNSPECIFIED\020\000\022\024\n\020BYTEA_OUTPUT_HEX\020\001\022\030\n" +
-      "\024BYTEA_OUTPUT_ESCAPED\020\002\"\232\001\n\023ConstraintEx" +
-      "clusion\022$\n CONSTRAINT_EXCLUSION_UNSPECIF" +
-      "IED\020\000\022\033\n\027CONSTRAINT_EXCLUSION_ON\020\001\022\034\n\030CO" +
-      "NSTRAINT_EXCLUSION_OFF\020\002\022\"\n\036CONSTRAINT_E" +
-      "XCLUSION_PARTITION\020\003\"\227\001\n\022DebugParallelQu" +
-      "ery\022$\n DEBUG_PARALLEL_QUERY_UNSPECIFIED\020" +
-      "\000\022\033\n\027DEBUG_PARALLEL_QUERY_ON\020\001\022\034\n\030DEBUG_" +
-      "PARALLEL_QUERY_OFF\020\002\022 \n\034DEBUG_PARALLEL_Q" +
-      "UERY_REGRESS\020\003\"\231\001\n\021LogErrorVerbosity\022#\n\037" +
-      "LOG_ERROR_VERBOSITY_UNSPECIFIED\020\000\022\035\n\031LOG" +
-      "_ERROR_VERBOSITY_TERSE\020\001\022\037\n\033LOG_ERROR_VE" +
-      "RBOSITY_DEFAULT\020\002\022\037\n\033LOG_ERROR_VERBOSITY" +
-      "_VERBOSE\020\003\"\246\002\n\010LogLevel\022\031\n\025LOG_LEVEL_UNS" +
-      "PECIFIED\020\000\022\024\n\020LOG_LEVEL_DEBUG5\020\001\022\024\n\020LOG_" +
-      "LEVEL_DEBUG4\020\002\022\024\n\020LOG_LEVEL_DEBUG3\020\003\022\024\n\020" +
-      "LOG_LEVEL_DEBUG2\020\004\022\024\n\020LOG_LEVEL_DEBUG1\020\005" +
-      "\022\022\n\016LOG_LEVEL_INFO\020\014\022\021\n\rLOG_LEVEL_LOG\020\006\022" +
-      "\024\n\020LOG_LEVEL_NOTICE\020\007\022\025\n\021LOG_LEVEL_WARNI" +
-      "NG\020\010\022\023\n\017LOG_LEVEL_ERROR\020\t\022\023\n\017LOG_LEVEL_F" +
-      "ATAL\020\n\022\023\n\017LOG_LEVEL_PANIC\020\013\"\212\001\n\014LogState" +
-      "ment\022\035\n\031LOG_STATEMENT_UNSPECIFIED\020\000\022\026\n\022L" +
-      "OG_STATEMENT_NONE\020\001\022\025\n\021LOG_STATEMENT_DDL" +
-      "\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003\022\025\n\021LOG_STATEME" +
-      "NT_ALL\020\004\"}\n\022PasswordEncryption\022#\n\037PASSWO" +
-      "RD_ENCRYPTION_UNSPECIFIED\020\000\022\033\n\027PASSWORD_" +
-      "ENCRYPTION_MD5\020\001\022%\n!PASSWORD_ENCRYPTION_" +
-      "SCRAM_SHA_256\020\002\"\320\001\n\024PgHintPlanDebugPrint" +
-      "\022(\n$PG_HINT_PLAN_DEBUG_PRINT_UNSPECIFIED" +
-      "\020\000\022 \n\034PG_HINT_PLAN_DEBUG_PRINT_OFF\020\001\022\037\n\033" +
-      "PG_HINT_PLAN_DEBUG_PRINT_ON\020\002\022%\n!PG_HINT" +
-      "_PLAN_DEBUG_PRINT_DETAILED\020\003\022$\n PG_HINT_" +
-      "PLAN_DEBUG_PRINT_VERBOSE\020\004\"\231\001\n\rPlanCache" +
-      "Mode\022\037\n\033PLAN_CACHE_MODE_UNSPECIFIED\020\000\022\030\n" +
-      "\024PLAN_CACHE_MODE_AUTO\020\001\022%\n!PLAN_CACHE_MO" +
-      "DE_FORCE_CUSTOM_PLAN\020\002\022&\n\"PLAN_CACHE_MOD" +
-      "E_FORCE_GENERIC_PLAN\020\003\"\255\003\n\026SharedPreload" +
-      "Libraries\022(\n$SHARED_PRELOAD_LIBRARIES_UN" +
-      "SPECIFIED\020\000\022)\n%SHARED_PRELOAD_LIBRARIES_" +
-      "AUTO_EXPLAIN\020\001\022)\n%SHARED_PRELOAD_LIBRARI" +
-      "ES_PG_HINT_PLAN\020\002\022(\n$SHARED_PRELOAD_LIBR" +
-      "ARIES_TIMESCALEDB\020\003\022)\n%SHARED_PRELOAD_LI" +
-      "BRARIES_PG_QUALSTATS\020\004\022$\n SHARED_PRELOAD" +
-      "_LIBRARIES_PG_CRON\020\005\022&\n\"SHARED_PRELOAD_L" +
-      "IBRARIES_PGLOGICAL\020\006\022\'\n#SHARED_PRELOAD_L" +
-      "IBRARIES_PG_PREWARM\020\007\022$\n SHARED_PRELOAD_" +
-      "LIBRARIES_PGAUDIT\020\010\022!\n\035SHARED_PRELOAD_LI" +
-      "BRARIES_ANON\020\t\"\326\001\n\021SynchronousCommit\022\"\n\036" +
-      "SYNCHRONOUS_COMMIT_UNSPECIFIED\020\000\022\031\n\025SYNC" +
-      "HRONOUS_COMMIT_ON\020\001\022\032\n\026SYNCHRONOUS_COMMI" +
-      "T_OFF\020\002\022\034\n\030SYNCHRONOUS_COMMIT_LOCAL\020\003\022#\n" +
-      "\037SYNCHRONOUS_COMMIT_REMOTE_WRITE\020\004\022#\n\037SY" +
-      "NCHRONOUS_COMMIT_REMOTE_APPLY\020\005\"\346\001\n\024Tran" +
-      "sactionIsolation\022%\n!TRANSACTION_ISOLATIO" +
-      "N_UNSPECIFIED\020\000\022*\n&TRANSACTION_ISOLATION" +
-      "_READ_UNCOMMITTED\020\001\022(\n$TRANSACTION_ISOLA" +
-      "TION_READ_COMMITTED\020\002\022)\n%TRANSACTION_ISO" +
-      "LATION_REPEATABLE_READ\020\003\022&\n\"TRANSACTION_" +
-      "ISOLATION_SERIALIZABLE\020\004\"S\n\010WalLevel\022\031\n\025" +
-      "WAL_LEVEL_UNSPECIFIED\020\000\022\025\n\021WAL_LEVEL_REP" +
-      "LICA\020\001\022\025\n\021WAL_LEVEL_LOGICAL\020\002\"R\n\tXmlBina" +
-      "ry\022\032\n\026XML_BINARY_UNSPECIFIED\020\000\022\025\n\021XML_BI" +
-      "NARY_BASE64\020\001\022\022\n\016XML_BINARY_HEX\020\002\"X\n\tXml" +
-      "Option\022\032\n\026XML_OPTION_UNSPECIFIED\020\000\022\027\n\023XM" +
-      "L_OPTION_DOCUMENT\020\001\022\026\n\022XML_OPTION_CONTEN" +
-      "T\020\002J\004\010\023\020\024J\004\010@\020AJ\004\010N\020PJ\004\010j\020kJ\004\010}\020~J\006\010\225\001\020\226" +
-      "\001J\006\010\246\001\020\247\001\"\217\002\n\025PostgresqlConfigSet17\022S\n\020e" +
-      "ffective_config\030\001 \001(\01329.yandex.cloud.mdb" +
-      ".postgresql.v1.config.PostgresqlConfig17" +
-      "\022N\n\013user_config\030\002 \001(\01329.yandex.cloud.mdb" +
-      ".postgresql.v1.config.PostgresqlConfig17" +
-      "\022Q\n\016default_config\030\003 \001(\01329.yandex.cloud." +
-      "mdb.postgresql.v1.config.PostgresqlConfi" +
-      "g17B\201\001\n)yandex.cloud.api.mdb.postgresql." +
-      "v1.configZTgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/mdb/postgresql/v1/co" +
-      "nfig;postgresqlb\006proto3"
+      "17.SharedPreloadLibraries\022U\n\035auto_explai" +
+      "n_log_min_duration\030p \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\021\372\3071\r-1-2147483647\022<\n\030auto" +
+      "_explain_log_analyze\030q \001(\0132\032.google.prot" +
+      "obuf.BoolValue\022<\n\030auto_explain_log_buffe" +
+      "rs\030r \001(\0132\032.google.protobuf.BoolValue\022;\n\027" +
+      "auto_explain_log_timing\030s \001(\0132\032.google.p" +
+      "rotobuf.BoolValue\022=\n\031auto_explain_log_tr" +
+      "iggers\030t \001(\0132\032.google.protobuf.BoolValue" +
+      "\022<\n\030auto_explain_log_verbose\030u \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\022F\n\"auto_explain_l" +
+      "og_nested_statements\030v \001(\0132\032.google.prot" +
+      "obuf.BoolValue\022K\n\030auto_explain_sample_ra" +
+      "te\030w \001(\0132\034.google.protobuf.DoubleValueB\013" +
+      "\372\3071\0070.0-1.0\022<\n\030pg_hint_plan_enable_hint\030" +
+      "x \001(\0132\032.google.protobuf.BoolValue\022B\n\036pg_" +
+      "hint_plan_enable_hint_table\030y \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\022p\n\030pg_hint_plan_de" +
+      "bug_print\030z \001(\0162N.yandex.cloud.mdb.postg" +
+      "resql.v1.config.PostgresqlConfig17.PgHin" +
+      "tPlanDebugPrint\022f\n\032pg_hint_plan_message_" +
+      "level\030{ \001(\0162B.yandex.cloud.mdb.postgresq" +
+      "l.v1.config.PostgresqlConfig17.LogLevel\022" +
+      "I\n\023hash_mem_multiplier\030| \001(\0132\034.google.pr" +
+      "otobuf.DoubleValueB\016\372\3071\n0.0-1000.0\022W\n\031lo" +
+      "gical_decoding_work_mem\030~ \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\027\372\3071\02365536-1099511627" +
+      "776\022K\n\032maintenance_io_concurrency\030\177 \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\n\372\3071\0060-1000" +
+      "\022U\n\026max_slot_wal_keep_size\030\200\001 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\027\372\3071\023-1-225179981" +
+      "2636672\022L\n\rwal_keep_size\030\201\001 \001(\0132\033.google" +
+      ".protobuf.Int64ValueB\027\372\3071\023-1-22517998126" +
+      "36672\022<\n\027enable_incremental_sort\030\202\001 \001(\0132" +
+      "\032.google.protobuf.BoolValue\022[\n\"autovacuu" +
+      "m_vacuum_insert_threshold\030\203\001 \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\021\372\3071\r-1-2147483647" +
+      "\022[\n%autovacuum_vacuum_insert_scale_facto" +
+      "r\030\204\001 \001(\0132\034.google.protobuf.DoubleValueB\r" +
+      "\372\3071\t0.0-100.0\022P\n\027log_min_duration_sample" +
+      "\030\205\001 \001(\0132\033.google.protobuf.Int64ValueB\021\372\307" +
+      "1\r-1-2147483647\022M\n\031log_statement_sample_" +
+      "rate\030\206\001 \001(\0132\034.google.protobuf.DoubleValu" +
+      "eB\013\372\3071\0070.0-1.0\022Q\n\030log_parameter_max_leng" +
+      "th\030\207\001 \001(\0132\033.google.protobuf.Int64ValueB\021" +
+      "\372\3071\r-1-2147483647\022Z\n!log_parameter_max_l" +
+      "ength_on_error\030\210\001 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\021\372\3071\r-1-2147483647\022Y\n client_" +
+      "connection_check_interval\030\211\001 \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\021\372\3071\r-1-2147483647" +
+      "\0228\n\023enable_async_append\030\212\001 \001(\0132\032.google." +
+      "protobuf.BoolValue\0227\n\022enable_gathermerge" +
+      "\030\213\001 \001(\0132\032.google.protobuf.BoolValue\0223\n\016e" +
+      "nable_memoize\030\214\001 \001(\0132\032.google.protobuf.B" +
+      "oolValue\022@\n\033log_recovery_conflict_waits\030" +
+      "\215\001 \001(\0132\032.google.protobuf.BoolValue\022L\n\023va" +
+      "cuum_failsafe_age\030\216\001 \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\021\372\3071\r-1-2147483647\022V\n\035vacu" +
+      "um_multixact_failsafe_age\030\217\001 \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\021\372\3071\r-1-2147483647" +
+      "\0229\n\024pg_qualstats_enabled\030\220\001 \001(\0132\032.google" +
+      ".protobuf.BoolValue\022A\n\034pg_qualstats_trac" +
+      "k_constants\030\221\001 \001(\0132\032.google.protobuf.Boo" +
+      "lValue\0226\n\020pg_qualstats_max\030\222\001 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022>\n\031pg_qualstats_r" +
+      "esolve_oids\030\223\001 \001(\0132\032.google.protobuf.Boo" +
+      "lValue\022?\n\030pg_qualstats_sample_rate\030\224\001 \001(" +
+      "\0132\034.google.protobuf.DoubleValue\022J\n\017max_s" +
+      "tack_depth\030\226\001 \001(\0132\033.google.protobuf.Int6" +
+      "4ValueB\023\372\3071\01765536-134217728\022?\n\032enable_gr" +
+      "oup_by_reordering\030\227\001 \001(\0132\032.google.protob" +
+      "uf.BoolValue\022)\n\004geqo\030\230\001 \001(\0132\032.google.pro" +
+      "tobuf.BoolValue\0224\n\016geqo_threshold\030\231\001 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022;\n\013geqo_ef" +
+      "fort\030\232\001 \001(\0132\033.google.protobuf.Int64Value" +
+      "B\010\372\3071\0041-10\0224\n\016geqo_pool_size\030\233\001 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\0226\n\020geqo_generat" +
+      "ions\030\234\001 \001(\0132\033.google.protobuf.Int64Value" +
+      "\022G\n\023geqo_selection_bias\030\235\001 \001(\0132\034.google." +
+      "protobuf.DoubleValueB\013\372\3071\0071.5-2.0\022=\n\tgeq" +
+      "o_seed\030\236\001 \001(\0132\034.google.protobuf.DoubleVa" +
+      "lueB\013\372\3071\0070.0-1.0\022P\n\034pg_trgm_similarity_t" +
+      "hreshold\030\237\001 \001(\0132\034.google.protobuf.Double" +
+      "ValueB\013\372\3071\0070.0-1.0\022U\n!pg_trgm_word_simil" +
+      "arity_threshold\030\240\001 \001(\0132\034.google.protobuf" +
+      ".DoubleValueB\013\372\3071\0070.0-1.0\022\\\n(pg_trgm_str" +
+      "ict_word_similarity_threshold\030\241\001 \001(\0132\034.g" +
+      "oogle.protobuf.DoubleValueB\013\372\3071\0070.0-1.0\022" +
+      "?\n\031max_standby_archive_delay\030\242\001 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\022P\n\030session_dura" +
+      "tion_timeout\030\243\001 \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\020\372\3071\0140-2147483647\022=\n\030log_replic" +
+      "ation_commands\030\244\001 \001(\0132\032.google.protobuf." +
+      "BoolValue\022T\n\033log_autovacuum_min_duration" +
+      "\030\245\001 \001(\0132\033.google.protobuf.Int64ValueB\021\372\307" +
+      "1\r-1-2147483647\022j\n\023password_encryption\030\247" +
+      "\001 \001(\0162L.yandex.cloud.mdb.postgresql.v1.c" +
+      "onfig.PostgresqlConfig17.PasswordEncrypt" +
+      "ion\022p\n\027auto_explain_log_format\030\250\001 \001(\0162N." +
+      "yandex.cloud.mdb.postgresql.v1.config.Po" +
+      "stgresqlConfig17.AutoExplainLogFormat\022;\n" +
+      "\026track_commit_timestamp\030\251\001 \001(\0132\032.google." +
+      "protobuf.BoolValue\022P\n\037max_logical_replic" +
+      "ation_workers\030\252\001 \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\t\372\3071\0054-100\022A\n\017max_wal_senders\030" +
+      "\253\001 \001(\0132\033.google.protobuf.Int64ValueB\n\372\3071" +
+      "\00620-100\022G\n\025max_replication_slots\030\254\001 \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\n\372\3071\00620-100" +
+      "\022L\n\024idle_session_timeout\030\255\001 \001(\0132\033.google" +
+      ".protobuf.Int64ValueB\020\372\3071\0140-2147483647\"\306" +
+      "\001\n\024AutoExplainLogFormat\022\'\n#AUTO_EXPLAIN_" +
+      "LOG_FORMAT_UNSPECIFIED\020\000\022 \n\034AUTO_EXPLAIN" +
+      "_LOG_FORMAT_TEXT\020\001\022\037\n\033AUTO_EXPLAIN_LOG_F" +
+      "ORMAT_XML\020\002\022 \n\034AUTO_EXPLAIN_LOG_FORMAT_J" +
+      "SON\020\003\022 \n\034AUTO_EXPLAIN_LOG_FORMAT_YAML\020\004\"" +
+      "\232\001\n\016BackslashQuote\022\037\n\033BACKSLASH_QUOTE_UN" +
+      "SPECIFIED\020\000\022\023\n\017BACKSLASH_QUOTE\020\001\022\026\n\022BACK" +
+      "SLASH_QUOTE_ON\020\002\022\027\n\023BACKSLASH_QUOTE_OFF\020" +
+      "\003\022!\n\035BACKSLASH_QUOTE_SAFE_ENCODING\020\004\"[\n\013" +
+      "ByteaOutput\022\034\n\030BYTEA_OUTPUT_UNSPECIFIED\020" +
+      "\000\022\024\n\020BYTEA_OUTPUT_HEX\020\001\022\030\n\024BYTEA_OUTPUT_" +
+      "ESCAPED\020\002\"\232\001\n\023ConstraintExclusion\022$\n CON" +
+      "STRAINT_EXCLUSION_UNSPECIFIED\020\000\022\033\n\027CONST" +
+      "RAINT_EXCLUSION_ON\020\001\022\034\n\030CONSTRAINT_EXCLU" +
+      "SION_OFF\020\002\022\"\n\036CONSTRAINT_EXCLUSION_PARTI" +
+      "TION\020\003\"\227\001\n\022DebugParallelQuery\022$\n DEBUG_P" +
+      "ARALLEL_QUERY_UNSPECIFIED\020\000\022\033\n\027DEBUG_PAR" +
+      "ALLEL_QUERY_ON\020\001\022\034\n\030DEBUG_PARALLEL_QUERY" +
+      "_OFF\020\002\022 \n\034DEBUG_PARALLEL_QUERY_REGRESS\020\003" +
+      "\"\231\001\n\021LogErrorVerbosity\022#\n\037LOG_ERROR_VERB" +
+      "OSITY_UNSPECIFIED\020\000\022\035\n\031LOG_ERROR_VERBOSI" +
+      "TY_TERSE\020\001\022\037\n\033LOG_ERROR_VERBOSITY_DEFAUL" +
+      "T\020\002\022\037\n\033LOG_ERROR_VERBOSITY_VERBOSE\020\003\"\246\002\n" +
+      "\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECIFIED\020\000\022\024\n\020" +
+      "LOG_LEVEL_DEBUG5\020\001\022\024\n\020LOG_LEVEL_DEBUG4\020\002" +
+      "\022\024\n\020LOG_LEVEL_DEBUG3\020\003\022\024\n\020LOG_LEVEL_DEBU" +
+      "G2\020\004\022\024\n\020LOG_LEVEL_DEBUG1\020\005\022\022\n\016LOG_LEVEL_" +
+      "INFO\020\014\022\021\n\rLOG_LEVEL_LOG\020\006\022\024\n\020LOG_LEVEL_N" +
+      "OTICE\020\007\022\025\n\021LOG_LEVEL_WARNING\020\010\022\023\n\017LOG_LE" +
+      "VEL_ERROR\020\t\022\023\n\017LOG_LEVEL_FATAL\020\n\022\023\n\017LOG_" +
+      "LEVEL_PANIC\020\013\"\212\001\n\014LogStatement\022\035\n\031LOG_ST" +
+      "ATEMENT_UNSPECIFIED\020\000\022\026\n\022LOG_STATEMENT_N" +
+      "ONE\020\001\022\025\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021LOG_STAT" +
+      "EMENT_MOD\020\003\022\025\n\021LOG_STATEMENT_ALL\020\004\"}\n\022Pa" +
+      "sswordEncryption\022#\n\037PASSWORD_ENCRYPTION_" +
+      "UNSPECIFIED\020\000\022\033\n\027PASSWORD_ENCRYPTION_MD5" +
+      "\020\001\022%\n!PASSWORD_ENCRYPTION_SCRAM_SHA_256\020" +
+      "\002\"\320\001\n\024PgHintPlanDebugPrint\022(\n$PG_HINT_PL" +
+      "AN_DEBUG_PRINT_UNSPECIFIED\020\000\022 \n\034PG_HINT_" +
+      "PLAN_DEBUG_PRINT_OFF\020\001\022\037\n\033PG_HINT_PLAN_D" +
+      "EBUG_PRINT_ON\020\002\022%\n!PG_HINT_PLAN_DEBUG_PR" +
+      "INT_DETAILED\020\003\022$\n PG_HINT_PLAN_DEBUG_PRI" +
+      "NT_VERBOSE\020\004\"\231\001\n\rPlanCacheMode\022\037\n\033PLAN_C" +
+      "ACHE_MODE_UNSPECIFIED\020\000\022\030\n\024PLAN_CACHE_MO" +
+      "DE_AUTO\020\001\022%\n!PLAN_CACHE_MODE_FORCE_CUSTO" +
+      "M_PLAN\020\002\022&\n\"PLAN_CACHE_MODE_FORCE_GENERI" +
+      "C_PLAN\020\003\"\255\003\n\026SharedPreloadLibraries\022(\n$S" +
+      "HARED_PRELOAD_LIBRARIES_UNSPECIFIED\020\000\022)\n" +
+      "%SHARED_PRELOAD_LIBRARIES_AUTO_EXPLAIN\020\001" +
+      "\022)\n%SHARED_PRELOAD_LIBRARIES_PG_HINT_PLA" +
+      "N\020\002\022(\n$SHARED_PRELOAD_LIBRARIES_TIMESCAL" +
+      "EDB\020\003\022)\n%SHARED_PRELOAD_LIBRARIES_PG_QUA" +
+      "LSTATS\020\004\022$\n SHARED_PRELOAD_LIBRARIES_PG_" +
+      "CRON\020\005\022&\n\"SHARED_PRELOAD_LIBRARIES_PGLOG" +
+      "ICAL\020\006\022\'\n#SHARED_PRELOAD_LIBRARIES_PG_PR" +
+      "EWARM\020\007\022$\n SHARED_PRELOAD_LIBRARIES_PGAU" +
+      "DIT\020\010\022!\n\035SHARED_PRELOAD_LIBRARIES_ANON\020\t" +
+      "\"\326\001\n\021SynchronousCommit\022\"\n\036SYNCHRONOUS_CO" +
+      "MMIT_UNSPECIFIED\020\000\022\031\n\025SYNCHRONOUS_COMMIT" +
+      "_ON\020\001\022\032\n\026SYNCHRONOUS_COMMIT_OFF\020\002\022\034\n\030SYN" +
+      "CHRONOUS_COMMIT_LOCAL\020\003\022#\n\037SYNCHRONOUS_C" +
+      "OMMIT_REMOTE_WRITE\020\004\022#\n\037SYNCHRONOUS_COMM" +
+      "IT_REMOTE_APPLY\020\005\"\346\001\n\024TransactionIsolati" +
+      "on\022%\n!TRANSACTION_ISOLATION_UNSPECIFIED\020" +
+      "\000\022*\n&TRANSACTION_ISOLATION_READ_UNCOMMIT" +
+      "TED\020\001\022(\n$TRANSACTION_ISOLATION_READ_COMM" +
+      "ITTED\020\002\022)\n%TRANSACTION_ISOLATION_REPEATA" +
+      "BLE_READ\020\003\022&\n\"TRANSACTION_ISOLATION_SERI" +
+      "ALIZABLE\020\004\"S\n\010WalLevel\022\031\n\025WAL_LEVEL_UNSP" +
+      "ECIFIED\020\000\022\025\n\021WAL_LEVEL_REPLICA\020\001\022\025\n\021WAL_" +
+      "LEVEL_LOGICAL\020\002\"R\n\tXmlBinary\022\032\n\026XML_BINA" +
+      "RY_UNSPECIFIED\020\000\022\025\n\021XML_BINARY_BASE64\020\001\022" +
+      "\022\n\016XML_BINARY_HEX\020\002\"X\n\tXmlOption\022\032\n\026XML_" +
+      "OPTION_UNSPECIFIED\020\000\022\027\n\023XML_OPTION_DOCUM" +
+      "ENT\020\001\022\026\n\022XML_OPTION_CONTENT\020\002J\004\010\023\020\024J\004\010@\020" +
+      "AJ\004\010N\020PJ\004\010j\020kJ\004\010}\020~J\006\010\225\001\020\226\001J\006\010\246\001\020\247\001\"\217\002\n\025" +
+      "PostgresqlConfigSet17\022S\n\020effective_confi" +
+      "g\030\001 \001(\01329.yandex.cloud.mdb.postgresql.v1" +
+      ".config.PostgresqlConfig17\022N\n\013user_confi" +
+      "g\030\002 \001(\01329.yandex.cloud.mdb.postgresql.v1" +
+      ".config.PostgresqlConfig17\022Q\n\016default_co" +
+      "nfig\030\003 \001(\01329.yandex.cloud.mdb.postgresql" +
+      ".v1.config.PostgresqlConfig17B\201\001\n)yandex" +
+      ".cloud.api.mdb.postgresql.v1.configZTgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/mdb/postgresql/v1/config;postgresq" +
+      "lb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -38599,7 +38865,7 @@ public final class Postgresql17 {
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig17_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig17_descriptor,
-        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "DebugParallelQuery", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EnableParallelAppend", "EnableParallelHash", "EnablePartitionPruning", "EnablePartitionwiseAggregate", "EnablePartitionwiseJoin", "Jit", "MaxParallelMaintenanceWorkers", "ParallelLeaderParticipation", "LogTransactionSampleRate", "PlanCacheMode", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", "HashMemMultiplier", "LogicalDecodingWorkMem", "MaintenanceIoConcurrency", "MaxSlotWalKeepSize", "WalKeepSize", "EnableIncrementalSort", "AutovacuumVacuumInsertThreshold", "AutovacuumVacuumInsertScaleFactor", "LogMinDurationSample", "LogStatementSampleRate", "LogParameterMaxLength", "LogParameterMaxLengthOnError", "ClientConnectionCheckInterval", "EnableAsyncAppend", "EnableGathermerge", "EnableMemoize", "LogRecoveryConflictWaits", "VacuumFailsafeAge", "VacuumMultixactFailsafeAge", "PgQualstatsEnabled", "PgQualstatsTrackConstants", "PgQualstatsMax", "PgQualstatsResolveOids", "PgQualstatsSampleRate", "MaxStackDepth", "EnableGroupByReordering", "Geqo", "GeqoThreshold", "GeqoEffort", "GeqoPoolSize", "GeqoGenerations", "GeqoSelectionBias", "GeqoSeed", "PgTrgmSimilarityThreshold", "PgTrgmWordSimilarityThreshold", "PgTrgmStrictWordSimilarityThreshold", "MaxStandbyArchiveDelay", "SessionDurationTimeout", "LogReplicationCommands", "LogAutovacuumMinDuration", "PasswordEncryption", "AutoExplainLogFormat", "TrackCommitTimestamp", "MaxLogicalReplicationWorkers", "MaxWalSenders", "MaxReplicationSlots", });
+        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "DebugParallelQuery", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EnableParallelAppend", "EnableParallelHash", "EnablePartitionPruning", "EnablePartitionwiseAggregate", "EnablePartitionwiseJoin", "Jit", "MaxParallelMaintenanceWorkers", "ParallelLeaderParticipation", "LogTransactionSampleRate", "PlanCacheMode", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", "HashMemMultiplier", "LogicalDecodingWorkMem", "MaintenanceIoConcurrency", "MaxSlotWalKeepSize", "WalKeepSize", "EnableIncrementalSort", "AutovacuumVacuumInsertThreshold", "AutovacuumVacuumInsertScaleFactor", "LogMinDurationSample", "LogStatementSampleRate", "LogParameterMaxLength", "LogParameterMaxLengthOnError", "ClientConnectionCheckInterval", "EnableAsyncAppend", "EnableGathermerge", "EnableMemoize", "LogRecoveryConflictWaits", "VacuumFailsafeAge", "VacuumMultixactFailsafeAge", "PgQualstatsEnabled", "PgQualstatsTrackConstants", "PgQualstatsMax", "PgQualstatsResolveOids", "PgQualstatsSampleRate", "MaxStackDepth", "EnableGroupByReordering", "Geqo", "GeqoThreshold", "GeqoEffort", "GeqoPoolSize", "GeqoGenerations", "GeqoSelectionBias", "GeqoSeed", "PgTrgmSimilarityThreshold", "PgTrgmWordSimilarityThreshold", "PgTrgmStrictWordSimilarityThreshold", "MaxStandbyArchiveDelay", "SessionDurationTimeout", "LogReplicationCommands", "LogAutovacuumMinDuration", "PasswordEncryption", "AutoExplainLogFormat", "TrackCommitTimestamp", "MaxLogicalReplicationWorkers", "MaxWalSenders", "MaxReplicationSlots", "IdleSessionTimeout", });
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet17_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet17_fieldAccessorTable = new

@@ -112,6 +112,37 @@ public final class DatabaseServiceGrpc {
     return getCreateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Update",
+      requestType = yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateMethod;
+    if ((getUpdateMethod = DatabaseServiceGrpc.getUpdateMethod) == null) {
+      synchronized (DatabaseServiceGrpc.class) {
+        if ((getUpdateMethod = DatabaseServiceGrpc.getUpdateMethod) == null) {
+          DatabaseServiceGrpc.getUpdateMethod = getUpdateMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("Update"))
+              .build();
+        }
+      }
+    }
+    return getUpdateMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.DeleteDatabaseRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
 
@@ -227,6 +258,16 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
+     * Updates the specified database.
+     * </pre>
+     */
+    public void update(yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes a database from a cluster.
      * </pre>
      */
@@ -258,6 +299,13 @@ public final class DatabaseServiceGrpc {
                 yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.CreateDatabaseRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
+          .addMethod(
+            getUpdateMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -322,6 +370,17 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
+     * Updates the specified database.
+     * </pre>
+     */
+    public void update(yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes a database from a cluster.
      * </pre>
      */
@@ -378,6 +437,16 @@ public final class DatabaseServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.CreateDatabaseRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the specified database.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
     /**
@@ -444,6 +513,17 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
+     * Updates the specified database.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
+        yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Deletes a database from a cluster.
      * </pre>
      */
@@ -457,7 +537,8 @@ public final class DatabaseServiceGrpc {
   private static final int METHODID_GET = 0;
   private static final int METHODID_LIST = 1;
   private static final int METHODID_CREATE = 2;
-  private static final int METHODID_DELETE = 3;
+  private static final int METHODID_UPDATE = 3;
+  private static final int METHODID_DELETE = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -486,6 +567,10 @@ public final class DatabaseServiceGrpc {
           break;
         case METHODID_CREATE:
           serviceImpl.create((yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.CreateDatabaseRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_UPDATE:
+          serviceImpl.update((yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_DELETE:
@@ -556,6 +641,7 @@ public final class DatabaseServiceGrpc {
               .addMethod(getGetMethod())
               .addMethod(getListMethod())
               .addMethod(getCreateMethod())
+              .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
               .build();
         }

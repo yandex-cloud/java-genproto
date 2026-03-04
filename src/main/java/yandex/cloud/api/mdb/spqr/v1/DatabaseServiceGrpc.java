@@ -80,37 +80,6 @@ public final class DatabaseServiceGrpc {
     return getListMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesAtRevisionRequest,
-      yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesResponse> getListAtRevisionMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListAtRevision",
-      requestType = yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesAtRevisionRequest.class,
-      responseType = yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesAtRevisionRequest,
-      yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesResponse> getListAtRevisionMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesAtRevisionRequest, yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesResponse> getListAtRevisionMethod;
-    if ((getListAtRevisionMethod = DatabaseServiceGrpc.getListAtRevisionMethod) == null) {
-      synchronized (DatabaseServiceGrpc.class) {
-        if ((getListAtRevisionMethod = DatabaseServiceGrpc.getListAtRevisionMethod) == null) {
-          DatabaseServiceGrpc.getListAtRevisionMethod = getListAtRevisionMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesAtRevisionRequest, yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAtRevision"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesAtRevisionRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("ListAtRevision"))
-              .build();
-        }
-      }
-    }
-    return getListAtRevisionMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.CreateDatabaseRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
 
@@ -247,16 +216,6 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of SPQR Database resources in the specified cluster at the specified revision.
-     * </pre>
-     */
-    public void listAtRevision(yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesAtRevisionRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAtRevisionMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * Creates a new SPQR database in the specified cluster.
      * </pre>
      */
@@ -291,13 +250,6 @@ public final class DatabaseServiceGrpc {
                 yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesRequest,
                 yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesResponse>(
                   this, METHODID_LIST)))
-          .addMethod(
-            getListAtRevisionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesAtRevisionRequest,
-                yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesResponse>(
-                  this, METHODID_LIST_AT_REVISION)))
           .addMethod(
             getCreateMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -354,17 +306,6 @@ public final class DatabaseServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Retrieves the list of SPQR Database resources in the specified cluster at the specified revision.
-     * </pre>
-     */
-    public void listAtRevision(yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesAtRevisionRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListAtRevisionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -430,16 +371,6 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of SPQR Database resources in the specified cluster at the specified revision.
-     * </pre>
-     */
-    public yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesResponse listAtRevision(yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesAtRevisionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListAtRevisionMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * Creates a new SPQR database in the specified cluster.
      * </pre>
      */
@@ -501,17 +432,6 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of SPQR Database resources in the specified cluster at the specified revision.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesResponse> listAtRevision(
-        yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesAtRevisionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListAtRevisionMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * Creates a new SPQR database in the specified cluster.
      * </pre>
      */
@@ -535,9 +455,8 @@ public final class DatabaseServiceGrpc {
 
   private static final int METHODID_GET = 0;
   private static final int METHODID_LIST = 1;
-  private static final int METHODID_LIST_AT_REVISION = 2;
-  private static final int METHODID_CREATE = 3;
-  private static final int METHODID_DELETE = 4;
+  private static final int METHODID_CREATE = 2;
+  private static final int METHODID_DELETE = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -562,10 +481,6 @@ public final class DatabaseServiceGrpc {
           break;
         case METHODID_LIST:
           serviceImpl.list((yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesResponse>) responseObserver);
-          break;
-        case METHODID_LIST_AT_REVISION:
-          serviceImpl.listAtRevision((yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesAtRevisionRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.DatabaseServiceOuterClass.ListDatabasesResponse>) responseObserver);
           break;
         case METHODID_CREATE:
@@ -639,7 +554,6 @@ public final class DatabaseServiceGrpc {
               .setSchemaDescriptor(new DatabaseServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
               .addMethod(getListMethod())
-              .addMethod(getListAtRevisionMethod())
               .addMethod(getCreateMethod())
               .addMethod(getDeleteMethod())
               .build();

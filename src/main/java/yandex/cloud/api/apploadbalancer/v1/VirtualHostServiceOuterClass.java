@@ -15419,6 +15419,33 @@ public final class VirtualHostServiceOuterClass {
      */
     boolean getDisableSecurityProfile();
 
+    /**
+     * <pre>
+     * New settings of the client certificate forwarding.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 9;</code>
+     * @return Whether the clientCertificateForward field is set.
+     */
+    boolean hasClientCertificateForward();
+    /**
+     * <pre>
+     * New settings of the client certificate forwarding.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 9;</code>
+     * @return The clientCertificateForward.
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward getClientCertificateForward();
+    /**
+     * <pre>
+     * New settings of the client certificate forwarding.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 9;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForwardOrBuilder getClientCertificateForwardOrBuilder();
+
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateRouteRequest.RouteCase getRouteCase();
   }
   /**
@@ -15544,6 +15571,19 @@ public final class VirtualHostServiceOuterClass {
             case 64: {
 
               disableSecurityProfile_ = input.readBool();
+              break;
+            }
+            case 74: {
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.Builder subBuilder = null;
+              if (clientCertificateForward_ != null) {
+                subBuilder = clientCertificateForward_.toBuilder();
+              }
+              clientCertificateForward_ = input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(clientCertificateForward_);
+                clientCertificateForward_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -15940,6 +15980,44 @@ public final class VirtualHostServiceOuterClass {
       return disableSecurityProfile_;
     }
 
+    public static final int CLIENT_CERTIFICATE_FORWARD_FIELD_NUMBER = 9;
+    private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward clientCertificateForward_;
+    /**
+     * <pre>
+     * New settings of the client certificate forwarding.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 9;</code>
+     * @return Whether the clientCertificateForward field is set.
+     */
+    @java.lang.Override
+    public boolean hasClientCertificateForward() {
+      return clientCertificateForward_ != null;
+    }
+    /**
+     * <pre>
+     * New settings of the client certificate forwarding.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 9;</code>
+     * @return The clientCertificateForward.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward getClientCertificateForward() {
+      return clientCertificateForward_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.getDefaultInstance() : clientCertificateForward_;
+    }
+    /**
+     * <pre>
+     * New settings of the client certificate forwarding.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForwardOrBuilder getClientCertificateForwardOrBuilder() {
+      return getClientCertificateForward();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -15977,6 +16055,9 @@ public final class VirtualHostServiceOuterClass {
       }
       if (disableSecurityProfile_ != false) {
         output.writeBool(8, disableSecurityProfile_);
+      }
+      if (clientCertificateForward_ != null) {
+        output.writeMessage(9, getClientCertificateForward());
       }
       unknownFields.writeTo(output);
     }
@@ -16016,6 +16097,10 @@ public final class VirtualHostServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, disableSecurityProfile_);
       }
+      if (clientCertificateForward_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getClientCertificateForward());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -16049,6 +16134,11 @@ public final class VirtualHostServiceOuterClass {
       }
       if (getDisableSecurityProfile()
           != other.getDisableSecurityProfile()) return false;
+      if (hasClientCertificateForward() != other.hasClientCertificateForward()) return false;
+      if (hasClientCertificateForward()) {
+        if (!getClientCertificateForward()
+            .equals(other.getClientCertificateForward())) return false;
+      }
       if (!getRouteCase().equals(other.getRouteCase())) return false;
       switch (routeCase_) {
         case 5:
@@ -16090,6 +16180,10 @@ public final class VirtualHostServiceOuterClass {
       hash = (37 * hash) + DISABLE_SECURITY_PROFILE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDisableSecurityProfile());
+      if (hasClientCertificateForward()) {
+        hash = (37 * hash) + CLIENT_CERTIFICATE_FORWARD_FIELD_NUMBER;
+        hash = (53 * hash) + getClientCertificateForward().hashCode();
+      }
       switch (routeCase_) {
         case 5:
           hash = (37 * hash) + HTTP_FIELD_NUMBER;
@@ -16255,6 +16349,12 @@ public final class VirtualHostServiceOuterClass {
         }
         disableSecurityProfile_ = false;
 
+        if (clientCertificateForwardBuilder_ == null) {
+          clientCertificateForward_ = null;
+        } else {
+          clientCertificateForward_ = null;
+          clientCertificateForwardBuilder_ = null;
+        }
         routeCase_ = 0;
         route_ = null;
         return this;
@@ -16311,6 +16411,11 @@ public final class VirtualHostServiceOuterClass {
           result.routeOptions_ = routeOptionsBuilder_.build();
         }
         result.disableSecurityProfile_ = disableSecurityProfile_;
+        if (clientCertificateForwardBuilder_ == null) {
+          result.clientCertificateForward_ = clientCertificateForward_;
+        } else {
+          result.clientCertificateForward_ = clientCertificateForwardBuilder_.build();
+        }
         result.routeCase_ = routeCase_;
         onBuilt();
         return result;
@@ -16380,6 +16485,9 @@ public final class VirtualHostServiceOuterClass {
         }
         if (other.getDisableSecurityProfile() != false) {
           setDisableSecurityProfile(other.getDisableSecurityProfile());
+        }
+        if (other.hasClientCertificateForward()) {
+          mergeClientCertificateForward(other.getClientCertificateForward());
         }
         switch (other.getRouteCase()) {
           case HTTP: {
@@ -17446,6 +17554,161 @@ public final class VirtualHostServiceOuterClass {
         disableSecurityProfile_ = false;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward clientCertificateForward_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForwardOrBuilder> clientCertificateForwardBuilder_;
+      /**
+       * <pre>
+       * New settings of the client certificate forwarding.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 9;</code>
+       * @return Whether the clientCertificateForward field is set.
+       */
+      public boolean hasClientCertificateForward() {
+        return clientCertificateForwardBuilder_ != null || clientCertificateForward_ != null;
+      }
+      /**
+       * <pre>
+       * New settings of the client certificate forwarding.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 9;</code>
+       * @return The clientCertificateForward.
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward getClientCertificateForward() {
+        if (clientCertificateForwardBuilder_ == null) {
+          return clientCertificateForward_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.getDefaultInstance() : clientCertificateForward_;
+        } else {
+          return clientCertificateForwardBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * New settings of the client certificate forwarding.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 9;</code>
+       */
+      public Builder setClientCertificateForward(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward value) {
+        if (clientCertificateForwardBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          clientCertificateForward_ = value;
+          onChanged();
+        } else {
+          clientCertificateForwardBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New settings of the client certificate forwarding.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 9;</code>
+       */
+      public Builder setClientCertificateForward(
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.Builder builderForValue) {
+        if (clientCertificateForwardBuilder_ == null) {
+          clientCertificateForward_ = builderForValue.build();
+          onChanged();
+        } else {
+          clientCertificateForwardBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New settings of the client certificate forwarding.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 9;</code>
+       */
+      public Builder mergeClientCertificateForward(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward value) {
+        if (clientCertificateForwardBuilder_ == null) {
+          if (clientCertificateForward_ != null) {
+            clientCertificateForward_ =
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.newBuilder(clientCertificateForward_).mergeFrom(value).buildPartial();
+          } else {
+            clientCertificateForward_ = value;
+          }
+          onChanged();
+        } else {
+          clientCertificateForwardBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New settings of the client certificate forwarding.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 9;</code>
+       */
+      public Builder clearClientCertificateForward() {
+        if (clientCertificateForwardBuilder_ == null) {
+          clientCertificateForward_ = null;
+          onChanged();
+        } else {
+          clientCertificateForward_ = null;
+          clientCertificateForwardBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New settings of the client certificate forwarding.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 9;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.Builder getClientCertificateForwardBuilder() {
+        
+        onChanged();
+        return getClientCertificateForwardFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * New settings of the client certificate forwarding.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 9;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForwardOrBuilder getClientCertificateForwardOrBuilder() {
+        if (clientCertificateForwardBuilder_ != null) {
+          return clientCertificateForwardBuilder_.getMessageOrBuilder();
+        } else {
+          return clientCertificateForward_ == null ?
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.getDefaultInstance() : clientCertificateForward_;
+        }
+      }
+      /**
+       * <pre>
+       * New settings of the client certificate forwarding.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForwardOrBuilder> 
+          getClientCertificateForwardFieldBuilder() {
+        if (clientCertificateForwardBuilder_ == null) {
+          clientCertificateForwardBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForwardOrBuilder>(
+                  getClientCertificateForward(),
+                  getParentForChildren(),
+                  isClean());
+          clientCertificateForward_ = null;
+        }
+        return clientCertificateForwardBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -18608,7 +18871,7 @@ public final class VirtualHostServiceOuterClass {
       "_name\030\002 \001(\tB\004\350\3071\001\022\030\n\nroute_name\030\003 \001(\tB\004\350" +
       "\3071\001\"\\\n\023RemoveRouteMetadata\022\026\n\016http_route" +
       "r_id\030\001 \001(\t\022\031\n\021virtual_host_name\030\002 \001(\t\022\022\n" +
-      "\nroute_name\030\003 \001(\t\"\215\003\n\022UpdateRouteRequest" +
+      "\nroute_name\030\003 \001(\t\"\354\003\n\022UpdateRouteRequest" +
       "\022\034\n\016http_router_id\030\001 \001(\tB\004\350\3071\001\022\037\n\021virtua" +
       "l_host_name\030\002 \001(\tB\004\350\3071\001\022\030\n\nroute_name\030\003 " +
       "\001(\tB\004\350\3071\001\022/\n\013update_mask\030\004 \001(\0132\032.google." +
@@ -18618,53 +18881,56 @@ public final class VirtualHostServiceOuterClass {
       "cer.v1.GrpcRouteH\000\022D\n\rroute_options\030\007 \001(" +
       "\0132-.yandex.cloud.apploadbalancer.v1.Rout" +
       "eOptions\022 \n\030disable_security_profile\030\010 \001" +
-      "(\010B\r\n\005route\022\004\300\3011\001\"\\\n\023UpdateRouteMetadata" +
-      "\022\026\n\016http_router_id\030\001 \001(\t\022\031\n\021virtual_host" +
-      "_name\030\002 \001(\t\022\022\n\nroute_name\030\003 \001(\t2\342\014\n\022Virt" +
-      "ualHostService\022\306\001\n\003Get\0226.yandex.cloud.ap" +
-      "ploadbalancer.v1.GetVirtualHostRequest\032," +
-      ".yandex.cloud.apploadbalancer.v1.Virtual" +
-      "Host\"Y\202\323\344\223\002S\022Q/apploadbalancer/v1/httpRo" +
-      "uters/{http_router_id}/virtualHosts/{vir" +
-      "tual_host_name}\022\302\001\n\004List\0228.yandex.cloud." +
-      "apploadbalancer.v1.ListVirtualHostsReque" +
-      "st\0329.yandex.cloud.apploadbalancer.v1.Lis" +
-      "tVirtualHostsResponse\"E\202\323\344\223\002?\022=/apploadb" +
-      "alancer/v1/httpRouters/{http_router_id}/" +
-      "virtualHosts\022\334\001\n\006Create\0229.yandex.cloud.a" +
-      "pploadbalancer.v1.CreateVirtualHostReque" +
-      "st\032!.yandex.cloud.operation.Operation\"t\202" +
-      "\323\344\223\002B\"=/apploadbalancer/v1/httpRouters/{" +
-      "http_router_id}/virtualHosts:\001*\262\322*(\n\031Cre" +
-      "ateVirtualHostMetadata\022\013VirtualHost\022\361\001\n\006" +
-      "Update\0229.yandex.cloud.apploadbalancer.v1" +
-      ".UpdateVirtualHostRequest\032!.yandex.cloud" +
-      ".operation.Operation\"\210\001\202\323\344\223\002V2Q/apploadb" +
-      "alancer/v1/httpRouters/{http_router_id}/" +
-      "virtualHosts/{virtual_host_name}:\001*\262\322*(\n" +
-      "\031UpdateVirtualHostMetadata\022\013VirtualHost\022" +
-      "\370\001\n\006Delete\0229.yandex.cloud.apploadbalance" +
-      "r.v1.DeleteVirtualHostRequest\032!.yandex.c" +
-      "loud.operation.Operation\"\217\001\202\323\344\223\002S*Q/appl" +
-      "oadbalancer/v1/httpRouters/{http_router_" +
-      "id}/virtualHosts/{virtual_host_name}\262\322*2" +
-      "\n\031DeleteVirtualHostMetadata\022\025google.prot" +
-      "obuf.Empty\022\366\001\n\013RemoveRoute\0223.yandex.clou" +
-      "d.apploadbalancer.v1.RemoveRouteRequest\032" +
-      "!.yandex.cloud.operation.Operation\"\216\001\202\323\344" +
-      "\223\002b\"]/apploadbalancer/v1/httpRouters/{ht" +
-      "tp_router_id}/virtualHosts/{virtual_host" +
-      "_name}:removeRoute:\001*\262\322*\"\n\023RemoveRouteMe" +
-      "tadata\022\013VirtualHost\022\366\001\n\013UpdateRoute\0223.ya" +
-      "ndex.cloud.apploadbalancer.v1.UpdateRout" +
-      "eRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"\216\001\202\323\344\223\002b\"]/apploadbalancer/v1/httpRo" +
-      "uters/{http_router_id}/virtualHosts/{vir" +
-      "tual_host_name}:updateRoute:\001*\262\322*\"\n\023Upda" +
-      "teRouteMetadata\022\013VirtualHostBz\n#yandex.c" +
-      "loud.api.apploadbalancer.v1ZSgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/ap" +
-      "ploadbalancer/v1;apploadbalancerb\006proto3"
+      "(\010\022]\n\032client_certificate_forward\030\t \001(\01329" +
+      ".yandex.cloud.apploadbalancer.v1.ClientC" +
+      "ertificateForwardB\r\n\005route\022\004\300\3011\001\"\\\n\023Upda" +
+      "teRouteMetadata\022\026\n\016http_router_id\030\001 \001(\t\022" +
+      "\031\n\021virtual_host_name\030\002 \001(\t\022\022\n\nroute_name" +
+      "\030\003 \001(\t2\342\014\n\022VirtualHostService\022\306\001\n\003Get\0226." +
+      "yandex.cloud.apploadbalancer.v1.GetVirtu" +
+      "alHostRequest\032,.yandex.cloud.apploadbala" +
+      "ncer.v1.VirtualHost\"Y\202\323\344\223\002S\022Q/apploadbal" +
+      "ancer/v1/httpRouters/{http_router_id}/vi" +
+      "rtualHosts/{virtual_host_name}\022\302\001\n\004List\022" +
+      "8.yandex.cloud.apploadbalancer.v1.ListVi" +
+      "rtualHostsRequest\0329.yandex.cloud.appload" +
+      "balancer.v1.ListVirtualHostsResponse\"E\202\323" +
+      "\344\223\002?\022=/apploadbalancer/v1/httpRouters/{h" +
+      "ttp_router_id}/virtualHosts\022\334\001\n\006Create\0229" +
+      ".yandex.cloud.apploadbalancer.v1.CreateV" +
+      "irtualHostRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"t\202\323\344\223\002B\"=/apploadbalancer/v" +
+      "1/httpRouters/{http_router_id}/virtualHo" +
+      "sts:\001*\262\322*(\n\031CreateVirtualHostMetadata\022\013V" +
+      "irtualHost\022\361\001\n\006Update\0229.yandex.cloud.app" +
+      "loadbalancer.v1.UpdateVirtualHostRequest" +
+      "\032!.yandex.cloud.operation.Operation\"\210\001\202\323" +
+      "\344\223\002V2Q/apploadbalancer/v1/httpRouters/{h" +
+      "ttp_router_id}/virtualHosts/{virtual_hos" +
+      "t_name}:\001*\262\322*(\n\031UpdateVirtualHostMetadat" +
+      "a\022\013VirtualHost\022\370\001\n\006Delete\0229.yandex.cloud" +
+      ".apploadbalancer.v1.DeleteVirtualHostReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "\217\001\202\323\344\223\002S*Q/apploadbalancer/v1/httpRouter" +
+      "s/{http_router_id}/virtualHosts/{virtual" +
+      "_host_name}\262\322*2\n\031DeleteVirtualHostMetada" +
+      "ta\022\025google.protobuf.Empty\022\366\001\n\013RemoveRout" +
+      "e\0223.yandex.cloud.apploadbalancer.v1.Remo" +
+      "veRouteRequest\032!.yandex.cloud.operation." +
+      "Operation\"\216\001\202\323\344\223\002b\"]/apploadbalancer/v1/" +
+      "httpRouters/{http_router_id}/virtualHost" +
+      "s/{virtual_host_name}:removeRoute:\001*\262\322*\"" +
+      "\n\023RemoveRouteMetadata\022\013VirtualHost\022\366\001\n\013U" +
+      "pdateRoute\0223.yandex.cloud.apploadbalance" +
+      "r.v1.UpdateRouteRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"\216\001\202\323\344\223\002b\"]/apploadbal" +
+      "ancer/v1/httpRouters/{http_router_id}/vi" +
+      "rtualHosts/{virtual_host_name}:updateRou" +
+      "te:\001*\262\322*\"\n\023UpdateRouteMetadata\022\013VirtualH" +
+      "ostBz\n#yandex.cloud.api.apploadbalancer." +
+      "v1ZSgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/apploadbalancer/v1;apploadb" +
+      "alancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18748,7 +19014,7 @@ public final class VirtualHostServiceOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateRouteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_UpdateRouteRequest_descriptor,
-        new java.lang.String[] { "HttpRouterId", "VirtualHostName", "RouteName", "UpdateMask", "Http", "Grpc", "RouteOptions", "DisableSecurityProfile", "Route", });
+        new java.lang.String[] { "HttpRouterId", "VirtualHostName", "RouteName", "UpdateMask", "Http", "Grpc", "RouteOptions", "DisableSecurityProfile", "ClientCertificateForward", "Route", });
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateRouteMetadata_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateRouteMetadata_fieldAccessorTable = new

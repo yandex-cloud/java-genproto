@@ -4573,6 +4573,26 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.spark.v1.Metastore metastore = 4;</code>
      */
     yandex.cloud.api.spark.v1.ClusterOuterClass.MetastoreOrBuilder getMetastoreOrBuilder();
+
+    /**
+     * <pre>
+     * Spark version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string spark_version = 5;</code>
+     * @return The sparkVersion.
+     */
+    java.lang.String getSparkVersion();
+    /**
+     * <pre>
+     * Spark version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string spark_version = 5;</code>
+     * @return The bytes for sparkVersion.
+     */
+    com.google.protobuf.ByteString
+        getSparkVersionBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.spark.v1.ClusterConfig}
@@ -4587,6 +4607,7 @@ public final class ClusterOuterClass {
       super(builder);
     }
     private ClusterConfig() {
+      sparkVersion_ = "";
     }
 
     @java.lang.Override
@@ -4669,6 +4690,12 @@ public final class ClusterOuterClass {
                 metastore_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              sparkVersion_ = s;
               break;
             }
             default: {
@@ -4843,6 +4870,52 @@ public final class ClusterOuterClass {
       return getMetastore();
     }
 
+    public static final int SPARK_VERSION_FIELD_NUMBER = 5;
+    private volatile java.lang.Object sparkVersion_;
+    /**
+     * <pre>
+     * Spark version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string spark_version = 5;</code>
+     * @return The sparkVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getSparkVersion() {
+      java.lang.Object ref = sparkVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sparkVersion_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Spark version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string spark_version = 5;</code>
+     * @return The bytes for sparkVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSparkVersionBytes() {
+      java.lang.Object ref = sparkVersion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sparkVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4869,6 +4942,9 @@ public final class ClusterOuterClass {
       if (metastore_ != null) {
         output.writeMessage(4, getMetastore());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sparkVersion_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, sparkVersion_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4893,6 +4969,9 @@ public final class ClusterOuterClass {
       if (metastore_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getMetastore());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sparkVersion_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, sparkVersion_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4929,6 +5008,8 @@ public final class ClusterOuterClass {
         if (!getMetastore()
             .equals(other.getMetastore())) return false;
       }
+      if (!getSparkVersion()
+          .equals(other.getSparkVersion())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4956,6 +5037,8 @@ public final class ClusterOuterClass {
         hash = (37 * hash) + METASTORE_FIELD_NUMBER;
         hash = (53 * hash) + getMetastore().hashCode();
       }
+      hash = (37 * hash) + SPARK_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getSparkVersion().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5113,6 +5196,8 @@ public final class ClusterOuterClass {
           metastore_ = null;
           metastoreBuilder_ = null;
         }
+        sparkVersion_ = "";
+
         return this;
       }
 
@@ -5159,6 +5244,7 @@ public final class ClusterOuterClass {
         } else {
           result.metastore_ = metastoreBuilder_.build();
         }
+        result.sparkVersion_ = sparkVersion_;
         onBuilt();
         return result;
       }
@@ -5218,6 +5304,10 @@ public final class ClusterOuterClass {
         }
         if (other.hasMetastore()) {
           mergeMetastore(other.getMetastore());
+        }
+        if (!other.getSparkVersion().isEmpty()) {
+          sparkVersion_ = other.sparkVersion_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5831,6 +5921,102 @@ public final class ClusterOuterClass {
         }
         return metastoreBuilder_;
       }
+
+      private java.lang.Object sparkVersion_ = "";
+      /**
+       * <pre>
+       * Spark version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string spark_version = 5;</code>
+       * @return The sparkVersion.
+       */
+      public java.lang.String getSparkVersion() {
+        java.lang.Object ref = sparkVersion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sparkVersion_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Spark version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string spark_version = 5;</code>
+       * @return The bytes for sparkVersion.
+       */
+      public com.google.protobuf.ByteString
+          getSparkVersionBytes() {
+        java.lang.Object ref = sparkVersion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sparkVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Spark version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string spark_version = 5;</code>
+       * @param value The sparkVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSparkVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sparkVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Spark version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string spark_version = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSparkVersion() {
+        
+        sparkVersion_ = getDefaultInstance().getSparkVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Spark version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string spark_version = 5;</code>
+       * @param value The bytes for sparkVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSparkVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sparkVersion_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5983,6 +6169,26 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.spark.v1.Metastore metastore = 4;</code>
      */
     yandex.cloud.api.spark.v1.ClusterOuterClass.MetastoreOrBuilder getMetastoreOrBuilder();
+
+    /**
+     * <pre>
+     * Spark version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string spark_version = 5;</code>
+     * @return The sparkVersion.
+     */
+    java.lang.String getSparkVersion();
+    /**
+     * <pre>
+     * Spark version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string spark_version = 5;</code>
+     * @return The bytes for sparkVersion.
+     */
+    com.google.protobuf.ByteString
+        getSparkVersionBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.spark.v1.UpdateClusterConfigSpec}
@@ -5997,6 +6203,7 @@ public final class ClusterOuterClass {
       super(builder);
     }
     private UpdateClusterConfigSpec() {
+      sparkVersion_ = "";
     }
 
     @java.lang.Override
@@ -6079,6 +6286,12 @@ public final class ClusterOuterClass {
                 metastore_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              sparkVersion_ = s;
               break;
             }
             default: {
@@ -6253,6 +6466,52 @@ public final class ClusterOuterClass {
       return getMetastore();
     }
 
+    public static final int SPARK_VERSION_FIELD_NUMBER = 5;
+    private volatile java.lang.Object sparkVersion_;
+    /**
+     * <pre>
+     * Spark version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string spark_version = 5;</code>
+     * @return The sparkVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getSparkVersion() {
+      java.lang.Object ref = sparkVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sparkVersion_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Spark version. Format: "Major.Minor"
+     * </pre>
+     *
+     * <code>string spark_version = 5;</code>
+     * @return The bytes for sparkVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSparkVersionBytes() {
+      java.lang.Object ref = sparkVersion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sparkVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6279,6 +6538,9 @@ public final class ClusterOuterClass {
       if (metastore_ != null) {
         output.writeMessage(4, getMetastore());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sparkVersion_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, sparkVersion_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6303,6 +6565,9 @@ public final class ClusterOuterClass {
       if (metastore_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getMetastore());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sparkVersion_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, sparkVersion_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6339,6 +6604,8 @@ public final class ClusterOuterClass {
         if (!getMetastore()
             .equals(other.getMetastore())) return false;
       }
+      if (!getSparkVersion()
+          .equals(other.getSparkVersion())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6366,6 +6633,8 @@ public final class ClusterOuterClass {
         hash = (37 * hash) + METASTORE_FIELD_NUMBER;
         hash = (53 * hash) + getMetastore().hashCode();
       }
+      hash = (37 * hash) + SPARK_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getSparkVersion().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6523,6 +6792,8 @@ public final class ClusterOuterClass {
           metastore_ = null;
           metastoreBuilder_ = null;
         }
+        sparkVersion_ = "";
+
         return this;
       }
 
@@ -6569,6 +6840,7 @@ public final class ClusterOuterClass {
         } else {
           result.metastore_ = metastoreBuilder_.build();
         }
+        result.sparkVersion_ = sparkVersion_;
         onBuilt();
         return result;
       }
@@ -6628,6 +6900,10 @@ public final class ClusterOuterClass {
         }
         if (other.hasMetastore()) {
           mergeMetastore(other.getMetastore());
+        }
+        if (!other.getSparkVersion().isEmpty()) {
+          sparkVersion_ = other.sparkVersion_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7240,6 +7516,102 @@ public final class ClusterOuterClass {
           metastore_ = null;
         }
         return metastoreBuilder_;
+      }
+
+      private java.lang.Object sparkVersion_ = "";
+      /**
+       * <pre>
+       * Spark version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string spark_version = 5;</code>
+       * @return The sparkVersion.
+       */
+      public java.lang.String getSparkVersion() {
+        java.lang.Object ref = sparkVersion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sparkVersion_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Spark version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string spark_version = 5;</code>
+       * @return The bytes for sparkVersion.
+       */
+      public com.google.protobuf.ByteString
+          getSparkVersionBytes() {
+        java.lang.Object ref = sparkVersion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sparkVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Spark version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string spark_version = 5;</code>
+       * @param value The sparkVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSparkVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sparkVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Spark version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string spark_version = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSparkVersion() {
+        
+        sparkVersion_ = getDefaultInstance().getSparkVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Spark version. Format: "Major.Minor"
+       * </pre>
+       *
+       * <code>string spark_version = 5;</code>
+       * @param value The bytes for sparkVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSparkVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sparkVersion_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -16317,50 +16689,51 @@ public final class ClusterOuterClass {
       "lue\030\002 \001(\t:\0028\001\"y\n\006Status\022\022\n\016STATUS_UNKNOW" +
       "N\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\014\n\010UPDATI" +
       "NG\020\003\022\t\n\005ERROR\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED" +
-      "\020\006\022\014\n\010STARTING\020\007\"\207\002\n\rClusterConfig\022B\n\016re" +
+      "\020\006\022\014\n\010STARTING\020\007\"\236\002\n\rClusterConfig\022B\n\016re" +
       "source_pools\030\001 \001(\0132$.yandex.cloud.spark." +
       "v1.ResourcePoolsB\004\350\3071\001\022B\n\016history_server" +
       "\030\002 \001(\0132*.yandex.cloud.spark.v1.HistorySe" +
       "rverConfig\0229\n\014dependencies\030\003 \001(\0132#.yande" +
       "x.cloud.spark.v1.Dependencies\0223\n\tmetasto" +
       "re\030\004 \001(\0132 .yandex.cloud.spark.v1.Metasto" +
-      "re\"\213\002\n\027UpdateClusterConfigSpec\022<\n\016resour" +
-      "ce_pools\030\001 \001(\0132$.yandex.cloud.spark.v1.R" +
-      "esourcePools\022B\n\016history_server\030\002 \001(\0132*.y" +
-      "andex.cloud.spark.v1.HistoryServerConfig" +
-      "\0229\n\014dependencies\030\003 \001(\0132#.yandex.cloud.sp" +
-      "ark.v1.Dependencies\0223\n\tmetastore\030\004 \001(\0132 " +
-      ".yandex.cloud.spark.v1.Metastore\"&\n\023Hist" +
-      "oryServerConfig\022\017\n\007enabled\030\001 \001(\010\"?\n\rNetw" +
-      "orkConfig\022\022\n\nsubnet_ids\030\001 \003(\t\022\032\n\022securit" +
-      "y_group_ids\030\002 \003(\t\"5\n\027UpdateNetworkConfig" +
-      "Spec\022\032\n\022security_group_ids\030\001 \003(\t\"\207\001\n\rRes" +
-      "ourcePools\0229\n\006driver\030\001 \001(\0132#.yandex.clou" +
-      "d.spark.v1.ResourcePoolB\004\350\3071\001\022;\n\010executo" +
-      "r\030\002 \001(\0132#.yandex.cloud.spark.v1.Resource" +
-      "PoolB\004\350\3071\001\"x\n\014ResourcePool\022(\n\022resource_p" +
-      "reset_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022>\n\014scale_po" +
-      "licy\030\002 \001(\0132\".yandex.cloud.spark.v1.Scale" +
-      "PolicyB\004\350\3071\001\"\231\002\n\013ScalePolicy\022D\n\013fixed_sc" +
-      "ale\030\001 \001(\0132-.yandex.cloud.spark.v1.ScaleP" +
-      "olicy.FixedScaleH\000\022B\n\nauto_scale\030\002 \001(\0132," +
-      ".yandex.cloud.spark.v1.ScalePolicy.AutoS" +
-      "caleH\000\032%\n\nFixedScale\022\027\n\004size\030\001 \001(\003B\t\372\3071\005" +
-      "1-100\032E\n\tAutoScale\022\033\n\010min_size\030\001 \001(\003B\t\372\307" +
-      "1\0050-100\022\033\n\010max_size\030\002 \001(\003B\t\372\3071\0051-100B\022\n\n" +
-      "scale_type\022\004\300\3011\001\":\n\014Dependencies\022\024\n\014pip_" +
-      "packages\030\001 \003(\t\022\024\n\014deb_packages\030\002 \003(\t\")\n\t" +
-      "Metastore\022\034\n\ncluster_id\030\001 \001(\tB\010\212\3101\004<=50\"" +
-      "\246\001\n\rLoggingConfig\022\017\n\007enabled\030\001 \001(\010\0228\n\tfo" +
-      "lder_id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_" +
-      ".]{0,63})?H\000\022;\n\014log_group_id\030\003 \001(\tB#\362\3071\037" +
-      "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000B\r\n\013des" +
-      "tination\"#\n\006UILink\022\014\n\004name\030\001 \001(\t\022\013\n\003url\030" +
-      "\002 \001(\t*?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005A" +
-      "LIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003B\\\n\031yandex" +
-      ".cloud.api.spark.v1Z?github.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/spark/v1;s" +
-      "parkb\006proto3"
+      "re\022\025\n\rspark_version\030\005 \001(\t\"\242\002\n\027UpdateClus" +
+      "terConfigSpec\022<\n\016resource_pools\030\001 \001(\0132$." +
+      "yandex.cloud.spark.v1.ResourcePools\022B\n\016h" +
+      "istory_server\030\002 \001(\0132*.yandex.cloud.spark" +
+      ".v1.HistoryServerConfig\0229\n\014dependencies\030" +
+      "\003 \001(\0132#.yandex.cloud.spark.v1.Dependenci" +
+      "es\0223\n\tmetastore\030\004 \001(\0132 .yandex.cloud.spa" +
+      "rk.v1.Metastore\022\025\n\rspark_version\030\005 \001(\t\"&" +
+      "\n\023HistoryServerConfig\022\017\n\007enabled\030\001 \001(\010\"?" +
+      "\n\rNetworkConfig\022\022\n\nsubnet_ids\030\001 \003(\t\022\032\n\022s" +
+      "ecurity_group_ids\030\002 \003(\t\"5\n\027UpdateNetwork" +
+      "ConfigSpec\022\032\n\022security_group_ids\030\001 \003(\t\"\207" +
+      "\001\n\rResourcePools\0229\n\006driver\030\001 \001(\0132#.yande" +
+      "x.cloud.spark.v1.ResourcePoolB\004\350\3071\001\022;\n\010e" +
+      "xecutor\030\002 \001(\0132#.yandex.cloud.spark.v1.Re" +
+      "sourcePoolB\004\350\3071\001\"x\n\014ResourcePool\022(\n\022reso" +
+      "urce_preset_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022>\n\014sc" +
+      "ale_policy\030\002 \001(\0132\".yandex.cloud.spark.v1" +
+      ".ScalePolicyB\004\350\3071\001\"\231\002\n\013ScalePolicy\022D\n\013fi" +
+      "xed_scale\030\001 \001(\0132-.yandex.cloud.spark.v1." +
+      "ScalePolicy.FixedScaleH\000\022B\n\nauto_scale\030\002" +
+      " \001(\0132,.yandex.cloud.spark.v1.ScalePolicy" +
+      ".AutoScaleH\000\032%\n\nFixedScale\022\027\n\004size\030\001 \001(\003" +
+      "B\t\372\3071\0051-100\032E\n\tAutoScale\022\033\n\010min_size\030\001 \001" +
+      "(\003B\t\372\3071\0050-100\022\033\n\010max_size\030\002 \001(\003B\t\372\3071\0051-1" +
+      "00B\022\n\nscale_type\022\004\300\3011\001\":\n\014Dependencies\022\024" +
+      "\n\014pip_packages\030\001 \003(\t\022\024\n\014deb_packages\030\002 \003" +
+      "(\t\")\n\tMetastore\022\034\n\ncluster_id\030\001 \001(\tB\010\212\3101" +
+      "\004<=50\"\246\001\n\rLoggingConfig\022\017\n\007enabled\030\001 \001(\010" +
+      "\0228\n\tfolder_id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA" +
+      "-Z0-9_.]{0,63})?H\000\022;\n\014log_group_id\030\003 \001(\t" +
+      "B#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000B" +
+      "\r\n\013destination\"#\n\006UILink\022\014\n\004name\030\001 \001(\t\022\013" +
+      "\n\003url\030\002 \001(\t*?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020" +
+      "\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003B\\\n\031" +
+      "yandex.cloud.api.spark.v1Z?github.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/spar" +
+      "k/v1;sparkb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16386,13 +16759,13 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_spark_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_spark_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "ResourcePools", "HistoryServer", "Dependencies", "Metastore", });
+        new java.lang.String[] { "ResourcePools", "HistoryServer", "Dependencies", "Metastore", "SparkVersion", });
     internal_static_yandex_cloud_spark_v1_UpdateClusterConfigSpec_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_spark_v1_UpdateClusterConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_spark_v1_UpdateClusterConfigSpec_descriptor,
-        new java.lang.String[] { "ResourcePools", "HistoryServer", "Dependencies", "Metastore", });
+        new java.lang.String[] { "ResourcePools", "HistoryServer", "Dependencies", "Metastore", "SparkVersion", });
     internal_static_yandex_cloud_spark_v1_HistoryServerConfig_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_spark_v1_HistoryServerConfig_fieldAccessorTable = new

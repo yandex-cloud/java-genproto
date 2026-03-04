@@ -15,6 +15,139 @@ public final class UserOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
+   * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.AuthMethod}
+   */
+  public enum AuthMethod
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>AUTH_METHOD_UNSPECIFIED = 0;</code>
+     */
+    AUTH_METHOD_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * Standard authentication mode with password
+     * </pre>
+     *
+     * <code>AUTH_METHOD_PASSWORD = 1;</code>
+     */
+    AUTH_METHOD_PASSWORD(1),
+    /**
+     * <pre>
+     * Alternative authentication mode with IAM token
+     * </pre>
+     *
+     * <code>AUTH_METHOD_IAM = 2;</code>
+     */
+    AUTH_METHOD_IAM(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>AUTH_METHOD_UNSPECIFIED = 0;</code>
+     */
+    public static final int AUTH_METHOD_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * Standard authentication mode with password
+     * </pre>
+     *
+     * <code>AUTH_METHOD_PASSWORD = 1;</code>
+     */
+    public static final int AUTH_METHOD_PASSWORD_VALUE = 1;
+    /**
+     * <pre>
+     * Alternative authentication mode with IAM token
+     * </pre>
+     *
+     * <code>AUTH_METHOD_IAM = 2;</code>
+     */
+    public static final int AUTH_METHOD_IAM_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static AuthMethod valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static AuthMethod forNumber(int value) {
+      switch (value) {
+        case 0: return AUTH_METHOD_UNSPECIFIED;
+        case 1: return AUTH_METHOD_PASSWORD;
+        case 2: return AUTH_METHOD_IAM;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<AuthMethod>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        AuthMethod> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<AuthMethod>() {
+            public AuthMethod findValueByNumber(int number) {
+              return AuthMethod.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final AuthMethod[] VALUES = values();
+
+    public static AuthMethod valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private AuthMethod(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.AuthMethod)
+  }
+
+  /**
    * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption}
    */
   public enum UserPasswordEncryption
@@ -24,10 +157,18 @@ public final class UserOuterClass {
      */
     USER_PASSWORD_ENCRYPTION_UNSPECIFIED(0),
     /**
+     * <pre>
+     * MD5 password-based authentication method
+     * </pre>
+     *
      * <code>USER_PASSWORD_ENCRYPTION_MD5 = 1;</code>
      */
     USER_PASSWORD_ENCRYPTION_MD5(1),
     /**
+     * <pre>
+     * SCRAM-SHA-256 password-based authentication method
+     * </pre>
+     *
      * <code>USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 = 2;</code>
      */
     USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256(2),
@@ -39,10 +180,18 @@ public final class UserOuterClass {
      */
     public static final int USER_PASSWORD_ENCRYPTION_UNSPECIFIED_VALUE = 0;
     /**
+     * <pre>
+     * MD5 password-based authentication method
+     * </pre>
+     *
      * <code>USER_PASSWORD_ENCRYPTION_MD5 = 1;</code>
      */
     public static final int USER_PASSWORD_ENCRYPTION_MD5_VALUE = 1;
     /**
+     * <pre>
+     * SCRAM-SHA-256 password-based authentication method
+     * </pre>
+     *
      * <code>USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 = 2;</code>
      */
     public static final int USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256_VALUE = 2;
@@ -105,7 +254,7 @@ public final class UserOuterClass {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.getDescriptor().getEnumTypes().get(0);
+      return yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.getDescriptor().getEnumTypes().get(1);
     }
 
     private static final UserPasswordEncryption[] VALUES = values();
@@ -233,16 +382,28 @@ public final class UserOuterClass {
     long getConnLimit();
 
     /**
+     * <pre>
+     * PostgreSQL and connection pooler user settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
      * @return Whether the settings field is set.
      */
     boolean hasSettings();
     /**
+     * <pre>
+     * PostgreSQL and connection pooler user settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
      * @return The settings.
      */
     yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings getSettings();
     /**
+     * <pre>
+     * PostgreSQL and connection pooler user settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
      */
     yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettingsOrBuilder getSettingsOrBuilder();
@@ -401,6 +562,25 @@ public final class UserOuterClass {
      * <code>.yandex.cloud.mdb.postgresql.v1.ConnectionManager connection_manager = 10;</code>
      */
     yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.ConnectionManagerOrBuilder getConnectionManagerOrBuilder();
+
+    /**
+     * <pre>
+     * Auth method for user
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 11;</code>
+     * @return The enum numeric value on the wire for authMethod.
+     */
+    int getAuthMethodValue();
+    /**
+     * <pre>
+     * Auth method for user
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 11;</code>
+     * @return The authMethod.
+     */
+    yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod getAuthMethod();
   }
   /**
    * <pre>
@@ -425,6 +605,7 @@ public final class UserOuterClass {
       permissions_ = java.util.Collections.emptyList();
       grants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       userPasswordEncryption_ = 0;
+      authMethod_ = 0;
     }
 
     @java.lang.Override
@@ -549,6 +730,12 @@ public final class UserOuterClass {
                 connectionManager_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 88: {
+              int rawValue = input.readEnum();
+
+              authMethod_ = rawValue;
               break;
             }
             default: {
@@ -762,6 +949,10 @@ public final class UserOuterClass {
     public static final int SETTINGS_FIELD_NUMBER = 5;
     private yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings settings_;
     /**
+     * <pre>
+     * PostgreSQL and connection pooler user settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
      * @return Whether the settings field is set.
      */
@@ -770,6 +961,10 @@ public final class UserOuterClass {
       return settings_ != null;
     }
     /**
+     * <pre>
+     * PostgreSQL and connection pooler user settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
      * @return The settings.
      */
@@ -778,6 +973,10 @@ public final class UserOuterClass {
       return settings_ == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.getDefaultInstance() : settings_;
     }
     /**
+     * <pre>
+     * PostgreSQL and connection pooler user settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
      */
     @java.lang.Override
@@ -991,6 +1190,33 @@ public final class UserOuterClass {
       return getConnectionManager();
     }
 
+    public static final int AUTH_METHOD_FIELD_NUMBER = 11;
+    private int authMethod_;
+    /**
+     * <pre>
+     * Auth method for user
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 11;</code>
+     * @return The enum numeric value on the wire for authMethod.
+     */
+    @java.lang.Override public int getAuthMethodValue() {
+      return authMethod_;
+    }
+    /**
+     * <pre>
+     * Auth method for user
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 11;</code>
+     * @return The authMethod.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod getAuthMethod() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod result = yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod.valueOf(authMethod_);
+      return result == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1034,6 +1260,9 @@ public final class UserOuterClass {
       }
       if (connectionManager_ != null) {
         output.writeMessage(10, getConnectionManager());
+      }
+      if (authMethod_ != yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod.AUTH_METHOD_UNSPECIFIED.getNumber()) {
+        output.writeEnum(11, authMethod_);
       }
       unknownFields.writeTo(output);
     }
@@ -1086,6 +1315,10 @@ public final class UserOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getConnectionManager());
       }
+      if (authMethod_ != yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod.AUTH_METHOD_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(11, authMethod_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1132,6 +1365,7 @@ public final class UserOuterClass {
         if (!getConnectionManager()
             .equals(other.getConnectionManager())) return false;
       }
+      if (authMethod_ != other.authMethod_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1176,6 +1410,8 @@ public final class UserOuterClass {
         hash = (37 * hash) + CONNECTION_MANAGER_FIELD_NUMBER;
         hash = (53 * hash) + getConnectionManager().hashCode();
       }
+      hash = (37 * hash) + AUTH_METHOD_FIELD_NUMBER;
+      hash = (53 * hash) + authMethod_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1355,6 +1591,8 @@ public final class UserOuterClass {
           connectionManager_ = null;
           connectionManagerBuilder_ = null;
         }
+        authMethod_ = 0;
+
         return this;
       }
 
@@ -1420,6 +1658,7 @@ public final class UserOuterClass {
         } else {
           result.connectionManager_ = connectionManagerBuilder_.build();
         }
+        result.authMethod_ = authMethod_;
         onBuilt();
         return result;
       }
@@ -1529,6 +1768,9 @@ public final class UserOuterClass {
         }
         if (other.hasConnectionManager()) {
           mergeConnectionManager(other.getConnectionManager());
+        }
+        if (other.authMethod_ != 0) {
+          setAuthMethodValue(other.getAuthMethodValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2120,6 +2362,10 @@ public final class UserOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.Builder, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettingsOrBuilder> settingsBuilder_;
       /**
+       * <pre>
+       * PostgreSQL and connection pooler user settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
        * @return Whether the settings field is set.
        */
@@ -2127,6 +2373,10 @@ public final class UserOuterClass {
         return settingsBuilder_ != null || settings_ != null;
       }
       /**
+       * <pre>
+       * PostgreSQL and connection pooler user settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
        * @return The settings.
        */
@@ -2138,6 +2388,10 @@ public final class UserOuterClass {
         }
       }
       /**
+       * <pre>
+       * PostgreSQL and connection pooler user settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
        */
       public Builder setSettings(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings value) {
@@ -2154,6 +2408,10 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * PostgreSQL and connection pooler user settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
        */
       public Builder setSettings(
@@ -2168,6 +2426,10 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * PostgreSQL and connection pooler user settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
        */
       public Builder mergeSettings(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings value) {
@@ -2186,6 +2448,10 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * PostgreSQL and connection pooler user settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
        */
       public Builder clearSettings() {
@@ -2200,6 +2466,10 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * PostgreSQL and connection pooler user settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.Builder getSettingsBuilder() {
@@ -2208,6 +2478,10 @@ public final class UserOuterClass {
         return getSettingsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * PostgreSQL and connection pooler user settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettingsOrBuilder getSettingsOrBuilder() {
@@ -2219,6 +2493,10 @@ public final class UserOuterClass {
         }
       }
       /**
+       * <pre>
+       * PostgreSQL and connection pooler user settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2955,6 +3233,80 @@ public final class UserOuterClass {
           connectionManager_ = null;
         }
         return connectionManagerBuilder_;
+      }
+
+      private int authMethod_ = 0;
+      /**
+       * <pre>
+       * Auth method for user
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 11;</code>
+       * @return The enum numeric value on the wire for authMethod.
+       */
+      @java.lang.Override public int getAuthMethodValue() {
+        return authMethod_;
+      }
+      /**
+       * <pre>
+       * Auth method for user
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 11;</code>
+       * @param value The enum numeric value on the wire for authMethod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthMethodValue(int value) {
+        
+        authMethod_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Auth method for user
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 11;</code>
+       * @return The authMethod.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod getAuthMethod() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod result = yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod.valueOf(authMethod_);
+        return result == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Auth method for user
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 11;</code>
+       * @param value The authMethod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthMethod(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        authMethod_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Auth method for user
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthMethod() {
+        
+        authMethod_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4226,7 +4578,7 @@ public final class UserOuterClass {
      * Name of the PostgreSQL user.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -4235,7 +4587,7 @@ public final class UserOuterClass {
      * Name of the PostgreSQL user.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -4522,6 +4874,25 @@ public final class UserOuterClass {
      * <code>.google.protobuf.BoolValue generate_password = 10;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getGeneratePasswordOrBuilder();
+
+    /**
+     * <pre>
+     * Auth method for user
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 11;</code>
+     * @return The enum numeric value on the wire for authMethod.
+     */
+    int getAuthMethodValue();
+    /**
+     * <pre>
+     * Auth method for user
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 11;</code>
+     * @return The authMethod.
+     */
+    yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod getAuthMethod();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.UserSpec}
@@ -4541,6 +4912,7 @@ public final class UserOuterClass {
       permissions_ = java.util.Collections.emptyList();
       grants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       userPasswordEncryption_ = 0;
+      authMethod_ = 0;
     }
 
     @java.lang.Override
@@ -4675,6 +5047,12 @@ public final class UserOuterClass {
 
               break;
             }
+            case 88: {
+              int rawValue = input.readEnum();
+
+              authMethod_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4720,7 +5098,7 @@ public final class UserOuterClass {
      * Name of the PostgreSQL user.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -4741,7 +5119,7 @@ public final class UserOuterClass {
      * Name of the PostgreSQL user.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -5156,6 +5534,33 @@ public final class UserOuterClass {
       return getGeneratePassword();
     }
 
+    public static final int AUTH_METHOD_FIELD_NUMBER = 11;
+    private int authMethod_;
+    /**
+     * <pre>
+     * Auth method for user
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 11;</code>
+     * @return The enum numeric value on the wire for authMethod.
+     */
+    @java.lang.Override public int getAuthMethodValue() {
+      return authMethod_;
+    }
+    /**
+     * <pre>
+     * Auth method for user
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 11;</code>
+     * @return The authMethod.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod getAuthMethod() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod result = yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod.valueOf(authMethod_);
+      return result == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5199,6 +5604,9 @@ public final class UserOuterClass {
       }
       if (generatePassword_ != null) {
         output.writeMessage(10, getGeneratePassword());
+      }
+      if (authMethod_ != yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod.AUTH_METHOD_UNSPECIFIED.getNumber()) {
+        output.writeEnum(11, authMethod_);
       }
       unknownFields.writeTo(output);
     }
@@ -5251,6 +5659,10 @@ public final class UserOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getGeneratePassword());
       }
+      if (authMethod_ != yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod.AUTH_METHOD_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(11, authMethod_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5300,6 +5712,7 @@ public final class UserOuterClass {
         if (!getGeneratePassword()
             .equals(other.getGeneratePassword())) return false;
       }
+      if (authMethod_ != other.authMethod_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5345,6 +5758,8 @@ public final class UserOuterClass {
         hash = (37 * hash) + GENERATE_PASSWORD_FIELD_NUMBER;
         hash = (53 * hash) + getGeneratePassword().hashCode();
       }
+      hash = (37 * hash) + AUTH_METHOD_FIELD_NUMBER;
+      hash = (53 * hash) + authMethod_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5523,6 +5938,8 @@ public final class UserOuterClass {
           generatePassword_ = null;
           generatePasswordBuilder_ = null;
         }
+        authMethod_ = 0;
+
         return this;
       }
 
@@ -5592,6 +6009,7 @@ public final class UserOuterClass {
         } else {
           result.generatePassword_ = generatePasswordBuilder_.build();
         }
+        result.authMethod_ = authMethod_;
         onBuilt();
         return result;
       }
@@ -5702,6 +6120,9 @@ public final class UserOuterClass {
         if (other.hasGeneratePassword()) {
           mergeGeneratePassword(other.getGeneratePassword());
         }
+        if (other.authMethod_ != 0) {
+          setAuthMethodValue(other.getAuthMethodValue());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -5738,7 +6159,7 @@ public final class UserOuterClass {
        * Name of the PostgreSQL user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -5758,7 +6179,7 @@ public final class UserOuterClass {
        * Name of the PostgreSQL user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -5779,7 +6200,7 @@ public final class UserOuterClass {
        * Name of the PostgreSQL user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -5798,7 +6219,7 @@ public final class UserOuterClass {
        * Name of the PostgreSQL user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -5812,7 +6233,7 @@ public final class UserOuterClass {
        * Name of the PostgreSQL user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -7294,6 +7715,80 @@ public final class UserOuterClass {
         }
         return generatePasswordBuilder_;
       }
+
+      private int authMethod_ = 0;
+      /**
+       * <pre>
+       * Auth method for user
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 11;</code>
+       * @return The enum numeric value on the wire for authMethod.
+       */
+      @java.lang.Override public int getAuthMethodValue() {
+        return authMethod_;
+      }
+      /**
+       * <pre>
+       * Auth method for user
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 11;</code>
+       * @param value The enum numeric value on the wire for authMethod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthMethodValue(int value) {
+        
+        authMethod_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Auth method for user
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 11;</code>
+       * @return The authMethod.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod getAuthMethod() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod result = yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod.valueOf(authMethod_);
+        return result == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Auth method for user
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 11;</code>
+       * @param value The authMethod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthMethod(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        authMethod_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Auth method for user
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthMethod() {
+        
+        authMethod_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7560,30 +8055,58 @@ public final class UserOuterClass {
        */
       PG_AUDIT_SETTINGS_LOG_UNSPECIFIED(0),
       /**
+       * <pre>
+       * `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+       * </pre>
+       *
        * <code>PG_AUDIT_SETTINGS_LOG_READ = 1;</code>
        */
       PG_AUDIT_SETTINGS_LOG_READ(1),
       /**
+       * <pre>
+       * `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+       * </pre>
+       *
        * <code>PG_AUDIT_SETTINGS_LOG_WRITE = 2;</code>
        */
       PG_AUDIT_SETTINGS_LOG_WRITE(2),
       /**
+       * <pre>
+       * Function invocations and `DO` sections are logged.
+       * </pre>
+       *
        * <code>PG_AUDIT_SETTINGS_LOG_FUNCTION = 3;</code>
        */
       PG_AUDIT_SETTINGS_LOG_FUNCTION(3),
       /**
+       * <pre>
+       * Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+       * </pre>
+       *
        * <code>PG_AUDIT_SETTINGS_LOG_ROLE = 4;</code>
        */
       PG_AUDIT_SETTINGS_LOG_ROLE(4),
       /**
+       * <pre>
+       * Any `DDL` statements that do not belong to the `ROLE` class are logged.
+       * </pre>
+       *
        * <code>PG_AUDIT_SETTINGS_LOG_DDL = 5;</code>
        */
       PG_AUDIT_SETTINGS_LOG_DDL(5),
       /**
+       * <pre>
+       * Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+       * </pre>
+       *
        * <code>PG_AUDIT_SETTINGS_LOG_MISC = 6;</code>
        */
       PG_AUDIT_SETTINGS_LOG_MISC(6),
       /**
+       * <pre>
+       * Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+       * </pre>
+       *
        * <code>PG_AUDIT_SETTINGS_LOG_MISC_SET = 7;</code>
        */
       PG_AUDIT_SETTINGS_LOG_MISC_SET(7),
@@ -7595,30 +8118,58 @@ public final class UserOuterClass {
        */
       public static final int PG_AUDIT_SETTINGS_LOG_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+       * </pre>
+       *
        * <code>PG_AUDIT_SETTINGS_LOG_READ = 1;</code>
        */
       public static final int PG_AUDIT_SETTINGS_LOG_READ_VALUE = 1;
       /**
+       * <pre>
+       * `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+       * </pre>
+       *
        * <code>PG_AUDIT_SETTINGS_LOG_WRITE = 2;</code>
        */
       public static final int PG_AUDIT_SETTINGS_LOG_WRITE_VALUE = 2;
       /**
+       * <pre>
+       * Function invocations and `DO` sections are logged.
+       * </pre>
+       *
        * <code>PG_AUDIT_SETTINGS_LOG_FUNCTION = 3;</code>
        */
       public static final int PG_AUDIT_SETTINGS_LOG_FUNCTION_VALUE = 3;
       /**
+       * <pre>
+       * Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+       * </pre>
+       *
        * <code>PG_AUDIT_SETTINGS_LOG_ROLE = 4;</code>
        */
       public static final int PG_AUDIT_SETTINGS_LOG_ROLE_VALUE = 4;
       /**
+       * <pre>
+       * Any `DDL` statements that do not belong to the `ROLE` class are logged.
+       * </pre>
+       *
        * <code>PG_AUDIT_SETTINGS_LOG_DDL = 5;</code>
        */
       public static final int PG_AUDIT_SETTINGS_LOG_DDL_VALUE = 5;
       /**
+       * <pre>
+       * Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+       * </pre>
+       *
        * <code>PG_AUDIT_SETTINGS_LOG_MISC = 6;</code>
        */
       public static final int PG_AUDIT_SETTINGS_LOG_MISC_VALUE = 6;
       /**
+       * <pre>
+       * Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+       * </pre>
+       *
        * <code>PG_AUDIT_SETTINGS_LOG_MISC_SET = 7;</code>
        */
       public static final int PG_AUDIT_SETTINGS_LOG_MISC_SET_VALUE = 7;
@@ -8716,8 +9267,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * User can use prepared statements with transaction pooling.
-     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
+     * User can use [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) with transaction pooling.
+     * This requires `pool_mode` to be set to TRANSACTION.
+     * [Odyssey documentation](https://pg-odyssey.tech/configuration/rules.html#pool_reserve_prepared_statement).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -8726,8 +9278,9 @@ public final class UserOuterClass {
     boolean hasPreparedStatementsPooling();
     /**
      * <pre>
-     * User can use prepared statements with transaction pooling.
-     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
+     * User can use [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) with transaction pooling.
+     * This requires `pool_mode` to be set to TRANSACTION.
+     * [Odyssey documentation](https://pg-odyssey.tech/configuration/rules.html#pool_reserve_prepared_statement).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -8736,8 +9289,9 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getPreparedStatementsPooling();
     /**
      * <pre>
-     * User can use prepared statements with transaction pooling.
-     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
+     * User can use [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) with transaction pooling.
+     * This requires `pool_mode` to be set to TRANSACTION.
+     * [Odyssey documentation](https://pg-odyssey.tech/configuration/rules.html#pool_reserve_prepared_statement).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -8923,7 +9477,7 @@ public final class UserOuterClass {
   }
   /**
    * <pre>
-   * PostgreSQL user settings.
+   * PostgreSQL and connection pooler user settings.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.UserSettings}
@@ -10094,8 +10648,9 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue preparedStatementsPooling_;
     /**
      * <pre>
-     * User can use prepared statements with transaction pooling.
-     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
+     * User can use [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) with transaction pooling.
+     * This requires `pool_mode` to be set to TRANSACTION.
+     * [Odyssey documentation](https://pg-odyssey.tech/configuration/rules.html#pool_reserve_prepared_statement).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -10107,8 +10662,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * User can use prepared statements with transaction pooling.
-     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
+     * User can use [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) with transaction pooling.
+     * This requires `pool_mode` to be set to TRANSACTION.
+     * [Odyssey documentation](https://pg-odyssey.tech/configuration/rules.html#pool_reserve_prepared_statement).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -10120,8 +10676,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * User can use prepared statements with transaction pooling.
-     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
+     * User can use [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) with transaction pooling.
+     * This requires `pool_mode` to be set to TRANSACTION.
+     * [Odyssey documentation](https://pg-odyssey.tech/configuration/rules.html#pool_reserve_prepared_statement).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -10693,7 +11250,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * PostgreSQL user settings.
+     * PostgreSQL and connection pooler user settings.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.UserSettings}
@@ -11868,8 +12425,9 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> preparedStatementsPoolingBuilder_;
       /**
        * <pre>
-       * User can use prepared statements with transaction pooling.
-       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
+       * User can use [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) with transaction pooling.
+       * This requires `pool_mode` to be set to TRANSACTION.
+       * [Odyssey documentation](https://pg-odyssey.tech/configuration/rules.html#pool_reserve_prepared_statement).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -11880,8 +12438,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can use prepared statements with transaction pooling.
-       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
+       * User can use [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) with transaction pooling.
+       * This requires `pool_mode` to be set to TRANSACTION.
+       * [Odyssey documentation](https://pg-odyssey.tech/configuration/rules.html#pool_reserve_prepared_statement).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -11896,8 +12455,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can use prepared statements with transaction pooling.
-       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
+       * User can use [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) with transaction pooling.
+       * This requires `pool_mode` to be set to TRANSACTION.
+       * [Odyssey documentation](https://pg-odyssey.tech/configuration/rules.html#pool_reserve_prepared_statement).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -11917,8 +12477,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can use prepared statements with transaction pooling.
-       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
+       * User can use [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) with transaction pooling.
+       * This requires `pool_mode` to be set to TRANSACTION.
+       * [Odyssey documentation](https://pg-odyssey.tech/configuration/rules.html#pool_reserve_prepared_statement).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -11936,8 +12497,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can use prepared statements with transaction pooling.
-       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
+       * User can use [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) with transaction pooling.
+       * This requires `pool_mode` to be set to TRANSACTION.
+       * [Odyssey documentation](https://pg-odyssey.tech/configuration/rules.html#pool_reserve_prepared_statement).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -11959,8 +12521,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can use prepared statements with transaction pooling.
-       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
+       * User can use [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) with transaction pooling.
+       * This requires `pool_mode` to be set to TRANSACTION.
+       * [Odyssey documentation](https://pg-odyssey.tech/configuration/rules.html#pool_reserve_prepared_statement).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -11978,8 +12541,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can use prepared statements with transaction pooling.
-       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
+       * User can use [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) with transaction pooling.
+       * This requires `pool_mode` to be set to TRANSACTION.
+       * [Odyssey documentation](https://pg-odyssey.tech/configuration/rules.html#pool_reserve_prepared_statement).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -11991,8 +12555,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can use prepared statements with transaction pooling.
-       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
+       * User can use [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) with transaction pooling.
+       * This requires `pool_mode` to be set to TRANSACTION.
+       * [Odyssey documentation](https://pg-odyssey.tech/configuration/rules.html#pool_reserve_prepared_statement).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -12007,8 +12572,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can use prepared statements with transaction pooling.
-       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
+       * User can use [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) with transaction pooling.
+       * This requires `pool_mode` to be set to TRANSACTION.
+       * [Odyssey documentation](https://pg-odyssey.tech/configuration/rules.html#pool_reserve_prepared_statement).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -13022,7 +13588,7 @@ public final class UserOuterClass {
       "\n)yandex/cloud/mdb/postgresql/v1/user.pr" +
       "oto\022\036yandex.cloud.mdb.postgresql.v1\032\036goo" +
       "gle/protobuf/wrappers.proto\032\035yandex/clou" +
-      "d/validation.proto\"\365\003\n\004User\022\014\n\004name\030\001 \001(" +
+      "d/validation.proto\"\266\004\n\004User\022\014\n\004name\030\001 \001(" +
       "\t\022\022\n\ncluster_id\030\002 \001(\t\022?\n\013permissions\030\003 \003" +
       "(\0132*.yandex.cloud.mdb.postgresql.v1.Perm" +
       "ission\022\022\n\nconn_limit\030\004 \001(\003\022>\n\010settings\030\005" +
@@ -13035,80 +13601,85 @@ public final class UserOuterClass {
       "ud.mdb.postgresql.v1.UserPasswordEncrypt" +
       "ion\022M\n\022connection_manager\030\n \001(\01321.yandex" +
       ".cloud.mdb.postgresql.v1.ConnectionManag" +
-      "er\"#\n\nPermission\022\025\n\rdatabase_name\030\001 \001(\t\"" +
-      "*\n\021ConnectionManager\022\025\n\rconnection_id\030\001 " +
-      "\001(\t\"\265\004\n\010UserSpec\022,\n\004name\030\001 \001(\tB\036\350\3071\001\212\3101\004" +
-      "<=63\362\3071\016[a-zA-Z0-9_-]*\022\037\n\010password\030\002 \001(\t" +
-      "B\r\350\3071\001\212\3101\0058-128\022?\n\013permissions\030\003 \003(\0132*.y" +
-      "andex.cloud.mdb.postgresql.v1.Permission" +
-      "\0229\n\nconn_limit\030\004 \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\010\372\3071\004>=10\022>\n\010settings\030\005 \001(\0132,." +
-      "yandex.cloud.mdb.postgresql.v1.UserSetti" +
-      "ngs\022)\n\005login\030\006 \001(\0132\032.google.protobuf.Boo" +
-      "lValue\022)\n\006grants\030\007 \003(\tB\031\212\3101\004<=63\362\3071\r[a-z" +
-      "A-Z0-9_]*\0227\n\023deletion_protection\030\010 \001(\0132\032" +
-      ".google.protobuf.BoolValue\022X\n\030user_passw" +
-      "ord_encryption\030\t \001(\01626.yandex.cloud.mdb." +
-      "postgresql.v1.UserPasswordEncryption\0225\n\021" +
-      "generate_password\030\n \001(\0132\032.google.protobu" +
-      "f.BoolValue\"\210\003\n\017PGAuditSettings\022O\n\003log\030\001" +
-      " \003(\0162B.yandex.cloud.mdb.postgresql.v1.PG" +
-      "AuditSettings.PGAuditSettingsLog\"\243\002\n\022PGA" +
-      "uditSettingsLog\022%\n!PG_AUDIT_SETTINGS_LOG" +
-      "_UNSPECIFIED\020\000\022\036\n\032PG_AUDIT_SETTINGS_LOG_" +
-      "READ\020\001\022\037\n\033PG_AUDIT_SETTINGS_LOG_WRITE\020\002\022" +
-      "\"\n\036PG_AUDIT_SETTINGS_LOG_FUNCTION\020\003\022\036\n\032P" +
-      "G_AUDIT_SETTINGS_LOG_ROLE\020\004\022\035\n\031PG_AUDIT_" +
-      "SETTINGS_LOG_DDL\020\005\022\036\n\032PG_AUDIT_SETTINGS_" +
-      "LOG_MISC\020\006\022\"\n\036PG_AUDIT_SETTINGS_LOG_MISC" +
-      "_SET\020\007\"\314\014\n\014UserSettings\022h\n\035default_trans" +
-      "action_isolation\030\001 \001(\0162A.yandex.cloud.md" +
-      "b.postgresql.v1.UserSettings.Transaction" +
-      "Isolation\0221\n\014lock_timeout\030\002 \001(\0132\033.google" +
-      ".protobuf.Int64Value\022?\n\032log_min_duration" +
-      "_statement\030\003 \001(\0132\033.google.protobuf.Int64" +
-      "Value\022Z\n\022synchronous_commit\030\004 \001(\0162>.yand" +
-      "ex.cloud.mdb.postgresql.v1.UserSettings." +
-      "SynchronousCommit\0224\n\017temp_file_limit\030\005 \001" +
-      "(\0132\033.google.protobuf.Int64Value\022P\n\rlog_s" +
-      "tatement\030\006 \001(\01629.yandex.cloud.mdb.postgr" +
-      "esql.v1.UserSettings.LogStatement\022K\n\tpoo" +
-      "l_mode\030\007 \001(\01628.yandex.cloud.mdb.postgres" +
-      "ql.v1.UserSettings.PoolingMode\022?\n\033prepar" +
-      "ed_statements_pooling\030\010 \001(\0132\032.google.pro" +
-      "tobuf.BoolValue\0224\n\017catchup_timeout\030\t \001(\013" +
-      "2\033.google.protobuf.Int64Value\0227\n\022wal_sen" +
-      "der_timeout\030\n \001(\0132\033.google.protobuf.Int6" +
-      "4Value\022Z\n#idle_in_transaction_session_ti" +
-      "meout\030\013 \001(\0132\033.google.protobuf.Int64Value" +
-      "B\020\372\3071\0140-2147483647\0226\n\021statement_timeout\030" +
-      "\014 \001(\0132\033.google.protobuf.Int64Value\022@\n\007pg" +
-      "audit\030\r \001(\0132/.yandex.cloud.mdb.postgresq" +
-      "l.v1.PGAuditSettings\"\326\001\n\021SynchronousComm" +
-      "it\022\"\n\036SYNCHRONOUS_COMMIT_UNSPECIFIED\020\000\022\031" +
-      "\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032\n\026SYNCHRONOUS" +
-      "_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOUS_COMMIT_LOCA" +
-      "L\020\003\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_WRITE\020\004" +
-      "\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_APPLY\020\005\"\212\001" +
-      "\n\014LogStatement\022\035\n\031LOG_STATEMENT_UNSPECIF" +
-      "IED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025\n\021LOG_STA" +
-      "TEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003\022\025\n\021L" +
-      "OG_STATEMENT_ALL\020\004\"\346\001\n\024TransactionIsolat" +
-      "ion\022%\n!TRANSACTION_ISOLATION_UNSPECIFIED" +
-      "\020\000\022*\n&TRANSACTION_ISOLATION_READ_UNCOMMI" +
-      "TTED\020\001\022(\n$TRANSACTION_ISOLATION_READ_COM" +
-      "MITTED\020\002\022)\n%TRANSACTION_ISOLATION_REPEAT" +
-      "ABLE_READ\020\003\022&\n\"TRANSACTION_ISOLATION_SER" +
-      "IALIZABLE\020\004\"X\n\013PoolingMode\022\034\n\030POOLING_MO" +
-      "DE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\017\n\013TRANSAC" +
-      "TION\020\002\022\r\n\tSTATEMENT\020\003*\220\001\n\026UserPasswordEn" +
-      "cryption\022(\n$USER_PASSWORD_ENCRYPTION_UNS" +
-      "PECIFIED\020\000\022 \n\034USER_PASSWORD_ENCRYPTION_M" +
-      "D5\020\001\022*\n&USER_PASSWORD_ENCRYPTION_SCRAM_S" +
-      "HA_256\020\002Bs\n\"yandex.cloud.api.mdb.postgre" +
-      "sql.v1ZMgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/mdb/postgresql/v1;postg" +
-      "resqlb\006proto3"
+      "er\022?\n\013auth_method\030\013 \001(\0162*.yandex.cloud.m" +
+      "db.postgresql.v1.AuthMethod\"#\n\nPermissio" +
+      "n\022\025\n\rdatabase_name\030\001 \001(\t\"*\n\021ConnectionMa" +
+      "nager\022\025\n\rconnection_id\030\001 \001(\t\"\370\004\n\010UserSpe" +
+      "c\022.\n\004name\030\001 \001(\tB \350\3071\001\212\3101\004<=63\362\3071\020[a-zA-Z" +
+      "0-9_@.-]*\022\037\n\010password\030\002 \001(\tB\r\350\3071\001\212\3101\0058-1" +
+      "28\022?\n\013permissions\030\003 \003(\0132*.yandex.cloud.m" +
+      "db.postgresql.v1.Permission\0229\n\nconn_limi" +
+      "t\030\004 \001(\0132\033.google.protobuf.Int64ValueB\010\372\307" +
+      "1\004>=10\022>\n\010settings\030\005 \001(\0132,.yandex.cloud." +
+      "mdb.postgresql.v1.UserSettings\022)\n\005login\030" +
+      "\006 \001(\0132\032.google.protobuf.BoolValue\022)\n\006gra" +
+      "nts\030\007 \003(\tB\031\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\0227\n\023" +
+      "deletion_protection\030\010 \001(\0132\032.google.proto" +
+      "buf.BoolValue\022X\n\030user_password_encryptio" +
+      "n\030\t \001(\01626.yandex.cloud.mdb.postgresql.v1" +
+      ".UserPasswordEncryption\0225\n\021generate_pass" +
+      "word\030\n \001(\0132\032.google.protobuf.BoolValue\022?" +
+      "\n\013auth_method\030\013 \001(\0162*.yandex.cloud.mdb.p" +
+      "ostgresql.v1.AuthMethod\"\210\003\n\017PGAuditSetti" +
+      "ngs\022O\n\003log\030\001 \003(\0162B.yandex.cloud.mdb.post" +
+      "gresql.v1.PGAuditSettings.PGAuditSetting" +
+      "sLog\"\243\002\n\022PGAuditSettingsLog\022%\n!PG_AUDIT_" +
+      "SETTINGS_LOG_UNSPECIFIED\020\000\022\036\n\032PG_AUDIT_S" +
+      "ETTINGS_LOG_READ\020\001\022\037\n\033PG_AUDIT_SETTINGS_" +
+      "LOG_WRITE\020\002\022\"\n\036PG_AUDIT_SETTINGS_LOG_FUN" +
+      "CTION\020\003\022\036\n\032PG_AUDIT_SETTINGS_LOG_ROLE\020\004\022" +
+      "\035\n\031PG_AUDIT_SETTINGS_LOG_DDL\020\005\022\036\n\032PG_AUD" +
+      "IT_SETTINGS_LOG_MISC\020\006\022\"\n\036PG_AUDIT_SETTI" +
+      "NGS_LOG_MISC_SET\020\007\"\314\014\n\014UserSettings\022h\n\035d" +
+      "efault_transaction_isolation\030\001 \001(\0162A.yan" +
+      "dex.cloud.mdb.postgresql.v1.UserSettings" +
+      ".TransactionIsolation\0221\n\014lock_timeout\030\002 " +
+      "\001(\0132\033.google.protobuf.Int64Value\022?\n\032log_" +
+      "min_duration_statement\030\003 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022Z\n\022synchronous_commit\030" +
+      "\004 \001(\0162>.yandex.cloud.mdb.postgresql.v1.U" +
+      "serSettings.SynchronousCommit\0224\n\017temp_fi" +
+      "le_limit\030\005 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022P\n\rlog_statement\030\006 \001(\01629.yandex.clou" +
+      "d.mdb.postgresql.v1.UserSettings.LogStat" +
+      "ement\022K\n\tpool_mode\030\007 \001(\01628.yandex.cloud." +
+      "mdb.postgresql.v1.UserSettings.PoolingMo" +
+      "de\022?\n\033prepared_statements_pooling\030\010 \001(\0132" +
+      "\032.google.protobuf.BoolValue\0224\n\017catchup_t" +
+      "imeout\030\t \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\0227\n\022wal_sender_timeout\030\n \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022Z\n#idle_in_transactio" +
+      "n_session_timeout\030\013 \001(\0132\033.google.protobu" +
+      "f.Int64ValueB\020\372\3071\0140-2147483647\0226\n\021statem" +
+      "ent_timeout\030\014 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022@\n\007pgaudit\030\r \001(\0132/.yandex.cloud.m" +
+      "db.postgresql.v1.PGAuditSettings\"\326\001\n\021Syn" +
+      "chronousCommit\022\"\n\036SYNCHRONOUS_COMMIT_UNS" +
+      "PECIFIED\020\000\022\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032\n" +
+      "\026SYNCHRONOUS_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOUS" +
+      "_COMMIT_LOCAL\020\003\022#\n\037SYNCHRONOUS_COMMIT_RE" +
+      "MOTE_WRITE\020\004\022#\n\037SYNCHRONOUS_COMMIT_REMOT" +
+      "E_APPLY\020\005\"\212\001\n\014LogStatement\022\035\n\031LOG_STATEM" +
+      "ENT_UNSPECIFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020" +
+      "\001\022\025\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021LOG_STATEMEN" +
+      "T_MOD\020\003\022\025\n\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024Trans" +
+      "actionIsolation\022%\n!TRANSACTION_ISOLATION" +
+      "_UNSPECIFIED\020\000\022*\n&TRANSACTION_ISOLATION_" +
+      "READ_UNCOMMITTED\020\001\022(\n$TRANSACTION_ISOLAT" +
+      "ION_READ_COMMITTED\020\002\022)\n%TRANSACTION_ISOL" +
+      "ATION_REPEATABLE_READ\020\003\022&\n\"TRANSACTION_I" +
+      "SOLATION_SERIALIZABLE\020\004\"X\n\013PoolingMode\022\034" +
+      "\n\030POOLING_MODE_UNSPECIFIED\020\000\022\013\n\007SESSION\020" +
+      "\001\022\017\n\013TRANSACTION\020\002\022\r\n\tSTATEMENT\020\003*X\n\nAut" +
+      "hMethod\022\033\n\027AUTH_METHOD_UNSPECIFIED\020\000\022\030\n\024" +
+      "AUTH_METHOD_PASSWORD\020\001\022\023\n\017AUTH_METHOD_IA" +
+      "M\020\002*\220\001\n\026UserPasswordEncryption\022(\n$USER_P" +
+      "ASSWORD_ENCRYPTION_UNSPECIFIED\020\000\022 \n\034USER" +
+      "_PASSWORD_ENCRYPTION_MD5\020\001\022*\n&USER_PASSW" +
+      "ORD_ENCRYPTION_SCRAM_SHA_256\020\002Bs\n\"yandex" +
+      ".cloud.api.mdb.postgresql.v1ZMgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/m" +
+      "db/postgresql/v1;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13121,7 +13692,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_User_descriptor,
-        new java.lang.String[] { "Name", "ClusterId", "Permissions", "ConnLimit", "Settings", "Login", "Grants", "DeletionProtection", "UserPasswordEncryption", "ConnectionManager", });
+        new java.lang.String[] { "Name", "ClusterId", "Permissions", "ConnLimit", "Settings", "Login", "Grants", "DeletionProtection", "UserPasswordEncryption", "ConnectionManager", "AuthMethod", });
     internal_static_yandex_cloud_mdb_postgresql_v1_Permission_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_postgresql_v1_Permission_fieldAccessorTable = new
@@ -13139,7 +13710,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_UserSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_UserSpec_descriptor,
-        new java.lang.String[] { "Name", "Password", "Permissions", "ConnLimit", "Settings", "Login", "Grants", "DeletionProtection", "UserPasswordEncryption", "GeneratePassword", });
+        new java.lang.String[] { "Name", "Password", "Permissions", "ConnLimit", "Settings", "Login", "Grants", "DeletionProtection", "UserPasswordEncryption", "GeneratePassword", "AuthMethod", });
     internal_static_yandex_cloud_mdb_postgresql_v1_PGAuditSettings_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_mdb_postgresql_v1_PGAuditSettings_fieldAccessorTable = new

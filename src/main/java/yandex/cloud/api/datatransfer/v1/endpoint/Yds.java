@@ -146,7 +146,8 @@ public final class Yds {
 
     /**
      * <pre>
-     * Database
+     * Database path in YDB for streams 
+     * Example: `/ru/transfer_manager/prod/data-transfer`
      * </pre>
      *
      * <code>string database = 1;</code>
@@ -155,7 +156,8 @@ public final class Yds {
     java.lang.String getDatabase();
     /**
      * <pre>
-     * Database
+     * Database path in YDB for streams 
+     * Example: `/ru/transfer_manager/prod/data-transfer`
      * </pre>
      *
      * <code>string database = 1;</code>
@@ -166,7 +168,7 @@ public final class Yds {
 
     /**
      * <pre>
-     * Stream
+     * Stream to read
      * </pre>
      *
      * <code>string stream = 2;</code>
@@ -175,7 +177,7 @@ public final class Yds {
     java.lang.String getStream();
     /**
      * <pre>
-     * Stream
+     * Stream to read
      * </pre>
      *
      * <code>string stream = 2;</code>
@@ -186,7 +188,7 @@ public final class Yds {
 
     /**
      * <pre>
-     * SA which has read access to the stream.
+     * Service account ID which has read access to the stream.
      * </pre>
      *
      * <code>string service_account_id = 8;</code>
@@ -195,7 +197,7 @@ public final class Yds {
     java.lang.String getServiceAccountId();
     /**
      * <pre>
-     * SA which has read access to the stream.
+     * Service account ID which has read access to the stream.
      * </pre>
      *
      * <code>string service_account_id = 8;</code>
@@ -206,7 +208,9 @@ public final class Yds {
 
     /**
      * <pre>
-     * Compression codec
+     * List of supported compression codecs
+     * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+     * YDS_COMPRESSION_CODEC_GZIP 
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -215,7 +219,9 @@ public final class Yds {
     java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Yds.YdsCompressionCodec> getSupportedCodecsList();
     /**
      * <pre>
-     * Compression codec
+     * List of supported compression codecs
+     * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+     * YDS_COMPRESSION_CODEC_GZIP 
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -224,7 +230,9 @@ public final class Yds {
     int getSupportedCodecsCount();
     /**
      * <pre>
-     * Compression codec
+     * List of supported compression codecs
+     * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+     * YDS_COMPRESSION_CODEC_GZIP 
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -234,7 +242,9 @@ public final class Yds {
     yandex.cloud.api.datatransfer.v1.endpoint.Yds.YdsCompressionCodec getSupportedCodecs(int index);
     /**
      * <pre>
-     * Compression codec
+     * List of supported compression codecs
+     * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+     * YDS_COMPRESSION_CODEC_GZIP 
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -244,7 +254,9 @@ public final class Yds {
     getSupportedCodecsValueList();
     /**
      * <pre>
-     * Compression codec
+     * List of supported compression codecs
+     * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+     * YDS_COMPRESSION_CODEC_GZIP 
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -294,7 +306,7 @@ public final class Yds {
 
     /**
      * <pre>
-     * for dedicated db
+     * YDS Endpoint for dedicated db
      * </pre>
      *
      * <code>string endpoint = 20;</code>
@@ -303,7 +315,7 @@ public final class Yds {
     java.lang.String getEndpoint();
     /**
      * <pre>
-     * for dedicated db
+     * YDS Endpoint for dedicated db
      * </pre>
      *
      * <code>string endpoint = 20;</code>
@@ -314,7 +326,8 @@ public final class Yds {
 
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 30;</code>
@@ -323,7 +336,8 @@ public final class Yds {
     java.lang.String getSubnetId();
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 30;</code>
@@ -334,7 +348,8 @@ public final class Yds {
 
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -344,7 +359,8 @@ public final class Yds {
         getSecurityGroupsList();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -353,7 +369,8 @@ public final class Yds {
     int getSecurityGroupsCount();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -363,7 +380,8 @@ public final class Yds {
     java.lang.String getSecurityGroups(int index);
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -375,7 +393,7 @@ public final class Yds {
 
     /**
      * <pre>
-     * for important streams
+     * Custom consumer - for important streams
      * </pre>
      *
      * <code>string consumer = 35;</code>
@@ -384,7 +402,7 @@ public final class Yds {
     java.lang.String getConsumer();
     /**
      * <pre>
-     * for important streams
+     * Custom consumer - for important streams
      * </pre>
      *
      * <code>string consumer = 35;</code>
@@ -394,6 +412,10 @@ public final class Yds {
         getConsumerBytes();
   }
   /**
+   * <pre>
+   * Settings specific to the YDS source endpoint
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.YDSSource}
    */
   public static final class YDSSource extends
@@ -575,7 +597,8 @@ public final class Yds {
     private volatile java.lang.Object database_;
     /**
      * <pre>
-     * Database
+     * Database path in YDB for streams 
+     * Example: `/ru/transfer_manager/prod/data-transfer`
      * </pre>
      *
      * <code>string database = 1;</code>
@@ -596,7 +619,8 @@ public final class Yds {
     }
     /**
      * <pre>
-     * Database
+     * Database path in YDB for streams 
+     * Example: `/ru/transfer_manager/prod/data-transfer`
      * </pre>
      *
      * <code>string database = 1;</code>
@@ -621,7 +645,7 @@ public final class Yds {
     private volatile java.lang.Object stream_;
     /**
      * <pre>
-     * Stream
+     * Stream to read
      * </pre>
      *
      * <code>string stream = 2;</code>
@@ -642,7 +666,7 @@ public final class Yds {
     }
     /**
      * <pre>
-     * Stream
+     * Stream to read
      * </pre>
      *
      * <code>string stream = 2;</code>
@@ -667,7 +691,7 @@ public final class Yds {
     private volatile java.lang.Object serviceAccountId_;
     /**
      * <pre>
-     * SA which has read access to the stream.
+     * Service account ID which has read access to the stream.
      * </pre>
      *
      * <code>string service_account_id = 8;</code>
@@ -688,7 +712,7 @@ public final class Yds {
     }
     /**
      * <pre>
-     * SA which has read access to the stream.
+     * Service account ID which has read access to the stream.
      * </pre>
      *
      * <code>string service_account_id = 8;</code>
@@ -723,7 +747,9 @@ public final class Yds {
             };
     /**
      * <pre>
-     * Compression codec
+     * List of supported compression codecs
+     * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+     * YDS_COMPRESSION_CODEC_GZIP 
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -736,7 +762,9 @@ public final class Yds {
     }
     /**
      * <pre>
-     * Compression codec
+     * List of supported compression codecs
+     * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+     * YDS_COMPRESSION_CODEC_GZIP 
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -748,7 +776,9 @@ public final class Yds {
     }
     /**
      * <pre>
-     * Compression codec
+     * List of supported compression codecs
+     * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+     * YDS_COMPRESSION_CODEC_GZIP 
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -761,7 +791,9 @@ public final class Yds {
     }
     /**
      * <pre>
-     * Compression codec
+     * List of supported compression codecs
+     * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+     * YDS_COMPRESSION_CODEC_GZIP 
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -774,7 +806,9 @@ public final class Yds {
     }
     /**
      * <pre>
-     * Compression codec
+     * List of supported compression codecs
+     * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+     * YDS_COMPRESSION_CODEC_GZIP 
      * </pre>
      *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -846,7 +880,7 @@ public final class Yds {
     private volatile java.lang.Object endpoint_;
     /**
      * <pre>
-     * for dedicated db
+     * YDS Endpoint for dedicated db
      * </pre>
      *
      * <code>string endpoint = 20;</code>
@@ -867,7 +901,7 @@ public final class Yds {
     }
     /**
      * <pre>
-     * for dedicated db
+     * YDS Endpoint for dedicated db
      * </pre>
      *
      * <code>string endpoint = 20;</code>
@@ -892,7 +926,8 @@ public final class Yds {
     private volatile java.lang.Object subnetId_;
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 30;</code>
@@ -913,7 +948,8 @@ public final class Yds {
     }
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 30;</code>
@@ -938,7 +974,8 @@ public final class Yds {
     private com.google.protobuf.LazyStringList securityGroups_;
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -950,7 +987,8 @@ public final class Yds {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -961,7 +999,8 @@ public final class Yds {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -973,7 +1012,8 @@ public final class Yds {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -989,7 +1029,7 @@ public final class Yds {
     private volatile java.lang.Object consumer_;
     /**
      * <pre>
-     * for important streams
+     * Custom consumer - for important streams
      * </pre>
      *
      * <code>string consumer = 35;</code>
@@ -1010,7 +1050,7 @@ public final class Yds {
     }
     /**
      * <pre>
-     * for important streams
+     * Custom consumer - for important streams
      * </pre>
      *
      * <code>string consumer = 35;</code>
@@ -1306,6 +1346,10 @@ public final class Yds {
       return builder;
     }
     /**
+     * <pre>
+     * Settings specific to the YDS source endpoint
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.YDSSource}
      */
     public static final class Builder extends
@@ -1547,7 +1591,8 @@ public final class Yds {
       private java.lang.Object database_ = "";
       /**
        * <pre>
-       * Database
+       * Database path in YDB for streams 
+       * Example: `/ru/transfer_manager/prod/data-transfer`
        * </pre>
        *
        * <code>string database = 1;</code>
@@ -1567,7 +1612,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Database
+       * Database path in YDB for streams 
+       * Example: `/ru/transfer_manager/prod/data-transfer`
        * </pre>
        *
        * <code>string database = 1;</code>
@@ -1588,7 +1634,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Database
+       * Database path in YDB for streams 
+       * Example: `/ru/transfer_manager/prod/data-transfer`
        * </pre>
        *
        * <code>string database = 1;</code>
@@ -1607,7 +1654,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Database
+       * Database path in YDB for streams 
+       * Example: `/ru/transfer_manager/prod/data-transfer`
        * </pre>
        *
        * <code>string database = 1;</code>
@@ -1621,7 +1669,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Database
+       * Database path in YDB for streams 
+       * Example: `/ru/transfer_manager/prod/data-transfer`
        * </pre>
        *
        * <code>string database = 1;</code>
@@ -1643,7 +1692,7 @@ public final class Yds {
       private java.lang.Object stream_ = "";
       /**
        * <pre>
-       * Stream
+       * Stream to read
        * </pre>
        *
        * <code>string stream = 2;</code>
@@ -1663,7 +1712,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Stream
+       * Stream to read
        * </pre>
        *
        * <code>string stream = 2;</code>
@@ -1684,7 +1733,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Stream
+       * Stream to read
        * </pre>
        *
        * <code>string stream = 2;</code>
@@ -1703,7 +1752,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Stream
+       * Stream to read
        * </pre>
        *
        * <code>string stream = 2;</code>
@@ -1717,7 +1766,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Stream
+       * Stream to read
        * </pre>
        *
        * <code>string stream = 2;</code>
@@ -1739,7 +1788,7 @@ public final class Yds {
       private java.lang.Object serviceAccountId_ = "";
       /**
        * <pre>
-       * SA which has read access to the stream.
+       * Service account ID which has read access to the stream.
        * </pre>
        *
        * <code>string service_account_id = 8;</code>
@@ -1759,7 +1808,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * SA which has read access to the stream.
+       * Service account ID which has read access to the stream.
        * </pre>
        *
        * <code>string service_account_id = 8;</code>
@@ -1780,7 +1829,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * SA which has read access to the stream.
+       * Service account ID which has read access to the stream.
        * </pre>
        *
        * <code>string service_account_id = 8;</code>
@@ -1799,7 +1848,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * SA which has read access to the stream.
+       * Service account ID which has read access to the stream.
        * </pre>
        *
        * <code>string service_account_id = 8;</code>
@@ -1813,7 +1862,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * SA which has read access to the stream.
+       * Service account ID which has read access to the stream.
        * </pre>
        *
        * <code>string service_account_id = 8;</code>
@@ -1842,7 +1891,9 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Compression codec
+       * List of supported compression codecs
+       * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+       * YDS_COMPRESSION_CODEC_GZIP 
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -1854,7 +1905,9 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Compression codec
+       * List of supported compression codecs
+       * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+       * YDS_COMPRESSION_CODEC_GZIP 
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -1865,7 +1918,9 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Compression codec
+       * List of supported compression codecs
+       * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+       * YDS_COMPRESSION_CODEC_GZIP 
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -1877,7 +1932,9 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Compression codec
+       * List of supported compression codecs
+       * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+       * YDS_COMPRESSION_CODEC_GZIP 
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -1897,7 +1954,9 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Compression codec
+       * List of supported compression codecs
+       * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+       * YDS_COMPRESSION_CODEC_GZIP 
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -1915,7 +1974,9 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Compression codec
+       * List of supported compression codecs
+       * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+       * YDS_COMPRESSION_CODEC_GZIP 
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -1933,7 +1994,9 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Compression codec
+       * List of supported compression codecs
+       * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+       * YDS_COMPRESSION_CODEC_GZIP 
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -1947,7 +2010,9 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Compression codec
+       * List of supported compression codecs
+       * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+       * YDS_COMPRESSION_CODEC_GZIP 
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -1959,7 +2024,9 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Compression codec
+       * List of supported compression codecs
+       * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+       * YDS_COMPRESSION_CODEC_GZIP 
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -1971,7 +2038,9 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Compression codec
+       * List of supported compression codecs
+       * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+       * YDS_COMPRESSION_CODEC_GZIP 
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -1988,7 +2057,9 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Compression codec
+       * List of supported compression codecs
+       * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+       * YDS_COMPRESSION_CODEC_GZIP 
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -2003,7 +2074,9 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Compression codec
+       * List of supported compression codecs
+       * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+       * YDS_COMPRESSION_CODEC_GZIP 
        * </pre>
        *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec supported_codecs = 9;</code>
@@ -2227,7 +2300,7 @@ public final class Yds {
       private java.lang.Object endpoint_ = "";
       /**
        * <pre>
-       * for dedicated db
+       * YDS Endpoint for dedicated db
        * </pre>
        *
        * <code>string endpoint = 20;</code>
@@ -2247,7 +2320,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * for dedicated db
+       * YDS Endpoint for dedicated db
        * </pre>
        *
        * <code>string endpoint = 20;</code>
@@ -2268,7 +2341,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * for dedicated db
+       * YDS Endpoint for dedicated db
        * </pre>
        *
        * <code>string endpoint = 20;</code>
@@ -2287,7 +2360,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * for dedicated db
+       * YDS Endpoint for dedicated db
        * </pre>
        *
        * <code>string endpoint = 20;</code>
@@ -2301,7 +2374,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * for dedicated db
+       * YDS Endpoint for dedicated db
        * </pre>
        *
        * <code>string endpoint = 20;</code>
@@ -2323,7 +2396,8 @@ public final class Yds {
       private java.lang.Object subnetId_ = "";
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 30;</code>
@@ -2343,7 +2417,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 30;</code>
@@ -2364,7 +2439,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 30;</code>
@@ -2383,7 +2459,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 30;</code>
@@ -2397,7 +2474,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 30;</code>
@@ -2425,7 +2503,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -2437,7 +2516,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -2448,7 +2528,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -2460,7 +2541,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -2473,7 +2555,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -2493,7 +2576,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -2512,7 +2596,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -2529,7 +2614,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -2543,7 +2629,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -2565,7 +2652,7 @@ public final class Yds {
       private java.lang.Object consumer_ = "";
       /**
        * <pre>
-       * for important streams
+       * Custom consumer - for important streams
        * </pre>
        *
        * <code>string consumer = 35;</code>
@@ -2585,7 +2672,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * for important streams
+       * Custom consumer - for important streams
        * </pre>
        *
        * <code>string consumer = 35;</code>
@@ -2606,7 +2693,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * for important streams
+       * Custom consumer - for important streams
        * </pre>
        *
        * <code>string consumer = 35;</code>
@@ -2625,7 +2712,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * for important streams
+       * Custom consumer - for important streams
        * </pre>
        *
        * <code>string consumer = 35;</code>
@@ -2639,7 +2726,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * for important streams
+       * Custom consumer - for important streams
        * </pre>
        *
        * <code>string consumer = 35;</code>
@@ -2716,7 +2803,8 @@ public final class Yds {
 
     /**
      * <pre>
-     * Database
+     * Database path in YDB for streams 
+     * Example: `/ru/transfer_manager/prod/data-transfer`
      * </pre>
      *
      * <code>string database = 1;</code>
@@ -2725,7 +2813,8 @@ public final class Yds {
     java.lang.String getDatabase();
     /**
      * <pre>
-     * Database
+     * Database path in YDB for streams 
+     * Example: `/ru/transfer_manager/prod/data-transfer`
      * </pre>
      *
      * <code>string database = 1;</code>
@@ -2736,7 +2825,7 @@ public final class Yds {
 
     /**
      * <pre>
-     * Stream
+     * Stream to write to
      * </pre>
      *
      * <code>string stream = 2;</code>
@@ -2745,7 +2834,7 @@ public final class Yds {
     java.lang.String getStream();
     /**
      * <pre>
-     * Stream
+     * Stream to write to
      * </pre>
      *
      * <code>string stream = 2;</code>
@@ -2756,7 +2845,7 @@ public final class Yds {
 
     /**
      * <pre>
-     * SA which has read access to the stream.
+     * Service account ID which has read access to the stream
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
@@ -2765,7 +2854,7 @@ public final class Yds {
     java.lang.String getServiceAccountId();
     /**
      * <pre>
-     * SA which has read access to the stream.
+     * Service account ID which has read access to the stream
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
@@ -2787,11 +2876,25 @@ public final class Yds {
     boolean getSaveTxOrder();
 
     /**
+     * <pre>
+     * Codec to use for output data compression. If not specified, no compression will
+     * be done
+     * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+     * YDS_COMPRESSION_CODEC_GZIP 
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec compression_codec = 5;</code>
      * @return The enum numeric value on the wire for compressionCodec.
      */
     int getCompressionCodecValue();
     /**
+     * <pre>
+     * Codec to use for output data compression. If not specified, no compression will
+     * be done
+     * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+     * YDS_COMPRESSION_CODEC_GZIP 
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec compression_codec = 5;</code>
      * @return The compressionCodec.
      */
@@ -2826,7 +2929,7 @@ public final class Yds {
 
     /**
      * <pre>
-     * for dedicated db
+     * YDS Endpoint for dedicated db
      * </pre>
      *
      * <code>string endpoint = 20;</code>
@@ -2835,7 +2938,7 @@ public final class Yds {
     java.lang.String getEndpoint();
     /**
      * <pre>
-     * for dedicated db
+     * YDS Endpoint for dedicated db
      * </pre>
      *
      * <code>string endpoint = 20;</code>
@@ -2846,7 +2949,8 @@ public final class Yds {
 
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 30;</code>
@@ -2855,7 +2959,8 @@ public final class Yds {
     java.lang.String getSubnetId();
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 30;</code>
@@ -2866,7 +2971,8 @@ public final class Yds {
 
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -2876,7 +2982,8 @@ public final class Yds {
         getSecurityGroupsList();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -2885,7 +2992,8 @@ public final class Yds {
     int getSecurityGroupsCount();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -2895,7 +3003,8 @@ public final class Yds {
     java.lang.String getSecurityGroups(int index);
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -2906,6 +3015,10 @@ public final class Yds {
         getSecurityGroupsBytes(int index);
   }
   /**
+   * <pre>
+   * Settings specific to the YDS target endpoint
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.YDSTarget}
    */
   public static final class YDSTarget extends
@@ -3060,7 +3173,8 @@ public final class Yds {
     private volatile java.lang.Object database_;
     /**
      * <pre>
-     * Database
+     * Database path in YDB for streams 
+     * Example: `/ru/transfer_manager/prod/data-transfer`
      * </pre>
      *
      * <code>string database = 1;</code>
@@ -3081,7 +3195,8 @@ public final class Yds {
     }
     /**
      * <pre>
-     * Database
+     * Database path in YDB for streams 
+     * Example: `/ru/transfer_manager/prod/data-transfer`
      * </pre>
      *
      * <code>string database = 1;</code>
@@ -3106,7 +3221,7 @@ public final class Yds {
     private volatile java.lang.Object stream_;
     /**
      * <pre>
-     * Stream
+     * Stream to write to
      * </pre>
      *
      * <code>string stream = 2;</code>
@@ -3127,7 +3242,7 @@ public final class Yds {
     }
     /**
      * <pre>
-     * Stream
+     * Stream to write to
      * </pre>
      *
      * <code>string stream = 2;</code>
@@ -3152,7 +3267,7 @@ public final class Yds {
     private volatile java.lang.Object serviceAccountId_;
     /**
      * <pre>
-     * SA which has read access to the stream.
+     * Service account ID which has read access to the stream
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
@@ -3173,7 +3288,7 @@ public final class Yds {
     }
     /**
      * <pre>
-     * SA which has read access to the stream.
+     * Service account ID which has read access to the stream
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
@@ -3214,6 +3329,13 @@ public final class Yds {
     public static final int COMPRESSION_CODEC_FIELD_NUMBER = 5;
     private int compressionCodec_;
     /**
+     * <pre>
+     * Codec to use for output data compression. If not specified, no compression will
+     * be done
+     * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+     * YDS_COMPRESSION_CODEC_GZIP 
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec compression_codec = 5;</code>
      * @return The enum numeric value on the wire for compressionCodec.
      */
@@ -3221,6 +3343,13 @@ public final class Yds {
       return compressionCodec_;
     }
     /**
+     * <pre>
+     * Codec to use for output data compression. If not specified, no compression will
+     * be done
+     * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+     * YDS_COMPRESSION_CODEC_GZIP 
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec compression_codec = 5;</code>
      * @return The compressionCodec.
      */
@@ -3272,7 +3401,7 @@ public final class Yds {
     private volatile java.lang.Object endpoint_;
     /**
      * <pre>
-     * for dedicated db
+     * YDS Endpoint for dedicated db
      * </pre>
      *
      * <code>string endpoint = 20;</code>
@@ -3293,7 +3422,7 @@ public final class Yds {
     }
     /**
      * <pre>
-     * for dedicated db
+     * YDS Endpoint for dedicated db
      * </pre>
      *
      * <code>string endpoint = 20;</code>
@@ -3318,7 +3447,8 @@ public final class Yds {
     private volatile java.lang.Object subnetId_;
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 30;</code>
@@ -3339,7 +3469,8 @@ public final class Yds {
     }
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 30;</code>
@@ -3364,7 +3495,8 @@ public final class Yds {
     private com.google.protobuf.LazyStringList securityGroups_;
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -3376,7 +3508,8 @@ public final class Yds {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -3387,7 +3520,8 @@ public final class Yds {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -3399,7 +3533,8 @@ public final class Yds {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -3661,6 +3796,10 @@ public final class Yds {
       return builder;
     }
     /**
+     * <pre>
+     * Settings specific to the YDS target endpoint
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.YDSTarget}
      */
     public static final class Builder extends
@@ -3884,7 +4023,8 @@ public final class Yds {
       private java.lang.Object database_ = "";
       /**
        * <pre>
-       * Database
+       * Database path in YDB for streams 
+       * Example: `/ru/transfer_manager/prod/data-transfer`
        * </pre>
        *
        * <code>string database = 1;</code>
@@ -3904,7 +4044,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Database
+       * Database path in YDB for streams 
+       * Example: `/ru/transfer_manager/prod/data-transfer`
        * </pre>
        *
        * <code>string database = 1;</code>
@@ -3925,7 +4066,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Database
+       * Database path in YDB for streams 
+       * Example: `/ru/transfer_manager/prod/data-transfer`
        * </pre>
        *
        * <code>string database = 1;</code>
@@ -3944,7 +4086,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Database
+       * Database path in YDB for streams 
+       * Example: `/ru/transfer_manager/prod/data-transfer`
        * </pre>
        *
        * <code>string database = 1;</code>
@@ -3958,7 +4101,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Database
+       * Database path in YDB for streams 
+       * Example: `/ru/transfer_manager/prod/data-transfer`
        * </pre>
        *
        * <code>string database = 1;</code>
@@ -3980,7 +4124,7 @@ public final class Yds {
       private java.lang.Object stream_ = "";
       /**
        * <pre>
-       * Stream
+       * Stream to write to
        * </pre>
        *
        * <code>string stream = 2;</code>
@@ -4000,7 +4144,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Stream
+       * Stream to write to
        * </pre>
        *
        * <code>string stream = 2;</code>
@@ -4021,7 +4165,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Stream
+       * Stream to write to
        * </pre>
        *
        * <code>string stream = 2;</code>
@@ -4040,7 +4184,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Stream
+       * Stream to write to
        * </pre>
        *
        * <code>string stream = 2;</code>
@@ -4054,7 +4198,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Stream
+       * Stream to write to
        * </pre>
        *
        * <code>string stream = 2;</code>
@@ -4076,7 +4220,7 @@ public final class Yds {
       private java.lang.Object serviceAccountId_ = "";
       /**
        * <pre>
-       * SA which has read access to the stream.
+       * Service account ID which has read access to the stream
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
@@ -4096,7 +4240,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * SA which has read access to the stream.
+       * Service account ID which has read access to the stream
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
@@ -4117,7 +4261,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * SA which has read access to the stream.
+       * Service account ID which has read access to the stream
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
@@ -4136,7 +4280,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * SA which has read access to the stream.
+       * Service account ID which has read access to the stream
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
@@ -4150,7 +4294,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * SA which has read access to the stream.
+       * Service account ID which has read access to the stream
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
@@ -4220,6 +4364,13 @@ public final class Yds {
 
       private int compressionCodec_ = 0;
       /**
+       * <pre>
+       * Codec to use for output data compression. If not specified, no compression will
+       * be done
+       * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+       * YDS_COMPRESSION_CODEC_GZIP 
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec compression_codec = 5;</code>
        * @return The enum numeric value on the wire for compressionCodec.
        */
@@ -4227,6 +4378,13 @@ public final class Yds {
         return compressionCodec_;
       }
       /**
+       * <pre>
+       * Codec to use for output data compression. If not specified, no compression will
+       * be done
+       * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+       * YDS_COMPRESSION_CODEC_GZIP 
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec compression_codec = 5;</code>
        * @param value The enum numeric value on the wire for compressionCodec to set.
        * @return This builder for chaining.
@@ -4238,6 +4396,13 @@ public final class Yds {
         return this;
       }
       /**
+       * <pre>
+       * Codec to use for output data compression. If not specified, no compression will
+       * be done
+       * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+       * YDS_COMPRESSION_CODEC_GZIP 
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec compression_codec = 5;</code>
        * @return The compressionCodec.
        */
@@ -4248,6 +4413,13 @@ public final class Yds {
         return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Yds.YdsCompressionCodec.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Codec to use for output data compression. If not specified, no compression will
+       * be done
+       * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+       * YDS_COMPRESSION_CODEC_GZIP 
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec compression_codec = 5;</code>
        * @param value The compressionCodec to set.
        * @return This builder for chaining.
@@ -4262,6 +4434,13 @@ public final class Yds {
         return this;
       }
       /**
+       * <pre>
+       * Codec to use for output data compression. If not specified, no compression will
+       * be done
+       * Options: YDS_COMPRESSION_CODEC_RAW, YDS_COMPRESSION_CODEC_ZSTD,
+       * YDS_COMPRESSION_CODEC_GZIP 
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.YdsCompressionCodec compression_codec = 5;</code>
        * @return This builder for chaining.
        */
@@ -4430,7 +4609,7 @@ public final class Yds {
       private java.lang.Object endpoint_ = "";
       /**
        * <pre>
-       * for dedicated db
+       * YDS Endpoint for dedicated db
        * </pre>
        *
        * <code>string endpoint = 20;</code>
@@ -4450,7 +4629,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * for dedicated db
+       * YDS Endpoint for dedicated db
        * </pre>
        *
        * <code>string endpoint = 20;</code>
@@ -4471,7 +4650,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * for dedicated db
+       * YDS Endpoint for dedicated db
        * </pre>
        *
        * <code>string endpoint = 20;</code>
@@ -4490,7 +4669,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * for dedicated db
+       * YDS Endpoint for dedicated db
        * </pre>
        *
        * <code>string endpoint = 20;</code>
@@ -4504,7 +4683,7 @@ public final class Yds {
       }
       /**
        * <pre>
-       * for dedicated db
+       * YDS Endpoint for dedicated db
        * </pre>
        *
        * <code>string endpoint = 20;</code>
@@ -4526,7 +4705,8 @@ public final class Yds {
       private java.lang.Object subnetId_ = "";
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 30;</code>
@@ -4546,7 +4726,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 30;</code>
@@ -4567,7 +4748,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 30;</code>
@@ -4586,7 +4768,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 30;</code>
@@ -4600,7 +4783,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 30;</code>
@@ -4628,7 +4812,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -4640,7 +4825,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -4651,7 +4837,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -4663,7 +4850,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -4676,7 +4864,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -4696,7 +4885,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -4715,7 +4905,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -4732,7 +4923,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -4746,7 +4938,8 @@ public final class Yds {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>

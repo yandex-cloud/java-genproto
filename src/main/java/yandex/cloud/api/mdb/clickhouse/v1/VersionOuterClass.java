@@ -108,6 +108,36 @@ public final class VersionOuterClass {
      */
     com.google.protobuf.ByteString
         getUpdatableToBytes(int index);
+
+    /**
+     * <pre>
+     * Whether version is LTS.
+     * </pre>
+     *
+     * <code>bool lts = 5;</code>
+     * @return The lts.
+     */
+    boolean getLts();
+
+    /**
+     * <pre>
+     * Full version.
+     * </pre>
+     *
+     * <code>string full_version = 6;</code>
+     * @return The fullVersion.
+     */
+    java.lang.String getFullVersion();
+    /**
+     * <pre>
+     * Full version.
+     * </pre>
+     *
+     * <code>string full_version = 6;</code>
+     * @return The bytes for fullVersion.
+     */
+    com.google.protobuf.ByteString
+        getFullVersionBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.Version}
@@ -125,6 +155,7 @@ public final class VersionOuterClass {
       id_ = "";
       name_ = "";
       updatableTo_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      fullVersion_ = "";
     }
 
     @java.lang.Override
@@ -182,6 +213,17 @@ public final class VersionOuterClass {
                 mutable_bitField0_ |= 0x00000001;
               }
               updatableTo_.add(s);
+              break;
+            }
+            case 40: {
+
+              lts_ = input.readBool();
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fullVersion_ = s;
               break;
             }
             default: {
@@ -377,6 +419,67 @@ public final class VersionOuterClass {
       return updatableTo_.getByteString(index);
     }
 
+    public static final int LTS_FIELD_NUMBER = 5;
+    private boolean lts_;
+    /**
+     * <pre>
+     * Whether version is LTS.
+     * </pre>
+     *
+     * <code>bool lts = 5;</code>
+     * @return The lts.
+     */
+    @java.lang.Override
+    public boolean getLts() {
+      return lts_;
+    }
+
+    public static final int FULL_VERSION_FIELD_NUMBER = 6;
+    private volatile java.lang.Object fullVersion_;
+    /**
+     * <pre>
+     * Full version.
+     * </pre>
+     *
+     * <code>string full_version = 6;</code>
+     * @return The fullVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getFullVersion() {
+      java.lang.Object ref = fullVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fullVersion_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Full version.
+     * </pre>
+     *
+     * <code>string full_version = 6;</code>
+     * @return The bytes for fullVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFullVersionBytes() {
+      java.lang.Object ref = fullVersion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fullVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -402,6 +505,12 @@ public final class VersionOuterClass {
       }
       for (int i = 0; i < updatableTo_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, updatableTo_.getRaw(i));
+      }
+      if (lts_ != false) {
+        output.writeBool(5, lts_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fullVersion_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, fullVersion_);
       }
       unknownFields.writeTo(output);
     }
@@ -430,6 +539,13 @@ public final class VersionOuterClass {
         size += dataSize;
         size += 1 * getUpdatableToList().size();
       }
+      if (lts_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, lts_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fullVersion_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, fullVersion_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -453,6 +569,10 @@ public final class VersionOuterClass {
           != other.getDeprecated()) return false;
       if (!getUpdatableToList()
           .equals(other.getUpdatableToList())) return false;
+      if (getLts()
+          != other.getLts()) return false;
+      if (!getFullVersion()
+          .equals(other.getFullVersion())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -475,6 +595,11 @@ public final class VersionOuterClass {
         hash = (37 * hash) + UPDATABLE_TO_FIELD_NUMBER;
         hash = (53 * hash) + getUpdatableToList().hashCode();
       }
+      hash = (37 * hash) + LTS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getLts());
+      hash = (37 * hash) + FULL_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getFullVersion().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -616,6 +741,10 @@ public final class VersionOuterClass {
 
         updatableTo_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
+        lts_ = false;
+
+        fullVersion_ = "";
+
         return this;
       }
 
@@ -651,6 +780,8 @@ public final class VersionOuterClass {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.updatableTo_ = updatableTo_;
+        result.lts_ = lts_;
+        result.fullVersion_ = fullVersion_;
         onBuilt();
         return result;
       }
@@ -718,6 +849,13 @@ public final class VersionOuterClass {
             ensureUpdatableToIsMutable();
             updatableTo_.addAll(other.updatableTo_);
           }
+          onChanged();
+        }
+        if (other.getLts() != false) {
+          setLts(other.getLts());
+        }
+        if (!other.getFullVersion().isEmpty()) {
+          fullVersion_ = other.fullVersion_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1130,6 +1268,145 @@ public final class VersionOuterClass {
         onChanged();
         return this;
       }
+
+      private boolean lts_ ;
+      /**
+       * <pre>
+       * Whether version is LTS.
+       * </pre>
+       *
+       * <code>bool lts = 5;</code>
+       * @return The lts.
+       */
+      @java.lang.Override
+      public boolean getLts() {
+        return lts_;
+      }
+      /**
+       * <pre>
+       * Whether version is LTS.
+       * </pre>
+       *
+       * <code>bool lts = 5;</code>
+       * @param value The lts to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLts(boolean value) {
+        
+        lts_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether version is LTS.
+       * </pre>
+       *
+       * <code>bool lts = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLts() {
+        
+        lts_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fullVersion_ = "";
+      /**
+       * <pre>
+       * Full version.
+       * </pre>
+       *
+       * <code>string full_version = 6;</code>
+       * @return The fullVersion.
+       */
+      public java.lang.String getFullVersion() {
+        java.lang.Object ref = fullVersion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fullVersion_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Full version.
+       * </pre>
+       *
+       * <code>string full_version = 6;</code>
+       * @return The bytes for fullVersion.
+       */
+      public com.google.protobuf.ByteString
+          getFullVersionBytes() {
+        java.lang.Object ref = fullVersion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fullVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Full version.
+       * </pre>
+       *
+       * <code>string full_version = 6;</code>
+       * @param value The fullVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFullVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        fullVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Full version.
+       * </pre>
+       *
+       * <code>string full_version = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFullVersion() {
+        
+        fullVersion_ = getDefaultInstance().getFullVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Full version.
+       * </pre>
+       *
+       * <code>string full_version = 6;</code>
+       * @param value The bytes for fullVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFullVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        fullVersion_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1198,13 +1475,13 @@ public final class VersionOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n,yandex/cloud/mdb/clickhouse/v1/version" +
-      ".proto\022\036yandex.cloud.mdb.clickhouse.v1\"M" +
+      ".proto\022\036yandex.cloud.mdb.clickhouse.v1\"p" +
       "\n\007Version\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\022\n\nd" +
-      "eprecated\030\003 \001(\010\022\024\n\014updatable_to\030\004 \003(\tBs\n" +
-      "\"yandex.cloud.api.mdb.clickhouse.v1ZMgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/mdb/clickhouse/v1;clickhouseb\006prot" +
-      "o3"
+      "eprecated\030\003 \001(\010\022\024\n\014updatable_to\030\004 \003(\t\022\013\n" +
+      "\003lts\030\005 \001(\010\022\024\n\014full_version\030\006 \001(\tBs\n\"yand" +
+      "ex.cloud.api.mdb.clickhouse.v1ZMgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/mdb/clickhouse/v1;clickhouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1215,7 +1492,7 @@ public final class VersionOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_Version_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_Version_descriptor,
-        new java.lang.String[] { "Id", "Name", "Deprecated", "UpdatableTo", });
+        new java.lang.String[] { "Id", "Name", "Deprecated", "UpdatableTo", "Lts", "FullVersion", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

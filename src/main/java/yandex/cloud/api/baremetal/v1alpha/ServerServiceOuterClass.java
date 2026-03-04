@@ -3227,7 +3227,7 @@ public final class ServerServiceOuterClass {
      * To get the hardware pool ID, use a [HardwarePoolService.List] request.
      * </pre>
      *
-     * <code>string hardware_pool_id = 4 [(.yandex.cloud.length) = "&lt;=20"];</code>
+     * <code>string hardware_pool_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=20"];</code>
      * @return The hardwarePoolId.
      */
     java.lang.String getHardwarePoolId();
@@ -3237,7 +3237,7 @@ public final class ServerServiceOuterClass {
      * To get the hardware pool ID, use a [HardwarePoolService.List] request.
      * </pre>
      *
-     * <code>string hardware_pool_id = 4 [(.yandex.cloud.length) = "&lt;=20"];</code>
+     * <code>string hardware_pool_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=20"];</code>
      * @return The bytes for hardwarePoolId.
      */
     com.google.protobuf.ByteString
@@ -3268,6 +3268,7 @@ public final class ServerServiceOuterClass {
     /**
      * <pre>
      * A period of time for which the server is rented.
+     * To get the rental period ID, use a [RentalPeriodService.List] request.
      * </pre>
      *
      * <code>string rental_period_id = 11 [(.yandex.cloud.length) = "&lt;=20"];</code>
@@ -3277,6 +3278,7 @@ public final class ServerServiceOuterClass {
     /**
      * <pre>
      * A period of time for which the server is rented.
+     * To get the rental period ID, use a [RentalPeriodService.List] request.
      * </pre>
      *
      * <code>string rental_period_id = 11 [(.yandex.cloud.length) = "&lt;=20"];</code>
@@ -3749,7 +3751,7 @@ public final class ServerServiceOuterClass {
      * To get the hardware pool ID, use a [HardwarePoolService.List] request.
      * </pre>
      *
-     * <code>string hardware_pool_id = 4 [(.yandex.cloud.length) = "&lt;=20"];</code>
+     * <code>string hardware_pool_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=20"];</code>
      * @return The hardwarePoolId.
      */
     @java.lang.Override
@@ -3771,7 +3773,7 @@ public final class ServerServiceOuterClass {
      * To get the hardware pool ID, use a [HardwarePoolService.List] request.
      * </pre>
      *
-     * <code>string hardware_pool_id = 4 [(.yandex.cloud.length) = "&lt;=20"];</code>
+     * <code>string hardware_pool_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=20"];</code>
      * @return The bytes for hardwarePoolId.
      */
     @java.lang.Override
@@ -3842,6 +3844,7 @@ public final class ServerServiceOuterClass {
     /**
      * <pre>
      * A period of time for which the server is rented.
+     * To get the rental period ID, use a [RentalPeriodService.List] request.
      * </pre>
      *
      * <code>string rental_period_id = 11 [(.yandex.cloud.length) = "&lt;=20"];</code>
@@ -3863,6 +3866,7 @@ public final class ServerServiceOuterClass {
     /**
      * <pre>
      * A period of time for which the server is rented.
+     * To get the rental period ID, use a [RentalPeriodService.List] request.
      * </pre>
      *
      * <code>string rental_period_id = 11 [(.yandex.cloud.length) = "&lt;=20"];</code>
@@ -4924,7 +4928,7 @@ public final class ServerServiceOuterClass {
        * To get the hardware pool ID, use a [HardwarePoolService.List] request.
        * </pre>
        *
-       * <code>string hardware_pool_id = 4 [(.yandex.cloud.length) = "&lt;=20"];</code>
+       * <code>string hardware_pool_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=20"];</code>
        * @return The hardwarePoolId.
        */
       public java.lang.String getHardwarePoolId() {
@@ -4945,7 +4949,7 @@ public final class ServerServiceOuterClass {
        * To get the hardware pool ID, use a [HardwarePoolService.List] request.
        * </pre>
        *
-       * <code>string hardware_pool_id = 4 [(.yandex.cloud.length) = "&lt;=20"];</code>
+       * <code>string hardware_pool_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=20"];</code>
        * @return The bytes for hardwarePoolId.
        */
       public com.google.protobuf.ByteString
@@ -4967,7 +4971,7 @@ public final class ServerServiceOuterClass {
        * To get the hardware pool ID, use a [HardwarePoolService.List] request.
        * </pre>
        *
-       * <code>string hardware_pool_id = 4 [(.yandex.cloud.length) = "&lt;=20"];</code>
+       * <code>string hardware_pool_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=20"];</code>
        * @param value The hardwarePoolId to set.
        * @return This builder for chaining.
        */
@@ -4987,7 +4991,7 @@ public final class ServerServiceOuterClass {
        * To get the hardware pool ID, use a [HardwarePoolService.List] request.
        * </pre>
        *
-       * <code>string hardware_pool_id = 4 [(.yandex.cloud.length) = "&lt;=20"];</code>
+       * <code>string hardware_pool_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=20"];</code>
        * @return This builder for chaining.
        */
       public Builder clearHardwarePoolId() {
@@ -5002,7 +5006,7 @@ public final class ServerServiceOuterClass {
        * To get the hardware pool ID, use a [HardwarePoolService.List] request.
        * </pre>
        *
-       * <code>string hardware_pool_id = 4 [(.yandex.cloud.length) = "&lt;=20"];</code>
+       * <code>string hardware_pool_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=20"];</code>
        * @param value The bytes for hardwarePoolId to set.
        * @return This builder for chaining.
        */
@@ -5123,6 +5127,7 @@ public final class ServerServiceOuterClass {
       /**
        * <pre>
        * A period of time for which the server is rented.
+       * To get the rental period ID, use a [RentalPeriodService.List] request.
        * </pre>
        *
        * <code>string rental_period_id = 11 [(.yandex.cloud.length) = "&lt;=20"];</code>
@@ -5143,6 +5148,7 @@ public final class ServerServiceOuterClass {
       /**
        * <pre>
        * A period of time for which the server is rented.
+       * To get the rental period ID, use a [RentalPeriodService.List] request.
        * </pre>
        *
        * <code>string rental_period_id = 11 [(.yandex.cloud.length) = "&lt;=20"];</code>
@@ -5164,6 +5170,7 @@ public final class ServerServiceOuterClass {
       /**
        * <pre>
        * A period of time for which the server is rented.
+       * To get the rental period ID, use a [RentalPeriodService.List] request.
        * </pre>
        *
        * <code>string rental_period_id = 11 [(.yandex.cloud.length) = "&lt;=20"];</code>
@@ -5183,6 +5190,7 @@ public final class ServerServiceOuterClass {
       /**
        * <pre>
        * A period of time for which the server is rented.
+       * To get the rental period ID, use a [RentalPeriodService.List] request.
        * </pre>
        *
        * <code>string rental_period_id = 11 [(.yandex.cloud.length) = "&lt;=20"];</code>
@@ -5197,6 +5205,7 @@ public final class ServerServiceOuterClass {
       /**
        * <pre>
        * A period of time for which the server is rented.
+       * To get the rental period ID, use a [RentalPeriodService.List] request.
        * </pre>
        *
        * <code>string rental_period_id = 11 [(.yandex.cloud.length) = "&lt;=20"];</code>
@@ -8798,61 +8807,126 @@ public final class ServerServiceOuterClass {
 
     /**
      * <pre>
-     * Private subnet.
+     * &#64;deprecated Private subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the privateSubnet field is set.
      */
-    boolean hasPrivateSubnet();
+    @java.lang.Deprecated boolean hasPrivateSubnet();
     /**
      * <pre>
-     * Private subnet.
+     * &#64;deprecated Private subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
+     * @deprecated
      * @return The privateSubnet.
      */
-    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface getPrivateSubnet();
+    @java.lang.Deprecated yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface getPrivateSubnet();
     /**
      * <pre>
-     * Private subnet.
+     * &#64;deprecated Private subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
      */
-    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterfaceOrBuilder getPrivateSubnetOrBuilder();
+    @java.lang.Deprecated yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterfaceOrBuilder getPrivateSubnetOrBuilder();
 
     /**
      * <pre>
-     * Public subnet.
+     * &#64;deprecated Public subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the publicSubnet field is set.
      */
-    boolean hasPublicSubnet();
+    @java.lang.Deprecated boolean hasPublicSubnet();
     /**
      * <pre>
-     * Public subnet.
+     * &#64;deprecated Public subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
+     * @deprecated
      * @return The publicSubnet.
      */
-    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface getPublicSubnet();
+    @java.lang.Deprecated yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface getPublicSubnet();
     /**
      * <pre>
-     * Public subnet.
+     * &#64;deprecated Public subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
      */
-    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterfaceOrBuilder getPublicSubnetOrBuilder();
+    @java.lang.Deprecated yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterfaceOrBuilder getPublicSubnetOrBuilder();
+
+    /**
+     * <pre>
+     * Private interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 9;</code>
+     * @return Whether the privateInterface field is set.
+     */
+    boolean hasPrivateInterface();
+    /**
+     * <pre>
+     * Private interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 9;</code>
+     * @return The privateInterface.
+     */
+    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface getPrivateInterface();
+    /**
+     * <pre>
+     * Private interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 9;</code>
+     */
+    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterfaceOrBuilder getPrivateInterfaceOrBuilder();
+
+    /**
+     * <pre>
+     * Public interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 10;</code>
+     * @return Whether the publicInterface field is set.
+     */
+    boolean hasPublicInterface();
+    /**
+     * <pre>
+     * Public interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 10;</code>
+     * @return The publicInterface.
+     */
+    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface getPublicInterface();
+    /**
+     * <pre>
+     * Public interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 10;</code>
+     */
+    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterfaceOrBuilder getPublicInterfaceOrBuilder();
 
     public yandex.cloud.api.baremetal.v1alpha.ServerServiceOuterClass.NetworkInterfaceSpec.SubnetCase getSubnetCase();
+
+    public yandex.cloud.api.baremetal.v1alpha.ServerServiceOuterClass.NetworkInterfaceSpec.InterfaceCase getInterfaceCase();
   }
   /**
+   * <pre>
+   * (-- api-linter: yc::1704::file-separation=disabled
+   *     Required for backward compatibility with old clients. --)
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.baremetal.v1alpha.NetworkInterfaceSpec}
    */
   public static final class NetworkInterfaceSpec extends
@@ -8932,6 +9006,34 @@ public final class ServerServiceOuterClass {
               subnetCase_ = 8;
               break;
             }
+            case 74: {
+              yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.Builder subBuilder = null;
+              if (interfaceCase_ == 9) {
+                subBuilder = ((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) interface_).toBuilder();
+              }
+              interface_ =
+                  input.readMessage(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) interface_);
+                interface_ = subBuilder.buildPartial();
+              }
+              interfaceCase_ = 9;
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.Builder subBuilder = null;
+              if (interfaceCase_ == 10) {
+                subBuilder = ((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) interface_).toBuilder();
+              }
+              interface_ =
+                  input.readMessage(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) interface_);
+                interface_ = subBuilder.buildPartial();
+              }
+              interfaceCase_ = 10;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -8969,8 +9071,8 @@ public final class ServerServiceOuterClass {
     public enum SubnetCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      PRIVATE_SUBNET(7),
-      PUBLIC_SUBNET(8),
+      @java.lang.Deprecated PRIVATE_SUBNET(7),
+      @java.lang.Deprecated PUBLIC_SUBNET(8),
       SUBNET_NOT_SET(0);
       private final int value;
       private SubnetCase(int value) {
@@ -9003,6 +9105,47 @@ public final class ServerServiceOuterClass {
     getSubnetCase() {
       return SubnetCase.forNumber(
           subnetCase_);
+    }
+
+    private int interfaceCase_ = 0;
+    private java.lang.Object interface_;
+    public enum InterfaceCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      PRIVATE_INTERFACE(9),
+      PUBLIC_INTERFACE(10),
+      INTERFACE_NOT_SET(0);
+      private final int value;
+      private InterfaceCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static InterfaceCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static InterfaceCase forNumber(int value) {
+        switch (value) {
+          case 9: return PRIVATE_INTERFACE;
+          case 10: return PUBLIC_INTERFACE;
+          case 0: return INTERFACE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public InterfaceCase
+    getInterfaceCase() {
+      return InterfaceCase.forNumber(
+          interfaceCase_);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -9054,26 +9197,28 @@ public final class ServerServiceOuterClass {
     public static final int PRIVATE_SUBNET_FIELD_NUMBER = 7;
     /**
      * <pre>
-     * Private subnet.
+     * &#64;deprecated Private subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the privateSubnet field is set.
      */
     @java.lang.Override
-    public boolean hasPrivateSubnet() {
+    @java.lang.Deprecated public boolean hasPrivateSubnet() {
       return subnetCase_ == 7;
     }
     /**
      * <pre>
-     * Private subnet.
+     * &#64;deprecated Private subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
+     * @deprecated
      * @return The privateSubnet.
      */
     @java.lang.Override
-    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface getPrivateSubnet() {
+    @java.lang.Deprecated public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface getPrivateSubnet() {
       if (subnetCase_ == 7) {
          return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface) subnet_;
       }
@@ -9081,13 +9226,13 @@ public final class ServerServiceOuterClass {
     }
     /**
      * <pre>
-     * Private subnet.
+     * &#64;deprecated Private subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterfaceOrBuilder getPrivateSubnetOrBuilder() {
+    @java.lang.Deprecated public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterfaceOrBuilder getPrivateSubnetOrBuilder() {
       if (subnetCase_ == 7) {
          return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface) subnet_;
       }
@@ -9097,26 +9242,28 @@ public final class ServerServiceOuterClass {
     public static final int PUBLIC_SUBNET_FIELD_NUMBER = 8;
     /**
      * <pre>
-     * Public subnet.
+     * &#64;deprecated Public subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the publicSubnet field is set.
      */
     @java.lang.Override
-    public boolean hasPublicSubnet() {
+    @java.lang.Deprecated public boolean hasPublicSubnet() {
       return subnetCase_ == 8;
     }
     /**
      * <pre>
-     * Public subnet.
+     * &#64;deprecated Public subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
+     * @deprecated
      * @return The publicSubnet.
      */
     @java.lang.Override
-    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface getPublicSubnet() {
+    @java.lang.Deprecated public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface getPublicSubnet() {
       if (subnetCase_ == 8) {
          return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface) subnet_;
       }
@@ -9124,17 +9271,103 @@ public final class ServerServiceOuterClass {
     }
     /**
      * <pre>
-     * Public subnet.
+     * &#64;deprecated Public subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterfaceOrBuilder getPublicSubnetOrBuilder() {
+    @java.lang.Deprecated public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterfaceOrBuilder getPublicSubnetOrBuilder() {
       if (subnetCase_ == 8) {
          return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface) subnet_;
       }
       return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface.getDefaultInstance();
+    }
+
+    public static final int PRIVATE_INTERFACE_FIELD_NUMBER = 9;
+    /**
+     * <pre>
+     * Private interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 9;</code>
+     * @return Whether the privateInterface field is set.
+     */
+    @java.lang.Override
+    public boolean hasPrivateInterface() {
+      return interfaceCase_ == 9;
+    }
+    /**
+     * <pre>
+     * Private interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 9;</code>
+     * @return The privateInterface.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface getPrivateInterface() {
+      if (interfaceCase_ == 9) {
+         return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) interface_;
+      }
+      return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Private interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterfaceOrBuilder getPrivateInterfaceOrBuilder() {
+      if (interfaceCase_ == 9) {
+         return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) interface_;
+      }
+      return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.getDefaultInstance();
+    }
+
+    public static final int PUBLIC_INTERFACE_FIELD_NUMBER = 10;
+    /**
+     * <pre>
+     * Public interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 10;</code>
+     * @return Whether the publicInterface field is set.
+     */
+    @java.lang.Override
+    public boolean hasPublicInterface() {
+      return interfaceCase_ == 10;
+    }
+    /**
+     * <pre>
+     * Public interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 10;</code>
+     * @return The publicInterface.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface getPublicInterface() {
+      if (interfaceCase_ == 10) {
+         return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) interface_;
+      }
+      return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Public interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterfaceOrBuilder getPublicInterfaceOrBuilder() {
+      if (interfaceCase_ == 10) {
+         return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) interface_;
+      }
+      return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -9160,6 +9393,12 @@ public final class ServerServiceOuterClass {
       if (subnetCase_ == 8) {
         output.writeMessage(8, (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface) subnet_);
       }
+      if (interfaceCase_ == 9) {
+        output.writeMessage(9, (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) interface_);
+      }
+      if (interfaceCase_ == 10) {
+        output.writeMessage(10, (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) interface_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9179,6 +9418,14 @@ public final class ServerServiceOuterClass {
       if (subnetCase_ == 8) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface) subnet_);
+      }
+      if (interfaceCase_ == 9) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) interface_);
+      }
+      if (interfaceCase_ == 10) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) interface_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9210,6 +9457,19 @@ public final class ServerServiceOuterClass {
         case 0:
         default:
       }
+      if (!getInterfaceCase().equals(other.getInterfaceCase())) return false;
+      switch (interfaceCase_) {
+        case 9:
+          if (!getPrivateInterface()
+              .equals(other.getPrivateInterface())) return false;
+          break;
+        case 10:
+          if (!getPublicInterface()
+              .equals(other.getPublicInterface())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9231,6 +9491,18 @@ public final class ServerServiceOuterClass {
         case 8:
           hash = (37 * hash) + PUBLIC_SUBNET_FIELD_NUMBER;
           hash = (53 * hash) + getPublicSubnet().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      switch (interfaceCase_) {
+        case 9:
+          hash = (37 * hash) + PRIVATE_INTERFACE_FIELD_NUMBER;
+          hash = (53 * hash) + getPrivateInterface().hashCode();
+          break;
+        case 10:
+          hash = (37 * hash) + PUBLIC_INTERFACE_FIELD_NUMBER;
+          hash = (53 * hash) + getPublicInterface().hashCode();
           break;
         case 0:
         default:
@@ -9331,6 +9603,11 @@ public final class ServerServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * (-- api-linter: yc::1704::file-separation=disabled
+     *     Required for backward compatibility with old clients. --)
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.baremetal.v1alpha.NetworkInterfaceSpec}
      */
     public static final class Builder extends
@@ -9372,6 +9649,8 @@ public final class ServerServiceOuterClass {
 
         subnetCase_ = 0;
         subnet_ = null;
+        interfaceCase_ = 0;
+        interface_ = null;
         return this;
       }
 
@@ -9413,7 +9692,22 @@ public final class ServerServiceOuterClass {
             result.subnet_ = publicSubnetBuilder_.build();
           }
         }
+        if (interfaceCase_ == 9) {
+          if (privateInterfaceBuilder_ == null) {
+            result.interface_ = interface_;
+          } else {
+            result.interface_ = privateInterfaceBuilder_.build();
+          }
+        }
+        if (interfaceCase_ == 10) {
+          if (publicInterfaceBuilder_ == null) {
+            result.interface_ = interface_;
+          } else {
+            result.interface_ = publicInterfaceBuilder_.build();
+          }
+        }
         result.subnetCase_ = subnetCase_;
+        result.interfaceCase_ = interfaceCase_;
         onBuilt();
         return result;
       }
@@ -9479,6 +9773,19 @@ public final class ServerServiceOuterClass {
             break;
           }
         }
+        switch (other.getInterfaceCase()) {
+          case PRIVATE_INTERFACE: {
+            mergePrivateInterface(other.getPrivateInterface());
+            break;
+          }
+          case PUBLIC_INTERFACE: {
+            mergePublicInterface(other.getPublicInterface());
+            break;
+          }
+          case INTERFACE_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -9518,6 +9825,21 @@ public final class ServerServiceOuterClass {
       public Builder clearSubnet() {
         subnetCase_ = 0;
         subnet_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int interfaceCase_ = 0;
+      private java.lang.Object interface_;
+      public InterfaceCase
+          getInterfaceCase() {
+        return InterfaceCase.forNumber(
+            interfaceCase_);
+      }
+
+      public Builder clearInterface() {
+        interfaceCase_ = 0;
+        interface_ = null;
         onChanged();
         return this;
       }
@@ -9623,26 +9945,28 @@ public final class ServerServiceOuterClass {
           yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterfaceOrBuilder> privateSubnetBuilder_;
       /**
        * <pre>
-       * Private subnet.
+       * &#64;deprecated Private subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the privateSubnet field is set.
        */
       @java.lang.Override
-      public boolean hasPrivateSubnet() {
+      @java.lang.Deprecated public boolean hasPrivateSubnet() {
         return subnetCase_ == 7;
       }
       /**
        * <pre>
-       * Private subnet.
+       * &#64;deprecated Private subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
+       * @deprecated
        * @return The privateSubnet.
        */
       @java.lang.Override
-      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface getPrivateSubnet() {
+      @java.lang.Deprecated public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface getPrivateSubnet() {
         if (privateSubnetBuilder_ == null) {
           if (subnetCase_ == 7) {
             return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface) subnet_;
@@ -9657,12 +9981,12 @@ public final class ServerServiceOuterClass {
       }
       /**
        * <pre>
-       * Private subnet.
+       * &#64;deprecated Private subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
        */
-      public Builder setPrivateSubnet(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface value) {
+      @java.lang.Deprecated public Builder setPrivateSubnet(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface value) {
         if (privateSubnetBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9677,12 +10001,12 @@ public final class ServerServiceOuterClass {
       }
       /**
        * <pre>
-       * Private subnet.
+       * &#64;deprecated Private subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
        */
-      public Builder setPrivateSubnet(
+      @java.lang.Deprecated public Builder setPrivateSubnet(
           yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface.Builder builderForValue) {
         if (privateSubnetBuilder_ == null) {
           subnet_ = builderForValue.build();
@@ -9695,12 +10019,12 @@ public final class ServerServiceOuterClass {
       }
       /**
        * <pre>
-       * Private subnet.
+       * &#64;deprecated Private subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
        */
-      public Builder mergePrivateSubnet(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface value) {
+      @java.lang.Deprecated public Builder mergePrivateSubnet(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface value) {
         if (privateSubnetBuilder_ == null) {
           if (subnetCase_ == 7 &&
               subnet_ != yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface.getDefaultInstance()) {
@@ -9721,12 +10045,12 @@ public final class ServerServiceOuterClass {
       }
       /**
        * <pre>
-       * Private subnet.
+       * &#64;deprecated Private subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
        */
-      public Builder clearPrivateSubnet() {
+      @java.lang.Deprecated public Builder clearPrivateSubnet() {
         if (privateSubnetBuilder_ == null) {
           if (subnetCase_ == 7) {
             subnetCase_ = 0;
@@ -9744,23 +10068,23 @@ public final class ServerServiceOuterClass {
       }
       /**
        * <pre>
-       * Private subnet.
+       * &#64;deprecated Private subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
        */
-      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface.Builder getPrivateSubnetBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface.Builder getPrivateSubnetBuilder() {
         return getPrivateSubnetFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Private subnet.
+       * &#64;deprecated Private subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterfaceOrBuilder getPrivateSubnetOrBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterfaceOrBuilder getPrivateSubnetOrBuilder() {
         if ((subnetCase_ == 7) && (privateSubnetBuilder_ != null)) {
           return privateSubnetBuilder_.getMessageOrBuilder();
         } else {
@@ -9772,10 +10096,10 @@ public final class ServerServiceOuterClass {
       }
       /**
        * <pre>
-       * Private subnet.
+       * &#64;deprecated Private subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterfaceOrBuilder> 
@@ -9800,26 +10124,28 @@ public final class ServerServiceOuterClass {
           yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterfaceOrBuilder> publicSubnetBuilder_;
       /**
        * <pre>
-       * Public subnet.
+       * &#64;deprecated Public subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the publicSubnet field is set.
        */
       @java.lang.Override
-      public boolean hasPublicSubnet() {
+      @java.lang.Deprecated public boolean hasPublicSubnet() {
         return subnetCase_ == 8;
       }
       /**
        * <pre>
-       * Public subnet.
+       * &#64;deprecated Public subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
+       * @deprecated
        * @return The publicSubnet.
        */
       @java.lang.Override
-      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface getPublicSubnet() {
+      @java.lang.Deprecated public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface getPublicSubnet() {
         if (publicSubnetBuilder_ == null) {
           if (subnetCase_ == 8) {
             return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface) subnet_;
@@ -9834,12 +10160,12 @@ public final class ServerServiceOuterClass {
       }
       /**
        * <pre>
-       * Public subnet.
+       * &#64;deprecated Public subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
        */
-      public Builder setPublicSubnet(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface value) {
+      @java.lang.Deprecated public Builder setPublicSubnet(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface value) {
         if (publicSubnetBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9854,12 +10180,12 @@ public final class ServerServiceOuterClass {
       }
       /**
        * <pre>
-       * Public subnet.
+       * &#64;deprecated Public subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
        */
-      public Builder setPublicSubnet(
+      @java.lang.Deprecated public Builder setPublicSubnet(
           yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface.Builder builderForValue) {
         if (publicSubnetBuilder_ == null) {
           subnet_ = builderForValue.build();
@@ -9872,12 +10198,12 @@ public final class ServerServiceOuterClass {
       }
       /**
        * <pre>
-       * Public subnet.
+       * &#64;deprecated Public subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
        */
-      public Builder mergePublicSubnet(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface value) {
+      @java.lang.Deprecated public Builder mergePublicSubnet(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface value) {
         if (publicSubnetBuilder_ == null) {
           if (subnetCase_ == 8 &&
               subnet_ != yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface.getDefaultInstance()) {
@@ -9898,12 +10224,12 @@ public final class ServerServiceOuterClass {
       }
       /**
        * <pre>
-       * Public subnet.
+       * &#64;deprecated Public subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
        */
-      public Builder clearPublicSubnet() {
+      @java.lang.Deprecated public Builder clearPublicSubnet() {
         if (publicSubnetBuilder_ == null) {
           if (subnetCase_ == 8) {
             subnetCase_ = 0;
@@ -9921,23 +10247,23 @@ public final class ServerServiceOuterClass {
       }
       /**
        * <pre>
-       * Public subnet.
+       * &#64;deprecated Public subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
        */
-      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface.Builder getPublicSubnetBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface.Builder getPublicSubnetBuilder() {
         return getPublicSubnetFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Public subnet.
+       * &#64;deprecated Public subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterfaceOrBuilder getPublicSubnetOrBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterfaceOrBuilder getPublicSubnetOrBuilder() {
         if ((subnetCase_ == 8) && (publicSubnetBuilder_ != null)) {
           return publicSubnetBuilder_.getMessageOrBuilder();
         } else {
@@ -9949,10 +10275,10 @@ public final class ServerServiceOuterClass {
       }
       /**
        * <pre>
-       * Public subnet.
+       * &#64;deprecated Public subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterfaceOrBuilder> 
@@ -9971,6 +10297,360 @@ public final class ServerServiceOuterClass {
         subnetCase_ = 8;
         onChanged();;
         return publicSubnetBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterfaceOrBuilder> privateInterfaceBuilder_;
+      /**
+       * <pre>
+       * Private interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 9;</code>
+       * @return Whether the privateInterface field is set.
+       */
+      @java.lang.Override
+      public boolean hasPrivateInterface() {
+        return interfaceCase_ == 9;
+      }
+      /**
+       * <pre>
+       * Private interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 9;</code>
+       * @return The privateInterface.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface getPrivateInterface() {
+        if (privateInterfaceBuilder_ == null) {
+          if (interfaceCase_ == 9) {
+            return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) interface_;
+          }
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.getDefaultInstance();
+        } else {
+          if (interfaceCase_ == 9) {
+            return privateInterfaceBuilder_.getMessage();
+          }
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Private interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 9;</code>
+       */
+      public Builder setPrivateInterface(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface value) {
+        if (privateInterfaceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          interface_ = value;
+          onChanged();
+        } else {
+          privateInterfaceBuilder_.setMessage(value);
+        }
+        interfaceCase_ = 9;
+        return this;
+      }
+      /**
+       * <pre>
+       * Private interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 9;</code>
+       */
+      public Builder setPrivateInterface(
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.Builder builderForValue) {
+        if (privateInterfaceBuilder_ == null) {
+          interface_ = builderForValue.build();
+          onChanged();
+        } else {
+          privateInterfaceBuilder_.setMessage(builderForValue.build());
+        }
+        interfaceCase_ = 9;
+        return this;
+      }
+      /**
+       * <pre>
+       * Private interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 9;</code>
+       */
+      public Builder mergePrivateInterface(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface value) {
+        if (privateInterfaceBuilder_ == null) {
+          if (interfaceCase_ == 9 &&
+              interface_ != yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.getDefaultInstance()) {
+            interface_ = yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.newBuilder((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) interface_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            interface_ = value;
+          }
+          onChanged();
+        } else {
+          if (interfaceCase_ == 9) {
+            privateInterfaceBuilder_.mergeFrom(value);
+          }
+          privateInterfaceBuilder_.setMessage(value);
+        }
+        interfaceCase_ = 9;
+        return this;
+      }
+      /**
+       * <pre>
+       * Private interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 9;</code>
+       */
+      public Builder clearPrivateInterface() {
+        if (privateInterfaceBuilder_ == null) {
+          if (interfaceCase_ == 9) {
+            interfaceCase_ = 0;
+            interface_ = null;
+            onChanged();
+          }
+        } else {
+          if (interfaceCase_ == 9) {
+            interfaceCase_ = 0;
+            interface_ = null;
+          }
+          privateInterfaceBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Private interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 9;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.Builder getPrivateInterfaceBuilder() {
+        return getPrivateInterfaceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Private interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 9;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterfaceOrBuilder getPrivateInterfaceOrBuilder() {
+        if ((interfaceCase_ == 9) && (privateInterfaceBuilder_ != null)) {
+          return privateInterfaceBuilder_.getMessageOrBuilder();
+        } else {
+          if (interfaceCase_ == 9) {
+            return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) interface_;
+          }
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Private interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterfaceOrBuilder> 
+          getPrivateInterfaceFieldBuilder() {
+        if (privateInterfaceBuilder_ == null) {
+          if (!(interfaceCase_ == 9)) {
+            interface_ = yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.getDefaultInstance();
+          }
+          privateInterfaceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterfaceOrBuilder>(
+                  (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) interface_,
+                  getParentForChildren(),
+                  isClean());
+          interface_ = null;
+        }
+        interfaceCase_ = 9;
+        onChanged();;
+        return privateInterfaceBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterfaceOrBuilder> publicInterfaceBuilder_;
+      /**
+       * <pre>
+       * Public interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 10;</code>
+       * @return Whether the publicInterface field is set.
+       */
+      @java.lang.Override
+      public boolean hasPublicInterface() {
+        return interfaceCase_ == 10;
+      }
+      /**
+       * <pre>
+       * Public interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 10;</code>
+       * @return The publicInterface.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface getPublicInterface() {
+        if (publicInterfaceBuilder_ == null) {
+          if (interfaceCase_ == 10) {
+            return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) interface_;
+          }
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.getDefaultInstance();
+        } else {
+          if (interfaceCase_ == 10) {
+            return publicInterfaceBuilder_.getMessage();
+          }
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Public interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 10;</code>
+       */
+      public Builder setPublicInterface(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface value) {
+        if (publicInterfaceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          interface_ = value;
+          onChanged();
+        } else {
+          publicInterfaceBuilder_.setMessage(value);
+        }
+        interfaceCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Public interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 10;</code>
+       */
+      public Builder setPublicInterface(
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.Builder builderForValue) {
+        if (publicInterfaceBuilder_ == null) {
+          interface_ = builderForValue.build();
+          onChanged();
+        } else {
+          publicInterfaceBuilder_.setMessage(builderForValue.build());
+        }
+        interfaceCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Public interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 10;</code>
+       */
+      public Builder mergePublicInterface(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface value) {
+        if (publicInterfaceBuilder_ == null) {
+          if (interfaceCase_ == 10 &&
+              interface_ != yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.getDefaultInstance()) {
+            interface_ = yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.newBuilder((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) interface_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            interface_ = value;
+          }
+          onChanged();
+        } else {
+          if (interfaceCase_ == 10) {
+            publicInterfaceBuilder_.mergeFrom(value);
+          }
+          publicInterfaceBuilder_.setMessage(value);
+        }
+        interfaceCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Public interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 10;</code>
+       */
+      public Builder clearPublicInterface() {
+        if (publicInterfaceBuilder_ == null) {
+          if (interfaceCase_ == 10) {
+            interfaceCase_ = 0;
+            interface_ = null;
+            onChanged();
+          }
+        } else {
+          if (interfaceCase_ == 10) {
+            interfaceCase_ = 0;
+            interface_ = null;
+          }
+          publicInterfaceBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Public interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 10;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.Builder getPublicInterfaceBuilder() {
+        return getPublicInterfaceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Public interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 10;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterfaceOrBuilder getPublicInterfaceOrBuilder() {
+        if ((interfaceCase_ == 10) && (publicInterfaceBuilder_ != null)) {
+          return publicInterfaceBuilder_.getMessageOrBuilder();
+        } else {
+          if (interfaceCase_ == 10) {
+            return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) interface_;
+          }
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Public interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterfaceOrBuilder> 
+          getPublicInterfaceFieldBuilder() {
+        if (publicInterfaceBuilder_ == null) {
+          if (!(interfaceCase_ == 10)) {
+            interface_ = yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.getDefaultInstance();
+          }
+          publicInterfaceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterfaceOrBuilder>(
+                  (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) interface_,
+                  getParentForChildren(),
+                  isClean());
+          interface_ = null;
+        }
+        interfaceCase_ = 10;
+        onChanged();;
+        return publicInterfaceBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -19079,7 +19759,7 @@ public final class ServerServiceOuterClass {
      * To get the hardware pool ID, use a [HardwarePoolService.List] request.
      * </pre>
      *
-     * <code>string hardware_pool_id = 4 [(.yandex.cloud.length) = "&lt;=20"];</code>
+     * <code>string hardware_pool_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=20"];</code>
      * @return The hardwarePoolId.
      */
     java.lang.String getHardwarePoolId();
@@ -19089,7 +19769,7 @@ public final class ServerServiceOuterClass {
      * To get the hardware pool ID, use a [HardwarePoolService.List] request.
      * </pre>
      *
-     * <code>string hardware_pool_id = 4 [(.yandex.cloud.length) = "&lt;=20"];</code>
+     * <code>string hardware_pool_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=20"];</code>
      * @return The bytes for hardwarePoolId.
      */
     com.google.protobuf.ByteString
@@ -19120,6 +19800,7 @@ public final class ServerServiceOuterClass {
     /**
      * <pre>
      * A period of time for which the server is rented.
+     * To get the rental period ID, use a [RentalPeriodService.List] request.
      * </pre>
      *
      * <code>string rental_period_id = 11 [(.yandex.cloud.length) = "&lt;=20"];</code>
@@ -19129,6 +19810,7 @@ public final class ServerServiceOuterClass {
     /**
      * <pre>
      * A period of time for which the server is rented.
+     * To get the rental period ID, use a [RentalPeriodService.List] request.
      * </pre>
      *
      * <code>string rental_period_id = 11 [(.yandex.cloud.length) = "&lt;=20"];</code>
@@ -19616,7 +20298,7 @@ public final class ServerServiceOuterClass {
      * To get the hardware pool ID, use a [HardwarePoolService.List] request.
      * </pre>
      *
-     * <code>string hardware_pool_id = 4 [(.yandex.cloud.length) = "&lt;=20"];</code>
+     * <code>string hardware_pool_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=20"];</code>
      * @return The hardwarePoolId.
      */
     @java.lang.Override
@@ -19638,7 +20320,7 @@ public final class ServerServiceOuterClass {
      * To get the hardware pool ID, use a [HardwarePoolService.List] request.
      * </pre>
      *
-     * <code>string hardware_pool_id = 4 [(.yandex.cloud.length) = "&lt;=20"];</code>
+     * <code>string hardware_pool_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=20"];</code>
      * @return The bytes for hardwarePoolId.
      */
     @java.lang.Override
@@ -19709,6 +20391,7 @@ public final class ServerServiceOuterClass {
     /**
      * <pre>
      * A period of time for which the server is rented.
+     * To get the rental period ID, use a [RentalPeriodService.List] request.
      * </pre>
      *
      * <code>string rental_period_id = 11 [(.yandex.cloud.length) = "&lt;=20"];</code>
@@ -19730,6 +20413,7 @@ public final class ServerServiceOuterClass {
     /**
      * <pre>
      * A period of time for which the server is rented.
+     * To get the rental period ID, use a [RentalPeriodService.List] request.
      * </pre>
      *
      * <code>string rental_period_id = 11 [(.yandex.cloud.length) = "&lt;=20"];</code>
@@ -20824,7 +21508,7 @@ public final class ServerServiceOuterClass {
        * To get the hardware pool ID, use a [HardwarePoolService.List] request.
        * </pre>
        *
-       * <code>string hardware_pool_id = 4 [(.yandex.cloud.length) = "&lt;=20"];</code>
+       * <code>string hardware_pool_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=20"];</code>
        * @return The hardwarePoolId.
        */
       public java.lang.String getHardwarePoolId() {
@@ -20845,7 +21529,7 @@ public final class ServerServiceOuterClass {
        * To get the hardware pool ID, use a [HardwarePoolService.List] request.
        * </pre>
        *
-       * <code>string hardware_pool_id = 4 [(.yandex.cloud.length) = "&lt;=20"];</code>
+       * <code>string hardware_pool_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=20"];</code>
        * @return The bytes for hardwarePoolId.
        */
       public com.google.protobuf.ByteString
@@ -20867,7 +21551,7 @@ public final class ServerServiceOuterClass {
        * To get the hardware pool ID, use a [HardwarePoolService.List] request.
        * </pre>
        *
-       * <code>string hardware_pool_id = 4 [(.yandex.cloud.length) = "&lt;=20"];</code>
+       * <code>string hardware_pool_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=20"];</code>
        * @param value The hardwarePoolId to set.
        * @return This builder for chaining.
        */
@@ -20887,7 +21571,7 @@ public final class ServerServiceOuterClass {
        * To get the hardware pool ID, use a [HardwarePoolService.List] request.
        * </pre>
        *
-       * <code>string hardware_pool_id = 4 [(.yandex.cloud.length) = "&lt;=20"];</code>
+       * <code>string hardware_pool_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=20"];</code>
        * @return This builder for chaining.
        */
       public Builder clearHardwarePoolId() {
@@ -20902,7 +21586,7 @@ public final class ServerServiceOuterClass {
        * To get the hardware pool ID, use a [HardwarePoolService.List] request.
        * </pre>
        *
-       * <code>string hardware_pool_id = 4 [(.yandex.cloud.length) = "&lt;=20"];</code>
+       * <code>string hardware_pool_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=20"];</code>
        * @param value The bytes for hardwarePoolId to set.
        * @return This builder for chaining.
        */
@@ -21023,6 +21707,7 @@ public final class ServerServiceOuterClass {
       /**
        * <pre>
        * A period of time for which the server is rented.
+       * To get the rental period ID, use a [RentalPeriodService.List] request.
        * </pre>
        *
        * <code>string rental_period_id = 11 [(.yandex.cloud.length) = "&lt;=20"];</code>
@@ -21043,6 +21728,7 @@ public final class ServerServiceOuterClass {
       /**
        * <pre>
        * A period of time for which the server is rented.
+       * To get the rental period ID, use a [RentalPeriodService.List] request.
        * </pre>
        *
        * <code>string rental_period_id = 11 [(.yandex.cloud.length) = "&lt;=20"];</code>
@@ -21064,6 +21750,7 @@ public final class ServerServiceOuterClass {
       /**
        * <pre>
        * A period of time for which the server is rented.
+       * To get the rental period ID, use a [RentalPeriodService.List] request.
        * </pre>
        *
        * <code>string rental_period_id = 11 [(.yandex.cloud.length) = "&lt;=20"];</code>
@@ -21083,6 +21770,7 @@ public final class ServerServiceOuterClass {
       /**
        * <pre>
        * A period of time for which the server is rented.
+       * To get the rental period ID, use a [RentalPeriodService.List] request.
        * </pre>
        *
        * <code>string rental_period_id = 11 [(.yandex.cloud.length) = "&lt;=20"];</code>
@@ -21097,6 +21785,7 @@ public final class ServerServiceOuterClass {
       /**
        * <pre>
        * A period of time for which the server is rented.
+       * To get the rental period ID, use a [RentalPeriodService.List] request.
        * </pre>
        *
        * <code>string rental_period_id = 11 [(.yandex.cloud.length) = "&lt;=20"];</code>
@@ -29403,168 +30092,173 @@ public final class ServerServiceOuterClass {
       "g \001(\tJ\004\010\002\020d\"l\n\022ListServerResponse\0227\n\007ser" +
       "vers\030\001 \003(\0132&.yandex.cloud.baremetal.v1al" +
       "pha.Server\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020" +
-      "d\"\224\005\n\023CreateServerRequest\022/\n\tfolder_id\030\001" +
+      "d\"\230\005\n\023CreateServerRequest\022/\n\tfolder_id\030\001" +
       " \001(\tB\034\362\3071\020[a-z][a-z0-9.-]*\212\3101\004<=50\0224\n\004na" +
       "me\030\002 \001(\tB&\362\3071\032[a-z]([-a-z0-9]*[a-z0-9])?" +
       "\212\3101\0042-56\022\037\n\013description\030\003 \001(\tB\n\212\3101\006<=102" +
-      "4\022\"\n\020hardware_pool_id\030\004 \001(\tB\010\212\3101\004<=20\0222\n" +
-      "\020configuration_id\030\005 \001(\tB\030\362\3071\016[a-z][a-z0-" +
-      "9]*\212\3101\00220\022\"\n\020rental_period_id\030\013 \001(\tB\010\212\3101" +
-      "\004<=20\022Y\n\022network_interfaces\030\017 \003(\01324.yand" +
-      "ex.cloud.baremetal.v1alpha.NetworkInterf" +
-      "aceSpecB\007\202\3101\003<=2\022H\n\020os_settings_spec\030\020 \001" +
-      "(\0132..yandex.cloud.baremetal.v1alpha.OsSe" +
-      "ttingsSpec\022\221\001\n\006labels\030\310\001 \003(\0132?.yandex.cl" +
-      "oud.baremetal.v1alpha.CreateServerReques" +
-      "t.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-" +
-      "9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-" +
-      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001J\004\010\006\020\013J\004\010\014\020\017J\005\010\021\020\310\001\")\n\024CreateServer" +
-      "Metadata\022\021\n\tserver_id\030\001 \001(\t\"\357\003\n\023UpdateSe" +
-      "rverRequest\022+\n\tserver_id\030\001 \001(\tB\030\362\3071\016[a-z" +
-      "][a-z0-9]*\212\3101\00220\022/\n\013update_mask\030\002 \001(\0132\032." +
-      "google.protobuf.FieldMask\0224\n\004name\030\003 \001(\tB" +
-      "&\362\3071\032[a-z]([-a-z0-9]*[a-z0-9])?\212\3101\0042-63\022" +
-      "\037\n\013description\030\004 \001(\tB\n\212\3101\006<=1024\022Y\n\022netw" +
-      "ork_interfaces\030\005 \003(\01324.yandex.cloud.bare" +
-      "metal.v1alpha.NetworkInterfaceSpecB\007\202\3101\003" +
-      "1-2\022\221\001\n\006labels\030\310\001 \003(\0132?.yandex.cloud.bar" +
-      "emetal.v1alpha.UpdateServerRequest.Label" +
-      "sEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262" +
-      "\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013Label" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005" +
-      "\010\006\020\310\001\"\201\002\n\024NetworkInterfaceSpec\022)\n\002id\030\001 \001" +
-      "(\tB\035\362\3071\021([a-z][a-z0-9]*)?\212\3101\004<=20\022W\n\016pri" +
-      "vate_subnet\030\007 \001(\0132=.yandex.cloud.baremet" +
-      "al.v1alpha.PrivateSubnetNetworkInterface" +
-      "H\000\022U\n\rpublic_subnet\030\010 \001(\0132<.yandex.cloud" +
-      ".baremetal.v1alpha.PublicSubnetNetworkIn" +
-      "terfaceH\000B\010\n\006subnetJ\004\010\002\020\007\")\n\024UpdateServe" +
-      "rMetadata\022\021\n\tserver_id\030\001 \001(\t\"B\n\023DeleteSe" +
-      "rverRequest\022+\n\tserver_id\030\001 \001(\tB\030\362\3071\016[a-z" +
-      "][a-z0-9]*\212\3101\00220\")\n\024DeleteServerMetadata" +
-      "\022\021\n\tserver_id\030\001 \001(\t\"D\n\025PowerOffServerReq" +
-      "uest\022+\n\tserver_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-" +
-      "9]*\212\3101\00220\"+\n\026PowerOffServerMetadata\022\021\n\ts" +
-      "erver_id\030\001 \001(\t\"C\n\024PowerOnServerRequest\022+" +
-      "\n\tserver_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101" +
-      "\00220\"*\n\025PowerOnServerMetadata\022\021\n\tserver_i" +
-      "d\030\001 \001(\t\"B\n\023RebootServerRequest\022+\n\tserver" +
-      "_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\")\n\024R" +
-      "ebootServerMetadata\022\021\n\tserver_id\030\001 \001(\t\"\247" +
-      "\001\n\026ReinstallServerRequest\022+\n\tserver_id\030\001" +
-      " \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\022H\n\020os_set" +
-      "tings_spec\030\t \001(\0132..yandex.cloud.baremeta" +
-      "l.v1alpha.OsSettingsSpecJ\004\010\002\020\006J\004\010\007\020\010J\004\010\010" +
-      "\020\tJ\004\010\006\020\007\",\n\027ReinstallServerMetadata\022\021\n\ts" +
-      "erver_id\030\001 \001(\t\"\202\001\n\033ListServerOperationsR" +
+      "4\022&\n\020hardware_pool_id\030\004 \001(\tB\014\350\3071\001\212\3101\004<=2" +
+      "0\0222\n\020configuration_id\030\005 \001(\tB\030\362\3071\016[a-z][a" +
+      "-z0-9]*\212\3101\00220\022\"\n\020rental_period_id\030\013 \001(\tB" +
+      "\010\212\3101\004<=20\022Y\n\022network_interfaces\030\017 \003(\01324." +
+      "yandex.cloud.baremetal.v1alpha.NetworkIn" +
+      "terfaceSpecB\007\202\3101\003<=2\022H\n\020os_settings_spec" +
+      "\030\020 \001(\0132..yandex.cloud.baremetal.v1alpha." +
+      "OsSettingsSpec\022\221\001\n\006labels\030\310\001 \003(\0132?.yande" +
+      "x.cloud.baremetal.v1alpha.CreateServerRe" +
+      "quest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[" +
+      "-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z" +
+      "]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001J\004\010\006\020\013J\004\010\014\020\017J\005\010\021\020\310\001\")\n\024CreateSe" +
+      "rverMetadata\022\021\n\tserver_id\030\001 \001(\t\"\357\003\n\023Upda" +
+      "teServerRequest\022+\n\tserver_id\030\001 \001(\tB\030\362\3071\016" +
+      "[a-z][a-z0-9]*\212\3101\00220\022/\n\013update_mask\030\002 \001(" +
+      "\0132\032.google.protobuf.FieldMask\0224\n\004name\030\003 " +
+      "\001(\tB&\362\3071\032[a-z]([-a-z0-9]*[a-z0-9])?\212\3101\0042" +
+      "-63\022\037\n\013description\030\004 \001(\tB\n\212\3101\006<=1024\022Y\n\022" +
+      "network_interfaces\030\005 \003(\01324.yandex.cloud." +
+      "baremetal.v1alpha.NetworkInterfaceSpecB\007" +
+      "\202\3101\0031-2\022\221\001\n\006labels\030\310\001 \003(\0132?.yandex.cloud" +
+      ".baremetal.v1alpha.UpdateServerRequest.L" +
+      "abelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-" +
+      "z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013L" +
+      "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
+      "8\001J\005\010\006\020\310\001\"\300\003\n\024NetworkInterfaceSpec\022)\n\002id" +
+      "\030\001 \001(\tB\035\362\3071\021([a-z][a-z0-9]*)?\212\3101\004<=20\022[\n" +
+      "\016private_subnet\030\007 \001(\0132=.yandex.cloud.bar" +
+      "emetal.v1alpha.PrivateSubnetNetworkInter" +
+      "faceB\002\030\001H\000\022Y\n\rpublic_subnet\030\010 \001(\0132<.yand" +
+      "ex.cloud.baremetal.v1alpha.PublicSubnetN" +
+      "etworkInterfaceB\002\030\001H\000\022T\n\021private_interfa" +
+      "ce\030\t \001(\01327.yandex.cloud.baremetal.v1alph" +
+      "a.PrivateNetworkInterfaceH\001\022R\n\020public_in" +
+      "terface\030\n \001(\01326.yandex.cloud.baremetal.v" +
+      "1alpha.PublicNetworkInterfaceH\001B\010\n\006subne" +
+      "tB\013\n\tinterfaceJ\004\010\002\020\007\")\n\024UpdateServerMeta" +
+      "data\022\021\n\tserver_id\030\001 \001(\t\"B\n\023DeleteServerR" +
       "equest\022+\n\tserver_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z" +
-      "0-9]*\212\3101\00220\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=10" +
-      "0\022\022\n\npage_token\030e \001(\tJ\004\010\002\020d\"t\n\034ListServe" +
-      "rOperationsResponse\0225\n\noperations\030\001 \003(\0132" +
-      "!.yandex.cloud.operation.Operation\022\027\n\017ne" +
-      "xt_page_token\030d \001(\tJ\004\010\002\020d\"\303\005\n\031BatchCreat" +
-      "eServersRequest\022/\n\tfolder_id\030\001 \001(\tB\034\362\3071\020" +
-      "[a-z][a-z0-9.-]*\212\3101\004<=50\0224\n\004name\030\002 \001(\tB&" +
-      "\362\3071\032[a-z]([-a-z0-9]*[a-z0-9])?\212\3101\0042-56\022\037" +
-      "\n\013description\030\003 \001(\tB\n\212\3101\006<=1024\022\"\n\020hardw" +
-      "are_pool_id\030\004 \001(\tB\010\212\3101\004<=20\0222\n\020configura" +
-      "tion_id\030\005 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\022" +
-      "\"\n\020rental_period_id\030\013 \001(\tB\010\212\3101\004<=20\022Y\n\022n" +
-      "etwork_interfaces\030\017 \003(\01324.yandex.cloud.b" +
-      "aremetal.v1alpha.NetworkInterfaceSpecB\007\202" +
-      "\3101\003<=2\022H\n\020os_settings_spec\030\020 \001(\0132..yande" +
-      "x.cloud.baremetal.v1alpha.OsSettingsSpec" +
-      "\022\227\001\n\006labels\030\310\001 \003(\0132E.yandex.cloud.bareme" +
-      "tal.v1alpha.BatchCreateServersRequest.La" +
-      "belsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z" +
-      "]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\031\n\005co" +
-      "unt\030\254\002 \001(\003B\t\372\3071\0051-100\032-\n\013LabelsEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\006\020\013J\004\010\014\020\017" +
-      "J\005\010\021\020\310\001J\006\010\311\001\020\254\002\"U\n\032BatchCreateServersRes" +
-      "ponse\0227\n\007servers\030\001 \003(\0132&.yandex.cloud.ba" +
-      "remetal.v1alpha.Server\"0\n\032BatchCreateSer" +
-      "versMetadata\022\022\n\nserver_ids\030\001 \003(\t\"-\n\030Quar" +
-      "antineServerMetadata\022\021\n\tserver_id\030\001 \001(\t\"" +
-      "G\n\030StartProlongationRequest\022+\n\tserver_id" +
-      "\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\"F\n\027Stop" +
-      "ProlongationRequest\022+\n\tserver_id\030\001 \001(\tB\030" +
-      "\362\3071\016[a-z][a-z0-9]*\212\3101\00220\"2\n\035ServerSetPro" +
-      "longationMetadata\022\021\n\tserver_id\030\001 \001(\t\"\352\002\n" +
-      "\016OsSettingsSpec\022,\n\010image_id\030\001 \001(\tB\032\362\3071\016[" +
-      "a-z][a-z0-9]*\212\3101\004<=20\0229\n\010storages\030\002 \003(\0132" +
-      "\'.yandex.cloud.baremetal.v1alpha.Storage" +
-      "\022%\n\016ssh_public_key\030\004 \001(\tB\013\212\3101\007<=20000H\000\022" +
-      "\037\n\013user_ssh_id\030\005 \001(\tB\010\212\3101\004<=50H\000\022&\n\023pass" +
-      "word_plain_text\030\n \001(\tB\007\212\3101\003>=6H\001\022P\n\027pass" +
-      "word_lockbox_secret\030\013 \001(\0132-.yandex.cloud" +
-      ".baremetal.v1alpha.LockboxSecretH\001B\017\n\007ss" +
-      "h_key\022\004\300\3011\001B\020\n\010password\022\004\300\3011\001J\004\010\003\020\004J\004\010\006\020" +
-      "\n\"O\n\rLockboxSecret\022\027\n\tsecret_id\030\001 \001(\tB\004\350" +
-      "\3071\001\022\022\n\nversion_id\030\002 \001(\t\022\021\n\003key\030\003 \001(\tB\004\350\307" +
-      "1\0012\322\022\n\rServerService\022\217\001\n\003Get\0220.yandex.cl" +
-      "oud.baremetal.v1alpha.GetServerRequest\032&" +
-      ".yandex.cloud.baremetal.v1alpha.Server\"." +
-      "\202\323\344\223\002(\022&/baremetal/v1alpha/servers/{serv" +
-      "er_id}\022\221\001\n\004List\0221.yandex.cloud.baremetal" +
-      ".v1alpha.ListServerRequest\0322.yandex.clou" +
-      "d.baremetal.v1alpha.ListServerResponse\"\"" +
-      "\202\323\344\223\002\034\022\032/baremetal/v1alpha/servers\022\251\001\n\006C" +
-      "reate\0223.yandex.cloud.baremetal.v1alpha.C" +
-      "reateServerRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"G\202\323\344\223\002\037\"\032/baremetal/v1alph" +
-      "a/servers:\001*\262\322*\036\n\024CreateServerMetadata\022\006" +
-      "Server\022\332\001\n\013BatchCreate\0229.yandex.cloud.ba" +
-      "remetal.v1alpha.BatchCreateServersReques" +
-      "t\032!.yandex.cloud.operation.Operation\"m\202\323" +
-      "\344\223\002+\"&/baremetal/v1alpha/servers:batchCr" +
-      "eate:\001*\262\322*8\n\032BatchCreateServersMetadata\022" +
-      "\032BatchCreateServersResponse\022\265\001\n\006Update\0223" +
-      ".yandex.cloud.baremetal.v1alpha.UpdateSe" +
-      "rverRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"S\202\323\344\223\002+2&/baremetal/v1alpha/serve" +
-      "rs/{server_id}:\001*\262\322*\036\n\024UpdateServerMetad" +
-      "ata\022\006Server\022\323\001\n\010PowerOff\0225.yandex.cloud." +
-      "baremetal.v1alpha.PowerOffServerRequest\032" +
-      "!.yandex.cloud.operation.Operation\"m\202\323\344\223" +
-      "\0024\"//baremetal/v1alpha/servers/{server_i" +
-      "d}:powerOff:\001*\262\322*/\n\026PowerOffServerMetada" +
-      "ta\022\025google.protobuf.Empty\022\317\001\n\007PowerOn\0224." +
-      "yandex.cloud.baremetal.v1alpha.PowerOnSe" +
-      "rverRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"k\202\323\344\223\0023\"./baremetal/v1alpha/serve" +
-      "rs/{server_id}:powerOn:\001*\262\322*.\n\025PowerOnSe" +
-      "rverMetadata\022\025google.protobuf.Empty\022\313\001\n\006" +
-      "Reboot\0223.yandex.cloud.baremetal.v1alpha." +
-      "RebootServerRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"i\202\323\344\223\0022\"-/baremetal/v1alp" +
-      "ha/servers/{server_id}:reboot:\001*\262\322*-\n\024Re" +
-      "bootServerMetadata\022\025google.protobuf.Empt" +
-      "y\022\327\001\n\tReinstall\0226.yandex.cloud.baremetal" +
-      ".v1alpha.ReinstallServerRequest\032!.yandex" +
-      ".cloud.operation.Operation\"o\202\323\344\223\0025\"0/bar" +
-      "emetal/v1alpha/servers/{server_id}:reins" +
-      "tall:\001*\262\322*0\n\027ReinstallServerMetadata\022\025go" +
-      "ogle.protobuf.Empty\022\340\001\n\021StartProlongatio" +
-      "n\0228.yandex.cloud.baremetal.v1alpha.Start" +
-      "ProlongationRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"n\202\323\344\223\002=\"8/baremetal/v1alp" +
-      "ha/servers/{server_id}:startProlongation" +
-      ":\001*\262\322*\'\n\035ServerSetProlongationMetadata\022\006" +
-      "Server\022\335\001\n\020StopProlongation\0227.yandex.clo" +
-      "ud.baremetal.v1alpha.StopProlongationReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "m\202\323\344\223\002<\"7/baremetal/v1alpha/servers/{ser" +
-      "ver_id}:stopProlongation:\001*\262\322*\'\n\035ServerS" +
-      "etProlongationMetadata\022\006Server\022\306\001\n\016ListO" +
-      "perations\022;.yandex.cloud.baremetal.v1alp" +
-      "ha.ListServerOperationsRequest\032<.yandex." +
-      "cloud.baremetal.v1alpha.ListServerOperat" +
-      "ionsResponse\"9\202\323\344\223\0023\0221/baremetal/v1alpha" +
-      "/servers/{server_id}/operationsBr\n\"yande" +
-      "x.cloud.api.baremetal.v1alphaZLgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "baremetal/v1alpha;baremetalb\006proto3"
+      "0-9]*\212\3101\00220\")\n\024DeleteServerMetadata\022\021\n\ts" +
+      "erver_id\030\001 \001(\t\"D\n\025PowerOffServerRequest\022" +
+      "+\n\tserver_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\310" +
+      "1\00220\"+\n\026PowerOffServerMetadata\022\021\n\tserver" +
+      "_id\030\001 \001(\t\"C\n\024PowerOnServerRequest\022+\n\tser" +
+      "ver_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\"*" +
+      "\n\025PowerOnServerMetadata\022\021\n\tserver_id\030\001 \001" +
+      "(\t\"B\n\023RebootServerRequest\022+\n\tserver_id\030\001" +
+      " \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\")\n\024Reboot" +
+      "ServerMetadata\022\021\n\tserver_id\030\001 \001(\t\"\247\001\n\026Re" +
+      "installServerRequest\022+\n\tserver_id\030\001 \001(\tB" +
+      "\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\022H\n\020os_settings" +
+      "_spec\030\t \001(\0132..yandex.cloud.baremetal.v1a" +
+      "lpha.OsSettingsSpecJ\004\010\002\020\006J\004\010\007\020\010J\004\010\010\020\tJ\004\010" +
+      "\006\020\007\",\n\027ReinstallServerMetadata\022\021\n\tserver" +
+      "_id\030\001 \001(\t\"\202\001\n\033ListServerOperationsReques" +
+      "t\022+\n\tserver_id\030\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*" +
+      "\212\3101\00220\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\022\n\n" +
+      "page_token\030e \001(\tJ\004\010\002\020d\"t\n\034ListServerOper" +
+      "ationsResponse\0225\n\noperations\030\001 \003(\0132!.yan" +
+      "dex.cloud.operation.Operation\022\027\n\017next_pa" +
+      "ge_token\030d \001(\tJ\004\010\002\020d\"\307\005\n\031BatchCreateServ" +
+      "ersRequest\022/\n\tfolder_id\030\001 \001(\tB\034\362\3071\020[a-z]" +
+      "[a-z0-9.-]*\212\3101\004<=50\0224\n\004name\030\002 \001(\tB&\362\3071\032[" +
+      "a-z]([-a-z0-9]*[a-z0-9])?\212\3101\0042-56\022\037\n\013des" +
+      "cription\030\003 \001(\tB\n\212\3101\006<=1024\022&\n\020hardware_p" +
+      "ool_id\030\004 \001(\tB\014\350\3071\001\212\3101\004<=20\0222\n\020configurat" +
+      "ion_id\030\005 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\022\"" +
+      "\n\020rental_period_id\030\013 \001(\tB\010\212\3101\004<=20\022Y\n\022ne" +
+      "twork_interfaces\030\017 \003(\01324.yandex.cloud.ba" +
+      "remetal.v1alpha.NetworkInterfaceSpecB\007\202\310" +
+      "1\003<=2\022H\n\020os_settings_spec\030\020 \001(\0132..yandex" +
+      ".cloud.baremetal.v1alpha.OsSettingsSpec\022" +
+      "\227\001\n\006labels\030\310\001 \003(\0132E.yandex.cloud.baremet" +
+      "al.v1alpha.BatchCreateServersRequest.Lab" +
+      "elsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]" +
+      "*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\031\n\005cou" +
+      "nt\030\254\002 \001(\003B\t\372\3071\0051-100\032-\n\013LabelsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\006\020\013J\004\010\014\020\017J" +
+      "\005\010\021\020\310\001J\006\010\311\001\020\254\002\"U\n\032BatchCreateServersResp" +
+      "onse\0227\n\007servers\030\001 \003(\0132&.yandex.cloud.bar" +
+      "emetal.v1alpha.Server\"0\n\032BatchCreateServ" +
+      "ersMetadata\022\022\n\nserver_ids\030\001 \003(\t\"-\n\030Quara" +
+      "ntineServerMetadata\022\021\n\tserver_id\030\001 \001(\t\"G" +
+      "\n\030StartProlongationRequest\022+\n\tserver_id\030" +
+      "\001 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\"F\n\027StopP" +
+      "rolongationRequest\022+\n\tserver_id\030\001 \001(\tB\030\362" +
+      "\3071\016[a-z][a-z0-9]*\212\3101\00220\"2\n\035ServerSetProl" +
+      "ongationMetadata\022\021\n\tserver_id\030\001 \001(\t\"\352\002\n\016" +
+      "OsSettingsSpec\022,\n\010image_id\030\001 \001(\tB\032\362\3071\016[a" +
+      "-z][a-z0-9]*\212\3101\004<=20\0229\n\010storages\030\002 \003(\0132\'" +
+      ".yandex.cloud.baremetal.v1alpha.Storage\022" +
+      "%\n\016ssh_public_key\030\004 \001(\tB\013\212\3101\007<=20000H\000\022\037" +
+      "\n\013user_ssh_id\030\005 \001(\tB\010\212\3101\004<=50H\000\022&\n\023passw" +
+      "ord_plain_text\030\n \001(\tB\007\212\3101\003>=6H\001\022P\n\027passw" +
+      "ord_lockbox_secret\030\013 \001(\0132-.yandex.cloud." +
+      "baremetal.v1alpha.LockboxSecretH\001B\017\n\007ssh" +
+      "_key\022\004\300\3011\001B\020\n\010password\022\004\300\3011\001J\004\010\003\020\004J\004\010\006\020\n" +
+      "\"O\n\rLockboxSecret\022\027\n\tsecret_id\030\001 \001(\tB\004\350\307" +
+      "1\001\022\022\n\nversion_id\030\002 \001(\t\022\021\n\003key\030\003 \001(\tB\004\350\3071" +
+      "\0012\322\022\n\rServerService\022\217\001\n\003Get\0220.yandex.clo" +
+      "ud.baremetal.v1alpha.GetServerRequest\032&." +
+      "yandex.cloud.baremetal.v1alpha.Server\".\202" +
+      "\323\344\223\002(\022&/baremetal/v1alpha/servers/{serve" +
+      "r_id}\022\221\001\n\004List\0221.yandex.cloud.baremetal." +
+      "v1alpha.ListServerRequest\0322.yandex.cloud" +
+      ".baremetal.v1alpha.ListServerResponse\"\"\202" +
+      "\323\344\223\002\034\022\032/baremetal/v1alpha/servers\022\251\001\n\006Cr" +
+      "eate\0223.yandex.cloud.baremetal.v1alpha.Cr" +
+      "eateServerRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"G\202\323\344\223\002\037\"\032/baremetal/v1alpha" +
+      "/servers:\001*\262\322*\036\n\024CreateServerMetadata\022\006S" +
+      "erver\022\332\001\n\013BatchCreate\0229.yandex.cloud.bar" +
+      "emetal.v1alpha.BatchCreateServersRequest" +
+      "\032!.yandex.cloud.operation.Operation\"m\202\323\344" +
+      "\223\002+\"&/baremetal/v1alpha/servers:batchCre" +
+      "ate:\001*\262\322*8\n\032BatchCreateServersMetadata\022\032" +
+      "BatchCreateServersResponse\022\265\001\n\006Update\0223." +
+      "yandex.cloud.baremetal.v1alpha.UpdateSer" +
+      "verRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"S\202\323\344\223\002+2&/baremetal/v1alpha/server" +
+      "s/{server_id}:\001*\262\322*\036\n\024UpdateServerMetada" +
+      "ta\022\006Server\022\323\001\n\010PowerOff\0225.yandex.cloud.b" +
+      "aremetal.v1alpha.PowerOffServerRequest\032!" +
+      ".yandex.cloud.operation.Operation\"m\202\323\344\223\002" +
+      "4\"//baremetal/v1alpha/servers/{server_id" +
+      "}:powerOff:\001*\262\322*/\n\026PowerOffServerMetadat" +
+      "a\022\025google.protobuf.Empty\022\317\001\n\007PowerOn\0224.y" +
+      "andex.cloud.baremetal.v1alpha.PowerOnSer" +
+      "verRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"k\202\323\344\223\0023\"./baremetal/v1alpha/server" +
+      "s/{server_id}:powerOn:\001*\262\322*.\n\025PowerOnSer" +
+      "verMetadata\022\025google.protobuf.Empty\022\313\001\n\006R" +
+      "eboot\0223.yandex.cloud.baremetal.v1alpha.R" +
+      "ebootServerRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"i\202\323\344\223\0022\"-/baremetal/v1alph" +
+      "a/servers/{server_id}:reboot:\001*\262\322*-\n\024Reb" +
+      "ootServerMetadata\022\025google.protobuf.Empty" +
+      "\022\327\001\n\tReinstall\0226.yandex.cloud.baremetal." +
+      "v1alpha.ReinstallServerRequest\032!.yandex." +
+      "cloud.operation.Operation\"o\202\323\344\223\0025\"0/bare" +
+      "metal/v1alpha/servers/{server_id}:reinst" +
+      "all:\001*\262\322*0\n\027ReinstallServerMetadata\022\025goo" +
+      "gle.protobuf.Empty\022\340\001\n\021StartProlongation" +
+      "\0228.yandex.cloud.baremetal.v1alpha.StartP" +
+      "rolongationRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"n\202\323\344\223\002=\"8/baremetal/v1alph" +
+      "a/servers/{server_id}:startProlongation:" +
+      "\001*\262\322*\'\n\035ServerSetProlongationMetadata\022\006S" +
+      "erver\022\335\001\n\020StopProlongation\0227.yandex.clou" +
+      "d.baremetal.v1alpha.StopProlongationRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"m" +
+      "\202\323\344\223\002<\"7/baremetal/v1alpha/servers/{serv" +
+      "er_id}:stopProlongation:\001*\262\322*\'\n\035ServerSe" +
+      "tProlongationMetadata\022\006Server\022\306\001\n\016ListOp" +
+      "erations\022;.yandex.cloud.baremetal.v1alph" +
+      "a.ListServerOperationsRequest\032<.yandex.c" +
+      "loud.baremetal.v1alpha.ListServerOperati" +
+      "onsResponse\"9\202\323\344\223\0023\0221/baremetal/v1alpha/" +
+      "servers/{server_id}/operationsBr\n\"yandex" +
+      ".cloud.api.baremetal.v1alphaZLgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/b" +
+      "aremetal/v1alpha;baremetalb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -29630,7 +30324,7 @@ public final class ServerServiceOuterClass {
     internal_static_yandex_cloud_baremetal_v1alpha_NetworkInterfaceSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_baremetal_v1alpha_NetworkInterfaceSpec_descriptor,
-        new java.lang.String[] { "Id", "PrivateSubnet", "PublicSubnet", "Subnet", });
+        new java.lang.String[] { "Id", "PrivateSubnet", "PublicSubnet", "PrivateInterface", "PublicInterface", "Subnet", "Interface", });
     internal_static_yandex_cloud_baremetal_v1alpha_UpdateServerMetadata_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_baremetal_v1alpha_UpdateServerMetadata_fieldAccessorTable = new

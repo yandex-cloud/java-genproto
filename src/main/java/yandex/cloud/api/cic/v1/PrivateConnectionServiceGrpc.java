@@ -235,6 +235,37 @@ public final class PrivateConnectionServiceGrpc {
     return getRemoveStaticRouteMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Move",
+      requestType = yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod;
+    if ((getMoveMethod = PrivateConnectionServiceGrpc.getMoveMethod) == null) {
+      synchronized (PrivateConnectionServiceGrpc.class) {
+        if ((getMoveMethod = PrivateConnectionServiceGrpc.getMoveMethod) == null) {
+          PrivateConnectionServiceGrpc.getMoveMethod = getMoveMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Move"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new PrivateConnectionServiceMethodDescriptorSupplier("Move"))
+              .build();
+        }
+      }
+    }
+    return getMoveMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsRequest,
       yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.ListPrivateConnectionOperationsResponse> getListOperationsMethod;
 
@@ -395,6 +426,16 @@ public final class PrivateConnectionServiceGrpc {
 
     /**
      * <pre>
+     * Moves the specified PrivateConnection to another folder.
+     * </pre>
+     */
+    public void move(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified PrivateConnection.
      * </pre>
      */
@@ -454,6 +495,13 @@ public final class PrivateConnectionServiceGrpc {
                 yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_REMOVE_STATIC_ROUTE)))
+          .addMethod(
+            getMoveMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_MOVE)))
           .addMethod(
             getListOperationsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -567,6 +615,17 @@ public final class PrivateConnectionServiceGrpc {
 
     /**
      * <pre>
+     * Moves the specified PrivateConnection to another folder.
+     * </pre>
+     */
+    public void move(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getMoveMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified PrivateConnection.
      * </pre>
      */
@@ -668,6 +727,16 @@ public final class PrivateConnectionServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation removeStaticRoute(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveStaticRouteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Moves the specified PrivateConnection to another folder.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMoveMethod(), getCallOptions(), request);
     }
 
     /**
@@ -783,6 +852,17 @@ public final class PrivateConnectionServiceGrpc {
 
     /**
      * <pre>
+     * Moves the specified PrivateConnection to another folder.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> move(
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getMoveMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified PrivateConnection.
      * </pre>
      */
@@ -800,7 +880,8 @@ public final class PrivateConnectionServiceGrpc {
   private static final int METHODID_DELETE = 4;
   private static final int METHODID_UPSERT_STATIC_ROUTE = 5;
   private static final int METHODID_REMOVE_STATIC_ROUTE = 6;
-  private static final int METHODID_LIST_OPERATIONS = 7;
+  private static final int METHODID_MOVE = 7;
+  private static final int METHODID_LIST_OPERATIONS = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -845,6 +926,10 @@ public final class PrivateConnectionServiceGrpc {
           break;
         case METHODID_REMOVE_STATIC_ROUTE:
           serviceImpl.removeStaticRoute((yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.RemoveStaticRouteRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_MOVE:
+          serviceImpl.move((yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_LIST_OPERATIONS:
@@ -919,6 +1004,7 @@ public final class PrivateConnectionServiceGrpc {
               .addMethod(getDeleteMethod())
               .addMethod(getUpsertStaticRouteMethod())
               .addMethod(getRemoveStaticRouteMethod())
+              .addMethod(getMoveMethod())
               .addMethod(getListOperationsMethod())
               .build();
         }

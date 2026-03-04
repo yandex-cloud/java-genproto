@@ -297,6 +297,130 @@ public final class CloudServiceGrpc {
     return getUpdateAccessBindingsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest,
+      yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse> getListAccessPolicyBindingsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAccessPolicyBindings",
+      requestType = yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest.class,
+      responseType = yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest,
+      yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse> getListAccessPolicyBindingsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest, yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse> getListAccessPolicyBindingsMethod;
+    if ((getListAccessPolicyBindingsMethod = CloudServiceGrpc.getListAccessPolicyBindingsMethod) == null) {
+      synchronized (CloudServiceGrpc.class) {
+        if ((getListAccessPolicyBindingsMethod = CloudServiceGrpc.getListAccessPolicyBindingsMethod) == null) {
+          CloudServiceGrpc.getListAccessPolicyBindingsMethod = getListAccessPolicyBindingsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest, yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAccessPolicyBindings"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new CloudServiceMethodDescriptorSupplier("ListAccessPolicyBindings"))
+              .build();
+        }
+      }
+    }
+    return getListAccessPolicyBindingsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.BindAccessPolicyRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getBindAccessPolicyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BindAccessPolicy",
+      requestType = yandex.cloud.api.access.Access.BindAccessPolicyRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.BindAccessPolicyRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getBindAccessPolicyMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.BindAccessPolicyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getBindAccessPolicyMethod;
+    if ((getBindAccessPolicyMethod = CloudServiceGrpc.getBindAccessPolicyMethod) == null) {
+      synchronized (CloudServiceGrpc.class) {
+        if ((getBindAccessPolicyMethod = CloudServiceGrpc.getBindAccessPolicyMethod) == null) {
+          CloudServiceGrpc.getBindAccessPolicyMethod = getBindAccessPolicyMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.BindAccessPolicyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BindAccessPolicy"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.BindAccessPolicyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new CloudServiceMethodDescriptorSupplier("BindAccessPolicy"))
+              .build();
+        }
+      }
+    }
+    return getBindAccessPolicyMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UnbindAccessPolicyRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUnbindAccessPolicyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UnbindAccessPolicy",
+      requestType = yandex.cloud.api.access.Access.UnbindAccessPolicyRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UnbindAccessPolicyRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUnbindAccessPolicyMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UnbindAccessPolicyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUnbindAccessPolicyMethod;
+    if ((getUnbindAccessPolicyMethod = CloudServiceGrpc.getUnbindAccessPolicyMethod) == null) {
+      synchronized (CloudServiceGrpc.class) {
+        if ((getUnbindAccessPolicyMethod = CloudServiceGrpc.getUnbindAccessPolicyMethod) == null) {
+          CloudServiceGrpc.getUnbindAccessPolicyMethod = getUnbindAccessPolicyMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.UnbindAccessPolicyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UnbindAccessPolicy"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.UnbindAccessPolicyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new CloudServiceMethodDescriptorSupplier("UnbindAccessPolicy"))
+              .build();
+        }
+      }
+    }
+    return getUnbindAccessPolicyMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateAccessPolicyBindingParametersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateAccessPolicyBindingParameters",
+      requestType = yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateAccessPolicyBindingParametersMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateAccessPolicyBindingParametersMethod;
+    if ((getUpdateAccessPolicyBindingParametersMethod = CloudServiceGrpc.getUpdateAccessPolicyBindingParametersMethod) == null) {
+      synchronized (CloudServiceGrpc.class) {
+        if ((getUpdateAccessPolicyBindingParametersMethod = CloudServiceGrpc.getUpdateAccessPolicyBindingParametersMethod) == null) {
+          CloudServiceGrpc.getUpdateAccessPolicyBindingParametersMethod = getUpdateAccessPolicyBindingParametersMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAccessPolicyBindingParameters"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new CloudServiceMethodDescriptorSupplier("UpdateAccessPolicyBindingParameters"))
+              .build();
+        }
+      }
+    }
+    return getUpdateAccessPolicyBindingParametersMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -439,6 +563,46 @@ public final class CloudServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Returns list of access policy bindings for the cloud.
+     * </pre>
+     */
+    public void listAccessPolicyBindings(yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAccessPolicyBindingsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Binds the access policy template to the cloud.
+     * </pre>
+     */
+    public void bindAccessPolicy(yandex.cloud.api.access.Access.BindAccessPolicyRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBindAccessPolicyMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Unbinds the access policy template from the cloud.
+     * </pre>
+     */
+    public void unbindAccessPolicy(yandex.cloud.api.access.Access.UnbindAccessPolicyRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUnbindAccessPolicyMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the access policy binding parameters for the cloud.
+     * </pre>
+     */
+    public void updateAccessPolicyBindingParameters(yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAccessPolicyBindingParametersMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -504,6 +668,34 @@ public final class CloudServiceGrpc {
                 yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE_ACCESS_BINDINGS)))
+          .addMethod(
+            getListAccessPolicyBindingsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest,
+                yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse>(
+                  this, METHODID_LIST_ACCESS_POLICY_BINDINGS)))
+          .addMethod(
+            getBindAccessPolicyMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.access.Access.BindAccessPolicyRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_BIND_ACCESS_POLICY)))
+          .addMethod(
+            getUnbindAccessPolicyMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.access.Access.UnbindAccessPolicyRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UNBIND_ACCESS_POLICY)))
+          .addMethod(
+            getUpdateAccessPolicyBindingParametersMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UPDATE_ACCESS_POLICY_BINDING_PARAMETERS)))
           .build();
     }
   }
@@ -624,6 +816,50 @@ public final class CloudServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Returns list of access policy bindings for the cloud.
+     * </pre>
+     */
+    public void listAccessPolicyBindings(yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListAccessPolicyBindingsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Binds the access policy template to the cloud.
+     * </pre>
+     */
+    public void bindAccessPolicy(yandex.cloud.api.access.Access.BindAccessPolicyRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBindAccessPolicyMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Unbinds the access policy template from the cloud.
+     * </pre>
+     */
+    public void unbindAccessPolicy(yandex.cloud.api.access.Access.UnbindAccessPolicyRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUnbindAccessPolicyMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the access policy binding parameters for the cloud.
+     * </pre>
+     */
+    public void updateAccessPolicyBindingParameters(yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateAccessPolicyBindingParametersMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -732,6 +968,46 @@ public final class CloudServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAccessBindingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns list of access policy bindings for the cloud.
+     * </pre>
+     */
+    public yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse listAccessPolicyBindings(yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAccessPolicyBindingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Binds the access policy template to the cloud.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation bindAccessPolicy(yandex.cloud.api.access.Access.BindAccessPolicyRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBindAccessPolicyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Unbinds the access policy template from the cloud.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation unbindAccessPolicy(yandex.cloud.api.access.Access.UnbindAccessPolicyRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUnbindAccessPolicyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the access policy binding parameters for the cloud.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessPolicyBindingParameters(yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateAccessPolicyBindingParametersMethod(), getCallOptions(), request);
     }
   }
 
@@ -851,6 +1127,50 @@ public final class CloudServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Returns list of access policy bindings for the cloud.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse> listAccessPolicyBindings(
+        yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListAccessPolicyBindingsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Binds the access policy template to the cloud.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> bindAccessPolicy(
+        yandex.cloud.api.access.Access.BindAccessPolicyRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBindAccessPolicyMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Unbinds the access policy template from the cloud.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> unbindAccessPolicy(
+        yandex.cloud.api.access.Access.UnbindAccessPolicyRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUnbindAccessPolicyMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the access policy binding parameters for the cloud.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessPolicyBindingParameters(
+        yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateAccessPolicyBindingParametersMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -862,6 +1182,10 @@ public final class CloudServiceGrpc {
   private static final int METHODID_LIST_ACCESS_BINDINGS = 6;
   private static final int METHODID_SET_ACCESS_BINDINGS = 7;
   private static final int METHODID_UPDATE_ACCESS_BINDINGS = 8;
+  private static final int METHODID_LIST_ACCESS_POLICY_BINDINGS = 9;
+  private static final int METHODID_BIND_ACCESS_POLICY = 10;
+  private static final int METHODID_UNBIND_ACCESS_POLICY = 11;
+  private static final int METHODID_UPDATE_ACCESS_POLICY_BINDING_PARAMETERS = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -914,6 +1238,22 @@ public final class CloudServiceGrpc {
           break;
         case METHODID_UPDATE_ACCESS_BINDINGS:
           serviceImpl.updateAccessBindings((yandex.cloud.api.access.Access.UpdateAccessBindingsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_LIST_ACCESS_POLICY_BINDINGS:
+          serviceImpl.listAccessPolicyBindings((yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse>) responseObserver);
+          break;
+        case METHODID_BIND_ACCESS_POLICY:
+          serviceImpl.bindAccessPolicy((yandex.cloud.api.access.Access.BindAccessPolicyRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_UNBIND_ACCESS_POLICY:
+          serviceImpl.unbindAccessPolicy((yandex.cloud.api.access.Access.UnbindAccessPolicyRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_UPDATE_ACCESS_POLICY_BINDING_PARAMETERS:
+          serviceImpl.updateAccessPolicyBindingParameters((yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
@@ -986,6 +1326,10 @@ public final class CloudServiceGrpc {
               .addMethod(getListAccessBindingsMethod())
               .addMethod(getSetAccessBindingsMethod())
               .addMethod(getUpdateAccessBindingsMethod())
+              .addMethod(getListAccessPolicyBindingsMethod())
+              .addMethod(getBindAccessPolicyMethod())
+              .addMethod(getUnbindAccessPolicyMethod())
+              .addMethod(getUpdateAccessPolicyBindingParametersMethod())
               .build();
         }
       }

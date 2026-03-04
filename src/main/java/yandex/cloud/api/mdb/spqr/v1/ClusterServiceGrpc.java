@@ -49,37 +49,6 @@ public final class ClusterServiceGrpc {
     return getGetMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.GetClusterAtRevisionRequest,
-      yandex.cloud.api.mdb.spqr.v1.ClusterOuterClass.Cluster> getGetAtRevisionMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetAtRevision",
-      requestType = yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.GetClusterAtRevisionRequest.class,
-      responseType = yandex.cloud.api.mdb.spqr.v1.ClusterOuterClass.Cluster.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.GetClusterAtRevisionRequest,
-      yandex.cloud.api.mdb.spqr.v1.ClusterOuterClass.Cluster> getGetAtRevisionMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.GetClusterAtRevisionRequest, yandex.cloud.api.mdb.spqr.v1.ClusterOuterClass.Cluster> getGetAtRevisionMethod;
-    if ((getGetAtRevisionMethod = ClusterServiceGrpc.getGetAtRevisionMethod) == null) {
-      synchronized (ClusterServiceGrpc.class) {
-        if ((getGetAtRevisionMethod = ClusterServiceGrpc.getGetAtRevisionMethod) == null) {
-          ClusterServiceGrpc.getGetAtRevisionMethod = getGetAtRevisionMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.GetClusterAtRevisionRequest, yandex.cloud.api.mdb.spqr.v1.ClusterOuterClass.Cluster>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAtRevision"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.GetClusterAtRevisionRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.spqr.v1.ClusterOuterClass.Cluster.getDefaultInstance()))
-              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("GetAtRevision"))
-              .build();
-        }
-      }
-    }
-    return getGetAtRevisionMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClustersRequest,
       yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClustersResponse> getListMethod;
 
@@ -576,37 +545,6 @@ public final class ClusterServiceGrpc {
     return getListHostsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsAtRevisionRequest,
-      yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsResponse> getListHostsAtRevisionMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListHostsAtRevision",
-      requestType = yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsAtRevisionRequest.class,
-      responseType = yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsAtRevisionRequest,
-      yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsResponse> getListHostsAtRevisionMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsAtRevisionRequest, yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsResponse> getListHostsAtRevisionMethod;
-    if ((getListHostsAtRevisionMethod = ClusterServiceGrpc.getListHostsAtRevisionMethod) == null) {
-      synchronized (ClusterServiceGrpc.class) {
-        if ((getListHostsAtRevisionMethod = ClusterServiceGrpc.getListHostsAtRevisionMethod) == null) {
-          ClusterServiceGrpc.getListHostsAtRevisionMethod = getListHostsAtRevisionMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsAtRevisionRequest, yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListHostsAtRevision"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsAtRevisionRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListHostsAtRevision"))
-              .build();
-        }
-      }
-    }
-    return getListHostsAtRevisionMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.AddClusterHostsRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getAddHostsMethod;
 
@@ -793,37 +731,6 @@ public final class ClusterServiceGrpc {
     return getListShardsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsAtRevisionRequest,
-      yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsResponse> getListShardsAtRevisionMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListShardsAtRevision",
-      requestType = yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsAtRevisionRequest.class,
-      responseType = yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsAtRevisionRequest,
-      yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsResponse> getListShardsAtRevisionMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsAtRevisionRequest, yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsResponse> getListShardsAtRevisionMethod;
-    if ((getListShardsAtRevisionMethod = ClusterServiceGrpc.getListShardsAtRevisionMethod) == null) {
-      synchronized (ClusterServiceGrpc.class) {
-        if ((getListShardsAtRevisionMethod = ClusterServiceGrpc.getListShardsAtRevisionMethod) == null) {
-          ClusterServiceGrpc.getListShardsAtRevisionMethod = getListShardsAtRevisionMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsAtRevisionRequest, yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListShardsAtRevision"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsAtRevisionRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListShardsAtRevision"))
-              .build();
-        }
-      }
-    }
-    return getListShardsAtRevisionMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.AddClusterShardRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getAddShardMethod;
 
@@ -886,6 +793,99 @@ public final class ClusterServiceGrpc {
     return getDeleteShardMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
+      yandex.cloud.api.access.Access.ListAccessBindingsResponse> getListAccessBindingsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAccessBindings",
+      requestType = yandex.cloud.api.access.Access.ListAccessBindingsRequest.class,
+      responseType = yandex.cloud.api.access.Access.ListAccessBindingsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
+      yandex.cloud.api.access.Access.ListAccessBindingsResponse> getListAccessBindingsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest, yandex.cloud.api.access.Access.ListAccessBindingsResponse> getListAccessBindingsMethod;
+    if ((getListAccessBindingsMethod = ClusterServiceGrpc.getListAccessBindingsMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getListAccessBindingsMethod = ClusterServiceGrpc.getListAccessBindingsMethod) == null) {
+          ClusterServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.ListAccessBindingsRequest, yandex.cloud.api.access.Access.ListAccessBindingsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAccessBindings"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.ListAccessBindingsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.ListAccessBindingsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListAccessBindings"))
+              .build();
+        }
+      }
+    }
+    return getListAccessBindingsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSetAccessBindingsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetAccessBindings",
+      requestType = yandex.cloud.api.access.Access.SetAccessBindingsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSetAccessBindingsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getSetAccessBindingsMethod;
+    if ((getSetAccessBindingsMethod = ClusterServiceGrpc.getSetAccessBindingsMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getSetAccessBindingsMethod = ClusterServiceGrpc.getSetAccessBindingsMethod) == null) {
+          ClusterServiceGrpc.getSetAccessBindingsMethod = getSetAccessBindingsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.SetAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetAccessBindings"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.SetAccessBindingsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("SetAccessBindings"))
+              .build();
+        }
+      }
+    }
+    return getSetAccessBindingsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateAccessBindingsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateAccessBindings",
+      requestType = yandex.cloud.api.access.Access.UpdateAccessBindingsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateAccessBindingsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateAccessBindingsMethod;
+    if ((getUpdateAccessBindingsMethod = ClusterServiceGrpc.getUpdateAccessBindingsMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getUpdateAccessBindingsMethod = ClusterServiceGrpc.getUpdateAccessBindingsMethod) == null) {
+          ClusterServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAccessBindings"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.UpdateAccessBindingsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("UpdateAccessBindings"))
+              .build();
+        }
+      }
+    }
+    return getUpdateAccessBindingsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -946,13 +946,6 @@ public final class ClusterServiceGrpc {
     public void get(yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.GetClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.ClusterOuterClass.Cluster> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
-    }
-
-    /**
-     */
-    public void getAtRevision(yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.GetClusterAtRevisionRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.ClusterOuterClass.Cluster> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAtRevisionMethod(), responseObserver);
     }
 
     /**
@@ -1116,16 +1109,6 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of hosts for the specified cluster.
-     * </pre>
-     */
-    public void listHostsAtRevision(yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsAtRevisionRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListHostsAtRevisionMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * Creates new hosts for a cluster.
      * </pre>
      */
@@ -1186,16 +1169,6 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of shards.
-     * </pre>
-     */
-    public void listShardsAtRevision(yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsAtRevisionRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListShardsAtRevisionMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * Creates a new shard.
      * </pre>
      */
@@ -1214,6 +1187,36 @@ public final class ClusterServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteShardMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Retrieves a list of access bindings for the specified SPQR cluster.
+     * </pre>
+     */
+    public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Sets access bindings for the specified SPQR cluster.
+     * </pre>
+     */
+    public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetAccessBindingsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates access bindings for the specified SPQR cluster.
+     * </pre>
+     */
+    public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -1223,13 +1226,6 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.GetClusterRequest,
                 yandex.cloud.api.mdb.spqr.v1.ClusterOuterClass.Cluster>(
                   this, METHODID_GET)))
-          .addMethod(
-            getGetAtRevisionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.GetClusterAtRevisionRequest,
-                yandex.cloud.api.mdb.spqr.v1.ClusterOuterClass.Cluster>(
-                  this, METHODID_GET_AT_REVISION)))
           .addMethod(
             getListMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1343,13 +1339,6 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsResponse>(
                   this, METHODID_LIST_HOSTS)))
           .addMethod(
-            getListHostsAtRevisionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsAtRevisionRequest,
-                yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsResponse>(
-                  this, METHODID_LIST_HOSTS_AT_REVISION)))
-          .addMethod(
             getAddHostsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
@@ -1392,13 +1381,6 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsResponse>(
                   this, METHODID_LIST_SHARDS)))
           .addMethod(
-            getListShardsAtRevisionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsAtRevisionRequest,
-                yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsResponse>(
-                  this, METHODID_LIST_SHARDS_AT_REVISION)))
-          .addMethod(
             getAddShardMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
@@ -1412,6 +1394,27 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.DeleteClusterShardRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE_SHARD)))
+          .addMethod(
+            getListAccessBindingsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.access.Access.ListAccessBindingsRequest,
+                yandex.cloud.api.access.Access.ListAccessBindingsResponse>(
+                  this, METHODID_LIST_ACCESS_BINDINGS)))
+          .addMethod(
+            getSetAccessBindingsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.access.Access.SetAccessBindingsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_SET_ACCESS_BINDINGS)))
+          .addMethod(
+            getUpdateAccessBindingsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UPDATE_ACCESS_BINDINGS)))
           .build();
     }
   }
@@ -1443,14 +1446,6 @@ public final class ClusterServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.ClusterOuterClass.Cluster> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void getAtRevision(yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.GetClusterAtRevisionRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.ClusterOuterClass.Cluster> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetAtRevisionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1630,17 +1625,6 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of hosts for the specified cluster.
-     * </pre>
-     */
-    public void listHostsAtRevision(yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsAtRevisionRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListHostsAtRevisionMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * Creates new hosts for a cluster.
      * </pre>
      */
@@ -1707,17 +1691,6 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of shards.
-     * </pre>
-     */
-    public void listShardsAtRevision(yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsAtRevisionRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListShardsAtRevisionMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * Creates a new shard.
      * </pre>
      */
@@ -1736,6 +1709,39 @@ public final class ClusterServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteShardMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves a list of access bindings for the specified SPQR cluster.
+     * </pre>
+     */
+    public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Sets access bindings for the specified SPQR cluster.
+     * </pre>
+     */
+    public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates access bindings for the specified SPQR cluster.
+     * </pre>
+     */
+    public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -1765,13 +1771,6 @@ public final class ClusterServiceGrpc {
     public yandex.cloud.api.mdb.spqr.v1.ClusterOuterClass.Cluster get(yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.GetClusterRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public yandex.cloud.api.mdb.spqr.v1.ClusterOuterClass.Cluster getAtRevision(yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.GetClusterAtRevisionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetAtRevisionMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1936,16 +1935,6 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of hosts for the specified cluster.
-     * </pre>
-     */
-    public yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsResponse listHostsAtRevision(yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsAtRevisionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListHostsAtRevisionMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * Creates new hosts for a cluster.
      * </pre>
      */
@@ -2006,16 +1995,6 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of shards.
-     * </pre>
-     */
-    public yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsResponse listShardsAtRevision(yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsAtRevisionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListShardsAtRevisionMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * Creates a new shard.
      * </pre>
      */
@@ -2032,6 +2011,36 @@ public final class ClusterServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation deleteShard(yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.DeleteClusterShardRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteShardMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves a list of access bindings for the specified SPQR cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAccessBindingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Sets access bindings for the specified SPQR cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetAccessBindingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates access bindings for the specified SPQR cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateAccessBindingsMethod(), getCallOptions(), request);
     }
   }
 
@@ -2062,14 +2071,6 @@ public final class ClusterServiceGrpc {
         yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.GetClusterRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.spqr.v1.ClusterOuterClass.Cluster> getAtRevision(
-        yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.GetClusterAtRevisionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetAtRevisionMethod(), getCallOptions()), request);
     }
 
     /**
@@ -2238,17 +2239,6 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of hosts for the specified cluster.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsResponse> listHostsAtRevision(
-        yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsAtRevisionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListHostsAtRevisionMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * Creates new hosts for a cluster.
      * </pre>
      */
@@ -2315,17 +2305,6 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of shards.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsResponse> listShardsAtRevision(
-        yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsAtRevisionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListShardsAtRevisionMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * Creates a new shard.
      * </pre>
      */
@@ -2345,36 +2324,69 @@ public final class ClusterServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteShardMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Retrieves a list of access bindings for the specified SPQR cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
+        yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Sets access bindings for the specified SPQR cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setAccessBindings(
+        yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates access bindings for the specified SPQR cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessBindings(
+        yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
-  private static final int METHODID_GET_AT_REVISION = 1;
-  private static final int METHODID_LIST = 2;
-  private static final int METHODID_CREATE = 3;
-  private static final int METHODID_UPDATE = 4;
-  private static final int METHODID_DELETE = 5;
-  private static final int METHODID_ADD_SUBCLUSTER = 6;
-  private static final int METHODID_START = 7;
-  private static final int METHODID_STOP = 8;
-  private static final int METHODID_MOVE = 9;
-  private static final int METHODID_BACKUP = 10;
-  private static final int METHODID_RESTORE = 11;
-  private static final int METHODID_RESCHEDULE_MAINTENANCE = 12;
-  private static final int METHODID_LIST_LOGS = 13;
-  private static final int METHODID_STREAM_LOGS = 14;
-  private static final int METHODID_LIST_OPERATIONS = 15;
-  private static final int METHODID_LIST_BACKUPS = 16;
-  private static final int METHODID_LIST_HOSTS = 17;
-  private static final int METHODID_LIST_HOSTS_AT_REVISION = 18;
-  private static final int METHODID_ADD_HOSTS = 19;
-  private static final int METHODID_UPDATE_HOSTS = 20;
-  private static final int METHODID_DELETE_HOSTS = 21;
-  private static final int METHODID_RESETUP_HOSTS = 22;
-  private static final int METHODID_GET_SHARD = 23;
-  private static final int METHODID_LIST_SHARDS = 24;
-  private static final int METHODID_LIST_SHARDS_AT_REVISION = 25;
-  private static final int METHODID_ADD_SHARD = 26;
-  private static final int METHODID_DELETE_SHARD = 27;
+  private static final int METHODID_LIST = 1;
+  private static final int METHODID_CREATE = 2;
+  private static final int METHODID_UPDATE = 3;
+  private static final int METHODID_DELETE = 4;
+  private static final int METHODID_ADD_SUBCLUSTER = 5;
+  private static final int METHODID_START = 6;
+  private static final int METHODID_STOP = 7;
+  private static final int METHODID_MOVE = 8;
+  private static final int METHODID_BACKUP = 9;
+  private static final int METHODID_RESTORE = 10;
+  private static final int METHODID_RESCHEDULE_MAINTENANCE = 11;
+  private static final int METHODID_LIST_LOGS = 12;
+  private static final int METHODID_STREAM_LOGS = 13;
+  private static final int METHODID_LIST_OPERATIONS = 14;
+  private static final int METHODID_LIST_BACKUPS = 15;
+  private static final int METHODID_LIST_HOSTS = 16;
+  private static final int METHODID_ADD_HOSTS = 17;
+  private static final int METHODID_UPDATE_HOSTS = 18;
+  private static final int METHODID_DELETE_HOSTS = 19;
+  private static final int METHODID_RESETUP_HOSTS = 20;
+  private static final int METHODID_GET_SHARD = 21;
+  private static final int METHODID_LIST_SHARDS = 22;
+  private static final int METHODID_ADD_SHARD = 23;
+  private static final int METHODID_DELETE_SHARD = 24;
+  private static final int METHODID_LIST_ACCESS_BINDINGS = 25;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 26;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 27;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2395,10 +2407,6 @@ public final class ClusterServiceGrpc {
       switch (methodId) {
         case METHODID_GET:
           serviceImpl.get((yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.GetClusterRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.ClusterOuterClass.Cluster>) responseObserver);
-          break;
-        case METHODID_GET_AT_REVISION:
-          serviceImpl.getAtRevision((yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.GetClusterAtRevisionRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.ClusterOuterClass.Cluster>) responseObserver);
           break;
         case METHODID_LIST:
@@ -2465,10 +2473,6 @@ public final class ClusterServiceGrpc {
           serviceImpl.listHosts((yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsResponse>) responseObserver);
           break;
-        case METHODID_LIST_HOSTS_AT_REVISION:
-          serviceImpl.listHostsAtRevision((yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsAtRevisionRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterHostsResponse>) responseObserver);
-          break;
         case METHODID_ADD_HOSTS:
           serviceImpl.addHosts((yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.AddClusterHostsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
@@ -2493,16 +2497,24 @@ public final class ClusterServiceGrpc {
           serviceImpl.listShards((yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsResponse>) responseObserver);
           break;
-        case METHODID_LIST_SHARDS_AT_REVISION:
-          serviceImpl.listShardsAtRevision((yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsAtRevisionRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.ListClusterShardsResponse>) responseObserver);
-          break;
         case METHODID_ADD_SHARD:
           serviceImpl.addShard((yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.AddClusterShardRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_DELETE_SHARD:
           serviceImpl.deleteShard((yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.DeleteClusterShardRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_LIST_ACCESS_BINDINGS:
+          serviceImpl.listAccessBindings((yandex.cloud.api.access.Access.ListAccessBindingsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse>) responseObserver);
+          break;
+        case METHODID_SET_ACCESS_BINDINGS:
+          serviceImpl.setAccessBindings((yandex.cloud.api.access.Access.SetAccessBindingsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_UPDATE_ACCESS_BINDINGS:
+          serviceImpl.updateAccessBindings((yandex.cloud.api.access.Access.UpdateAccessBindingsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
@@ -2567,7 +2579,6 @@ public final class ClusterServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ClusterServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
-              .addMethod(getGetAtRevisionMethod())
               .addMethod(getListMethod())
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
@@ -2584,16 +2595,17 @@ public final class ClusterServiceGrpc {
               .addMethod(getListOperationsMethod())
               .addMethod(getListBackupsMethod())
               .addMethod(getListHostsMethod())
-              .addMethod(getListHostsAtRevisionMethod())
               .addMethod(getAddHostsMethod())
               .addMethod(getUpdateHostsMethod())
               .addMethod(getDeleteHostsMethod())
               .addMethod(getResetupHostsMethod())
               .addMethod(getGetShardMethod())
               .addMethod(getListShardsMethod())
-              .addMethod(getListShardsAtRevisionMethod())
               .addMethod(getAddShardMethod())
               .addMethod(getDeleteShardMethod())
+              .addMethod(getListAccessBindingsMethod())
+              .addMethod(getSetAccessBindingsMethod())
+              .addMethod(getUpdateAccessBindingsMethod())
               .build();
         }
       }

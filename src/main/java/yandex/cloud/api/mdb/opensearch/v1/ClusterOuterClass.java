@@ -6221,6 +6221,26 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.mdb.opensearch.v1.SnapshotManagement snapshot_management = 5;</code>
      */
     yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagementOrBuilder getSnapshotManagementOrBuilder();
+
+    /**
+     * <pre>
+     * Full version
+     * </pre>
+     *
+     * <code>string full_version = 6;</code>
+     * @return The fullVersion.
+     */
+    java.lang.String getFullVersion();
+    /**
+     * <pre>
+     * Full version
+     * </pre>
+     *
+     * <code>string full_version = 6;</code>
+     * @return The bytes for fullVersion.
+     */
+    com.google.protobuf.ByteString
+        getFullVersionBytes();
   }
   /**
    * <pre>
@@ -6240,6 +6260,7 @@ public final class ClusterOuterClass {
     }
     private ClusterConfig() {
       version_ = "";
+      fullVersion_ = "";
     }
 
     @java.lang.Override
@@ -6328,6 +6349,12 @@ public final class ClusterOuterClass {
                 snapshotManagement_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fullVersion_ = s;
               break;
             }
             default: {
@@ -6560,6 +6587,52 @@ public final class ClusterOuterClass {
       return getSnapshotManagement();
     }
 
+    public static final int FULL_VERSION_FIELD_NUMBER = 6;
+    private volatile java.lang.Object fullVersion_;
+    /**
+     * <pre>
+     * Full version
+     * </pre>
+     *
+     * <code>string full_version = 6;</code>
+     * @return The fullVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getFullVersion() {
+      java.lang.Object ref = fullVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fullVersion_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Full version
+     * </pre>
+     *
+     * <code>string full_version = 6;</code>
+     * @return The bytes for fullVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFullVersionBytes() {
+      java.lang.Object ref = fullVersion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fullVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6589,6 +6662,9 @@ public final class ClusterOuterClass {
       if (snapshotManagement_ != null) {
         output.writeMessage(5, getSnapshotManagement());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fullVersion_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, fullVersion_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6616,6 +6692,9 @@ public final class ClusterOuterClass {
       if (snapshotManagement_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getSnapshotManagement());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fullVersion_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, fullVersion_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6654,6 +6733,8 @@ public final class ClusterOuterClass {
         if (!getSnapshotManagement()
             .equals(other.getSnapshotManagement())) return false;
       }
+      if (!getFullVersion()
+          .equals(other.getFullVersion())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6683,6 +6764,8 @@ public final class ClusterOuterClass {
         hash = (37 * hash) + SNAPSHOT_MANAGEMENT_FIELD_NUMBER;
         hash = (53 * hash) + getSnapshotManagement().hashCode();
       }
+      hash = (37 * hash) + FULL_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getFullVersion().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6846,6 +6929,8 @@ public final class ClusterOuterClass {
           snapshotManagement_ = null;
           snapshotManagementBuilder_ = null;
         }
+        fullVersion_ = "";
+
         return this;
       }
 
@@ -6893,6 +6978,7 @@ public final class ClusterOuterClass {
         } else {
           result.snapshotManagement_ = snapshotManagementBuilder_.build();
         }
+        result.fullVersion_ = fullVersion_;
         onBuilt();
         return result;
       }
@@ -6956,6 +7042,10 @@ public final class ClusterOuterClass {
         }
         if (other.hasSnapshotManagement()) {
           mergeSnapshotManagement(other.getSnapshotManagement());
+        }
+        if (!other.getFullVersion().isEmpty()) {
+          fullVersion_ = other.fullVersion_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7700,6 +7790,102 @@ public final class ClusterOuterClass {
           snapshotManagement_ = null;
         }
         return snapshotManagementBuilder_;
+      }
+
+      private java.lang.Object fullVersion_ = "";
+      /**
+       * <pre>
+       * Full version
+       * </pre>
+       *
+       * <code>string full_version = 6;</code>
+       * @return The fullVersion.
+       */
+      public java.lang.String getFullVersion() {
+        java.lang.Object ref = fullVersion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fullVersion_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Full version
+       * </pre>
+       *
+       * <code>string full_version = 6;</code>
+       * @return The bytes for fullVersion.
+       */
+      public com.google.protobuf.ByteString
+          getFullVersionBytes() {
+        java.lang.Object ref = fullVersion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fullVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Full version
+       * </pre>
+       *
+       * <code>string full_version = 6;</code>
+       * @param value The fullVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFullVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        fullVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Full version
+       * </pre>
+       *
+       * <code>string full_version = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFullVersion() {
+        
+        fullVersion_ = getDefaultInstance().getFullVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Full version
+       * </pre>
+       *
+       * <code>string full_version = 6;</code>
+       * @param value The bytes for fullVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFullVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        fullVersion_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -23229,7 +23415,7 @@ public final class ClusterOuterClass {
       "ATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDAT" +
       "ING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STAR" +
       "TING\020\007J\004\010\022\020\023\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t" +
-      "\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\251\002\n\r" +
+      "\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\277\002\n\r" +
       "ClusterConfig\022\017\n\007version\030\001 \001(\t\022>\n\nopense" +
       "arch\030\002 \001(\0132*.yandex.cloud.mdb.opensearch" +
       ".v1.OpenSearch\022>\n\ndashboards\030\003 \001(\0132*.yan" +
@@ -23237,66 +23423,67 @@ public final class ClusterOuterClass {
       "\n\006access\030\004 \001(\0132&.yandex.cloud.mdb.opense" +
       "arch.v1.Access\022O\n\023snapshot_management\030\005 " +
       "\001(\01322.yandex.cloud.mdb.opensearch.v1.Sna" +
-      "pshotManagement\"\222\005\n\nOpenSearch\022\017\n\007plugin" +
-      "s\030\001 \003(\t\022I\n\013node_groups\030\002 \003(\01324.yandex.cl" +
-      "oud.mdb.opensearch.v1.OpenSearch.NodeGro" +
-      "up\022u\n\027opensearch_config_set_2\030\003 \001(\0132;.ya" +
-      "ndex.cloud.mdb.opensearch.v1.config.Open" +
-      "SearchConfigSet2H\000R\025opensearchConfigSet_" +
-      "2\022\031\n\021keystore_settings\030\004 \003(\t\032\313\002\n\tNodeGro" +
+      "pshotManagement\022\024\n\014full_version\030\006 \001(\t\"\222\005" +
+      "\n\nOpenSearch\022\017\n\007plugins\030\001 \003(\t\022I\n\013node_gr" +
+      "oups\030\002 \003(\01324.yandex.cloud.mdb.opensearch" +
+      ".v1.OpenSearch.NodeGroup\022u\n\027opensearch_c" +
+      "onfig_set_2\030\003 \001(\0132;.yandex.cloud.mdb.ope" +
+      "nsearch.v1.config.OpenSearchConfigSet2H\000" +
+      "R\025opensearchConfigSet_2\022\031\n\021keystore_sett" +
+      "ings\030\004 \003(\t\032\313\002\n\tNodeGroup\022\014\n\004name\030\001 \001(\t\022<" +
+      "\n\tresources\030\002 \001(\0132).yandex.cloud.mdb.ope" +
+      "nsearch.v1.Resources\022\023\n\013hosts_count\030\003 \001(" +
+      "\003\022\020\n\010zone_ids\030\004 \003(\t\022\022\n\nsubnet_ids\030\005 \003(\t\022" +
+      "\030\n\020assign_public_ip\030\006 \001(\010\022C\n\005roles\030\007 \003(\016" +
+      "24.yandex.cloud.mdb.opensearch.v1.OpenSe" +
+      "arch.GroupRole\022R\n\025disk_size_autoscaling\030" +
+      "\t \001(\01323.yandex.cloud.mdb.opensearch.v1.D" +
+      "iskSizeAutoscalingJ\004\010\010\020\t\">\n\tGroupRole\022\032\n" +
+      "\026GROUP_ROLE_UNSPECIFIED\020\000\022\010\n\004DATA\020\001\022\013\n\007M" +
+      "ANAGER\020\002B\010\n\006config\"\340\002\n\nDashboards\022I\n\013nod" +
+      "e_groups\030\002 \003(\01324.yandex.cloud.mdb.opense" +
+      "arch.v1.Dashboards.NodeGroup\032\206\002\n\tNodeGro" +
       "up\022\014\n\004name\030\001 \001(\t\022<\n\tresources\030\002 \001(\0132).ya" +
       "ndex.cloud.mdb.opensearch.v1.Resources\022\023" +
       "\n\013hosts_count\030\003 \001(\003\022\020\n\010zone_ids\030\004 \003(\t\022\022\n" +
       "\nsubnet_ids\030\005 \003(\t\022\030\n\020assign_public_ip\030\006 " +
-      "\001(\010\022C\n\005roles\030\007 \003(\01624.yandex.cloud.mdb.op" +
-      "ensearch.v1.OpenSearch.GroupRole\022R\n\025disk" +
-      "_size_autoscaling\030\t \001(\01323.yandex.cloud.m" +
-      "db.opensearch.v1.DiskSizeAutoscalingJ\004\010\010" +
-      "\020\t\">\n\tGroupRole\022\032\n\026GROUP_ROLE_UNSPECIFIE" +
-      "D\020\000\022\010\n\004DATA\020\001\022\013\n\007MANAGER\020\002B\010\n\006config\"\340\002\n" +
-      "\nDashboards\022I\n\013node_groups\030\002 \003(\01324.yande" +
-      "x.cloud.mdb.opensearch.v1.Dashboards.Nod" +
-      "eGroup\032\206\002\n\tNodeGroup\022\014\n\004name\030\001 \001(\t\022<\n\tre" +
-      "sources\030\002 \001(\0132).yandex.cloud.mdb.opensea" +
-      "rch.v1.Resources\022\023\n\013hosts_count\030\003 \001(\003\022\020\n" +
-      "\010zone_ids\030\004 \003(\t\022\022\n\nsubnet_ids\030\005 \003(\t\022\030\n\020a" +
-      "ssign_public_ip\030\006 \001(\010\022R\n\025disk_size_autos" +
-      "caling\030\t \001(\01323.yandex.cloud.mdb.opensear" +
-      "ch.v1.DiskSizeAutoscalingJ\004\010\007\020\t\"P\n\tResou" +
-      "rces\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk" +
-      "_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\262\007\n\004Ho" +
-      "st\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007" +
-      "zone_id\030\003 \001(\t\022<\n\tresources\030\004 \001(\0132).yande" +
-      "x.cloud.mdb.opensearch.v1.Resources\0227\n\004t" +
-      "ype\030\005 \001(\0162).yandex.cloud.mdb.opensearch." +
-      "v1.Host.Type\022;\n\006health\030\006 \001(\0162+.yandex.cl" +
-      "oud.mdb.opensearch.v1.Host.Health\022\021\n\tsub" +
-      "net_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\022B" +
-      "\n\006system\030\n \001(\01322.yandex.cloud.mdb.opense" +
-      "arch.v1.Host.SystemMetrics\022\022\n\nnode_group" +
-      "\030\013 \001(\t\022C\n\005roles\030\014 \003(\01624.yandex.cloud.mdb" +
-      ".opensearch.v1.OpenSearch.GroupRole\032,\n\tC" +
-      "PUMetric\022\021\n\ttimestamp\030\001 \001(\003\022\014\n\004used\030\002 \001(" +
-      "\001\032>\n\014MemoryMetric\022\021\n\ttimestamp\030\001 \001(\003\022\014\n\004" +
-      "used\030\002 \001(\003\022\r\n\005total\030\003 \001(\003\032<\n\nDiskMetric\022" +
+      "\001(\010\022R\n\025disk_size_autoscaling\030\t \001(\01323.yan" +
+      "dex.cloud.mdb.opensearch.v1.DiskSizeAuto" +
+      "scalingJ\004\010\007\020\t\"P\n\tResources\022\032\n\022resource_p" +
+      "reset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014dis" +
+      "k_type_id\030\003 \001(\t\"\262\007\n\004Host\022\014\n\004name\030\001 \001(\t\022\022" +
+      "\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022<\n\tr" +
+      "esources\030\004 \001(\0132).yandex.cloud.mdb.opense" +
+      "arch.v1.Resources\0227\n\004type\030\005 \001(\0162).yandex" +
+      ".cloud.mdb.opensearch.v1.Host.Type\022;\n\006he" +
+      "alth\030\006 \001(\0162+.yandex.cloud.mdb.opensearch" +
+      ".v1.Host.Health\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020as" +
+      "sign_public_ip\030\t \001(\010\022B\n\006system\030\n \001(\01322.y" +
+      "andex.cloud.mdb.opensearch.v1.Host.Syste" +
+      "mMetrics\022\022\n\nnode_group\030\013 \001(\t\022C\n\005roles\030\014 " +
+      "\003(\01624.yandex.cloud.mdb.opensearch.v1.Ope" +
+      "nSearch.GroupRole\032,\n\tCPUMetric\022\021\n\ttimest" +
+      "amp\030\001 \001(\003\022\014\n\004used\030\002 \001(\001\032>\n\014MemoryMetric\022" +
       "\021\n\ttimestamp\030\001 \001(\003\022\014\n\004used\030\002 \001(\003\022\r\n\005tota" +
-      "l\030\003 \001(\003\032\316\001\n\rSystemMetrics\022;\n\003cpu\030\001 \001(\0132." +
-      ".yandex.cloud.mdb.opensearch.v1.Host.CPU" +
-      "Metric\022A\n\006memory\030\002 \001(\01321.yandex.cloud.md" +
-      "b.opensearch.v1.Host.MemoryMetric\022=\n\004dis" +
-      "k\030\003 \001(\0132/.yandex.cloud.mdb.opensearch.v1" +
-      ".Host.DiskMetric\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022" +
-      "\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"<\n\004Ty" +
-      "pe\022\024\n\020TYPE_UNSPECIFIED\020\000\022\016\n\nOPENSEARCH\020\001" +
-      "\022\016\n\nDASHBOARDS\020\002J\004\010\007\020\010\"3\n\006Access\022\025\n\rdata" +
-      "_transfer\030\001 \001(\010\022\022\n\nserverless\030\002 \001(\010\"\220\001\n\023" +
-      "DiskSizeAutoscaling\022.\n\027planned_usage_thr" +
-      "eshold\030\001 \001(\003B\r\350\3071\000\372\3071\0050-100\0220\n\031emergency" +
-      "_usage_threshold\030\002 \001(\003B\r\350\3071\000\372\3071\0050-100\022\027\n" +
-      "\017disk_size_limit\030\003 \001(\003Bs\n\"yandex.cloud.a" +
-      "pi.mdb.opensearch.v1ZMgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/mdb/opens" +
-      "earch/v1;opensearchb\006proto3"
+      "l\030\003 \001(\003\032<\n\nDiskMetric\022\021\n\ttimestamp\030\001 \001(\003" +
+      "\022\014\n\004used\030\002 \001(\003\022\r\n\005total\030\003 \001(\003\032\316\001\n\rSystem" +
+      "Metrics\022;\n\003cpu\030\001 \001(\0132..yandex.cloud.mdb." +
+      "opensearch.v1.Host.CPUMetric\022A\n\006memory\030\002" +
+      " \001(\01321.yandex.cloud.mdb.opensearch.v1.Ho" +
+      "st.MemoryMetric\022=\n\004disk\030\003 \001(\0132/.yandex.c" +
+      "loud.mdb.opensearch.v1.Host.DiskMetric\"8" +
+      "\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD" +
+      "\020\002\022\014\n\010DEGRADED\020\003\"<\n\004Type\022\024\n\020TYPE_UNSPECI" +
+      "FIED\020\000\022\016\n\nOPENSEARCH\020\001\022\016\n\nDASHBOARDS\020\002J\004" +
+      "\010\007\020\010\"3\n\006Access\022\025\n\rdata_transfer\030\001 \001(\010\022\022\n" +
+      "\nserverless\030\002 \001(\010\"\220\001\n\023DiskSizeAutoscalin" +
+      "g\022.\n\027planned_usage_threshold\030\001 \001(\003B\r\350\3071\000" +
+      "\372\3071\0050-100\0220\n\031emergency_usage_threshold\030\002" +
+      " \001(\003B\r\350\3071\000\372\3071\0050-100\022\027\n\017disk_size_limit\030\003" +
+      " \001(\003Bs\n\"yandex.cloud.api.mdb.opensearch." +
+      "v1ZMgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/mdb/opensearch/v1;opensearc" +
+      "hb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -23331,7 +23518,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_opensearch_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "Version", "Opensearch", "Dashboards", "Access", "SnapshotManagement", });
+        new java.lang.String[] { "Version", "Opensearch", "Dashboards", "Access", "SnapshotManagement", "FullVersion", });
     internal_static_yandex_cloud_mdb_opensearch_v1_OpenSearch_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_opensearch_v1_OpenSearch_fieldAccessorTable = new

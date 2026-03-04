@@ -254,6 +254,16 @@ public final class LockOuterClass {
      * <code>.yandex.cloud.marketplace.licensemanager.v1.ExternalInstance external_instance = 10;</code>
      */
     yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.ExternalInstanceOrBuilder getExternalInstanceOrBuilder();
+
+    /**
+     * <pre>
+     * Indicates whether the subscription lock can be automatically prolonged/renewed.
+     * </pre>
+     *
+     * <code>bool instance_prolongation = 11;</code>
+     * @return The instanceProlongation.
+     */
+    boolean getInstanceProlongation();
   }
   /**
    * Protobuf type {@code yandex.cloud.marketplace.licensemanager.v1.Lock}
@@ -400,6 +410,11 @@ public final class LockOuterClass {
 
               break;
             }
+            case 88: {
+
+              instanceProlongation_ = input.readBool();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -438,6 +453,10 @@ public final class LockOuterClass {
     public enum State
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Default unspecified state.
+       * </pre>
+       *
        * <code>STATE_UNSPECIFIED = 0;</code>
        */
       STATE_UNSPECIFIED(0),
@@ -469,6 +488,10 @@ public final class LockOuterClass {
       ;
 
       /**
+       * <pre>
+       * Default unspecified state.
+       * </pre>
+       *
        * <code>STATE_UNSPECIFIED = 0;</code>
        */
       public static final int STATE_UNSPECIFIED_VALUE = 0;
@@ -986,6 +1009,21 @@ public final class LockOuterClass {
       return getExternalInstance();
     }
 
+    public static final int INSTANCE_PROLONGATION_FIELD_NUMBER = 11;
+    private boolean instanceProlongation_;
+    /**
+     * <pre>
+     * Indicates whether the subscription lock can be automatically prolonged/renewed.
+     * </pre>
+     *
+     * <code>bool instance_prolongation = 11;</code>
+     * @return The instanceProlongation.
+     */
+    @java.lang.Override
+    public boolean getInstanceProlongation() {
+      return instanceProlongation_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1029,6 +1067,9 @@ public final class LockOuterClass {
       }
       if (externalInstance_ != null) {
         output.writeMessage(10, getExternalInstance());
+      }
+      if (instanceProlongation_ != false) {
+        output.writeBool(11, instanceProlongation_);
       }
       unknownFields.writeTo(output);
     }
@@ -1074,6 +1115,10 @@ public final class LockOuterClass {
       if (externalInstance_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getExternalInstance());
+      }
+      if (instanceProlongation_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, instanceProlongation_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1124,6 +1169,8 @@ public final class LockOuterClass {
         if (!getExternalInstance()
             .equals(other.getExternalInstance())) return false;
       }
+      if (getInstanceProlongation()
+          != other.getInstanceProlongation()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1165,6 +1212,9 @@ public final class LockOuterClass {
         hash = (37 * hash) + EXTERNAL_INSTANCE_FIELD_NUMBER;
         hash = (53 * hash) + getExternalInstance().hashCode();
       }
+      hash = (37 * hash) + INSTANCE_PROLONGATION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getInstanceProlongation());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1338,6 +1388,8 @@ public final class LockOuterClass {
           externalInstance_ = null;
           externalInstanceBuilder_ = null;
         }
+        instanceProlongation_ = false;
+
         return this;
       }
 
@@ -1394,6 +1446,7 @@ public final class LockOuterClass {
         } else {
           result.externalInstance_ = externalInstanceBuilder_.build();
         }
+        result.instanceProlongation_ = instanceProlongation_;
         onBuilt();
         return result;
       }
@@ -1475,6 +1528,9 @@ public final class LockOuterClass {
         }
         if (other.hasExternalInstance()) {
           mergeExternalInstance(other.getExternalInstance());
+        }
+        if (other.getInstanceProlongation() != false) {
+          setInstanceProlongation(other.getInstanceProlongation());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2746,6 +2802,49 @@ public final class LockOuterClass {
         }
         return externalInstanceBuilder_;
       }
+
+      private boolean instanceProlongation_ ;
+      /**
+       * <pre>
+       * Indicates whether the subscription lock can be automatically prolonged/renewed.
+       * </pre>
+       *
+       * <code>bool instance_prolongation = 11;</code>
+       * @return The instanceProlongation.
+       */
+      @java.lang.Override
+      public boolean getInstanceProlongation() {
+        return instanceProlongation_;
+      }
+      /**
+       * <pre>
+       * Indicates whether the subscription lock can be automatically prolonged/renewed.
+       * </pre>
+       *
+       * <code>bool instance_prolongation = 11;</code>
+       * @param value The instanceProlongation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceProlongation(boolean value) {
+        
+        instanceProlongation_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates whether the subscription lock can be automatically prolonged/renewed.
+       * </pre>
+       *
+       * <code>bool instance_prolongation = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInstanceProlongation() {
+        
+        instanceProlongation_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2818,7 +2917,7 @@ public final class LockOuterClass {
       "e.licensemanager.v1\032\037google/protobuf/tim" +
       "estamp.proto\032Byandex/cloud/marketplace/l" +
       "icensemanager/v1/external_instance.proto" +
-      "\"\366\003\n\004Lock\022\n\n\002id\030\001 \001(\t\022\023\n\013instance_id\030\002 \001" +
+      "\"\225\004\n\004Lock\022\n\n\002id\030\001 \001(\t\022\023\n\013instance_id\030\002 \001" +
       "(\t\022\023\n\013resource_id\030\003 \001(\t\022.\n\nstart_time\030\004 " +
       "\001(\0132\032.google.protobuf.Timestamp\022,\n\010end_t" +
       "ime\030\005 \001(\0132\032.google.protobuf.Timestamp\022.\n" +
@@ -2828,13 +2927,14 @@ public final class LockOuterClass {
       "oud.marketplace.licensemanager.v1.Lock.S" +
       "tate\022\023\n\013template_id\030\t \001(\t\022W\n\021external_in" +
       "stance\030\n \001(\0132<.yandex.cloud.marketplace." +
-      "licensemanager.v1.ExternalInstance\"E\n\005St" +
-      "ate\022\025\n\021STATE_UNSPECIFIED\020\000\022\014\n\010UNLOCKED\020\001" +
-      "\022\n\n\006LOCKED\020\002\022\013\n\007DELETED\020\003B\217\001\n.yandex.clo" +
-      "ud.api.marketplace.licensemanager.v1Z]gi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/marketplace/licensemanager/v1;lic" +
-      "ensemanagerb\006proto3"
+      "licensemanager.v1.ExternalInstance\022\035\n\025in" +
+      "stance_prolongation\030\013 \001(\010\"E\n\005State\022\025\n\021ST" +
+      "ATE_UNSPECIFIED\020\000\022\014\n\010UNLOCKED\020\001\022\n\n\006LOCKE" +
+      "D\020\002\022\013\n\007DELETED\020\003B\217\001\n.yandex.cloud.api.ma" +
+      "rketplace.licensemanager.v1Z]github.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/ma" +
+      "rketplace/licensemanager/v1;licensemanag" +
+      "erb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2847,7 +2947,7 @@ public final class LockOuterClass {
     internal_static_yandex_cloud_marketplace_licensemanager_v1_Lock_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_marketplace_licensemanager_v1_Lock_descriptor,
-        new java.lang.String[] { "Id", "InstanceId", "ResourceId", "StartTime", "EndTime", "CreatedAt", "UpdatedAt", "State", "TemplateId", "ExternalInstance", });
+        new java.lang.String[] { "Id", "InstanceId", "ResourceId", "StartTime", "EndTime", "CreatedAt", "UpdatedAt", "State", "TemplateId", "ExternalInstance", "InstanceProlongation", });
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.marketplace.licensemanager.v1.ExternalInstanceOuterClass.getDescriptor();
   }

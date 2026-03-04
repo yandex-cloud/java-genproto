@@ -59,16 +59,28 @@ public final class ImageOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
@@ -622,6 +634,10 @@ public final class ImageOuterClass {
     public enum Status
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Unknown status.
+       * </pre>
+       *
        * <code>STATUS_UNSPECIFIED = 0;</code>
        */
       STATUS_UNSPECIFIED(0),
@@ -661,6 +677,10 @@ public final class ImageOuterClass {
       ;
 
       /**
+       * <pre>
+       * Unknown status.
+       * </pre>
+       *
        * <code>STATUS_UNSPECIFIED = 0;</code>
        */
       public static final int STATUS_UNSPECIFIED_VALUE = 0;
@@ -878,6 +898,10 @@ public final class ImageOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return Whether the createdAt field is set.
      */
@@ -886,6 +910,10 @@ public final class ImageOuterClass {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return The createdAt.
      */
@@ -894,6 +922,10 @@ public final class ImageOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     @java.lang.Override
@@ -2247,6 +2279,10 @@ public final class ImageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        * @return Whether the createdAt field is set.
        */
@@ -2254,6 +2290,10 @@ public final class ImageOuterClass {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        * @return The createdAt.
        */
@@ -2265,6 +2305,10 @@ public final class ImageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -2281,6 +2325,10 @@ public final class ImageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(
@@ -2295,6 +2343,10 @@ public final class ImageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -2313,6 +2365,10 @@ public final class ImageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder clearCreatedAt() {
@@ -2327,6 +2383,10 @@ public final class ImageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -2335,6 +2395,10 @@ public final class ImageOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -2346,6 +2410,10 @@ public final class ImageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3768,6 +3836,36 @@ public final class ImageOuterClass {
      * @return The type.
      */
     yandex.cloud.api.compute.v1.ImageOuterClass.Os.Type getType();
+
+    /**
+     * <pre>
+     * Gpu type.
+     * This field is used to correctly select a node with a host gpu that matches the gpu from here, in order to run the VM on it.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.Nvidia nvidia = 2;</code>
+     * @return Whether the nvidia field is set.
+     */
+    boolean hasNvidia();
+    /**
+     * <pre>
+     * Gpu type.
+     * This field is used to correctly select a node with a host gpu that matches the gpu from here, in order to run the VM on it.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.Nvidia nvidia = 2;</code>
+     * @return The nvidia.
+     */
+    yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia getNvidia();
+    /**
+     * <pre>
+     * Gpu type.
+     * This field is used to correctly select a node with a host gpu that matches the gpu from here, in order to run the VM on it.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.Nvidia nvidia = 2;</code>
+     */
+    yandex.cloud.api.compute.v1.ImageOuterClass.NvidiaOrBuilder getNvidiaOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.Os}
@@ -3821,6 +3919,19 @@ public final class ImageOuterClass {
               type_ = rawValue;
               break;
             }
+            case 18: {
+              yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia.Builder subBuilder = null;
+              if (nvidia_ != null) {
+                subBuilder = nvidia_.toBuilder();
+              }
+              nvidia_ = input.readMessage(yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(nvidia_);
+                nvidia_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3859,6 +3970,10 @@ public final class ImageOuterClass {
     public enum Type
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Unknown operating system type.
+       * </pre>
+       *
        * <code>TYPE_UNSPECIFIED = 0;</code>
        */
       TYPE_UNSPECIFIED(0),
@@ -3882,6 +3997,10 @@ public final class ImageOuterClass {
       ;
 
       /**
+       * <pre>
+       * Unknown operating system type.
+       * </pre>
+       *
        * <code>TYPE_UNSPECIFIED = 0;</code>
        */
       public static final int TYPE_UNSPECIFIED_VALUE = 0;
@@ -4015,6 +4134,47 @@ public final class ImageOuterClass {
       return result == null ? yandex.cloud.api.compute.v1.ImageOuterClass.Os.Type.UNRECOGNIZED : result;
     }
 
+    public static final int NVIDIA_FIELD_NUMBER = 2;
+    private yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia nvidia_;
+    /**
+     * <pre>
+     * Gpu type.
+     * This field is used to correctly select a node with a host gpu that matches the gpu from here, in order to run the VM on it.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.Nvidia nvidia = 2;</code>
+     * @return Whether the nvidia field is set.
+     */
+    @java.lang.Override
+    public boolean hasNvidia() {
+      return nvidia_ != null;
+    }
+    /**
+     * <pre>
+     * Gpu type.
+     * This field is used to correctly select a node with a host gpu that matches the gpu from here, in order to run the VM on it.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.Nvidia nvidia = 2;</code>
+     * @return The nvidia.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia getNvidia() {
+      return nvidia_ == null ? yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia.getDefaultInstance() : nvidia_;
+    }
+    /**
+     * <pre>
+     * Gpu type.
+     * This field is used to correctly select a node with a host gpu that matches the gpu from here, in order to run the VM on it.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.Nvidia nvidia = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.ImageOuterClass.NvidiaOrBuilder getNvidiaOrBuilder() {
+      return getNvidia();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4032,6 +4192,9 @@ public final class ImageOuterClass {
       if (type_ != yandex.cloud.api.compute.v1.ImageOuterClass.Os.Type.TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(1, type_);
       }
+      if (nvidia_ != null) {
+        output.writeMessage(2, getNvidia());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4044,6 +4207,10 @@ public final class ImageOuterClass {
       if (type_ != yandex.cloud.api.compute.v1.ImageOuterClass.Os.Type.TYPE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, type_);
+      }
+      if (nvidia_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getNvidia());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4061,6 +4228,11 @@ public final class ImageOuterClass {
       yandex.cloud.api.compute.v1.ImageOuterClass.Os other = (yandex.cloud.api.compute.v1.ImageOuterClass.Os) obj;
 
       if (type_ != other.type_) return false;
+      if (hasNvidia() != other.hasNvidia()) return false;
+      if (hasNvidia()) {
+        if (!getNvidia()
+            .equals(other.getNvidia())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4074,6 +4246,10 @@ public final class ImageOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + type_;
+      if (hasNvidia()) {
+        hash = (37 * hash) + NVIDIA_FIELD_NUMBER;
+        hash = (53 * hash) + getNvidia().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4209,6 +4385,12 @@ public final class ImageOuterClass {
         super.clear();
         type_ = 0;
 
+        if (nvidiaBuilder_ == null) {
+          nvidia_ = null;
+        } else {
+          nvidia_ = null;
+          nvidiaBuilder_ = null;
+        }
         return this;
       }
 
@@ -4236,6 +4418,11 @@ public final class ImageOuterClass {
       public yandex.cloud.api.compute.v1.ImageOuterClass.Os buildPartial() {
         yandex.cloud.api.compute.v1.ImageOuterClass.Os result = new yandex.cloud.api.compute.v1.ImageOuterClass.Os(this);
         result.type_ = type_;
+        if (nvidiaBuilder_ == null) {
+          result.nvidia_ = nvidia_;
+        } else {
+          result.nvidia_ = nvidiaBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -4286,6 +4473,9 @@ public final class ImageOuterClass {
         if (other == yandex.cloud.api.compute.v1.ImageOuterClass.Os.getDefaultInstance()) return this;
         if (other.type_ != 0) {
           setTypeValue(other.getTypeValue());
+        }
+        if (other.hasNvidia()) {
+          mergeNvidia(other.getNvidia());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4394,6 +4584,170 @@ public final class ImageOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia nvidia_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia, yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia.Builder, yandex.cloud.api.compute.v1.ImageOuterClass.NvidiaOrBuilder> nvidiaBuilder_;
+      /**
+       * <pre>
+       * Gpu type.
+       * This field is used to correctly select a node with a host gpu that matches the gpu from here, in order to run the VM on it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.Nvidia nvidia = 2;</code>
+       * @return Whether the nvidia field is set.
+       */
+      public boolean hasNvidia() {
+        return nvidiaBuilder_ != null || nvidia_ != null;
+      }
+      /**
+       * <pre>
+       * Gpu type.
+       * This field is used to correctly select a node with a host gpu that matches the gpu from here, in order to run the VM on it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.Nvidia nvidia = 2;</code>
+       * @return The nvidia.
+       */
+      public yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia getNvidia() {
+        if (nvidiaBuilder_ == null) {
+          return nvidia_ == null ? yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia.getDefaultInstance() : nvidia_;
+        } else {
+          return nvidiaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Gpu type.
+       * This field is used to correctly select a node with a host gpu that matches the gpu from here, in order to run the VM on it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.Nvidia nvidia = 2;</code>
+       */
+      public Builder setNvidia(yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia value) {
+        if (nvidiaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          nvidia_ = value;
+          onChanged();
+        } else {
+          nvidiaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Gpu type.
+       * This field is used to correctly select a node with a host gpu that matches the gpu from here, in order to run the VM on it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.Nvidia nvidia = 2;</code>
+       */
+      public Builder setNvidia(
+          yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia.Builder builderForValue) {
+        if (nvidiaBuilder_ == null) {
+          nvidia_ = builderForValue.build();
+          onChanged();
+        } else {
+          nvidiaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Gpu type.
+       * This field is used to correctly select a node with a host gpu that matches the gpu from here, in order to run the VM on it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.Nvidia nvidia = 2;</code>
+       */
+      public Builder mergeNvidia(yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia value) {
+        if (nvidiaBuilder_ == null) {
+          if (nvidia_ != null) {
+            nvidia_ =
+              yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia.newBuilder(nvidia_).mergeFrom(value).buildPartial();
+          } else {
+            nvidia_ = value;
+          }
+          onChanged();
+        } else {
+          nvidiaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Gpu type.
+       * This field is used to correctly select a node with a host gpu that matches the gpu from here, in order to run the VM on it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.Nvidia nvidia = 2;</code>
+       */
+      public Builder clearNvidia() {
+        if (nvidiaBuilder_ == null) {
+          nvidia_ = null;
+          onChanged();
+        } else {
+          nvidia_ = null;
+          nvidiaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Gpu type.
+       * This field is used to correctly select a node with a host gpu that matches the gpu from here, in order to run the VM on it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.Nvidia nvidia = 2;</code>
+       */
+      public yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia.Builder getNvidiaBuilder() {
+        
+        onChanged();
+        return getNvidiaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Gpu type.
+       * This field is used to correctly select a node with a host gpu that matches the gpu from here, in order to run the VM on it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.Nvidia nvidia = 2;</code>
+       */
+      public yandex.cloud.api.compute.v1.ImageOuterClass.NvidiaOrBuilder getNvidiaOrBuilder() {
+        if (nvidiaBuilder_ != null) {
+          return nvidiaBuilder_.getMessageOrBuilder();
+        } else {
+          return nvidia_ == null ?
+              yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia.getDefaultInstance() : nvidia_;
+        }
+      }
+      /**
+       * <pre>
+       * Gpu type.
+       * This field is used to correctly select a node with a host gpu that matches the gpu from here, in order to run the VM on it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.Nvidia nvidia = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia, yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia.Builder, yandex.cloud.api.compute.v1.ImageOuterClass.NvidiaOrBuilder> 
+          getNvidiaFieldBuilder() {
+        if (nvidiaBuilder_ == null) {
+          nvidiaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia, yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia.Builder, yandex.cloud.api.compute.v1.ImageOuterClass.NvidiaOrBuilder>(
+                  getNvidia(),
+                  getParentForChildren(),
+                  isClean());
+          nvidia_ = null;
+        }
+        return nvidiaBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4447,6 +4801,610 @@ public final class ImageOuterClass {
 
   }
 
+  public interface NvidiaOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.Nvidia)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Gpu driver version.
+     * </pre>
+     *
+     * <code>string driver = 1;</code>
+     * @return The driver.
+     */
+    java.lang.String getDriver();
+    /**
+     * <pre>
+     * Gpu driver version.
+     * </pre>
+     *
+     * <code>string driver = 1;</code>
+     * @return The bytes for driver.
+     */
+    com.google.protobuf.ByteString
+        getDriverBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.Nvidia}
+   */
+  public static final class Nvidia extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.Nvidia)
+      NvidiaOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Nvidia.newBuilder() to construct.
+    private Nvidia(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Nvidia() {
+      driver_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Nvidia();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Nvidia(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              driver_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.ImageOuterClass.internal_static_yandex_cloud_compute_v1_Nvidia_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.ImageOuterClass.internal_static_yandex_cloud_compute_v1_Nvidia_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia.class, yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia.Builder.class);
+    }
+
+    public static final int DRIVER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object driver_;
+    /**
+     * <pre>
+     * Gpu driver version.
+     * </pre>
+     *
+     * <code>string driver = 1;</code>
+     * @return The driver.
+     */
+    @java.lang.Override
+    public java.lang.String getDriver() {
+      java.lang.Object ref = driver_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        driver_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Gpu driver version.
+     * </pre>
+     *
+     * <code>string driver = 1;</code>
+     * @return The bytes for driver.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDriverBytes() {
+      java.lang.Object ref = driver_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        driver_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(driver_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, driver_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(driver_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, driver_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia other = (yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia) obj;
+
+      if (!getDriver()
+          .equals(other.getDriver())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DRIVER_FIELD_NUMBER;
+      hash = (53 * hash) + getDriver().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.Nvidia}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.Nvidia)
+        yandex.cloud.api.compute.v1.ImageOuterClass.NvidiaOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.ImageOuterClass.internal_static_yandex_cloud_compute_v1_Nvidia_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.ImageOuterClass.internal_static_yandex_cloud_compute_v1_Nvidia_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia.class, yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        driver_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.ImageOuterClass.internal_static_yandex_cloud_compute_v1_Nvidia_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia build() {
+        yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia buildPartial() {
+        yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia result = new yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia(this);
+        result.driver_ = driver_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia) {
+          return mergeFrom((yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia other) {
+        if (other == yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia.getDefaultInstance()) return this;
+        if (!other.getDriver().isEmpty()) {
+          driver_ = other.driver_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object driver_ = "";
+      /**
+       * <pre>
+       * Gpu driver version.
+       * </pre>
+       *
+       * <code>string driver = 1;</code>
+       * @return The driver.
+       */
+      public java.lang.String getDriver() {
+        java.lang.Object ref = driver_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          driver_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Gpu driver version.
+       * </pre>
+       *
+       * <code>string driver = 1;</code>
+       * @return The bytes for driver.
+       */
+      public com.google.protobuf.ByteString
+          getDriverBytes() {
+        java.lang.Object ref = driver_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          driver_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Gpu driver version.
+       * </pre>
+       *
+       * <code>string driver = 1;</code>
+       * @param value The driver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDriver(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        driver_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Gpu driver version.
+       * </pre>
+       *
+       * <code>string driver = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDriver() {
+        
+        driver_ = getDefaultInstance().getDriver();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Gpu driver version.
+       * </pre>
+       *
+       * <code>string driver = 1;</code>
+       * @param value The bytes for driver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDriverBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        driver_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.Nvidia)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.Nvidia)
+    private static final yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia();
+    }
+
+    public static yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Nvidia>
+        PARSER = new com.google.protobuf.AbstractParser<Nvidia>() {
+      @java.lang.Override
+      public Nvidia parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Nvidia(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Nvidia> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Nvidia> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.ImageOuterClass.Nvidia getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_Image_descriptor;
   private static final 
@@ -4462,6 +5420,11 @@ public final class ImageOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_Os_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_Nvidia_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_Nvidia_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4491,12 +5454,14 @@ public final class ImageOuterClass {
       "Key\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
       "\030\002 \001(\t:\0028\001\"R\n\006Status\022\026\n\022STATUS_UNSPECIFI" +
       "ED\020\000\022\014\n\010CREATING\020\001\022\t\n\005READY\020\002\022\t\n\005ERROR\020\003" +
-      "\022\014\n\010DELETING\020\004\"j\n\002Os\022.\n\004type\030\001 \001(\0162 .yan" +
-      "dex.cloud.compute.v1.Os.Type\"4\n\004Type\022\024\n\020" +
-      "TYPE_UNSPECIFIED\020\000\022\t\n\005LINUX\020\001\022\013\n\007WINDOWS" +
-      "\020\002Bb\n\033yandex.cloud.api.compute.v1ZCgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/compute/v1;computeb\006proto3"
+      "\022\014\n\010DELETING\020\004\"\233\001\n\002Os\022.\n\004type\030\001 \001(\0162 .ya" +
+      "ndex.cloud.compute.v1.Os.Type\022/\n\006nvidia\030" +
+      "\002 \001(\0132\037.yandex.cloud.compute.v1.Nvidia\"4" +
+      "\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005LINUX\020\001\022" +
+      "\013\n\007WINDOWS\020\002\"\030\n\006Nvidia\022\016\n\006driver\030\001 \001(\tBb" +
+      "\n\033yandex.cloud.api.compute.v1ZCgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "compute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4522,7 +5487,13 @@ public final class ImageOuterClass {
     internal_static_yandex_cloud_compute_v1_Os_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_Os_descriptor,
-        new java.lang.String[] { "Type", });
+        new java.lang.String[] { "Type", "Nvidia", });
+    internal_static_yandex_cloud_compute_v1_Nvidia_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_compute_v1_Nvidia_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_Nvidia_descriptor,
+        new java.lang.String[] { "Driver", });
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.compute.v1.Kek.getDescriptor();
     yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.getDescriptor();

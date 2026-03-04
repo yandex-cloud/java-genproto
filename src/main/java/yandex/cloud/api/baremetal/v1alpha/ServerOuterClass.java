@@ -4302,6 +4302,7 @@ public final class ServerOuterClass {
     /**
      * <pre>
      * MAC address that is assigned to the network interface.
+     * Read only field.
      * </pre>
      *
      * <code>string mac_address = 2;</code>
@@ -4311,6 +4312,7 @@ public final class ServerOuterClass {
     /**
      * <pre>
      * MAC address that is assigned to the network interface.
+     * Read only field.
      * </pre>
      *
      * <code>string mac_address = 2;</code>
@@ -4321,79 +4323,145 @@ public final class ServerOuterClass {
 
     /**
      * <pre>
+     * &#64;deprecated. Use `interface.ipaddress` instead.
      * IPv4 address that is assigned to the server for this network interface.
+     * Read only field.
      * </pre>
      *
-     * <code>string ip_address = 3;</code>
+     * <code>string ip_address = 3 [deprecated = true];</code>
+     * @deprecated
      * @return The ipAddress.
      */
-    java.lang.String getIpAddress();
+    @java.lang.Deprecated java.lang.String getIpAddress();
     /**
      * <pre>
+     * &#64;deprecated. Use `interface.ipaddress` instead.
      * IPv4 address that is assigned to the server for this network interface.
+     * Read only field.
      * </pre>
      *
-     * <code>string ip_address = 3;</code>
+     * <code>string ip_address = 3 [deprecated = true];</code>
+     * @deprecated
      * @return The bytes for ipAddress.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getIpAddressBytes();
 
     /**
      * <pre>
-     * Private subnet.
+     * &#64;deprecated Private subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the privateSubnet field is set.
      */
-    boolean hasPrivateSubnet();
+    @java.lang.Deprecated boolean hasPrivateSubnet();
     /**
      * <pre>
-     * Private subnet.
+     * &#64;deprecated Private subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
+     * @deprecated
      * @return The privateSubnet.
      */
-    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface getPrivateSubnet();
+    @java.lang.Deprecated yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface getPrivateSubnet();
     /**
      * <pre>
-     * Private subnet.
+     * &#64;deprecated Private subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
      */
-    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterfaceOrBuilder getPrivateSubnetOrBuilder();
+    @java.lang.Deprecated yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterfaceOrBuilder getPrivateSubnetOrBuilder();
 
     /**
      * <pre>
-     * Public subnet.
+     * &#64;deprecated Public subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the publicSubnet field is set.
      */
-    boolean hasPublicSubnet();
+    @java.lang.Deprecated boolean hasPublicSubnet();
     /**
      * <pre>
-     * Public subnet.
+     * &#64;deprecated Public subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
+     * @deprecated
      * @return The publicSubnet.
      */
-    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface getPublicSubnet();
+    @java.lang.Deprecated yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface getPublicSubnet();
     /**
      * <pre>
-     * Public subnet.
+     * &#64;deprecated Public subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
      */
-    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterfaceOrBuilder getPublicSubnetOrBuilder();
+    @java.lang.Deprecated yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterfaceOrBuilder getPublicSubnetOrBuilder();
+
+    /**
+     * <pre>
+     * Private interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 12;</code>
+     * @return Whether the privateInterface field is set.
+     */
+    boolean hasPrivateInterface();
+    /**
+     * <pre>
+     * Private interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 12;</code>
+     * @return The privateInterface.
+     */
+    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface getPrivateInterface();
+    /**
+     * <pre>
+     * Private interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 12;</code>
+     */
+    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterfaceOrBuilder getPrivateInterfaceOrBuilder();
+
+    /**
+     * <pre>
+     * Public interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 13;</code>
+     * @return Whether the publicInterface field is set.
+     */
+    boolean hasPublicInterface();
+    /**
+     * <pre>
+     * Public interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 13;</code>
+     * @return The publicInterface.
+     */
+    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface getPublicInterface();
+    /**
+     * <pre>
+     * Public interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 13;</code>
+     */
+    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterfaceOrBuilder getPublicInterfaceOrBuilder();
 
     public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.NetworkInterface.SubnetCase getSubnetCase();
+
+    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.NetworkInterface.InterfaceCase getInterfaceCase();
   }
   /**
    * Protobuf type {@code yandex.cloud.baremetal.v1alpha.NetworkInterface}
@@ -4489,6 +4557,34 @@ public final class ServerOuterClass {
               subnetCase_ = 8;
               break;
             }
+            case 98: {
+              yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.Builder subBuilder = null;
+              if (interfaceCase_ == 12) {
+                subBuilder = ((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) interface_).toBuilder();
+              }
+              interface_ =
+                  input.readMessage(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) interface_);
+                interface_ = subBuilder.buildPartial();
+              }
+              interfaceCase_ = 12;
+              break;
+            }
+            case 106: {
+              yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.Builder subBuilder = null;
+              if (interfaceCase_ == 13) {
+                subBuilder = ((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) interface_).toBuilder();
+              }
+              interface_ =
+                  input.readMessage(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) interface_);
+                interface_ = subBuilder.buildPartial();
+              }
+              interfaceCase_ = 13;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4526,8 +4622,8 @@ public final class ServerOuterClass {
     public enum SubnetCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      PRIVATE_SUBNET(7),
-      PUBLIC_SUBNET(8),
+      @java.lang.Deprecated PRIVATE_SUBNET(7),
+      @java.lang.Deprecated PUBLIC_SUBNET(8),
       SUBNET_NOT_SET(0);
       private final int value;
       private SubnetCase(int value) {
@@ -4560,6 +4656,47 @@ public final class ServerOuterClass {
     getSubnetCase() {
       return SubnetCase.forNumber(
           subnetCase_);
+    }
+
+    private int interfaceCase_ = 0;
+    private java.lang.Object interface_;
+    public enum InterfaceCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      PRIVATE_INTERFACE(12),
+      PUBLIC_INTERFACE(13),
+      INTERFACE_NOT_SET(0);
+      private final int value;
+      private InterfaceCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static InterfaceCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static InterfaceCase forNumber(int value) {
+        switch (value) {
+          case 12: return PRIVATE_INTERFACE;
+          case 13: return PUBLIC_INTERFACE;
+          case 0: return INTERFACE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public InterfaceCase
+    getInterfaceCase() {
+      return InterfaceCase.forNumber(
+          interfaceCase_);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -4613,6 +4750,7 @@ public final class ServerOuterClass {
     /**
      * <pre>
      * MAC address that is assigned to the network interface.
+     * Read only field.
      * </pre>
      *
      * <code>string mac_address = 2;</code>
@@ -4634,6 +4772,7 @@ public final class ServerOuterClass {
     /**
      * <pre>
      * MAC address that is assigned to the network interface.
+     * Read only field.
      * </pre>
      *
      * <code>string mac_address = 2;</code>
@@ -4658,14 +4797,17 @@ public final class ServerOuterClass {
     private volatile java.lang.Object ipAddress_;
     /**
      * <pre>
+     * &#64;deprecated. Use `interface.ipaddress` instead.
      * IPv4 address that is assigned to the server for this network interface.
+     * Read only field.
      * </pre>
      *
-     * <code>string ip_address = 3;</code>
+     * <code>string ip_address = 3 [deprecated = true];</code>
+     * @deprecated
      * @return The ipAddress.
      */
     @java.lang.Override
-    public java.lang.String getIpAddress() {
+    @java.lang.Deprecated public java.lang.String getIpAddress() {
       java.lang.Object ref = ipAddress_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -4679,14 +4821,17 @@ public final class ServerOuterClass {
     }
     /**
      * <pre>
+     * &#64;deprecated. Use `interface.ipaddress` instead.
      * IPv4 address that is assigned to the server for this network interface.
+     * Read only field.
      * </pre>
      *
-     * <code>string ip_address = 3;</code>
+     * <code>string ip_address = 3 [deprecated = true];</code>
+     * @deprecated
      * @return The bytes for ipAddress.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getIpAddressBytes() {
       java.lang.Object ref = ipAddress_;
       if (ref instanceof java.lang.String) {
@@ -4703,26 +4848,28 @@ public final class ServerOuterClass {
     public static final int PRIVATE_SUBNET_FIELD_NUMBER = 7;
     /**
      * <pre>
-     * Private subnet.
+     * &#64;deprecated Private subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the privateSubnet field is set.
      */
     @java.lang.Override
-    public boolean hasPrivateSubnet() {
+    @java.lang.Deprecated public boolean hasPrivateSubnet() {
       return subnetCase_ == 7;
     }
     /**
      * <pre>
-     * Private subnet.
+     * &#64;deprecated Private subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
+     * @deprecated
      * @return The privateSubnet.
      */
     @java.lang.Override
-    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface getPrivateSubnet() {
+    @java.lang.Deprecated public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface getPrivateSubnet() {
       if (subnetCase_ == 7) {
          return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface) subnet_;
       }
@@ -4730,13 +4877,13 @@ public final class ServerOuterClass {
     }
     /**
      * <pre>
-     * Private subnet.
+     * &#64;deprecated Private subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterfaceOrBuilder getPrivateSubnetOrBuilder() {
+    @java.lang.Deprecated public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterfaceOrBuilder getPrivateSubnetOrBuilder() {
       if (subnetCase_ == 7) {
          return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface) subnet_;
       }
@@ -4746,26 +4893,28 @@ public final class ServerOuterClass {
     public static final int PUBLIC_SUBNET_FIELD_NUMBER = 8;
     /**
      * <pre>
-     * Public subnet.
+     * &#64;deprecated Public subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the publicSubnet field is set.
      */
     @java.lang.Override
-    public boolean hasPublicSubnet() {
+    @java.lang.Deprecated public boolean hasPublicSubnet() {
       return subnetCase_ == 8;
     }
     /**
      * <pre>
-     * Public subnet.
+     * &#64;deprecated Public subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
+     * @deprecated
      * @return The publicSubnet.
      */
     @java.lang.Override
-    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface getPublicSubnet() {
+    @java.lang.Deprecated public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface getPublicSubnet() {
       if (subnetCase_ == 8) {
          return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface) subnet_;
       }
@@ -4773,17 +4922,103 @@ public final class ServerOuterClass {
     }
     /**
      * <pre>
-     * Public subnet.
+     * &#64;deprecated Public subnet.
      * </pre>
      *
-     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterfaceOrBuilder getPublicSubnetOrBuilder() {
+    @java.lang.Deprecated public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterfaceOrBuilder getPublicSubnetOrBuilder() {
       if (subnetCase_ == 8) {
          return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface) subnet_;
       }
       return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface.getDefaultInstance();
+    }
+
+    public static final int PRIVATE_INTERFACE_FIELD_NUMBER = 12;
+    /**
+     * <pre>
+     * Private interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 12;</code>
+     * @return Whether the privateInterface field is set.
+     */
+    @java.lang.Override
+    public boolean hasPrivateInterface() {
+      return interfaceCase_ == 12;
+    }
+    /**
+     * <pre>
+     * Private interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 12;</code>
+     * @return The privateInterface.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface getPrivateInterface() {
+      if (interfaceCase_ == 12) {
+         return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) interface_;
+      }
+      return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Private interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 12;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterfaceOrBuilder getPrivateInterfaceOrBuilder() {
+      if (interfaceCase_ == 12) {
+         return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) interface_;
+      }
+      return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.getDefaultInstance();
+    }
+
+    public static final int PUBLIC_INTERFACE_FIELD_NUMBER = 13;
+    /**
+     * <pre>
+     * Public interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 13;</code>
+     * @return Whether the publicInterface field is set.
+     */
+    @java.lang.Override
+    public boolean hasPublicInterface() {
+      return interfaceCase_ == 13;
+    }
+    /**
+     * <pre>
+     * Public interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 13;</code>
+     * @return The publicInterface.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface getPublicInterface() {
+      if (interfaceCase_ == 13) {
+         return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) interface_;
+      }
+      return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Public interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 13;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterfaceOrBuilder getPublicInterfaceOrBuilder() {
+      if (interfaceCase_ == 13) {
+         return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) interface_;
+      }
+      return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4815,6 +5050,12 @@ public final class ServerOuterClass {
       if (subnetCase_ == 8) {
         output.writeMessage(8, (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface) subnet_);
       }
+      if (interfaceCase_ == 12) {
+        output.writeMessage(12, (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) interface_);
+      }
+      if (interfaceCase_ == 13) {
+        output.writeMessage(13, (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) interface_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4840,6 +5081,14 @@ public final class ServerOuterClass {
       if (subnetCase_ == 8) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface) subnet_);
+      }
+      if (interfaceCase_ == 12) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) interface_);
+      }
+      if (interfaceCase_ == 13) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) interface_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4875,6 +5124,19 @@ public final class ServerOuterClass {
         case 0:
         default:
       }
+      if (!getInterfaceCase().equals(other.getInterfaceCase())) return false;
+      switch (interfaceCase_) {
+        case 12:
+          if (!getPrivateInterface()
+              .equals(other.getPrivateInterface())) return false;
+          break;
+        case 13:
+          if (!getPublicInterface()
+              .equals(other.getPublicInterface())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4900,6 +5162,18 @@ public final class ServerOuterClass {
         case 8:
           hash = (37 * hash) + PUBLIC_SUBNET_FIELD_NUMBER;
           hash = (53 * hash) + getPublicSubnet().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      switch (interfaceCase_) {
+        case 12:
+          hash = (37 * hash) + PRIVATE_INTERFACE_FIELD_NUMBER;
+          hash = (53 * hash) + getPrivateInterface().hashCode();
+          break;
+        case 13:
+          hash = (37 * hash) + PUBLIC_INTERFACE_FIELD_NUMBER;
+          hash = (53 * hash) + getPublicInterface().hashCode();
           break;
         case 0:
         default:
@@ -5045,6 +5319,8 @@ public final class ServerOuterClass {
 
         subnetCase_ = 0;
         subnet_ = null;
+        interfaceCase_ = 0;
+        interface_ = null;
         return this;
       }
 
@@ -5088,7 +5364,22 @@ public final class ServerOuterClass {
             result.subnet_ = publicSubnetBuilder_.build();
           }
         }
+        if (interfaceCase_ == 12) {
+          if (privateInterfaceBuilder_ == null) {
+            result.interface_ = interface_;
+          } else {
+            result.interface_ = privateInterfaceBuilder_.build();
+          }
+        }
+        if (interfaceCase_ == 13) {
+          if (publicInterfaceBuilder_ == null) {
+            result.interface_ = interface_;
+          } else {
+            result.interface_ = publicInterfaceBuilder_.build();
+          }
+        }
         result.subnetCase_ = subnetCase_;
+        result.interfaceCase_ = interfaceCase_;
         onBuilt();
         return result;
       }
@@ -5162,6 +5453,19 @@ public final class ServerOuterClass {
             break;
           }
         }
+        switch (other.getInterfaceCase()) {
+          case PRIVATE_INTERFACE: {
+            mergePrivateInterface(other.getPrivateInterface());
+            break;
+          }
+          case PUBLIC_INTERFACE: {
+            mergePublicInterface(other.getPublicInterface());
+            break;
+          }
+          case INTERFACE_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -5201,6 +5505,21 @@ public final class ServerOuterClass {
       public Builder clearSubnet() {
         subnetCase_ = 0;
         subnet_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int interfaceCase_ = 0;
+      private java.lang.Object interface_;
+      public InterfaceCase
+          getInterfaceCase() {
+        return InterfaceCase.forNumber(
+            interfaceCase_);
+      }
+
+      public Builder clearInterface() {
+        interfaceCase_ = 0;
+        interface_ = null;
         onChanged();
         return this;
       }
@@ -5306,6 +5625,7 @@ public final class ServerOuterClass {
       /**
        * <pre>
        * MAC address that is assigned to the network interface.
+       * Read only field.
        * </pre>
        *
        * <code>string mac_address = 2;</code>
@@ -5326,6 +5646,7 @@ public final class ServerOuterClass {
       /**
        * <pre>
        * MAC address that is assigned to the network interface.
+       * Read only field.
        * </pre>
        *
        * <code>string mac_address = 2;</code>
@@ -5347,6 +5668,7 @@ public final class ServerOuterClass {
       /**
        * <pre>
        * MAC address that is assigned to the network interface.
+       * Read only field.
        * </pre>
        *
        * <code>string mac_address = 2;</code>
@@ -5366,6 +5688,7 @@ public final class ServerOuterClass {
       /**
        * <pre>
        * MAC address that is assigned to the network interface.
+       * Read only field.
        * </pre>
        *
        * <code>string mac_address = 2;</code>
@@ -5380,6 +5703,7 @@ public final class ServerOuterClass {
       /**
        * <pre>
        * MAC address that is assigned to the network interface.
+       * Read only field.
        * </pre>
        *
        * <code>string mac_address = 2;</code>
@@ -5401,13 +5725,16 @@ public final class ServerOuterClass {
       private java.lang.Object ipAddress_ = "";
       /**
        * <pre>
+       * &#64;deprecated. Use `interface.ipaddress` instead.
        * IPv4 address that is assigned to the server for this network interface.
+       * Read only field.
        * </pre>
        *
-       * <code>string ip_address = 3;</code>
+       * <code>string ip_address = 3 [deprecated = true];</code>
+       * @deprecated
        * @return The ipAddress.
        */
-      public java.lang.String getIpAddress() {
+      @java.lang.Deprecated public java.lang.String getIpAddress() {
         java.lang.Object ref = ipAddress_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -5421,13 +5748,16 @@ public final class ServerOuterClass {
       }
       /**
        * <pre>
+       * &#64;deprecated. Use `interface.ipaddress` instead.
        * IPv4 address that is assigned to the server for this network interface.
+       * Read only field.
        * </pre>
        *
-       * <code>string ip_address = 3;</code>
+       * <code>string ip_address = 3 [deprecated = true];</code>
+       * @deprecated
        * @return The bytes for ipAddress.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getIpAddressBytes() {
         java.lang.Object ref = ipAddress_;
         if (ref instanceof String) {
@@ -5442,14 +5772,17 @@ public final class ServerOuterClass {
       }
       /**
        * <pre>
+       * &#64;deprecated. Use `interface.ipaddress` instead.
        * IPv4 address that is assigned to the server for this network interface.
+       * Read only field.
        * </pre>
        *
-       * <code>string ip_address = 3;</code>
+       * <code>string ip_address = 3 [deprecated = true];</code>
+       * @deprecated
        * @param value The ipAddress to set.
        * @return This builder for chaining.
        */
-      public Builder setIpAddress(
+      @java.lang.Deprecated public Builder setIpAddress(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -5461,13 +5794,16 @@ public final class ServerOuterClass {
       }
       /**
        * <pre>
+       * &#64;deprecated. Use `interface.ipaddress` instead.
        * IPv4 address that is assigned to the server for this network interface.
+       * Read only field.
        * </pre>
        *
-       * <code>string ip_address = 3;</code>
+       * <code>string ip_address = 3 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearIpAddress() {
+      @java.lang.Deprecated public Builder clearIpAddress() {
         
         ipAddress_ = getDefaultInstance().getIpAddress();
         onChanged();
@@ -5475,14 +5811,17 @@ public final class ServerOuterClass {
       }
       /**
        * <pre>
+       * &#64;deprecated. Use `interface.ipaddress` instead.
        * IPv4 address that is assigned to the server for this network interface.
+       * Read only field.
        * </pre>
        *
-       * <code>string ip_address = 3;</code>
+       * <code>string ip_address = 3 [deprecated = true];</code>
+       * @deprecated
        * @param value The bytes for ipAddress to set.
        * @return This builder for chaining.
        */
-      public Builder setIpAddressBytes(
+      @java.lang.Deprecated public Builder setIpAddressBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -5498,26 +5837,28 @@ public final class ServerOuterClass {
           yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterfaceOrBuilder> privateSubnetBuilder_;
       /**
        * <pre>
-       * Private subnet.
+       * &#64;deprecated Private subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the privateSubnet field is set.
        */
       @java.lang.Override
-      public boolean hasPrivateSubnet() {
+      @java.lang.Deprecated public boolean hasPrivateSubnet() {
         return subnetCase_ == 7;
       }
       /**
        * <pre>
-       * Private subnet.
+       * &#64;deprecated Private subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
+       * @deprecated
        * @return The privateSubnet.
        */
       @java.lang.Override
-      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface getPrivateSubnet() {
+      @java.lang.Deprecated public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface getPrivateSubnet() {
         if (privateSubnetBuilder_ == null) {
           if (subnetCase_ == 7) {
             return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface) subnet_;
@@ -5532,12 +5873,12 @@ public final class ServerOuterClass {
       }
       /**
        * <pre>
-       * Private subnet.
+       * &#64;deprecated Private subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
        */
-      public Builder setPrivateSubnet(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface value) {
+      @java.lang.Deprecated public Builder setPrivateSubnet(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface value) {
         if (privateSubnetBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5552,12 +5893,12 @@ public final class ServerOuterClass {
       }
       /**
        * <pre>
-       * Private subnet.
+       * &#64;deprecated Private subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
        */
-      public Builder setPrivateSubnet(
+      @java.lang.Deprecated public Builder setPrivateSubnet(
           yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface.Builder builderForValue) {
         if (privateSubnetBuilder_ == null) {
           subnet_ = builderForValue.build();
@@ -5570,12 +5911,12 @@ public final class ServerOuterClass {
       }
       /**
        * <pre>
-       * Private subnet.
+       * &#64;deprecated Private subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
        */
-      public Builder mergePrivateSubnet(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface value) {
+      @java.lang.Deprecated public Builder mergePrivateSubnet(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface value) {
         if (privateSubnetBuilder_ == null) {
           if (subnetCase_ == 7 &&
               subnet_ != yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface.getDefaultInstance()) {
@@ -5596,12 +5937,12 @@ public final class ServerOuterClass {
       }
       /**
        * <pre>
-       * Private subnet.
+       * &#64;deprecated Private subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
        */
-      public Builder clearPrivateSubnet() {
+      @java.lang.Deprecated public Builder clearPrivateSubnet() {
         if (privateSubnetBuilder_ == null) {
           if (subnetCase_ == 7) {
             subnetCase_ = 0;
@@ -5619,23 +5960,23 @@ public final class ServerOuterClass {
       }
       /**
        * <pre>
-       * Private subnet.
+       * &#64;deprecated Private subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
        */
-      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface.Builder getPrivateSubnetBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface.Builder getPrivateSubnetBuilder() {
         return getPrivateSubnetFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Private subnet.
+       * &#64;deprecated Private subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterfaceOrBuilder getPrivateSubnetOrBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterfaceOrBuilder getPrivateSubnetOrBuilder() {
         if ((subnetCase_ == 7) && (privateSubnetBuilder_ != null)) {
           return privateSubnetBuilder_.getMessageOrBuilder();
         } else {
@@ -5647,10 +5988,10 @@ public final class ServerOuterClass {
       }
       /**
        * <pre>
-       * Private subnet.
+       * &#64;deprecated Private subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateSubnetNetworkInterface private_subnet = 7 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateSubnetNetworkInterfaceOrBuilder> 
@@ -5675,26 +6016,28 @@ public final class ServerOuterClass {
           yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterfaceOrBuilder> publicSubnetBuilder_;
       /**
        * <pre>
-       * Public subnet.
+       * &#64;deprecated Public subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the publicSubnet field is set.
        */
       @java.lang.Override
-      public boolean hasPublicSubnet() {
+      @java.lang.Deprecated public boolean hasPublicSubnet() {
         return subnetCase_ == 8;
       }
       /**
        * <pre>
-       * Public subnet.
+       * &#64;deprecated Public subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
+       * @deprecated
        * @return The publicSubnet.
        */
       @java.lang.Override
-      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface getPublicSubnet() {
+      @java.lang.Deprecated public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface getPublicSubnet() {
         if (publicSubnetBuilder_ == null) {
           if (subnetCase_ == 8) {
             return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface) subnet_;
@@ -5709,12 +6052,12 @@ public final class ServerOuterClass {
       }
       /**
        * <pre>
-       * Public subnet.
+       * &#64;deprecated Public subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
        */
-      public Builder setPublicSubnet(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface value) {
+      @java.lang.Deprecated public Builder setPublicSubnet(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface value) {
         if (publicSubnetBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5729,12 +6072,12 @@ public final class ServerOuterClass {
       }
       /**
        * <pre>
-       * Public subnet.
+       * &#64;deprecated Public subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
        */
-      public Builder setPublicSubnet(
+      @java.lang.Deprecated public Builder setPublicSubnet(
           yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface.Builder builderForValue) {
         if (publicSubnetBuilder_ == null) {
           subnet_ = builderForValue.build();
@@ -5747,12 +6090,12 @@ public final class ServerOuterClass {
       }
       /**
        * <pre>
-       * Public subnet.
+       * &#64;deprecated Public subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
        */
-      public Builder mergePublicSubnet(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface value) {
+      @java.lang.Deprecated public Builder mergePublicSubnet(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface value) {
         if (publicSubnetBuilder_ == null) {
           if (subnetCase_ == 8 &&
               subnet_ != yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface.getDefaultInstance()) {
@@ -5773,12 +6116,12 @@ public final class ServerOuterClass {
       }
       /**
        * <pre>
-       * Public subnet.
+       * &#64;deprecated Public subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
        */
-      public Builder clearPublicSubnet() {
+      @java.lang.Deprecated public Builder clearPublicSubnet() {
         if (publicSubnetBuilder_ == null) {
           if (subnetCase_ == 8) {
             subnetCase_ = 0;
@@ -5796,23 +6139,23 @@ public final class ServerOuterClass {
       }
       /**
        * <pre>
-       * Public subnet.
+       * &#64;deprecated Public subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
        */
-      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface.Builder getPublicSubnetBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface.Builder getPublicSubnetBuilder() {
         return getPublicSubnetFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Public subnet.
+       * &#64;deprecated Public subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterfaceOrBuilder getPublicSubnetOrBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterfaceOrBuilder getPublicSubnetOrBuilder() {
         if ((subnetCase_ == 8) && (publicSubnetBuilder_ != null)) {
           return publicSubnetBuilder_.getMessageOrBuilder();
         } else {
@@ -5824,10 +6167,10 @@ public final class ServerOuterClass {
       }
       /**
        * <pre>
-       * Public subnet.
+       * &#64;deprecated Public subnet.
        * </pre>
        *
-       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8;</code>
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetNetworkInterface public_subnet = 8 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicSubnetNetworkInterfaceOrBuilder> 
@@ -5846,6 +6189,360 @@ public final class ServerOuterClass {
         subnetCase_ = 8;
         onChanged();;
         return publicSubnetBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterfaceOrBuilder> privateInterfaceBuilder_;
+      /**
+       * <pre>
+       * Private interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 12;</code>
+       * @return Whether the privateInterface field is set.
+       */
+      @java.lang.Override
+      public boolean hasPrivateInterface() {
+        return interfaceCase_ == 12;
+      }
+      /**
+       * <pre>
+       * Private interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 12;</code>
+       * @return The privateInterface.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface getPrivateInterface() {
+        if (privateInterfaceBuilder_ == null) {
+          if (interfaceCase_ == 12) {
+            return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) interface_;
+          }
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.getDefaultInstance();
+        } else {
+          if (interfaceCase_ == 12) {
+            return privateInterfaceBuilder_.getMessage();
+          }
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Private interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 12;</code>
+       */
+      public Builder setPrivateInterface(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface value) {
+        if (privateInterfaceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          interface_ = value;
+          onChanged();
+        } else {
+          privateInterfaceBuilder_.setMessage(value);
+        }
+        interfaceCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * Private interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 12;</code>
+       */
+      public Builder setPrivateInterface(
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.Builder builderForValue) {
+        if (privateInterfaceBuilder_ == null) {
+          interface_ = builderForValue.build();
+          onChanged();
+        } else {
+          privateInterfaceBuilder_.setMessage(builderForValue.build());
+        }
+        interfaceCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * Private interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 12;</code>
+       */
+      public Builder mergePrivateInterface(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface value) {
+        if (privateInterfaceBuilder_ == null) {
+          if (interfaceCase_ == 12 &&
+              interface_ != yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.getDefaultInstance()) {
+            interface_ = yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.newBuilder((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) interface_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            interface_ = value;
+          }
+          onChanged();
+        } else {
+          if (interfaceCase_ == 12) {
+            privateInterfaceBuilder_.mergeFrom(value);
+          }
+          privateInterfaceBuilder_.setMessage(value);
+        }
+        interfaceCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * Private interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 12;</code>
+       */
+      public Builder clearPrivateInterface() {
+        if (privateInterfaceBuilder_ == null) {
+          if (interfaceCase_ == 12) {
+            interfaceCase_ = 0;
+            interface_ = null;
+            onChanged();
+          }
+        } else {
+          if (interfaceCase_ == 12) {
+            interfaceCase_ = 0;
+            interface_ = null;
+          }
+          privateInterfaceBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Private interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 12;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.Builder getPrivateInterfaceBuilder() {
+        return getPrivateInterfaceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Private interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 12;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterfaceOrBuilder getPrivateInterfaceOrBuilder() {
+        if ((interfaceCase_ == 12) && (privateInterfaceBuilder_ != null)) {
+          return privateInterfaceBuilder_.getMessageOrBuilder();
+        } else {
+          if (interfaceCase_ == 12) {
+            return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) interface_;
+          }
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Private interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface private_interface = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterfaceOrBuilder> 
+          getPrivateInterfaceFieldBuilder() {
+        if (privateInterfaceBuilder_ == null) {
+          if (!(interfaceCase_ == 12)) {
+            interface_ = yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.getDefaultInstance();
+          }
+          privateInterfaceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterfaceOrBuilder>(
+                  (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) interface_,
+                  getParentForChildren(),
+                  isClean());
+          interface_ = null;
+        }
+        interfaceCase_ = 12;
+        onChanged();;
+        return privateInterfaceBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterfaceOrBuilder> publicInterfaceBuilder_;
+      /**
+       * <pre>
+       * Public interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 13;</code>
+       * @return Whether the publicInterface field is set.
+       */
+      @java.lang.Override
+      public boolean hasPublicInterface() {
+        return interfaceCase_ == 13;
+      }
+      /**
+       * <pre>
+       * Public interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 13;</code>
+       * @return The publicInterface.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface getPublicInterface() {
+        if (publicInterfaceBuilder_ == null) {
+          if (interfaceCase_ == 13) {
+            return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) interface_;
+          }
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.getDefaultInstance();
+        } else {
+          if (interfaceCase_ == 13) {
+            return publicInterfaceBuilder_.getMessage();
+          }
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Public interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 13;</code>
+       */
+      public Builder setPublicInterface(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface value) {
+        if (publicInterfaceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          interface_ = value;
+          onChanged();
+        } else {
+          publicInterfaceBuilder_.setMessage(value);
+        }
+        interfaceCase_ = 13;
+        return this;
+      }
+      /**
+       * <pre>
+       * Public interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 13;</code>
+       */
+      public Builder setPublicInterface(
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.Builder builderForValue) {
+        if (publicInterfaceBuilder_ == null) {
+          interface_ = builderForValue.build();
+          onChanged();
+        } else {
+          publicInterfaceBuilder_.setMessage(builderForValue.build());
+        }
+        interfaceCase_ = 13;
+        return this;
+      }
+      /**
+       * <pre>
+       * Public interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 13;</code>
+       */
+      public Builder mergePublicInterface(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface value) {
+        if (publicInterfaceBuilder_ == null) {
+          if (interfaceCase_ == 13 &&
+              interface_ != yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.getDefaultInstance()) {
+            interface_ = yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.newBuilder((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) interface_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            interface_ = value;
+          }
+          onChanged();
+        } else {
+          if (interfaceCase_ == 13) {
+            publicInterfaceBuilder_.mergeFrom(value);
+          }
+          publicInterfaceBuilder_.setMessage(value);
+        }
+        interfaceCase_ = 13;
+        return this;
+      }
+      /**
+       * <pre>
+       * Public interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 13;</code>
+       */
+      public Builder clearPublicInterface() {
+        if (publicInterfaceBuilder_ == null) {
+          if (interfaceCase_ == 13) {
+            interfaceCase_ = 0;
+            interface_ = null;
+            onChanged();
+          }
+        } else {
+          if (interfaceCase_ == 13) {
+            interfaceCase_ = 0;
+            interface_ = null;
+          }
+          publicInterfaceBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Public interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 13;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.Builder getPublicInterfaceBuilder() {
+        return getPublicInterfaceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Public interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 13;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterfaceOrBuilder getPublicInterfaceOrBuilder() {
+        if ((interfaceCase_ == 13) && (publicInterfaceBuilder_ != null)) {
+          return publicInterfaceBuilder_.getMessageOrBuilder();
+        } else {
+          if (interfaceCase_ == 13) {
+            return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) interface_;
+          }
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Public interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface public_interface = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterfaceOrBuilder> 
+          getPublicInterfaceFieldBuilder() {
+        if (publicInterfaceBuilder_ == null) {
+          if (!(interfaceCase_ == 13)) {
+            interface_ = yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.getDefaultInstance();
+          }
+          publicInterfaceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterfaceOrBuilder>(
+                  (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) interface_,
+                  getParentForChildren(),
+                  isClean());
+          interface_ = null;
+        }
+        interfaceCase_ = 13;
+        onChanged();;
+        return publicInterfaceBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5895,6 +6592,5192 @@ public final class ServerOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.NetworkInterface getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PrivateNetworkInterfaceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the private subnet which is used as native subnet for interface.
+     * </pre>
+     *
+     * <code>string native_subnet_id = 1;</code>
+     * @return The nativeSubnetId.
+     */
+    java.lang.String getNativeSubnetId();
+    /**
+     * <pre>
+     * ID of the private subnet which is used as native subnet for interface.
+     * </pre>
+     *
+     * <code>string native_subnet_id = 1;</code>
+     * @return The bytes for nativeSubnetId.
+     */
+    com.google.protobuf.ByteString
+        getNativeSubnetIdBytes();
+
+    /**
+     * <pre>
+     * IPv4 address that is assigned to the server for this network interface.
+     * Read only field.
+     * </pre>
+     *
+     * <code>string ip_address = 2;</code>
+     * @return The ipAddress.
+     */
+    java.lang.String getIpAddress();
+    /**
+     * <pre>
+     * IPv4 address that is assigned to the server for this network interface.
+     * Read only field.
+     * </pre>
+     *
+     * <code>string ip_address = 2;</code>
+     * @return The bytes for ipAddress.
+     */
+    com.google.protobuf.ByteString
+        getIpAddressBytes();
+
+    /**
+     * <pre>
+     * Limit of MAC addresses in the native subnet.
+     * Read only field.
+     * </pre>
+     *
+     * <code>int64 mac_limit = 3;</code>
+     * @return The macLimit.
+     */
+    long getMacLimit();
+
+    /**
+     * <pre>
+     * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+     */
+    java.util.List<yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface> 
+        getVlanSubinterfacesList();
+    /**
+     * <pre>
+     * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+     */
+    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface getVlanSubinterfaces(int index);
+    /**
+     * <pre>
+     * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+     */
+    int getVlanSubinterfacesCount();
+    /**
+     * <pre>
+     * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterfaceOrBuilder> 
+        getVlanSubinterfacesOrBuilderList();
+    /**
+     * <pre>
+     * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+     */
+    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterfaceOrBuilder getVlanSubinterfacesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface}
+   */
+  public static final class PrivateNetworkInterface extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface)
+      PrivateNetworkInterfaceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PrivateNetworkInterface.newBuilder() to construct.
+    private PrivateNetworkInterface(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PrivateNetworkInterface() {
+      nativeSubnetId_ = "";
+      ipAddress_ = "";
+      vlanSubinterfaces_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PrivateNetworkInterface();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PrivateNetworkInterface(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nativeSubnetId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              ipAddress_ = s;
+              break;
+            }
+            case 24: {
+
+              macLimit_ = input.readInt64();
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                vlanSubinterfaces_ = new java.util.ArrayList<yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              vlanSubinterfaces_.add(
+                  input.readMessage(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          vlanSubinterfaces_ = java.util.Collections.unmodifiableList(vlanSubinterfaces_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_PrivateNetworkInterface_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_PrivateNetworkInterface_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.class, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.Builder.class);
+    }
+
+    public static final int NATIVE_SUBNET_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object nativeSubnetId_;
+    /**
+     * <pre>
+     * ID of the private subnet which is used as native subnet for interface.
+     * </pre>
+     *
+     * <code>string native_subnet_id = 1;</code>
+     * @return The nativeSubnetId.
+     */
+    @java.lang.Override
+    public java.lang.String getNativeSubnetId() {
+      java.lang.Object ref = nativeSubnetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nativeSubnetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the private subnet which is used as native subnet for interface.
+     * </pre>
+     *
+     * <code>string native_subnet_id = 1;</code>
+     * @return The bytes for nativeSubnetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNativeSubnetIdBytes() {
+      java.lang.Object ref = nativeSubnetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nativeSubnetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IP_ADDRESS_FIELD_NUMBER = 2;
+    private volatile java.lang.Object ipAddress_;
+    /**
+     * <pre>
+     * IPv4 address that is assigned to the server for this network interface.
+     * Read only field.
+     * </pre>
+     *
+     * <code>string ip_address = 2;</code>
+     * @return The ipAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getIpAddress() {
+      java.lang.Object ref = ipAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ipAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * IPv4 address that is assigned to the server for this network interface.
+     * Read only field.
+     * </pre>
+     *
+     * <code>string ip_address = 2;</code>
+     * @return The bytes for ipAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIpAddressBytes() {
+      java.lang.Object ref = ipAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ipAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAC_LIMIT_FIELD_NUMBER = 3;
+    private long macLimit_;
+    /**
+     * <pre>
+     * Limit of MAC addresses in the native subnet.
+     * Read only field.
+     * </pre>
+     *
+     * <code>int64 mac_limit = 3;</code>
+     * @return The macLimit.
+     */
+    @java.lang.Override
+    public long getMacLimit() {
+      return macLimit_;
+    }
+
+    public static final int VLAN_SUBINTERFACES_FIELD_NUMBER = 4;
+    private java.util.List<yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface> vlanSubinterfaces_;
+    /**
+     * <pre>
+     * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface> getVlanSubinterfacesList() {
+      return vlanSubinterfaces_;
+    }
+    /**
+     * <pre>
+     * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterfaceOrBuilder> 
+        getVlanSubinterfacesOrBuilderList() {
+      return vlanSubinterfaces_;
+    }
+    /**
+     * <pre>
+     * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+     */
+    @java.lang.Override
+    public int getVlanSubinterfacesCount() {
+      return vlanSubinterfaces_.size();
+    }
+    /**
+     * <pre>
+     * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface getVlanSubinterfaces(int index) {
+      return vlanSubinterfaces_.get(index);
+    }
+    /**
+     * <pre>
+     * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterfaceOrBuilder getVlanSubinterfacesOrBuilder(
+        int index) {
+      return vlanSubinterfaces_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nativeSubnetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, nativeSubnetId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ipAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ipAddress_);
+      }
+      if (macLimit_ != 0L) {
+        output.writeInt64(3, macLimit_);
+      }
+      for (int i = 0; i < vlanSubinterfaces_.size(); i++) {
+        output.writeMessage(4, vlanSubinterfaces_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nativeSubnetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, nativeSubnetId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ipAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ipAddress_);
+      }
+      if (macLimit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, macLimit_);
+      }
+      for (int i = 0; i < vlanSubinterfaces_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, vlanSubinterfaces_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface other = (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) obj;
+
+      if (!getNativeSubnetId()
+          .equals(other.getNativeSubnetId())) return false;
+      if (!getIpAddress()
+          .equals(other.getIpAddress())) return false;
+      if (getMacLimit()
+          != other.getMacLimit()) return false;
+      if (!getVlanSubinterfacesList()
+          .equals(other.getVlanSubinterfacesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NATIVE_SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNativeSubnetId().hashCode();
+      hash = (37 * hash) + IP_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getIpAddress().hashCode();
+      hash = (37 * hash) + MAC_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMacLimit());
+      if (getVlanSubinterfacesCount() > 0) {
+        hash = (37 * hash) + VLAN_SUBINTERFACES_FIELD_NUMBER;
+        hash = (53 * hash) + getVlanSubinterfacesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface)
+        yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterfaceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_PrivateNetworkInterface_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_PrivateNetworkInterface_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.class, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getVlanSubinterfacesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        nativeSubnetId_ = "";
+
+        ipAddress_ = "";
+
+        macLimit_ = 0L;
+
+        if (vlanSubinterfacesBuilder_ == null) {
+          vlanSubinterfaces_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          vlanSubinterfacesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_PrivateNetworkInterface_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface getDefaultInstanceForType() {
+        return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface build() {
+        yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface buildPartial() {
+        yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface result = new yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface(this);
+        int from_bitField0_ = bitField0_;
+        result.nativeSubnetId_ = nativeSubnetId_;
+        result.ipAddress_ = ipAddress_;
+        result.macLimit_ = macLimit_;
+        if (vlanSubinterfacesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            vlanSubinterfaces_ = java.util.Collections.unmodifiableList(vlanSubinterfaces_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.vlanSubinterfaces_ = vlanSubinterfaces_;
+        } else {
+          result.vlanSubinterfaces_ = vlanSubinterfacesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) {
+          return mergeFrom((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface other) {
+        if (other == yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface.getDefaultInstance()) return this;
+        if (!other.getNativeSubnetId().isEmpty()) {
+          nativeSubnetId_ = other.nativeSubnetId_;
+          onChanged();
+        }
+        if (!other.getIpAddress().isEmpty()) {
+          ipAddress_ = other.ipAddress_;
+          onChanged();
+        }
+        if (other.getMacLimit() != 0L) {
+          setMacLimit(other.getMacLimit());
+        }
+        if (vlanSubinterfacesBuilder_ == null) {
+          if (!other.vlanSubinterfaces_.isEmpty()) {
+            if (vlanSubinterfaces_.isEmpty()) {
+              vlanSubinterfaces_ = other.vlanSubinterfaces_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureVlanSubinterfacesIsMutable();
+              vlanSubinterfaces_.addAll(other.vlanSubinterfaces_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.vlanSubinterfaces_.isEmpty()) {
+            if (vlanSubinterfacesBuilder_.isEmpty()) {
+              vlanSubinterfacesBuilder_.dispose();
+              vlanSubinterfacesBuilder_ = null;
+              vlanSubinterfaces_ = other.vlanSubinterfaces_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              vlanSubinterfacesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVlanSubinterfacesFieldBuilder() : null;
+            } else {
+              vlanSubinterfacesBuilder_.addAllMessages(other.vlanSubinterfaces_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object nativeSubnetId_ = "";
+      /**
+       * <pre>
+       * ID of the private subnet which is used as native subnet for interface.
+       * </pre>
+       *
+       * <code>string native_subnet_id = 1;</code>
+       * @return The nativeSubnetId.
+       */
+      public java.lang.String getNativeSubnetId() {
+        java.lang.Object ref = nativeSubnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nativeSubnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the private subnet which is used as native subnet for interface.
+       * </pre>
+       *
+       * <code>string native_subnet_id = 1;</code>
+       * @return The bytes for nativeSubnetId.
+       */
+      public com.google.protobuf.ByteString
+          getNativeSubnetIdBytes() {
+        java.lang.Object ref = nativeSubnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nativeSubnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the private subnet which is used as native subnet for interface.
+       * </pre>
+       *
+       * <code>string native_subnet_id = 1;</code>
+       * @param value The nativeSubnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNativeSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nativeSubnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the private subnet which is used as native subnet for interface.
+       * </pre>
+       *
+       * <code>string native_subnet_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNativeSubnetId() {
+        
+        nativeSubnetId_ = getDefaultInstance().getNativeSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the private subnet which is used as native subnet for interface.
+       * </pre>
+       *
+       * <code>string native_subnet_id = 1;</code>
+       * @param value The bytes for nativeSubnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNativeSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nativeSubnetId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ipAddress_ = "";
+      /**
+       * <pre>
+       * IPv4 address that is assigned to the server for this network interface.
+       * Read only field.
+       * </pre>
+       *
+       * <code>string ip_address = 2;</code>
+       * @return The ipAddress.
+       */
+      public java.lang.String getIpAddress() {
+        java.lang.Object ref = ipAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ipAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 address that is assigned to the server for this network interface.
+       * Read only field.
+       * </pre>
+       *
+       * <code>string ip_address = 2;</code>
+       * @return The bytes for ipAddress.
+       */
+      public com.google.protobuf.ByteString
+          getIpAddressBytes() {
+        java.lang.Object ref = ipAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ipAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 address that is assigned to the server for this network interface.
+       * Read only field.
+       * </pre>
+       *
+       * <code>string ip_address = 2;</code>
+       * @param value The ipAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIpAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        ipAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 address that is assigned to the server for this network interface.
+       * Read only field.
+       * </pre>
+       *
+       * <code>string ip_address = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIpAddress() {
+        
+        ipAddress_ = getDefaultInstance().getIpAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 address that is assigned to the server for this network interface.
+       * Read only field.
+       * </pre>
+       *
+       * <code>string ip_address = 2;</code>
+       * @param value The bytes for ipAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIpAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        ipAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long macLimit_ ;
+      /**
+       * <pre>
+       * Limit of MAC addresses in the native subnet.
+       * Read only field.
+       * </pre>
+       *
+       * <code>int64 mac_limit = 3;</code>
+       * @return The macLimit.
+       */
+      @java.lang.Override
+      public long getMacLimit() {
+        return macLimit_;
+      }
+      /**
+       * <pre>
+       * Limit of MAC addresses in the native subnet.
+       * Read only field.
+       * </pre>
+       *
+       * <code>int64 mac_limit = 3;</code>
+       * @param value The macLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMacLimit(long value) {
+        
+        macLimit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit of MAC addresses in the native subnet.
+       * Read only field.
+       * </pre>
+       *
+       * <code>int64 mac_limit = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMacLimit() {
+        
+        macLimit_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface> vlanSubinterfaces_ =
+        java.util.Collections.emptyList();
+      private void ensureVlanSubinterfacesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          vlanSubinterfaces_ = new java.util.ArrayList<yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface>(vlanSubinterfaces_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterfaceOrBuilder> vlanSubinterfacesBuilder_;
+
+      /**
+       * <pre>
+       * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface> getVlanSubinterfacesList() {
+        if (vlanSubinterfacesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(vlanSubinterfaces_);
+        } else {
+          return vlanSubinterfacesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+       */
+      public int getVlanSubinterfacesCount() {
+        if (vlanSubinterfacesBuilder_ == null) {
+          return vlanSubinterfaces_.size();
+        } else {
+          return vlanSubinterfacesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface getVlanSubinterfaces(int index) {
+        if (vlanSubinterfacesBuilder_ == null) {
+          return vlanSubinterfaces_.get(index);
+        } else {
+          return vlanSubinterfacesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+       */
+      public Builder setVlanSubinterfaces(
+          int index, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface value) {
+        if (vlanSubinterfacesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVlanSubinterfacesIsMutable();
+          vlanSubinterfaces_.set(index, value);
+          onChanged();
+        } else {
+          vlanSubinterfacesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+       */
+      public Builder setVlanSubinterfaces(
+          int index, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface.Builder builderForValue) {
+        if (vlanSubinterfacesBuilder_ == null) {
+          ensureVlanSubinterfacesIsMutable();
+          vlanSubinterfaces_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          vlanSubinterfacesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+       */
+      public Builder addVlanSubinterfaces(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface value) {
+        if (vlanSubinterfacesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVlanSubinterfacesIsMutable();
+          vlanSubinterfaces_.add(value);
+          onChanged();
+        } else {
+          vlanSubinterfacesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+       */
+      public Builder addVlanSubinterfaces(
+          int index, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface value) {
+        if (vlanSubinterfacesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVlanSubinterfacesIsMutable();
+          vlanSubinterfaces_.add(index, value);
+          onChanged();
+        } else {
+          vlanSubinterfacesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+       */
+      public Builder addVlanSubinterfaces(
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface.Builder builderForValue) {
+        if (vlanSubinterfacesBuilder_ == null) {
+          ensureVlanSubinterfacesIsMutable();
+          vlanSubinterfaces_.add(builderForValue.build());
+          onChanged();
+        } else {
+          vlanSubinterfacesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+       */
+      public Builder addVlanSubinterfaces(
+          int index, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface.Builder builderForValue) {
+        if (vlanSubinterfacesBuilder_ == null) {
+          ensureVlanSubinterfacesIsMutable();
+          vlanSubinterfaces_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          vlanSubinterfacesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+       */
+      public Builder addAllVlanSubinterfaces(
+          java.lang.Iterable<? extends yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface> values) {
+        if (vlanSubinterfacesBuilder_ == null) {
+          ensureVlanSubinterfacesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, vlanSubinterfaces_);
+          onChanged();
+        } else {
+          vlanSubinterfacesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+       */
+      public Builder clearVlanSubinterfaces() {
+        if (vlanSubinterfacesBuilder_ == null) {
+          vlanSubinterfaces_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          vlanSubinterfacesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+       */
+      public Builder removeVlanSubinterfaces(int index) {
+        if (vlanSubinterfacesBuilder_ == null) {
+          ensureVlanSubinterfacesIsMutable();
+          vlanSubinterfaces_.remove(index);
+          onChanged();
+        } else {
+          vlanSubinterfacesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface.Builder getVlanSubinterfacesBuilder(
+          int index) {
+        return getVlanSubinterfacesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterfaceOrBuilder getVlanSubinterfacesOrBuilder(
+          int index) {
+        if (vlanSubinterfacesBuilder_ == null) {
+          return vlanSubinterfaces_.get(index);  } else {
+          return vlanSubinterfacesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterfaceOrBuilder> 
+           getVlanSubinterfacesOrBuilderList() {
+        if (vlanSubinterfacesBuilder_ != null) {
+          return vlanSubinterfacesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(vlanSubinterfaces_);
+        }
+      }
+      /**
+       * <pre>
+       * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface.Builder addVlanSubinterfacesBuilder() {
+        return getVlanSubinterfacesFieldBuilder().addBuilder(
+            yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface.Builder addVlanSubinterfacesBuilder(
+          int index) {
+        return getVlanSubinterfacesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Array of VLAN subinterfaces. Additional tagged subnets for the interface.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.baremetal.v1alpha.VLANSubinterface vlan_subinterfaces = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface.Builder> 
+           getVlanSubinterfacesBuilderList() {
+        return getVlanSubinterfacesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterfaceOrBuilder> 
+          getVlanSubinterfacesFieldBuilder() {
+        if (vlanSubinterfacesBuilder_ == null) {
+          vlanSubinterfacesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterfaceOrBuilder>(
+                  vlanSubinterfaces_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          vlanSubinterfaces_ = null;
+        }
+        return vlanSubinterfacesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.baremetal.v1alpha.PrivateNetworkInterface)
+    private static final yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface();
+    }
+
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PrivateNetworkInterface>
+        PARSER = new com.google.protobuf.AbstractParser<PrivateNetworkInterface>() {
+      @java.lang.Override
+      public PrivateNetworkInterface parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PrivateNetworkInterface(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PrivateNetworkInterface> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PrivateNetworkInterface> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PrivateNetworkInterface getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VLANSubinterfaceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.baremetal.v1alpha.VLANSubinterface)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the private subnet which is used as tagged subnet for interface.
+     * </pre>
+     *
+     * <code>string tagged_subnet_id = 1;</code>
+     * @return The taggedSubnetId.
+     */
+    java.lang.String getTaggedSubnetId();
+    /**
+     * <pre>
+     * ID of the private subnet which is used as tagged subnet for interface.
+     * </pre>
+     *
+     * <code>string tagged_subnet_id = 1;</code>
+     * @return The bytes for taggedSubnetId.
+     */
+    com.google.protobuf.ByteString
+        getTaggedSubnetIdBytes();
+
+    /**
+     * <pre>
+     * IPv4 address that is assigned to the VLAN subinterface.
+     * Read only field.
+     * </pre>
+     *
+     * <code>string ip_address = 2;</code>
+     * @return The ipAddress.
+     */
+    java.lang.String getIpAddress();
+    /**
+     * <pre>
+     * IPv4 address that is assigned to the VLAN subinterface.
+     * Read only field.
+     * </pre>
+     *
+     * <code>string ip_address = 2;</code>
+     * @return The bytes for ipAddress.
+     */
+    com.google.protobuf.ByteString
+        getIpAddressBytes();
+
+    /**
+     * <pre>
+     * Limit of MAC addresses in the tagged subnet.
+     * Read only field.
+     * </pre>
+     *
+     * <code>int64 mac_limit = 3;</code>
+     * @return The macLimit.
+     */
+    long getMacLimit();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.baremetal.v1alpha.VLANSubinterface}
+   */
+  public static final class VLANSubinterface extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.baremetal.v1alpha.VLANSubinterface)
+      VLANSubinterfaceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VLANSubinterface.newBuilder() to construct.
+    private VLANSubinterface(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VLANSubinterface() {
+      taggedSubnetId_ = "";
+      ipAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VLANSubinterface();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VLANSubinterface(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              taggedSubnetId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              ipAddress_ = s;
+              break;
+            }
+            case 24: {
+
+              macLimit_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_VLANSubinterface_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_VLANSubinterface_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface.class, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface.Builder.class);
+    }
+
+    public static final int TAGGED_SUBNET_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object taggedSubnetId_;
+    /**
+     * <pre>
+     * ID of the private subnet which is used as tagged subnet for interface.
+     * </pre>
+     *
+     * <code>string tagged_subnet_id = 1;</code>
+     * @return The taggedSubnetId.
+     */
+    @java.lang.Override
+    public java.lang.String getTaggedSubnetId() {
+      java.lang.Object ref = taggedSubnetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        taggedSubnetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the private subnet which is used as tagged subnet for interface.
+     * </pre>
+     *
+     * <code>string tagged_subnet_id = 1;</code>
+     * @return The bytes for taggedSubnetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTaggedSubnetIdBytes() {
+      java.lang.Object ref = taggedSubnetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        taggedSubnetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IP_ADDRESS_FIELD_NUMBER = 2;
+    private volatile java.lang.Object ipAddress_;
+    /**
+     * <pre>
+     * IPv4 address that is assigned to the VLAN subinterface.
+     * Read only field.
+     * </pre>
+     *
+     * <code>string ip_address = 2;</code>
+     * @return The ipAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getIpAddress() {
+      java.lang.Object ref = ipAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ipAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * IPv4 address that is assigned to the VLAN subinterface.
+     * Read only field.
+     * </pre>
+     *
+     * <code>string ip_address = 2;</code>
+     * @return The bytes for ipAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIpAddressBytes() {
+      java.lang.Object ref = ipAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ipAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAC_LIMIT_FIELD_NUMBER = 3;
+    private long macLimit_;
+    /**
+     * <pre>
+     * Limit of MAC addresses in the tagged subnet.
+     * Read only field.
+     * </pre>
+     *
+     * <code>int64 mac_limit = 3;</code>
+     * @return The macLimit.
+     */
+    @java.lang.Override
+    public long getMacLimit() {
+      return macLimit_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taggedSubnetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, taggedSubnetId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ipAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ipAddress_);
+      }
+      if (macLimit_ != 0L) {
+        output.writeInt64(3, macLimit_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taggedSubnetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, taggedSubnetId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ipAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ipAddress_);
+      }
+      if (macLimit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, macLimit_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface other = (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface) obj;
+
+      if (!getTaggedSubnetId()
+          .equals(other.getTaggedSubnetId())) return false;
+      if (!getIpAddress()
+          .equals(other.getIpAddress())) return false;
+      if (getMacLimit()
+          != other.getMacLimit()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TAGGED_SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTaggedSubnetId().hashCode();
+      hash = (37 * hash) + IP_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getIpAddress().hashCode();
+      hash = (37 * hash) + MAC_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMacLimit());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.baremetal.v1alpha.VLANSubinterface}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.baremetal.v1alpha.VLANSubinterface)
+        yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterfaceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_VLANSubinterface_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_VLANSubinterface_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface.class, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        taggedSubnetId_ = "";
+
+        ipAddress_ = "";
+
+        macLimit_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_VLANSubinterface_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface getDefaultInstanceForType() {
+        return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface build() {
+        yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface buildPartial() {
+        yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface result = new yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface(this);
+        result.taggedSubnetId_ = taggedSubnetId_;
+        result.ipAddress_ = ipAddress_;
+        result.macLimit_ = macLimit_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface) {
+          return mergeFrom((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface other) {
+        if (other == yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface.getDefaultInstance()) return this;
+        if (!other.getTaggedSubnetId().isEmpty()) {
+          taggedSubnetId_ = other.taggedSubnetId_;
+          onChanged();
+        }
+        if (!other.getIpAddress().isEmpty()) {
+          ipAddress_ = other.ipAddress_;
+          onChanged();
+        }
+        if (other.getMacLimit() != 0L) {
+          setMacLimit(other.getMacLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object taggedSubnetId_ = "";
+      /**
+       * <pre>
+       * ID of the private subnet which is used as tagged subnet for interface.
+       * </pre>
+       *
+       * <code>string tagged_subnet_id = 1;</code>
+       * @return The taggedSubnetId.
+       */
+      public java.lang.String getTaggedSubnetId() {
+        java.lang.Object ref = taggedSubnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          taggedSubnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the private subnet which is used as tagged subnet for interface.
+       * </pre>
+       *
+       * <code>string tagged_subnet_id = 1;</code>
+       * @return The bytes for taggedSubnetId.
+       */
+      public com.google.protobuf.ByteString
+          getTaggedSubnetIdBytes() {
+        java.lang.Object ref = taggedSubnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          taggedSubnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the private subnet which is used as tagged subnet for interface.
+       * </pre>
+       *
+       * <code>string tagged_subnet_id = 1;</code>
+       * @param value The taggedSubnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTaggedSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        taggedSubnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the private subnet which is used as tagged subnet for interface.
+       * </pre>
+       *
+       * <code>string tagged_subnet_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTaggedSubnetId() {
+        
+        taggedSubnetId_ = getDefaultInstance().getTaggedSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the private subnet which is used as tagged subnet for interface.
+       * </pre>
+       *
+       * <code>string tagged_subnet_id = 1;</code>
+       * @param value The bytes for taggedSubnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTaggedSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        taggedSubnetId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ipAddress_ = "";
+      /**
+       * <pre>
+       * IPv4 address that is assigned to the VLAN subinterface.
+       * Read only field.
+       * </pre>
+       *
+       * <code>string ip_address = 2;</code>
+       * @return The ipAddress.
+       */
+      public java.lang.String getIpAddress() {
+        java.lang.Object ref = ipAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ipAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 address that is assigned to the VLAN subinterface.
+       * Read only field.
+       * </pre>
+       *
+       * <code>string ip_address = 2;</code>
+       * @return The bytes for ipAddress.
+       */
+      public com.google.protobuf.ByteString
+          getIpAddressBytes() {
+        java.lang.Object ref = ipAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ipAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 address that is assigned to the VLAN subinterface.
+       * Read only field.
+       * </pre>
+       *
+       * <code>string ip_address = 2;</code>
+       * @param value The ipAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIpAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        ipAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 address that is assigned to the VLAN subinterface.
+       * Read only field.
+       * </pre>
+       *
+       * <code>string ip_address = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIpAddress() {
+        
+        ipAddress_ = getDefaultInstance().getIpAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 address that is assigned to the VLAN subinterface.
+       * Read only field.
+       * </pre>
+       *
+       * <code>string ip_address = 2;</code>
+       * @param value The bytes for ipAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIpAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        ipAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long macLimit_ ;
+      /**
+       * <pre>
+       * Limit of MAC addresses in the tagged subnet.
+       * Read only field.
+       * </pre>
+       *
+       * <code>int64 mac_limit = 3;</code>
+       * @return The macLimit.
+       */
+      @java.lang.Override
+      public long getMacLimit() {
+        return macLimit_;
+      }
+      /**
+       * <pre>
+       * Limit of MAC addresses in the tagged subnet.
+       * Read only field.
+       * </pre>
+       *
+       * <code>int64 mac_limit = 3;</code>
+       * @param value The macLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMacLimit(long value) {
+        
+        macLimit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit of MAC addresses in the tagged subnet.
+       * Read only field.
+       * </pre>
+       *
+       * <code>int64 mac_limit = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMacLimit() {
+        
+        macLimit_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.baremetal.v1alpha.VLANSubinterface)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.baremetal.v1alpha.VLANSubinterface)
+    private static final yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface();
+    }
+
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VLANSubinterface>
+        PARSER = new com.google.protobuf.AbstractParser<VLANSubinterface>() {
+      @java.lang.Override
+      public VLANSubinterface parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new VLANSubinterface(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<VLANSubinterface> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VLANSubinterface> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.VLANSubinterface getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PublicNetworkInterfaceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.baremetal.v1alpha.PublicNetworkInterface)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * IPv4 address that is assigned to the server for this network interface.
+     * Read only field.
+     * </pre>
+     *
+     * <code>string ip_address = 1;</code>
+     * @return The ipAddress.
+     */
+    java.lang.String getIpAddress();
+    /**
+     * <pre>
+     * IPv4 address that is assigned to the server for this network interface.
+     * Read only field.
+     * </pre>
+     *
+     * <code>string ip_address = 1;</code>
+     * @return The bytes for ipAddress.
+     */
+    com.google.protobuf.ByteString
+        getIpAddressBytes();
+
+    /**
+     * <pre>
+     * ID of the public subnet which is used as native subnet for interface.
+     * Read only field.
+     * </pre>
+     *
+     * <code>string native_subnet_id = 2;</code>
+     * @return The nativeSubnetId.
+     */
+    java.lang.String getNativeSubnetId();
+    /**
+     * <pre>
+     * ID of the public subnet which is used as native subnet for interface.
+     * Read only field.
+     * </pre>
+     *
+     * <code>string native_subnet_id = 2;</code>
+     * @return The bytes for nativeSubnetId.
+     */
+    com.google.protobuf.ByteString
+        getNativeSubnetIdBytes();
+
+    /**
+     * <pre>
+     * Limit of MAC addresses in the native subnet.
+     * Read only field.
+     * </pre>
+     *
+     * <code>int64 mac_limit = 3;</code>
+     * @return The macLimit.
+     */
+    long getMacLimit();
+
+    /**
+     * <pre>
+     * Use existing native subnet.
+     * Input only field.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet native_subnet = 6;</code>
+     * @return Whether the nativeSubnet field is set.
+     */
+    boolean hasNativeSubnet();
+    /**
+     * <pre>
+     * Use existing native subnet.
+     * Input only field.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet native_subnet = 6;</code>
+     * @return The nativeSubnet.
+     */
+    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet getNativeSubnet();
+    /**
+     * <pre>
+     * Use existing native subnet.
+     * Input only field.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet native_subnet = 6;</code>
+     */
+    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnetOrBuilder getNativeSubnetOrBuilder();
+
+    /**
+     * <pre>
+     * Create new native subnet.
+     * Input only field.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet new_native_subnet = 7;</code>
+     * @return Whether the newNativeSubnet field is set.
+     */
+    boolean hasNewNativeSubnet();
+    /**
+     * <pre>
+     * Create new native subnet.
+     * Input only field.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet new_native_subnet = 7;</code>
+     * @return The newNativeSubnet.
+     */
+    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet getNewNativeSubnet();
+    /**
+     * <pre>
+     * Create new native subnet.
+     * Input only field.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet new_native_subnet = 7;</code>
+     */
+    yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnetOrBuilder getNewNativeSubnetOrBuilder();
+
+    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnetConfigCase getNativeSubnetConfigCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.baremetal.v1alpha.PublicNetworkInterface}
+   */
+  public static final class PublicNetworkInterface extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.baremetal.v1alpha.PublicNetworkInterface)
+      PublicNetworkInterfaceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PublicNetworkInterface.newBuilder() to construct.
+    private PublicNetworkInterface(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PublicNetworkInterface() {
+      ipAddress_ = "";
+      nativeSubnetId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PublicNetworkInterface();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PublicNetworkInterface(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              ipAddress_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nativeSubnetId_ = s;
+              break;
+            }
+            case 24: {
+
+              macLimit_ = input.readInt64();
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.Builder subBuilder = null;
+              if (nativeSubnetConfigCase_ == 6) {
+                subBuilder = ((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet) nativeSubnetConfig_).toBuilder();
+              }
+              nativeSubnetConfig_ =
+                  input.readMessage(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet) nativeSubnetConfig_);
+                nativeSubnetConfig_ = subBuilder.buildPartial();
+              }
+              nativeSubnetConfigCase_ = 6;
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.Builder subBuilder = null;
+              if (nativeSubnetConfigCase_ == 7) {
+                subBuilder = ((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet) nativeSubnetConfig_).toBuilder();
+              }
+              nativeSubnetConfig_ =
+                  input.readMessage(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet) nativeSubnetConfig_);
+                nativeSubnetConfig_ = subBuilder.buildPartial();
+              }
+              nativeSubnetConfigCase_ = 7;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.class, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.Builder.class);
+    }
+
+    public interface NativeSubnetOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * ID of the existing public subnet.
+       * </pre>
+       *
+       * <code>string subnet_id = 1;</code>
+       * @return The subnetId.
+       */
+      java.lang.String getSubnetId();
+      /**
+       * <pre>
+       * ID of the existing public subnet.
+       * </pre>
+       *
+       * <code>string subnet_id = 1;</code>
+       * @return The bytes for subnetId.
+       */
+      com.google.protobuf.ByteString
+          getSubnetIdBytes();
+    }
+    /**
+     * <pre>
+     * Configuration for using existing native subnet.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet}
+     */
+    public static final class NativeSubnet extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet)
+        NativeSubnetOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use NativeSubnet.newBuilder() to construct.
+      private NativeSubnet(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private NativeSubnet() {
+        subnetId_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new NativeSubnet();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private NativeSubnet(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                subnetId_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_NativeSubnet_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_NativeSubnet_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.class, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.Builder.class);
+      }
+
+      public static final int SUBNET_ID_FIELD_NUMBER = 1;
+      private volatile java.lang.Object subnetId_;
+      /**
+       * <pre>
+       * ID of the existing public subnet.
+       * </pre>
+       *
+       * <code>string subnet_id = 1;</code>
+       * @return The subnetId.
+       */
+      @java.lang.Override
+      public java.lang.String getSubnetId() {
+        java.lang.Object ref = subnetId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subnetId_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the existing public subnet.
+       * </pre>
+       *
+       * <code>string subnet_id = 1;</code>
+       * @return The bytes for subnetId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSubnetIdBytes() {
+        java.lang.Object ref = subnetId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet other = (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet) obj;
+
+        if (!getSubnetId()
+            .equals(other.getSubnetId())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getSubnetId().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Configuration for using existing native subnet.
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet)
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnetOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_NativeSubnet_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_NativeSubnet_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.class, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          subnetId_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_NativeSubnet_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet getDefaultInstanceForType() {
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet build() {
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet buildPartial() {
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet result = new yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet(this);
+          result.subnetId_ = subnetId_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet) {
+            return mergeFrom((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet other) {
+          if (other == yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.getDefaultInstance()) return this;
+          if (!other.getSubnetId().isEmpty()) {
+            subnetId_ = other.subnetId_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object subnetId_ = "";
+        /**
+         * <pre>
+         * ID of the existing public subnet.
+         * </pre>
+         *
+         * <code>string subnet_id = 1;</code>
+         * @return The subnetId.
+         */
+        public java.lang.String getSubnetId() {
+          java.lang.Object ref = subnetId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            subnetId_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * ID of the existing public subnet.
+         * </pre>
+         *
+         * <code>string subnet_id = 1;</code>
+         * @return The bytes for subnetId.
+         */
+        public com.google.protobuf.ByteString
+            getSubnetIdBytes() {
+          java.lang.Object ref = subnetId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            subnetId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * ID of the existing public subnet.
+         * </pre>
+         *
+         * <code>string subnet_id = 1;</code>
+         * @param value The subnetId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSubnetId(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          subnetId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * ID of the existing public subnet.
+         * </pre>
+         *
+         * <code>string subnet_id = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSubnetId() {
+          
+          subnetId_ = getDefaultInstance().getSubnetId();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * ID of the existing public subnet.
+         * </pre>
+         *
+         * <code>string subnet_id = 1;</code>
+         * @param value The bytes for subnetId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSubnetIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          subnetId_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet)
+      private static final yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet();
+      }
+
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<NativeSubnet>
+          PARSER = new com.google.protobuf.AbstractParser<NativeSubnet>() {
+        @java.lang.Override
+        public NativeSubnet parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new NativeSubnet(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<NativeSubnet> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<NativeSubnet> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface NewNativeSubnetOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Addressing type (DHCP | Static).
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet.AddressingType addressing_type = 1;</code>
+       * @return The enum numeric value on the wire for addressingType.
+       */
+      int getAddressingTypeValue();
+      /**
+       * <pre>
+       * Addressing type (DHCP | Static).
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet.AddressingType addressing_type = 1;</code>
+       * @return The addressingType.
+       */
+      yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.AddressingType getAddressingType();
+    }
+    /**
+     * <pre>
+     * Configuration for creating new native subnet.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet}
+     */
+    public static final class NewNativeSubnet extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet)
+        NewNativeSubnetOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use NewNativeSubnet.newBuilder() to construct.
+      private NewNativeSubnet(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private NewNativeSubnet() {
+        addressingType_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new NewNativeSubnet();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private NewNativeSubnet(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int rawValue = input.readEnum();
+
+                addressingType_ = rawValue;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_NewNativeSubnet_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_NewNativeSubnet_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.class, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.Builder.class);
+      }
+
+      /**
+       * <pre>
+       * Addressing type for public subnet.
+       * </pre>
+       *
+       * Protobuf enum {@code yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet.AddressingType}
+       */
+      public enum AddressingType
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <pre>
+         * Unspecified public subnet addressing type.
+         * </pre>
+         *
+         * <code>ADDRESSING_TYPE_UNSPECIFIED = 0;</code>
+         */
+        ADDRESSING_TYPE_UNSPECIFIED(0),
+        /**
+         * <pre>
+         * DHCP addressing.
+         * </pre>
+         *
+         * <code>DHCP = 1;</code>
+         */
+        DHCP(1),
+        /**
+         * <pre>
+         * Static addressing.
+         * </pre>
+         *
+         * <code>STATIC = 2;</code>
+         */
+        STATIC(2),
+        UNRECOGNIZED(-1),
+        ;
+
+        /**
+         * <pre>
+         * Unspecified public subnet addressing type.
+         * </pre>
+         *
+         * <code>ADDRESSING_TYPE_UNSPECIFIED = 0;</code>
+         */
+        public static final int ADDRESSING_TYPE_UNSPECIFIED_VALUE = 0;
+        /**
+         * <pre>
+         * DHCP addressing.
+         * </pre>
+         *
+         * <code>DHCP = 1;</code>
+         */
+        public static final int DHCP_VALUE = 1;
+        /**
+         * <pre>
+         * Static addressing.
+         * </pre>
+         *
+         * <code>STATIC = 2;</code>
+         */
+        public static final int STATIC_VALUE = 2;
+
+
+        public final int getNumber() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalArgumentException(
+                "Can't get the number of an unknown enum value.");
+          }
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static AddressingType valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static AddressingType forNumber(int value) {
+          switch (value) {
+            case 0: return ADDRESSING_TYPE_UNSPECIFIED;
+            case 1: return DHCP;
+            case 2: return STATIC;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<AddressingType>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            AddressingType> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<AddressingType>() {
+                public AddressingType findValueByNumber(int number) {
+                  return AddressingType.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalStateException(
+                "Can't get the descriptor of an unrecognized enum value.");
+          }
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.getDescriptor().getEnumTypes().get(0);
+        }
+
+        private static final AddressingType[] VALUES = values();
+
+        public static AddressingType valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          if (desc.getIndex() == -1) {
+            return UNRECOGNIZED;
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private AddressingType(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet.AddressingType)
+      }
+
+      public static final int ADDRESSING_TYPE_FIELD_NUMBER = 1;
+      private int addressingType_;
+      /**
+       * <pre>
+       * Addressing type (DHCP | Static).
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet.AddressingType addressing_type = 1;</code>
+       * @return The enum numeric value on the wire for addressingType.
+       */
+      @java.lang.Override public int getAddressingTypeValue() {
+        return addressingType_;
+      }
+      /**
+       * <pre>
+       * Addressing type (DHCP | Static).
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet.AddressingType addressing_type = 1;</code>
+       * @return The addressingType.
+       */
+      @java.lang.Override public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.AddressingType getAddressingType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.AddressingType result = yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.AddressingType.valueOf(addressingType_);
+        return result == null ? yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.AddressingType.UNRECOGNIZED : result;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (addressingType_ != yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.AddressingType.ADDRESSING_TYPE_UNSPECIFIED.getNumber()) {
+          output.writeEnum(1, addressingType_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (addressingType_ != yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.AddressingType.ADDRESSING_TYPE_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(1, addressingType_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet other = (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet) obj;
+
+        if (addressingType_ != other.addressingType_) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ADDRESSING_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + addressingType_;
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Configuration for creating new native subnet.
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet)
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnetOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_NewNativeSubnet_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_NewNativeSubnet_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.class, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          addressingType_ = 0;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_NewNativeSubnet_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet getDefaultInstanceForType() {
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet build() {
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet buildPartial() {
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet result = new yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet(this);
+          result.addressingType_ = addressingType_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet) {
+            return mergeFrom((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet other) {
+          if (other == yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.getDefaultInstance()) return this;
+          if (other.addressingType_ != 0) {
+            setAddressingTypeValue(other.getAddressingTypeValue());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private int addressingType_ = 0;
+        /**
+         * <pre>
+         * Addressing type (DHCP | Static).
+         * </pre>
+         *
+         * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet.AddressingType addressing_type = 1;</code>
+         * @return The enum numeric value on the wire for addressingType.
+         */
+        @java.lang.Override public int getAddressingTypeValue() {
+          return addressingType_;
+        }
+        /**
+         * <pre>
+         * Addressing type (DHCP | Static).
+         * </pre>
+         *
+         * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet.AddressingType addressing_type = 1;</code>
+         * @param value The enum numeric value on the wire for addressingType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAddressingTypeValue(int value) {
+          
+          addressingType_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Addressing type (DHCP | Static).
+         * </pre>
+         *
+         * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet.AddressingType addressing_type = 1;</code>
+         * @return The addressingType.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.AddressingType getAddressingType() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.AddressingType result = yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.AddressingType.valueOf(addressingType_);
+          return result == null ? yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.AddressingType.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * Addressing type (DHCP | Static).
+         * </pre>
+         *
+         * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet.AddressingType addressing_type = 1;</code>
+         * @param value The addressingType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAddressingType(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.AddressingType value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          addressingType_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Addressing type (DHCP | Static).
+         * </pre>
+         *
+         * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet.AddressingType addressing_type = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAddressingType() {
+          
+          addressingType_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet)
+      private static final yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet();
+      }
+
+      public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<NewNativeSubnet>
+          PARSER = new com.google.protobuf.AbstractParser<NewNativeSubnet>() {
+        @java.lang.Override
+        public NewNativeSubnet parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new NewNativeSubnet(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<NewNativeSubnet> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<NewNativeSubnet> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int nativeSubnetConfigCase_ = 0;
+    private java.lang.Object nativeSubnetConfig_;
+    public enum NativeSubnetConfigCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      NATIVE_SUBNET(6),
+      NEW_NATIVE_SUBNET(7),
+      NATIVESUBNETCONFIG_NOT_SET(0);
+      private final int value;
+      private NativeSubnetConfigCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static NativeSubnetConfigCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static NativeSubnetConfigCase forNumber(int value) {
+        switch (value) {
+          case 6: return NATIVE_SUBNET;
+          case 7: return NEW_NATIVE_SUBNET;
+          case 0: return NATIVESUBNETCONFIG_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public NativeSubnetConfigCase
+    getNativeSubnetConfigCase() {
+      return NativeSubnetConfigCase.forNumber(
+          nativeSubnetConfigCase_);
+    }
+
+    public static final int IP_ADDRESS_FIELD_NUMBER = 1;
+    private volatile java.lang.Object ipAddress_;
+    /**
+     * <pre>
+     * IPv4 address that is assigned to the server for this network interface.
+     * Read only field.
+     * </pre>
+     *
+     * <code>string ip_address = 1;</code>
+     * @return The ipAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getIpAddress() {
+      java.lang.Object ref = ipAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ipAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * IPv4 address that is assigned to the server for this network interface.
+     * Read only field.
+     * </pre>
+     *
+     * <code>string ip_address = 1;</code>
+     * @return The bytes for ipAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIpAddressBytes() {
+      java.lang.Object ref = ipAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ipAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NATIVE_SUBNET_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nativeSubnetId_;
+    /**
+     * <pre>
+     * ID of the public subnet which is used as native subnet for interface.
+     * Read only field.
+     * </pre>
+     *
+     * <code>string native_subnet_id = 2;</code>
+     * @return The nativeSubnetId.
+     */
+    @java.lang.Override
+    public java.lang.String getNativeSubnetId() {
+      java.lang.Object ref = nativeSubnetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nativeSubnetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the public subnet which is used as native subnet for interface.
+     * Read only field.
+     * </pre>
+     *
+     * <code>string native_subnet_id = 2;</code>
+     * @return The bytes for nativeSubnetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNativeSubnetIdBytes() {
+      java.lang.Object ref = nativeSubnetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nativeSubnetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAC_LIMIT_FIELD_NUMBER = 3;
+    private long macLimit_;
+    /**
+     * <pre>
+     * Limit of MAC addresses in the native subnet.
+     * Read only field.
+     * </pre>
+     *
+     * <code>int64 mac_limit = 3;</code>
+     * @return The macLimit.
+     */
+    @java.lang.Override
+    public long getMacLimit() {
+      return macLimit_;
+    }
+
+    public static final int NATIVE_SUBNET_FIELD_NUMBER = 6;
+    /**
+     * <pre>
+     * Use existing native subnet.
+     * Input only field.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet native_subnet = 6;</code>
+     * @return Whether the nativeSubnet field is set.
+     */
+    @java.lang.Override
+    public boolean hasNativeSubnet() {
+      return nativeSubnetConfigCase_ == 6;
+    }
+    /**
+     * <pre>
+     * Use existing native subnet.
+     * Input only field.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet native_subnet = 6;</code>
+     * @return The nativeSubnet.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet getNativeSubnet() {
+      if (nativeSubnetConfigCase_ == 6) {
+         return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet) nativeSubnetConfig_;
+      }
+      return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Use existing native subnet.
+     * Input only field.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet native_subnet = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnetOrBuilder getNativeSubnetOrBuilder() {
+      if (nativeSubnetConfigCase_ == 6) {
+         return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet) nativeSubnetConfig_;
+      }
+      return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.getDefaultInstance();
+    }
+
+    public static final int NEW_NATIVE_SUBNET_FIELD_NUMBER = 7;
+    /**
+     * <pre>
+     * Create new native subnet.
+     * Input only field.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet new_native_subnet = 7;</code>
+     * @return Whether the newNativeSubnet field is set.
+     */
+    @java.lang.Override
+    public boolean hasNewNativeSubnet() {
+      return nativeSubnetConfigCase_ == 7;
+    }
+    /**
+     * <pre>
+     * Create new native subnet.
+     * Input only field.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet new_native_subnet = 7;</code>
+     * @return The newNativeSubnet.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet getNewNativeSubnet() {
+      if (nativeSubnetConfigCase_ == 7) {
+         return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet) nativeSubnetConfig_;
+      }
+      return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Create new native subnet.
+     * Input only field.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet new_native_subnet = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnetOrBuilder getNewNativeSubnetOrBuilder() {
+      if (nativeSubnetConfigCase_ == 7) {
+         return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet) nativeSubnetConfig_;
+      }
+      return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ipAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ipAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nativeSubnetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nativeSubnetId_);
+      }
+      if (macLimit_ != 0L) {
+        output.writeInt64(3, macLimit_);
+      }
+      if (nativeSubnetConfigCase_ == 6) {
+        output.writeMessage(6, (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet) nativeSubnetConfig_);
+      }
+      if (nativeSubnetConfigCase_ == 7) {
+        output.writeMessage(7, (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet) nativeSubnetConfig_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ipAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, ipAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nativeSubnetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nativeSubnetId_);
+      }
+      if (macLimit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, macLimit_);
+      }
+      if (nativeSubnetConfigCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet) nativeSubnetConfig_);
+      }
+      if (nativeSubnetConfigCase_ == 7) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet) nativeSubnetConfig_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface other = (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) obj;
+
+      if (!getIpAddress()
+          .equals(other.getIpAddress())) return false;
+      if (!getNativeSubnetId()
+          .equals(other.getNativeSubnetId())) return false;
+      if (getMacLimit()
+          != other.getMacLimit()) return false;
+      if (!getNativeSubnetConfigCase().equals(other.getNativeSubnetConfigCase())) return false;
+      switch (nativeSubnetConfigCase_) {
+        case 6:
+          if (!getNativeSubnet()
+              .equals(other.getNativeSubnet())) return false;
+          break;
+        case 7:
+          if (!getNewNativeSubnet()
+              .equals(other.getNewNativeSubnet())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IP_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getIpAddress().hashCode();
+      hash = (37 * hash) + NATIVE_SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNativeSubnetId().hashCode();
+      hash = (37 * hash) + MAC_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMacLimit());
+      switch (nativeSubnetConfigCase_) {
+        case 6:
+          hash = (37 * hash) + NATIVE_SUBNET_FIELD_NUMBER;
+          hash = (53 * hash) + getNativeSubnet().hashCode();
+          break;
+        case 7:
+          hash = (37 * hash) + NEW_NATIVE_SUBNET_FIELD_NUMBER;
+          hash = (53 * hash) + getNewNativeSubnet().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.baremetal.v1alpha.PublicNetworkInterface}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.baremetal.v1alpha.PublicNetworkInterface)
+        yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterfaceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.class, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        ipAddress_ = "";
+
+        nativeSubnetId_ = "";
+
+        macLimit_ = 0L;
+
+        nativeSubnetConfigCase_ = 0;
+        nativeSubnetConfig_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface getDefaultInstanceForType() {
+        return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface build() {
+        yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface buildPartial() {
+        yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface result = new yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface(this);
+        result.ipAddress_ = ipAddress_;
+        result.nativeSubnetId_ = nativeSubnetId_;
+        result.macLimit_ = macLimit_;
+        if (nativeSubnetConfigCase_ == 6) {
+          if (nativeSubnetBuilder_ == null) {
+            result.nativeSubnetConfig_ = nativeSubnetConfig_;
+          } else {
+            result.nativeSubnetConfig_ = nativeSubnetBuilder_.build();
+          }
+        }
+        if (nativeSubnetConfigCase_ == 7) {
+          if (newNativeSubnetBuilder_ == null) {
+            result.nativeSubnetConfig_ = nativeSubnetConfig_;
+          } else {
+            result.nativeSubnetConfig_ = newNativeSubnetBuilder_.build();
+          }
+        }
+        result.nativeSubnetConfigCase_ = nativeSubnetConfigCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) {
+          return mergeFrom((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface other) {
+        if (other == yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.getDefaultInstance()) return this;
+        if (!other.getIpAddress().isEmpty()) {
+          ipAddress_ = other.ipAddress_;
+          onChanged();
+        }
+        if (!other.getNativeSubnetId().isEmpty()) {
+          nativeSubnetId_ = other.nativeSubnetId_;
+          onChanged();
+        }
+        if (other.getMacLimit() != 0L) {
+          setMacLimit(other.getMacLimit());
+        }
+        switch (other.getNativeSubnetConfigCase()) {
+          case NATIVE_SUBNET: {
+            mergeNativeSubnet(other.getNativeSubnet());
+            break;
+          }
+          case NEW_NATIVE_SUBNET: {
+            mergeNewNativeSubnet(other.getNewNativeSubnet());
+            break;
+          }
+          case NATIVESUBNETCONFIG_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int nativeSubnetConfigCase_ = 0;
+      private java.lang.Object nativeSubnetConfig_;
+      public NativeSubnetConfigCase
+          getNativeSubnetConfigCase() {
+        return NativeSubnetConfigCase.forNumber(
+            nativeSubnetConfigCase_);
+      }
+
+      public Builder clearNativeSubnetConfig() {
+        nativeSubnetConfigCase_ = 0;
+        nativeSubnetConfig_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private java.lang.Object ipAddress_ = "";
+      /**
+       * <pre>
+       * IPv4 address that is assigned to the server for this network interface.
+       * Read only field.
+       * </pre>
+       *
+       * <code>string ip_address = 1;</code>
+       * @return The ipAddress.
+       */
+      public java.lang.String getIpAddress() {
+        java.lang.Object ref = ipAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ipAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 address that is assigned to the server for this network interface.
+       * Read only field.
+       * </pre>
+       *
+       * <code>string ip_address = 1;</code>
+       * @return The bytes for ipAddress.
+       */
+      public com.google.protobuf.ByteString
+          getIpAddressBytes() {
+        java.lang.Object ref = ipAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ipAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * IPv4 address that is assigned to the server for this network interface.
+       * Read only field.
+       * </pre>
+       *
+       * <code>string ip_address = 1;</code>
+       * @param value The ipAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIpAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        ipAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 address that is assigned to the server for this network interface.
+       * Read only field.
+       * </pre>
+       *
+       * <code>string ip_address = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIpAddress() {
+        
+        ipAddress_ = getDefaultInstance().getIpAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv4 address that is assigned to the server for this network interface.
+       * Read only field.
+       * </pre>
+       *
+       * <code>string ip_address = 1;</code>
+       * @param value The bytes for ipAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIpAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        ipAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nativeSubnetId_ = "";
+      /**
+       * <pre>
+       * ID of the public subnet which is used as native subnet for interface.
+       * Read only field.
+       * </pre>
+       *
+       * <code>string native_subnet_id = 2;</code>
+       * @return The nativeSubnetId.
+       */
+      public java.lang.String getNativeSubnetId() {
+        java.lang.Object ref = nativeSubnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nativeSubnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the public subnet which is used as native subnet for interface.
+       * Read only field.
+       * </pre>
+       *
+       * <code>string native_subnet_id = 2;</code>
+       * @return The bytes for nativeSubnetId.
+       */
+      public com.google.protobuf.ByteString
+          getNativeSubnetIdBytes() {
+        java.lang.Object ref = nativeSubnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nativeSubnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the public subnet which is used as native subnet for interface.
+       * Read only field.
+       * </pre>
+       *
+       * <code>string native_subnet_id = 2;</code>
+       * @param value The nativeSubnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNativeSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nativeSubnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the public subnet which is used as native subnet for interface.
+       * Read only field.
+       * </pre>
+       *
+       * <code>string native_subnet_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNativeSubnetId() {
+        
+        nativeSubnetId_ = getDefaultInstance().getNativeSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the public subnet which is used as native subnet for interface.
+       * Read only field.
+       * </pre>
+       *
+       * <code>string native_subnet_id = 2;</code>
+       * @param value The bytes for nativeSubnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNativeSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nativeSubnetId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long macLimit_ ;
+      /**
+       * <pre>
+       * Limit of MAC addresses in the native subnet.
+       * Read only field.
+       * </pre>
+       *
+       * <code>int64 mac_limit = 3;</code>
+       * @return The macLimit.
+       */
+      @java.lang.Override
+      public long getMacLimit() {
+        return macLimit_;
+      }
+      /**
+       * <pre>
+       * Limit of MAC addresses in the native subnet.
+       * Read only field.
+       * </pre>
+       *
+       * <code>int64 mac_limit = 3;</code>
+       * @param value The macLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMacLimit(long value) {
+        
+        macLimit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit of MAC addresses in the native subnet.
+       * Read only field.
+       * </pre>
+       *
+       * <code>int64 mac_limit = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMacLimit() {
+        
+        macLimit_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnetOrBuilder> nativeSubnetBuilder_;
+      /**
+       * <pre>
+       * Use existing native subnet.
+       * Input only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet native_subnet = 6;</code>
+       * @return Whether the nativeSubnet field is set.
+       */
+      @java.lang.Override
+      public boolean hasNativeSubnet() {
+        return nativeSubnetConfigCase_ == 6;
+      }
+      /**
+       * <pre>
+       * Use existing native subnet.
+       * Input only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet native_subnet = 6;</code>
+       * @return The nativeSubnet.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet getNativeSubnet() {
+        if (nativeSubnetBuilder_ == null) {
+          if (nativeSubnetConfigCase_ == 6) {
+            return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet) nativeSubnetConfig_;
+          }
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.getDefaultInstance();
+        } else {
+          if (nativeSubnetConfigCase_ == 6) {
+            return nativeSubnetBuilder_.getMessage();
+          }
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Use existing native subnet.
+       * Input only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet native_subnet = 6;</code>
+       */
+      public Builder setNativeSubnet(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet value) {
+        if (nativeSubnetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          nativeSubnetConfig_ = value;
+          onChanged();
+        } else {
+          nativeSubnetBuilder_.setMessage(value);
+        }
+        nativeSubnetConfigCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Use existing native subnet.
+       * Input only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet native_subnet = 6;</code>
+       */
+      public Builder setNativeSubnet(
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.Builder builderForValue) {
+        if (nativeSubnetBuilder_ == null) {
+          nativeSubnetConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          nativeSubnetBuilder_.setMessage(builderForValue.build());
+        }
+        nativeSubnetConfigCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Use existing native subnet.
+       * Input only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet native_subnet = 6;</code>
+       */
+      public Builder mergeNativeSubnet(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet value) {
+        if (nativeSubnetBuilder_ == null) {
+          if (nativeSubnetConfigCase_ == 6 &&
+              nativeSubnetConfig_ != yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.getDefaultInstance()) {
+            nativeSubnetConfig_ = yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.newBuilder((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet) nativeSubnetConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            nativeSubnetConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (nativeSubnetConfigCase_ == 6) {
+            nativeSubnetBuilder_.mergeFrom(value);
+          }
+          nativeSubnetBuilder_.setMessage(value);
+        }
+        nativeSubnetConfigCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Use existing native subnet.
+       * Input only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet native_subnet = 6;</code>
+       */
+      public Builder clearNativeSubnet() {
+        if (nativeSubnetBuilder_ == null) {
+          if (nativeSubnetConfigCase_ == 6) {
+            nativeSubnetConfigCase_ = 0;
+            nativeSubnetConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (nativeSubnetConfigCase_ == 6) {
+            nativeSubnetConfigCase_ = 0;
+            nativeSubnetConfig_ = null;
+          }
+          nativeSubnetBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Use existing native subnet.
+       * Input only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet native_subnet = 6;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.Builder getNativeSubnetBuilder() {
+        return getNativeSubnetFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Use existing native subnet.
+       * Input only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet native_subnet = 6;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnetOrBuilder getNativeSubnetOrBuilder() {
+        if ((nativeSubnetConfigCase_ == 6) && (nativeSubnetBuilder_ != null)) {
+          return nativeSubnetBuilder_.getMessageOrBuilder();
+        } else {
+          if (nativeSubnetConfigCase_ == 6) {
+            return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet) nativeSubnetConfig_;
+          }
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Use existing native subnet.
+       * Input only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NativeSubnet native_subnet = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnetOrBuilder> 
+          getNativeSubnetFieldBuilder() {
+        if (nativeSubnetBuilder_ == null) {
+          if (!(nativeSubnetConfigCase_ == 6)) {
+            nativeSubnetConfig_ = yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.getDefaultInstance();
+          }
+          nativeSubnetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnetOrBuilder>(
+                  (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NativeSubnet) nativeSubnetConfig_,
+                  getParentForChildren(),
+                  isClean());
+          nativeSubnetConfig_ = null;
+        }
+        nativeSubnetConfigCase_ = 6;
+        onChanged();;
+        return nativeSubnetBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnetOrBuilder> newNativeSubnetBuilder_;
+      /**
+       * <pre>
+       * Create new native subnet.
+       * Input only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet new_native_subnet = 7;</code>
+       * @return Whether the newNativeSubnet field is set.
+       */
+      @java.lang.Override
+      public boolean hasNewNativeSubnet() {
+        return nativeSubnetConfigCase_ == 7;
+      }
+      /**
+       * <pre>
+       * Create new native subnet.
+       * Input only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet new_native_subnet = 7;</code>
+       * @return The newNativeSubnet.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet getNewNativeSubnet() {
+        if (newNativeSubnetBuilder_ == null) {
+          if (nativeSubnetConfigCase_ == 7) {
+            return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet) nativeSubnetConfig_;
+          }
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.getDefaultInstance();
+        } else {
+          if (nativeSubnetConfigCase_ == 7) {
+            return newNativeSubnetBuilder_.getMessage();
+          }
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Create new native subnet.
+       * Input only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet new_native_subnet = 7;</code>
+       */
+      public Builder setNewNativeSubnet(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet value) {
+        if (newNativeSubnetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          nativeSubnetConfig_ = value;
+          onChanged();
+        } else {
+          newNativeSubnetBuilder_.setMessage(value);
+        }
+        nativeSubnetConfigCase_ = 7;
+        return this;
+      }
+      /**
+       * <pre>
+       * Create new native subnet.
+       * Input only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet new_native_subnet = 7;</code>
+       */
+      public Builder setNewNativeSubnet(
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.Builder builderForValue) {
+        if (newNativeSubnetBuilder_ == null) {
+          nativeSubnetConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          newNativeSubnetBuilder_.setMessage(builderForValue.build());
+        }
+        nativeSubnetConfigCase_ = 7;
+        return this;
+      }
+      /**
+       * <pre>
+       * Create new native subnet.
+       * Input only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet new_native_subnet = 7;</code>
+       */
+      public Builder mergeNewNativeSubnet(yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet value) {
+        if (newNativeSubnetBuilder_ == null) {
+          if (nativeSubnetConfigCase_ == 7 &&
+              nativeSubnetConfig_ != yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.getDefaultInstance()) {
+            nativeSubnetConfig_ = yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.newBuilder((yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet) nativeSubnetConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            nativeSubnetConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (nativeSubnetConfigCase_ == 7) {
+            newNativeSubnetBuilder_.mergeFrom(value);
+          }
+          newNativeSubnetBuilder_.setMessage(value);
+        }
+        nativeSubnetConfigCase_ = 7;
+        return this;
+      }
+      /**
+       * <pre>
+       * Create new native subnet.
+       * Input only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet new_native_subnet = 7;</code>
+       */
+      public Builder clearNewNativeSubnet() {
+        if (newNativeSubnetBuilder_ == null) {
+          if (nativeSubnetConfigCase_ == 7) {
+            nativeSubnetConfigCase_ = 0;
+            nativeSubnetConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (nativeSubnetConfigCase_ == 7) {
+            nativeSubnetConfigCase_ = 0;
+            nativeSubnetConfig_ = null;
+          }
+          newNativeSubnetBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Create new native subnet.
+       * Input only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet new_native_subnet = 7;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.Builder getNewNativeSubnetBuilder() {
+        return getNewNativeSubnetFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Create new native subnet.
+       * Input only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet new_native_subnet = 7;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnetOrBuilder getNewNativeSubnetOrBuilder() {
+        if ((nativeSubnetConfigCase_ == 7) && (newNativeSubnetBuilder_ != null)) {
+          return newNativeSubnetBuilder_.getMessageOrBuilder();
+        } else {
+          if (nativeSubnetConfigCase_ == 7) {
+            return (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet) nativeSubnetConfig_;
+          }
+          return yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Create new native subnet.
+       * Input only field.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.PublicNetworkInterface.NewNativeSubnet new_native_subnet = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnetOrBuilder> 
+          getNewNativeSubnetFieldBuilder() {
+        if (newNativeSubnetBuilder_ == null) {
+          if (!(nativeSubnetConfigCase_ == 7)) {
+            nativeSubnetConfig_ = yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.getDefaultInstance();
+          }
+          newNativeSubnetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet.Builder, yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnetOrBuilder>(
+                  (yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface.NewNativeSubnet) nativeSubnetConfig_,
+                  getParentForChildren(),
+                  isClean());
+          nativeSubnetConfig_ = null;
+        }
+        nativeSubnetConfigCase_ = 7;
+        onChanged();;
+        return newNativeSubnetBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.baremetal.v1alpha.PublicNetworkInterface)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.baremetal.v1alpha.PublicNetworkInterface)
+    private static final yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface();
+    }
+
+    public static yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PublicNetworkInterface>
+        PARSER = new com.google.protobuf.AbstractParser<PublicNetworkInterface>() {
+      @java.lang.Override
+      public PublicNetworkInterface parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PublicNetworkInterface(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PublicNetworkInterface> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PublicNetworkInterface> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.ServerOuterClass.PublicNetworkInterface getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8410,6 +14293,31 @@ public final class ServerOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_baremetal_v1alpha_NetworkInterface_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_baremetal_v1alpha_PrivateNetworkInterface_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_baremetal_v1alpha_PrivateNetworkInterface_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_baremetal_v1alpha_VLANSubinterface_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_baremetal_v1alpha_VLANSubinterface_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_NativeSubnet_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_NativeSubnet_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_NewNativeSubnet_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_NewNativeSubnet_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_baremetal_v1alpha_PrivateSubnetNetworkInterface_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8459,23 +14367,49 @@ public final class ServerOuterClass {
       "\010\032\002\010\001\022\020\n\014REINSTALLING\020\t\022\014\n\010UPDATING\020\n\022\017\n" +
       "\013QUARANTINED\020\014\022\013\n\007RUNNING\020\016\"\004\010\002\020\002\"\004\010\013\020\013\"" +
       "\004\010\r\020\rJ\004\010\010\020\tJ\004\010\013\020\014J\004\010\014\020\rJ\004\010\017\020\022J\004\010\023\020\024J\004\010\026\020" +
-      "\027J\004\010\027\020\030J\004\010\r\020\016J\004\010\016\020\017J\004\010\030\020dJ\005\010e\020\310\001\"\207\002\n\020Net" +
+      "\027J\004\010\027\020\030J\004\010\r\020\016J\004\010\016\020\017J\004\010\030\020dJ\005\010e\020\310\001\"\334\003\n\020Net" +
       "workInterface\022\n\n\002id\030\001 \001(\t\022\023\n\013mac_address" +
-      "\030\002 \001(\t\022\022\n\nip_address\030\003 \001(\t\022W\n\016private_su" +
-      "bnet\030\007 \001(\0132=.yandex.cloud.baremetal.v1al" +
-      "pha.PrivateSubnetNetworkInterfaceH\000\022U\n\rp" +
-      "ublic_subnet\030\010 \001(\0132<.yandex.cloud.bareme" +
-      "tal.v1alpha.PublicSubnetNetworkInterface" +
-      "H\000B\010\n\006subnetJ\004\010\004\020\007\":\n\035PrivateSubnetNetwo" +
-      "rkInterface\022\031\n\021private_subnet_id\030\001 \001(\t\"8" +
-      "\n\034PublicSubnetNetworkInterface\022\030\n\020public" +
-      "_subnet_id\030\001 \001(\t\"q\n\nOsSettings\022\020\n\010image_" +
-      "id\030\001 \001(\t\022\026\n\016ssh_public_key\030\002 \001(\t\0229\n\010stor" +
-      "ages\030\003 \003(\0132\'.yandex.cloud.baremetal.v1al" +
-      "pha.StorageBr\n\"yandex.cloud.api.baremeta" +
-      "l.v1alphaZLgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/baremetal/v1alpha;ba" +
-      "remetalb\006proto3"
+      "\030\002 \001(\t\022\026\n\nip_address\030\003 \001(\tB\002\030\001\022[\n\016privat" +
+      "e_subnet\030\007 \001(\0132=.yandex.cloud.baremetal." +
+      "v1alpha.PrivateSubnetNetworkInterfaceB\002\030" +
+      "\001H\000\022Y\n\rpublic_subnet\030\010 \001(\0132<.yandex.clou" +
+      "d.baremetal.v1alpha.PublicSubnetNetworkI" +
+      "nterfaceB\002\030\001H\000\022T\n\021private_interface\030\014 \001(" +
+      "\01327.yandex.cloud.baremetal.v1alpha.Priva" +
+      "teNetworkInterfaceH\001\022R\n\020public_interface" +
+      "\030\r \001(\01326.yandex.cloud.baremetal.v1alpha." +
+      "PublicNetworkInterfaceH\001B\010\n\006subnetB\013\n\tin" +
+      "terfaceJ\004\010\004\020\007J\004\010\t\020\nJ\004\010\n\020\013J\004\010\013\020\014\"\250\001\n\027Priv" +
+      "ateNetworkInterface\022\030\n\020native_subnet_id\030" +
+      "\001 \001(\t\022\022\n\nip_address\030\002 \001(\t\022\021\n\tmac_limit\030\003" +
+      " \001(\003\022L\n\022vlan_subinterfaces\030\004 \003(\01320.yande" +
+      "x.cloud.baremetal.v1alpha.VLANSubinterfa" +
+      "ce\"S\n\020VLANSubinterface\022\030\n\020tagged_subnet_" +
+      "id\030\001 \001(\t\022\022\n\nip_address\030\002 \001(\t\022\021\n\tmac_limi" +
+      "t\030\003 \001(\003\"\260\004\n\026PublicNetworkInterface\022\022\n\nip" +
+      "_address\030\001 \001(\t\022\030\n\020native_subnet_id\030\002 \001(\t" +
+      "\022\021\n\tmac_limit\030\003 \001(\003\022\\\n\rnative_subnet\030\006 \001" +
+      "(\0132C.yandex.cloud.baremetal.v1alpha.Publ" +
+      "icNetworkInterface.NativeSubnetH\000\022c\n\021new" +
+      "_native_subnet\030\007 \001(\0132F.yandex.cloud.bare" +
+      "metal.v1alpha.PublicNetworkInterface.New" +
+      "NativeSubnetH\000\032!\n\014NativeSubnet\022\021\n\tsubnet" +
+      "_id\030\001 \001(\t\032\312\001\n\017NewNativeSubnet\022n\n\017address" +
+      "ing_type\030\001 \001(\0162U.yandex.cloud.baremetal." +
+      "v1alpha.PublicNetworkInterface.NewNative" +
+      "Subnet.AddressingType\"G\n\016AddressingType\022" +
+      "\037\n\033ADDRESSING_TYPE_UNSPECIFIED\020\000\022\010\n\004DHCP" +
+      "\020\001\022\n\n\006STATIC\020\002B\026\n\024native_subnet_configJ\004" +
+      "\010\004\020\005J\004\010\005\020\006\":\n\035PrivateSubnetNetworkInterf" +
+      "ace\022\031\n\021private_subnet_id\030\001 \001(\t\"8\n\034Public" +
+      "SubnetNetworkInterface\022\030\n\020public_subnet_" +
+      "id\030\001 \001(\t\"q\n\nOsSettings\022\020\n\010image_id\030\001 \001(\t" +
+      "\022\026\n\016ssh_public_key\030\002 \001(\t\0229\n\010storages\030\003 \003" +
+      "(\0132\'.yandex.cloud.baremetal.v1alpha.Stor" +
+      "ageBr\n\"yandex.cloud.api.baremetal.v1alph" +
+      "aZLgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/baremetal/v1alpha;baremetalb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8501,21 +14435,51 @@ public final class ServerOuterClass {
     internal_static_yandex_cloud_baremetal_v1alpha_NetworkInterface_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_baremetal_v1alpha_NetworkInterface_descriptor,
-        new java.lang.String[] { "Id", "MacAddress", "IpAddress", "PrivateSubnet", "PublicSubnet", "Subnet", });
-    internal_static_yandex_cloud_baremetal_v1alpha_PrivateSubnetNetworkInterface_descriptor =
+        new java.lang.String[] { "Id", "MacAddress", "IpAddress", "PrivateSubnet", "PublicSubnet", "PrivateInterface", "PublicInterface", "Subnet", "Interface", });
+    internal_static_yandex_cloud_baremetal_v1alpha_PrivateNetworkInterface_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_baremetal_v1alpha_PrivateNetworkInterface_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_baremetal_v1alpha_PrivateNetworkInterface_descriptor,
+        new java.lang.String[] { "NativeSubnetId", "IpAddress", "MacLimit", "VlanSubinterfaces", });
+    internal_static_yandex_cloud_baremetal_v1alpha_VLANSubinterface_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_baremetal_v1alpha_VLANSubinterface_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_baremetal_v1alpha_VLANSubinterface_descriptor,
+        new java.lang.String[] { "TaggedSubnetId", "IpAddress", "MacLimit", });
+    internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_descriptor,
+        new java.lang.String[] { "IpAddress", "NativeSubnetId", "MacLimit", "NativeSubnet", "NewNativeSubnet", "NativeSubnetConfig", });
+    internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_NativeSubnet_descriptor =
+      internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_NativeSubnet_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_NativeSubnet_descriptor,
+        new java.lang.String[] { "SubnetId", });
+    internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_NewNativeSubnet_descriptor =
+      internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_NewNativeSubnet_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_baremetal_v1alpha_PublicNetworkInterface_NewNativeSubnet_descriptor,
+        new java.lang.String[] { "AddressingType", });
+    internal_static_yandex_cloud_baremetal_v1alpha_PrivateSubnetNetworkInterface_descriptor =
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_baremetal_v1alpha_PrivateSubnetNetworkInterface_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_baremetal_v1alpha_PrivateSubnetNetworkInterface_descriptor,
         new java.lang.String[] { "PrivateSubnetId", });
     internal_static_yandex_cloud_baremetal_v1alpha_PublicSubnetNetworkInterface_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_baremetal_v1alpha_PublicSubnetNetworkInterface_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_baremetal_v1alpha_PublicSubnetNetworkInterface_descriptor,
         new java.lang.String[] { "PublicSubnetId", });
     internal_static_yandex_cloud_baremetal_v1alpha_OsSettings_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_baremetal_v1alpha_OsSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_baremetal_v1alpha_OsSettings_descriptor,

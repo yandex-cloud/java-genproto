@@ -10662,7 +10662,7 @@ public final class UserpoolServiceOuterClass {
      * ID of the userpool to get a domain for.
      * </pre>
      *
-     * <code>string userpool_id = 1;</code>
+     * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The userpoolId.
      */
     java.lang.String getUserpoolId();
@@ -10671,7 +10671,7 @@ public final class UserpoolServiceOuterClass {
      * ID of the userpool to get a domain for.
      * </pre>
      *
-     * <code>string userpool_id = 1;</code>
+     * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for userpoolId.
      */
     com.google.protobuf.ByteString
@@ -10682,7 +10682,7 @@ public final class UserpoolServiceOuterClass {
      * Domain name.
      * </pre>
      *
-     * <code>string domain = 2;</code>
+     * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
      * @return The domain.
      */
     java.lang.String getDomain();
@@ -10691,7 +10691,7 @@ public final class UserpoolServiceOuterClass {
      * Domain name.
      * </pre>
      *
-     * <code>string domain = 2;</code>
+     * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for domain.
      */
     com.google.protobuf.ByteString
@@ -10799,7 +10799,7 @@ public final class UserpoolServiceOuterClass {
      * ID of the userpool to get a domain for.
      * </pre>
      *
-     * <code>string userpool_id = 1;</code>
+     * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The userpoolId.
      */
     @java.lang.Override
@@ -10820,7 +10820,7 @@ public final class UserpoolServiceOuterClass {
      * ID of the userpool to get a domain for.
      * </pre>
      *
-     * <code>string userpool_id = 1;</code>
+     * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for userpoolId.
      */
     @java.lang.Override
@@ -10845,7 +10845,7 @@ public final class UserpoolServiceOuterClass {
      * Domain name.
      * </pre>
      *
-     * <code>string domain = 2;</code>
+     * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
      * @return The domain.
      */
     @java.lang.Override
@@ -10866,7 +10866,7 @@ public final class UserpoolServiceOuterClass {
      * Domain name.
      * </pre>
      *
-     * <code>string domain = 2;</code>
+     * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for domain.
      */
     @java.lang.Override
@@ -11213,7 +11213,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to get a domain for.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The userpoolId.
        */
       public java.lang.String getUserpoolId() {
@@ -11233,7 +11233,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to get a domain for.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for userpoolId.
        */
       public com.google.protobuf.ByteString
@@ -11254,7 +11254,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to get a domain for.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The userpoolId to set.
        * @return This builder for chaining.
        */
@@ -11273,7 +11273,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to get a domain for.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUserpoolId() {
@@ -11287,7 +11287,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to get a domain for.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for userpoolId to set.
        * @return This builder for chaining.
        */
@@ -11309,7 +11309,7 @@ public final class UserpoolServiceOuterClass {
        * Domain name.
        * </pre>
        *
-       * <code>string domain = 2;</code>
+       * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
        * @return The domain.
        */
       public java.lang.String getDomain() {
@@ -11329,7 +11329,7 @@ public final class UserpoolServiceOuterClass {
        * Domain name.
        * </pre>
        *
-       * <code>string domain = 2;</code>
+       * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for domain.
        */
       public com.google.protobuf.ByteString
@@ -11350,7 +11350,7 @@ public final class UserpoolServiceOuterClass {
        * Domain name.
        * </pre>
        *
-       * <code>string domain = 2;</code>
+       * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The domain to set.
        * @return This builder for chaining.
        */
@@ -11369,7 +11369,7 @@ public final class UserpoolServiceOuterClass {
        * Domain name.
        * </pre>
        *
-       * <code>string domain = 2;</code>
+       * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearDomain() {
@@ -11383,7 +11383,7 @@ public final class UserpoolServiceOuterClass {
        * Domain name.
        * </pre>
        *
-       * <code>string domain = 2;</code>
+       * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for domain to set.
        * @return This builder for chaining.
        */
@@ -11460,7 +11460,7 @@ public final class UserpoolServiceOuterClass {
      * ID of the userpool to list domains for.
      * </pre>
      *
-     * <code>string userpool_id = 1;</code>
+     * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The userpoolId.
      */
     java.lang.String getUserpoolId();
@@ -11469,7 +11469,7 @@ public final class UserpoolServiceOuterClass {
      * ID of the userpool to list domains for.
      * </pre>
      *
-     * <code>string userpool_id = 1;</code>
+     * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for userpoolId.
      */
     com.google.protobuf.ByteString
@@ -11639,7 +11639,7 @@ public final class UserpoolServiceOuterClass {
      * ID of the userpool to list domains for.
      * </pre>
      *
-     * <code>string userpool_id = 1;</code>
+     * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The userpoolId.
      */
     @java.lang.Override
@@ -11660,7 +11660,7 @@ public final class UserpoolServiceOuterClass {
      * ID of the userpool to list domains for.
      * </pre>
      *
-     * <code>string userpool_id = 1;</code>
+     * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for userpoolId.
      */
     @java.lang.Override
@@ -12149,7 +12149,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to list domains for.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The userpoolId.
        */
       public java.lang.String getUserpoolId() {
@@ -12169,7 +12169,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to list domains for.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for userpoolId.
        */
       public com.google.protobuf.ByteString
@@ -12190,7 +12190,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to list domains for.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The userpoolId to set.
        * @return This builder for chaining.
        */
@@ -12209,7 +12209,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to list domains for.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUserpoolId() {
@@ -12223,7 +12223,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to list domains for.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for userpoolId to set.
        * @return This builder for chaining.
        */
@@ -13634,7 +13634,7 @@ public final class UserpoolServiceOuterClass {
      * ID of the userpool to add a domain to.
      * </pre>
      *
-     * <code>string userpool_id = 1;</code>
+     * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The userpoolId.
      */
     java.lang.String getUserpoolId();
@@ -13643,7 +13643,7 @@ public final class UserpoolServiceOuterClass {
      * ID of the userpool to add a domain to.
      * </pre>
      *
-     * <code>string userpool_id = 1;</code>
+     * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for userpoolId.
      */
     com.google.protobuf.ByteString
@@ -13654,7 +13654,7 @@ public final class UserpoolServiceOuterClass {
      * Domain name to add.
      * </pre>
      *
-     * <code>string domain = 2;</code>
+     * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
      * @return The domain.
      */
     java.lang.String getDomain();
@@ -13663,7 +13663,7 @@ public final class UserpoolServiceOuterClass {
      * Domain name to add.
      * </pre>
      *
-     * <code>string domain = 2;</code>
+     * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for domain.
      */
     com.google.protobuf.ByteString
@@ -13771,7 +13771,7 @@ public final class UserpoolServiceOuterClass {
      * ID of the userpool to add a domain to.
      * </pre>
      *
-     * <code>string userpool_id = 1;</code>
+     * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The userpoolId.
      */
     @java.lang.Override
@@ -13792,7 +13792,7 @@ public final class UserpoolServiceOuterClass {
      * ID of the userpool to add a domain to.
      * </pre>
      *
-     * <code>string userpool_id = 1;</code>
+     * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for userpoolId.
      */
     @java.lang.Override
@@ -13817,7 +13817,7 @@ public final class UserpoolServiceOuterClass {
      * Domain name to add.
      * </pre>
      *
-     * <code>string domain = 2;</code>
+     * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
      * @return The domain.
      */
     @java.lang.Override
@@ -13838,7 +13838,7 @@ public final class UserpoolServiceOuterClass {
      * Domain name to add.
      * </pre>
      *
-     * <code>string domain = 2;</code>
+     * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for domain.
      */
     @java.lang.Override
@@ -14185,7 +14185,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to add a domain to.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The userpoolId.
        */
       public java.lang.String getUserpoolId() {
@@ -14205,7 +14205,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to add a domain to.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for userpoolId.
        */
       public com.google.protobuf.ByteString
@@ -14226,7 +14226,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to add a domain to.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The userpoolId to set.
        * @return This builder for chaining.
        */
@@ -14245,7 +14245,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to add a domain to.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUserpoolId() {
@@ -14259,7 +14259,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to add a domain to.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for userpoolId to set.
        * @return This builder for chaining.
        */
@@ -14281,7 +14281,7 @@ public final class UserpoolServiceOuterClass {
        * Domain name to add.
        * </pre>
        *
-       * <code>string domain = 2;</code>
+       * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
        * @return The domain.
        */
       public java.lang.String getDomain() {
@@ -14301,7 +14301,7 @@ public final class UserpoolServiceOuterClass {
        * Domain name to add.
        * </pre>
        *
-       * <code>string domain = 2;</code>
+       * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for domain.
        */
       public com.google.protobuf.ByteString
@@ -14322,7 +14322,7 @@ public final class UserpoolServiceOuterClass {
        * Domain name to add.
        * </pre>
        *
-       * <code>string domain = 2;</code>
+       * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The domain to set.
        * @return This builder for chaining.
        */
@@ -14341,7 +14341,7 @@ public final class UserpoolServiceOuterClass {
        * Domain name to add.
        * </pre>
        *
-       * <code>string domain = 2;</code>
+       * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearDomain() {
@@ -14355,7 +14355,7 @@ public final class UserpoolServiceOuterClass {
        * Domain name to add.
        * </pre>
        *
-       * <code>string domain = 2;</code>
+       * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for domain to set.
        * @return This builder for chaining.
        */
@@ -15230,7 +15230,7 @@ public final class UserpoolServiceOuterClass {
      * ID of the userpool to validate a domain for.
      * </pre>
      *
-     * <code>string userpool_id = 1;</code>
+     * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The userpoolId.
      */
     java.lang.String getUserpoolId();
@@ -15239,7 +15239,7 @@ public final class UserpoolServiceOuterClass {
      * ID of the userpool to validate a domain for.
      * </pre>
      *
-     * <code>string userpool_id = 1;</code>
+     * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for userpoolId.
      */
     com.google.protobuf.ByteString
@@ -15250,7 +15250,7 @@ public final class UserpoolServiceOuterClass {
      * Domain name to validate.
      * </pre>
      *
-     * <code>string domain = 2;</code>
+     * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
      * @return The domain.
      */
     java.lang.String getDomain();
@@ -15259,7 +15259,7 @@ public final class UserpoolServiceOuterClass {
      * Domain name to validate.
      * </pre>
      *
-     * <code>string domain = 2;</code>
+     * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for domain.
      */
     com.google.protobuf.ByteString
@@ -15367,7 +15367,7 @@ public final class UserpoolServiceOuterClass {
      * ID of the userpool to validate a domain for.
      * </pre>
      *
-     * <code>string userpool_id = 1;</code>
+     * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The userpoolId.
      */
     @java.lang.Override
@@ -15388,7 +15388,7 @@ public final class UserpoolServiceOuterClass {
      * ID of the userpool to validate a domain for.
      * </pre>
      *
-     * <code>string userpool_id = 1;</code>
+     * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for userpoolId.
      */
     @java.lang.Override
@@ -15413,7 +15413,7 @@ public final class UserpoolServiceOuterClass {
      * Domain name to validate.
      * </pre>
      *
-     * <code>string domain = 2;</code>
+     * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
      * @return The domain.
      */
     @java.lang.Override
@@ -15434,7 +15434,7 @@ public final class UserpoolServiceOuterClass {
      * Domain name to validate.
      * </pre>
      *
-     * <code>string domain = 2;</code>
+     * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for domain.
      */
     @java.lang.Override
@@ -15781,7 +15781,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to validate a domain for.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The userpoolId.
        */
       public java.lang.String getUserpoolId() {
@@ -15801,7 +15801,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to validate a domain for.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for userpoolId.
        */
       public com.google.protobuf.ByteString
@@ -15822,7 +15822,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to validate a domain for.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The userpoolId to set.
        * @return This builder for chaining.
        */
@@ -15841,7 +15841,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to validate a domain for.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUserpoolId() {
@@ -15855,7 +15855,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to validate a domain for.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for userpoolId to set.
        * @return This builder for chaining.
        */
@@ -15877,7 +15877,7 @@ public final class UserpoolServiceOuterClass {
        * Domain name to validate.
        * </pre>
        *
-       * <code>string domain = 2;</code>
+       * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
        * @return The domain.
        */
       public java.lang.String getDomain() {
@@ -15897,7 +15897,7 @@ public final class UserpoolServiceOuterClass {
        * Domain name to validate.
        * </pre>
        *
-       * <code>string domain = 2;</code>
+       * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for domain.
        */
       public com.google.protobuf.ByteString
@@ -15918,7 +15918,7 @@ public final class UserpoolServiceOuterClass {
        * Domain name to validate.
        * </pre>
        *
-       * <code>string domain = 2;</code>
+       * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The domain to set.
        * @return This builder for chaining.
        */
@@ -15937,7 +15937,7 @@ public final class UserpoolServiceOuterClass {
        * Domain name to validate.
        * </pre>
        *
-       * <code>string domain = 2;</code>
+       * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearDomain() {
@@ -15951,7 +15951,7 @@ public final class UserpoolServiceOuterClass {
        * Domain name to validate.
        * </pre>
        *
-       * <code>string domain = 2;</code>
+       * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for domain to set.
        * @return This builder for chaining.
        */
@@ -16826,7 +16826,7 @@ public final class UserpoolServiceOuterClass {
      * ID of the userpool to delete a domain from.
      * </pre>
      *
-     * <code>string userpool_id = 1;</code>
+     * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The userpoolId.
      */
     java.lang.String getUserpoolId();
@@ -16835,7 +16835,7 @@ public final class UserpoolServiceOuterClass {
      * ID of the userpool to delete a domain from.
      * </pre>
      *
-     * <code>string userpool_id = 1;</code>
+     * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for userpoolId.
      */
     com.google.protobuf.ByteString
@@ -16846,7 +16846,7 @@ public final class UserpoolServiceOuterClass {
      * Domain name to delete.
      * </pre>
      *
-     * <code>string domain = 2;</code>
+     * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
      * @return The domain.
      */
     java.lang.String getDomain();
@@ -16855,7 +16855,7 @@ public final class UserpoolServiceOuterClass {
      * Domain name to delete.
      * </pre>
      *
-     * <code>string domain = 2;</code>
+     * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for domain.
      */
     com.google.protobuf.ByteString
@@ -16963,7 +16963,7 @@ public final class UserpoolServiceOuterClass {
      * ID of the userpool to delete a domain from.
      * </pre>
      *
-     * <code>string userpool_id = 1;</code>
+     * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The userpoolId.
      */
     @java.lang.Override
@@ -16984,7 +16984,7 @@ public final class UserpoolServiceOuterClass {
      * ID of the userpool to delete a domain from.
      * </pre>
      *
-     * <code>string userpool_id = 1;</code>
+     * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for userpoolId.
      */
     @java.lang.Override
@@ -17009,7 +17009,7 @@ public final class UserpoolServiceOuterClass {
      * Domain name to delete.
      * </pre>
      *
-     * <code>string domain = 2;</code>
+     * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
      * @return The domain.
      */
     @java.lang.Override
@@ -17030,7 +17030,7 @@ public final class UserpoolServiceOuterClass {
      * Domain name to delete.
      * </pre>
      *
-     * <code>string domain = 2;</code>
+     * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for domain.
      */
     @java.lang.Override
@@ -17377,7 +17377,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to delete a domain from.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The userpoolId.
        */
       public java.lang.String getUserpoolId() {
@@ -17397,7 +17397,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to delete a domain from.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for userpoolId.
        */
       public com.google.protobuf.ByteString
@@ -17418,7 +17418,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to delete a domain from.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The userpoolId to set.
        * @return This builder for chaining.
        */
@@ -17437,7 +17437,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to delete a domain from.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUserpoolId() {
@@ -17451,7 +17451,7 @@ public final class UserpoolServiceOuterClass {
        * ID of the userpool to delete a domain from.
        * </pre>
        *
-       * <code>string userpool_id = 1;</code>
+       * <code>string userpool_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for userpoolId to set.
        * @return This builder for chaining.
        */
@@ -17473,7 +17473,7 @@ public final class UserpoolServiceOuterClass {
        * Domain name to delete.
        * </pre>
        *
-       * <code>string domain = 2;</code>
+       * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
        * @return The domain.
        */
       public java.lang.String getDomain() {
@@ -17493,7 +17493,7 @@ public final class UserpoolServiceOuterClass {
        * Domain name to delete.
        * </pre>
        *
-       * <code>string domain = 2;</code>
+       * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for domain.
        */
       public com.google.protobuf.ByteString
@@ -17514,7 +17514,7 @@ public final class UserpoolServiceOuterClass {
        * Domain name to delete.
        * </pre>
        *
-       * <code>string domain = 2;</code>
+       * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The domain to set.
        * @return This builder for chaining.
        */
@@ -17533,7 +17533,7 @@ public final class UserpoolServiceOuterClass {
        * Domain name to delete.
        * </pre>
        *
-       * <code>string domain = 2;</code>
+       * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
       public Builder clearDomain() {
@@ -17547,7 +17547,7 @@ public final class UserpoolServiceOuterClass {
        * Domain name to delete.
        * </pre>
        *
-       * <code>string domain = 2;</code>
+       * <code>string domain = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for domain to set.
        * @return This builder for chaining.
        */
@@ -20581,114 +20581,117 @@ public final class UserpoolServiceOuterClass {
       "Metadata\022\023\n\013userpool_id\030\001 \001(\t\":\n\025DeleteU" +
       "serpoolRequest\022!\n\013userpool_id\030\001 \001(\tB\014\350\3071" +
       "\001\212\3101\004<=50\"-\n\026DeleteUserpoolMetadata\022\023\n\013u" +
-      "serpool_id\030\001 \001(\t\"?\n\030GetUserpoolDomainReq" +
-      "uest\022\023\n\013userpool_id\030\001 \001(\t\022\016\n\006domain\030\002 \001(" +
-      "\t\"\214\001\n\032ListUserpoolDomainsRequest\022\023\n\013user" +
-      "pool_id\030\001 \001(\t\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-" +
-      "1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=2000\022\032\n\006" +
-      "filter\030\004 \001(\tB\n\212\3101\006<=1000\"x\n\033ListUserpool" +
-      "DomainsResponse\022@\n\007domains\030\001 \003(\0132/.yande" +
-      "x.cloud.organizationmanager.v1.idp.Domai" +
-      "n\022\027\n\017next_page_token\030\002 \001(\t\"?\n\030AddUserpoo" +
-      "lDomainRequest\022\023\n\013userpool_id\030\001 \001(\t\022\016\n\006d" +
-      "omain\030\002 \001(\t\"@\n\031AddUserpoolDomainMetadata" +
-      "\022\023\n\013userpool_id\030\001 \001(\t\022\016\n\006domain\030\002 \001(\t\"D\n" +
-      "\035ValidateUserpoolDomainRequest\022\023\n\013userpo" +
-      "ol_id\030\001 \001(\t\022\016\n\006domain\030\002 \001(\t\"E\n\036ValidateU" +
-      "serpoolDomainMetadata\022\023\n\013userpool_id\030\001 \001" +
-      "(\t\022\016\n\006domain\030\002 \001(\t\"B\n\033DeleteUserpoolDoma" +
-      "inRequest\022\023\n\013userpool_id\030\001 \001(\t\022\016\n\006domain" +
-      "\030\002 \001(\t\"C\n\034DeleteUserpoolDomainMetadata\022\023" +
-      "\n\013userpool_id\030\001 \001(\t\022\016\n\006domain\030\002 \001(\t\"}\n\035L" +
-      "istUserpoolOperationsRequest\022\035\n\013userpool" +
-      "_id\030\001 \001(\tB\010\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n" +
-      "\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=20" +
-      "00\"p\n\036ListUserpoolOperationsResponse\0225\n\n" +
-      "operations\030\001 \003(\0132!.yandex.cloud.operatio" +
-      "n.Operation\022\027\n\017next_page_token\030\002 \001(\t2\353\030\n" +
-      "\017UserpoolService\022\263\001\n\003Get\022;.yandex.cloud." +
-      "organizationmanager.v1.idp.GetUserpoolRe" +
-      "quest\0321.yandex.cloud.organizationmanager" +
-      ".v1.idp.Userpool\"<\202\323\344\223\0026\0224/organization-" +
-      "manager/v1/idp/userpools/{userpool_id}\022\265" +
-      "\001\n\004List\022=.yandex.cloud.organizationmanag" +
-      "er.v1.idp.ListUserpoolsRequest\032>.yandex." +
-      "cloud.organizationmanager.v1.idp.ListUse" +
-      "rpoolsResponse\".\202\323\344\223\002(\022&/organization-ma" +
-      "nager/v1/idp/userpools\022\304\001\n\006Create\022>.yand" +
-      "ex.cloud.organizationmanager.v1.idp.Crea" +
-      "teUserpoolRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"W\202\323\344\223\002+\"&/organization-mana" +
-      "ger/v1/idp/userpools:\001*\262\322*\"\n\026CreateUserp" +
-      "oolMetadata\022\010Userpool\022\322\001\n\006Update\022>.yande" +
-      "x.cloud.organizationmanager.v1.idp.Updat" +
-      "eUserpoolRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"e\202\323\344\223\002924/organization-manag" +
-      "er/v1/idp/userpools/{userpool_id}:\001*\262\322*\"" +
-      "\n\026UpdateUserpoolMetadata\022\010Userpool\022\334\001\n\006D" +
-      "elete\022>.yandex.cloud.organizationmanager" +
-      ".v1.idp.DeleteUserpoolRequest\032!.yandex.c" +
-      "loud.operation.Operation\"o\202\323\344\223\0026*4/organ" +
-      "ization-manager/v1/idp/userpools/{userpo" +
-      "ol_id}\262\322*/\n\026DeleteUserpoolMetadata\022\025goog" +
-      "le.protobuf.Empty\022\316\001\n\tGetDomain\022A.yandex" +
-      ".cloud.organizationmanager.v1.idp.GetUse" +
-      "rpoolDomainRequest\032/.yandex.cloud.organi" +
-      "zationmanager.v1.idp.Domain\"M\202\323\344\223\002G\022E/or" +
-      "ganization-manager/v1/idp/userpools/{use" +
-      "rpool_id}/domains/{domain}\022\336\001\n\013ListDomai" +
-      "ns\022C.yandex.cloud.organizationmanager.v1" +
-      ".idp.ListUserpoolDomainsRequest\032D.yandex" +
-      ".cloud.organizationmanager.v1.idp.ListUs" +
-      "erpoolDomainsResponse\"D\202\323\344\223\002>\022</organiza" +
-      "tion-manager/v1/idp/userpools/{userpool_" +
-      "id}/domains\022\341\001\n\tAddDomain\022A.yandex.cloud" +
-      ".organizationmanager.v1.idp.AddUserpoolD" +
-      "omainRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"n\202\323\344\223\002A\"</organization-manager/v" +
-      "1/idp/userpools/{userpool_id}/domains:\001*" +
-      "\262\322*#\n\031AddUserpoolDomainMetadata\022\006Domain\022" +
-      "\203\002\n\016ValidateDomain\022F.yandex.cloud.organi" +
-      "zationmanager.v1.idp.ValidateUserpoolDom" +
-      "ainRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"\205\001\202\323\344\223\002S\"N/organization-manager/v1" +
-      "/idp/userpools/{userpool_id}/domains/{do" +
-      "main}:validate:\001*\262\322*(\n\036ValidateUserpoolD" +
-      "omainMetadata\022\006Domain\022\200\002\n\014DeleteDomain\022D" +
+      "serpool_id\030\001 \001(\t\"S\n\030GetUserpoolDomainReq" +
+      "uest\022!\n\013userpool_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "\024\n\006domain\030\002 \001(\tB\004\350\3071\001\"\232\001\n\032ListUserpoolDo" +
+      "mainsRequest\022!\n\013userpool_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\036" +
+      "\n\npage_token\030\003 \001(\tB\n\212\3101\006<=2000\022\032\n\006filter" +
+      "\030\004 \001(\tB\n\212\3101\006<=1000\"x\n\033ListUserpoolDomain" +
+      "sResponse\022@\n\007domains\030\001 \003(\0132/.yandex.clou" +
+      "d.organizationmanager.v1.idp.Domain\022\027\n\017n" +
+      "ext_page_token\030\002 \001(\t\"S\n\030AddUserpoolDomai" +
+      "nRequest\022!\n\013userpool_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022\024\n\006domain\030\002 \001(\tB\004\350\3071\001\"@\n\031AddUserpool" +
+      "DomainMetadata\022\023\n\013userpool_id\030\001 \001(\t\022\016\n\006d" +
+      "omain\030\002 \001(\t\"X\n\035ValidateUserpoolDomainReq" +
+      "uest\022!\n\013userpool_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "\024\n\006domain\030\002 \001(\tB\004\350\3071\001\"E\n\036ValidateUserpoo" +
+      "lDomainMetadata\022\023\n\013userpool_id\030\001 \001(\t\022\016\n\006" +
+      "domain\030\002 \001(\t\"V\n\033DeleteUserpoolDomainRequ" +
+      "est\022!\n\013userpool_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024" +
+      "\n\006domain\030\002 \001(\tB\004\350\3071\001\"C\n\034DeleteUserpoolDo" +
+      "mainMetadata\022\023\n\013userpool_id\030\001 \001(\t\022\016\n\006dom" +
+      "ain\030\002 \001(\t\"}\n\035ListUserpoolOperationsReque" +
+      "st\022\035\n\013userpool_id\030\001 \001(\tB\010\212\3101\004<=50\022\035\n\tpag" +
+      "e_size\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003" +
+      " \001(\tB\n\212\3101\006<=2000\"p\n\036ListUserpoolOperatio" +
+      "nsResponse\0225\n\noperations\030\001 \003(\0132!.yandex." +
+      "cloud.operation.Operation\022\027\n\017next_page_t" +
+      "oken\030\002 \001(\t2\353\030\n\017UserpoolService\022\263\001\n\003Get\022;" +
       ".yandex.cloud.organizationmanager.v1.idp" +
-      ".DeleteUserpoolDomainRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"\206\001\202\323\344\223\002G*E/organ" +
-      "ization-manager/v1/idp/userpools/{userpo" +
-      "ol_id}/domains/{domain}\262\322*5\n\034DeleteUserp" +
-      "oolDomainMetadata\022\025google.protobuf.Empty" +
-      "\022\352\001\n\016ListOperations\022F.yandex.cloud.organ" +
-      "izationmanager.v1.idp.ListUserpoolOperat" +
-      "ionsRequest\032G.yandex.cloud.organizationm" +
-      "anager.v1.idp.ListUserpoolOperationsResp" +
-      "onse\"G\202\323\344\223\002A\022?/organization-manager/v1/i" +
-      "dp/userpools/{userpool_id}/operations\022\306\001" +
-      "\n\022ListAccessBindings\022..yandex.cloud.acce" +
-      "ss.ListAccessBindingsRequest\032/.yandex.cl" +
-      "oud.access.ListAccessBindingsResponse\"O\202" +
-      "\323\344\223\002I\022G/organization-manager/v1/idp/user" +
-      "pools/{resource_id}:listAccessBindings\022\205" +
-      "\002\n\021SetAccessBindings\022-.yandex.cloud.acce" +
-      "ss.SetAccessBindingsRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"\235\001\202\323\344\223\002K\"F/organi" +
-      "zation-manager/v1/idp/userpools/{resourc" +
-      "e_id}:setAccessBindings:\001*\262\322*H\n access.S" +
-      "etAccessBindingsMetadata\022$access.AccessB" +
-      "indingsOperationResult\022\221\002\n\024UpdateAccessB" +
-      "indings\0220.yandex.cloud.access.UpdateAcce" +
-      "ssBindingsRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"\243\001\202\323\344\223\002N2I/organization-man" +
-      "ager/v1/idp/userpools/{resource_id}:upda" +
-      "teAccessBindings:\001*\262\322*K\n#access.UpdateAc" +
-      "cessBindingsMetadata\022$access.AccessBindi" +
-      "ngsOperationResultB~\n+yandex.cloud.api.o" +
-      "rganizationmanager.v1.idpZOgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/orga" +
-      "nizationmanager/v1/idp;idpb\006proto3"
+      ".GetUserpoolRequest\0321.yandex.cloud.organ" +
+      "izationmanager.v1.idp.Userpool\"<\202\323\344\223\0026\0224" +
+      "/organization-manager/v1/idp/userpools/{" +
+      "userpool_id}\022\265\001\n\004List\022=.yandex.cloud.org" +
+      "anizationmanager.v1.idp.ListUserpoolsReq" +
+      "uest\032>.yandex.cloud.organizationmanager." +
+      "v1.idp.ListUserpoolsResponse\".\202\323\344\223\002(\022&/o" +
+      "rganization-manager/v1/idp/userpools\022\304\001\n" +
+      "\006Create\022>.yandex.cloud.organizationmanag" +
+      "er.v1.idp.CreateUserpoolRequest\032!.yandex" +
+      ".cloud.operation.Operation\"W\202\323\344\223\002+\"&/org" +
+      "anization-manager/v1/idp/userpools:\001*\262\322*" +
+      "\"\n\026CreateUserpoolMetadata\022\010Userpool\022\322\001\n\006" +
+      "Update\022>.yandex.cloud.organizationmanage" +
+      "r.v1.idp.UpdateUserpoolRequest\032!.yandex." +
+      "cloud.operation.Operation\"e\202\323\344\223\002924/orga" +
+      "nization-manager/v1/idp/userpools/{userp" +
+      "ool_id}:\001*\262\322*\"\n\026UpdateUserpoolMetadata\022\010" +
+      "Userpool\022\334\001\n\006Delete\022>.yandex.cloud.organ" +
+      "izationmanager.v1.idp.DeleteUserpoolRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"o" +
+      "\202\323\344\223\0026*4/organization-manager/v1/idp/use" +
+      "rpools/{userpool_id}\262\322*/\n\026DeleteUserpool" +
+      "Metadata\022\025google.protobuf.Empty\022\316\001\n\tGetD" +
+      "omain\022A.yandex.cloud.organizationmanager" +
+      ".v1.idp.GetUserpoolDomainRequest\032/.yande" +
+      "x.cloud.organizationmanager.v1.idp.Domai" +
+      "n\"M\202\323\344\223\002G\022E/organization-manager/v1/idp/" +
+      "userpools/{userpool_id}/domains/{domain}" +
+      "\022\336\001\n\013ListDomains\022C.yandex.cloud.organiza" +
+      "tionmanager.v1.idp.ListUserpoolDomainsRe" +
+      "quest\032D.yandex.cloud.organizationmanager" +
+      ".v1.idp.ListUserpoolDomainsResponse\"D\202\323\344" +
+      "\223\002>\022</organization-manager/v1/idp/userpo" +
+      "ols/{userpool_id}/domains\022\341\001\n\tAddDomain\022" +
+      "A.yandex.cloud.organizationmanager.v1.id" +
+      "p.AddUserpoolDomainRequest\032!.yandex.clou" +
+      "d.operation.Operation\"n\202\323\344\223\002A\"</organiza" +
+      "tion-manager/v1/idp/userpools/{userpool_" +
+      "id}/domains:\001*\262\322*#\n\031AddUserpoolDomainMet" +
+      "adata\022\006Domain\022\203\002\n\016ValidateDomain\022F.yande" +
+      "x.cloud.organizationmanager.v1.idp.Valid" +
+      "ateUserpoolDomainRequest\032!.yandex.cloud." +
+      "operation.Operation\"\205\001\202\323\344\223\002S\"N/organizat" +
+      "ion-manager/v1/idp/userpools/{userpool_i" +
+      "d}/domains/{domain}:validate:\001*\262\322*(\n\036Val" +
+      "idateUserpoolDomainMetadata\022\006Domain\022\200\002\n\014" +
+      "DeleteDomain\022D.yandex.cloud.organization" +
+      "manager.v1.idp.DeleteUserpoolDomainReque" +
+      "st\032!.yandex.cloud.operation.Operation\"\206\001" +
+      "\202\323\344\223\002G*E/organization-manager/v1/idp/use" +
+      "rpools/{userpool_id}/domains/{domain}\262\322*" +
+      "5\n\034DeleteUserpoolDomainMetadata\022\025google." +
+      "protobuf.Empty\022\352\001\n\016ListOperations\022F.yand" +
+      "ex.cloud.organizationmanager.v1.idp.List" +
+      "UserpoolOperationsRequest\032G.yandex.cloud" +
+      ".organizationmanager.v1.idp.ListUserpool" +
+      "OperationsResponse\"G\202\323\344\223\002A\022?/organizatio" +
+      "n-manager/v1/idp/userpools/{userpool_id}" +
+      "/operations\022\306\001\n\022ListAccessBindings\022..yan" +
+      "dex.cloud.access.ListAccessBindingsReque" +
+      "st\032/.yandex.cloud.access.ListAccessBindi" +
+      "ngsResponse\"O\202\323\344\223\002I\022G/organization-manag" +
+      "er/v1/idp/userpools/{resource_id}:listAc" +
+      "cessBindings\022\205\002\n\021SetAccessBindings\022-.yan" +
+      "dex.cloud.access.SetAccessBindingsReques" +
+      "t\032!.yandex.cloud.operation.Operation\"\235\001\202" +
+      "\323\344\223\002K\"F/organization-manager/v1/idp/user" +
+      "pools/{resource_id}:setAccessBindings:\001*" +
+      "\262\322*H\n access.SetAccessBindingsMetadata\022$" +
+      "access.AccessBindingsOperationResult\022\221\002\n" +
+      "\024UpdateAccessBindings\0220.yandex.cloud.acc" +
+      "ess.UpdateAccessBindingsRequest\032!.yandex" +
+      ".cloud.operation.Operation\"\243\001\202\323\344\223\002N2I/or" +
+      "ganization-manager/v1/idp/userpools/{res" +
+      "ource_id}:updateAccessBindings:\001*\262\322*K\n#a" +
+      "ccess.UpdateAccessBindingsMetadata\022$acce" +
+      "ss.AccessBindingsOperationResultB~\n+yand" +
+      "ex.cloud.api.organizationmanager.v1.idpZ" +
+      "Ogithub.com/yandex-cloud/go-genproto/yan" +
+      "dex/cloud/organizationmanager/v1/idp;idp" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

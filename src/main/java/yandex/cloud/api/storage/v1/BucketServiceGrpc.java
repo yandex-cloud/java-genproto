@@ -390,6 +390,130 @@ public final class BucketServiceGrpc {
     return getListAccessBindingsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketInventoryConfigurationRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateInventoryConfigurationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateInventoryConfiguration",
+      requestType = yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketInventoryConfigurationRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketInventoryConfigurationRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateInventoryConfigurationMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketInventoryConfigurationRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateInventoryConfigurationMethod;
+    if ((getCreateInventoryConfigurationMethod = BucketServiceGrpc.getCreateInventoryConfigurationMethod) == null) {
+      synchronized (BucketServiceGrpc.class) {
+        if ((getCreateInventoryConfigurationMethod = BucketServiceGrpc.getCreateInventoryConfigurationMethod) == null) {
+          BucketServiceGrpc.getCreateInventoryConfigurationMethod = getCreateInventoryConfigurationMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketInventoryConfigurationRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateInventoryConfiguration"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketInventoryConfigurationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("CreateInventoryConfiguration"))
+              .build();
+        }
+      }
+    }
+    return getCreateInventoryConfigurationMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketInventoryConfigurationRequest,
+      yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration> getGetInventoryConfigurationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetInventoryConfiguration",
+      requestType = yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketInventoryConfigurationRequest.class,
+      responseType = yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketInventoryConfigurationRequest,
+      yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration> getGetInventoryConfigurationMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketInventoryConfigurationRequest, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration> getGetInventoryConfigurationMethod;
+    if ((getGetInventoryConfigurationMethod = BucketServiceGrpc.getGetInventoryConfigurationMethod) == null) {
+      synchronized (BucketServiceGrpc.class) {
+        if ((getGetInventoryConfigurationMethod = BucketServiceGrpc.getGetInventoryConfigurationMethod) == null) {
+          BucketServiceGrpc.getGetInventoryConfigurationMethod = getGetInventoryConfigurationMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketInventoryConfigurationRequest, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetInventoryConfiguration"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketInventoryConfigurationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.getDefaultInstance()))
+              .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("GetInventoryConfiguration"))
+              .build();
+        }
+      }
+    }
+    return getGetInventoryConfigurationMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketInventoryConfigurationRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteInventoryConfigurationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteInventoryConfiguration",
+      requestType = yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketInventoryConfigurationRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketInventoryConfigurationRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteInventoryConfigurationMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketInventoryConfigurationRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteInventoryConfigurationMethod;
+    if ((getDeleteInventoryConfigurationMethod = BucketServiceGrpc.getDeleteInventoryConfigurationMethod) == null) {
+      synchronized (BucketServiceGrpc.class) {
+        if ((getDeleteInventoryConfigurationMethod = BucketServiceGrpc.getDeleteInventoryConfigurationMethod) == null) {
+          BucketServiceGrpc.getDeleteInventoryConfigurationMethod = getDeleteInventoryConfigurationMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketInventoryConfigurationRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteInventoryConfiguration"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketInventoryConfigurationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("DeleteInventoryConfiguration"))
+              .build();
+        }
+      }
+    }
+    return getDeleteInventoryConfigurationMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsRequest,
+      yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsResponse> getListInventoryConfigurationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListInventoryConfigurations",
+      requestType = yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsRequest.class,
+      responseType = yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsRequest,
+      yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsResponse> getListInventoryConfigurationsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsRequest, yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsResponse> getListInventoryConfigurationsMethod;
+    if ((getListInventoryConfigurationsMethod = BucketServiceGrpc.getListInventoryConfigurationsMethod) == null) {
+      synchronized (BucketServiceGrpc.class) {
+        if ((getListInventoryConfigurationsMethod = BucketServiceGrpc.getListInventoryConfigurationsMethod) == null) {
+          BucketServiceGrpc.getListInventoryConfigurationsMethod = getListInventoryConfigurationsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsRequest, yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListInventoryConfigurations"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BucketServiceMethodDescriptorSupplier("ListInventoryConfigurations"))
+              .build();
+        }
+      }
+    }
+    return getListInventoryConfigurationsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -530,6 +654,8 @@ public final class BucketServiceGrpc {
     /**
      * <pre>
      * Deletes the HTTPS configuration for the specified bucket.
+     * (-- api-linter: yc::1705::http-method-mapping=disabled
+     *     for compatibility with old format --)
      * </pre>
      */
     public void deleteHTTPSConfig(yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketHTTPSConfigRequest request,
@@ -538,6 +664,9 @@ public final class BucketServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Sets access bindings for the specified bucket.
+     * </pre>
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -545,6 +674,11 @@ public final class BucketServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates access bindings for the specified bucket.
+     * (-- api-linter: yc::1705::http-method-mapping=disabled
+     *     for compatibility with old format --)  
+     * </pre>
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -552,10 +686,53 @@ public final class BucketServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists access bindings for the specified bucket.
+     * </pre>
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Create/Update an inventory configuration with the corresponding ID
+     * </pre>
+     */
+    public void createInventoryConfiguration(yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketInventoryConfigurationRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateInventoryConfigurationMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Get an inventory configuration with the corresponding ID
+     * </pre>
+     */
+    public void getInventoryConfiguration(yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketInventoryConfigurationRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetInventoryConfigurationMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Delete an inventory configuration with the corresponding ID
+     * </pre>
+     */
+    public void deleteInventoryConfiguration(yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketInventoryConfigurationRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteInventoryConfigurationMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Listing inventory configurations 
+     * </pre>
+     */
+    public void listInventoryConfigurations(yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListInventoryConfigurationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -644,6 +821,34 @@ public final class BucketServiceGrpc {
                 yandex.cloud.api.access.Access.ListAccessBindingsRequest,
                 yandex.cloud.api.access.Access.ListAccessBindingsResponse>(
                   this, METHODID_LIST_ACCESS_BINDINGS)))
+          .addMethod(
+            getCreateInventoryConfigurationMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketInventoryConfigurationRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_CREATE_INVENTORY_CONFIGURATION)))
+          .addMethod(
+            getGetInventoryConfigurationMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketInventoryConfigurationRequest,
+                yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration>(
+                  this, METHODID_GET_INVENTORY_CONFIGURATION)))
+          .addMethod(
+            getDeleteInventoryConfigurationMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketInventoryConfigurationRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DELETE_INVENTORY_CONFIGURATION)))
+          .addMethod(
+            getListInventoryConfigurationsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsRequest,
+                yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsResponse>(
+                  this, METHODID_LIST_INVENTORY_CONFIGURATIONS)))
           .build();
     }
   }
@@ -762,6 +967,8 @@ public final class BucketServiceGrpc {
     /**
      * <pre>
      * Deletes the HTTPS configuration for the specified bucket.
+     * (-- api-linter: yc::1705::http-method-mapping=disabled
+     *     for compatibility with old format --)
      * </pre>
      */
     public void deleteHTTPSConfig(yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketHTTPSConfigRequest request,
@@ -771,6 +978,9 @@ public final class BucketServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Sets access bindings for the specified bucket.
+     * </pre>
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -779,6 +989,11 @@ public final class BucketServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates access bindings for the specified bucket.
+     * (-- api-linter: yc::1705::http-method-mapping=disabled
+     *     for compatibility with old format --)  
+     * </pre>
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -787,11 +1002,58 @@ public final class BucketServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists access bindings for the specified bucket.
+     * </pre>
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Create/Update an inventory configuration with the corresponding ID
+     * </pre>
+     */
+    public void createInventoryConfiguration(yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketInventoryConfigurationRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateInventoryConfigurationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Get an inventory configuration with the corresponding ID
+     * </pre>
+     */
+    public void getInventoryConfiguration(yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketInventoryConfigurationRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetInventoryConfigurationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Delete an inventory configuration with the corresponding ID
+     * </pre>
+     */
+    public void deleteInventoryConfiguration(yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketInventoryConfigurationRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteInventoryConfigurationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Listing inventory configurations 
+     * </pre>
+     */
+    public void listInventoryConfigurations(yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListInventoryConfigurationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -901,6 +1163,8 @@ public final class BucketServiceGrpc {
     /**
      * <pre>
      * Deletes the HTTPS configuration for the specified bucket.
+     * (-- api-linter: yc::1705::http-method-mapping=disabled
+     *     for compatibility with old format --)
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation deleteHTTPSConfig(yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketHTTPSConfigRequest request) {
@@ -909,6 +1173,9 @@ public final class BucketServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Sets access bindings for the specified bucket.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -916,6 +1183,11 @@ public final class BucketServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates access bindings for the specified bucket.
+     * (-- api-linter: yc::1705::http-method-mapping=disabled
+     *     for compatibility with old format --)  
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -923,10 +1195,53 @@ public final class BucketServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists access bindings for the specified bucket.
+     * </pre>
      */
     public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAccessBindingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Create/Update an inventory configuration with the corresponding ID
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation createInventoryConfiguration(yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketInventoryConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateInventoryConfigurationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get an inventory configuration with the corresponding ID
+     * </pre>
+     */
+    public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration getInventoryConfiguration(yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketInventoryConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetInventoryConfigurationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Delete an inventory configuration with the corresponding ID
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation deleteInventoryConfiguration(yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketInventoryConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteInventoryConfigurationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Listing inventory configurations 
+     * </pre>
+     */
+    public yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsResponse listInventoryConfigurations(yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListInventoryConfigurationsMethod(), getCallOptions(), request);
     }
   }
 
@@ -1044,6 +1359,8 @@ public final class BucketServiceGrpc {
     /**
      * <pre>
      * Deletes the HTTPS configuration for the specified bucket.
+     * (-- api-linter: yc::1705::http-method-mapping=disabled
+     *     for compatibility with old format --)
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteHTTPSConfig(
@@ -1053,6 +1370,9 @@ public final class BucketServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Sets access bindings for the specified bucket.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setAccessBindings(
         yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
@@ -1061,6 +1381,11 @@ public final class BucketServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates access bindings for the specified bucket.
+     * (-- api-linter: yc::1705::http-method-mapping=disabled
+     *     for compatibility with old format --)  
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessBindings(
         yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
@@ -1069,11 +1394,58 @@ public final class BucketServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists access bindings for the specified bucket.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
         yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Create/Update an inventory configuration with the corresponding ID
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> createInventoryConfiguration(
+        yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketInventoryConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateInventoryConfigurationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Get an inventory configuration with the corresponding ID
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration> getInventoryConfiguration(
+        yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketInventoryConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetInventoryConfigurationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Delete an inventory configuration with the corresponding ID
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteInventoryConfiguration(
+        yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketInventoryConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteInventoryConfigurationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Listing inventory configurations 
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsResponse> listInventoryConfigurations(
+        yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListInventoryConfigurationsMethod(), getCallOptions()), request);
     }
   }
 
@@ -1089,6 +1461,10 @@ public final class BucketServiceGrpc {
   private static final int METHODID_SET_ACCESS_BINDINGS = 9;
   private static final int METHODID_UPDATE_ACCESS_BINDINGS = 10;
   private static final int METHODID_LIST_ACCESS_BINDINGS = 11;
+  private static final int METHODID_CREATE_INVENTORY_CONFIGURATION = 12;
+  private static final int METHODID_GET_INVENTORY_CONFIGURATION = 13;
+  private static final int METHODID_DELETE_INVENTORY_CONFIGURATION = 14;
+  private static final int METHODID_LIST_INVENTORY_CONFIGURATIONS = 15;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1154,6 +1530,22 @@ public final class BucketServiceGrpc {
         case METHODID_LIST_ACCESS_BINDINGS:
           serviceImpl.listAccessBindings((yandex.cloud.api.access.Access.ListAccessBindingsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_INVENTORY_CONFIGURATION:
+          serviceImpl.createInventoryConfiguration((yandex.cloud.api.storage.v1.BucketServiceOuterClass.CreateBucketInventoryConfigurationRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_GET_INVENTORY_CONFIGURATION:
+          serviceImpl.getInventoryConfiguration((yandex.cloud.api.storage.v1.BucketServiceOuterClass.GetBucketInventoryConfigurationRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration>) responseObserver);
+          break;
+        case METHODID_DELETE_INVENTORY_CONFIGURATION:
+          serviceImpl.deleteInventoryConfiguration((yandex.cloud.api.storage.v1.BucketServiceOuterClass.DeleteBucketInventoryConfigurationRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_LIST_INVENTORY_CONFIGURATIONS:
+          serviceImpl.listInventoryConfigurations((yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.storage.v1.BucketServiceOuterClass.ListBucketInventoryConfigurationsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1228,6 +1620,10 @@ public final class BucketServiceGrpc {
               .addMethod(getSetAccessBindingsMethod())
               .addMethod(getUpdateAccessBindingsMethod())
               .addMethod(getListAccessBindingsMethod())
+              .addMethod(getCreateInventoryConfigurationMethod())
+              .addMethod(getGetInventoryConfigurationMethod())
+              .addMethod(getDeleteInventoryConfigurationMethod())
+              .addMethod(getListInventoryConfigurationsMethod())
               .build();
         }
       }

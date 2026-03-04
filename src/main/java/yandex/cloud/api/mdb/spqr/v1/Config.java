@@ -43,10 +43,6 @@ public final class Config {
      * <code>FATAL = 5;</code>
      */
     FATAL(5),
-    /**
-     * <code>PANIC = 6;</code>
-     */
-    PANIC(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -74,10 +70,6 @@ public final class Config {
      * <code>FATAL = 5;</code>
      */
     public static final int FATAL_VALUE = 5;
-    /**
-     * <code>PANIC = 6;</code>
-     */
-    public static final int PANIC_VALUE = 6;
 
 
     public final int getNumber() {
@@ -110,7 +102,6 @@ public final class Config {
         case 3: return WARNING;
         case 4: return ERROR;
         case 5: return FATAL;
-        case 6: return PANIC;
         default: return null;
       }
     }
@@ -7817,6 +7808,43 @@ public final class Config {
      * <code>.google.protobuf.BoolValue prefer_same_availability_zone = 5;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getPreferSameAvailabilityZoneOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BoolValue enhanced_multishard_processing = 6;</code>
+     * @return Whether the enhancedMultishardProcessing field is set.
+     */
+    boolean hasEnhancedMultishardProcessing();
+    /**
+     * <code>.google.protobuf.BoolValue enhanced_multishard_processing = 6;</code>
+     * @return The enhancedMultishardProcessing.
+     */
+    com.google.protobuf.BoolValue getEnhancedMultishardProcessing();
+    /**
+     * <code>.google.protobuf.BoolValue enhanced_multishard_processing = 6;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getEnhancedMultishardProcessingOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.mdb.spqr.v1.RouterSettings.TargetSessionAttrs default_target_session_attrs = 7;</code>
+     * @return The enum numeric value on the wire for defaultTargetSessionAttrs.
+     */
+    int getDefaultTargetSessionAttrsValue();
+    /**
+     * <code>.yandex.cloud.mdb.spqr.v1.RouterSettings.TargetSessionAttrs default_target_session_attrs = 7;</code>
+     * @return The defaultTargetSessionAttrs.
+     */
+    yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.TargetSessionAttrs getDefaultTargetSessionAttrs();
+
+    /**
+     * <code>.yandex.cloud.mdb.spqr.v1.RouterSettings.CommitStrategy default_commit_strategy = 8;</code>
+     * @return The enum numeric value on the wire for defaultCommitStrategy.
+     */
+    int getDefaultCommitStrategyValue();
+    /**
+     * <code>.yandex.cloud.mdb.spqr.v1.RouterSettings.CommitStrategy default_commit_strategy = 8;</code>
+     * @return The defaultCommitStrategy.
+     */
+    yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.CommitStrategy getDefaultCommitStrategy();
   }
   /**
    * <pre>
@@ -7837,6 +7865,8 @@ public final class Config {
     private RouterSettings() {
       timeQuantiles_ = emptyDoubleList();
       defaultRouteBehavior_ = 0;
+      defaultTargetSessionAttrs_ = 0;
+      defaultCommitStrategy_ = 0;
     }
 
     @java.lang.Override
@@ -7921,6 +7951,31 @@ public final class Config {
                 preferSameAvailabilityZone_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 50: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (enhancedMultishardProcessing_ != null) {
+                subBuilder = enhancedMultishardProcessing_.toBuilder();
+              }
+              enhancedMultishardProcessing_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(enhancedMultishardProcessing_);
+                enhancedMultishardProcessing_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 56: {
+              int rawValue = input.readEnum();
+
+              defaultTargetSessionAttrs_ = rawValue;
+              break;
+            }
+            case 64: {
+              int rawValue = input.readEnum();
+
+              defaultCommitStrategy_ = rawValue;
               break;
             }
             default: {
@@ -8075,6 +8130,276 @@ public final class Config {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.spqr.v1.RouterSettings.DefaultRouteBehavior)
     }
 
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.spqr.v1.RouterSettings.TargetSessionAttrs}
+     */
+    public enum TargetSessionAttrs
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>TARGET_SESSION_ATTRS_UNSPECIFIED = 0;</code>
+       */
+      TARGET_SESSION_ATTRS_UNSPECIFIED(0),
+      /**
+       * <code>READ_WRITE = 1;</code>
+       */
+      READ_WRITE(1),
+      /**
+       * <code>SMART_READ_WRITE = 2;</code>
+       */
+      SMART_READ_WRITE(2),
+      /**
+       * <code>READ_ONLY = 3;</code>
+       */
+      READ_ONLY(3),
+      /**
+       * <code>PREFER_STANDBY = 4;</code>
+       */
+      PREFER_STANDBY(4),
+      /**
+       * <code>ANY = 5;</code>
+       */
+      ANY(5),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>TARGET_SESSION_ATTRS_UNSPECIFIED = 0;</code>
+       */
+      public static final int TARGET_SESSION_ATTRS_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>READ_WRITE = 1;</code>
+       */
+      public static final int READ_WRITE_VALUE = 1;
+      /**
+       * <code>SMART_READ_WRITE = 2;</code>
+       */
+      public static final int SMART_READ_WRITE_VALUE = 2;
+      /**
+       * <code>READ_ONLY = 3;</code>
+       */
+      public static final int READ_ONLY_VALUE = 3;
+      /**
+       * <code>PREFER_STANDBY = 4;</code>
+       */
+      public static final int PREFER_STANDBY_VALUE = 4;
+      /**
+       * <code>ANY = 5;</code>
+       */
+      public static final int ANY_VALUE = 5;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TargetSessionAttrs valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static TargetSessionAttrs forNumber(int value) {
+        switch (value) {
+          case 0: return TARGET_SESSION_ATTRS_UNSPECIFIED;
+          case 1: return READ_WRITE;
+          case 2: return SMART_READ_WRITE;
+          case 3: return READ_ONLY;
+          case 4: return PREFER_STANDBY;
+          case 5: return ANY;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<TargetSessionAttrs>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          TargetSessionAttrs> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<TargetSessionAttrs>() {
+              public TargetSessionAttrs findValueByNumber(int number) {
+                return TargetSessionAttrs.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final TargetSessionAttrs[] VALUES = values();
+
+      public static TargetSessionAttrs valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private TargetSessionAttrs(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.spqr.v1.RouterSettings.TargetSessionAttrs)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.spqr.v1.RouterSettings.CommitStrategy}
+     */
+    public enum CommitStrategy
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>COMMIT_STRATEGY_UNSPECIFIED = 0;</code>
+       */
+      COMMIT_STRATEGY_UNSPECIFIED(0),
+      /**
+       * <code>BEST_EFFORT = 1;</code>
+       */
+      BEST_EFFORT(1),
+      /**
+       * <code>ONE_PC = 2;</code>
+       */
+      ONE_PC(2),
+      /**
+       * <code>TWO_PC = 3;</code>
+       */
+      TWO_PC(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>COMMIT_STRATEGY_UNSPECIFIED = 0;</code>
+       */
+      public static final int COMMIT_STRATEGY_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>BEST_EFFORT = 1;</code>
+       */
+      public static final int BEST_EFFORT_VALUE = 1;
+      /**
+       * <code>ONE_PC = 2;</code>
+       */
+      public static final int ONE_PC_VALUE = 2;
+      /**
+       * <code>TWO_PC = 3;</code>
+       */
+      public static final int TWO_PC_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static CommitStrategy valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static CommitStrategy forNumber(int value) {
+        switch (value) {
+          case 0: return COMMIT_STRATEGY_UNSPECIFIED;
+          case 1: return BEST_EFFORT;
+          case 2: return ONE_PC;
+          case 3: return TWO_PC;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<CommitStrategy>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          CommitStrategy> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<CommitStrategy>() {
+              public CommitStrategy findValueByNumber(int number) {
+                return CommitStrategy.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.getDescriptor().getEnumTypes().get(2);
+      }
+
+      private static final CommitStrategy[] VALUES = values();
+
+      public static CommitStrategy valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private CommitStrategy(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.spqr.v1.RouterSettings.CommitStrategy)
+    }
+
     public static final int SHOW_NOTICE_MESSAGES_FIELD_NUMBER = 1;
     private com.google.protobuf.BoolValue showNoticeMessages_;
     /**
@@ -8174,6 +8499,70 @@ public final class Config {
       return getPreferSameAvailabilityZone();
     }
 
+    public static final int ENHANCED_MULTISHARD_PROCESSING_FIELD_NUMBER = 6;
+    private com.google.protobuf.BoolValue enhancedMultishardProcessing_;
+    /**
+     * <code>.google.protobuf.BoolValue enhanced_multishard_processing = 6;</code>
+     * @return Whether the enhancedMultishardProcessing field is set.
+     */
+    @java.lang.Override
+    public boolean hasEnhancedMultishardProcessing() {
+      return enhancedMultishardProcessing_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue enhanced_multishard_processing = 6;</code>
+     * @return The enhancedMultishardProcessing.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getEnhancedMultishardProcessing() {
+      return enhancedMultishardProcessing_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enhancedMultishardProcessing_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue enhanced_multishard_processing = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getEnhancedMultishardProcessingOrBuilder() {
+      return getEnhancedMultishardProcessing();
+    }
+
+    public static final int DEFAULT_TARGET_SESSION_ATTRS_FIELD_NUMBER = 7;
+    private int defaultTargetSessionAttrs_;
+    /**
+     * <code>.yandex.cloud.mdb.spqr.v1.RouterSettings.TargetSessionAttrs default_target_session_attrs = 7;</code>
+     * @return The enum numeric value on the wire for defaultTargetSessionAttrs.
+     */
+    @java.lang.Override public int getDefaultTargetSessionAttrsValue() {
+      return defaultTargetSessionAttrs_;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.spqr.v1.RouterSettings.TargetSessionAttrs default_target_session_attrs = 7;</code>
+     * @return The defaultTargetSessionAttrs.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.TargetSessionAttrs getDefaultTargetSessionAttrs() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.TargetSessionAttrs result = yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.TargetSessionAttrs.valueOf(defaultTargetSessionAttrs_);
+      return result == null ? yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.TargetSessionAttrs.UNRECOGNIZED : result;
+    }
+
+    public static final int DEFAULT_COMMIT_STRATEGY_FIELD_NUMBER = 8;
+    private int defaultCommitStrategy_;
+    /**
+     * <code>.yandex.cloud.mdb.spqr.v1.RouterSettings.CommitStrategy default_commit_strategy = 8;</code>
+     * @return The enum numeric value on the wire for defaultCommitStrategy.
+     */
+    @java.lang.Override public int getDefaultCommitStrategyValue() {
+      return defaultCommitStrategy_;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.spqr.v1.RouterSettings.CommitStrategy default_commit_strategy = 8;</code>
+     * @return The defaultCommitStrategy.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.CommitStrategy getDefaultCommitStrategy() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.CommitStrategy result = yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.CommitStrategy.valueOf(defaultCommitStrategy_);
+      return result == null ? yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.CommitStrategy.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8204,6 +8593,15 @@ public final class Config {
       }
       if (preferSameAvailabilityZone_ != null) {
         output.writeMessage(5, getPreferSameAvailabilityZone());
+      }
+      if (enhancedMultishardProcessing_ != null) {
+        output.writeMessage(6, getEnhancedMultishardProcessing());
+      }
+      if (defaultTargetSessionAttrs_ != yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.TargetSessionAttrs.TARGET_SESSION_ATTRS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(7, defaultTargetSessionAttrs_);
+      }
+      if (defaultCommitStrategy_ != yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.CommitStrategy.COMMIT_STRATEGY_UNSPECIFIED.getNumber()) {
+        output.writeEnum(8, defaultCommitStrategy_);
       }
       unknownFields.writeTo(output);
     }
@@ -8237,6 +8635,18 @@ public final class Config {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getPreferSameAvailabilityZone());
       }
+      if (enhancedMultishardProcessing_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getEnhancedMultishardProcessing());
+      }
+      if (defaultTargetSessionAttrs_ != yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.TargetSessionAttrs.TARGET_SESSION_ATTRS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(7, defaultTargetSessionAttrs_);
+      }
+      if (defaultCommitStrategy_ != yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.CommitStrategy.COMMIT_STRATEGY_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, defaultCommitStrategy_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -8265,6 +8675,13 @@ public final class Config {
         if (!getPreferSameAvailabilityZone()
             .equals(other.getPreferSameAvailabilityZone())) return false;
       }
+      if (hasEnhancedMultishardProcessing() != other.hasEnhancedMultishardProcessing()) return false;
+      if (hasEnhancedMultishardProcessing()) {
+        if (!getEnhancedMultishardProcessing()
+            .equals(other.getEnhancedMultishardProcessing())) return false;
+      }
+      if (defaultTargetSessionAttrs_ != other.defaultTargetSessionAttrs_) return false;
+      if (defaultCommitStrategy_ != other.defaultCommitStrategy_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8290,6 +8707,14 @@ public final class Config {
         hash = (37 * hash) + PREFER_SAME_AVAILABILITY_ZONE_FIELD_NUMBER;
         hash = (53 * hash) + getPreferSameAvailabilityZone().hashCode();
       }
+      if (hasEnhancedMultishardProcessing()) {
+        hash = (37 * hash) + ENHANCED_MULTISHARD_PROCESSING_FIELD_NUMBER;
+        hash = (53 * hash) + getEnhancedMultishardProcessing().hashCode();
+      }
+      hash = (37 * hash) + DEFAULT_TARGET_SESSION_ATTRS_FIELD_NUMBER;
+      hash = (53 * hash) + defaultTargetSessionAttrs_;
+      hash = (37 * hash) + DEFAULT_COMMIT_STRATEGY_FIELD_NUMBER;
+      hash = (53 * hash) + defaultCommitStrategy_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8443,6 +8868,16 @@ public final class Config {
           preferSameAvailabilityZone_ = null;
           preferSameAvailabilityZoneBuilder_ = null;
         }
+        if (enhancedMultishardProcessingBuilder_ == null) {
+          enhancedMultishardProcessing_ = null;
+        } else {
+          enhancedMultishardProcessing_ = null;
+          enhancedMultishardProcessingBuilder_ = null;
+        }
+        defaultTargetSessionAttrs_ = 0;
+
+        defaultCommitStrategy_ = 0;
+
         return this;
       }
 
@@ -8486,6 +8921,13 @@ public final class Config {
         } else {
           result.preferSameAvailabilityZone_ = preferSameAvailabilityZoneBuilder_.build();
         }
+        if (enhancedMultishardProcessingBuilder_ == null) {
+          result.enhancedMultishardProcessing_ = enhancedMultishardProcessing_;
+        } else {
+          result.enhancedMultishardProcessing_ = enhancedMultishardProcessingBuilder_.build();
+        }
+        result.defaultTargetSessionAttrs_ = defaultTargetSessionAttrs_;
+        result.defaultCommitStrategy_ = defaultCommitStrategy_;
         onBuilt();
         return result;
       }
@@ -8552,6 +8994,15 @@ public final class Config {
         }
         if (other.hasPreferSameAvailabilityZone()) {
           mergePreferSameAvailabilityZone(other.getPreferSameAvailabilityZone());
+        }
+        if (other.hasEnhancedMultishardProcessing()) {
+          mergeEnhancedMultishardProcessing(other.getEnhancedMultishardProcessing());
+        }
+        if (other.defaultTargetSessionAttrs_ != 0) {
+          setDefaultTargetSessionAttrsValue(other.getDefaultTargetSessionAttrsValue());
+        }
+        if (other.defaultCommitStrategy_ != 0) {
+          setDefaultCommitStrategyValue(other.getDefaultCommitStrategyValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8952,6 +9403,233 @@ public final class Config {
           preferSameAvailabilityZone_ = null;
         }
         return preferSameAvailabilityZoneBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue enhancedMultishardProcessing_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enhancedMultishardProcessingBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue enhanced_multishard_processing = 6;</code>
+       * @return Whether the enhancedMultishardProcessing field is set.
+       */
+      public boolean hasEnhancedMultishardProcessing() {
+        return enhancedMultishardProcessingBuilder_ != null || enhancedMultishardProcessing_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue enhanced_multishard_processing = 6;</code>
+       * @return The enhancedMultishardProcessing.
+       */
+      public com.google.protobuf.BoolValue getEnhancedMultishardProcessing() {
+        if (enhancedMultishardProcessingBuilder_ == null) {
+          return enhancedMultishardProcessing_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enhancedMultishardProcessing_;
+        } else {
+          return enhancedMultishardProcessingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue enhanced_multishard_processing = 6;</code>
+       */
+      public Builder setEnhancedMultishardProcessing(com.google.protobuf.BoolValue value) {
+        if (enhancedMultishardProcessingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          enhancedMultishardProcessing_ = value;
+          onChanged();
+        } else {
+          enhancedMultishardProcessingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue enhanced_multishard_processing = 6;</code>
+       */
+      public Builder setEnhancedMultishardProcessing(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (enhancedMultishardProcessingBuilder_ == null) {
+          enhancedMultishardProcessing_ = builderForValue.build();
+          onChanged();
+        } else {
+          enhancedMultishardProcessingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue enhanced_multishard_processing = 6;</code>
+       */
+      public Builder mergeEnhancedMultishardProcessing(com.google.protobuf.BoolValue value) {
+        if (enhancedMultishardProcessingBuilder_ == null) {
+          if (enhancedMultishardProcessing_ != null) {
+            enhancedMultishardProcessing_ =
+              com.google.protobuf.BoolValue.newBuilder(enhancedMultishardProcessing_).mergeFrom(value).buildPartial();
+          } else {
+            enhancedMultishardProcessing_ = value;
+          }
+          onChanged();
+        } else {
+          enhancedMultishardProcessingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue enhanced_multishard_processing = 6;</code>
+       */
+      public Builder clearEnhancedMultishardProcessing() {
+        if (enhancedMultishardProcessingBuilder_ == null) {
+          enhancedMultishardProcessing_ = null;
+          onChanged();
+        } else {
+          enhancedMultishardProcessing_ = null;
+          enhancedMultishardProcessingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue enhanced_multishard_processing = 6;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getEnhancedMultishardProcessingBuilder() {
+        
+        onChanged();
+        return getEnhancedMultishardProcessingFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue enhanced_multishard_processing = 6;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getEnhancedMultishardProcessingOrBuilder() {
+        if (enhancedMultishardProcessingBuilder_ != null) {
+          return enhancedMultishardProcessingBuilder_.getMessageOrBuilder();
+        } else {
+          return enhancedMultishardProcessing_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : enhancedMultishardProcessing_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue enhanced_multishard_processing = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getEnhancedMultishardProcessingFieldBuilder() {
+        if (enhancedMultishardProcessingBuilder_ == null) {
+          enhancedMultishardProcessingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getEnhancedMultishardProcessing(),
+                  getParentForChildren(),
+                  isClean());
+          enhancedMultishardProcessing_ = null;
+        }
+        return enhancedMultishardProcessingBuilder_;
+      }
+
+      private int defaultTargetSessionAttrs_ = 0;
+      /**
+       * <code>.yandex.cloud.mdb.spqr.v1.RouterSettings.TargetSessionAttrs default_target_session_attrs = 7;</code>
+       * @return The enum numeric value on the wire for defaultTargetSessionAttrs.
+       */
+      @java.lang.Override public int getDefaultTargetSessionAttrsValue() {
+        return defaultTargetSessionAttrs_;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.spqr.v1.RouterSettings.TargetSessionAttrs default_target_session_attrs = 7;</code>
+       * @param value The enum numeric value on the wire for defaultTargetSessionAttrs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultTargetSessionAttrsValue(int value) {
+        
+        defaultTargetSessionAttrs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.spqr.v1.RouterSettings.TargetSessionAttrs default_target_session_attrs = 7;</code>
+       * @return The defaultTargetSessionAttrs.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.TargetSessionAttrs getDefaultTargetSessionAttrs() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.TargetSessionAttrs result = yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.TargetSessionAttrs.valueOf(defaultTargetSessionAttrs_);
+        return result == null ? yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.TargetSessionAttrs.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.spqr.v1.RouterSettings.TargetSessionAttrs default_target_session_attrs = 7;</code>
+       * @param value The defaultTargetSessionAttrs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultTargetSessionAttrs(yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.TargetSessionAttrs value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        defaultTargetSessionAttrs_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.spqr.v1.RouterSettings.TargetSessionAttrs default_target_session_attrs = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultTargetSessionAttrs() {
+        
+        defaultTargetSessionAttrs_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int defaultCommitStrategy_ = 0;
+      /**
+       * <code>.yandex.cloud.mdb.spqr.v1.RouterSettings.CommitStrategy default_commit_strategy = 8;</code>
+       * @return The enum numeric value on the wire for defaultCommitStrategy.
+       */
+      @java.lang.Override public int getDefaultCommitStrategyValue() {
+        return defaultCommitStrategy_;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.spqr.v1.RouterSettings.CommitStrategy default_commit_strategy = 8;</code>
+       * @param value The enum numeric value on the wire for defaultCommitStrategy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultCommitStrategyValue(int value) {
+        
+        defaultCommitStrategy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.spqr.v1.RouterSettings.CommitStrategy default_commit_strategy = 8;</code>
+       * @return The defaultCommitStrategy.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.CommitStrategy getDefaultCommitStrategy() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.CommitStrategy result = yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.CommitStrategy.valueOf(defaultCommitStrategy_);
+        return result == null ? yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.CommitStrategy.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.spqr.v1.RouterSettings.CommitStrategy default_commit_strategy = 8;</code>
+       * @param value The defaultCommitStrategy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultCommitStrategy(yandex.cloud.api.mdb.spqr.v1.Config.RouterSettings.CommitStrategy value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        defaultCommitStrategy_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.spqr.v1.RouterSettings.CommitStrategy default_commit_strategy = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultCommitStrategy() {
+        
+        defaultCommitStrategy_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10885,24 +11563,36 @@ public final class Config {
       "t\030\004 \001(\0132\033.google.protobuf.Int64Value\0222\n\r" +
       "keys_per_move\030\005 \001(\0132\033.google.protobuf.In" +
       "t64Value\022,\n\007timeout\030\006 \001(\0132\033.google.proto" +
-      "buf.Int64Value\"\340\002\n\016RouterSettings\0228\n\024sho" +
+      "buf.Int64Value\"\314\006\n\016RouterSettings\0228\n\024sho" +
       "w_notice_messages\030\001 \001(\0132\032.google.protobu" +
       "f.BoolValue\022\026\n\016time_quantiles\030\002 \003(\001\022]\n\026d" +
       "efault_route_behavior\030\004 \001(\0162=.yandex.clo" +
       "ud.mdb.spqr.v1.RouterSettings.DefaultRou" +
       "teBehavior\022A\n\035prefer_same_availability_z" +
-      "one\030\005 \001(\0132\032.google.protobuf.BoolValue\"T\n" +
-      "\024DefaultRouteBehavior\022&\n\"DEFAULT_ROUTE_B" +
-      "EHAVIOR_UNSPECIFIED\020\000\022\t\n\005BLOCK\020\001\022\t\n\005ALLO" +
-      "W\020\002J\004\010\003\020\004\"\025\n\023CoordinatorSettings\"\024\n\022Post" +
-      "greSQLSettings\"P\n\tResources\022\032\n\022resource_" +
-      "preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014di" +
-      "sk_type_id\030\003 \001(\t*h\n\010LogLevel\022\031\n\025LOG_LEVE" +
-      "L_UNSPECIFIED\020\000\022\t\n\005DEBUG\020\001\022\010\n\004INFO\020\002\022\013\n\007" +
-      "WARNING\020\003\022\t\n\005ERROR\020\004\022\t\n\005FATAL\020\005\022\t\n\005PANIC" +
-      "\020\006Ba\n\034yandex.cloud.api.mdb.spqr.v1ZAgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/mdb/spqr/v1;spqrb\006proto3"
+      "one\030\005 \001(\0132\032.google.protobuf.BoolValue\022B\n" +
+      "\036enhanced_multishard_processing\030\006 \001(\0132\032." +
+      "google.protobuf.BoolValue\022a\n\034default_tar" +
+      "get_session_attrs\030\007 \001(\0162;.yandex.cloud.m" +
+      "db.spqr.v1.RouterSettings.TargetSessionA" +
+      "ttrs\022X\n\027default_commit_strategy\030\010 \001(\01627." +
+      "yandex.cloud.mdb.spqr.v1.RouterSettings." +
+      "CommitStrategy\"T\n\024DefaultRouteBehavior\022&" +
+      "\n\"DEFAULT_ROUTE_BEHAVIOR_UNSPECIFIED\020\000\022\t" +
+      "\n\005BLOCK\020\001\022\t\n\005ALLOW\020\002\"\214\001\n\022TargetSessionAt" +
+      "trs\022$\n TARGET_SESSION_ATTRS_UNSPECIFIED\020" +
+      "\000\022\016\n\nREAD_WRITE\020\001\022\024\n\020SMART_READ_WRITE\020\002\022" +
+      "\r\n\tREAD_ONLY\020\003\022\022\n\016PREFER_STANDBY\020\004\022\007\n\003AN" +
+      "Y\020\005\"Z\n\016CommitStrategy\022\037\n\033COMMIT_STRATEGY" +
+      "_UNSPECIFIED\020\000\022\017\n\013BEST_EFFORT\020\001\022\n\n\006ONE_P" +
+      "C\020\002\022\n\n\006TWO_PC\020\003J\004\010\003\020\004\"\025\n\023CoordinatorSett" +
+      "ings\"\024\n\022PostgreSQLSettings\"P\n\tResources\022" +
+      "\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_size" +
+      "\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t*c\n\010LogLevel" +
+      "\022\031\n\025LOG_LEVEL_UNSPECIFIED\020\000\022\t\n\005DEBUG\020\001\022\010" +
+      "\n\004INFO\020\002\022\013\n\007WARNING\020\003\022\t\n\005ERROR\020\004\022\t\n\005FATA" +
+      "L\020\005\"\004\010\006\020\006Ba\n\034yandex.cloud.api.mdb.spqr.v" +
+      "1ZAgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/mdb/spqr/v1;spqrb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10957,7 +11647,7 @@ public final class Config {
     internal_static_yandex_cloud_mdb_spqr_v1_RouterSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_spqr_v1_RouterSettings_descriptor,
-        new java.lang.String[] { "ShowNoticeMessages", "TimeQuantiles", "DefaultRouteBehavior", "PreferSameAvailabilityZone", });
+        new java.lang.String[] { "ShowNoticeMessages", "TimeQuantiles", "DefaultRouteBehavior", "PreferSameAvailabilityZone", "EnhancedMultishardProcessing", "DefaultTargetSessionAttrs", "DefaultCommitStrategy", });
     internal_static_yandex_cloud_mdb_spqr_v1_CoordinatorSettings_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_mdb_spqr_v1_CoordinatorSettings_fieldAccessorTable = new

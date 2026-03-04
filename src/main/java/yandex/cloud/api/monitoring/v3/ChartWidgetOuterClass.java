@@ -485,14 +485,26 @@ public final class ChartWidgetOuterClass {
     public enum ValuesType
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Not specified.
+       * </pre>
+       *
        * <code>VALUES_TYPE_UNSPECIFIED = 0;</code>
        */
       VALUES_TYPE_UNSPECIFIED(0),
       /**
+       * <pre>
+       * All values quals to 0.
+       * </pre>
+       *
        * <code>VALUES_TYPE_ALL_ZEROS = 1;</code>
        */
       VALUES_TYPE_ALL_ZEROS(1),
       /**
+       * <pre>
+       * All values are `null`.
+       * </pre>
+       *
        * <code>VALUES_TYPE_ALL_NULL = 2;</code>
        */
       VALUES_TYPE_ALL_NULL(2),
@@ -500,14 +512,26 @@ public final class ChartWidgetOuterClass {
       ;
 
       /**
+       * <pre>
+       * Not specified.
+       * </pre>
+       *
        * <code>VALUES_TYPE_UNSPECIFIED = 0;</code>
        */
       public static final int VALUES_TYPE_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * All values quals to 0.
+       * </pre>
+       *
        * <code>VALUES_TYPE_ALL_ZEROS = 1;</code>
        */
       public static final int VALUES_TYPE_ALL_ZEROS_VALUE = 1;
       /**
+       * <pre>
+       * All values are `null`.
+       * </pre>
+       *
        * <code>VALUES_TYPE_ALL_NULL = 2;</code>
        */
       public static final int VALUES_TYPE_ALL_NULL_VALUE = 2;
@@ -602,6 +626,10 @@ public final class ChartWidgetOuterClass {
     public enum FreezeDuration
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Not specified.
+       * </pre>
+       *
        * <code>FREEZE_DURATION_UNSPECIFIED = 0;</code>
        */
       FREEZE_DURATION_UNSPECIFIED(0),
@@ -641,6 +669,10 @@ public final class ChartWidgetOuterClass {
       ;
 
       /**
+       * <pre>
+       * Not specified.
+       * </pre>
+       *
        * <code>FREEZE_DURATION_UNSPECIFIED = 0;</code>
        */
       public static final int FREEZE_DURATION_UNSPECIFIED_VALUE = 0;
@@ -3100,6 +3132,33 @@ public final class ChartWidgetOuterClass {
        * @return The showLabels.
        */
       boolean getShowLabels();
+
+      /**
+       * <pre>
+       * Settings for stat widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings tiles_settings = 10;</code>
+       * @return Whether the tilesSettings field is set.
+       */
+      boolean hasTilesSettings();
+      /**
+       * <pre>
+       * Settings for stat widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings tiles_settings = 10;</code>
+       * @return The tilesSettings.
+       */
+      yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings getTilesSettings();
+      /**
+       * <pre>
+       * Settings for stat widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings tiles_settings = 10;</code>
+       */
+      yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettingsOrBuilder getTilesSettingsOrBuilder();
     }
     /**
      * <pre>
@@ -3225,6 +3284,19 @@ public final class ChartWidgetOuterClass {
               case 72: {
 
                 showLabels_ = input.readBool();
+                break;
+              }
+              case 82: {
+                yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.Builder subBuilder = null;
+                if (tilesSettings_ != null) {
+                  subBuilder = tilesSettings_.toBuilder();
+                }
+                tilesSettings_ = input.readMessage(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(tilesSettings_);
+                  tilesSettings_ = subBuilder.buildPartial();
+                }
+
                 break;
               }
               default: {
@@ -4142,16 +4214,28 @@ public final class ChartWidgetOuterClass {
         yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorSchemeOrBuilder getThresholdsOrBuilder();
 
         /**
+         * <pre>
+         * Constant color scheme settings.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
          * @return Whether the constant field is set.
          */
         boolean hasConstant();
         /**
+         * <pre>
+         * Constant color scheme settings.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
          * @return The constant.
          */
         yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme getConstant();
         /**
+         * <pre>
+         * Constant color scheme settings.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
          */
         yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorSchemeOrBuilder getConstantOrBuilder();
@@ -6740,11 +6824,19 @@ public final class ChartWidgetOuterClass {
             com.google.protobuf.MessageOrBuilder {
 
           /**
+           * <pre>
+           * Color
+           * </pre>
+           *
            * <code>string color = 1;</code>
            * @return The color.
            */
           java.lang.String getColor();
           /**
+           * <pre>
+           * Color
+           * </pre>
+           *
            * <code>string color = 1;</code>
            * @return The bytes for color.
            */
@@ -6838,6 +6930,10 @@ public final class ChartWidgetOuterClass {
           public static final int COLOR_FIELD_NUMBER = 1;
           private volatile java.lang.Object color_;
           /**
+           * <pre>
+           * Color
+           * </pre>
+           *
            * <code>string color = 1;</code>
            * @return The color.
            */
@@ -6855,6 +6951,10 @@ public final class ChartWidgetOuterClass {
             }
           }
           /**
+           * <pre>
+           * Color
+           * </pre>
+           *
            * <code>string color = 1;</code>
            * @return The bytes for color.
            */
@@ -7177,6 +7277,10 @@ public final class ChartWidgetOuterClass {
 
             private java.lang.Object color_ = "";
             /**
+             * <pre>
+             * Color
+             * </pre>
+             *
              * <code>string color = 1;</code>
              * @return The color.
              */
@@ -7193,6 +7297,10 @@ public final class ChartWidgetOuterClass {
               }
             }
             /**
+             * <pre>
+             * Color
+             * </pre>
+             *
              * <code>string color = 1;</code>
              * @return The bytes for color.
              */
@@ -7210,6 +7318,10 @@ public final class ChartWidgetOuterClass {
               }
             }
             /**
+             * <pre>
+             * Color
+             * </pre>
+             *
              * <code>string color = 1;</code>
              * @param value The color to set.
              * @return This builder for chaining.
@@ -7225,6 +7337,10 @@ public final class ChartWidgetOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Color
+             * </pre>
+             *
              * <code>string color = 1;</code>
              * @return This builder for chaining.
              */
@@ -7235,6 +7351,10 @@ public final class ChartWidgetOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Color
+             * </pre>
+             *
              * <code>string color = 1;</code>
              * @param value The bytes for color to set.
              * @return This builder for chaining.
@@ -7308,11 +7428,19 @@ public final class ChartWidgetOuterClass {
             com.google.protobuf.MessageOrBuilder {
 
           /**
+           * <pre>
+           * Aggregation
+           * </pre>
+           *
            * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation aggregation = 1;</code>
            * @return The enum numeric value on the wire for aggregation.
            */
           int getAggregationValue();
           /**
+           * <pre>
+           * Aggregation
+           * </pre>
+           *
            * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation aggregation = 1;</code>
            * @return The aggregation.
            */
@@ -7408,26 +7536,50 @@ public final class ChartWidgetOuterClass {
           public enum Aggregation
               implements com.google.protobuf.ProtocolMessageEnum {
             /**
+             * <pre>
+             * Not specified.
+             * </pre>
+             *
              * <code>AGGREGATION_UNSPECIFIED = 0;</code>
              */
             AGGREGATION_UNSPECIFIED(0),
             /**
+             * <pre>
+             * Aggregate by last value.
+             * </pre>
+             *
              * <code>AGGREGATION_LAST = 1;</code>
              */
             AGGREGATION_LAST(1),
             /**
+             * <pre>
+             * Aggregate by min value.
+             * </pre>
+             *
              * <code>AGGREGATION_MIN = 2;</code>
              */
             AGGREGATION_MIN(2),
             /**
+             * <pre>
+             * Aggregate by max value.
+             * </pre>
+             *
              * <code>AGGREGATION_MAX = 3;</code>
              */
             AGGREGATION_MAX(3),
             /**
+             * <pre>
+             * Aggregate by avg value.
+             * </pre>
+             *
              * <code>AGGREGATION_AVG = 4;</code>
              */
             AGGREGATION_AVG(4),
             /**
+             * <pre>
+             * Aggregate by sum.
+             * </pre>
+             *
              * <code>AGGREGATION_SUM = 5;</code>
              */
             AGGREGATION_SUM(5),
@@ -7435,26 +7587,50 @@ public final class ChartWidgetOuterClass {
             ;
 
             /**
+             * <pre>
+             * Not specified.
+             * </pre>
+             *
              * <code>AGGREGATION_UNSPECIFIED = 0;</code>
              */
             public static final int AGGREGATION_UNSPECIFIED_VALUE = 0;
             /**
+             * <pre>
+             * Aggregate by last value.
+             * </pre>
+             *
              * <code>AGGREGATION_LAST = 1;</code>
              */
             public static final int AGGREGATION_LAST_VALUE = 1;
             /**
+             * <pre>
+             * Aggregate by min value.
+             * </pre>
+             *
              * <code>AGGREGATION_MIN = 2;</code>
              */
             public static final int AGGREGATION_MIN_VALUE = 2;
             /**
+             * <pre>
+             * Aggregate by max value.
+             * </pre>
+             *
              * <code>AGGREGATION_MAX = 3;</code>
              */
             public static final int AGGREGATION_MAX_VALUE = 3;
             /**
+             * <pre>
+             * Aggregate by avg value.
+             * </pre>
+             *
              * <code>AGGREGATION_AVG = 4;</code>
              */
             public static final int AGGREGATION_AVG_VALUE = 4;
             /**
+             * <pre>
+             * Aggregate by sum.
+             * </pre>
+             *
              * <code>AGGREGATION_SUM = 5;</code>
              */
             public static final int AGGREGATION_SUM_VALUE = 5;
@@ -7549,6 +7725,10 @@ public final class ChartWidgetOuterClass {
           public static final int AGGREGATION_FIELD_NUMBER = 1;
           private int aggregation_;
           /**
+           * <pre>
+           * Aggregation
+           * </pre>
+           *
            * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation aggregation = 1;</code>
            * @return The enum numeric value on the wire for aggregation.
            */
@@ -7556,6 +7736,10 @@ public final class ChartWidgetOuterClass {
             return aggregation_;
           }
           /**
+           * <pre>
+           * Aggregation
+           * </pre>
+           *
            * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation aggregation = 1;</code>
            * @return The aggregation.
            */
@@ -7868,6 +8052,10 @@ public final class ChartWidgetOuterClass {
 
             private int aggregation_ = 0;
             /**
+             * <pre>
+             * Aggregation
+             * </pre>
+             *
              * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation aggregation = 1;</code>
              * @return The enum numeric value on the wire for aggregation.
              */
@@ -7875,6 +8063,10 @@ public final class ChartWidgetOuterClass {
               return aggregation_;
             }
             /**
+             * <pre>
+             * Aggregation
+             * </pre>
+             *
              * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation aggregation = 1;</code>
              * @param value The enum numeric value on the wire for aggregation to set.
              * @return This builder for chaining.
@@ -7886,6 +8078,10 @@ public final class ChartWidgetOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Aggregation
+             * </pre>
+             *
              * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation aggregation = 1;</code>
              * @return The aggregation.
              */
@@ -7896,6 +8092,10 @@ public final class ChartWidgetOuterClass {
               return result == null ? yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation.UNRECOGNIZED : result;
             }
             /**
+             * <pre>
+             * Aggregation
+             * </pre>
+             *
              * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation aggregation = 1;</code>
              * @param value The aggregation to set.
              * @return This builder for chaining.
@@ -7910,6 +8110,10 @@ public final class ChartWidgetOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Aggregation
+             * </pre>
+             *
              * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation aggregation = 1;</code>
              * @return This builder for chaining.
              */
@@ -8238,6 +8442,10 @@ public final class ChartWidgetOuterClass {
 
         public static final int CONSTANT_FIELD_NUMBER = 6;
         /**
+         * <pre>
+         * Constant color scheme settings.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
          * @return Whether the constant field is set.
          */
@@ -8246,6 +8454,10 @@ public final class ChartWidgetOuterClass {
           return schemeCase_ == 6;
         }
         /**
+         * <pre>
+         * Constant color scheme settings.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
          * @return The constant.
          */
@@ -8257,6 +8469,10 @@ public final class ChartWidgetOuterClass {
           return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.getDefaultInstance();
         }
         /**
+         * <pre>
+         * Constant color scheme settings.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
          */
         @java.lang.Override
@@ -9628,6 +9844,10 @@ public final class ChartWidgetOuterClass {
           private com.google.protobuf.SingleFieldBuilderV3<
               yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.Builder, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorSchemeOrBuilder> constantBuilder_;
           /**
+           * <pre>
+           * Constant color scheme settings.
+           * </pre>
+           *
            * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
            * @return Whether the constant field is set.
            */
@@ -9636,6 +9856,10 @@ public final class ChartWidgetOuterClass {
             return schemeCase_ == 6;
           }
           /**
+           * <pre>
+           * Constant color scheme settings.
+           * </pre>
+           *
            * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
            * @return The constant.
            */
@@ -9654,6 +9878,10 @@ public final class ChartWidgetOuterClass {
             }
           }
           /**
+           * <pre>
+           * Constant color scheme settings.
+           * </pre>
+           *
            * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
            */
           public Builder setConstant(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme value) {
@@ -9670,6 +9898,10 @@ public final class ChartWidgetOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Constant color scheme settings.
+           * </pre>
+           *
            * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
            */
           public Builder setConstant(
@@ -9684,6 +9916,10 @@ public final class ChartWidgetOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Constant color scheme settings.
+           * </pre>
+           *
            * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
            */
           public Builder mergeConstant(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme value) {
@@ -9706,6 +9942,10 @@ public final class ChartWidgetOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Constant color scheme settings.
+           * </pre>
+           *
            * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
            */
           public Builder clearConstant() {
@@ -9725,12 +9965,20 @@ public final class ChartWidgetOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Constant color scheme settings.
+           * </pre>
+           *
            * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
            */
           public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme.Builder getConstantBuilder() {
             return getConstantFieldBuilder().getBuilder();
           }
           /**
+           * <pre>
+           * Constant color scheme settings.
+           * </pre>
+           *
            * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
            */
           @java.lang.Override
@@ -9745,6 +9993,10 @@ public final class ChartWidgetOuterClass {
             }
           }
           /**
+           * <pre>
+           * Constant color scheme settings.
+           * </pre>
+           *
            * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.ConstantColorScheme constant = 6;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
@@ -13457,6 +13709,1124 @@ public final class ChartWidgetOuterClass {
 
       }
 
+      public interface TilesSettingsOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * Sorting order.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.SortOrder sort_order = 1;</code>
+         * @return The enum numeric value on the wire for sortOrder.
+         */
+        int getSortOrderValue();
+        /**
+         * <pre>
+         * Sorting order.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.SortOrder sort_order = 1;</code>
+         * @return The sortOrder.
+         */
+        yandex.cloud.api.monitoring.v3.SortOrderOuterClass.SortOrder getSortOrder();
+
+        /**
+         * <pre>
+         * Field to sort by.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings.SortField sort_field = 2;</code>
+         * @return The enum numeric value on the wire for sortField.
+         */
+        int getSortFieldValue();
+        /**
+         * <pre>
+         * Field to sort by.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings.SortField sort_field = 2;</code>
+         * @return The sortField.
+         */
+        yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.SortField getSortField();
+
+        /**
+         * <pre>
+         * Show stat title.
+         * </pre>
+         *
+         * <code>bool show_title = 3;</code>
+         * @return The showTitle.
+         */
+        boolean getShowTitle();
+
+        /**
+         * <pre>
+         * Show stat value.
+         * </pre>
+         *
+         * <code>bool show_value = 4;</code>
+         * @return The showValue.
+         */
+        boolean getShowValue();
+
+        /**
+         * <pre>
+         * Show sparkline
+         * </pre>
+         *
+         * <code>bool show_sparkline = 5;</code>
+         * @return The showSparkline.
+         */
+        boolean getShowSparkline();
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings}
+       */
+      public static final class TilesSettings extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings)
+          TilesSettingsOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use TilesSettings.newBuilder() to construct.
+        private TilesSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private TilesSettings() {
+          sortOrder_ = 0;
+          sortField_ = 0;
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new TilesSettings();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private TilesSettings(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  int rawValue = input.readEnum();
+
+                  sortOrder_ = rawValue;
+                  break;
+                }
+                case 16: {
+                  int rawValue = input.readEnum();
+
+                  sortField_ = rawValue;
+                  break;
+                }
+                case 24: {
+
+                  showTitle_ = input.readBool();
+                  break;
+                }
+                case 32: {
+
+                  showValue_ = input.readBool();
+                  break;
+                }
+                case 40: {
+
+                  showSparkline_ = input.readBool();
+                  break;
+                }
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_TilesSettings_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_TilesSettings_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.class, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.Builder.class);
+        }
+
+        /**
+         * Protobuf enum {@code yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings.SortField}
+         */
+        public enum SortField
+            implements com.google.protobuf.ProtocolMessageEnum {
+          /**
+           * <pre>
+           * Not specified.
+           * </pre>
+           *
+           * <code>SORT_FIELD_UNSPECIFIED = 0;</code>
+           */
+          SORT_FIELD_UNSPECIFIED(0),
+          /**
+           * <pre>
+           * Sort by values.
+           * </pre>
+           *
+           * <code>VALUE = 1;</code>
+           */
+          VALUE(1),
+          /**
+           * <pre>
+           * Sort by title.
+           * </pre>
+           *
+           * <code>TITLE = 2;</code>
+           */
+          TITLE(2),
+          UNRECOGNIZED(-1),
+          ;
+
+          /**
+           * <pre>
+           * Not specified.
+           * </pre>
+           *
+           * <code>SORT_FIELD_UNSPECIFIED = 0;</code>
+           */
+          public static final int SORT_FIELD_UNSPECIFIED_VALUE = 0;
+          /**
+           * <pre>
+           * Sort by values.
+           * </pre>
+           *
+           * <code>VALUE = 1;</code>
+           */
+          public static final int VALUE_VALUE = 1;
+          /**
+           * <pre>
+           * Sort by title.
+           * </pre>
+           *
+           * <code>TITLE = 2;</code>
+           */
+          public static final int TITLE_VALUE = 2;
+
+
+          public final int getNumber() {
+            if (this == UNRECOGNIZED) {
+              throw new java.lang.IllegalArgumentException(
+                  "Can't get the number of an unknown enum value.");
+            }
+            return value;
+          }
+
+          /**
+           * @param value The numeric wire value of the corresponding enum entry.
+           * @return The enum associated with the given numeric wire value.
+           * @deprecated Use {@link #forNumber(int)} instead.
+           */
+          @java.lang.Deprecated
+          public static SortField valueOf(int value) {
+            return forNumber(value);
+          }
+
+          /**
+           * @param value The numeric wire value of the corresponding enum entry.
+           * @return The enum associated with the given numeric wire value.
+           */
+          public static SortField forNumber(int value) {
+            switch (value) {
+              case 0: return SORT_FIELD_UNSPECIFIED;
+              case 1: return VALUE;
+              case 2: return TITLE;
+              default: return null;
+            }
+          }
+
+          public static com.google.protobuf.Internal.EnumLiteMap<SortField>
+              internalGetValueMap() {
+            return internalValueMap;
+          }
+          private static final com.google.protobuf.Internal.EnumLiteMap<
+              SortField> internalValueMap =
+                new com.google.protobuf.Internal.EnumLiteMap<SortField>() {
+                  public SortField findValueByNumber(int number) {
+                    return SortField.forNumber(number);
+                  }
+                };
+
+          public final com.google.protobuf.Descriptors.EnumValueDescriptor
+              getValueDescriptor() {
+            if (this == UNRECOGNIZED) {
+              throw new java.lang.IllegalStateException(
+                  "Can't get the descriptor of an unrecognized enum value.");
+            }
+            return getDescriptor().getValues().get(ordinal());
+          }
+          public final com.google.protobuf.Descriptors.EnumDescriptor
+              getDescriptorForType() {
+            return getDescriptor();
+          }
+          public static final com.google.protobuf.Descriptors.EnumDescriptor
+              getDescriptor() {
+            return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.getDescriptor().getEnumTypes().get(0);
+          }
+
+          private static final SortField[] VALUES = values();
+
+          public static SortField valueOf(
+              com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+            if (desc.getType() != getDescriptor()) {
+              throw new java.lang.IllegalArgumentException(
+                "EnumValueDescriptor is not for this type.");
+            }
+            if (desc.getIndex() == -1) {
+              return UNRECOGNIZED;
+            }
+            return VALUES[desc.getIndex()];
+          }
+
+          private final int value;
+
+          private SortField(int value) {
+            this.value = value;
+          }
+
+          // @@protoc_insertion_point(enum_scope:yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings.SortField)
+        }
+
+        public static final int SORT_ORDER_FIELD_NUMBER = 1;
+        private int sortOrder_;
+        /**
+         * <pre>
+         * Sorting order.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.SortOrder sort_order = 1;</code>
+         * @return The enum numeric value on the wire for sortOrder.
+         */
+        @java.lang.Override public int getSortOrderValue() {
+          return sortOrder_;
+        }
+        /**
+         * <pre>
+         * Sorting order.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.SortOrder sort_order = 1;</code>
+         * @return The sortOrder.
+         */
+        @java.lang.Override public yandex.cloud.api.monitoring.v3.SortOrderOuterClass.SortOrder getSortOrder() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.monitoring.v3.SortOrderOuterClass.SortOrder result = yandex.cloud.api.monitoring.v3.SortOrderOuterClass.SortOrder.valueOf(sortOrder_);
+          return result == null ? yandex.cloud.api.monitoring.v3.SortOrderOuterClass.SortOrder.UNRECOGNIZED : result;
+        }
+
+        public static final int SORT_FIELD_FIELD_NUMBER = 2;
+        private int sortField_;
+        /**
+         * <pre>
+         * Field to sort by.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings.SortField sort_field = 2;</code>
+         * @return The enum numeric value on the wire for sortField.
+         */
+        @java.lang.Override public int getSortFieldValue() {
+          return sortField_;
+        }
+        /**
+         * <pre>
+         * Field to sort by.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings.SortField sort_field = 2;</code>
+         * @return The sortField.
+         */
+        @java.lang.Override public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.SortField getSortField() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.SortField result = yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.SortField.valueOf(sortField_);
+          return result == null ? yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.SortField.UNRECOGNIZED : result;
+        }
+
+        public static final int SHOW_TITLE_FIELD_NUMBER = 3;
+        private boolean showTitle_;
+        /**
+         * <pre>
+         * Show stat title.
+         * </pre>
+         *
+         * <code>bool show_title = 3;</code>
+         * @return The showTitle.
+         */
+        @java.lang.Override
+        public boolean getShowTitle() {
+          return showTitle_;
+        }
+
+        public static final int SHOW_VALUE_FIELD_NUMBER = 4;
+        private boolean showValue_;
+        /**
+         * <pre>
+         * Show stat value.
+         * </pre>
+         *
+         * <code>bool show_value = 4;</code>
+         * @return The showValue.
+         */
+        @java.lang.Override
+        public boolean getShowValue() {
+          return showValue_;
+        }
+
+        public static final int SHOW_SPARKLINE_FIELD_NUMBER = 5;
+        private boolean showSparkline_;
+        /**
+         * <pre>
+         * Show sparkline
+         * </pre>
+         *
+         * <code>bool show_sparkline = 5;</code>
+         * @return The showSparkline.
+         */
+        @java.lang.Override
+        public boolean getShowSparkline() {
+          return showSparkline_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (sortOrder_ != yandex.cloud.api.monitoring.v3.SortOrderOuterClass.SortOrder.SORT_ORDER_UNSPECIFIED.getNumber()) {
+            output.writeEnum(1, sortOrder_);
+          }
+          if (sortField_ != yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.SortField.SORT_FIELD_UNSPECIFIED.getNumber()) {
+            output.writeEnum(2, sortField_);
+          }
+          if (showTitle_ != false) {
+            output.writeBool(3, showTitle_);
+          }
+          if (showValue_ != false) {
+            output.writeBool(4, showValue_);
+          }
+          if (showSparkline_ != false) {
+            output.writeBool(5, showSparkline_);
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (sortOrder_ != yandex.cloud.api.monitoring.v3.SortOrderOuterClass.SortOrder.SORT_ORDER_UNSPECIFIED.getNumber()) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeEnumSize(1, sortOrder_);
+          }
+          if (sortField_ != yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.SortField.SORT_FIELD_UNSPECIFIED.getNumber()) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeEnumSize(2, sortField_);
+          }
+          if (showTitle_ != false) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeBoolSize(3, showTitle_);
+          }
+          if (showValue_ != false) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeBoolSize(4, showValue_);
+          }
+          if (showSparkline_ != false) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeBoolSize(5, showSparkline_);
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings)) {
+            return super.equals(obj);
+          }
+          yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings other = (yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings) obj;
+
+          if (sortOrder_ != other.sortOrder_) return false;
+          if (sortField_ != other.sortField_) return false;
+          if (getShowTitle()
+              != other.getShowTitle()) return false;
+          if (getShowValue()
+              != other.getShowValue()) return false;
+          if (getShowSparkline()
+              != other.getShowSparkline()) return false;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          hash = (37 * hash) + SORT_ORDER_FIELD_NUMBER;
+          hash = (53 * hash) + sortOrder_;
+          hash = (37 * hash) + SORT_FIELD_FIELD_NUMBER;
+          hash = (53 * hash) + sortField_;
+          hash = (37 * hash) + SHOW_TITLE_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getShowTitle());
+          hash = (37 * hash) + SHOW_VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getShowValue());
+          hash = (37 * hash) + SHOW_SPARKLINE_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getShowSparkline());
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings)
+            yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettingsOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_TilesSettings_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_TilesSettings_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.class, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.Builder.class);
+          }
+
+          // Construct using yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            sortOrder_ = 0;
+
+            sortField_ = 0;
+
+            showTitle_ = false;
+
+            showValue_ = false;
+
+            showSparkline_ = false;
+
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_TilesSettings_descriptor;
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings getDefaultInstanceForType() {
+            return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings build() {
+            yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings buildPartial() {
+            yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings result = new yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings(this);
+            result.sortOrder_ = sortOrder_;
+            result.sortField_ = sortField_;
+            result.showTitle_ = showTitle_;
+            result.showValue_ = showValue_;
+            result.showSparkline_ = showSparkline_;
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings) {
+              return mergeFrom((yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings other) {
+            if (other == yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.getDefaultInstance()) return this;
+            if (other.sortOrder_ != 0) {
+              setSortOrderValue(other.getSortOrderValue());
+            }
+            if (other.sortField_ != 0) {
+              setSortFieldValue(other.getSortFieldValue());
+            }
+            if (other.getShowTitle() != false) {
+              setShowTitle(other.getShowTitle());
+            }
+            if (other.getShowValue() != false) {
+              setShowValue(other.getShowValue());
+            }
+            if (other.getShowSparkline() != false) {
+              setShowSparkline(other.getShowSparkline());
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+
+          private int sortOrder_ = 0;
+          /**
+           * <pre>
+           * Sorting order.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.SortOrder sort_order = 1;</code>
+           * @return The enum numeric value on the wire for sortOrder.
+           */
+          @java.lang.Override public int getSortOrderValue() {
+            return sortOrder_;
+          }
+          /**
+           * <pre>
+           * Sorting order.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.SortOrder sort_order = 1;</code>
+           * @param value The enum numeric value on the wire for sortOrder to set.
+           * @return This builder for chaining.
+           */
+          public Builder setSortOrderValue(int value) {
+            
+            sortOrder_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Sorting order.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.SortOrder sort_order = 1;</code>
+           * @return The sortOrder.
+           */
+          @java.lang.Override
+          public yandex.cloud.api.monitoring.v3.SortOrderOuterClass.SortOrder getSortOrder() {
+            @SuppressWarnings("deprecation")
+            yandex.cloud.api.monitoring.v3.SortOrderOuterClass.SortOrder result = yandex.cloud.api.monitoring.v3.SortOrderOuterClass.SortOrder.valueOf(sortOrder_);
+            return result == null ? yandex.cloud.api.monitoring.v3.SortOrderOuterClass.SortOrder.UNRECOGNIZED : result;
+          }
+          /**
+           * <pre>
+           * Sorting order.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.SortOrder sort_order = 1;</code>
+           * @param value The sortOrder to set.
+           * @return This builder for chaining.
+           */
+          public Builder setSortOrder(yandex.cloud.api.monitoring.v3.SortOrderOuterClass.SortOrder value) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            
+            sortOrder_ = value.getNumber();
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Sorting order.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.SortOrder sort_order = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearSortOrder() {
+            
+            sortOrder_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int sortField_ = 0;
+          /**
+           * <pre>
+           * Field to sort by.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings.SortField sort_field = 2;</code>
+           * @return The enum numeric value on the wire for sortField.
+           */
+          @java.lang.Override public int getSortFieldValue() {
+            return sortField_;
+          }
+          /**
+           * <pre>
+           * Field to sort by.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings.SortField sort_field = 2;</code>
+           * @param value The enum numeric value on the wire for sortField to set.
+           * @return This builder for chaining.
+           */
+          public Builder setSortFieldValue(int value) {
+            
+            sortField_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Field to sort by.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings.SortField sort_field = 2;</code>
+           * @return The sortField.
+           */
+          @java.lang.Override
+          public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.SortField getSortField() {
+            @SuppressWarnings("deprecation")
+            yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.SortField result = yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.SortField.valueOf(sortField_);
+            return result == null ? yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.SortField.UNRECOGNIZED : result;
+          }
+          /**
+           * <pre>
+           * Field to sort by.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings.SortField sort_field = 2;</code>
+           * @param value The sortField to set.
+           * @return This builder for chaining.
+           */
+          public Builder setSortField(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.SortField value) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            
+            sortField_ = value.getNumber();
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Field to sort by.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings.SortField sort_field = 2;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearSortField() {
+            
+            sortField_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private boolean showTitle_ ;
+          /**
+           * <pre>
+           * Show stat title.
+           * </pre>
+           *
+           * <code>bool show_title = 3;</code>
+           * @return The showTitle.
+           */
+          @java.lang.Override
+          public boolean getShowTitle() {
+            return showTitle_;
+          }
+          /**
+           * <pre>
+           * Show stat title.
+           * </pre>
+           *
+           * <code>bool show_title = 3;</code>
+           * @param value The showTitle to set.
+           * @return This builder for chaining.
+           */
+          public Builder setShowTitle(boolean value) {
+            
+            showTitle_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Show stat title.
+           * </pre>
+           *
+           * <code>bool show_title = 3;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearShowTitle() {
+            
+            showTitle_ = false;
+            onChanged();
+            return this;
+          }
+
+          private boolean showValue_ ;
+          /**
+           * <pre>
+           * Show stat value.
+           * </pre>
+           *
+           * <code>bool show_value = 4;</code>
+           * @return The showValue.
+           */
+          @java.lang.Override
+          public boolean getShowValue() {
+            return showValue_;
+          }
+          /**
+           * <pre>
+           * Show stat value.
+           * </pre>
+           *
+           * <code>bool show_value = 4;</code>
+           * @param value The showValue to set.
+           * @return This builder for chaining.
+           */
+          public Builder setShowValue(boolean value) {
+            
+            showValue_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Show stat value.
+           * </pre>
+           *
+           * <code>bool show_value = 4;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearShowValue() {
+            
+            showValue_ = false;
+            onChanged();
+            return this;
+          }
+
+          private boolean showSparkline_ ;
+          /**
+           * <pre>
+           * Show sparkline
+           * </pre>
+           *
+           * <code>bool show_sparkline = 5;</code>
+           * @return The showSparkline.
+           */
+          @java.lang.Override
+          public boolean getShowSparkline() {
+            return showSparkline_;
+          }
+          /**
+           * <pre>
+           * Show sparkline
+           * </pre>
+           *
+           * <code>bool show_sparkline = 5;</code>
+           * @param value The showSparkline to set.
+           * @return This builder for chaining.
+           */
+          public Builder setShowSparkline(boolean value) {
+            
+            showSparkline_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Show sparkline
+           * </pre>
+           *
+           * <code>bool show_sparkline = 5;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearShowSparkline() {
+            
+            showSparkline_ = false;
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings)
+        }
+
+        // @@protoc_insertion_point(class_scope:yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings)
+        private static final yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings();
+        }
+
+        public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<TilesSettings>
+            PARSER = new com.google.protobuf.AbstractParser<TilesSettings>() {
+          @java.lang.Override
+          public TilesSettings parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new TilesSettings(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<TilesSettings> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<TilesSettings> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
       public static final int TYPE_FIELD_NUMBER = 1;
       private int type_;
       /**
@@ -13728,6 +15098,44 @@ public final class ChartWidgetOuterClass {
         return showLabels_;
       }
 
+      public static final int TILES_SETTINGS_FIELD_NUMBER = 10;
+      private yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings tilesSettings_;
+      /**
+       * <pre>
+       * Settings for stat widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings tiles_settings = 10;</code>
+       * @return Whether the tilesSettings field is set.
+       */
+      @java.lang.Override
+      public boolean hasTilesSettings() {
+        return tilesSettings_ != null;
+      }
+      /**
+       * <pre>
+       * Settings for stat widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings tiles_settings = 10;</code>
+       * @return The tilesSettings.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings getTilesSettings() {
+        return tilesSettings_ == null ? yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.getDefaultInstance() : tilesSettings_;
+      }
+      /**
+       * <pre>
+       * Settings for stat widget.
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings tiles_settings = 10;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettingsOrBuilder getTilesSettingsOrBuilder() {
+        return getTilesSettings();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -13768,6 +15176,9 @@ public final class ChartWidgetOuterClass {
         }
         if (showLabels_ != false) {
           output.writeBool(9, showLabels_);
+        }
+        if (tilesSettings_ != null) {
+          output.writeMessage(10, getTilesSettings());
         }
         unknownFields.writeTo(output);
       }
@@ -13813,6 +15224,10 @@ public final class ChartWidgetOuterClass {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(9, showLabels_);
         }
+        if (tilesSettings_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(10, getTilesSettings());
+        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -13852,6 +15267,11 @@ public final class ChartWidgetOuterClass {
             .equals(other.getTitle())) return false;
         if (getShowLabels()
             != other.getShowLabels()) return false;
+        if (hasTilesSettings() != other.hasTilesSettings()) return false;
+        if (hasTilesSettings()) {
+          if (!getTilesSettings()
+              .equals(other.getTilesSettings())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -13889,6 +15309,10 @@ public final class ChartWidgetOuterClass {
         hash = (37 * hash) + SHOW_LABELS_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getShowLabels());
+        if (hasTilesSettings()) {
+          hash = (37 * hash) + TILES_SETTINGS_FIELD_NUMBER;
+          hash = (53 * hash) + getTilesSettings().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -14056,6 +15480,12 @@ public final class ChartWidgetOuterClass {
 
           showLabels_ = false;
 
+          if (tilesSettingsBuilder_ == null) {
+            tilesSettings_ = null;
+          } else {
+            tilesSettings_ = null;
+            tilesSettingsBuilder_ = null;
+          }
           return this;
         }
 
@@ -14103,6 +15533,11 @@ public final class ChartWidgetOuterClass {
           }
           result.title_ = title_;
           result.showLabels_ = showLabels_;
+          if (tilesSettingsBuilder_ == null) {
+            result.tilesSettings_ = tilesSettings_;
+          } else {
+            result.tilesSettings_ = tilesSettingsBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -14178,6 +15613,9 @@ public final class ChartWidgetOuterClass {
           }
           if (other.getShowLabels() != false) {
             setShowLabels(other.getShowLabels());
+          }
+          if (other.hasTilesSettings()) {
+            mergeTilesSettings(other.getTilesSettings());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -15076,6 +16514,161 @@ public final class ChartWidgetOuterClass {
           onChanged();
           return this;
         }
+
+        private yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings tilesSettings_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.Builder, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettingsOrBuilder> tilesSettingsBuilder_;
+        /**
+         * <pre>
+         * Settings for stat widget.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings tiles_settings = 10;</code>
+         * @return Whether the tilesSettings field is set.
+         */
+        public boolean hasTilesSettings() {
+          return tilesSettingsBuilder_ != null || tilesSettings_ != null;
+        }
+        /**
+         * <pre>
+         * Settings for stat widget.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings tiles_settings = 10;</code>
+         * @return The tilesSettings.
+         */
+        public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings getTilesSettings() {
+          if (tilesSettingsBuilder_ == null) {
+            return tilesSettings_ == null ? yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.getDefaultInstance() : tilesSettings_;
+          } else {
+            return tilesSettingsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Settings for stat widget.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings tiles_settings = 10;</code>
+         */
+        public Builder setTilesSettings(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings value) {
+          if (tilesSettingsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            tilesSettings_ = value;
+            onChanged();
+          } else {
+            tilesSettingsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for stat widget.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings tiles_settings = 10;</code>
+         */
+        public Builder setTilesSettings(
+            yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.Builder builderForValue) {
+          if (tilesSettingsBuilder_ == null) {
+            tilesSettings_ = builderForValue.build();
+            onChanged();
+          } else {
+            tilesSettingsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for stat widget.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings tiles_settings = 10;</code>
+         */
+        public Builder mergeTilesSettings(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings value) {
+          if (tilesSettingsBuilder_ == null) {
+            if (tilesSettings_ != null) {
+              tilesSettings_ =
+                yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.newBuilder(tilesSettings_).mergeFrom(value).buildPartial();
+            } else {
+              tilesSettings_ = value;
+            }
+            onChanged();
+          } else {
+            tilesSettingsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for stat widget.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings tiles_settings = 10;</code>
+         */
+        public Builder clearTilesSettings() {
+          if (tilesSettingsBuilder_ == null) {
+            tilesSettings_ = null;
+            onChanged();
+          } else {
+            tilesSettings_ = null;
+            tilesSettingsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for stat widget.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings tiles_settings = 10;</code>
+         */
+        public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.Builder getTilesSettingsBuilder() {
+          
+          onChanged();
+          return getTilesSettingsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Settings for stat widget.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings tiles_settings = 10;</code>
+         */
+        public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettingsOrBuilder getTilesSettingsOrBuilder() {
+          if (tilesSettingsBuilder_ != null) {
+            return tilesSettingsBuilder_.getMessageOrBuilder();
+          } else {
+            return tilesSettings_ == null ?
+                yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.getDefaultInstance() : tilesSettings_;
+          }
+        }
+        /**
+         * <pre>
+         * Settings for stat widget.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.TilesSettings tiles_settings = 10;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.Builder, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettingsOrBuilder> 
+            getTilesSettingsFieldBuilder() {
+          if (tilesSettingsBuilder_ == null) {
+            tilesSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettings.Builder, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.TilesSettingsOrBuilder>(
+                    getTilesSettings(),
+                    getParentForChildren(),
+                    isClean());
+            tilesSettings_ = null;
+          }
+          return tilesSettingsBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -15219,11 +16812,19 @@ public final class ChartWidgetOuterClass {
       yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettingsOrBuilder getSettingsOrBuilder();
 
       /**
+       * <pre>
+       * Override name.
+       * </pre>
+       *
        * <code>string override_name = 4;</code>
        * @return The overrideName.
        */
       java.lang.String getOverrideName();
       /**
+       * <pre>
+       * Override name.
+       * </pre>
+       *
        * <code>string override_name = 4;</code>
        * @return The bytes for overrideName.
        */
@@ -15231,16 +16832,28 @@ public final class ChartWidgetOuterClass {
           getOverrideNameBytes();
 
       /**
+       * <pre>
+       * Matcher rule to find a line.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.OverrideMatcher matcher = 5;</code>
        * @return Whether the matcher field is set.
        */
       boolean hasMatcher();
       /**
+       * <pre>
+       * Matcher rule to find a line.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.OverrideMatcher matcher = 5;</code>
        * @return The matcher.
        */
       yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.OverrideMatcher getMatcher();
       /**
+       * <pre>
+       * Matcher rule to find a line.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.OverrideMatcher matcher = 5;</code>
        */
       yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.OverrideMatcherOrBuilder getMatcherOrBuilder();
@@ -15812,15 +17425,74 @@ public final class ChartWidgetOuterClass {
         long getLineWidth();
 
         /**
+         * <pre>
+         * Linet style settings.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle line_style = 8;</code>
          * @return The enum numeric value on the wire for lineStyle.
          */
         int getLineStyleValue();
         /**
+         * <pre>
+         * Linet style settings.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle line_style = 8;</code>
          * @return The lineStyle.
          */
         yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle getLineStyle();
+
+        /**
+         * <pre>
+         * Line hiding settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType line_hiding_type = 10 [deprecated = true];</code>
+         * @deprecated
+         * @return The enum numeric value on the wire for lineHidingType.
+         */
+        @java.lang.Deprecated int getLineHidingTypeValue();
+        /**
+         * <pre>
+         * Line hiding settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType line_hiding_type = 10 [deprecated = true];</code>
+         * @deprecated
+         * @return The lineHidingType.
+         */
+        @java.lang.Deprecated yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType getLineHidingType();
+
+        /**
+         * <pre>
+         * Hide line in legend.
+         * </pre>
+         *
+         * <code>bool line_hiding_in_legend = 11;</code>
+         * @return The lineHidingInLegend.
+         */
+        boolean getLineHidingInLegend();
+
+        /**
+         * <pre>
+         * Hide line in tooltip.
+         * </pre>
+         *
+         * <code>bool line_hiding_in_tooltip = 12;</code>
+         * @return The lineHidingInTooltip.
+         */
+        boolean getLineHidingInTooltip();
+
+        /**
+         * <pre>
+         * Hide line in chart.
+         * </pre>
+         *
+         * <code>bool line_hiding_in_chart = 13;</code>
+         * @return The lineHidingInChart.
+         */
+        boolean getLineHidingInChart();
       }
       /**
        * Protobuf type {@code yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings}
@@ -15841,6 +17513,7 @@ public final class ChartWidgetOuterClass {
           stackName_ = "";
           yaxisPosition_ = 0;
           lineStyle_ = 0;
+          lineHidingType_ = 0;
         }
 
         @java.lang.Override
@@ -15919,6 +17592,27 @@ public final class ChartWidgetOuterClass {
                   lineStyle_ = rawValue;
                   break;
                 }
+                case 80: {
+                  int rawValue = input.readEnum();
+
+                  lineHidingType_ = rawValue;
+                  break;
+                }
+                case 88: {
+
+                  lineHidingInLegend_ = input.readBool();
+                  break;
+                }
+                case 96: {
+
+                  lineHidingInTooltip_ = input.readBool();
+                  break;
+                }
+                case 104: {
+
+                  lineHidingInChart_ = input.readBool();
+                  break;
+                }
                 default: {
                   if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
@@ -15957,18 +17651,34 @@ public final class ChartWidgetOuterClass {
         public enum LineStyle
             implements com.google.protobuf.ProtocolMessageEnum {
           /**
+           * <pre>
+           * Not specified.
+           * </pre>
+           *
            * <code>LINE_STYLE_UNSPECIFIED = 0;</code>
            */
           LINE_STYLE_UNSPECIFIED(0),
           /**
+           * <pre>
+           * Solid line.
+           * </pre>
+           *
            * <code>LINE_STYLE_SOLID = 1;</code>
            */
           LINE_STYLE_SOLID(1),
           /**
+           * <pre>
+           * Dashed line.
+           * </pre>
+           *
            * <code>LINE_STYLE_DASH = 2;</code>
            */
           LINE_STYLE_DASH(2),
           /**
+           * <pre>
+           * Dotted line.
+           * </pre>
+           *
            * <code>LINE_STYLE_DOTS = 3;</code>
            */
           LINE_STYLE_DOTS(3),
@@ -15976,18 +17686,34 @@ public final class ChartWidgetOuterClass {
           ;
 
           /**
+           * <pre>
+           * Not specified.
+           * </pre>
+           *
            * <code>LINE_STYLE_UNSPECIFIED = 0;</code>
            */
           public static final int LINE_STYLE_UNSPECIFIED_VALUE = 0;
           /**
+           * <pre>
+           * Solid line.
+           * </pre>
+           *
            * <code>LINE_STYLE_SOLID = 1;</code>
            */
           public static final int LINE_STYLE_SOLID_VALUE = 1;
           /**
+           * <pre>
+           * Dashed line.
+           * </pre>
+           *
            * <code>LINE_STYLE_DASH = 2;</code>
            */
           public static final int LINE_STYLE_DASH_VALUE = 2;
           /**
+           * <pre>
+           * Dotted line.
+           * </pre>
+           *
            * <code>LINE_STYLE_DOTS = 3;</code>
            */
           public static final int LINE_STYLE_DOTS_VALUE = 3;
@@ -16075,6 +17801,164 @@ public final class ChartWidgetOuterClass {
           }
 
           // @@protoc_insertion_point(enum_scope:yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle)
+        }
+
+        /**
+         * Protobuf enum {@code yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType}
+         */
+        @java.lang.Deprecated public enum LineHidingType
+            implements com.google.protobuf.ProtocolMessageEnum {
+          /**
+           * <pre>
+           * Not specified.
+           * </pre>
+           *
+           * <code>LINE_HIDING_TYPE_UNSPECIFIED = 0;</code>
+           */
+          LINE_HIDING_TYPE_UNSPECIFIED(0),
+          /**
+           * <pre>
+           * Hide in legend.
+           * </pre>
+           *
+           * <code>LINE_HIDING_TYPE_HIDE_LEGEND = 1;</code>
+           */
+          LINE_HIDING_TYPE_HIDE_LEGEND(1),
+          /**
+           * <pre>
+           * Hide in tooltip.
+           * </pre>
+           *
+           * <code>LINE_HIDING_TYPE_HIDE_TOOLTIP = 2;</code>
+           */
+          LINE_HIDING_TYPE_HIDE_TOOLTIP(2),
+          /**
+           * <pre>
+           * Hide both in legend and tooltip.
+           * </pre>
+           *
+           * <code>LINE_HIDING_TYPE_HIDE_EVERYWHERE = 3;</code>
+           */
+          LINE_HIDING_TYPE_HIDE_EVERYWHERE(3),
+          UNRECOGNIZED(-1),
+          ;
+
+          /**
+           * <pre>
+           * Not specified.
+           * </pre>
+           *
+           * <code>LINE_HIDING_TYPE_UNSPECIFIED = 0;</code>
+           */
+          public static final int LINE_HIDING_TYPE_UNSPECIFIED_VALUE = 0;
+          /**
+           * <pre>
+           * Hide in legend.
+           * </pre>
+           *
+           * <code>LINE_HIDING_TYPE_HIDE_LEGEND = 1;</code>
+           */
+          public static final int LINE_HIDING_TYPE_HIDE_LEGEND_VALUE = 1;
+          /**
+           * <pre>
+           * Hide in tooltip.
+           * </pre>
+           *
+           * <code>LINE_HIDING_TYPE_HIDE_TOOLTIP = 2;</code>
+           */
+          public static final int LINE_HIDING_TYPE_HIDE_TOOLTIP_VALUE = 2;
+          /**
+           * <pre>
+           * Hide both in legend and tooltip.
+           * </pre>
+           *
+           * <code>LINE_HIDING_TYPE_HIDE_EVERYWHERE = 3;</code>
+           */
+          public static final int LINE_HIDING_TYPE_HIDE_EVERYWHERE_VALUE = 3;
+
+
+          public final int getNumber() {
+            if (this == UNRECOGNIZED) {
+              throw new java.lang.IllegalArgumentException(
+                  "Can't get the number of an unknown enum value.");
+            }
+            return value;
+          }
+
+          /**
+           * @param value The numeric wire value of the corresponding enum entry.
+           * @return The enum associated with the given numeric wire value.
+           * @deprecated Use {@link #forNumber(int)} instead.
+           */
+          @java.lang.Deprecated
+          public static LineHidingType valueOf(int value) {
+            return forNumber(value);
+          }
+
+          /**
+           * @param value The numeric wire value of the corresponding enum entry.
+           * @return The enum associated with the given numeric wire value.
+           */
+          public static LineHidingType forNumber(int value) {
+            switch (value) {
+              case 0: return LINE_HIDING_TYPE_UNSPECIFIED;
+              case 1: return LINE_HIDING_TYPE_HIDE_LEGEND;
+              case 2: return LINE_HIDING_TYPE_HIDE_TOOLTIP;
+              case 3: return LINE_HIDING_TYPE_HIDE_EVERYWHERE;
+              default: return null;
+            }
+          }
+
+          public static com.google.protobuf.Internal.EnumLiteMap<LineHidingType>
+              internalGetValueMap() {
+            return internalValueMap;
+          }
+          private static final com.google.protobuf.Internal.EnumLiteMap<
+              LineHidingType> internalValueMap =
+                new com.google.protobuf.Internal.EnumLiteMap<LineHidingType>() {
+                  public LineHidingType findValueByNumber(int number) {
+                    return LineHidingType.forNumber(number);
+                  }
+                };
+
+          public final com.google.protobuf.Descriptors.EnumValueDescriptor
+              getValueDescriptor() {
+            if (this == UNRECOGNIZED) {
+              throw new java.lang.IllegalStateException(
+                  "Can't get the descriptor of an unrecognized enum value.");
+            }
+            return getDescriptor().getValues().get(ordinal());
+          }
+          public final com.google.protobuf.Descriptors.EnumDescriptor
+              getDescriptorForType() {
+            return getDescriptor();
+          }
+          public static final com.google.protobuf.Descriptors.EnumDescriptor
+              getDescriptor() {
+            return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.getDescriptor().getEnumTypes().get(1);
+          }
+
+          private static final LineHidingType[] VALUES = values();
+
+          public static LineHidingType valueOf(
+              com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+            if (desc.getType() != getDescriptor()) {
+              throw new java.lang.IllegalArgumentException(
+                "EnumValueDescriptor is not for this type.");
+            }
+            if (desc.getIndex() == -1) {
+              return UNRECOGNIZED;
+            }
+            return VALUES[desc.getIndex()];
+          }
+
+          private final int value;
+
+          private LineHidingType(int value) {
+            this.value = value;
+          }
+
+          // @@protoc_insertion_point(enum_scope:yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType)
         }
 
         public static final int NAME_FIELD_NUMBER = 1;
@@ -16302,6 +18186,10 @@ public final class ChartWidgetOuterClass {
         public static final int LINE_STYLE_FIELD_NUMBER = 8;
         private int lineStyle_;
         /**
+         * <pre>
+         * Linet style settings.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle line_style = 8;</code>
          * @return The enum numeric value on the wire for lineStyle.
          */
@@ -16309,6 +18197,10 @@ public final class ChartWidgetOuterClass {
           return lineStyle_;
         }
         /**
+         * <pre>
+         * Linet style settings.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle line_style = 8;</code>
          * @return The lineStyle.
          */
@@ -16316,6 +18208,80 @@ public final class ChartWidgetOuterClass {
           @SuppressWarnings("deprecation")
           yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle result = yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle.valueOf(lineStyle_);
           return result == null ? yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle.UNRECOGNIZED : result;
+        }
+
+        public static final int LINE_HIDING_TYPE_FIELD_NUMBER = 10;
+        private int lineHidingType_;
+        /**
+         * <pre>
+         * Line hiding settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType line_hiding_type = 10 [deprecated = true];</code>
+         * @deprecated
+         * @return The enum numeric value on the wire for lineHidingType.
+         */
+        @java.lang.Override @java.lang.Deprecated public int getLineHidingTypeValue() {
+          return lineHidingType_;
+        }
+        /**
+         * <pre>
+         * Line hiding settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType line_hiding_type = 10 [deprecated = true];</code>
+         * @deprecated
+         * @return The lineHidingType.
+         */
+        @java.lang.Override @java.lang.Deprecated public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType getLineHidingType() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType result = yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType.valueOf(lineHidingType_);
+          return result == null ? yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType.UNRECOGNIZED : result;
+        }
+
+        public static final int LINE_HIDING_IN_LEGEND_FIELD_NUMBER = 11;
+        private boolean lineHidingInLegend_;
+        /**
+         * <pre>
+         * Hide line in legend.
+         * </pre>
+         *
+         * <code>bool line_hiding_in_legend = 11;</code>
+         * @return The lineHidingInLegend.
+         */
+        @java.lang.Override
+        public boolean getLineHidingInLegend() {
+          return lineHidingInLegend_;
+        }
+
+        public static final int LINE_HIDING_IN_TOOLTIP_FIELD_NUMBER = 12;
+        private boolean lineHidingInTooltip_;
+        /**
+         * <pre>
+         * Hide line in tooltip.
+         * </pre>
+         *
+         * <code>bool line_hiding_in_tooltip = 12;</code>
+         * @return The lineHidingInTooltip.
+         */
+        @java.lang.Override
+        public boolean getLineHidingInTooltip() {
+          return lineHidingInTooltip_;
+        }
+
+        public static final int LINE_HIDING_IN_CHART_FIELD_NUMBER = 13;
+        private boolean lineHidingInChart_;
+        /**
+         * <pre>
+         * Hide line in chart.
+         * </pre>
+         *
+         * <code>bool line_hiding_in_chart = 13;</code>
+         * @return The lineHidingInChart.
+         */
+        @java.lang.Override
+        public boolean getLineHidingInChart() {
+          return lineHidingInChart_;
         }
 
         private byte memoizedIsInitialized = -1;
@@ -16356,6 +18322,18 @@ public final class ChartWidgetOuterClass {
           if (lineStyle_ != yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle.LINE_STYLE_UNSPECIFIED.getNumber()) {
             output.writeEnum(8, lineStyle_);
           }
+          if (lineHidingType_ != yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType.LINE_HIDING_TYPE_UNSPECIFIED.getNumber()) {
+            output.writeEnum(10, lineHidingType_);
+          }
+          if (lineHidingInLegend_ != false) {
+            output.writeBool(11, lineHidingInLegend_);
+          }
+          if (lineHidingInTooltip_ != false) {
+            output.writeBool(12, lineHidingInTooltip_);
+          }
+          if (lineHidingInChart_ != false) {
+            output.writeBool(13, lineHidingInChart_);
+          }
           unknownFields.writeTo(output);
         }
 
@@ -16394,6 +18372,22 @@ public final class ChartWidgetOuterClass {
             size += com.google.protobuf.CodedOutputStream
               .computeEnumSize(8, lineStyle_);
           }
+          if (lineHidingType_ != yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType.LINE_HIDING_TYPE_UNSPECIFIED.getNumber()) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeEnumSize(10, lineHidingType_);
+          }
+          if (lineHidingInLegend_ != false) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeBoolSize(11, lineHidingInLegend_);
+          }
+          if (lineHidingInTooltip_ != false) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeBoolSize(12, lineHidingInTooltip_);
+          }
+          if (lineHidingInChart_ != false) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeBoolSize(13, lineHidingInChart_);
+          }
           size += unknownFields.getSerializedSize();
           memoizedSize = size;
           return size;
@@ -16422,6 +18416,13 @@ public final class ChartWidgetOuterClass {
           if (getLineWidth()
               != other.getLineWidth()) return false;
           if (lineStyle_ != other.lineStyle_) return false;
+          if (lineHidingType_ != other.lineHidingType_) return false;
+          if (getLineHidingInLegend()
+              != other.getLineHidingInLegend()) return false;
+          if (getLineHidingInTooltip()
+              != other.getLineHidingInTooltip()) return false;
+          if (getLineHidingInChart()
+              != other.getLineHidingInChart()) return false;
           if (!unknownFields.equals(other.unknownFields)) return false;
           return true;
         }
@@ -16451,6 +18452,17 @@ public final class ChartWidgetOuterClass {
               getLineWidth());
           hash = (37 * hash) + LINE_STYLE_FIELD_NUMBER;
           hash = (53 * hash) + lineStyle_;
+          hash = (37 * hash) + LINE_HIDING_TYPE_FIELD_NUMBER;
+          hash = (53 * hash) + lineHidingType_;
+          hash = (37 * hash) + LINE_HIDING_IN_LEGEND_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getLineHidingInLegend());
+          hash = (37 * hash) + LINE_HIDING_IN_TOOLTIP_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getLineHidingInTooltip());
+          hash = (37 * hash) + LINE_HIDING_IN_CHART_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getLineHidingInChart());
           hash = (29 * hash) + unknownFields.hashCode();
           memoizedHashCode = hash;
           return hash;
@@ -16600,6 +18612,14 @@ public final class ChartWidgetOuterClass {
 
             lineStyle_ = 0;
 
+            lineHidingType_ = 0;
+
+            lineHidingInLegend_ = false;
+
+            lineHidingInTooltip_ = false;
+
+            lineHidingInChart_ = false;
+
             return this;
           }
 
@@ -16634,6 +18654,10 @@ public final class ChartWidgetOuterClass {
             result.yaxisPosition_ = yaxisPosition_;
             result.lineWidth_ = lineWidth_;
             result.lineStyle_ = lineStyle_;
+            result.lineHidingType_ = lineHidingType_;
+            result.lineHidingInLegend_ = lineHidingInLegend_;
+            result.lineHidingInTooltip_ = lineHidingInTooltip_;
+            result.lineHidingInChart_ = lineHidingInChart_;
             onBuilt();
             return result;
           }
@@ -16708,6 +18732,18 @@ public final class ChartWidgetOuterClass {
             }
             if (other.lineStyle_ != 0) {
               setLineStyleValue(other.getLineStyleValue());
+            }
+            if (other.lineHidingType_ != 0) {
+              setLineHidingTypeValue(other.getLineHidingTypeValue());
+            }
+            if (other.getLineHidingInLegend() != false) {
+              setLineHidingInLegend(other.getLineHidingInLegend());
+            }
+            if (other.getLineHidingInTooltip() != false) {
+              setLineHidingInTooltip(other.getLineHidingInTooltip());
+            }
+            if (other.getLineHidingInChart() != false) {
+              setLineHidingInChart(other.getLineHidingInChart());
             }
             this.mergeUnknownFields(other.unknownFields);
             onChanged();
@@ -17262,6 +19298,10 @@ public final class ChartWidgetOuterClass {
 
           private int lineStyle_ = 0;
           /**
+           * <pre>
+           * Linet style settings.
+           * </pre>
+           *
            * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle line_style = 8;</code>
            * @return The enum numeric value on the wire for lineStyle.
            */
@@ -17269,6 +19309,10 @@ public final class ChartWidgetOuterClass {
             return lineStyle_;
           }
           /**
+           * <pre>
+           * Linet style settings.
+           * </pre>
+           *
            * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle line_style = 8;</code>
            * @param value The enum numeric value on the wire for lineStyle to set.
            * @return This builder for chaining.
@@ -17280,6 +19324,10 @@ public final class ChartWidgetOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Linet style settings.
+           * </pre>
+           *
            * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle line_style = 8;</code>
            * @return The lineStyle.
            */
@@ -17290,6 +19338,10 @@ public final class ChartWidgetOuterClass {
             return result == null ? yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle.UNRECOGNIZED : result;
           }
           /**
+           * <pre>
+           * Linet style settings.
+           * </pre>
+           *
            * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle line_style = 8;</code>
            * @param value The lineStyle to set.
            * @return This builder for chaining.
@@ -17304,12 +19356,224 @@ public final class ChartWidgetOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Linet style settings.
+           * </pre>
+           *
            * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineStyle line_style = 8;</code>
            * @return This builder for chaining.
            */
           public Builder clearLineStyle() {
             
             lineStyle_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int lineHidingType_ = 0;
+          /**
+           * <pre>
+           * Line hiding settings.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType line_hiding_type = 10 [deprecated = true];</code>
+           * @deprecated
+           * @return The enum numeric value on the wire for lineHidingType.
+           */
+          @java.lang.Override @java.lang.Deprecated public int getLineHidingTypeValue() {
+            return lineHidingType_;
+          }
+          /**
+           * <pre>
+           * Line hiding settings.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType line_hiding_type = 10 [deprecated = true];</code>
+           * @deprecated
+           * @param value The enum numeric value on the wire for lineHidingType to set.
+           * @return This builder for chaining.
+           */
+          @java.lang.Deprecated public Builder setLineHidingTypeValue(int value) {
+            
+            lineHidingType_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Line hiding settings.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType line_hiding_type = 10 [deprecated = true];</code>
+           * @deprecated
+           * @return The lineHidingType.
+           */
+          @java.lang.Override
+          @java.lang.Deprecated public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType getLineHidingType() {
+            @SuppressWarnings("deprecation")
+            yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType result = yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType.valueOf(lineHidingType_);
+            return result == null ? yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType.UNRECOGNIZED : result;
+          }
+          /**
+           * <pre>
+           * Line hiding settings.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType line_hiding_type = 10 [deprecated = true];</code>
+           * @deprecated
+           * @param value The lineHidingType to set.
+           * @return This builder for chaining.
+           */
+          @java.lang.Deprecated public Builder setLineHidingType(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType value) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            
+            lineHidingType_ = value.getNumber();
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Line hiding settings.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.SeriesOverrides.SeriesOverrideSettings.LineHidingType line_hiding_type = 10 [deprecated = true];</code>
+           * @deprecated
+           * @return This builder for chaining.
+           */
+          @java.lang.Deprecated public Builder clearLineHidingType() {
+            
+            lineHidingType_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private boolean lineHidingInLegend_ ;
+          /**
+           * <pre>
+           * Hide line in legend.
+           * </pre>
+           *
+           * <code>bool line_hiding_in_legend = 11;</code>
+           * @return The lineHidingInLegend.
+           */
+          @java.lang.Override
+          public boolean getLineHidingInLegend() {
+            return lineHidingInLegend_;
+          }
+          /**
+           * <pre>
+           * Hide line in legend.
+           * </pre>
+           *
+           * <code>bool line_hiding_in_legend = 11;</code>
+           * @param value The lineHidingInLegend to set.
+           * @return This builder for chaining.
+           */
+          public Builder setLineHidingInLegend(boolean value) {
+            
+            lineHidingInLegend_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Hide line in legend.
+           * </pre>
+           *
+           * <code>bool line_hiding_in_legend = 11;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearLineHidingInLegend() {
+            
+            lineHidingInLegend_ = false;
+            onChanged();
+            return this;
+          }
+
+          private boolean lineHidingInTooltip_ ;
+          /**
+           * <pre>
+           * Hide line in tooltip.
+           * </pre>
+           *
+           * <code>bool line_hiding_in_tooltip = 12;</code>
+           * @return The lineHidingInTooltip.
+           */
+          @java.lang.Override
+          public boolean getLineHidingInTooltip() {
+            return lineHidingInTooltip_;
+          }
+          /**
+           * <pre>
+           * Hide line in tooltip.
+           * </pre>
+           *
+           * <code>bool line_hiding_in_tooltip = 12;</code>
+           * @param value The lineHidingInTooltip to set.
+           * @return This builder for chaining.
+           */
+          public Builder setLineHidingInTooltip(boolean value) {
+            
+            lineHidingInTooltip_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Hide line in tooltip.
+           * </pre>
+           *
+           * <code>bool line_hiding_in_tooltip = 12;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearLineHidingInTooltip() {
+            
+            lineHidingInTooltip_ = false;
+            onChanged();
+            return this;
+          }
+
+          private boolean lineHidingInChart_ ;
+          /**
+           * <pre>
+           * Hide line in chart.
+           * </pre>
+           *
+           * <code>bool line_hiding_in_chart = 13;</code>
+           * @return The lineHidingInChart.
+           */
+          @java.lang.Override
+          public boolean getLineHidingInChart() {
+            return lineHidingInChart_;
+          }
+          /**
+           * <pre>
+           * Hide line in chart.
+           * </pre>
+           *
+           * <code>bool line_hiding_in_chart = 13;</code>
+           * @param value The lineHidingInChart to set.
+           * @return This builder for chaining.
+           */
+          public Builder setLineHidingInChart(boolean value) {
+            
+            lineHidingInChart_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Hide line in chart.
+           * </pre>
+           *
+           * <code>bool line_hiding_in_chart = 13;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearLineHidingInChart() {
+            
+            lineHidingInChart_ = false;
             onChanged();
             return this;
           }
@@ -17576,6 +19840,10 @@ public final class ChartWidgetOuterClass {
       public static final int OVERRIDE_NAME_FIELD_NUMBER = 4;
       private volatile java.lang.Object overrideName_;
       /**
+       * <pre>
+       * Override name.
+       * </pre>
+       *
        * <code>string override_name = 4;</code>
        * @return The overrideName.
        */
@@ -17593,6 +19861,10 @@ public final class ChartWidgetOuterClass {
         }
       }
       /**
+       * <pre>
+       * Override name.
+       * </pre>
+       *
        * <code>string override_name = 4;</code>
        * @return The bytes for overrideName.
        */
@@ -17614,6 +19886,10 @@ public final class ChartWidgetOuterClass {
       public static final int MATCHER_FIELD_NUMBER = 5;
       private yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.OverrideMatcher matcher_;
       /**
+       * <pre>
+       * Matcher rule to find a line.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.OverrideMatcher matcher = 5;</code>
        * @return Whether the matcher field is set.
        */
@@ -17622,6 +19898,10 @@ public final class ChartWidgetOuterClass {
         return matcher_ != null;
       }
       /**
+       * <pre>
+       * Matcher rule to find a line.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.OverrideMatcher matcher = 5;</code>
        * @return The matcher.
        */
@@ -17630,6 +19910,10 @@ public final class ChartWidgetOuterClass {
         return matcher_ == null ? yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.OverrideMatcher.getDefaultInstance() : matcher_;
       }
       /**
+       * <pre>
+       * Matcher rule to find a line.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.OverrideMatcher matcher = 5;</code>
        */
       @java.lang.Override
@@ -18480,6 +20764,10 @@ public final class ChartWidgetOuterClass {
 
         private java.lang.Object overrideName_ = "";
         /**
+         * <pre>
+         * Override name.
+         * </pre>
+         *
          * <code>string override_name = 4;</code>
          * @return The overrideName.
          */
@@ -18496,6 +20784,10 @@ public final class ChartWidgetOuterClass {
           }
         }
         /**
+         * <pre>
+         * Override name.
+         * </pre>
+         *
          * <code>string override_name = 4;</code>
          * @return The bytes for overrideName.
          */
@@ -18513,6 +20805,10 @@ public final class ChartWidgetOuterClass {
           }
         }
         /**
+         * <pre>
+         * Override name.
+         * </pre>
+         *
          * <code>string override_name = 4;</code>
          * @param value The overrideName to set.
          * @return This builder for chaining.
@@ -18528,6 +20824,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Override name.
+         * </pre>
+         *
          * <code>string override_name = 4;</code>
          * @return This builder for chaining.
          */
@@ -18538,6 +20838,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Override name.
+         * </pre>
+         *
          * <code>string override_name = 4;</code>
          * @param value The bytes for overrideName to set.
          * @return This builder for chaining.
@@ -18558,6 +20862,10 @@ public final class ChartWidgetOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.OverrideMatcher, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.OverrideMatcher.Builder, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.OverrideMatcherOrBuilder> matcherBuilder_;
         /**
+         * <pre>
+         * Matcher rule to find a line.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.OverrideMatcher matcher = 5;</code>
          * @return Whether the matcher field is set.
          */
@@ -18565,6 +20873,10 @@ public final class ChartWidgetOuterClass {
           return matcherBuilder_ != null || matcher_ != null;
         }
         /**
+         * <pre>
+         * Matcher rule to find a line.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.OverrideMatcher matcher = 5;</code>
          * @return The matcher.
          */
@@ -18576,6 +20888,10 @@ public final class ChartWidgetOuterClass {
           }
         }
         /**
+         * <pre>
+         * Matcher rule to find a line.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.OverrideMatcher matcher = 5;</code>
          */
         public Builder setMatcher(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.OverrideMatcher value) {
@@ -18592,6 +20908,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Matcher rule to find a line.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.OverrideMatcher matcher = 5;</code>
          */
         public Builder setMatcher(
@@ -18606,6 +20926,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Matcher rule to find a line.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.OverrideMatcher matcher = 5;</code>
          */
         public Builder mergeMatcher(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.OverrideMatcher value) {
@@ -18624,6 +20948,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Matcher rule to find a line.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.OverrideMatcher matcher = 5;</code>
          */
         public Builder clearMatcher() {
@@ -18638,6 +20966,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Matcher rule to find a line.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.OverrideMatcher matcher = 5;</code>
          */
         public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.OverrideMatcher.Builder getMatcherBuilder() {
@@ -18646,6 +20978,10 @@ public final class ChartWidgetOuterClass {
           return getMatcherFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Matcher rule to find a line.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.OverrideMatcher matcher = 5;</code>
          */
         public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.OverrideMatcherOrBuilder getMatcherOrBuilder() {
@@ -18657,6 +20993,10 @@ public final class ChartWidgetOuterClass {
           }
         }
         /**
+         * <pre>
+         * Matcher rule to find a line.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.OverrideMatcher matcher = 5;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -18730,61 +21070,109 @@ public final class ChartWidgetOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Matcher by query parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.QueryMatcher query = 1;</code>
        * @return Whether the query field is set.
        */
       boolean hasQuery();
       /**
+       * <pre>
+       * Matcher by query parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.QueryMatcher query = 1;</code>
        * @return The query.
        */
       yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.QueryMatcher getQuery();
       /**
+       * <pre>
+       * Matcher by query parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.QueryMatcher query = 1;</code>
        */
       yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.QueryMatcherOrBuilder getQueryOrBuilder();
 
       /**
+       * <pre>
+       * Matcher by line.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.LineMatcher line = 2;</code>
        * @return Whether the line field is set.
        */
       boolean hasLine();
       /**
+       * <pre>
+       * Matcher by line.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.LineMatcher line = 2;</code>
        * @return The line.
        */
       yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.LineMatcher getLine();
       /**
+       * <pre>
+       * Matcher by line.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.LineMatcher line = 2;</code>
        */
       yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.LineMatcherOrBuilder getLineOrBuilder();
 
       /**
+       * <pre>
+       * Matcher by regex.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.RegExpMatcher regexp = 3;</code>
        * @return Whether the regexp field is set.
        */
       boolean hasRegexp();
       /**
+       * <pre>
+       * Matcher by regex.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.RegExpMatcher regexp = 3;</code>
        * @return The regexp.
        */
       yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RegExpMatcher getRegexp();
       /**
+       * <pre>
+       * Matcher by regex.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.RegExpMatcher regexp = 3;</code>
        */
       yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RegExpMatcherOrBuilder getRegexpOrBuilder();
 
       /**
+       * <pre>
+       * Matcher by metric values.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValueMatcher values = 4;</code>
        * @return Whether the values field is set.
        */
       boolean hasValues();
       /**
+       * <pre>
+       * Matcher by metric values.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValueMatcher values = 4;</code>
        * @return The values.
        */
       yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.ValueMatcher getValues();
       /**
+       * <pre>
+       * Matcher by metric values.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValueMatcher values = 4;</code>
        */
       yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.ValueMatcherOrBuilder getValuesOrBuilder();
@@ -18971,6 +21359,10 @@ public final class ChartWidgetOuterClass {
 
       public static final int QUERY_FIELD_NUMBER = 1;
       /**
+       * <pre>
+       * Matcher by query parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.QueryMatcher query = 1;</code>
        * @return Whether the query field is set.
        */
@@ -18979,6 +21371,10 @@ public final class ChartWidgetOuterClass {
         return typeCase_ == 1;
       }
       /**
+       * <pre>
+       * Matcher by query parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.QueryMatcher query = 1;</code>
        * @return The query.
        */
@@ -18990,6 +21386,10 @@ public final class ChartWidgetOuterClass {
         return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.QueryMatcher.getDefaultInstance();
       }
       /**
+       * <pre>
+       * Matcher by query parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.QueryMatcher query = 1;</code>
        */
       @java.lang.Override
@@ -19002,6 +21402,10 @@ public final class ChartWidgetOuterClass {
 
       public static final int LINE_FIELD_NUMBER = 2;
       /**
+       * <pre>
+       * Matcher by line.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.LineMatcher line = 2;</code>
        * @return Whether the line field is set.
        */
@@ -19010,6 +21414,10 @@ public final class ChartWidgetOuterClass {
         return typeCase_ == 2;
       }
       /**
+       * <pre>
+       * Matcher by line.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.LineMatcher line = 2;</code>
        * @return The line.
        */
@@ -19021,6 +21429,10 @@ public final class ChartWidgetOuterClass {
         return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.LineMatcher.getDefaultInstance();
       }
       /**
+       * <pre>
+       * Matcher by line.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.LineMatcher line = 2;</code>
        */
       @java.lang.Override
@@ -19033,6 +21445,10 @@ public final class ChartWidgetOuterClass {
 
       public static final int REGEXP_FIELD_NUMBER = 3;
       /**
+       * <pre>
+       * Matcher by regex.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.RegExpMatcher regexp = 3;</code>
        * @return Whether the regexp field is set.
        */
@@ -19041,6 +21457,10 @@ public final class ChartWidgetOuterClass {
         return typeCase_ == 3;
       }
       /**
+       * <pre>
+       * Matcher by regex.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.RegExpMatcher regexp = 3;</code>
        * @return The regexp.
        */
@@ -19052,6 +21472,10 @@ public final class ChartWidgetOuterClass {
         return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RegExpMatcher.getDefaultInstance();
       }
       /**
+       * <pre>
+       * Matcher by regex.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.RegExpMatcher regexp = 3;</code>
        */
       @java.lang.Override
@@ -19064,6 +21488,10 @@ public final class ChartWidgetOuterClass {
 
       public static final int VALUES_FIELD_NUMBER = 4;
       /**
+       * <pre>
+       * Matcher by metric values.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValueMatcher values = 4;</code>
        * @return Whether the values field is set.
        */
@@ -19072,6 +21500,10 @@ public final class ChartWidgetOuterClass {
         return typeCase_ == 4;
       }
       /**
+       * <pre>
+       * Matcher by metric values.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValueMatcher values = 4;</code>
        * @return The values.
        */
@@ -19083,6 +21515,10 @@ public final class ChartWidgetOuterClass {
         return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.ValueMatcher.getDefaultInstance();
       }
       /**
+       * <pre>
+       * Matcher by metric values.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValueMatcher values = 4;</code>
        */
       @java.lang.Override
@@ -19517,6 +21953,10 @@ public final class ChartWidgetOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.QueryMatcher, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.QueryMatcher.Builder, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.QueryMatcherOrBuilder> queryBuilder_;
         /**
+         * <pre>
+         * Matcher by query parameters.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.QueryMatcher query = 1;</code>
          * @return Whether the query field is set.
          */
@@ -19525,6 +21965,10 @@ public final class ChartWidgetOuterClass {
           return typeCase_ == 1;
         }
         /**
+         * <pre>
+         * Matcher by query parameters.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.QueryMatcher query = 1;</code>
          * @return The query.
          */
@@ -19543,6 +21987,10 @@ public final class ChartWidgetOuterClass {
           }
         }
         /**
+         * <pre>
+         * Matcher by query parameters.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.QueryMatcher query = 1;</code>
          */
         public Builder setQuery(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.QueryMatcher value) {
@@ -19559,6 +22007,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Matcher by query parameters.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.QueryMatcher query = 1;</code>
          */
         public Builder setQuery(
@@ -19573,6 +22025,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Matcher by query parameters.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.QueryMatcher query = 1;</code>
          */
         public Builder mergeQuery(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.QueryMatcher value) {
@@ -19595,6 +22051,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Matcher by query parameters.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.QueryMatcher query = 1;</code>
          */
         public Builder clearQuery() {
@@ -19614,12 +22074,20 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Matcher by query parameters.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.QueryMatcher query = 1;</code>
          */
         public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.QueryMatcher.Builder getQueryBuilder() {
           return getQueryFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Matcher by query parameters.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.QueryMatcher query = 1;</code>
          */
         @java.lang.Override
@@ -19634,6 +22102,10 @@ public final class ChartWidgetOuterClass {
           }
         }
         /**
+         * <pre>
+         * Matcher by query parameters.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.QueryMatcher query = 1;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -19658,6 +22130,10 @@ public final class ChartWidgetOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.LineMatcher, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.LineMatcher.Builder, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.LineMatcherOrBuilder> lineBuilder_;
         /**
+         * <pre>
+         * Matcher by line.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.LineMatcher line = 2;</code>
          * @return Whether the line field is set.
          */
@@ -19666,6 +22142,10 @@ public final class ChartWidgetOuterClass {
           return typeCase_ == 2;
         }
         /**
+         * <pre>
+         * Matcher by line.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.LineMatcher line = 2;</code>
          * @return The line.
          */
@@ -19684,6 +22164,10 @@ public final class ChartWidgetOuterClass {
           }
         }
         /**
+         * <pre>
+         * Matcher by line.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.LineMatcher line = 2;</code>
          */
         public Builder setLine(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.LineMatcher value) {
@@ -19700,6 +22184,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Matcher by line.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.LineMatcher line = 2;</code>
          */
         public Builder setLine(
@@ -19714,6 +22202,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Matcher by line.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.LineMatcher line = 2;</code>
          */
         public Builder mergeLine(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.LineMatcher value) {
@@ -19736,6 +22228,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Matcher by line.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.LineMatcher line = 2;</code>
          */
         public Builder clearLine() {
@@ -19755,12 +22251,20 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Matcher by line.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.LineMatcher line = 2;</code>
          */
         public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.LineMatcher.Builder getLineBuilder() {
           return getLineFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Matcher by line.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.LineMatcher line = 2;</code>
          */
         @java.lang.Override
@@ -19775,6 +22279,10 @@ public final class ChartWidgetOuterClass {
           }
         }
         /**
+         * <pre>
+         * Matcher by line.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.LineMatcher line = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -19799,6 +22307,10 @@ public final class ChartWidgetOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RegExpMatcher, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RegExpMatcher.Builder, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RegExpMatcherOrBuilder> regexpBuilder_;
         /**
+         * <pre>
+         * Matcher by regex.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.RegExpMatcher regexp = 3;</code>
          * @return Whether the regexp field is set.
          */
@@ -19807,6 +22319,10 @@ public final class ChartWidgetOuterClass {
           return typeCase_ == 3;
         }
         /**
+         * <pre>
+         * Matcher by regex.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.RegExpMatcher regexp = 3;</code>
          * @return The regexp.
          */
@@ -19825,6 +22341,10 @@ public final class ChartWidgetOuterClass {
           }
         }
         /**
+         * <pre>
+         * Matcher by regex.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.RegExpMatcher regexp = 3;</code>
          */
         public Builder setRegexp(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RegExpMatcher value) {
@@ -19841,6 +22361,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Matcher by regex.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.RegExpMatcher regexp = 3;</code>
          */
         public Builder setRegexp(
@@ -19855,6 +22379,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Matcher by regex.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.RegExpMatcher regexp = 3;</code>
          */
         public Builder mergeRegexp(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RegExpMatcher value) {
@@ -19877,6 +22405,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Matcher by regex.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.RegExpMatcher regexp = 3;</code>
          */
         public Builder clearRegexp() {
@@ -19896,12 +22428,20 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Matcher by regex.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.RegExpMatcher regexp = 3;</code>
          */
         public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RegExpMatcher.Builder getRegexpBuilder() {
           return getRegexpFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Matcher by regex.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.RegExpMatcher regexp = 3;</code>
          */
         @java.lang.Override
@@ -19916,6 +22456,10 @@ public final class ChartWidgetOuterClass {
           }
         }
         /**
+         * <pre>
+         * Matcher by regex.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.RegExpMatcher regexp = 3;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -19940,6 +22484,10 @@ public final class ChartWidgetOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.ValueMatcher, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.ValueMatcher.Builder, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.ValueMatcherOrBuilder> valuesBuilder_;
         /**
+         * <pre>
+         * Matcher by metric values.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValueMatcher values = 4;</code>
          * @return Whether the values field is set.
          */
@@ -19948,6 +22496,10 @@ public final class ChartWidgetOuterClass {
           return typeCase_ == 4;
         }
         /**
+         * <pre>
+         * Matcher by metric values.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValueMatcher values = 4;</code>
          * @return The values.
          */
@@ -19966,6 +22518,10 @@ public final class ChartWidgetOuterClass {
           }
         }
         /**
+         * <pre>
+         * Matcher by metric values.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValueMatcher values = 4;</code>
          */
         public Builder setValues(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.ValueMatcher value) {
@@ -19982,6 +22538,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Matcher by metric values.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValueMatcher values = 4;</code>
          */
         public Builder setValues(
@@ -19996,6 +22556,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Matcher by metric values.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValueMatcher values = 4;</code>
          */
         public Builder mergeValues(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.ValueMatcher value) {
@@ -20018,6 +22582,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Matcher by metric values.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValueMatcher values = 4;</code>
          */
         public Builder clearValues() {
@@ -20037,12 +22605,20 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Matcher by metric values.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValueMatcher values = 4;</code>
          */
         public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.ValueMatcher.Builder getValuesBuilder() {
           return getValuesFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Matcher by metric values.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValueMatcher values = 4;</code>
          */
         @java.lang.Override
@@ -20057,6 +22633,10 @@ public final class ChartWidgetOuterClass {
           }
         }
         /**
+         * <pre>
+         * Matcher by metric values.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValueMatcher values = 4;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -20135,23 +22715,39 @@ public final class ChartWidgetOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Query names.
+       * </pre>
+       *
        * <code>repeated string names = 1;</code>
        * @return A list containing the names.
        */
       java.util.List<java.lang.String>
           getNamesList();
       /**
+       * <pre>
+       * Query names.
+       * </pre>
+       *
        * <code>repeated string names = 1;</code>
        * @return The count of names.
        */
       int getNamesCount();
       /**
+       * <pre>
+       * Query names.
+       * </pre>
+       *
        * <code>repeated string names = 1;</code>
        * @param index The index of the element to return.
        * @return The names at the given index.
        */
       java.lang.String getNames(int index);
       /**
+       * <pre>
+       * Query names.
+       * </pre>
+       *
        * <code>repeated string names = 1;</code>
        * @param index The index of the value to return.
        * @return The bytes of the names at the given index.
@@ -20253,6 +22849,10 @@ public final class ChartWidgetOuterClass {
       public static final int NAMES_FIELD_NUMBER = 1;
       private com.google.protobuf.LazyStringList names_;
       /**
+       * <pre>
+       * Query names.
+       * </pre>
+       *
        * <code>repeated string names = 1;</code>
        * @return A list containing the names.
        */
@@ -20261,6 +22861,10 @@ public final class ChartWidgetOuterClass {
         return names_;
       }
       /**
+       * <pre>
+       * Query names.
+       * </pre>
+       *
        * <code>repeated string names = 1;</code>
        * @return The count of names.
        */
@@ -20268,6 +22872,10 @@ public final class ChartWidgetOuterClass {
         return names_.size();
       }
       /**
+       * <pre>
+       * Query names.
+       * </pre>
+       *
        * <code>repeated string names = 1;</code>
        * @param index The index of the element to return.
        * @return The names at the given index.
@@ -20276,6 +22884,10 @@ public final class ChartWidgetOuterClass {
         return names_.get(index);
       }
       /**
+       * <pre>
+       * Query names.
+       * </pre>
+       *
        * <code>repeated string names = 1;</code>
        * @param index The index of the value to return.
        * @return The bytes of the names at the given index.
@@ -20614,6 +23226,10 @@ public final class ChartWidgetOuterClass {
            }
         }
         /**
+         * <pre>
+         * Query names.
+         * </pre>
+         *
          * <code>repeated string names = 1;</code>
          * @return A list containing the names.
          */
@@ -20622,6 +23238,10 @@ public final class ChartWidgetOuterClass {
           return names_.getUnmodifiableView();
         }
         /**
+         * <pre>
+         * Query names.
+         * </pre>
+         *
          * <code>repeated string names = 1;</code>
          * @return The count of names.
          */
@@ -20629,6 +23249,10 @@ public final class ChartWidgetOuterClass {
           return names_.size();
         }
         /**
+         * <pre>
+         * Query names.
+         * </pre>
+         *
          * <code>repeated string names = 1;</code>
          * @param index The index of the element to return.
          * @return The names at the given index.
@@ -20637,6 +23261,10 @@ public final class ChartWidgetOuterClass {
           return names_.get(index);
         }
         /**
+         * <pre>
+         * Query names.
+         * </pre>
+         *
          * <code>repeated string names = 1;</code>
          * @param index The index of the value to return.
          * @return The bytes of the names at the given index.
@@ -20646,6 +23274,10 @@ public final class ChartWidgetOuterClass {
           return names_.getByteString(index);
         }
         /**
+         * <pre>
+         * Query names.
+         * </pre>
+         *
          * <code>repeated string names = 1;</code>
          * @param index The index to set the value at.
          * @param value The names to set.
@@ -20662,6 +23294,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Query names.
+         * </pre>
+         *
          * <code>repeated string names = 1;</code>
          * @param value The names to add.
          * @return This builder for chaining.
@@ -20677,6 +23313,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Query names.
+         * </pre>
+         *
          * <code>repeated string names = 1;</code>
          * @param values The names to add.
          * @return This builder for chaining.
@@ -20690,6 +23330,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Query names.
+         * </pre>
+         *
          * <code>repeated string names = 1;</code>
          * @return This builder for chaining.
          */
@@ -20700,6 +23344,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Query names.
+         * </pre>
+         *
          * <code>repeated string names = 1;</code>
          * @param value The bytes of the names to add.
          * @return This builder for chaining.
@@ -20773,23 +23421,39 @@ public final class ChartWidgetOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Line id's.
+       * </pre>
+       *
        * <code>repeated string line_ids = 1;</code>
        * @return A list containing the lineIds.
        */
       java.util.List<java.lang.String>
           getLineIdsList();
       /**
+       * <pre>
+       * Line id's.
+       * </pre>
+       *
        * <code>repeated string line_ids = 1;</code>
        * @return The count of lineIds.
        */
       int getLineIdsCount();
       /**
+       * <pre>
+       * Line id's.
+       * </pre>
+       *
        * <code>repeated string line_ids = 1;</code>
        * @param index The index of the element to return.
        * @return The lineIds at the given index.
        */
       java.lang.String getLineIds(int index);
       /**
+       * <pre>
+       * Line id's.
+       * </pre>
+       *
        * <code>repeated string line_ids = 1;</code>
        * @param index The index of the value to return.
        * @return The bytes of the lineIds at the given index.
@@ -20891,6 +23555,10 @@ public final class ChartWidgetOuterClass {
       public static final int LINE_IDS_FIELD_NUMBER = 1;
       private com.google.protobuf.LazyStringList lineIds_;
       /**
+       * <pre>
+       * Line id's.
+       * </pre>
+       *
        * <code>repeated string line_ids = 1;</code>
        * @return A list containing the lineIds.
        */
@@ -20899,6 +23567,10 @@ public final class ChartWidgetOuterClass {
         return lineIds_;
       }
       /**
+       * <pre>
+       * Line id's.
+       * </pre>
+       *
        * <code>repeated string line_ids = 1;</code>
        * @return The count of lineIds.
        */
@@ -20906,6 +23578,10 @@ public final class ChartWidgetOuterClass {
         return lineIds_.size();
       }
       /**
+       * <pre>
+       * Line id's.
+       * </pre>
+       *
        * <code>repeated string line_ids = 1;</code>
        * @param index The index of the element to return.
        * @return The lineIds at the given index.
@@ -20914,6 +23590,10 @@ public final class ChartWidgetOuterClass {
         return lineIds_.get(index);
       }
       /**
+       * <pre>
+       * Line id's.
+       * </pre>
+       *
        * <code>repeated string line_ids = 1;</code>
        * @param index The index of the value to return.
        * @return The bytes of the lineIds at the given index.
@@ -21252,6 +23932,10 @@ public final class ChartWidgetOuterClass {
            }
         }
         /**
+         * <pre>
+         * Line id's.
+         * </pre>
+         *
          * <code>repeated string line_ids = 1;</code>
          * @return A list containing the lineIds.
          */
@@ -21260,6 +23944,10 @@ public final class ChartWidgetOuterClass {
           return lineIds_.getUnmodifiableView();
         }
         /**
+         * <pre>
+         * Line id's.
+         * </pre>
+         *
          * <code>repeated string line_ids = 1;</code>
          * @return The count of lineIds.
          */
@@ -21267,6 +23955,10 @@ public final class ChartWidgetOuterClass {
           return lineIds_.size();
         }
         /**
+         * <pre>
+         * Line id's.
+         * </pre>
+         *
          * <code>repeated string line_ids = 1;</code>
          * @param index The index of the element to return.
          * @return The lineIds at the given index.
@@ -21275,6 +23967,10 @@ public final class ChartWidgetOuterClass {
           return lineIds_.get(index);
         }
         /**
+         * <pre>
+         * Line id's.
+         * </pre>
+         *
          * <code>repeated string line_ids = 1;</code>
          * @param index The index of the value to return.
          * @return The bytes of the lineIds at the given index.
@@ -21284,6 +23980,10 @@ public final class ChartWidgetOuterClass {
           return lineIds_.getByteString(index);
         }
         /**
+         * <pre>
+         * Line id's.
+         * </pre>
+         *
          * <code>repeated string line_ids = 1;</code>
          * @param index The index to set the value at.
          * @param value The lineIds to set.
@@ -21300,6 +24000,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Line id's.
+         * </pre>
+         *
          * <code>repeated string line_ids = 1;</code>
          * @param value The lineIds to add.
          * @return This builder for chaining.
@@ -21315,6 +24019,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Line id's.
+         * </pre>
+         *
          * <code>repeated string line_ids = 1;</code>
          * @param values The lineIds to add.
          * @return This builder for chaining.
@@ -21328,6 +24036,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Line id's.
+         * </pre>
+         *
          * <code>repeated string line_ids = 1;</code>
          * @return This builder for chaining.
          */
@@ -21338,6 +24050,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Line id's.
+         * </pre>
+         *
          * <code>repeated string line_ids = 1;</code>
          * @param value The bytes of the lineIds to add.
          * @return This builder for chaining.
@@ -21411,11 +24127,19 @@ public final class ChartWidgetOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Regex to find a line.
+       * </pre>
+       *
        * <code>string reg_exp = 1;</code>
        * @return The regExp.
        */
       java.lang.String getRegExp();
       /**
+       * <pre>
+       * Regex to find a line.
+       * </pre>
+       *
        * <code>string reg_exp = 1;</code>
        * @return The bytes for regExp.
        */
@@ -21509,6 +24233,10 @@ public final class ChartWidgetOuterClass {
       public static final int REG_EXP_FIELD_NUMBER = 1;
       private volatile java.lang.Object regExp_;
       /**
+       * <pre>
+       * Regex to find a line.
+       * </pre>
+       *
        * <code>string reg_exp = 1;</code>
        * @return The regExp.
        */
@@ -21526,6 +24254,10 @@ public final class ChartWidgetOuterClass {
         }
       }
       /**
+       * <pre>
+       * Regex to find a line.
+       * </pre>
+       *
        * <code>string reg_exp = 1;</code>
        * @return The bytes for regExp.
        */
@@ -21848,6 +24580,10 @@ public final class ChartWidgetOuterClass {
 
         private java.lang.Object regExp_ = "";
         /**
+         * <pre>
+         * Regex to find a line.
+         * </pre>
+         *
          * <code>string reg_exp = 1;</code>
          * @return The regExp.
          */
@@ -21864,6 +24600,10 @@ public final class ChartWidgetOuterClass {
           }
         }
         /**
+         * <pre>
+         * Regex to find a line.
+         * </pre>
+         *
          * <code>string reg_exp = 1;</code>
          * @return The bytes for regExp.
          */
@@ -21881,6 +24621,10 @@ public final class ChartWidgetOuterClass {
           }
         }
         /**
+         * <pre>
+         * Regex to find a line.
+         * </pre>
+         *
          * <code>string reg_exp = 1;</code>
          * @param value The regExp to set.
          * @return This builder for chaining.
@@ -21896,6 +24640,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Regex to find a line.
+         * </pre>
+         *
          * <code>string reg_exp = 1;</code>
          * @return This builder for chaining.
          */
@@ -21906,6 +24654,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Regex to find a line.
+         * </pre>
+         *
          * <code>string reg_exp = 1;</code>
          * @param value The bytes for regExp to set.
          * @return This builder for chaining.
@@ -21979,11 +24731,19 @@ public final class ChartWidgetOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Value type.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValuesType value_type = 1;</code>
        * @return The enum numeric value on the wire for valueType.
        */
       int getValueTypeValue();
       /**
+       * <pre>
+       * Value type.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValuesType value_type = 1;</code>
        * @return The valueType.
        */
@@ -22076,6 +24836,10 @@ public final class ChartWidgetOuterClass {
       public static final int VALUE_TYPE_FIELD_NUMBER = 1;
       private int valueType_;
       /**
+       * <pre>
+       * Value type.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValuesType value_type = 1;</code>
        * @return The enum numeric value on the wire for valueType.
        */
@@ -22083,6 +24847,10 @@ public final class ChartWidgetOuterClass {
         return valueType_;
       }
       /**
+       * <pre>
+       * Value type.
+       * </pre>
+       *
        * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValuesType value_type = 1;</code>
        * @return The valueType.
        */
@@ -22395,6 +25163,10 @@ public final class ChartWidgetOuterClass {
 
         private int valueType_ = 0;
         /**
+         * <pre>
+         * Value type.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValuesType value_type = 1;</code>
          * @return The enum numeric value on the wire for valueType.
          */
@@ -22402,6 +25174,10 @@ public final class ChartWidgetOuterClass {
           return valueType_;
         }
         /**
+         * <pre>
+         * Value type.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValuesType value_type = 1;</code>
          * @param value The enum numeric value on the wire for valueType to set.
          * @return This builder for chaining.
@@ -22413,6 +25189,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Value type.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValuesType value_type = 1;</code>
          * @return The valueType.
          */
@@ -22423,6 +25203,10 @@ public final class ChartWidgetOuterClass {
           return result == null ? yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.ValuesType.UNRECOGNIZED : result;
         }
         /**
+         * <pre>
+         * Value type.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValuesType value_type = 1;</code>
          * @param value The valueType to set.
          * @return This builder for chaining.
@@ -22437,6 +25221,10 @@ public final class ChartWidgetOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Value type.
+         * </pre>
+         *
          * <code>.yandex.cloud.monitoring.v3.ChartWidget.ValuesType value_type = 1;</code>
          * @return This builder for chaining.
          */
@@ -26727,6 +29515,11 @@ public final class ChartWidgetOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_YaxisSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_TilesSettings_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_TilesSettings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_SeriesOverrides_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -26783,170 +29576,192 @@ public final class ChartWidgetOuterClass {
       "\n-yandex/cloud/monitoring/v3/chart_widge" +
       "t.proto\022\032yandex.cloud.monitoring.v3\032\036goo" +
       "gle/protobuf/wrappers.proto\032-yandex/clou" +
-      "d/monitoring/v3/downsampling.proto\032,yand" +
-      "ex/cloud/monitoring/v3/unit_format.proto" +
-      "\032+yandex/cloud/monitoring/v3/thresholds." +
-      "proto\"\246/\n\013ChartWidget\022\n\n\002id\030\001 \001(\t\022@\n\007que" +
-      "ries\030\002 \001(\0132/.yandex.cloud.monitoring.v3." +
-      "ChartWidget.Queries\022]\n\026visualization_set" +
-      "tings\030\003 \001(\0132=.yandex.cloud.monitoring.v3" +
-      ".ChartWidget.VisualizationSettings\022Q\n\020se" +
-      "ries_overrides\030\004 \003(\01327.yandex.cloud.moni" +
-      "toring.v3.ChartWidget.SeriesOverrides\022X\n" +
-      "\024name_hiding_settings\030\005 \001(\0132:.yandex.clo" +
-      "ud.monitoring.v3.ChartWidget.NameHidingS" +
-      "ettings\022\023\n\013description\030\006 \001(\t\022\r\n\005title\030\007 " +
-      "\001(\t\022\026\n\016display_legend\030\010 \001(\010\022F\n\006freeze\030\t " +
-      "\001(\01626.yandex.cloud.monitoring.v3.ChartWi" +
-      "dget.FreezeDuration\022F\n\006repeat\030\n \001(\01326.ya" +
-      "ndex.cloud.monitoring.v3.ChartWidget.Rep" +
-      "eatSettings\022:\n\nthresholds\030\013 \001(\0132&.yandex" +
-      ".cloud.monitoring.v3.Thresholds\032\334\001\n\007Quer" +
-      "ies\022G\n\007targets\030\001 \003(\01326.yandex.cloud.moni" +
-      "toring.v3.ChartWidget.Queries.Target\022>\n\014" +
-      "downsampling\030\002 \001(\0132(.yandex.cloud.monito" +
-      "ring.v3.Downsampling\032H\n\006Target\022\r\n\005query\030" +
-      "\001 \001(\t\022\021\n\ttext_mode\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010" +
-      "\022\014\n\004name\030\004 \001(\t\032\240\031\n\025VisualizationSettings" +
-      "\022]\n\004type\030\001 \001(\0162O.yandex.cloud.monitoring" +
-      ".v3.ChartWidget.VisualizationSettings.Vi" +
-      "sualizationType\022\021\n\tnormalize\030\002 \001(\010\022^\n\013in" +
-      "terpolate\030\003 \001(\0162I.yandex.cloud.monitorin" +
-      "g.v3.ChartWidget.VisualizationSettings.I" +
-      "nterpolate\022d\n\013aggregation\030\004 \001(\0162O.yandex" +
-      ".cloud.monitoring.v3.ChartWidget.Visuali" +
-      "zationSettings.SeriesAggregation\022p\n\025colo" +
-      "r_scheme_settings\030\005 \001(\0132Q.yandex.cloud.m" +
+      "d/monitoring/v3/downsampling.proto\032+yand" +
+      "ex/cloud/monitoring/v3/sort_order.proto\032" +
+      ",yandex/cloud/monitoring/v3/unit_format." +
+      "proto\032+yandex/cloud/monitoring/v3/thresh" +
+      "olds.proto\"\3065\n\013ChartWidget\022\n\n\002id\030\001 \001(\t\022@" +
+      "\n\007queries\030\002 \001(\0132/.yandex.cloud.monitorin" +
+      "g.v3.ChartWidget.Queries\022]\n\026visualizatio" +
+      "n_settings\030\003 \001(\0132=.yandex.cloud.monitori" +
+      "ng.v3.ChartWidget.VisualizationSettings\022" +
+      "Q\n\020series_overrides\030\004 \003(\01327.yandex.cloud" +
+      ".monitoring.v3.ChartWidget.SeriesOverrid" +
+      "es\022X\n\024name_hiding_settings\030\005 \001(\0132:.yande" +
+      "x.cloud.monitoring.v3.ChartWidget.NameHi" +
+      "dingSettings\022\023\n\013description\030\006 \001(\t\022\r\n\005tit" +
+      "le\030\007 \001(\t\022\026\n\016display_legend\030\010 \001(\010\022F\n\006free" +
+      "ze\030\t \001(\01626.yandex.cloud.monitoring.v3.Ch" +
+      "artWidget.FreezeDuration\022F\n\006repeat\030\n \001(\013" +
+      "26.yandex.cloud.monitoring.v3.ChartWidge" +
+      "t.RepeatSettings\022:\n\nthresholds\030\013 \001(\0132&.y" +
+      "andex.cloud.monitoring.v3.Thresholds\032\334\001\n" +
+      "\007Queries\022G\n\007targets\030\001 \003(\01326.yandex.cloud" +
+      ".monitoring.v3.ChartWidget.Queries.Targe" +
+      "t\022>\n\014downsampling\030\002 \001(\0132(.yandex.cloud.m" +
+      "onitoring.v3.Downsampling\032H\n\006Target\022\r\n\005q" +
+      "uery\030\001 \001(\t\022\021\n\ttext_mode\030\002 \001(\010\022\016\n\006hidden\030" +
+      "\003 \001(\010\022\014\n\004name\030\004 \001(\t\032\274\034\n\025VisualizationSet" +
+      "tings\022]\n\004type\030\001 \001(\0162O.yandex.cloud.monit" +
+      "oring.v3.ChartWidget.VisualizationSettin" +
+      "gs.VisualizationType\022\021\n\tnormalize\030\002 \001(\010\022" +
+      "^\n\013interpolate\030\003 \001(\0162I.yandex.cloud.moni" +
+      "toring.v3.ChartWidget.VisualizationSetti" +
+      "ngs.Interpolate\022d\n\013aggregation\030\004 \001(\0162O.y" +
+      "andex.cloud.monitoring.v3.ChartWidget.Vi" +
+      "sualizationSettings.SeriesAggregation\022p\n" +
+      "\025color_scheme_settings\030\005 \001(\0132Q.yandex.cl" +
+      "oud.monitoring.v3.ChartWidget.Visualizat" +
+      "ionSettings.ColorSchemeSettings\022g\n\020heatm" +
+      "ap_settings\030\006 \001(\0132M.yandex.cloud.monitor" +
+      "ing.v3.ChartWidget.VisualizationSettings" +
+      ".HeatmapSettings\022c\n\016yaxis_settings\030\007 \001(\013" +
+      "2K.yandex.cloud.monitoring.v3.ChartWidge" +
+      "t.VisualizationSettings.YaxisSettings\022\r\n" +
+      "\005title\030\010 \001(\t\022\023\n\013show_labels\030\t \001(\010\022c\n\016til" +
+      "es_settings\030\n \001(\0132K.yandex.cloud.monitor" +
+      "ing.v3.ChartWidget.VisualizationSettings" +
+      ".TilesSettings\032\216\n\n\023ColorSchemeSettings\022{" +
+      "\n\tautomatic\030\001 \001(\0132f.yandex.cloud.monitor" +
+      "ing.v3.ChartWidget.VisualizationSettings" +
+      ".ColorSchemeSettings.AutomaticColorSchem" +
+      "eH\000\022y\n\010standard\030\002 \001(\0132e.yandex.cloud.mon" +
+      "itoring.v3.ChartWidget.VisualizationSett" +
+      "ings.ColorSchemeSettings.StandardColorSc" +
+      "hemeH\000\022y\n\010gradient\030\003 \001(\0132e.yandex.cloud." +
+      "monitoring.v3.ChartWidget.VisualizationS" +
+      "ettings.ColorSchemeSettings.GradientColo" +
+      "rSchemeH\000\022q\n\004hash\030\004 \001(\0132a.yandex.cloud.m" +
       "onitoring.v3.ChartWidget.VisualizationSe" +
-      "ttings.ColorSchemeSettings\022g\n\020heatmap_se" +
-      "ttings\030\006 \001(\0132M.yandex.cloud.monitoring.v" +
-      "3.ChartWidget.VisualizationSettings.Heat" +
-      "mapSettings\022c\n\016yaxis_settings\030\007 \001(\0132K.ya" +
-      "ndex.cloud.monitoring.v3.ChartWidget.Vis" +
-      "ualizationSettings.YaxisSettings\022\r\n\005titl" +
-      "e\030\010 \001(\t\022\023\n\013show_labels\030\t \001(\010\032\216\n\n\023ColorSc" +
-      "hemeSettings\022{\n\tautomatic\030\001 \001(\0132f.yandex" +
-      ".cloud.monitoring.v3.ChartWidget.Visuali" +
-      "zationSettings.ColorSchemeSettings.Autom" +
-      "aticColorSchemeH\000\022y\n\010standard\030\002 \001(\0132e.ya" +
-      "ndex.cloud.monitoring.v3.ChartWidget.Vis" +
-      "ualizationSettings.ColorSchemeSettings.S" +
-      "tandardColorSchemeH\000\022y\n\010gradient\030\003 \001(\0132e" +
+      "ttings.ColorSchemeSettings.HashColorSche" +
+      "meH\000\022}\n\nthresholds\030\005 \001(\0132g.yandex.cloud." +
+      "monitoring.v3.ChartWidget.VisualizationS" +
+      "ettings.ColorSchemeSettings.ThresholdsCo" +
+      "lorSchemeH\000\022y\n\010constant\030\006 \001(\0132e.yandex.c" +
+      "loud.monitoring.v3.ChartWidget.Visualiza" +
+      "tionSettings.ColorSchemeSettings.Constan" +
+      "tColorSchemeH\000\032\026\n\024AutomaticColorScheme\032\025" +
+      "\n\023StandardColorScheme\032i\n\023GradientColorSc" +
+      "heme\022\023\n\013green_value\030\002 \001(\t\022\024\n\014yellow_valu" +
+      "e\030\003 \001(\t\022\021\n\tred_value\030\004 \001(\t\022\024\n\014violet_val" +
+      "ue\030\005 \001(\t\032\021\n\017HashColorScheme\032$\n\023ConstantC" +
+      "olorScheme\022\r\n\005color\030\001 \001(\t\032\271\002\n\025Thresholds" +
+      "ColorScheme\022\210\001\n\013aggregation\030\001 \001(\0162s.yand" +
+      "ex.cloud.monitoring.v3.ChartWidget.Visua" +
+      "lizationSettings.ColorSchemeSettings.Thr" +
+      "esholdsColorScheme.Aggregation\"\224\001\n\013Aggre" +
+      "gation\022\033\n\027AGGREGATION_UNSPECIFIED\020\000\022\024\n\020A" +
+      "GGREGATION_LAST\020\001\022\023\n\017AGGREGATION_MIN\020\002\022\023" +
+      "\n\017AGGREGATION_MAX\020\003\022\023\n\017AGGREGATION_AVG\020\004" +
+      "\022\023\n\017AGGREGATION_SUM\020\005B\010\n\006scheme\032e\n\017Heatm" +
+      "apSettings\022\023\n\013green_value\030\002 \001(\t\022\024\n\014yello" +
+      "w_value\030\003 \001(\t\022\021\n\tred_value\030\004 \001(\t\022\024\n\014viol" +
+      "et_value\030\005 \001(\t\032\364\001\n\005Yaxis\022U\n\004type\030\001 \001(\0162G" +
       ".yandex.cloud.monitoring.v3.ChartWidget." +
-      "VisualizationSettings.ColorSchemeSetting" +
-      "s.GradientColorSchemeH\000\022q\n\004hash\030\004 \001(\0132a." +
-      "yandex.cloud.monitoring.v3.ChartWidget.V" +
-      "isualizationSettings.ColorSchemeSettings" +
-      ".HashColorSchemeH\000\022}\n\nthresholds\030\005 \001(\0132g" +
-      ".yandex.cloud.monitoring.v3.ChartWidget." +
-      "VisualizationSettings.ColorSchemeSetting" +
-      "s.ThresholdsColorSchemeH\000\022y\n\010constant\030\006 " +
-      "\001(\0132e.yandex.cloud.monitoring.v3.ChartWi" +
-      "dget.VisualizationSettings.ColorSchemeSe" +
-      "ttings.ConstantColorSchemeH\000\032\026\n\024Automati" +
-      "cColorScheme\032\025\n\023StandardColorScheme\032i\n\023G" +
-      "radientColorScheme\022\023\n\013green_value\030\002 \001(\t\022" +
-      "\024\n\014yellow_value\030\003 \001(\t\022\021\n\tred_value\030\004 \001(\t" +
-      "\022\024\n\014violet_value\030\005 \001(\t\032\021\n\017HashColorSchem" +
-      "e\032$\n\023ConstantColorScheme\022\r\n\005color\030\001 \001(\t\032" +
-      "\271\002\n\025ThresholdsColorScheme\022\210\001\n\013aggregatio" +
-      "n\030\001 \001(\0162s.yandex.cloud.monitoring.v3.Cha" +
-      "rtWidget.VisualizationSettings.ColorSche" +
-      "meSettings.ThresholdsColorScheme.Aggrega" +
-      "tion\"\224\001\n\013Aggregation\022\033\n\027AGGREGATION_UNSP" +
-      "ECIFIED\020\000\022\024\n\020AGGREGATION_LAST\020\001\022\023\n\017AGGRE" +
-      "GATION_MIN\020\002\022\023\n\017AGGREGATION_MAX\020\003\022\023\n\017AGG" +
-      "REGATION_AVG\020\004\022\023\n\017AGGREGATION_SUM\020\005B\010\n\006s" +
-      "cheme\032e\n\017HeatmapSettings\022\023\n\013green_value\030" +
-      "\002 \001(\t\022\024\n\014yellow_value\030\003 \001(\t\022\021\n\tred_value" +
-      "\030\004 \001(\t\022\024\n\014violet_value\030\005 \001(\t\032\364\001\n\005Yaxis\022U" +
-      "\n\004type\030\001 \001(\0162G.yandex.cloud.monitoring.v" +
-      "3.ChartWidget.VisualizationSettings.Yaxi" +
-      "sType\022\r\n\005title\030\002 \001(\t\022\013\n\003min\030\003 \001(\t\022\013\n\003max" +
-      "\030\004 \001(\t\022;\n\013unit_format\030\005 \001(\0162&.yandex.clo" +
-      "ud.monitoring.v3.UnitFormat\022.\n\tprecision" +
-      "\030\006 \001(\0132\033.google.protobuf.Int64Value\032\266\001\n\r" +
-      "YaxisSettings\022Q\n\004left\030\001 \001(\0132C.yandex.clo" +
-      "ud.monitoring.v3.ChartWidget.Visualizati" +
-      "onSettings.Yaxis\022R\n\005right\030\002 \001(\0132C.yandex" +
-      ".cloud.monitoring.v3.ChartWidget.Visuali" +
-      "zationSettings.Yaxis\"\256\002\n\021VisualizationTy" +
-      "pe\022\"\n\036VISUALIZATION_TYPE_UNSPECIFIED\020\000\022\033" +
-      "\n\027VISUALIZATION_TYPE_LINE\020\001\022\034\n\030VISUALIZA" +
-      "TION_TYPE_STACK\020\002\022\035\n\031VISUALIZATION_TYPE_" +
-      "COLUMN\020\003\022\035\n\031VISUALIZATION_TYPE_POINTS\020\004\022" +
-      "\032\n\026VISUALIZATION_TYPE_PIE\020\005\022\033\n\027VISUALIZA" +
-      "TION_TYPE_BARS\020\006\022#\n\037VISUALIZATION_TYPE_D" +
-      "ISTRIBUTION\020\007\022\036\n\032VISUALIZATION_TYPE_HEAT" +
-      "MAP\020\010\"o\n\013Interpolate\022\033\n\027INTERPOLATE_UNSP" +
-      "ECIFIED\020\000\022\026\n\022INTERPOLATE_LINEAR\020\001\022\024\n\020INT" +
-      "ERPOLATE_LEFT\020\002\022\025\n\021INTERPOLATE_RIGHT\020\003\"Z" +
-      "\n\tYaxisType\022\032\n\026YAXIS_TYPE_UNSPECIFIED\020\000\022" +
-      "\025\n\021YAXIS_TYPE_LINEAR\020\001\022\032\n\026YAXIS_TYPE_LOG" +
-      "ARITHMIC\020\002\"\304\001\n\021SeriesAggregation\022\"\n\036SERI" +
-      "ES_AGGREGATION_UNSPECIFIED\020\000\022\032\n\026SERIES_A" +
-      "GGREGATION_AVG\020\001\022\032\n\026SERIES_AGGREGATION_M" +
-      "IN\020\002\022\032\n\026SERIES_AGGREGATION_MAX\020\003\022\033\n\027SERI" +
-      "ES_AGGREGATION_LAST\020\004\022\032\n\026SERIES_AGGREGAT" +
-      "ION_SUM\020\005\032\314\010\n\017SeriesOverrides\022\016\n\004name\030\001 " +
-      "\001(\tH\000\022\026\n\014target_index\030\002 \001(\tH\000\022`\n\010setting" +
-      "s\030\003 \001(\0132N.yandex.cloud.monitoring.v3.Cha" +
-      "rtWidget.SeriesOverrides.SeriesOverrideS" +
-      "ettings\022\025\n\roverride_name\030\004 \001(\t\022H\n\007matche" +
-      "r\030\005 \001(\01327.yandex.cloud.monitoring.v3.Cha" +
-      "rtWidget.OverrideMatcher\032\205\004\n\026SeriesOverr" +
-      "ideSettings\022\014\n\004name\030\001 \001(\t\022\r\n\005color\030\002 \001(\t" +
-      "\022]\n\004type\030\003 \001(\0162O.yandex.cloud.monitoring" +
-      ".v3.ChartWidget.SeriesOverrides.SeriesVi" +
-      "sualizationType\022\022\n\nstack_name\030\004 \001(\t\022\021\n\tg" +
-      "row_down\030\005 \001(\010\022]\n\016yaxis_position\030\006 \001(\0162E" +
-      ".yandex.cloud.monitoring.v3.ChartWidget." +
-      "SeriesOverrides.YaxisPosition\022\022\n\nline_wi" +
-      "dth\030\007 \001(\003\022l\n\nline_style\030\010 \001(\0162X.yandex.c" +
-      "loud.monitoring.v3.ChartWidget.SeriesOve" +
-      "rrides.SeriesOverrideSettings.LineStyle\"" +
-      "g\n\tLineStyle\022\032\n\026LINE_STYLE_UNSPECIFIED\020\000" +
-      "\022\024\n\020LINE_STYLE_SOLID\020\001\022\023\n\017LINE_STYLE_DAS" +
-      "H\020\002\022\023\n\017LINE_STYLE_DOTS\020\003\"b\n\rYaxisPositio" +
-      "n\022\036\n\032YAXIS_POSITION_UNSPECIFIED\020\000\022\027\n\023YAX" +
-      "IS_POSITION_LEFT\020\001\022\030\n\024YAXIS_POSITION_RIG" +
-      "HT\020\002\"\331\001\n\027SeriesVisualizationType\022)\n%SERI" +
-      "ES_VISUALIZATION_TYPE_UNSPECIFIED\020\000\022\"\n\036S" +
-      "ERIES_VISUALIZATION_TYPE_LINE\020\001\022#\n\037SERIE" +
-      "S_VISUALIZATION_TYPE_STACK\020\002\022$\n SERIES_V" +
-      "ISUALIZATION_TYPE_COLUMN\020\003\022$\n SERIES_VIS" +
-      "UALIZATION_TYPE_POINTS\020\004B\006\n\004type\032\266\002\n\017Ove" +
-      "rrideMatcher\022E\n\005query\030\001 \001(\01324.yandex.clo" +
-      "ud.monitoring.v3.ChartWidget.QueryMatche" +
-      "rH\000\022C\n\004line\030\002 \001(\01323.yandex.cloud.monitor" +
-      "ing.v3.ChartWidget.LineMatcherH\000\022G\n\006rege" +
-      "xp\030\003 \001(\01325.yandex.cloud.monitoring.v3.Ch" +
-      "artWidget.RegExpMatcherH\000\022F\n\006values\030\004 \001(" +
-      "\01324.yandex.cloud.monitoring.v3.ChartWidg" +
-      "et.ValueMatcherH\000B\006\n\004type\032\035\n\014QueryMatche" +
-      "r\022\r\n\005names\030\001 \003(\t\032\037\n\013LineMatcher\022\020\n\010line_" +
-      "ids\030\001 \003(\t\032 \n\rRegExpMatcher\022\017\n\007reg_exp\030\001 " +
-      "\001(\t\032V\n\014ValueMatcher\022F\n\nvalue_type\030\001 \001(\0162" +
-      "2.yandex.cloud.monitoring.v3.ChartWidget" +
-      ".ValuesType\0325\n\022NameHidingSettings\022\020\n\010pos" +
-      "itive\030\001 \001(\010\022\r\n\005names\030\002 \003(\t\032>\n\016RepeatSett" +
-      "ings\022\021\n\trepeat_by\030\001 \003(\t\022\031\n\021max_charts_in" +
-      "_row\030\002 \001(\003\"^\n\nValuesType\022\033\n\027VALUES_TYPE_" +
-      "UNSPECIFIED\020\000\022\031\n\025VALUES_TYPE_ALL_ZEROS\020\001" +
-      "\022\030\n\024VALUES_TYPE_ALL_NULL\020\002\"\231\001\n\016FreezeDur" +
-      "ation\022\037\n\033FREEZE_DURATION_UNSPECIFIED\020\000\022\030" +
-      "\n\024FREEZE_DURATION_HOUR\020\001\022\027\n\023FREEZE_DURAT" +
-      "ION_DAY\020\002\022\030\n\024FREEZE_DURATION_WEEK\020\003\022\031\n\025F" +
-      "REEZE_DURATION_MONTH\020\004Bk\n\036yandex.cloud.a" +
-      "pi.monitoring.v3ZIgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/monitoring/v3" +
-      ";monitoringb\006proto3"
+      "VisualizationSettings.YaxisType\022\r\n\005title" +
+      "\030\002 \001(\t\022\013\n\003min\030\003 \001(\t\022\013\n\003max\030\004 \001(\t\022;\n\013unit" +
+      "_format\030\005 \001(\0162&.yandex.cloud.monitoring." +
+      "v3.UnitFormat\022.\n\tprecision\030\006 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\032\266\001\n\rYaxisSettings\022" +
+      "Q\n\004left\030\001 \001(\0132C.yandex.cloud.monitoring." +
+      "v3.ChartWidget.VisualizationSettings.Yax" +
+      "is\022R\n\005right\030\002 \001(\0132C.yandex.cloud.monitor" +
+      "ing.v3.ChartWidget.VisualizationSettings" +
+      ".Yaxis\032\264\002\n\rTilesSettings\0229\n\nsort_order\030\001" +
+      " \001(\0162%.yandex.cloud.monitoring.v3.SortOr" +
+      "der\022i\n\nsort_field\030\002 \001(\0162U.yandex.cloud.m" +
+      "onitoring.v3.ChartWidget.VisualizationSe" +
+      "ttings.TilesSettings.SortField\022\022\n\nshow_t" +
+      "itle\030\003 \001(\010\022\022\n\nshow_value\030\004 \001(\010\022\026\n\016show_s" +
+      "parkline\030\005 \001(\010\"=\n\tSortField\022\032\n\026SORT_FIEL" +
+      "D_UNSPECIFIED\020\000\022\t\n\005VALUE\020\001\022\t\n\005TITLE\020\002\"\256\002" +
+      "\n\021VisualizationType\022\"\n\036VISUALIZATION_TYP" +
+      "E_UNSPECIFIED\020\000\022\033\n\027VISUALIZATION_TYPE_LI" +
+      "NE\020\001\022\034\n\030VISUALIZATION_TYPE_STACK\020\002\022\035\n\031VI" +
+      "SUALIZATION_TYPE_COLUMN\020\003\022\035\n\031VISUALIZATI" +
+      "ON_TYPE_POINTS\020\004\022\032\n\026VISUALIZATION_TYPE_P" +
+      "IE\020\005\022\033\n\027VISUALIZATION_TYPE_BARS\020\006\022#\n\037VIS" +
+      "UALIZATION_TYPE_DISTRIBUTION\020\007\022\036\n\032VISUAL" +
+      "IZATION_TYPE_HEATMAP\020\010\"o\n\013Interpolate\022\033\n" +
+      "\027INTERPOLATE_UNSPECIFIED\020\000\022\026\n\022INTERPOLAT" +
+      "E_LINEAR\020\001\022\024\n\020INTERPOLATE_LEFT\020\002\022\025\n\021INTE" +
+      "RPOLATE_RIGHT\020\003\"Z\n\tYaxisType\022\032\n\026YAXIS_TY" +
+      "PE_UNSPECIFIED\020\000\022\025\n\021YAXIS_TYPE_LINEAR\020\001\022" +
+      "\032\n\026YAXIS_TYPE_LOGARITHMIC\020\002\"\304\001\n\021SeriesAg" +
+      "gregation\022\"\n\036SERIES_AGGREGATION_UNSPECIF" +
+      "IED\020\000\022\032\n\026SERIES_AGGREGATION_AVG\020\001\022\032\n\026SER" +
+      "IES_AGGREGATION_MIN\020\002\022\032\n\026SERIES_AGGREGAT" +
+      "ION_MAX\020\003\022\033\n\027SERIES_AGGREGATION_LAST\020\004\022\032" +
+      "\n\026SERIES_AGGREGATION_SUM\020\005\032\320\013\n\017SeriesOve" +
+      "rrides\022\016\n\004name\030\001 \001(\tH\000\022\026\n\014target_index\030\002" +
+      " \001(\tH\000\022`\n\010settings\030\003 \001(\0132N.yandex.cloud." +
+      "monitoring.v3.ChartWidget.SeriesOverride" +
+      "s.SeriesOverrideSettings\022\025\n\roverride_nam" +
+      "e\030\004 \001(\t\022H\n\007matcher\030\005 \001(\01327.yandex.cloud." +
+      "monitoring.v3.ChartWidget.OverrideMatche" +
+      "r\032\211\007\n\026SeriesOverrideSettings\022\014\n\004name\030\001 \001" +
+      "(\t\022\r\n\005color\030\002 \001(\t\022]\n\004type\030\003 \001(\0162O.yandex" +
+      ".cloud.monitoring.v3.ChartWidget.SeriesO" +
+      "verrides.SeriesVisualizationType\022\022\n\nstac" +
+      "k_name\030\004 \001(\t\022\021\n\tgrow_down\030\005 \001(\010\022]\n\016yaxis" +
+      "_position\030\006 \001(\0162E.yandex.cloud.monitorin" +
+      "g.v3.ChartWidget.SeriesOverrides.YaxisPo" +
+      "sition\022\022\n\nline_width\030\007 \001(\003\022l\n\nline_style" +
+      "\030\010 \001(\0162X.yandex.cloud.monitoring.v3.Char" +
+      "tWidget.SeriesOverrides.SeriesOverrideSe" +
+      "ttings.LineStyle\022{\n\020line_hiding_type\030\n \001" +
+      "(\0162].yandex.cloud.monitoring.v3.ChartWid" +
+      "get.SeriesOverrides.SeriesOverrideSettin" +
+      "gs.LineHidingTypeB\002\030\001\022\035\n\025line_hiding_in_" +
+      "legend\030\013 \001(\010\022\036\n\026line_hiding_in_tooltip\030\014" +
+      " \001(\010\022\034\n\024line_hiding_in_chart\030\r \001(\010\"g\n\tLi" +
+      "neStyle\022\032\n\026LINE_STYLE_UNSPECIFIED\020\000\022\024\n\020L" +
+      "INE_STYLE_SOLID\020\001\022\023\n\017LINE_STYLE_DASH\020\002\022\023" +
+      "\n\017LINE_STYLE_DOTS\020\003\"\241\001\n\016LineHidingType\022 " +
+      "\n\034LINE_HIDING_TYPE_UNSPECIFIED\020\000\022 \n\034LINE" +
+      "_HIDING_TYPE_HIDE_LEGEND\020\001\022!\n\035LINE_HIDIN" +
+      "G_TYPE_HIDE_TOOLTIP\020\002\022$\n LINE_HIDING_TYP" +
+      "E_HIDE_EVERYWHERE\020\003\032\002\030\001J\004\010\t\020\n\"b\n\rYaxisPo" +
+      "sition\022\036\n\032YAXIS_POSITION_UNSPECIFIED\020\000\022\027" +
+      "\n\023YAXIS_POSITION_LEFT\020\001\022\030\n\024YAXIS_POSITIO" +
+      "N_RIGHT\020\002\"\331\001\n\027SeriesVisualizationType\022)\n" +
+      "%SERIES_VISUALIZATION_TYPE_UNSPECIFIED\020\000" +
+      "\022\"\n\036SERIES_VISUALIZATION_TYPE_LINE\020\001\022#\n\037" +
+      "SERIES_VISUALIZATION_TYPE_STACK\020\002\022$\n SER" +
+      "IES_VISUALIZATION_TYPE_COLUMN\020\003\022$\n SERIE" +
+      "S_VISUALIZATION_TYPE_POINTS\020\004B\006\n\004type\032\266\002" +
+      "\n\017OverrideMatcher\022E\n\005query\030\001 \001(\01324.yande" +
+      "x.cloud.monitoring.v3.ChartWidget.QueryM" +
+      "atcherH\000\022C\n\004line\030\002 \001(\01323.yandex.cloud.mo" +
+      "nitoring.v3.ChartWidget.LineMatcherH\000\022G\n" +
+      "\006regexp\030\003 \001(\01325.yandex.cloud.monitoring." +
+      "v3.ChartWidget.RegExpMatcherH\000\022F\n\006values" +
+      "\030\004 \001(\01324.yandex.cloud.monitoring.v3.Char" +
+      "tWidget.ValueMatcherH\000B\006\n\004type\032\035\n\014QueryM" +
+      "atcher\022\r\n\005names\030\001 \003(\t\032\037\n\013LineMatcher\022\020\n\010" +
+      "line_ids\030\001 \003(\t\032 \n\rRegExpMatcher\022\017\n\007reg_e" +
+      "xp\030\001 \001(\t\032V\n\014ValueMatcher\022F\n\nvalue_type\030\001" +
+      " \001(\01622.yandex.cloud.monitoring.v3.ChartW" +
+      "idget.ValuesType\0325\n\022NameHidingSettings\022\020" +
+      "\n\010positive\030\001 \001(\010\022\r\n\005names\030\002 \003(\t\032>\n\016Repea" +
+      "tSettings\022\021\n\trepeat_by\030\001 \003(\t\022\031\n\021max_char" +
+      "ts_in_row\030\002 \001(\003\"^\n\nValuesType\022\033\n\027VALUES_" +
+      "TYPE_UNSPECIFIED\020\000\022\031\n\025VALUES_TYPE_ALL_ZE" +
+      "ROS\020\001\022\030\n\024VALUES_TYPE_ALL_NULL\020\002\"\231\001\n\016Free" +
+      "zeDuration\022\037\n\033FREEZE_DURATION_UNSPECIFIE" +
+      "D\020\000\022\030\n\024FREEZE_DURATION_HOUR\020\001\022\027\n\023FREEZE_" +
+      "DURATION_DAY\020\002\022\030\n\024FREEZE_DURATION_WEEK\020\003" +
+      "\022\031\n\025FREEZE_DURATION_MONTH\020\004Bk\n\036yandex.cl" +
+      "oud.api.monitoring.v3ZIgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/monitori" +
+      "ng/v3;monitoringb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.monitoring.v3.DownsamplingOuterClass.getDescriptor(),
+          yandex.cloud.api.monitoring.v3.SortOrderOuterClass.getDescriptor(),
           yandex.cloud.api.monitoring.v3.UnitFormatOuterClass.getDescriptor(),
           yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.getDescriptor(),
         });
@@ -26973,7 +29788,7 @@ public final class ChartWidgetOuterClass {
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_descriptor,
-        new java.lang.String[] { "Type", "Normalize", "Interpolate", "Aggregation", "ColorSchemeSettings", "HeatmapSettings", "YaxisSettings", "Title", "ShowLabels", });
+        new java.lang.String[] { "Type", "Normalize", "Interpolate", "Aggregation", "ColorSchemeSettings", "HeatmapSettings", "YaxisSettings", "Title", "ShowLabels", "TilesSettings", });
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_ColorSchemeSettings_descriptor =
       internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_ColorSchemeSettings_fieldAccessorTable = new
@@ -27034,6 +29849,12 @@ public final class ChartWidgetOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_YaxisSettings_descriptor,
         new java.lang.String[] { "Left", "Right", });
+    internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_TilesSettings_descriptor =
+      internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_descriptor.getNestedTypes().get(4);
+    internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_TilesSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_TilesSettings_descriptor,
+        new java.lang.String[] { "SortOrder", "SortField", "ShowTitle", "ShowValue", "ShowSparkline", });
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_SeriesOverrides_descriptor =
       internal_static_yandex_cloud_monitoring_v3_ChartWidget_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_SeriesOverrides_fieldAccessorTable = new
@@ -27045,7 +29866,7 @@ public final class ChartWidgetOuterClass {
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_SeriesOverrides_SeriesOverrideSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_ChartWidget_SeriesOverrides_SeriesOverrideSettings_descriptor,
-        new java.lang.String[] { "Name", "Color", "Type", "StackName", "GrowDown", "YaxisPosition", "LineWidth", "LineStyle", });
+        new java.lang.String[] { "Name", "Color", "Type", "StackName", "GrowDown", "YaxisPosition", "LineWidth", "LineStyle", "LineHidingType", "LineHidingInLegend", "LineHidingInTooltip", "LineHidingInChart", });
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_OverrideMatcher_descriptor =
       internal_static_yandex_cloud_monitoring_v3_ChartWidget_descriptor.getNestedTypes().get(3);
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_OverrideMatcher_fieldAccessorTable = new
@@ -27090,6 +29911,7 @@ public final class ChartWidgetOuterClass {
         new java.lang.String[] { "RepeatBy", "MaxChartsInRow", });
     com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.monitoring.v3.DownsamplingOuterClass.getDescriptor();
+    yandex.cloud.api.monitoring.v3.SortOrderOuterClass.getDescriptor();
     yandex.cloud.api.monitoring.v3.UnitFormatOuterClass.getDescriptor();
     yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.getDescriptor();
   }

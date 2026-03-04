@@ -24,7 +24,7 @@ public final class LagAllocationSettingsOuterClass {
      * Must be from 1 to 10 inclusively.
      * </pre>
      *
-     * <code>int64 lag_size = 13;</code>
+     * <code>int64 lag_size = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1-10"];</code>
      * @return Whether the lagSize field is set.
      */
     boolean hasLagSize();
@@ -34,7 +34,7 @@ public final class LagAllocationSettingsOuterClass {
      * Must be from 1 to 10 inclusively.
      * </pre>
      *
-     * <code>int64 lag_size = 13;</code>
+     * <code>int64 lag_size = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1-10"];</code>
      * @return The lagSize.
      */
     long getLagSize();
@@ -173,7 +173,7 @@ public final class LagAllocationSettingsOuterClass {
      * Must be from 1 to 10 inclusively.
      * </pre>
      *
-     * <code>int64 lag_size = 13;</code>
+     * <code>int64 lag_size = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1-10"];</code>
      * @return Whether the lagSize field is set.
      */
     @java.lang.Override
@@ -186,7 +186,7 @@ public final class LagAllocationSettingsOuterClass {
      * Must be from 1 to 10 inclusively.
      * </pre>
      *
-     * <code>int64 lag_size = 13;</code>
+     * <code>int64 lag_size = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1-10"];</code>
      * @return The lagSize.
      */
     @java.lang.Override
@@ -549,7 +549,7 @@ public final class LagAllocationSettingsOuterClass {
        * Must be from 1 to 10 inclusively.
        * </pre>
        *
-       * <code>int64 lag_size = 13;</code>
+       * <code>int64 lag_size = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1-10"];</code>
        * @return Whether the lagSize field is set.
        */
       public boolean hasLagSize() {
@@ -561,7 +561,7 @@ public final class LagAllocationSettingsOuterClass {
        * Must be from 1 to 10 inclusively.
        * </pre>
        *
-       * <code>int64 lag_size = 13;</code>
+       * <code>int64 lag_size = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1-10"];</code>
        * @return The lagSize.
        */
       public long getLagSize() {
@@ -576,7 +576,7 @@ public final class LagAllocationSettingsOuterClass {
        * Must be from 1 to 10 inclusively.
        * </pre>
        *
-       * <code>int64 lag_size = 13;</code>
+       * <code>int64 lag_size = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1-10"];</code>
        * @param value The lagSize to set.
        * @return This builder for chaining.
        */
@@ -592,7 +592,7 @@ public final class LagAllocationSettingsOuterClass {
        * Must be from 1 to 10 inclusively.
        * </pre>
        *
-       * <code>int64 lag_size = 13;</code>
+       * <code>int64 lag_size = 13 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1-10"];</code>
        * @return This builder for chaining.
        */
       public Builder clearLagSize() {
@@ -1367,18 +1367,20 @@ public final class LagAllocationSettingsOuterClass {
       "\n8yandex/cloud/cic/v1/common/lag_allocat" +
       "ion_settings.proto\022\032yandex.cloud.cic.v1." +
       "common\032)yandex/cloud/cic/v1/common/lag_i" +
-      "nfo.proto\"?\n\034LagAllocationSettingsReques" +
-      "t\022\022\n\010lag_size\030\r \001(\003H\000B\005\n\003lagJ\004\010\016\020\017\"N\n\025La" +
-      "gAllocationSettings\0225\n\010lag_info\030\016 \001(\0132#." +
-      "yandex.cloud.cic.v1.common.LagInfoBd\n\036ya" +
-      "ndex.cloud.api.cic.v1.commonZBgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/c" +
-      "ic/v1/common;cicb\006proto3"
+      "nfo.proto\032\035yandex/cloud/validation.proto" +
+      "\"M\n\034LagAllocationSettingsRequest\022 \n\010lag_" +
+      "size\030\r \001(\003B\014\350\3071\001\372\3071\0041-10H\000B\005\n\003lagJ\004\010\016\020\017\"" +
+      "N\n\025LagAllocationSettings\0225\n\010lag_info\030\016 \001" +
+      "(\0132#.yandex.cloud.cic.v1.common.LagInfoB" +
+      "d\n\036yandex.cloud.api.cic.v1.commonZBgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/cic/v1/common;cicb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.cic.v1.common.LagInfoOuterClass.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_cic_v1_common_LagAllocationSettingsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1392,7 +1394,14 @@ public final class LagAllocationSettingsOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cic_v1_common_LagAllocationSettings_descriptor,
         new java.lang.String[] { "LagInfo", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.value);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     yandex.cloud.api.cic.v1.common.LagInfoOuterClass.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

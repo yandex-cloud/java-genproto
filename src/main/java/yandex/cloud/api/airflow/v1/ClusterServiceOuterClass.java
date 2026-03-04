@@ -19824,132 +19824,152 @@ public final class ClusterServiceOuterClass {
       "\n-yandex/cloud/airflow/v1/cluster_servic" +
       "e.proto\022\027yandex.cloud.airflow.v1\032\034google" +
       "/api/annotations.proto\032 google/protobuf/" +
-      "field_mask.proto\032%yandex/cloud/airflow/v" +
-      "1/cluster.proto\032)yandex/cloud/airflow/v1" +
-      "/maintenance.proto\032&yandex/cloud/operati" +
-      "on/operation.proto\032\035yandex/cloud/validat" +
-      "ion.proto\032 yandex/cloud/api/operation.pr" +
-      "oto\"5\n\021GetClusterRequest\022 \n\ncluster_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\"\220\001\n\023ListClustersReque" +
-      "st\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tp" +
-      "age_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token" +
-      "\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<" +
-      "=1000\"c\n\024ListClustersResponse\0222\n\010cluster" +
-      "s\030\001 \003(\0132 .yandex.cloud.airflow.v1.Cluste" +
-      "r\022\027\n\017next_page_token\030\002 \001(\t\"\345\005\n\024CreateClu" +
-      "sterRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-z" +
-      "A-Z0-9_-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=2" +
-      "56\022\212\001\n\006labels\030\004 \003(\01329.yandex.cloud.airfl" +
-      "ow.v1.CreateClusterRequest.LabelsEntryB?" +
-      "\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=6" +
-      "3\262\3101\022\022\020[a-z][-_0-9a-z]*\022<\n\006config\030\006 \001(\0132" +
-      "&.yandex.cloud.airflow.v1.ClusterConfigB" +
-      "\004\350\3071\001\0227\n\007network\030\007 \001(\0132&.yandex.cloud.ai" +
-      "rflow.v1.NetworkConfig\022:\n\tcode_sync\030\010 \001(" +
-      "\0132\'.yandex.cloud.airflow.v1.CodeSyncConf" +
-      "ig\022\033\n\023deletion_protection\030\t \001(\010\022$\n\022servi" +
-      "ce_account_id\030\n \001(\tB\010\212\3101\004<=50\0227\n\007logging" +
-      "\030\013 \001(\0132&.yandex.cloud.airflow.v1.Logging" +
-      "Config\022%\n\016admin_password\030\014 \001(\tB\r\350\3071\001\212\3101\005" +
-      "8-128\022F\n\022maintenance_window\030\r \001(\0132*.yand" +
+      "field_mask.proto\032 yandex/cloud/access/ac" +
+      "cess.proto\032%yandex/cloud/airflow/v1/clus" +
+      "ter.proto\032)yandex/cloud/airflow/v1/maint" +
+      "enance.proto\032&yandex/cloud/operation/ope" +
+      "ration.proto\032\035yandex/cloud/validation.pr" +
+      "oto\032 yandex/cloud/api/operation.proto\"5\n" +
+      "\021GetClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\"\220\001\n\023ListClustersRequest\022\037\n\t" +
+      "folder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_si" +
+      "ze\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\t" +
+      "B\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"" +
+      "c\n\024ListClustersResponse\0222\n\010clusters\030\001 \003(" +
+      "\0132 .yandex.cloud.airflow.v1.Cluster\022\027\n\017n" +
+      "ext_page_token\030\002 \001(\t\"\345\005\n\024CreateClusterRe" +
+      "quest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022," +
+      "\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9" +
+      "_-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\212\001\n" +
+      "\006labels\030\004 \003(\01329.yandex.cloud.airflow.v1." +
+      "CreateClusterRequest.LabelsEntryB?\202\3101\004<=" +
+      "64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022" +
+      "\020[a-z][-_0-9a-z]*\022<\n\006config\030\006 \001(\0132&.yand" +
+      "ex.cloud.airflow.v1.ClusterConfigB\004\350\3071\001\022" +
+      "7\n\007network\030\007 \001(\0132&.yandex.cloud.airflow." +
+      "v1.NetworkConfig\022:\n\tcode_sync\030\010 \001(\0132\'.ya" +
+      "ndex.cloud.airflow.v1.CodeSyncConfig\022\033\n\023" +
+      "deletion_protection\030\t \001(\010\022$\n\022service_acc" +
+      "ount_id\030\n \001(\tB\010\212\3101\004<=50\0227\n\007logging\030\013 \001(\013" +
+      "2&.yandex.cloud.airflow.v1.LoggingConfig" +
+      "\022%\n\016admin_password\030\014 \001(\tB\r\350\3071\001\212\3101\0058-128\022" +
+      "F\n\022maintenance_window\030\r \001(\0132*.yandex.clo" +
+      "ud.airflow.v1.MaintenanceWindow\032-\n\013Label" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004" +
+      "\010\005\020\006\"+\n\025CreateClusterMetadata\022\022\n\ncluster" +
+      "_id\030\001 \001(\t\"\261\004\n\027UpdateClusterConfigSpec\0227\n" +
+      "\007airflow\030\002 \001(\0132&.yandex.cloud.airflow.v1" +
+      ".AirflowConfig\022;\n\twebserver\030\003 \001(\0132(.yand" +
+      "ex.cloud.airflow.v1.WebserverConfig\022;\n\ts" +
+      "cheduler\030\004 \001(\0132(.yandex.cloud.airflow.v1" +
+      ".SchedulerConfig\022;\n\ttriggerer\030\005 \001(\0132(.ya" +
+      "ndex.cloud.airflow.v1.TriggererConfig\0225\n" +
+      "\006worker\030\006 \001(\0132%.yandex.cloud.airflow.v1." +
+      "WorkerConfig\022;\n\014dependencies\030\007 \001(\0132%.yan" +
+      "dex.cloud.airflow.v1.Dependencies\0227\n\007loc" +
+      "kbox\030\010 \001(\0132&.yandex.cloud.airflow.v1.Loc" +
+      "kboxConfig\022\027\n\017airflow_version\030\t \001(\t\022\026\n\016p" +
+      "ython_version\030\n \001(\t\022B\n\rdag_processor\030\013 \001" +
+      "(\0132+.yandex.cloud.airflow.v1.DagProcesso" +
+      "rConfigJ\004\010\001\020\002\"5\n\027UpdateNetworkConfigSpec" +
+      "\022\032\n\022security_group_ids\030\001 \003(\t\"\205\006\n\024UpdateC" +
+      "lusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.pr" +
+      "otobuf.FieldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-" +
+      "z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013description" +
+      "\030\004 \001(\tB\t\212\3101\005<=256\022\212\001\n\006labels\030\005 \003(\01329.yan" +
+      "dex.cloud.airflow.v1.UpdateClusterReques" +
+      "t.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-" +
+      "9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022E" +
+      "\n\013config_spec\030\006 \001(\01320.yandex.cloud.airfl" +
+      "ow.v1.UpdateClusterConfigSpec\022:\n\tcode_sy" +
+      "nc\030\007 \001(\0132\'.yandex.cloud.airflow.v1.CodeS" +
+      "yncConfig\022F\n\014network_spec\030\010 \001(\01320.yandex" +
+      ".cloud.airflow.v1.UpdateNetworkConfigSpe" +
+      "c\022\033\n\023deletion_protection\030\t \001(\010\022$\n\022servic" +
+      "e_account_id\030\n \001(\tB\010\212\3101\004<=50\0227\n\007logging\030" +
+      "\013 \001(\0132&.yandex.cloud.airflow.v1.LoggingC" +
+      "onfig\022F\n\022maintenance_window\030\014 \001(\0132*.yand" +
       "ex.cloud.airflow.v1.MaintenanceWindow\032-\n" +
       "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001J\004\010\005\020\006\"+\n\025CreateClusterMetadata\022\022\n\nc" +
-      "luster_id\030\001 \001(\t\"\261\004\n\027UpdateClusterConfigS" +
-      "pec\0227\n\007airflow\030\002 \001(\0132&.yandex.cloud.airf" +
-      "low.v1.AirflowConfig\022;\n\twebserver\030\003 \001(\0132" +
-      "(.yandex.cloud.airflow.v1.WebserverConfi" +
-      "g\022;\n\tscheduler\030\004 \001(\0132(.yandex.cloud.airf" +
-      "low.v1.SchedulerConfig\022;\n\ttriggerer\030\005 \001(" +
-      "\0132(.yandex.cloud.airflow.v1.TriggererCon" +
-      "fig\0225\n\006worker\030\006 \001(\0132%.yandex.cloud.airfl" +
-      "ow.v1.WorkerConfig\022;\n\014dependencies\030\007 \001(\013" +
-      "2%.yandex.cloud.airflow.v1.Dependencies\022" +
-      "7\n\007lockbox\030\010 \001(\0132&.yandex.cloud.airflow." +
-      "v1.LockboxConfig\022\027\n\017airflow_version\030\t \001(" +
-      "\t\022\026\n\016python_version\030\n \001(\t\022B\n\rdag_process" +
-      "or\030\013 \001(\0132+.yandex.cloud.airflow.v1.DagPr" +
-      "ocessorConfigJ\004\010\001\020\002\"5\n\027UpdateNetworkConf" +
-      "igSpec\022\032\n\022security_group_ids\030\001 \003(\t\"\205\006\n\024U" +
-      "pdateClusterRequest\022 \n\ncluster_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.goo" +
-      "gle.protobuf.FieldMask\022/\n\004name\030\003 \001(\tB!\362\307" +
-      "1\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013descr" +
-      "iption\030\004 \001(\tB\t\212\3101\005<=256\022\212\001\n\006labels\030\005 \003(\013" +
-      "29.yandex.cloud.airflow.v1.UpdateCluster" +
-      "Request.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071" +
-      "\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a" +
-      "-z]*\022E\n\013config_spec\030\006 \001(\01320.yandex.cloud" +
-      ".airflow.v1.UpdateClusterConfigSpec\022:\n\tc" +
-      "ode_sync\030\007 \001(\0132\'.yandex.cloud.airflow.v1" +
-      ".CodeSyncConfig\022F\n\014network_spec\030\010 \001(\01320." +
-      "yandex.cloud.airflow.v1.UpdateNetworkCon" +
-      "figSpec\022\033\n\023deletion_protection\030\t \001(\010\022$\n\022" +
-      "service_account_id\030\n \001(\tB\010\212\3101\004<=50\0227\n\007lo" +
-      "gging\030\013 \001(\0132&.yandex.cloud.airflow.v1.Lo" +
-      "ggingConfig\022F\n\022maintenance_window\030\014 \001(\0132" +
-      "*.yandex.cloud.airflow.v1.MaintenanceWin" +
-      "dow\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMetadata\022\022\n\nc" +
-      "luster_id\030\001 \001(\t\"8\n\024DeleteClusterRequest\022" +
-      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025Del" +
-      "eteClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"7" +
-      "\n\023StartClusterRequest\022 \n\ncluster_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterMetadata\022" +
-      "\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopClusterReques" +
-      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023S" +
-      "topClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"~" +
-      "\n\034ListClusterOperationsRequest\022 \n\ncluste" +
-      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
-      "\001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
-      "\005<=100\"o\n\035ListClusterOperationsResponse\022" +
-      "5\n\noperations\030\001 \003(\0132!.yandex.cloud.opera" +
-      "tion.Operation\022\027\n\017next_page_token\030\002 \001(\t2" +
-      "\362\n\n\016ClusterService\022\206\001\n\003Get\022*.yandex.clou" +
-      "d.airflow.v1.GetClusterRequest\032 .yandex." +
-      "cloud.airflow.v1.Cluster\"1\202\323\344\223\002+\022)/manag" +
-      "ed-airflow/v1/clusters/{cluster_id}\022\211\001\n\004" +
-      "List\022,.yandex.cloud.airflow.v1.ListClust" +
-      "ersRequest\032-.yandex.cloud.airflow.v1.Lis" +
-      "tClustersResponse\"$\202\323\344\223\002\036\022\034/managed-airf" +
-      "low/v1/clusters\022\247\001\n\006Create\022-.yandex.clou" +
-      "d.airflow.v1.CreateClusterRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"K\202\323\344\223\002!\"\034/m" +
-      "anaged-airflow/v1/clusters:\001*\262\322* \n\025Creat" +
-      "eClusterMetadata\022\007Cluster\022\264\001\n\006Update\022-.y" +
-      "andex.cloud.airflow.v1.UpdateClusterRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"X" +
-      "\202\323\344\223\002.2)/managed-airflow/v1/clusters/{cl" +
-      "uster_id}:\001*\262\322* \n\025UpdateClusterMetadata\022" +
-      "\007Cluster\022\277\001\n\006Delete\022-.yandex.cloud.airfl" +
-      "ow.v1.DeleteClusterRequest\032!.yandex.clou" +
-      "d.operation.Operation\"c\202\323\344\223\002+*)/managed-" +
-      "airflow/v1/clusters/{cluster_id}\262\322*.\n\025De" +
-      "leteClusterMetadata\022\025google.protobuf.Emp" +
-      "ty\022\264\001\n\005Start\022,.yandex.cloud.airflow.v1.S" +
-      "tartClusterRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"Z\202\323\344\223\0021\"//managed-airflow/" +
-      "v1/clusters/{cluster_id}:start\262\322*\037\n\024Star" +
-      "tClusterMetadata\022\007Cluster\022\260\001\n\004Stop\022+.yan" +
-      "dex.cloud.airflow.v1.StopClusterRequest\032" +
-      "!.yandex.cloud.operation.Operation\"X\202\323\344\223" +
-      "\0020\"./managed-airflow/v1/clusters/{cluste" +
-      "r_id}:stop\262\322*\036\n\023StopClusterMetadata\022\007Clu" +
-      "ster\022\275\001\n\016ListOperations\0225.yandex.cloud.a" +
-      "irflow.v1.ListClusterOperationsRequest\0326" +
-      ".yandex.cloud.airflow.v1.ListClusterOper" +
-      "ationsResponse\"<\202\323\344\223\0026\0224/managed-airflow" +
-      "/v1/clusters/{cluster_id}/operationsBb\n\033" +
-      "yandex.cloud.api.airflow.v1ZCgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/ai" +
-      "rflow/v1;airflowb\006proto3"
+      ":\0028\001\"+\n\025UpdateClusterMetadata\022\022\n\ncluster" +
+      "_id\030\001 \001(\t\"8\n\024DeleteClusterRequest\022 \n\nclu" +
+      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteClu" +
+      "sterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"7\n\023Star" +
+      "tClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\"*\n\024StartClusterMetadata\022\022\n\nclu" +
+      "ster_id\030\001 \001(\t\"6\n\022StopClusterRequest\022 \n\nc" +
+      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopClu" +
+      "sterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"~\n\034List" +
+      "ClusterOperationsRequest\022 \n\ncluster_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
+      "\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
+      "\"o\n\035ListClusterOperationsResponse\0225\n\nope" +
+      "rations\030\001 \003(\0132!.yandex.cloud.operation.O" +
+      "peration\022\027\n\017next_page_token\030\002 \001(\t2\271\020\n\016Cl" +
+      "usterService\022\206\001\n\003Get\022*.yandex.cloud.airf" +
+      "low.v1.GetClusterRequest\032 .yandex.cloud." +
+      "airflow.v1.Cluster\"1\202\323\344\223\002+\022)/managed-air" +
+      "flow/v1/clusters/{cluster_id}\022\211\001\n\004List\022," +
+      ".yandex.cloud.airflow.v1.ListClustersReq" +
+      "uest\032-.yandex.cloud.airflow.v1.ListClust" +
+      "ersResponse\"$\202\323\344\223\002\036\022\034/managed-airflow/v1" +
+      "/clusters\022\247\001\n\006Create\022-.yandex.cloud.airf" +
+      "low.v1.CreateClusterRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"K\202\323\344\223\002!\"\034/managed" +
+      "-airflow/v1/clusters:\001*\262\322* \n\025CreateClust" +
+      "erMetadata\022\007Cluster\022\264\001\n\006Update\022-.yandex." +
+      "cloud.airflow.v1.UpdateClusterRequest\032!." +
+      "yandex.cloud.operation.Operation\"X\202\323\344\223\002." +
+      "2)/managed-airflow/v1/clusters/{cluster_" +
+      "id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Clust" +
+      "er\022\277\001\n\006Delete\022-.yandex.cloud.airflow.v1." +
+      "DeleteClusterRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"c\202\323\344\223\002+*)/managed-airflo" +
+      "w/v1/clusters/{cluster_id}\262\322*.\n\025DeleteCl" +
+      "usterMetadata\022\025google.protobuf.Empty\022\264\001\n" +
+      "\005Start\022,.yandex.cloud.airflow.v1.StartCl" +
+      "usterRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"Z\202\323\344\223\0021\"//managed-airflow/v1/clu" +
+      "sters/{cluster_id}:start\262\322*\037\n\024StartClust" +
+      "erMetadata\022\007Cluster\022\260\001\n\004Stop\022+.yandex.cl" +
+      "oud.airflow.v1.StopClusterRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"X\202\323\344\223\0020\"./m" +
+      "anaged-airflow/v1/clusters/{cluster_id}:" +
+      "stop\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\275" +
+      "\001\n\016ListOperations\0225.yandex.cloud.airflow" +
+      ".v1.ListClusterOperationsRequest\0326.yande" +
+      "x.cloud.airflow.v1.ListClusterOperations" +
+      "Response\"<\202\323\344\223\0026\0224/managed-airflow/v1/cl" +
+      "usters/{cluster_id}/operations\022\274\001\n\022ListA" +
+      "ccessBindings\022..yandex.cloud.access.List" +
+      "AccessBindingsRequest\032/.yandex.cloud.acc" +
+      "ess.ListAccessBindingsResponse\"E\202\323\344\223\002?\022=" +
+      "/managed-airflow/v1/clusters/{resource_i" +
+      "d}:listAccessBindings\022\373\001\n\021SetAccessBindi" +
+      "ngs\022-.yandex.cloud.access.SetAccessBindi" +
+      "ngsRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"\223\001\202\323\344\223\002A\"</managed-airflow/v1/clus" +
+      "ters/{resource_id}:setAccessBindings:\001*\262" +
+      "\322*H\n access.SetAccessBindingsMetadata\022$a" +
+      "ccess.AccessBindingsOperationResult\022\207\002\n\024" +
+      "UpdateAccessBindings\0220.yandex.cloud.acce" +
+      "ss.UpdateAccessBindingsRequest\032!.yandex." +
+      "cloud.operation.Operation\"\231\001\202\323\344\223\002D2?/man" +
+      "aged-airflow/v1/clusters/{resource_id}:u" +
+      "pdateAccessBindings:\001*\262\322*K\n#access.Updat" +
+      "eAccessBindingsMetadata\022$access.AccessBi" +
+      "ndingsOperationResultBb\n\033yandex.cloud.ap" +
+      "i.airflow.v1ZCgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/airflow/v1;airflo" +
+      "wb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.airflow.v1.ClusterOuterClass.getDescriptor(),
           yandex.cloud.api.airflow.v1.Maintenance.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
@@ -20084,6 +20104,7 @@ public final class ClusterServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.airflow.v1.ClusterOuterClass.getDescriptor();
     yandex.cloud.api.airflow.v1.Maintenance.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();

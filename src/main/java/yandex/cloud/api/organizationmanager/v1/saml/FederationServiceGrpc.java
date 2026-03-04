@@ -452,6 +452,68 @@ public final class FederationServiceGrpc {
     return getDeleteDomainMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.SuspendFederatedUserAccountsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSuspendUserAccountsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SuspendUserAccounts",
+      requestType = yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.SuspendFederatedUserAccountsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.SuspendFederatedUserAccountsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSuspendUserAccountsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.SuspendFederatedUserAccountsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getSuspendUserAccountsMethod;
+    if ((getSuspendUserAccountsMethod = FederationServiceGrpc.getSuspendUserAccountsMethod) == null) {
+      synchronized (FederationServiceGrpc.class) {
+        if ((getSuspendUserAccountsMethod = FederationServiceGrpc.getSuspendUserAccountsMethod) == null) {
+          FederationServiceGrpc.getSuspendUserAccountsMethod = getSuspendUserAccountsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.SuspendFederatedUserAccountsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SuspendUserAccounts"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.SuspendFederatedUserAccountsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("SuspendUserAccounts"))
+              .build();
+        }
+      }
+    }
+    return getSuspendUserAccountsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ReactivateFederatedUserAccountsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getReactivateUserAccountsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ReactivateUserAccounts",
+      requestType = yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ReactivateFederatedUserAccountsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ReactivateFederatedUserAccountsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getReactivateUserAccountsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ReactivateFederatedUserAccountsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getReactivateUserAccountsMethod;
+    if ((getReactivateUserAccountsMethod = FederationServiceGrpc.getReactivateUserAccountsMethod) == null) {
+      synchronized (FederationServiceGrpc.class) {
+        if ((getReactivateUserAccountsMethod = FederationServiceGrpc.getReactivateUserAccountsMethod) == null) {
+          FederationServiceGrpc.getReactivateUserAccountsMethod = getReactivateUserAccountsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ReactivateFederatedUserAccountsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ReactivateUserAccounts"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ReactivateFederatedUserAccountsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("ReactivateUserAccounts"))
+              .build();
+        }
+      }
+    }
+    return getReactivateUserAccountsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -645,6 +707,28 @@ public final class FederationServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteDomainMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Suspend federated user accounts.
+     * Method skips non-existent federated user accounts and returns ones that were actually suspended.
+     * </pre>
+     */
+    public void suspendUserAccounts(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.SuspendFederatedUserAccountsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSuspendUserAccountsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Reactivate federated user accounts.
+     * Method skips non-existent federated user accounts and returns ones that were actually reactivated.
+     * </pre>
+     */
+    public void reactivateUserAccounts(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ReactivateFederatedUserAccountsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReactivateUserAccountsMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -745,6 +829,20 @@ public final class FederationServiceGrpc {
                 yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE_DOMAIN)))
+          .addMethod(
+            getSuspendUserAccountsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.SuspendFederatedUserAccountsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_SUSPEND_USER_ACCOUNTS)))
+          .addMethod(
+            getReactivateUserAccountsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ReactivateFederatedUserAccountsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_REACTIVATE_USER_ACCOUNTS)))
           .build();
     }
   }
@@ -921,6 +1019,30 @@ public final class FederationServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteDomainMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Suspend federated user accounts.
+     * Method skips non-existent federated user accounts and returns ones that were actually suspended.
+     * </pre>
+     */
+    public void suspendUserAccounts(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.SuspendFederatedUserAccountsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSuspendUserAccountsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Reactivate federated user accounts.
+     * Method skips non-existent federated user accounts and returns ones that were actually reactivated.
+     * </pre>
+     */
+    public void reactivateUserAccounts(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ReactivateFederatedUserAccountsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getReactivateUserAccountsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1080,6 +1202,28 @@ public final class FederationServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation deleteDomain(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteDomainMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Suspend federated user accounts.
+     * Method skips non-existent federated user accounts and returns ones that were actually suspended.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation suspendUserAccounts(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.SuspendFederatedUserAccountsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSuspendUserAccountsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Reactivate federated user accounts.
+     * Method skips non-existent federated user accounts and returns ones that were actually reactivated.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation reactivateUserAccounts(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ReactivateFederatedUserAccountsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getReactivateUserAccountsMethod(), getCallOptions(), request);
     }
   }
 
@@ -1255,6 +1399,30 @@ public final class FederationServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteDomainMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Suspend federated user accounts.
+     * Method skips non-existent federated user accounts and returns ones that were actually suspended.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> suspendUserAccounts(
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.SuspendFederatedUserAccountsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSuspendUserAccountsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Reactivate federated user accounts.
+     * Method skips non-existent federated user accounts and returns ones that were actually reactivated.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> reactivateUserAccounts(
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ReactivateFederatedUserAccountsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getReactivateUserAccountsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -1271,6 +1439,8 @@ public final class FederationServiceGrpc {
   private static final int METHODID_ADD_DOMAIN = 11;
   private static final int METHODID_VALIDATE_DOMAIN = 12;
   private static final int METHODID_DELETE_DOMAIN = 13;
+  private static final int METHODID_SUSPEND_USER_ACCOUNTS = 14;
+  private static final int METHODID_REACTIVATE_USER_ACCOUNTS = 15;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1343,6 +1513,14 @@ public final class FederationServiceGrpc {
           break;
         case METHODID_DELETE_DOMAIN:
           serviceImpl.deleteDomain((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederationDomainRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_SUSPEND_USER_ACCOUNTS:
+          serviceImpl.suspendUserAccounts((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.SuspendFederatedUserAccountsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_REACTIVATE_USER_ACCOUNTS:
+          serviceImpl.reactivateUserAccounts((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ReactivateFederatedUserAccountsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
@@ -1420,6 +1598,8 @@ public final class FederationServiceGrpc {
               .addMethod(getAddDomainMethod())
               .addMethod(getValidateDomainMethod())
               .addMethod(getDeleteDomainMethod())
+              .addMethod(getSuspendUserAccountsMethod())
+              .addMethod(getReactivateUserAccountsMethod())
               .build();
         }
       }

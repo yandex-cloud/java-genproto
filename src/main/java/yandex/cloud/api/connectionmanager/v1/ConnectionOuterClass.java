@@ -15,101 +15,209 @@ public final class ConnectionOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
+   * <pre>
+   * Database or service type enumeration.
+   * </pre>
+   *
    * Protobuf enum {@code yandex.cloud.connectionmanager.v1.DBType}
    */
   public enum DBType
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     * <pre>
+     * Unspecified database type.
+     * </pre>
+     *
      * <code>DB_TYPE_UNSPECIFIED = 0;</code>
      */
     DB_TYPE_UNSPECIFIED(0),
     /**
+     * <pre>
+     * PostgreSQL database.
+     * </pre>
+     *
      * <code>POSTGRESQL = 1;</code>
      */
     POSTGRESQL(1),
     /**
+     * <pre>
+     * MySQL database.
+     * </pre>
+     *
      * <code>MYSQL = 2;</code>
      */
     MYSQL(2),
     /**
+     * <pre>
+     * ClickHouse database.
+     * </pre>
+     *
      * <code>CLICKHOUSE = 3;</code>
      */
     CLICKHOUSE(3),
     /**
+     * <pre>
+     * MongoDB database.
+     * </pre>
+     *
      * <code>MONGODB = 4;</code>
      */
     MONGODB(4),
     /**
+     * <pre>
+     * Apache Kafka message broker.
+     * </pre>
+     *
      * <code>KAFKA = 5;</code>
      */
     KAFKA(5),
     /**
+     * <pre>
+     * Redis in-memory data store.
+     * </pre>
+     *
      * <code>REDIS = 6;</code>
      */
     REDIS(6),
     /**
+     * <pre>
+     * OpenSearch search engine.
+     * </pre>
+     *
      * <code>OPENSEARCH = 7;</code>
      */
     OPENSEARCH(7),
     /**
+     * <pre>
+     * Trino distributed SQL query engine.
+     * </pre>
+     *
      * <code>TRINO = 8;</code>
      */
     TRINO(8),
     /**
+     * <pre>
+     * Valkey in-memory data store.
+     * </pre>
+     *
      * <code>VALKEY = 9;</code>
      */
     VALKEY(9),
     /**
+     * <pre>
+     * Greenplum data warehouse.
+     * </pre>
+     *
      * <code>GREENPLUM = 10;</code>
      */
     GREENPLUM(10),
+    /**
+     * <pre>
+     * StoreDoc document store.
+     * </pre>
+     *
+     * <code>STOREDOC = 11;</code>
+     */
+    STOREDOC(11),
     UNRECOGNIZED(-1),
     ;
 
     /**
+     * <pre>
+     * Unspecified database type.
+     * </pre>
+     *
      * <code>DB_TYPE_UNSPECIFIED = 0;</code>
      */
     public static final int DB_TYPE_UNSPECIFIED_VALUE = 0;
     /**
+     * <pre>
+     * PostgreSQL database.
+     * </pre>
+     *
      * <code>POSTGRESQL = 1;</code>
      */
     public static final int POSTGRESQL_VALUE = 1;
     /**
+     * <pre>
+     * MySQL database.
+     * </pre>
+     *
      * <code>MYSQL = 2;</code>
      */
     public static final int MYSQL_VALUE = 2;
     /**
+     * <pre>
+     * ClickHouse database.
+     * </pre>
+     *
      * <code>CLICKHOUSE = 3;</code>
      */
     public static final int CLICKHOUSE_VALUE = 3;
     /**
+     * <pre>
+     * MongoDB database.
+     * </pre>
+     *
      * <code>MONGODB = 4;</code>
      */
     public static final int MONGODB_VALUE = 4;
     /**
+     * <pre>
+     * Apache Kafka message broker.
+     * </pre>
+     *
      * <code>KAFKA = 5;</code>
      */
     public static final int KAFKA_VALUE = 5;
     /**
+     * <pre>
+     * Redis in-memory data store.
+     * </pre>
+     *
      * <code>REDIS = 6;</code>
      */
     public static final int REDIS_VALUE = 6;
     /**
+     * <pre>
+     * OpenSearch search engine.
+     * </pre>
+     *
      * <code>OPENSEARCH = 7;</code>
      */
     public static final int OPENSEARCH_VALUE = 7;
     /**
+     * <pre>
+     * Trino distributed SQL query engine.
+     * </pre>
+     *
      * <code>TRINO = 8;</code>
      */
     public static final int TRINO_VALUE = 8;
     /**
+     * <pre>
+     * Valkey in-memory data store.
+     * </pre>
+     *
      * <code>VALKEY = 9;</code>
      */
     public static final int VALKEY_VALUE = 9;
     /**
+     * <pre>
+     * Greenplum data warehouse.
+     * </pre>
+     *
      * <code>GREENPLUM = 10;</code>
      */
     public static final int GREENPLUM_VALUE = 10;
+    /**
+     * <pre>
+     * StoreDoc document store.
+     * </pre>
+     *
+     * <code>STOREDOC = 11;</code>
+     */
+    public static final int STOREDOC_VALUE = 11;
 
 
     public final int getNumber() {
@@ -147,6 +255,7 @@ public final class ConnectionOuterClass {
         case 8: return TRINO;
         case 9: return VALKEY;
         case 10: return GREENPLUM;
+        case 11: return STOREDOC;
         default: return null;
       }
     }
@@ -208,158 +317,309 @@ public final class ConnectionOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * PostgreSQL database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.PostgreSQLConnection postgresql = 1;</code>
      * @return Whether the postgresql field is set.
      */
     boolean hasPostgresql();
     /**
+     * <pre>
+     * PostgreSQL database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.PostgreSQLConnection postgresql = 1;</code>
      * @return The postgresql.
      */
     yandex.cloud.api.connectionmanager.v1.Postgresql.PostgreSQLConnection getPostgresql();
     /**
+     * <pre>
+     * PostgreSQL database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.PostgreSQLConnection postgresql = 1;</code>
      */
     yandex.cloud.api.connectionmanager.v1.Postgresql.PostgreSQLConnectionOrBuilder getPostgresqlOrBuilder();
 
     /**
+     * <pre>
+     * MySQL database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.MySQLConnection mysql = 2;</code>
      * @return Whether the mysql field is set.
      */
     boolean hasMysql();
     /**
+     * <pre>
+     * MySQL database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.MySQLConnection mysql = 2;</code>
      * @return The mysql.
      */
     yandex.cloud.api.connectionmanager.v1.Mysql.MySQLConnection getMysql();
     /**
+     * <pre>
+     * MySQL database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.MySQLConnection mysql = 2;</code>
      */
     yandex.cloud.api.connectionmanager.v1.Mysql.MySQLConnectionOrBuilder getMysqlOrBuilder();
 
     /**
+     * <pre>
+     * MongoDB database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.MongoDBConnection mongodb = 3;</code>
      * @return Whether the mongodb field is set.
      */
     boolean hasMongodb();
     /**
+     * <pre>
+     * MongoDB database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.MongoDBConnection mongodb = 3;</code>
      * @return The mongodb.
      */
     yandex.cloud.api.connectionmanager.v1.Mongodb.MongoDBConnection getMongodb();
     /**
+     * <pre>
+     * MongoDB database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.MongoDBConnection mongodb = 3;</code>
      */
     yandex.cloud.api.connectionmanager.v1.Mongodb.MongoDBConnectionOrBuilder getMongodbOrBuilder();
 
     /**
+     * <pre>
+     * ClickHouse database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ClickHouseConnection clickhouse = 4;</code>
      * @return Whether the clickhouse field is set.
      */
     boolean hasClickhouse();
     /**
+     * <pre>
+     * ClickHouse database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ClickHouseConnection clickhouse = 4;</code>
      * @return The clickhouse.
      */
     yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseConnection getClickhouse();
     /**
+     * <pre>
+     * ClickHouse database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ClickHouseConnection clickhouse = 4;</code>
      */
     yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseConnectionOrBuilder getClickhouseOrBuilder();
 
     /**
+     * <pre>
+     * Apache Kafka message broker connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
      * @return Whether the kafka field is set.
      */
     boolean hasKafka();
     /**
+     * <pre>
+     * Apache Kafka message broker connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
      * @return The kafka.
      */
     yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection getKafka();
     /**
+     * <pre>
+     * Apache Kafka message broker connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
      */
     yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnectionOrBuilder getKafkaOrBuilder();
 
     /**
+     * <pre>
+     * Redis in-memory data store connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.RedisConnection redis = 6;</code>
      * @return Whether the redis field is set.
      */
     boolean hasRedis();
     /**
+     * <pre>
+     * Redis in-memory data store connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.RedisConnection redis = 6;</code>
      * @return The redis.
      */
     yandex.cloud.api.connectionmanager.v1.Redis.RedisConnection getRedis();
     /**
+     * <pre>
+     * Redis in-memory data store connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.RedisConnection redis = 6;</code>
      */
     yandex.cloud.api.connectionmanager.v1.Redis.RedisConnectionOrBuilder getRedisOrBuilder();
 
     /**
+     * <pre>
+     * OpenSearch search engine connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.OpenSearchConnection opensearch = 7;</code>
      * @return Whether the opensearch field is set.
      */
     boolean hasOpensearch();
     /**
+     * <pre>
+     * OpenSearch search engine connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.OpenSearchConnection opensearch = 7;</code>
      * @return The opensearch.
      */
     yandex.cloud.api.connectionmanager.v1.Opensearch.OpenSearchConnection getOpensearch();
     /**
+     * <pre>
+     * OpenSearch search engine connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.OpenSearchConnection opensearch = 7;</code>
      */
     yandex.cloud.api.connectionmanager.v1.Opensearch.OpenSearchConnectionOrBuilder getOpensearchOrBuilder();
 
     /**
+     * <pre>
+     * Trino distributed SQL query engine connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.TrinoConnection trino = 8;</code>
      * @return Whether the trino field is set.
      */
     boolean hasTrino();
     /**
+     * <pre>
+     * Trino distributed SQL query engine connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.TrinoConnection trino = 8;</code>
      * @return The trino.
      */
     yandex.cloud.api.connectionmanager.v1.Trino.TrinoConnection getTrino();
     /**
+     * <pre>
+     * Trino distributed SQL query engine connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.TrinoConnection trino = 8;</code>
      */
     yandex.cloud.api.connectionmanager.v1.Trino.TrinoConnectionOrBuilder getTrinoOrBuilder();
 
     /**
+     * <pre>
+     * Valkey in-memory data store connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ValkeyConnection valkey = 9;</code>
      * @return Whether the valkey field is set.
      */
     boolean hasValkey();
     /**
+     * <pre>
+     * Valkey in-memory data store connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ValkeyConnection valkey = 9;</code>
      * @return The valkey.
      */
     yandex.cloud.api.connectionmanager.v1.Valkey.ValkeyConnection getValkey();
     /**
+     * <pre>
+     * Valkey in-memory data store connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ValkeyConnection valkey = 9;</code>
      */
     yandex.cloud.api.connectionmanager.v1.Valkey.ValkeyConnectionOrBuilder getValkeyOrBuilder();
 
     /**
+     * <pre>
+     * Greenplum data warehouse connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.GreenplumConnection greenplum = 10;</code>
      * @return Whether the greenplum field is set.
      */
     boolean hasGreenplum();
     /**
+     * <pre>
+     * Greenplum data warehouse connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.GreenplumConnection greenplum = 10;</code>
      * @return The greenplum.
      */
     yandex.cloud.api.connectionmanager.v1.Greenplum.GreenplumConnection getGreenplum();
     /**
+     * <pre>
+     * Greenplum data warehouse connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.GreenplumConnection greenplum = 10;</code>
      */
     yandex.cloud.api.connectionmanager.v1.Greenplum.GreenplumConnectionOrBuilder getGreenplumOrBuilder();
 
+    /**
+     * <pre>
+     * StoreDoc document store connection parameters.
+     * </pre>
+     *
+     * <code>.yandex.cloud.connectionmanager.v1.StoreDocConnection storedoc = 11;</code>
+     * @return Whether the storedoc field is set.
+     */
+    boolean hasStoredoc();
+    /**
+     * <pre>
+     * StoreDoc document store connection parameters.
+     * </pre>
+     *
+     * <code>.yandex.cloud.connectionmanager.v1.StoreDocConnection storedoc = 11;</code>
+     * @return The storedoc.
+     */
+    yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection getStoredoc();
+    /**
+     * <pre>
+     * StoreDoc document store connection parameters.
+     * </pre>
+     *
+     * <code>.yandex.cloud.connectionmanager.v1.StoreDocConnection storedoc = 11;</code>
+     */
+    yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnectionOrBuilder getStoredocOrBuilder();
+
     public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams.TypeCase getTypeCase();
   }
   /**
+   * <pre>
+   * Connection parameters for various database and service types.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.connectionmanager.v1.ConnectionParams}
    */
   public static final class ConnectionParams extends
@@ -544,6 +804,20 @@ public final class ConnectionOuterClass {
               typeCase_ = 10;
               break;
             }
+            case 90: {
+              yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection.Builder subBuilder = null;
+              if (typeCase_ == 11) {
+                subBuilder = ((yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 11;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -591,6 +865,7 @@ public final class ConnectionOuterClass {
       TRINO(8),
       VALKEY(9),
       GREENPLUM(10),
+      STOREDOC(11),
       TYPE_NOT_SET(0);
       private final int value;
       private TypeCase(int value) {
@@ -618,6 +893,7 @@ public final class ConnectionOuterClass {
           case 8: return TRINO;
           case 9: return VALKEY;
           case 10: return GREENPLUM;
+          case 11: return STOREDOC;
           case 0: return TYPE_NOT_SET;
           default: return null;
         }
@@ -635,6 +911,10 @@ public final class ConnectionOuterClass {
 
     public static final int POSTGRESQL_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * PostgreSQL database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.PostgreSQLConnection postgresql = 1;</code>
      * @return Whether the postgresql field is set.
      */
@@ -643,6 +923,10 @@ public final class ConnectionOuterClass {
       return typeCase_ == 1;
     }
     /**
+     * <pre>
+     * PostgreSQL database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.PostgreSQLConnection postgresql = 1;</code>
      * @return The postgresql.
      */
@@ -654,6 +938,10 @@ public final class ConnectionOuterClass {
       return yandex.cloud.api.connectionmanager.v1.Postgresql.PostgreSQLConnection.getDefaultInstance();
     }
     /**
+     * <pre>
+     * PostgreSQL database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.PostgreSQLConnection postgresql = 1;</code>
      */
     @java.lang.Override
@@ -666,6 +954,10 @@ public final class ConnectionOuterClass {
 
     public static final int MYSQL_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * MySQL database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.MySQLConnection mysql = 2;</code>
      * @return Whether the mysql field is set.
      */
@@ -674,6 +966,10 @@ public final class ConnectionOuterClass {
       return typeCase_ == 2;
     }
     /**
+     * <pre>
+     * MySQL database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.MySQLConnection mysql = 2;</code>
      * @return The mysql.
      */
@@ -685,6 +981,10 @@ public final class ConnectionOuterClass {
       return yandex.cloud.api.connectionmanager.v1.Mysql.MySQLConnection.getDefaultInstance();
     }
     /**
+     * <pre>
+     * MySQL database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.MySQLConnection mysql = 2;</code>
      */
     @java.lang.Override
@@ -697,6 +997,10 @@ public final class ConnectionOuterClass {
 
     public static final int MONGODB_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * MongoDB database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.MongoDBConnection mongodb = 3;</code>
      * @return Whether the mongodb field is set.
      */
@@ -705,6 +1009,10 @@ public final class ConnectionOuterClass {
       return typeCase_ == 3;
     }
     /**
+     * <pre>
+     * MongoDB database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.MongoDBConnection mongodb = 3;</code>
      * @return The mongodb.
      */
@@ -716,6 +1024,10 @@ public final class ConnectionOuterClass {
       return yandex.cloud.api.connectionmanager.v1.Mongodb.MongoDBConnection.getDefaultInstance();
     }
     /**
+     * <pre>
+     * MongoDB database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.MongoDBConnection mongodb = 3;</code>
      */
     @java.lang.Override
@@ -728,6 +1040,10 @@ public final class ConnectionOuterClass {
 
     public static final int CLICKHOUSE_FIELD_NUMBER = 4;
     /**
+     * <pre>
+     * ClickHouse database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ClickHouseConnection clickhouse = 4;</code>
      * @return Whether the clickhouse field is set.
      */
@@ -736,6 +1052,10 @@ public final class ConnectionOuterClass {
       return typeCase_ == 4;
     }
     /**
+     * <pre>
+     * ClickHouse database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ClickHouseConnection clickhouse = 4;</code>
      * @return The clickhouse.
      */
@@ -747,6 +1067,10 @@ public final class ConnectionOuterClass {
       return yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseConnection.getDefaultInstance();
     }
     /**
+     * <pre>
+     * ClickHouse database connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ClickHouseConnection clickhouse = 4;</code>
      */
     @java.lang.Override
@@ -759,6 +1083,10 @@ public final class ConnectionOuterClass {
 
     public static final int KAFKA_FIELD_NUMBER = 5;
     /**
+     * <pre>
+     * Apache Kafka message broker connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
      * @return Whether the kafka field is set.
      */
@@ -767,6 +1095,10 @@ public final class ConnectionOuterClass {
       return typeCase_ == 5;
     }
     /**
+     * <pre>
+     * Apache Kafka message broker connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
      * @return The kafka.
      */
@@ -778,6 +1110,10 @@ public final class ConnectionOuterClass {
       return yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Apache Kafka message broker connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
      */
     @java.lang.Override
@@ -790,6 +1126,10 @@ public final class ConnectionOuterClass {
 
     public static final int REDIS_FIELD_NUMBER = 6;
     /**
+     * <pre>
+     * Redis in-memory data store connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.RedisConnection redis = 6;</code>
      * @return Whether the redis field is set.
      */
@@ -798,6 +1138,10 @@ public final class ConnectionOuterClass {
       return typeCase_ == 6;
     }
     /**
+     * <pre>
+     * Redis in-memory data store connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.RedisConnection redis = 6;</code>
      * @return The redis.
      */
@@ -809,6 +1153,10 @@ public final class ConnectionOuterClass {
       return yandex.cloud.api.connectionmanager.v1.Redis.RedisConnection.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Redis in-memory data store connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.RedisConnection redis = 6;</code>
      */
     @java.lang.Override
@@ -821,6 +1169,10 @@ public final class ConnectionOuterClass {
 
     public static final int OPENSEARCH_FIELD_NUMBER = 7;
     /**
+     * <pre>
+     * OpenSearch search engine connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.OpenSearchConnection opensearch = 7;</code>
      * @return Whether the opensearch field is set.
      */
@@ -829,6 +1181,10 @@ public final class ConnectionOuterClass {
       return typeCase_ == 7;
     }
     /**
+     * <pre>
+     * OpenSearch search engine connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.OpenSearchConnection opensearch = 7;</code>
      * @return The opensearch.
      */
@@ -840,6 +1196,10 @@ public final class ConnectionOuterClass {
       return yandex.cloud.api.connectionmanager.v1.Opensearch.OpenSearchConnection.getDefaultInstance();
     }
     /**
+     * <pre>
+     * OpenSearch search engine connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.OpenSearchConnection opensearch = 7;</code>
      */
     @java.lang.Override
@@ -852,6 +1212,10 @@ public final class ConnectionOuterClass {
 
     public static final int TRINO_FIELD_NUMBER = 8;
     /**
+     * <pre>
+     * Trino distributed SQL query engine connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.TrinoConnection trino = 8;</code>
      * @return Whether the trino field is set.
      */
@@ -860,6 +1224,10 @@ public final class ConnectionOuterClass {
       return typeCase_ == 8;
     }
     /**
+     * <pre>
+     * Trino distributed SQL query engine connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.TrinoConnection trino = 8;</code>
      * @return The trino.
      */
@@ -871,6 +1239,10 @@ public final class ConnectionOuterClass {
       return yandex.cloud.api.connectionmanager.v1.Trino.TrinoConnection.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Trino distributed SQL query engine connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.TrinoConnection trino = 8;</code>
      */
     @java.lang.Override
@@ -883,6 +1255,10 @@ public final class ConnectionOuterClass {
 
     public static final int VALKEY_FIELD_NUMBER = 9;
     /**
+     * <pre>
+     * Valkey in-memory data store connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ValkeyConnection valkey = 9;</code>
      * @return Whether the valkey field is set.
      */
@@ -891,6 +1267,10 @@ public final class ConnectionOuterClass {
       return typeCase_ == 9;
     }
     /**
+     * <pre>
+     * Valkey in-memory data store connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ValkeyConnection valkey = 9;</code>
      * @return The valkey.
      */
@@ -902,6 +1282,10 @@ public final class ConnectionOuterClass {
       return yandex.cloud.api.connectionmanager.v1.Valkey.ValkeyConnection.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Valkey in-memory data store connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ValkeyConnection valkey = 9;</code>
      */
     @java.lang.Override
@@ -914,6 +1298,10 @@ public final class ConnectionOuterClass {
 
     public static final int GREENPLUM_FIELD_NUMBER = 10;
     /**
+     * <pre>
+     * Greenplum data warehouse connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.GreenplumConnection greenplum = 10;</code>
      * @return Whether the greenplum field is set.
      */
@@ -922,6 +1310,10 @@ public final class ConnectionOuterClass {
       return typeCase_ == 10;
     }
     /**
+     * <pre>
+     * Greenplum data warehouse connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.GreenplumConnection greenplum = 10;</code>
      * @return The greenplum.
      */
@@ -933,6 +1325,10 @@ public final class ConnectionOuterClass {
       return yandex.cloud.api.connectionmanager.v1.Greenplum.GreenplumConnection.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Greenplum data warehouse connection parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.GreenplumConnection greenplum = 10;</code>
      */
     @java.lang.Override
@@ -941,6 +1337,49 @@ public final class ConnectionOuterClass {
          return (yandex.cloud.api.connectionmanager.v1.Greenplum.GreenplumConnection) type_;
       }
       return yandex.cloud.api.connectionmanager.v1.Greenplum.GreenplumConnection.getDefaultInstance();
+    }
+
+    public static final int STOREDOC_FIELD_NUMBER = 11;
+    /**
+     * <pre>
+     * StoreDoc document store connection parameters.
+     * </pre>
+     *
+     * <code>.yandex.cloud.connectionmanager.v1.StoreDocConnection storedoc = 11;</code>
+     * @return Whether the storedoc field is set.
+     */
+    @java.lang.Override
+    public boolean hasStoredoc() {
+      return typeCase_ == 11;
+    }
+    /**
+     * <pre>
+     * StoreDoc document store connection parameters.
+     * </pre>
+     *
+     * <code>.yandex.cloud.connectionmanager.v1.StoreDocConnection storedoc = 11;</code>
+     * @return The storedoc.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection getStoredoc() {
+      if (typeCase_ == 11) {
+         return (yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection) type_;
+      }
+      return yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * StoreDoc document store connection parameters.
+     * </pre>
+     *
+     * <code>.yandex.cloud.connectionmanager.v1.StoreDocConnection storedoc = 11;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnectionOrBuilder getStoredocOrBuilder() {
+      if (typeCase_ == 11) {
+         return (yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection) type_;
+      }
+      return yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -986,6 +1425,9 @@ public final class ConnectionOuterClass {
       }
       if (typeCase_ == 10) {
         output.writeMessage(10, (yandex.cloud.api.connectionmanager.v1.Greenplum.GreenplumConnection) type_);
+      }
+      if (typeCase_ == 11) {
+        output.writeMessage(11, (yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection) type_);
       }
       unknownFields.writeTo(output);
     }
@@ -1035,6 +1477,10 @@ public final class ConnectionOuterClass {
       if (typeCase_ == 10) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, (yandex.cloud.api.connectionmanager.v1.Greenplum.GreenplumConnection) type_);
+      }
+      if (typeCase_ == 11) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, (yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection) type_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1093,6 +1539,10 @@ public final class ConnectionOuterClass {
           if (!getGreenplum()
               .equals(other.getGreenplum())) return false;
           break;
+        case 11:
+          if (!getStoredoc()
+              .equals(other.getStoredoc())) return false;
+          break;
         case 0:
         default:
       }
@@ -1147,6 +1597,10 @@ public final class ConnectionOuterClass {
         case 10:
           hash = (37 * hash) + GREENPLUM_FIELD_NUMBER;
           hash = (53 * hash) + getGreenplum().hashCode();
+          break;
+        case 11:
+          hash = (37 * hash) + STOREDOC_FIELD_NUMBER;
+          hash = (53 * hash) + getStoredoc().hashCode();
           break;
         case 0:
         default:
@@ -1247,6 +1701,10 @@ public final class ConnectionOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Connection parameters for various database and service types.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.connectionmanager.v1.ConnectionParams}
      */
     public static final class Builder extends
@@ -1382,6 +1840,13 @@ public final class ConnectionOuterClass {
             result.type_ = greenplumBuilder_.build();
           }
         }
+        if (typeCase_ == 11) {
+          if (storedocBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = storedocBuilder_.build();
+          }
+        }
         result.typeCase_ = typeCase_;
         onBuilt();
         return result;
@@ -1472,6 +1937,10 @@ public final class ConnectionOuterClass {
             mergeGreenplum(other.getGreenplum());
             break;
           }
+          case STOREDOC: {
+            mergeStoredoc(other.getStoredoc());
+            break;
+          }
           case TYPE_NOT_SET: {
             break;
           }
@@ -1523,6 +1992,10 @@ public final class ConnectionOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.connectionmanager.v1.Postgresql.PostgreSQLConnection, yandex.cloud.api.connectionmanager.v1.Postgresql.PostgreSQLConnection.Builder, yandex.cloud.api.connectionmanager.v1.Postgresql.PostgreSQLConnectionOrBuilder> postgresqlBuilder_;
       /**
+       * <pre>
+       * PostgreSQL database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.PostgreSQLConnection postgresql = 1;</code>
        * @return Whether the postgresql field is set.
        */
@@ -1531,6 +2004,10 @@ public final class ConnectionOuterClass {
         return typeCase_ == 1;
       }
       /**
+       * <pre>
+       * PostgreSQL database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.PostgreSQLConnection postgresql = 1;</code>
        * @return The postgresql.
        */
@@ -1549,6 +2026,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * PostgreSQL database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.PostgreSQLConnection postgresql = 1;</code>
        */
       public Builder setPostgresql(yandex.cloud.api.connectionmanager.v1.Postgresql.PostgreSQLConnection value) {
@@ -1565,6 +2046,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * PostgreSQL database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.PostgreSQLConnection postgresql = 1;</code>
        */
       public Builder setPostgresql(
@@ -1579,6 +2064,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * PostgreSQL database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.PostgreSQLConnection postgresql = 1;</code>
        */
       public Builder mergePostgresql(yandex.cloud.api.connectionmanager.v1.Postgresql.PostgreSQLConnection value) {
@@ -1601,6 +2090,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * PostgreSQL database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.PostgreSQLConnection postgresql = 1;</code>
        */
       public Builder clearPostgresql() {
@@ -1620,12 +2113,20 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * PostgreSQL database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.PostgreSQLConnection postgresql = 1;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.Postgresql.PostgreSQLConnection.Builder getPostgresqlBuilder() {
         return getPostgresqlFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * PostgreSQL database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.PostgreSQLConnection postgresql = 1;</code>
        */
       @java.lang.Override
@@ -1640,6 +2141,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * PostgreSQL database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.PostgreSQLConnection postgresql = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1664,6 +2169,10 @@ public final class ConnectionOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.connectionmanager.v1.Mysql.MySQLConnection, yandex.cloud.api.connectionmanager.v1.Mysql.MySQLConnection.Builder, yandex.cloud.api.connectionmanager.v1.Mysql.MySQLConnectionOrBuilder> mysqlBuilder_;
       /**
+       * <pre>
+       * MySQL database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.MySQLConnection mysql = 2;</code>
        * @return Whether the mysql field is set.
        */
@@ -1672,6 +2181,10 @@ public final class ConnectionOuterClass {
         return typeCase_ == 2;
       }
       /**
+       * <pre>
+       * MySQL database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.MySQLConnection mysql = 2;</code>
        * @return The mysql.
        */
@@ -1690,6 +2203,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * MySQL database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.MySQLConnection mysql = 2;</code>
        */
       public Builder setMysql(yandex.cloud.api.connectionmanager.v1.Mysql.MySQLConnection value) {
@@ -1706,6 +2223,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * MySQL database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.MySQLConnection mysql = 2;</code>
        */
       public Builder setMysql(
@@ -1720,6 +2241,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * MySQL database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.MySQLConnection mysql = 2;</code>
        */
       public Builder mergeMysql(yandex.cloud.api.connectionmanager.v1.Mysql.MySQLConnection value) {
@@ -1742,6 +2267,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * MySQL database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.MySQLConnection mysql = 2;</code>
        */
       public Builder clearMysql() {
@@ -1761,12 +2290,20 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * MySQL database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.MySQLConnection mysql = 2;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.Mysql.MySQLConnection.Builder getMysqlBuilder() {
         return getMysqlFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * MySQL database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.MySQLConnection mysql = 2;</code>
        */
       @java.lang.Override
@@ -1781,6 +2318,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * MySQL database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.MySQLConnection mysql = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1805,6 +2346,10 @@ public final class ConnectionOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.connectionmanager.v1.Mongodb.MongoDBConnection, yandex.cloud.api.connectionmanager.v1.Mongodb.MongoDBConnection.Builder, yandex.cloud.api.connectionmanager.v1.Mongodb.MongoDBConnectionOrBuilder> mongodbBuilder_;
       /**
+       * <pre>
+       * MongoDB database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.MongoDBConnection mongodb = 3;</code>
        * @return Whether the mongodb field is set.
        */
@@ -1813,6 +2358,10 @@ public final class ConnectionOuterClass {
         return typeCase_ == 3;
       }
       /**
+       * <pre>
+       * MongoDB database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.MongoDBConnection mongodb = 3;</code>
        * @return The mongodb.
        */
@@ -1831,6 +2380,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * MongoDB database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.MongoDBConnection mongodb = 3;</code>
        */
       public Builder setMongodb(yandex.cloud.api.connectionmanager.v1.Mongodb.MongoDBConnection value) {
@@ -1847,6 +2400,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * MongoDB database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.MongoDBConnection mongodb = 3;</code>
        */
       public Builder setMongodb(
@@ -1861,6 +2418,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * MongoDB database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.MongoDBConnection mongodb = 3;</code>
        */
       public Builder mergeMongodb(yandex.cloud.api.connectionmanager.v1.Mongodb.MongoDBConnection value) {
@@ -1883,6 +2444,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * MongoDB database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.MongoDBConnection mongodb = 3;</code>
        */
       public Builder clearMongodb() {
@@ -1902,12 +2467,20 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * MongoDB database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.MongoDBConnection mongodb = 3;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.Mongodb.MongoDBConnection.Builder getMongodbBuilder() {
         return getMongodbFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * MongoDB database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.MongoDBConnection mongodb = 3;</code>
        */
       @java.lang.Override
@@ -1922,6 +2495,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * MongoDB database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.MongoDBConnection mongodb = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1946,6 +2523,10 @@ public final class ConnectionOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseConnection, yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseConnection.Builder, yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseConnectionOrBuilder> clickhouseBuilder_;
       /**
+       * <pre>
+       * ClickHouse database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ClickHouseConnection clickhouse = 4;</code>
        * @return Whether the clickhouse field is set.
        */
@@ -1954,6 +2535,10 @@ public final class ConnectionOuterClass {
         return typeCase_ == 4;
       }
       /**
+       * <pre>
+       * ClickHouse database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ClickHouseConnection clickhouse = 4;</code>
        * @return The clickhouse.
        */
@@ -1972,6 +2557,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ClickHouse database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ClickHouseConnection clickhouse = 4;</code>
        */
       public Builder setClickhouse(yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseConnection value) {
@@ -1988,6 +2577,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ClickHouseConnection clickhouse = 4;</code>
        */
       public Builder setClickhouse(
@@ -2002,6 +2595,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ClickHouseConnection clickhouse = 4;</code>
        */
       public Builder mergeClickhouse(yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseConnection value) {
@@ -2024,6 +2621,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ClickHouseConnection clickhouse = 4;</code>
        */
       public Builder clearClickhouse() {
@@ -2043,12 +2644,20 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ClickHouseConnection clickhouse = 4;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.Clickhouse.ClickHouseConnection.Builder getClickhouseBuilder() {
         return getClickhouseFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * ClickHouse database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ClickHouseConnection clickhouse = 4;</code>
        */
       @java.lang.Override
@@ -2063,6 +2672,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ClickHouse database connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ClickHouseConnection clickhouse = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2087,6 +2700,10 @@ public final class ConnectionOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection, yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection.Builder, yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnectionOrBuilder> kafkaBuilder_;
       /**
+       * <pre>
+       * Apache Kafka message broker connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
        * @return Whether the kafka field is set.
        */
@@ -2095,6 +2712,10 @@ public final class ConnectionOuterClass {
         return typeCase_ == 5;
       }
       /**
+       * <pre>
+       * Apache Kafka message broker connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
        * @return The kafka.
        */
@@ -2113,6 +2734,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Apache Kafka message broker connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
        */
       public Builder setKafka(yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection value) {
@@ -2129,6 +2754,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Apache Kafka message broker connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
        */
       public Builder setKafka(
@@ -2143,6 +2772,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Apache Kafka message broker connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
        */
       public Builder mergeKafka(yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection value) {
@@ -2165,6 +2798,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Apache Kafka message broker connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
        */
       public Builder clearKafka() {
@@ -2184,12 +2821,20 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Apache Kafka message broker connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.Kafka.KafkaConnection.Builder getKafkaBuilder() {
         return getKafkaFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Apache Kafka message broker connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
        */
       @java.lang.Override
@@ -2204,6 +2849,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Apache Kafka message broker connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.KafkaConnection kafka = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2228,6 +2877,10 @@ public final class ConnectionOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.connectionmanager.v1.Redis.RedisConnection, yandex.cloud.api.connectionmanager.v1.Redis.RedisConnection.Builder, yandex.cloud.api.connectionmanager.v1.Redis.RedisConnectionOrBuilder> redisBuilder_;
       /**
+       * <pre>
+       * Redis in-memory data store connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.RedisConnection redis = 6;</code>
        * @return Whether the redis field is set.
        */
@@ -2236,6 +2889,10 @@ public final class ConnectionOuterClass {
         return typeCase_ == 6;
       }
       /**
+       * <pre>
+       * Redis in-memory data store connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.RedisConnection redis = 6;</code>
        * @return The redis.
        */
@@ -2254,6 +2911,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Redis in-memory data store connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.RedisConnection redis = 6;</code>
        */
       public Builder setRedis(yandex.cloud.api.connectionmanager.v1.Redis.RedisConnection value) {
@@ -2270,6 +2931,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Redis in-memory data store connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.RedisConnection redis = 6;</code>
        */
       public Builder setRedis(
@@ -2284,6 +2949,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Redis in-memory data store connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.RedisConnection redis = 6;</code>
        */
       public Builder mergeRedis(yandex.cloud.api.connectionmanager.v1.Redis.RedisConnection value) {
@@ -2306,6 +2975,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Redis in-memory data store connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.RedisConnection redis = 6;</code>
        */
       public Builder clearRedis() {
@@ -2325,12 +2998,20 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Redis in-memory data store connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.RedisConnection redis = 6;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.Redis.RedisConnection.Builder getRedisBuilder() {
         return getRedisFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Redis in-memory data store connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.RedisConnection redis = 6;</code>
        */
       @java.lang.Override
@@ -2345,6 +3026,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Redis in-memory data store connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.RedisConnection redis = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2369,6 +3054,10 @@ public final class ConnectionOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.connectionmanager.v1.Opensearch.OpenSearchConnection, yandex.cloud.api.connectionmanager.v1.Opensearch.OpenSearchConnection.Builder, yandex.cloud.api.connectionmanager.v1.Opensearch.OpenSearchConnectionOrBuilder> opensearchBuilder_;
       /**
+       * <pre>
+       * OpenSearch search engine connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.OpenSearchConnection opensearch = 7;</code>
        * @return Whether the opensearch field is set.
        */
@@ -2377,6 +3066,10 @@ public final class ConnectionOuterClass {
         return typeCase_ == 7;
       }
       /**
+       * <pre>
+       * OpenSearch search engine connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.OpenSearchConnection opensearch = 7;</code>
        * @return The opensearch.
        */
@@ -2395,6 +3088,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * OpenSearch search engine connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.OpenSearchConnection opensearch = 7;</code>
        */
       public Builder setOpensearch(yandex.cloud.api.connectionmanager.v1.Opensearch.OpenSearchConnection value) {
@@ -2411,6 +3108,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * OpenSearch search engine connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.OpenSearchConnection opensearch = 7;</code>
        */
       public Builder setOpensearch(
@@ -2425,6 +3126,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * OpenSearch search engine connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.OpenSearchConnection opensearch = 7;</code>
        */
       public Builder mergeOpensearch(yandex.cloud.api.connectionmanager.v1.Opensearch.OpenSearchConnection value) {
@@ -2447,6 +3152,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * OpenSearch search engine connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.OpenSearchConnection opensearch = 7;</code>
        */
       public Builder clearOpensearch() {
@@ -2466,12 +3175,20 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * OpenSearch search engine connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.OpenSearchConnection opensearch = 7;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.Opensearch.OpenSearchConnection.Builder getOpensearchBuilder() {
         return getOpensearchFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * OpenSearch search engine connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.OpenSearchConnection opensearch = 7;</code>
        */
       @java.lang.Override
@@ -2486,6 +3203,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * OpenSearch search engine connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.OpenSearchConnection opensearch = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2510,6 +3231,10 @@ public final class ConnectionOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.connectionmanager.v1.Trino.TrinoConnection, yandex.cloud.api.connectionmanager.v1.Trino.TrinoConnection.Builder, yandex.cloud.api.connectionmanager.v1.Trino.TrinoConnectionOrBuilder> trinoBuilder_;
       /**
+       * <pre>
+       * Trino distributed SQL query engine connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.TrinoConnection trino = 8;</code>
        * @return Whether the trino field is set.
        */
@@ -2518,6 +3243,10 @@ public final class ConnectionOuterClass {
         return typeCase_ == 8;
       }
       /**
+       * <pre>
+       * Trino distributed SQL query engine connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.TrinoConnection trino = 8;</code>
        * @return The trino.
        */
@@ -2536,6 +3265,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Trino distributed SQL query engine connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.TrinoConnection trino = 8;</code>
        */
       public Builder setTrino(yandex.cloud.api.connectionmanager.v1.Trino.TrinoConnection value) {
@@ -2552,6 +3285,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Trino distributed SQL query engine connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.TrinoConnection trino = 8;</code>
        */
       public Builder setTrino(
@@ -2566,6 +3303,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Trino distributed SQL query engine connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.TrinoConnection trino = 8;</code>
        */
       public Builder mergeTrino(yandex.cloud.api.connectionmanager.v1.Trino.TrinoConnection value) {
@@ -2588,6 +3329,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Trino distributed SQL query engine connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.TrinoConnection trino = 8;</code>
        */
       public Builder clearTrino() {
@@ -2607,12 +3352,20 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Trino distributed SQL query engine connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.TrinoConnection trino = 8;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.Trino.TrinoConnection.Builder getTrinoBuilder() {
         return getTrinoFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Trino distributed SQL query engine connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.TrinoConnection trino = 8;</code>
        */
       @java.lang.Override
@@ -2627,6 +3380,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Trino distributed SQL query engine connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.TrinoConnection trino = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2651,6 +3408,10 @@ public final class ConnectionOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.connectionmanager.v1.Valkey.ValkeyConnection, yandex.cloud.api.connectionmanager.v1.Valkey.ValkeyConnection.Builder, yandex.cloud.api.connectionmanager.v1.Valkey.ValkeyConnectionOrBuilder> valkeyBuilder_;
       /**
+       * <pre>
+       * Valkey in-memory data store connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ValkeyConnection valkey = 9;</code>
        * @return Whether the valkey field is set.
        */
@@ -2659,6 +3420,10 @@ public final class ConnectionOuterClass {
         return typeCase_ == 9;
       }
       /**
+       * <pre>
+       * Valkey in-memory data store connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ValkeyConnection valkey = 9;</code>
        * @return The valkey.
        */
@@ -2677,6 +3442,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Valkey in-memory data store connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ValkeyConnection valkey = 9;</code>
        */
       public Builder setValkey(yandex.cloud.api.connectionmanager.v1.Valkey.ValkeyConnection value) {
@@ -2693,6 +3462,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Valkey in-memory data store connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ValkeyConnection valkey = 9;</code>
        */
       public Builder setValkey(
@@ -2707,6 +3480,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Valkey in-memory data store connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ValkeyConnection valkey = 9;</code>
        */
       public Builder mergeValkey(yandex.cloud.api.connectionmanager.v1.Valkey.ValkeyConnection value) {
@@ -2729,6 +3506,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Valkey in-memory data store connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ValkeyConnection valkey = 9;</code>
        */
       public Builder clearValkey() {
@@ -2748,12 +3529,20 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Valkey in-memory data store connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ValkeyConnection valkey = 9;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.Valkey.ValkeyConnection.Builder getValkeyBuilder() {
         return getValkeyFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Valkey in-memory data store connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ValkeyConnection valkey = 9;</code>
        */
       @java.lang.Override
@@ -2768,6 +3557,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Valkey in-memory data store connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ValkeyConnection valkey = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2792,6 +3585,10 @@ public final class ConnectionOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.connectionmanager.v1.Greenplum.GreenplumConnection, yandex.cloud.api.connectionmanager.v1.Greenplum.GreenplumConnection.Builder, yandex.cloud.api.connectionmanager.v1.Greenplum.GreenplumConnectionOrBuilder> greenplumBuilder_;
       /**
+       * <pre>
+       * Greenplum data warehouse connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.GreenplumConnection greenplum = 10;</code>
        * @return Whether the greenplum field is set.
        */
@@ -2800,6 +3597,10 @@ public final class ConnectionOuterClass {
         return typeCase_ == 10;
       }
       /**
+       * <pre>
+       * Greenplum data warehouse connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.GreenplumConnection greenplum = 10;</code>
        * @return The greenplum.
        */
@@ -2818,6 +3619,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Greenplum data warehouse connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.GreenplumConnection greenplum = 10;</code>
        */
       public Builder setGreenplum(yandex.cloud.api.connectionmanager.v1.Greenplum.GreenplumConnection value) {
@@ -2834,6 +3639,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Greenplum data warehouse connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.GreenplumConnection greenplum = 10;</code>
        */
       public Builder setGreenplum(
@@ -2848,6 +3657,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Greenplum data warehouse connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.GreenplumConnection greenplum = 10;</code>
        */
       public Builder mergeGreenplum(yandex.cloud.api.connectionmanager.v1.Greenplum.GreenplumConnection value) {
@@ -2870,6 +3683,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Greenplum data warehouse connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.GreenplumConnection greenplum = 10;</code>
        */
       public Builder clearGreenplum() {
@@ -2889,12 +3706,20 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Greenplum data warehouse connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.GreenplumConnection greenplum = 10;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.Greenplum.GreenplumConnection.Builder getGreenplumBuilder() {
         return getGreenplumFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Greenplum data warehouse connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.GreenplumConnection greenplum = 10;</code>
        */
       @java.lang.Override
@@ -2909,6 +3734,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Greenplum data warehouse connection parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.GreenplumConnection greenplum = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2928,6 +3757,183 @@ public final class ConnectionOuterClass {
         typeCase_ = 10;
         onChanged();;
         return greenplumBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection, yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection.Builder, yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnectionOrBuilder> storedocBuilder_;
+      /**
+       * <pre>
+       * StoreDoc document store connection parameters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.StoreDocConnection storedoc = 11;</code>
+       * @return Whether the storedoc field is set.
+       */
+      @java.lang.Override
+      public boolean hasStoredoc() {
+        return typeCase_ == 11;
+      }
+      /**
+       * <pre>
+       * StoreDoc document store connection parameters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.StoreDocConnection storedoc = 11;</code>
+       * @return The storedoc.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection getStoredoc() {
+        if (storedocBuilder_ == null) {
+          if (typeCase_ == 11) {
+            return (yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection) type_;
+          }
+          return yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection.getDefaultInstance();
+        } else {
+          if (typeCase_ == 11) {
+            return storedocBuilder_.getMessage();
+          }
+          return yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * StoreDoc document store connection parameters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.StoreDocConnection storedoc = 11;</code>
+       */
+      public Builder setStoredoc(yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection value) {
+        if (storedocBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          storedocBuilder_.setMessage(value);
+        }
+        typeCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * StoreDoc document store connection parameters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.StoreDocConnection storedoc = 11;</code>
+       */
+      public Builder setStoredoc(
+          yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection.Builder builderForValue) {
+        if (storedocBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          storedocBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * StoreDoc document store connection parameters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.StoreDocConnection storedoc = 11;</code>
+       */
+      public Builder mergeStoredoc(yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection value) {
+        if (storedocBuilder_ == null) {
+          if (typeCase_ == 11 &&
+              type_ != yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection.getDefaultInstance()) {
+            type_ = yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection.newBuilder((yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 11) {
+            storedocBuilder_.mergeFrom(value);
+          }
+          storedocBuilder_.setMessage(value);
+        }
+        typeCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * StoreDoc document store connection parameters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.StoreDocConnection storedoc = 11;</code>
+       */
+      public Builder clearStoredoc() {
+        if (storedocBuilder_ == null) {
+          if (typeCase_ == 11) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 11) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          storedocBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * StoreDoc document store connection parameters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.StoreDocConnection storedoc = 11;</code>
+       */
+      public yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection.Builder getStoredocBuilder() {
+        return getStoredocFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * StoreDoc document store connection parameters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.StoreDocConnection storedoc = 11;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnectionOrBuilder getStoredocOrBuilder() {
+        if ((typeCase_ == 11) && (storedocBuilder_ != null)) {
+          return storedocBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 11) {
+            return (yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection) type_;
+          }
+          return yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * StoreDoc document store connection parameters.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.StoreDocConnection storedoc = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection, yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection.Builder, yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnectionOrBuilder> 
+          getStoredocFieldBuilder() {
+        if (storedocBuilder_ == null) {
+          if (!(typeCase_ == 11)) {
+            type_ = yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection.getDefaultInstance();
+          }
+          storedocBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection, yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection.Builder, yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnectionOrBuilder>(
+                  (yandex.cloud.api.connectionmanager.v1.Storedoc.StoreDocConnection) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 11;
+        onChanged();;
+        return storedocBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2987,11 +3993,19 @@ public final class ConnectionOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the Lockbox secret.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the Lockbox secret.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -2999,11 +4013,19 @@ public final class ConnectionOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * Lockbox secret version.
+     * </pre>
+     *
      * <code>string version = 2;</code>
      * @return The version.
      */
     java.lang.String getVersion();
     /**
+     * <pre>
+     * Lockbox secret version.
+     * </pre>
+     *
      * <code>string version = 2;</code>
      * @return The bytes for version.
      */
@@ -3011,11 +4033,19 @@ public final class ConnectionOuterClass {
         getVersionBytes();
 
     /**
+     * <pre>
+     * The newest available version of the Lockbox secret.
+     * </pre>
+     *
      * <code>string newest_version = 3;</code>
      * @return The newestVersion.
      */
     java.lang.String getNewestVersion();
     /**
+     * <pre>
+     * The newest available version of the Lockbox secret.
+     * </pre>
+     *
      * <code>string newest_version = 3;</code>
      * @return The bytes for newestVersion.
      */
@@ -3023,6 +4053,10 @@ public final class ConnectionOuterClass {
         getNewestVersionBytes();
   }
   /**
+   * <pre>
+   * Reference to a Lockbox secret.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.connectionmanager.v1.LockboxSecret}
    */
   public static final class LockboxSecret extends
@@ -3123,6 +4157,10 @@ public final class ConnectionOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the Lockbox secret.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -3140,6 +4178,10 @@ public final class ConnectionOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the Lockbox secret.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -3161,6 +4203,10 @@ public final class ConnectionOuterClass {
     public static final int VERSION_FIELD_NUMBER = 2;
     private volatile java.lang.Object version_;
     /**
+     * <pre>
+     * Lockbox secret version.
+     * </pre>
+     *
      * <code>string version = 2;</code>
      * @return The version.
      */
@@ -3178,6 +4224,10 @@ public final class ConnectionOuterClass {
       }
     }
     /**
+     * <pre>
+     * Lockbox secret version.
+     * </pre>
+     *
      * <code>string version = 2;</code>
      * @return The bytes for version.
      */
@@ -3199,6 +4249,10 @@ public final class ConnectionOuterClass {
     public static final int NEWEST_VERSION_FIELD_NUMBER = 3;
     private volatile java.lang.Object newestVersion_;
     /**
+     * <pre>
+     * The newest available version of the Lockbox secret.
+     * </pre>
+     *
      * <code>string newest_version = 3;</code>
      * @return The newestVersion.
      */
@@ -3216,6 +4270,10 @@ public final class ConnectionOuterClass {
       }
     }
     /**
+     * <pre>
+     * The newest available version of the Lockbox secret.
+     * </pre>
+     *
      * <code>string newest_version = 3;</code>
      * @return The bytes for newestVersion.
      */
@@ -3409,6 +4467,10 @@ public final class ConnectionOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Reference to a Lockbox secret.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.connectionmanager.v1.LockboxSecret}
      */
     public static final class Builder extends
@@ -3572,6 +4634,10 @@ public final class ConnectionOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the Lockbox secret.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -3588,6 +4654,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the Lockbox secret.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -3605,6 +4675,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the Lockbox secret.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -3620,6 +4694,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the Lockbox secret.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -3630,6 +4708,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the Lockbox secret.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -3648,6 +4730,10 @@ public final class ConnectionOuterClass {
 
       private java.lang.Object version_ = "";
       /**
+       * <pre>
+       * Lockbox secret version.
+       * </pre>
+       *
        * <code>string version = 2;</code>
        * @return The version.
        */
@@ -3664,6 +4750,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Lockbox secret version.
+       * </pre>
+       *
        * <code>string version = 2;</code>
        * @return The bytes for version.
        */
@@ -3681,6 +4771,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Lockbox secret version.
+       * </pre>
+       *
        * <code>string version = 2;</code>
        * @param value The version to set.
        * @return This builder for chaining.
@@ -3696,6 +4790,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Lockbox secret version.
+       * </pre>
+       *
        * <code>string version = 2;</code>
        * @return This builder for chaining.
        */
@@ -3706,6 +4804,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Lockbox secret version.
+       * </pre>
+       *
        * <code>string version = 2;</code>
        * @param value The bytes for version to set.
        * @return This builder for chaining.
@@ -3724,6 +4826,10 @@ public final class ConnectionOuterClass {
 
       private java.lang.Object newestVersion_ = "";
       /**
+       * <pre>
+       * The newest available version of the Lockbox secret.
+       * </pre>
+       *
        * <code>string newest_version = 3;</code>
        * @return The newestVersion.
        */
@@ -3740,6 +4846,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * The newest available version of the Lockbox secret.
+       * </pre>
+       *
        * <code>string newest_version = 3;</code>
        * @return The bytes for newestVersion.
        */
@@ -3757,6 +4867,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * The newest available version of the Lockbox secret.
+       * </pre>
+       *
        * <code>string newest_version = 3;</code>
        * @param value The newestVersion to set.
        * @return This builder for chaining.
@@ -3772,6 +4886,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The newest available version of the Lockbox secret.
+       * </pre>
+       *
        * <code>string newest_version = 3;</code>
        * @return This builder for chaining.
        */
@@ -3782,6 +4900,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The newest available version of the Lockbox secret.
+       * </pre>
+       *
        * <code>string newest_version = 3;</code>
        * @param value The bytes for newestVersion to set.
        * @return This builder for chaining.
@@ -3850,16 +4972,636 @@ public final class ConnectionOuterClass {
 
   }
 
+  public interface LockboxSecretSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.connectionmanager.v1.LockboxSecretSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the folder where the Lockbox secret will be created. If omitted, the secret will be created in the connection's folder.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * ID of the folder where the Lockbox secret will be created. If omitted, the secret will be created in the connection's folder.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+  }
+  /**
+   * <pre>
+   * Specification for creating a new Lockbox secret.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.connectionmanager.v1.LockboxSecretSpec}
+   */
+  public static final class LockboxSecretSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.connectionmanager.v1.LockboxSecretSpec)
+      LockboxSecretSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LockboxSecretSpec.newBuilder() to construct.
+    private LockboxSecretSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LockboxSecretSpec() {
+      folderId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LockboxSecretSpec();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LockboxSecretSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.internal_static_yandex_cloud_connectionmanager_v1_LockboxSecretSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.internal_static_yandex_cloud_connectionmanager_v1_LockboxSecretSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.class, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.Builder.class);
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * ID of the folder where the Lockbox secret will be created. If omitted, the secret will be created in the connection's folder.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the folder where the Lockbox secret will be created. If omitted, the secret will be created in the connection's folder.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec other = (yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) obj;
+
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Specification for creating a new Lockbox secret.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.connectionmanager.v1.LockboxSecretSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.connectionmanager.v1.LockboxSecretSpec)
+        yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.internal_static_yandex_cloud_connectionmanager_v1_LockboxSecretSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.internal_static_yandex_cloud_connectionmanager_v1_LockboxSecretSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.class, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        folderId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.internal_static_yandex_cloud_connectionmanager_v1_LockboxSecretSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec build() {
+        yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec buildPartial() {
+        yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec result = new yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec(this);
+        result.folderId_ = folderId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) {
+          return mergeFrom((yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec other) {
+        if (other == yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.getDefaultInstance()) return this;
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * ID of the folder where the Lockbox secret will be created. If omitted, the secret will be created in the connection's folder.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder where the Lockbox secret will be created. If omitted, the secret will be created in the connection's folder.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder where the Lockbox secret will be created. If omitted, the secret will be created in the connection's folder.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder where the Lockbox secret will be created. If omitted, the secret will be created in the connection's folder.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder where the Lockbox secret will be created. If omitted, the secret will be created in the connection's folder.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.connectionmanager.v1.LockboxSecretSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.connectionmanager.v1.LockboxSecretSpec)
+    private static final yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec();
+    }
+
+    public static yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LockboxSecretSpec>
+        PARSER = new com.google.protobuf.AbstractParser<LockboxSecretSpec>() {
+      @java.lang.Override
+      public LockboxSecretSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LockboxSecretSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LockboxSecretSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LockboxSecretSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ConnectionOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.connectionmanager.v1.Connection)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the connection. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the connection. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -3867,11 +5609,19 @@ public final class ConnectionOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of the folder that the connection belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder that the connection belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The bytes for folderId.
      */
@@ -3879,41 +5629,73 @@ public final class ConnectionOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Last update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
      * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
+     * <pre>
+     * Last update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
      * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
+     * <pre>
+     * Last update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Name of the connection.
+     * </pre>
+     *
      * <code>string name = 5;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the connection.
+     * </pre>
+     *
      * <code>string name = 5;</code>
      * @return The bytes for name.
      */
@@ -3921,11 +5703,19 @@ public final class ConnectionOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the connection.
+     * </pre>
+     *
      * <code>string description = 6;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the connection.
+     * </pre>
+     *
      * <code>string description = 6;</code>
      * @return The bytes for description.
      */
@@ -3933,10 +5723,18 @@ public final class ConnectionOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     boolean containsLabels(
@@ -3948,11 +5746,19 @@ public final class ConnectionOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
 
@@ -3960,6 +5766,10 @@ public final class ConnectionOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
 
@@ -3967,11 +5777,19 @@ public final class ConnectionOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * ID of the subject which created the connection.
+     * </pre>
+     *
      * <code>string created_by = 8;</code>
      * @return The createdBy.
      */
     java.lang.String getCreatedBy();
     /**
+     * <pre>
+     * ID of the subject which created the connection.
+     * </pre>
+     *
      * <code>string created_by = 8;</code>
      * @return The bytes for createdBy.
      */
@@ -3979,59 +5797,132 @@ public final class ConnectionOuterClass {
         getCreatedByBytes();
 
     /**
+     * <pre>
+     * Connection parameters specific to the database or service type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 9;</code>
      * @return Whether the params field is set.
      */
     boolean hasParams();
     /**
+     * <pre>
+     * Connection parameters specific to the database or service type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 9;</code>
      * @return The params.
      */
     yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams getParams();
     /**
+     * <pre>
+     * Connection parameters specific to the database or service type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 9;</code>
      */
     yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParamsOrBuilder getParamsOrBuilder();
 
     /**
+     * <pre>
+     * Reference to the Lockbox secret containing connection credentials.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.LockboxSecret lockbox_secret = 10;</code>
      * @return Whether the lockboxSecret field is set.
      */
     boolean hasLockboxSecret();
     /**
+     * <pre>
+     * Reference to the Lockbox secret containing connection credentials.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.LockboxSecret lockbox_secret = 10;</code>
      * @return The lockboxSecret.
      */
     yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecret getLockboxSecret();
     /**
+     * <pre>
+     * Reference to the Lockbox secret containing connection credentials.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.LockboxSecret lockbox_secret = 10;</code>
      */
     yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretOrBuilder getLockboxSecretOrBuilder();
 
     /**
+     * <pre>
+     * Specification for creating a new Lockbox secret.
+     * </pre>
+     *
+     * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 14;</code>
+     * @return Whether the lockboxSecretSpec field is set.
+     */
+    boolean hasLockboxSecretSpec();
+    /**
+     * <pre>
+     * Specification for creating a new Lockbox secret.
+     * </pre>
+     *
+     * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 14;</code>
+     * @return The lockboxSecretSpec.
+     */
+    yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec getLockboxSecretSpec();
+    /**
+     * <pre>
+     * Specification for creating a new Lockbox secret.
+     * </pre>
+     *
+     * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 14;</code>
+     */
+    yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpecOrBuilder getLockboxSecretSpecOrBuilder();
+
+    /**
+     * <pre>
+     * Whether this connection is managed by the system (e.g. an MDB cluster).
+     * </pre>
+     *
      * <code>bool is_managed = 12;</code>
      * @return The isManaged.
      */
     boolean getIsManaged();
 
     /**
+     * <pre>
+     * Whether the current user can use this connection. Filled only when `with_can_use` has been requested in ListConnectionRequest.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue can_use = 13;</code>
      * @return Whether the canUse field is set.
      */
     boolean hasCanUse();
     /**
+     * <pre>
+     * Whether the current user can use this connection. Filled only when `with_can_use` has been requested in ListConnectionRequest.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue can_use = 13;</code>
      * @return The canUse.
      */
     com.google.protobuf.BoolValue getCanUse();
     /**
+     * <pre>
+     * Whether the current user can use this connection. Filled only when `with_can_use` has been requested in ListConnectionRequest.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue can_use = 13;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getCanUseOrBuilder();
 
     public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection.SecretCase getSecretCase();
+
+    public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection.SecretSpecCase getSecretSpecCase();
   }
   /**
+   * <pre>
+   * A Connection resource represents a configured connection to a database or service.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.connectionmanager.v1.Connection}
    */
   public static final class Connection extends
@@ -4196,6 +6087,20 @@ public final class ConnectionOuterClass {
 
               break;
             }
+            case 114: {
+              yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.Builder subBuilder = null;
+              if (secretSpecCase_ == 14) {
+                subBuilder = ((yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) secretSpec_).toBuilder();
+              }
+              secretSpec_ =
+                  input.readMessage(yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) secretSpec_);
+                secretSpec_ = subBuilder.buildPartial();
+              }
+              secretSpecCase_ = 14;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4279,9 +6184,52 @@ public final class ConnectionOuterClass {
           secretCase_);
     }
 
+    private int secretSpecCase_ = 0;
+    private java.lang.Object secretSpec_;
+    public enum SecretSpecCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      LOCKBOX_SECRET_SPEC(14),
+      SECRETSPEC_NOT_SET(0);
+      private final int value;
+      private SecretSpecCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SecretSpecCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static SecretSpecCase forNumber(int value) {
+        switch (value) {
+          case 14: return LOCKBOX_SECRET_SPEC;
+          case 0: return SECRETSPEC_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public SecretSpecCase
+    getSecretSpecCase() {
+      return SecretSpecCase.forNumber(
+          secretSpecCase_);
+    }
+
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the connection. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -4299,6 +6247,10 @@ public final class ConnectionOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the connection. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -4320,6 +6272,10 @@ public final class ConnectionOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder that the connection belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The folderId.
      */
@@ -4337,6 +6293,10 @@ public final class ConnectionOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder that the connection belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The bytes for folderId.
      */
@@ -4358,6 +6318,10 @@ public final class ConnectionOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return Whether the createdAt field is set.
      */
@@ -4366,6 +6330,10 @@ public final class ConnectionOuterClass {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return The createdAt.
      */
@@ -4374,6 +6342,10 @@ public final class ConnectionOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     @java.lang.Override
@@ -4384,6 +6356,10 @@ public final class ConnectionOuterClass {
     public static final int UPDATED_AT_FIELD_NUMBER = 4;
     private com.google.protobuf.Timestamp updatedAt_;
     /**
+     * <pre>
+     * Last update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
      * @return Whether the updatedAt field is set.
      */
@@ -4392,6 +6368,10 @@ public final class ConnectionOuterClass {
       return updatedAt_ != null;
     }
     /**
+     * <pre>
+     * Last update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
      * @return The updatedAt.
      */
@@ -4400,6 +6380,10 @@ public final class ConnectionOuterClass {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
+     * <pre>
+     * Last update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
      */
     @java.lang.Override
@@ -4410,6 +6394,10 @@ public final class ConnectionOuterClass {
     public static final int NAME_FIELD_NUMBER = 5;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the connection.
+     * </pre>
+     *
      * <code>string name = 5;</code>
      * @return The name.
      */
@@ -4427,6 +6415,10 @@ public final class ConnectionOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the connection.
+     * </pre>
+     *
      * <code>string name = 5;</code>
      * @return The bytes for name.
      */
@@ -4448,6 +6440,10 @@ public final class ConnectionOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 6;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the connection.
+     * </pre>
+     *
      * <code>string description = 6;</code>
      * @return The description.
      */
@@ -4465,6 +6461,10 @@ public final class ConnectionOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the connection.
+     * </pre>
+     *
      * <code>string description = 6;</code>
      * @return The bytes for description.
      */
@@ -4510,6 +6510,10 @@ public final class ConnectionOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
 
@@ -4528,6 +6532,10 @@ public final class ConnectionOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     @java.lang.Override
@@ -4536,6 +6544,10 @@ public final class ConnectionOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     @java.lang.Override
@@ -4549,6 +6561,10 @@ public final class ConnectionOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     @java.lang.Override
@@ -4567,6 +6583,10 @@ public final class ConnectionOuterClass {
     public static final int CREATED_BY_FIELD_NUMBER = 8;
     private volatile java.lang.Object createdBy_;
     /**
+     * <pre>
+     * ID of the subject which created the connection.
+     * </pre>
+     *
      * <code>string created_by = 8;</code>
      * @return The createdBy.
      */
@@ -4584,6 +6604,10 @@ public final class ConnectionOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the subject which created the connection.
+     * </pre>
+     *
      * <code>string created_by = 8;</code>
      * @return The bytes for createdBy.
      */
@@ -4605,6 +6629,10 @@ public final class ConnectionOuterClass {
     public static final int PARAMS_FIELD_NUMBER = 9;
     private yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams params_;
     /**
+     * <pre>
+     * Connection parameters specific to the database or service type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 9;</code>
      * @return Whether the params field is set.
      */
@@ -4613,6 +6641,10 @@ public final class ConnectionOuterClass {
       return params_ != null;
     }
     /**
+     * <pre>
+     * Connection parameters specific to the database or service type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 9;</code>
      * @return The params.
      */
@@ -4621,6 +6653,10 @@ public final class ConnectionOuterClass {
       return params_ == null ? yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams.getDefaultInstance() : params_;
     }
     /**
+     * <pre>
+     * Connection parameters specific to the database or service type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 9;</code>
      */
     @java.lang.Override
@@ -4630,6 +6666,10 @@ public final class ConnectionOuterClass {
 
     public static final int LOCKBOX_SECRET_FIELD_NUMBER = 10;
     /**
+     * <pre>
+     * Reference to the Lockbox secret containing connection credentials.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.LockboxSecret lockbox_secret = 10;</code>
      * @return Whether the lockboxSecret field is set.
      */
@@ -4638,6 +6678,10 @@ public final class ConnectionOuterClass {
       return secretCase_ == 10;
     }
     /**
+     * <pre>
+     * Reference to the Lockbox secret containing connection credentials.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.LockboxSecret lockbox_secret = 10;</code>
      * @return The lockboxSecret.
      */
@@ -4649,6 +6693,10 @@ public final class ConnectionOuterClass {
       return yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecret.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Reference to the Lockbox secret containing connection credentials.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.LockboxSecret lockbox_secret = 10;</code>
      */
     @java.lang.Override
@@ -4659,9 +6707,56 @@ public final class ConnectionOuterClass {
       return yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecret.getDefaultInstance();
     }
 
+    public static final int LOCKBOX_SECRET_SPEC_FIELD_NUMBER = 14;
+    /**
+     * <pre>
+     * Specification for creating a new Lockbox secret.
+     * </pre>
+     *
+     * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 14;</code>
+     * @return Whether the lockboxSecretSpec field is set.
+     */
+    @java.lang.Override
+    public boolean hasLockboxSecretSpec() {
+      return secretSpecCase_ == 14;
+    }
+    /**
+     * <pre>
+     * Specification for creating a new Lockbox secret.
+     * </pre>
+     *
+     * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 14;</code>
+     * @return The lockboxSecretSpec.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec getLockboxSecretSpec() {
+      if (secretSpecCase_ == 14) {
+         return (yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) secretSpec_;
+      }
+      return yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Specification for creating a new Lockbox secret.
+     * </pre>
+     *
+     * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 14;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpecOrBuilder getLockboxSecretSpecOrBuilder() {
+      if (secretSpecCase_ == 14) {
+         return (yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) secretSpec_;
+      }
+      return yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.getDefaultInstance();
+    }
+
     public static final int IS_MANAGED_FIELD_NUMBER = 12;
     private boolean isManaged_;
     /**
+     * <pre>
+     * Whether this connection is managed by the system (e.g. an MDB cluster).
+     * </pre>
+     *
      * <code>bool is_managed = 12;</code>
      * @return The isManaged.
      */
@@ -4673,6 +6768,10 @@ public final class ConnectionOuterClass {
     public static final int CAN_USE_FIELD_NUMBER = 13;
     private com.google.protobuf.BoolValue canUse_;
     /**
+     * <pre>
+     * Whether the current user can use this connection. Filled only when `with_can_use` has been requested in ListConnectionRequest.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue can_use = 13;</code>
      * @return Whether the canUse field is set.
      */
@@ -4681,6 +6780,10 @@ public final class ConnectionOuterClass {
       return canUse_ != null;
     }
     /**
+     * <pre>
+     * Whether the current user can use this connection. Filled only when `with_can_use` has been requested in ListConnectionRequest.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue can_use = 13;</code>
      * @return The canUse.
      */
@@ -4689,6 +6792,10 @@ public final class ConnectionOuterClass {
       return canUse_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : canUse_;
     }
     /**
+     * <pre>
+     * Whether the current user can use this connection. Filled only when `with_can_use` has been requested in ListConnectionRequest.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue can_use = 13;</code>
      */
     @java.lang.Override
@@ -4749,6 +6856,9 @@ public final class ConnectionOuterClass {
       if (canUse_ != null) {
         output.writeMessage(13, getCanUse());
       }
+      if (secretSpecCase_ == 14) {
+        output.writeMessage(14, (yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) secretSpec_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4806,6 +6916,10 @@ public final class ConnectionOuterClass {
       if (canUse_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getCanUse());
+      }
+      if (secretSpecCase_ == 14) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, (yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) secretSpec_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4865,6 +6979,15 @@ public final class ConnectionOuterClass {
         case 0:
         default:
       }
+      if (!getSecretSpecCase().equals(other.getSecretSpecCase())) return false;
+      switch (secretSpecCase_) {
+        case 14:
+          if (!getLockboxSecretSpec()
+              .equals(other.getLockboxSecretSpec())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4913,6 +7036,14 @@ public final class ConnectionOuterClass {
         case 10:
           hash = (37 * hash) + LOCKBOX_SECRET_FIELD_NUMBER;
           hash = (53 * hash) + getLockboxSecret().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      switch (secretSpecCase_) {
+        case 14:
+          hash = (37 * hash) + LOCKBOX_SECRET_SPEC_FIELD_NUMBER;
+          hash = (53 * hash) + getLockboxSecretSpec().hashCode();
           break;
         case 0:
         default:
@@ -5013,6 +7144,10 @@ public final class ConnectionOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A Connection resource represents a configured connection to a database or service.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.connectionmanager.v1.Connection}
      */
     public static final class Builder extends
@@ -5111,6 +7246,8 @@ public final class ConnectionOuterClass {
         }
         secretCase_ = 0;
         secret_ = null;
+        secretSpecCase_ = 0;
+        secretSpec_ = null;
         return this;
       }
 
@@ -5167,6 +7304,13 @@ public final class ConnectionOuterClass {
             result.secret_ = lockboxSecretBuilder_.build();
           }
         }
+        if (secretSpecCase_ == 14) {
+          if (lockboxSecretSpecBuilder_ == null) {
+            result.secretSpec_ = secretSpec_;
+          } else {
+            result.secretSpec_ = lockboxSecretSpecBuilder_.build();
+          }
+        }
         result.isManaged_ = isManaged_;
         if (canUseBuilder_ == null) {
           result.canUse_ = canUse_;
@@ -5174,6 +7318,7 @@ public final class ConnectionOuterClass {
           result.canUse_ = canUseBuilder_.build();
         }
         result.secretCase_ = secretCase_;
+        result.secretSpecCase_ = secretSpecCase_;
         onBuilt();
         return result;
       }
@@ -5268,6 +7413,15 @@ public final class ConnectionOuterClass {
             break;
           }
         }
+        switch (other.getSecretSpecCase()) {
+          case LOCKBOX_SECRET_SPEC: {
+            mergeLockboxSecretSpec(other.getLockboxSecretSpec());
+            break;
+          }
+          case SECRETSPEC_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -5311,10 +7465,29 @@ public final class ConnectionOuterClass {
         return this;
       }
 
+      private int secretSpecCase_ = 0;
+      private java.lang.Object secretSpec_;
+      public SecretSpecCase
+          getSecretSpecCase() {
+        return SecretSpecCase.forNumber(
+            secretSpecCase_);
+      }
+
+      public Builder clearSecretSpec() {
+        secretSpecCase_ = 0;
+        secretSpec_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the connection. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -5331,6 +7504,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the connection. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -5348,6 +7525,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the connection. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -5363,6 +7544,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the connection. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -5373,6 +7558,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the connection. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -5391,6 +7580,10 @@ public final class ConnectionOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder that the connection belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return The folderId.
        */
@@ -5407,6 +7600,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the connection belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return The bytes for folderId.
        */
@@ -5424,6 +7621,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the connection belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -5439,6 +7640,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the connection belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -5449,6 +7654,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the connection belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -5469,6 +7678,10 @@ public final class ConnectionOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        * @return Whether the createdAt field is set.
        */
@@ -5476,6 +7689,10 @@ public final class ConnectionOuterClass {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        * @return The createdAt.
        */
@@ -5487,6 +7704,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -5503,6 +7724,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(
@@ -5517,6 +7742,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -5535,6 +7764,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder clearCreatedAt() {
@@ -5549,6 +7782,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -5557,6 +7794,10 @@ public final class ConnectionOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -5568,6 +7809,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5588,6 +7833,10 @@ public final class ConnectionOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
+       * <pre>
+       * Last update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
        * @return Whether the updatedAt field is set.
        */
@@ -5595,6 +7844,10 @@ public final class ConnectionOuterClass {
         return updatedAtBuilder_ != null || updatedAt_ != null;
       }
       /**
+       * <pre>
+       * Last update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
        * @return The updatedAt.
        */
@@ -5606,6 +7859,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Last update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
        */
       public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -5622,6 +7879,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Last update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
        */
       public Builder setUpdatedAt(
@@ -5636,6 +7897,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Last update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
        */
       public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -5654,6 +7919,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Last update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
        */
       public Builder clearUpdatedAt() {
@@ -5668,6 +7937,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Last update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
@@ -5676,6 +7949,10 @@ public final class ConnectionOuterClass {
         return getUpdatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Last update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
@@ -5687,6 +7964,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Last update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5705,6 +7986,10 @@ public final class ConnectionOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the connection.
+       * </pre>
+       *
        * <code>string name = 5;</code>
        * @return The name.
        */
@@ -5721,6 +8006,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the connection.
+       * </pre>
+       *
        * <code>string name = 5;</code>
        * @return The bytes for name.
        */
@@ -5738,6 +8027,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the connection.
+       * </pre>
+       *
        * <code>string name = 5;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -5753,6 +8046,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the connection.
+       * </pre>
+       *
        * <code>string name = 5;</code>
        * @return This builder for chaining.
        */
@@ -5763,6 +8060,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the connection.
+       * </pre>
+       *
        * <code>string name = 5;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -5781,6 +8082,10 @@ public final class ConnectionOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the connection.
+       * </pre>
+       *
        * <code>string description = 6;</code>
        * @return The description.
        */
@@ -5797,6 +8102,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the connection.
+       * </pre>
+       *
        * <code>string description = 6;</code>
        * @return The bytes for description.
        */
@@ -5814,6 +8123,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the connection.
+       * </pre>
+       *
        * <code>string description = 6;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -5829,6 +8142,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the connection.
+       * </pre>
+       *
        * <code>string description = 6;</code>
        * @return This builder for chaining.
        */
@@ -5839,6 +8156,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the connection.
+       * </pre>
+       *
        * <code>string description = 6;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -5882,6 +8203,10 @@ public final class ConnectionOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
 
@@ -5900,6 +8225,10 @@ public final class ConnectionOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
       @java.lang.Override
@@ -5908,6 +8237,10 @@ public final class ConnectionOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
       @java.lang.Override
@@ -5921,6 +8254,10 @@ public final class ConnectionOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
       @java.lang.Override
@@ -5942,6 +8279,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
 
@@ -5961,6 +8302,10 @@ public final class ConnectionOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
       public Builder putLabels(
@@ -5976,6 +8321,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
 
@@ -5988,6 +8337,10 @@ public final class ConnectionOuterClass {
 
       private java.lang.Object createdBy_ = "";
       /**
+       * <pre>
+       * ID of the subject which created the connection.
+       * </pre>
+       *
        * <code>string created_by = 8;</code>
        * @return The createdBy.
        */
@@ -6004,6 +8357,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subject which created the connection.
+       * </pre>
+       *
        * <code>string created_by = 8;</code>
        * @return The bytes for createdBy.
        */
@@ -6021,6 +8378,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subject which created the connection.
+       * </pre>
+       *
        * <code>string created_by = 8;</code>
        * @param value The createdBy to set.
        * @return This builder for chaining.
@@ -6036,6 +8397,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subject which created the connection.
+       * </pre>
+       *
        * <code>string created_by = 8;</code>
        * @return This builder for chaining.
        */
@@ -6046,6 +8411,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subject which created the connection.
+       * </pre>
+       *
        * <code>string created_by = 8;</code>
        * @param value The bytes for createdBy to set.
        * @return This builder for chaining.
@@ -6066,6 +8435,10 @@ public final class ConnectionOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams.Builder, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParamsOrBuilder> paramsBuilder_;
       /**
+       * <pre>
+       * Connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 9;</code>
        * @return Whether the params field is set.
        */
@@ -6073,6 +8446,10 @@ public final class ConnectionOuterClass {
         return paramsBuilder_ != null || params_ != null;
       }
       /**
+       * <pre>
+       * Connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 9;</code>
        * @return The params.
        */
@@ -6084,6 +8461,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 9;</code>
        */
       public Builder setParams(yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams value) {
@@ -6100,6 +8481,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 9;</code>
        */
       public Builder setParams(
@@ -6114,6 +8499,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 9;</code>
        */
       public Builder mergeParams(yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams value) {
@@ -6132,6 +8521,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 9;</code>
        */
       public Builder clearParams() {
@@ -6146,6 +8539,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 9;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams.Builder getParamsBuilder() {
@@ -6154,6 +8551,10 @@ public final class ConnectionOuterClass {
         return getParamsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 9;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParamsOrBuilder getParamsOrBuilder() {
@@ -6165,6 +8566,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6184,6 +8589,10 @@ public final class ConnectionOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecret, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecret.Builder, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretOrBuilder> lockboxSecretBuilder_;
       /**
+       * <pre>
+       * Reference to the Lockbox secret containing connection credentials.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.LockboxSecret lockbox_secret = 10;</code>
        * @return Whether the lockboxSecret field is set.
        */
@@ -6192,6 +8601,10 @@ public final class ConnectionOuterClass {
         return secretCase_ == 10;
       }
       /**
+       * <pre>
+       * Reference to the Lockbox secret containing connection credentials.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.LockboxSecret lockbox_secret = 10;</code>
        * @return The lockboxSecret.
        */
@@ -6210,6 +8623,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Reference to the Lockbox secret containing connection credentials.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.LockboxSecret lockbox_secret = 10;</code>
        */
       public Builder setLockboxSecret(yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecret value) {
@@ -6226,6 +8643,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Reference to the Lockbox secret containing connection credentials.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.LockboxSecret lockbox_secret = 10;</code>
        */
       public Builder setLockboxSecret(
@@ -6240,6 +8661,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Reference to the Lockbox secret containing connection credentials.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.LockboxSecret lockbox_secret = 10;</code>
        */
       public Builder mergeLockboxSecret(yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecret value) {
@@ -6262,6 +8687,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Reference to the Lockbox secret containing connection credentials.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.LockboxSecret lockbox_secret = 10;</code>
        */
       public Builder clearLockboxSecret() {
@@ -6281,12 +8710,20 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Reference to the Lockbox secret containing connection credentials.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.LockboxSecret lockbox_secret = 10;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecret.Builder getLockboxSecretBuilder() {
         return getLockboxSecretFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Reference to the Lockbox secret containing connection credentials.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.LockboxSecret lockbox_secret = 10;</code>
        */
       @java.lang.Override
@@ -6301,6 +8738,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Reference to the Lockbox secret containing connection credentials.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.LockboxSecret lockbox_secret = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6322,8 +8763,189 @@ public final class ConnectionOuterClass {
         return lockboxSecretBuilder_;
       }
 
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.Builder, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpecOrBuilder> lockboxSecretSpecBuilder_;
+      /**
+       * <pre>
+       * Specification for creating a new Lockbox secret.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 14;</code>
+       * @return Whether the lockboxSecretSpec field is set.
+       */
+      @java.lang.Override
+      public boolean hasLockboxSecretSpec() {
+        return secretSpecCase_ == 14;
+      }
+      /**
+       * <pre>
+       * Specification for creating a new Lockbox secret.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 14;</code>
+       * @return The lockboxSecretSpec.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec getLockboxSecretSpec() {
+        if (lockboxSecretSpecBuilder_ == null) {
+          if (secretSpecCase_ == 14) {
+            return (yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) secretSpec_;
+          }
+          return yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.getDefaultInstance();
+        } else {
+          if (secretSpecCase_ == 14) {
+            return lockboxSecretSpecBuilder_.getMessage();
+          }
+          return yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Specification for creating a new Lockbox secret.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 14;</code>
+       */
+      public Builder setLockboxSecretSpec(yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec value) {
+        if (lockboxSecretSpecBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          secretSpec_ = value;
+          onChanged();
+        } else {
+          lockboxSecretSpecBuilder_.setMessage(value);
+        }
+        secretSpecCase_ = 14;
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification for creating a new Lockbox secret.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 14;</code>
+       */
+      public Builder setLockboxSecretSpec(
+          yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.Builder builderForValue) {
+        if (lockboxSecretSpecBuilder_ == null) {
+          secretSpec_ = builderForValue.build();
+          onChanged();
+        } else {
+          lockboxSecretSpecBuilder_.setMessage(builderForValue.build());
+        }
+        secretSpecCase_ = 14;
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification for creating a new Lockbox secret.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 14;</code>
+       */
+      public Builder mergeLockboxSecretSpec(yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec value) {
+        if (lockboxSecretSpecBuilder_ == null) {
+          if (secretSpecCase_ == 14 &&
+              secretSpec_ != yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.getDefaultInstance()) {
+            secretSpec_ = yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.newBuilder((yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) secretSpec_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            secretSpec_ = value;
+          }
+          onChanged();
+        } else {
+          if (secretSpecCase_ == 14) {
+            lockboxSecretSpecBuilder_.mergeFrom(value);
+          }
+          lockboxSecretSpecBuilder_.setMessage(value);
+        }
+        secretSpecCase_ = 14;
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification for creating a new Lockbox secret.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 14;</code>
+       */
+      public Builder clearLockboxSecretSpec() {
+        if (lockboxSecretSpecBuilder_ == null) {
+          if (secretSpecCase_ == 14) {
+            secretSpecCase_ = 0;
+            secretSpec_ = null;
+            onChanged();
+          }
+        } else {
+          if (secretSpecCase_ == 14) {
+            secretSpecCase_ = 0;
+            secretSpec_ = null;
+          }
+          lockboxSecretSpecBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification for creating a new Lockbox secret.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 14;</code>
+       */
+      public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.Builder getLockboxSecretSpecBuilder() {
+        return getLockboxSecretSpecFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specification for creating a new Lockbox secret.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 14;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpecOrBuilder getLockboxSecretSpecOrBuilder() {
+        if ((secretSpecCase_ == 14) && (lockboxSecretSpecBuilder_ != null)) {
+          return lockboxSecretSpecBuilder_.getMessageOrBuilder();
+        } else {
+          if (secretSpecCase_ == 14) {
+            return (yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) secretSpec_;
+          }
+          return yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Specification for creating a new Lockbox secret.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.Builder, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpecOrBuilder> 
+          getLockboxSecretSpecFieldBuilder() {
+        if (lockboxSecretSpecBuilder_ == null) {
+          if (!(secretSpecCase_ == 14)) {
+            secretSpec_ = yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.getDefaultInstance();
+          }
+          lockboxSecretSpecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.Builder, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpecOrBuilder>(
+                  (yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) secretSpec_,
+                  getParentForChildren(),
+                  isClean());
+          secretSpec_ = null;
+        }
+        secretSpecCase_ = 14;
+        onChanged();;
+        return lockboxSecretSpecBuilder_;
+      }
+
       private boolean isManaged_ ;
       /**
+       * <pre>
+       * Whether this connection is managed by the system (e.g. an MDB cluster).
+       * </pre>
+       *
        * <code>bool is_managed = 12;</code>
        * @return The isManaged.
        */
@@ -6332,6 +8954,10 @@ public final class ConnectionOuterClass {
         return isManaged_;
       }
       /**
+       * <pre>
+       * Whether this connection is managed by the system (e.g. an MDB cluster).
+       * </pre>
+       *
        * <code>bool is_managed = 12;</code>
        * @param value The isManaged to set.
        * @return This builder for chaining.
@@ -6343,6 +8969,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Whether this connection is managed by the system (e.g. an MDB cluster).
+       * </pre>
+       *
        * <code>bool is_managed = 12;</code>
        * @return This builder for chaining.
        */
@@ -6357,6 +8987,10 @@ public final class ConnectionOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> canUseBuilder_;
       /**
+       * <pre>
+       * Whether the current user can use this connection. Filled only when `with_can_use` has been requested in ListConnectionRequest.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue can_use = 13;</code>
        * @return Whether the canUse field is set.
        */
@@ -6364,6 +8998,10 @@ public final class ConnectionOuterClass {
         return canUseBuilder_ != null || canUse_ != null;
       }
       /**
+       * <pre>
+       * Whether the current user can use this connection. Filled only when `with_can_use` has been requested in ListConnectionRequest.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue can_use = 13;</code>
        * @return The canUse.
        */
@@ -6375,6 +9013,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Whether the current user can use this connection. Filled only when `with_can_use` has been requested in ListConnectionRequest.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue can_use = 13;</code>
        */
       public Builder setCanUse(com.google.protobuf.BoolValue value) {
@@ -6391,6 +9033,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Whether the current user can use this connection. Filled only when `with_can_use` has been requested in ListConnectionRequest.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue can_use = 13;</code>
        */
       public Builder setCanUse(
@@ -6405,6 +9051,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Whether the current user can use this connection. Filled only when `with_can_use` has been requested in ListConnectionRequest.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue can_use = 13;</code>
        */
       public Builder mergeCanUse(com.google.protobuf.BoolValue value) {
@@ -6423,6 +9073,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Whether the current user can use this connection. Filled only when `with_can_use` has been requested in ListConnectionRequest.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue can_use = 13;</code>
        */
       public Builder clearCanUse() {
@@ -6437,6 +9091,10 @@ public final class ConnectionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Whether the current user can use this connection. Filled only when `with_can_use` has been requested in ListConnectionRequest.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue can_use = 13;</code>
        */
       public com.google.protobuf.BoolValue.Builder getCanUseBuilder() {
@@ -6445,6 +9103,10 @@ public final class ConnectionOuterClass {
         return getCanUseFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Whether the current user can use this connection. Filled only when `with_can_use` has been requested in ListConnectionRequest.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue can_use = 13;</code>
        */
       public com.google.protobuf.BoolValueOrBuilder getCanUseOrBuilder() {
@@ -6456,6 +9118,10 @@ public final class ConnectionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Whether the current user can use this connection. Filled only when `with_can_use` has been requested in ListConnectionRequest.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue can_use = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6535,6 +9201,11 @@ public final class ConnectionOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_connectionmanager_v1_LockboxSecret_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_connectionmanager_v1_LockboxSecretSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_connectionmanager_v1_LockboxSecretSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_connectionmanager_v1_Connection_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -6569,49 +9240,56 @@ public final class ConnectionOuterClass {
       "anager/v1/opensearch.proto\0321yandex/cloud" +
       "/connectionmanager/v1/greenplum.proto\032-y" +
       "andex/cloud/connectionmanager/v1/kafka.p" +
-      "roto\"\370\005\n\020ConnectionParams\022M\n\npostgresql\030" +
-      "\001 \001(\01327.yandex.cloud.connectionmanager.v" +
-      "1.PostgreSQLConnectionH\000\022C\n\005mysql\030\002 \001(\0132" +
-      "2.yandex.cloud.connectionmanager.v1.MySQ" +
-      "LConnectionH\000\022G\n\007mongodb\030\003 \001(\01324.yandex." +
-      "cloud.connectionmanager.v1.MongoDBConnec" +
-      "tionH\000\022M\n\nclickhouse\030\004 \001(\01327.yandex.clou" +
-      "d.connectionmanager.v1.ClickHouseConnect" +
-      "ionH\000\022C\n\005kafka\030\005 \001(\01322.yandex.cloud.conn" +
-      "ectionmanager.v1.KafkaConnectionH\000\022C\n\005re" +
-      "dis\030\006 \001(\01322.yandex.cloud.connectionmanag" +
-      "er.v1.RedisConnectionH\000\022M\n\nopensearch\030\007 " +
-      "\001(\01327.yandex.cloud.connectionmanager.v1." +
-      "OpenSearchConnectionH\000\022C\n\005trino\030\010 \001(\01322." +
-      "yandex.cloud.connectionmanager.v1.TrinoC" +
-      "onnectionH\000\022E\n\006valkey\030\t \001(\01323.yandex.clo" +
-      "ud.connectionmanager.v1.ValkeyConnection" +
-      "H\000\022K\n\tgreenplum\030\n \001(\01326.yandex.cloud.con" +
-      "nectionmanager.v1.GreenplumConnectionH\000B" +
-      "\006\n\004type\"D\n\rLockboxSecret\022\n\n\002id\030\001 \001(\t\022\017\n\007" +
-      "version\030\002 \001(\t\022\026\n\016newest_version\030\003 \001(\t\"\236\004" +
-      "\n\nConnection\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 " +
-      "\001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobu" +
-      "f.Timestamp\022.\n\nupdated_at\030\004 \001(\0132\032.google" +
-      ".protobuf.Timestamp\022\014\n\004name\030\005 \001(\t\022\023\n\013des" +
-      "cription\030\006 \001(\t\022I\n\006labels\030\007 \003(\01329.yandex." +
-      "cloud.connectionmanager.v1.Connection.La" +
-      "belsEntry\022\022\n\ncreated_by\030\010 \001(\t\022C\n\006params\030" +
-      "\t \001(\01323.yandex.cloud.connectionmanager.v" +
-      "1.ConnectionParams\022J\n\016lockbox_secret\030\n \001" +
-      "(\01320.yandex.cloud.connectionmanager.v1.L" +
-      "ockboxSecretH\000\022\022\n\nis_managed\030\014 \001(\010\022+\n\007ca" +
-      "n_use\030\r \001(\0132\032.google.protobuf.BoolValue\032" +
-      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001B\010\n\006secretJ\004\010\013\020\014*\245\001\n\006DBType\022\027\n\023DB_" +
-      "TYPE_UNSPECIFIED\020\000\022\016\n\nPOSTGRESQL\020\001\022\t\n\005MY" +
-      "SQL\020\002\022\016\n\nCLICKHOUSE\020\003\022\013\n\007MONGODB\020\004\022\t\n\005KA" +
-      "FKA\020\005\022\t\n\005REDIS\020\006\022\016\n\nOPENSEARCH\020\007\022\t\n\005TRIN" +
-      "O\020\010\022\n\n\006VALKEY\020\t\022\r\n\tGREENPLUM\020\nB\200\001\n%yande" +
-      "x.cloud.api.connectionmanager.v1ZWgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/connectionmanager/v1;connectionmanage" +
-      "rb\006proto3"
+      "roto\0320yandex/cloud/connectionmanager/v1/" +
+      "storedoc.proto\"\303\006\n\020ConnectionParams\022M\n\np" +
+      "ostgresql\030\001 \001(\01327.yandex.cloud.connectio" +
+      "nmanager.v1.PostgreSQLConnectionH\000\022C\n\005my" +
+      "sql\030\002 \001(\01322.yandex.cloud.connectionmanag" +
+      "er.v1.MySQLConnectionH\000\022G\n\007mongodb\030\003 \001(\013" +
+      "24.yandex.cloud.connectionmanager.v1.Mon" +
+      "goDBConnectionH\000\022M\n\nclickhouse\030\004 \001(\01327.y" +
+      "andex.cloud.connectionmanager.v1.ClickHo" +
+      "useConnectionH\000\022C\n\005kafka\030\005 \001(\01322.yandex." +
+      "cloud.connectionmanager.v1.KafkaConnecti" +
+      "onH\000\022C\n\005redis\030\006 \001(\01322.yandex.cloud.conne" +
+      "ctionmanager.v1.RedisConnectionH\000\022M\n\nope" +
+      "nsearch\030\007 \001(\01327.yandex.cloud.connectionm" +
+      "anager.v1.OpenSearchConnectionH\000\022C\n\005trin" +
+      "o\030\010 \001(\01322.yandex.cloud.connectionmanager" +
+      ".v1.TrinoConnectionH\000\022E\n\006valkey\030\t \001(\01323." +
+      "yandex.cloud.connectionmanager.v1.Valkey" +
+      "ConnectionH\000\022K\n\tgreenplum\030\n \001(\01326.yandex" +
+      ".cloud.connectionmanager.v1.GreenplumCon" +
+      "nectionH\000\022I\n\010storedoc\030\013 \001(\01325.yandex.clo" +
+      "ud.connectionmanager.v1.StoreDocConnecti" +
+      "onH\000B\006\n\004type\"D\n\rLockboxSecret\022\n\n\002id\030\001 \001(" +
+      "\t\022\017\n\007version\030\002 \001(\t\022\026\n\016newest_version\030\003 \001" +
+      "(\t\"&\n\021LockboxSecretSpec\022\021\n\tfolder_id\030\001 \001" +
+      "(\t\"\202\005\n\nConnection\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_" +
+      "id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\022.\n\nupdated_at\030\004 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\022\014\n\004name\030\005 \001(\t\022\023" +
+      "\n\013description\030\006 \001(\t\022I\n\006labels\030\007 \003(\01329.ya" +
+      "ndex.cloud.connectionmanager.v1.Connecti" +
+      "on.LabelsEntry\022\022\n\ncreated_by\030\010 \001(\t\022C\n\006pa" +
+      "rams\030\t \001(\01323.yandex.cloud.connectionmana" +
+      "ger.v1.ConnectionParams\022J\n\016lockbox_secre" +
+      "t\030\n \001(\01320.yandex.cloud.connectionmanager" +
+      ".v1.LockboxSecretH\000\022S\n\023lockbox_secret_sp" +
+      "ec\030\016 \001(\01324.yandex.cloud.connectionmanage" +
+      "r.v1.LockboxSecretSpecH\001\022\022\n\nis_managed\030\014" +
+      " \001(\010\022+\n\007can_use\030\r \001(\0132\032.google.protobuf." +
+      "BoolValue\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001B\010\n\006secretB\r\n\013secret_spe" +
+      "cJ\004\010\013\020\014*\263\001\n\006DBType\022\027\n\023DB_TYPE_UNSPECIFIE" +
+      "D\020\000\022\016\n\nPOSTGRESQL\020\001\022\t\n\005MYSQL\020\002\022\016\n\nCLICKH" +
+      "OUSE\020\003\022\013\n\007MONGODB\020\004\022\t\n\005KAFKA\020\005\022\t\n\005REDIS\020" +
+      "\006\022\016\n\nOPENSEARCH\020\007\022\t\n\005TRINO\020\010\022\n\n\006VALKEY\020\t" +
+      "\022\r\n\tGREENPLUM\020\n\022\014\n\010STOREDOC\020\013B\200\001\n%yandex" +
+      ".cloud.api.connectionmanager.v1ZWgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/connectionmanager/v1;connectionmanager" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6628,25 +9306,32 @@ public final class ConnectionOuterClass {
           yandex.cloud.api.connectionmanager.v1.Opensearch.getDescriptor(),
           yandex.cloud.api.connectionmanager.v1.Greenplum.getDescriptor(),
           yandex.cloud.api.connectionmanager.v1.Kafka.getDescriptor(),
+          yandex.cloud.api.connectionmanager.v1.Storedoc.getDescriptor(),
         });
     internal_static_yandex_cloud_connectionmanager_v1_ConnectionParams_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_connectionmanager_v1_ConnectionParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_connectionmanager_v1_ConnectionParams_descriptor,
-        new java.lang.String[] { "Postgresql", "Mysql", "Mongodb", "Clickhouse", "Kafka", "Redis", "Opensearch", "Trino", "Valkey", "Greenplum", "Type", });
+        new java.lang.String[] { "Postgresql", "Mysql", "Mongodb", "Clickhouse", "Kafka", "Redis", "Opensearch", "Trino", "Valkey", "Greenplum", "Storedoc", "Type", });
     internal_static_yandex_cloud_connectionmanager_v1_LockboxSecret_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_connectionmanager_v1_LockboxSecret_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_connectionmanager_v1_LockboxSecret_descriptor,
         new java.lang.String[] { "Id", "Version", "NewestVersion", });
-    internal_static_yandex_cloud_connectionmanager_v1_Connection_descriptor =
+    internal_static_yandex_cloud_connectionmanager_v1_LockboxSecretSpec_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_connectionmanager_v1_LockboxSecretSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_connectionmanager_v1_LockboxSecretSpec_descriptor,
+        new java.lang.String[] { "FolderId", });
+    internal_static_yandex_cloud_connectionmanager_v1_Connection_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_connectionmanager_v1_Connection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_connectionmanager_v1_Connection_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "UpdatedAt", "Name", "Description", "Labels", "CreatedBy", "Params", "LockboxSecret", "IsManaged", "CanUse", "Secret", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "UpdatedAt", "Name", "Description", "Labels", "CreatedBy", "Params", "LockboxSecret", "LockboxSecretSpec", "IsManaged", "CanUse", "Secret", "SecretSpec", });
     internal_static_yandex_cloud_connectionmanager_v1_Connection_LabelsEntry_descriptor =
       internal_static_yandex_cloud_connectionmanager_v1_Connection_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_connectionmanager_v1_Connection_LabelsEntry_fieldAccessorTable = new
@@ -6665,6 +9350,7 @@ public final class ConnectionOuterClass {
     yandex.cloud.api.connectionmanager.v1.Opensearch.getDescriptor();
     yandex.cloud.api.connectionmanager.v1.Greenplum.getDescriptor();
     yandex.cloud.api.connectionmanager.v1.Kafka.getDescriptor();
+    yandex.cloud.api.connectionmanager.v1.Storedoc.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

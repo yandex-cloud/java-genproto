@@ -254,7 +254,8 @@ public final class Ydb {
 
     /**
      * <pre>
-     * Path in YDB where to store tables
+     * Database path in YDB where tables are stored. 
+     * Example: `/ru/transfer_manager/prod/data-transfer-yt`
      * </pre>
      *
      * <code>string database = 1;</code>
@@ -263,7 +264,8 @@ public final class Ydb {
     java.lang.String getDatabase();
     /**
      * <pre>
-     * Path in YDB where to store tables
+     * Database path in YDB where tables are stored. 
+     * Example: `/ru/transfer_manager/prod/data-transfer-yt`
      * </pre>
      *
      * <code>string database = 1;</code>
@@ -274,7 +276,8 @@ public final class Ydb {
 
     /**
      * <pre>
-     * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135
+     * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135.
+     * If not specified, will be determined by database
      * </pre>
      *
      * <code>string instance = 2;</code>
@@ -283,7 +286,8 @@ public final class Ydb {
     java.lang.String getInstance();
     /**
      * <pre>
-     * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135
+     * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135.
+     * If not specified, will be determined by database
      * </pre>
      *
      * <code>string instance = 2;</code>
@@ -293,23 +297,43 @@ public final class Ydb {
         getInstanceBytes();
 
     /**
+     * <pre>
+     * A list of paths which should be uploaded. When not specified, all available
+     * tables are uploaded
+     * </pre>
+     *
      * <code>repeated string paths = 5;</code>
      * @return A list containing the paths.
      */
     java.util.List<java.lang.String>
         getPathsList();
     /**
+     * <pre>
+     * A list of paths which should be uploaded. When not specified, all available
+     * tables are uploaded
+     * </pre>
+     *
      * <code>repeated string paths = 5;</code>
      * @return The count of paths.
      */
     int getPathsCount();
     /**
+     * <pre>
+     * A list of paths which should be uploaded. When not specified, all available
+     * tables are uploaded
+     * </pre>
+     *
      * <code>repeated string paths = 5;</code>
      * @param index The index of the element to return.
      * @return The paths at the given index.
      */
     java.lang.String getPaths(int index);
     /**
+     * <pre>
+     * A list of paths which should be uploaded. When not specified, all available
+     * tables are uploaded
+     * </pre>
+     *
      * <code>repeated string paths = 5;</code>
      * @param index The index of the value to return.
      * @return The bytes of the paths at the given index.
@@ -318,11 +342,19 @@ public final class Ydb {
         getPathsBytes(int index);
 
     /**
+     * <pre>
+     * Service account ID for interaction with database
+     * </pre>
+     *
      * <code>string service_account_id = 6;</code>
      * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
     /**
+     * <pre>
+     * Service account ID for interaction with database
+     * </pre>
+     *
      * <code>string service_account_id = 6;</code>
      * @return The bytes for serviceAccountId.
      */
@@ -331,7 +363,8 @@ public final class Ydb {
 
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 30;</code>
@@ -340,7 +373,8 @@ public final class Ydb {
     java.lang.String getSubnetId();
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 30;</code>
@@ -371,7 +405,8 @@ public final class Ydb {
 
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -381,7 +416,8 @@ public final class Ydb {
         getSecurityGroupsList();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -390,7 +426,8 @@ public final class Ydb {
     int getSecurityGroupsCount();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -400,7 +437,8 @@ public final class Ydb {
     java.lang.String getSecurityGroups(int index);
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -412,7 +450,7 @@ public final class Ydb {
 
     /**
      * <pre>
-     * Pre-created change feed
+     * Pre-created change feed if any
      * </pre>
      *
      * <code>string changefeed_custom_name = 35;</code>
@@ -421,7 +459,7 @@ public final class Ydb {
     java.lang.String getChangefeedCustomName();
     /**
      * <pre>
-     * Pre-created change feed
+     * Pre-created change feed if any
      * </pre>
      *
      * <code>string changefeed_custom_name = 35;</code>
@@ -431,11 +469,19 @@ public final class Ydb {
         getChangefeedCustomNameBytes();
 
     /**
+     * <pre>
+     * Consumer for pre-created change feed if any
+     * </pre>
+     *
      * <code>string changefeed_custom_consumer_name = 36;</code>
      * @return The changefeedCustomConsumerName.
      */
     java.lang.String getChangefeedCustomConsumerName();
     /**
+     * <pre>
+     * Consumer for pre-created change feed if any
+     * </pre>
+     *
      * <code>string changefeed_custom_consumer_name = 36;</code>
      * @return The bytes for changefeedCustomConsumerName.
      */
@@ -443,6 +489,10 @@ public final class Ydb {
         getChangefeedCustomConsumerNameBytes();
   }
   /**
+   * <pre>
+   * Settings specific to the YDB source endpoint
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.YdbSource}
    */
   public static final class YdbSource extends
@@ -599,7 +649,8 @@ public final class Ydb {
     private volatile java.lang.Object database_;
     /**
      * <pre>
-     * Path in YDB where to store tables
+     * Database path in YDB where tables are stored. 
+     * Example: `/ru/transfer_manager/prod/data-transfer-yt`
      * </pre>
      *
      * <code>string database = 1;</code>
@@ -620,7 +671,8 @@ public final class Ydb {
     }
     /**
      * <pre>
-     * Path in YDB where to store tables
+     * Database path in YDB where tables are stored. 
+     * Example: `/ru/transfer_manager/prod/data-transfer-yt`
      * </pre>
      *
      * <code>string database = 1;</code>
@@ -645,7 +697,8 @@ public final class Ydb {
     private volatile java.lang.Object instance_;
     /**
      * <pre>
-     * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135
+     * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135.
+     * If not specified, will be determined by database
      * </pre>
      *
      * <code>string instance = 2;</code>
@@ -666,7 +719,8 @@ public final class Ydb {
     }
     /**
      * <pre>
-     * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135
+     * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135.
+     * If not specified, will be determined by database
      * </pre>
      *
      * <code>string instance = 2;</code>
@@ -690,6 +744,11 @@ public final class Ydb {
     public static final int PATHS_FIELD_NUMBER = 5;
     private com.google.protobuf.LazyStringList paths_;
     /**
+     * <pre>
+     * A list of paths which should be uploaded. When not specified, all available
+     * tables are uploaded
+     * </pre>
+     *
      * <code>repeated string paths = 5;</code>
      * @return A list containing the paths.
      */
@@ -698,6 +757,11 @@ public final class Ydb {
       return paths_;
     }
     /**
+     * <pre>
+     * A list of paths which should be uploaded. When not specified, all available
+     * tables are uploaded
+     * </pre>
+     *
      * <code>repeated string paths = 5;</code>
      * @return The count of paths.
      */
@@ -705,6 +769,11 @@ public final class Ydb {
       return paths_.size();
     }
     /**
+     * <pre>
+     * A list of paths which should be uploaded. When not specified, all available
+     * tables are uploaded
+     * </pre>
+     *
      * <code>repeated string paths = 5;</code>
      * @param index The index of the element to return.
      * @return The paths at the given index.
@@ -713,6 +782,11 @@ public final class Ydb {
       return paths_.get(index);
     }
     /**
+     * <pre>
+     * A list of paths which should be uploaded. When not specified, all available
+     * tables are uploaded
+     * </pre>
+     *
      * <code>repeated string paths = 5;</code>
      * @param index The index of the value to return.
      * @return The bytes of the paths at the given index.
@@ -725,6 +799,10 @@ public final class Ydb {
     public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 6;
     private volatile java.lang.Object serviceAccountId_;
     /**
+     * <pre>
+     * Service account ID for interaction with database
+     * </pre>
+     *
      * <code>string service_account_id = 6;</code>
      * @return The serviceAccountId.
      */
@@ -742,6 +820,10 @@ public final class Ydb {
       }
     }
     /**
+     * <pre>
+     * Service account ID for interaction with database
+     * </pre>
+     *
      * <code>string service_account_id = 6;</code>
      * @return The bytes for serviceAccountId.
      */
@@ -764,7 +846,8 @@ public final class Ydb {
     private volatile java.lang.Object subnetId_;
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 30;</code>
@@ -785,7 +868,8 @@ public final class Ydb {
     }
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 30;</code>
@@ -856,7 +940,8 @@ public final class Ydb {
     private com.google.protobuf.LazyStringList securityGroups_;
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -868,7 +953,8 @@ public final class Ydb {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -879,7 +965,8 @@ public final class Ydb {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -891,7 +978,8 @@ public final class Ydb {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 34;</code>
@@ -907,7 +995,7 @@ public final class Ydb {
     private volatile java.lang.Object changefeedCustomName_;
     /**
      * <pre>
-     * Pre-created change feed
+     * Pre-created change feed if any
      * </pre>
      *
      * <code>string changefeed_custom_name = 35;</code>
@@ -928,7 +1016,7 @@ public final class Ydb {
     }
     /**
      * <pre>
-     * Pre-created change feed
+     * Pre-created change feed if any
      * </pre>
      *
      * <code>string changefeed_custom_name = 35;</code>
@@ -952,6 +1040,10 @@ public final class Ydb {
     public static final int CHANGEFEED_CUSTOM_CONSUMER_NAME_FIELD_NUMBER = 36;
     private volatile java.lang.Object changefeedCustomConsumerName_;
     /**
+     * <pre>
+     * Consumer for pre-created change feed if any
+     * </pre>
+     *
      * <code>string changefeed_custom_consumer_name = 36;</code>
      * @return The changefeedCustomConsumerName.
      */
@@ -969,6 +1061,10 @@ public final class Ydb {
       }
     }
     /**
+     * <pre>
+     * Consumer for pre-created change feed if any
+     * </pre>
+     *
      * <code>string changefeed_custom_consumer_name = 36;</code>
      * @return The bytes for changefeedCustomConsumerName.
      */
@@ -1236,6 +1332,10 @@ public final class Ydb {
       return builder;
     }
     /**
+     * <pre>
+     * Settings specific to the YDB source endpoint
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.YdbSource}
      */
     public static final class Builder extends
@@ -1464,7 +1564,8 @@ public final class Ydb {
       private java.lang.Object database_ = "";
       /**
        * <pre>
-       * Path in YDB where to store tables
+       * Database path in YDB where tables are stored. 
+       * Example: `/ru/transfer_manager/prod/data-transfer-yt`
        * </pre>
        *
        * <code>string database = 1;</code>
@@ -1484,7 +1585,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Path in YDB where to store tables
+       * Database path in YDB where tables are stored. 
+       * Example: `/ru/transfer_manager/prod/data-transfer-yt`
        * </pre>
        *
        * <code>string database = 1;</code>
@@ -1505,7 +1607,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Path in YDB where to store tables
+       * Database path in YDB where tables are stored. 
+       * Example: `/ru/transfer_manager/prod/data-transfer-yt`
        * </pre>
        *
        * <code>string database = 1;</code>
@@ -1524,7 +1627,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Path in YDB where to store tables
+       * Database path in YDB where tables are stored. 
+       * Example: `/ru/transfer_manager/prod/data-transfer-yt`
        * </pre>
        *
        * <code>string database = 1;</code>
@@ -1538,7 +1642,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Path in YDB where to store tables
+       * Database path in YDB where tables are stored. 
+       * Example: `/ru/transfer_manager/prod/data-transfer-yt`
        * </pre>
        *
        * <code>string database = 1;</code>
@@ -1560,7 +1665,8 @@ public final class Ydb {
       private java.lang.Object instance_ = "";
       /**
        * <pre>
-       * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135
+       * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135.
+       * If not specified, will be determined by database
        * </pre>
        *
        * <code>string instance = 2;</code>
@@ -1580,7 +1686,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135
+       * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135.
+       * If not specified, will be determined by database
        * </pre>
        *
        * <code>string instance = 2;</code>
@@ -1601,7 +1708,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135
+       * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135.
+       * If not specified, will be determined by database
        * </pre>
        *
        * <code>string instance = 2;</code>
@@ -1620,7 +1728,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135
+       * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135.
+       * If not specified, will be determined by database
        * </pre>
        *
        * <code>string instance = 2;</code>
@@ -1634,7 +1743,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135
+       * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135.
+       * If not specified, will be determined by database
        * </pre>
        *
        * <code>string instance = 2;</code>
@@ -1661,6 +1771,11 @@ public final class Ydb {
          }
       }
       /**
+       * <pre>
+       * A list of paths which should be uploaded. When not specified, all available
+       * tables are uploaded
+       * </pre>
+       *
        * <code>repeated string paths = 5;</code>
        * @return A list containing the paths.
        */
@@ -1669,6 +1784,11 @@ public final class Ydb {
         return paths_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * A list of paths which should be uploaded. When not specified, all available
+       * tables are uploaded
+       * </pre>
+       *
        * <code>repeated string paths = 5;</code>
        * @return The count of paths.
        */
@@ -1676,6 +1796,11 @@ public final class Ydb {
         return paths_.size();
       }
       /**
+       * <pre>
+       * A list of paths which should be uploaded. When not specified, all available
+       * tables are uploaded
+       * </pre>
+       *
        * <code>repeated string paths = 5;</code>
        * @param index The index of the element to return.
        * @return The paths at the given index.
@@ -1684,6 +1809,11 @@ public final class Ydb {
         return paths_.get(index);
       }
       /**
+       * <pre>
+       * A list of paths which should be uploaded. When not specified, all available
+       * tables are uploaded
+       * </pre>
+       *
        * <code>repeated string paths = 5;</code>
        * @param index The index of the value to return.
        * @return The bytes of the paths at the given index.
@@ -1693,6 +1823,11 @@ public final class Ydb {
         return paths_.getByteString(index);
       }
       /**
+       * <pre>
+       * A list of paths which should be uploaded. When not specified, all available
+       * tables are uploaded
+       * </pre>
+       *
        * <code>repeated string paths = 5;</code>
        * @param index The index to set the value at.
        * @param value The paths to set.
@@ -1709,6 +1844,11 @@ public final class Ydb {
         return this;
       }
       /**
+       * <pre>
+       * A list of paths which should be uploaded. When not specified, all available
+       * tables are uploaded
+       * </pre>
+       *
        * <code>repeated string paths = 5;</code>
        * @param value The paths to add.
        * @return This builder for chaining.
@@ -1724,6 +1864,11 @@ public final class Ydb {
         return this;
       }
       /**
+       * <pre>
+       * A list of paths which should be uploaded. When not specified, all available
+       * tables are uploaded
+       * </pre>
+       *
        * <code>repeated string paths = 5;</code>
        * @param values The paths to add.
        * @return This builder for chaining.
@@ -1737,6 +1882,11 @@ public final class Ydb {
         return this;
       }
       /**
+       * <pre>
+       * A list of paths which should be uploaded. When not specified, all available
+       * tables are uploaded
+       * </pre>
+       *
        * <code>repeated string paths = 5;</code>
        * @return This builder for chaining.
        */
@@ -1747,6 +1897,11 @@ public final class Ydb {
         return this;
       }
       /**
+       * <pre>
+       * A list of paths which should be uploaded. When not specified, all available
+       * tables are uploaded
+       * </pre>
+       *
        * <code>repeated string paths = 5;</code>
        * @param value The bytes of the paths to add.
        * @return This builder for chaining.
@@ -1765,6 +1920,10 @@ public final class Ydb {
 
       private java.lang.Object serviceAccountId_ = "";
       /**
+       * <pre>
+       * Service account ID for interaction with database
+       * </pre>
+       *
        * <code>string service_account_id = 6;</code>
        * @return The serviceAccountId.
        */
@@ -1781,6 +1940,10 @@ public final class Ydb {
         }
       }
       /**
+       * <pre>
+       * Service account ID for interaction with database
+       * </pre>
+       *
        * <code>string service_account_id = 6;</code>
        * @return The bytes for serviceAccountId.
        */
@@ -1798,6 +1961,10 @@ public final class Ydb {
         }
       }
       /**
+       * <pre>
+       * Service account ID for interaction with database
+       * </pre>
+       *
        * <code>string service_account_id = 6;</code>
        * @param value The serviceAccountId to set.
        * @return This builder for chaining.
@@ -1813,6 +1980,10 @@ public final class Ydb {
         return this;
       }
       /**
+       * <pre>
+       * Service account ID for interaction with database
+       * </pre>
+       *
        * <code>string service_account_id = 6;</code>
        * @return This builder for chaining.
        */
@@ -1823,6 +1994,10 @@ public final class Ydb {
         return this;
       }
       /**
+       * <pre>
+       * Service account ID for interaction with database
+       * </pre>
+       *
        * <code>string service_account_id = 6;</code>
        * @param value The bytes for serviceAccountId to set.
        * @return This builder for chaining.
@@ -1842,7 +2017,8 @@ public final class Ydb {
       private java.lang.Object subnetId_ = "";
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 30;</code>
@@ -1862,7 +2038,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 30;</code>
@@ -1883,7 +2060,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 30;</code>
@@ -1902,7 +2080,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 30;</code>
@@ -1916,7 +2095,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 30;</code>
@@ -2040,7 +2220,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -2052,7 +2233,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -2063,7 +2245,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -2075,7 +2258,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -2088,7 +2272,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -2108,7 +2293,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -2127,7 +2313,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -2144,7 +2331,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -2158,7 +2346,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 34;</code>
@@ -2180,7 +2369,7 @@ public final class Ydb {
       private java.lang.Object changefeedCustomName_ = "";
       /**
        * <pre>
-       * Pre-created change feed
+       * Pre-created change feed if any
        * </pre>
        *
        * <code>string changefeed_custom_name = 35;</code>
@@ -2200,7 +2389,7 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Pre-created change feed
+       * Pre-created change feed if any
        * </pre>
        *
        * <code>string changefeed_custom_name = 35;</code>
@@ -2221,7 +2410,7 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Pre-created change feed
+       * Pre-created change feed if any
        * </pre>
        *
        * <code>string changefeed_custom_name = 35;</code>
@@ -2240,7 +2429,7 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Pre-created change feed
+       * Pre-created change feed if any
        * </pre>
        *
        * <code>string changefeed_custom_name = 35;</code>
@@ -2254,7 +2443,7 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Pre-created change feed
+       * Pre-created change feed if any
        * </pre>
        *
        * <code>string changefeed_custom_name = 35;</code>
@@ -2275,6 +2464,10 @@ public final class Ydb {
 
       private java.lang.Object changefeedCustomConsumerName_ = "";
       /**
+       * <pre>
+       * Consumer for pre-created change feed if any
+       * </pre>
+       *
        * <code>string changefeed_custom_consumer_name = 36;</code>
        * @return The changefeedCustomConsumerName.
        */
@@ -2291,6 +2484,10 @@ public final class Ydb {
         }
       }
       /**
+       * <pre>
+       * Consumer for pre-created change feed if any
+       * </pre>
+       *
        * <code>string changefeed_custom_consumer_name = 36;</code>
        * @return The bytes for changefeedCustomConsumerName.
        */
@@ -2308,6 +2505,10 @@ public final class Ydb {
         }
       }
       /**
+       * <pre>
+       * Consumer for pre-created change feed if any
+       * </pre>
+       *
        * <code>string changefeed_custom_consumer_name = 36;</code>
        * @param value The changefeedCustomConsumerName to set.
        * @return This builder for chaining.
@@ -2323,6 +2524,10 @@ public final class Ydb {
         return this;
       }
       /**
+       * <pre>
+       * Consumer for pre-created change feed if any
+       * </pre>
+       *
        * <code>string changefeed_custom_consumer_name = 36;</code>
        * @return This builder for chaining.
        */
@@ -2333,6 +2538,10 @@ public final class Ydb {
         return this;
       }
       /**
+       * <pre>
+       * Consumer for pre-created change feed if any
+       * </pre>
+       *
        * <code>string changefeed_custom_consumer_name = 36;</code>
        * @param value The bytes for changefeedCustomConsumerName to set.
        * @return This builder for chaining.
@@ -2407,7 +2616,8 @@ public final class Ydb {
 
     /**
      * <pre>
-     * Path in YDB where to store tables
+     * Database path in YDB where tables are stored. 
+     * Example: `/ru/transfer_manager/prod/data-transfer`
      * </pre>
      *
      * <code>string database = 1;</code>
@@ -2416,7 +2626,8 @@ public final class Ydb {
     java.lang.String getDatabase();
     /**
      * <pre>
-     * Path in YDB where to store tables
+     * Database path in YDB where tables are stored. 
+     * Example: `/ru/transfer_manager/prod/data-transfer`
      * </pre>
      *
      * <code>string database = 1;</code>
@@ -2427,7 +2638,8 @@ public final class Ydb {
 
     /**
      * <pre>
-     * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135
+     * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135.
+     * If not specified, will be determined by database
      * </pre>
      *
      * <code>string instance = 2;</code>
@@ -2436,7 +2648,8 @@ public final class Ydb {
     java.lang.String getInstance();
     /**
      * <pre>
-     * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135
+     * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135.
+     * If not specified, will be determined by database
      * </pre>
      *
      * <code>string instance = 2;</code>
@@ -2466,11 +2679,19 @@ public final class Ydb {
         getPathBytes();
 
     /**
+     * <pre>
+     * Service account ID for interaction with database
+     * </pre>
+     *
      * <code>string service_account_id = 11;</code>
      * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
     /**
+     * <pre>
+     * Service account ID for interaction with database
+     * </pre>
+     *
      * <code>string service_account_id = 11;</code>
      * @return The bytes for serviceAccountId.
      */
@@ -2479,7 +2700,8 @@ public final class Ydb {
 
     /**
      * <pre>
-     * Cleanup policy
+     * Cleanup policy determine how to clean collections when activating the transfer. 
+     * One of `YDB_CLEANUP_POLICY_DISABLED` or `YDB_CLEANUP_POLICY_DROP`
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
@@ -2488,7 +2710,8 @@ public final class Ydb {
     int getCleanupPolicyValue();
     /**
      * <pre>
-     * Cleanup policy
+     * Cleanup policy determine how to clean collections when activating the transfer. 
+     * One of `YDB_CLEANUP_POLICY_DISABLED` or `YDB_CLEANUP_POLICY_DROP`
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
@@ -2498,7 +2721,9 @@ public final class Ydb {
 
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 30;</code>
@@ -2507,7 +2732,9 @@ public final class Ydb {
     java.lang.String getSubnetId();
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 30;</code>
@@ -2518,7 +2745,7 @@ public final class Ydb {
 
     /**
      * <pre>
-     * SA content
+     * Authentication key
      * </pre>
      *
      * <code>string sa_key_content = 32;</code>
@@ -2527,7 +2754,7 @@ public final class Ydb {
     java.lang.String getSaKeyContent();
     /**
      * <pre>
-     * SA content
+     * Authentication key
      * </pre>
      *
      * <code>string sa_key_content = 32;</code>
@@ -2538,7 +2765,8 @@ public final class Ydb {
 
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 33;</code>
@@ -2548,7 +2776,8 @@ public final class Ydb {
         getSecurityGroupsList();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 33;</code>
@@ -2557,7 +2786,8 @@ public final class Ydb {
     int getSecurityGroupsCount();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 33;</code>
@@ -2567,7 +2797,8 @@ public final class Ydb {
     java.lang.String getSecurityGroups(int index);
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 33;</code>
@@ -2579,8 +2810,8 @@ public final class Ydb {
 
     /**
      * <pre>
-     * Should create column-oriented table (OLAP). By default it creates row-oriented
-     * (OLTP)
+     * Whether a column-oriented (i.e. OLAP) tables should be created. 
+     * Default is `false` (create row-oriented OLTP tables)
      * </pre>
      *
      * <code>bool is_table_column_oriented = 34;</code>
@@ -2590,7 +2821,9 @@ public final class Ydb {
 
     /**
      * <pre>
-     * Compression that will be used for default columns family on YDB table creation
+     * Compression that will be used for default columns family on YDB table creation.
+     * One of `YDB_DEFAULT_COMPRESSION_UNSPECIFIED`,
+     * `YDB_DEFAULT_COMPRESSION_DISABLED`, `YDB_DEFAULT_COMPRESSION_LZ4`
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbDefaultCompression default_compression = 35;</code>
@@ -2599,7 +2832,9 @@ public final class Ydb {
     int getDefaultCompressionValue();
     /**
      * <pre>
-     * Compression that will be used for default columns family on YDB table creation
+     * Compression that will be used for default columns family on YDB table creation.
+     * One of `YDB_DEFAULT_COMPRESSION_UNSPECIFIED`,
+     * `YDB_DEFAULT_COMPRESSION_DISABLED`, `YDB_DEFAULT_COMPRESSION_LZ4`
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbDefaultCompression default_compression = 35;</code>
@@ -2608,12 +2843,20 @@ public final class Ydb {
     yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbDefaultCompression getDefaultCompression();
 
     /**
+     * <pre>
+     * Whether can change table schema if schema changed on source
+     * </pre>
+     *
      * <code>bool is_schema_migration_disabled = 36;</code>
      * @return The isSchemaMigrationDisabled.
      */
     boolean getIsSchemaMigrationDisabled();
   }
   /**
+   * <pre>
+   * Settings specific to the YDB target endpoint
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.YdbTarget}
    */
   public static final class YdbTarget extends
@@ -2774,7 +3017,8 @@ public final class Ydb {
     private volatile java.lang.Object database_;
     /**
      * <pre>
-     * Path in YDB where to store tables
+     * Database path in YDB where tables are stored. 
+     * Example: `/ru/transfer_manager/prod/data-transfer`
      * </pre>
      *
      * <code>string database = 1;</code>
@@ -2795,7 +3039,8 @@ public final class Ydb {
     }
     /**
      * <pre>
-     * Path in YDB where to store tables
+     * Database path in YDB where tables are stored. 
+     * Example: `/ru/transfer_manager/prod/data-transfer`
      * </pre>
      *
      * <code>string database = 1;</code>
@@ -2820,7 +3065,8 @@ public final class Ydb {
     private volatile java.lang.Object instance_;
     /**
      * <pre>
-     * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135
+     * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135.
+     * If not specified, will be determined by database
      * </pre>
      *
      * <code>string instance = 2;</code>
@@ -2841,7 +3087,8 @@ public final class Ydb {
     }
     /**
      * <pre>
-     * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135
+     * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135.
+     * If not specified, will be determined by database
      * </pre>
      *
      * <code>string instance = 2;</code>
@@ -2911,6 +3158,10 @@ public final class Ydb {
     public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 11;
     private volatile java.lang.Object serviceAccountId_;
     /**
+     * <pre>
+     * Service account ID for interaction with database
+     * </pre>
+     *
      * <code>string service_account_id = 11;</code>
      * @return The serviceAccountId.
      */
@@ -2928,6 +3179,10 @@ public final class Ydb {
       }
     }
     /**
+     * <pre>
+     * Service account ID for interaction with database
+     * </pre>
+     *
      * <code>string service_account_id = 11;</code>
      * @return The bytes for serviceAccountId.
      */
@@ -2950,7 +3205,8 @@ public final class Ydb {
     private int cleanupPolicy_;
     /**
      * <pre>
-     * Cleanup policy
+     * Cleanup policy determine how to clean collections when activating the transfer. 
+     * One of `YDB_CLEANUP_POLICY_DISABLED` or `YDB_CLEANUP_POLICY_DROP`
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
@@ -2961,7 +3217,8 @@ public final class Ydb {
     }
     /**
      * <pre>
-     * Cleanup policy
+     * Cleanup policy determine how to clean collections when activating the transfer. 
+     * One of `YDB_CLEANUP_POLICY_DISABLED` or `YDB_CLEANUP_POLICY_DROP`
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
@@ -2977,7 +3234,9 @@ public final class Ydb {
     private volatile java.lang.Object subnetId_;
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 30;</code>
@@ -2998,7 +3257,9 @@ public final class Ydb {
     }
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 30;</code>
@@ -3023,7 +3284,7 @@ public final class Ydb {
     private volatile java.lang.Object saKeyContent_;
     /**
      * <pre>
-     * SA content
+     * Authentication key
      * </pre>
      *
      * <code>string sa_key_content = 32;</code>
@@ -3044,7 +3305,7 @@ public final class Ydb {
     }
     /**
      * <pre>
-     * SA content
+     * Authentication key
      * </pre>
      *
      * <code>string sa_key_content = 32;</code>
@@ -3069,7 +3330,8 @@ public final class Ydb {
     private com.google.protobuf.LazyStringList securityGroups_;
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 33;</code>
@@ -3081,7 +3343,8 @@ public final class Ydb {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 33;</code>
@@ -3092,7 +3355,8 @@ public final class Ydb {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 33;</code>
@@ -3104,7 +3368,8 @@ public final class Ydb {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 33;</code>
@@ -3120,8 +3385,8 @@ public final class Ydb {
     private boolean isTableColumnOriented_;
     /**
      * <pre>
-     * Should create column-oriented table (OLAP). By default it creates row-oriented
-     * (OLTP)
+     * Whether a column-oriented (i.e. OLAP) tables should be created. 
+     * Default is `false` (create row-oriented OLTP tables)
      * </pre>
      *
      * <code>bool is_table_column_oriented = 34;</code>
@@ -3136,7 +3401,9 @@ public final class Ydb {
     private int defaultCompression_;
     /**
      * <pre>
-     * Compression that will be used for default columns family on YDB table creation
+     * Compression that will be used for default columns family on YDB table creation.
+     * One of `YDB_DEFAULT_COMPRESSION_UNSPECIFIED`,
+     * `YDB_DEFAULT_COMPRESSION_DISABLED`, `YDB_DEFAULT_COMPRESSION_LZ4`
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbDefaultCompression default_compression = 35;</code>
@@ -3147,7 +3414,9 @@ public final class Ydb {
     }
     /**
      * <pre>
-     * Compression that will be used for default columns family on YDB table creation
+     * Compression that will be used for default columns family on YDB table creation.
+     * One of `YDB_DEFAULT_COMPRESSION_UNSPECIFIED`,
+     * `YDB_DEFAULT_COMPRESSION_DISABLED`, `YDB_DEFAULT_COMPRESSION_LZ4`
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbDefaultCompression default_compression = 35;</code>
@@ -3162,6 +3431,10 @@ public final class Ydb {
     public static final int IS_SCHEMA_MIGRATION_DISABLED_FIELD_NUMBER = 36;
     private boolean isSchemaMigrationDisabled_;
     /**
+     * <pre>
+     * Whether can change table schema if schema changed on source
+     * </pre>
+     *
      * <code>bool is_schema_migration_disabled = 36;</code>
      * @return The isSchemaMigrationDisabled.
      */
@@ -3436,6 +3709,10 @@ public final class Ydb {
       return builder;
     }
     /**
+     * <pre>
+     * Settings specific to the YDB target endpoint
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.YdbTarget}
      */
     public static final class Builder extends
@@ -3664,7 +3941,8 @@ public final class Ydb {
       private java.lang.Object database_ = "";
       /**
        * <pre>
-       * Path in YDB where to store tables
+       * Database path in YDB where tables are stored. 
+       * Example: `/ru/transfer_manager/prod/data-transfer`
        * </pre>
        *
        * <code>string database = 1;</code>
@@ -3684,7 +3962,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Path in YDB where to store tables
+       * Database path in YDB where tables are stored. 
+       * Example: `/ru/transfer_manager/prod/data-transfer`
        * </pre>
        *
        * <code>string database = 1;</code>
@@ -3705,7 +3984,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Path in YDB where to store tables
+       * Database path in YDB where tables are stored. 
+       * Example: `/ru/transfer_manager/prod/data-transfer`
        * </pre>
        *
        * <code>string database = 1;</code>
@@ -3724,7 +4004,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Path in YDB where to store tables
+       * Database path in YDB where tables are stored. 
+       * Example: `/ru/transfer_manager/prod/data-transfer`
        * </pre>
        *
        * <code>string database = 1;</code>
@@ -3738,7 +4019,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Path in YDB where to store tables
+       * Database path in YDB where tables are stored. 
+       * Example: `/ru/transfer_manager/prod/data-transfer`
        * </pre>
        *
        * <code>string database = 1;</code>
@@ -3760,7 +4042,8 @@ public final class Ydb {
       private java.lang.Object instance_ = "";
       /**
        * <pre>
-       * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135
+       * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135.
+       * If not specified, will be determined by database
        * </pre>
        *
        * <code>string instance = 2;</code>
@@ -3780,7 +4063,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135
+       * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135.
+       * If not specified, will be determined by database
        * </pre>
        *
        * <code>string instance = 2;</code>
@@ -3801,7 +4085,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135
+       * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135.
+       * If not specified, will be determined by database
        * </pre>
        *
        * <code>string instance = 2;</code>
@@ -3820,7 +4105,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135
+       * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135.
+       * If not specified, will be determined by database
        * </pre>
        *
        * <code>string instance = 2;</code>
@@ -3834,7 +4120,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135
+       * Instance of YDB. example: ydb-ru-prestable.yandex.net:2135.
+       * If not specified, will be determined by database
        * </pre>
        *
        * <code>string instance = 2;</code>
@@ -3951,6 +4238,10 @@ public final class Ydb {
 
       private java.lang.Object serviceAccountId_ = "";
       /**
+       * <pre>
+       * Service account ID for interaction with database
+       * </pre>
+       *
        * <code>string service_account_id = 11;</code>
        * @return The serviceAccountId.
        */
@@ -3967,6 +4258,10 @@ public final class Ydb {
         }
       }
       /**
+       * <pre>
+       * Service account ID for interaction with database
+       * </pre>
+       *
        * <code>string service_account_id = 11;</code>
        * @return The bytes for serviceAccountId.
        */
@@ -3984,6 +4279,10 @@ public final class Ydb {
         }
       }
       /**
+       * <pre>
+       * Service account ID for interaction with database
+       * </pre>
+       *
        * <code>string service_account_id = 11;</code>
        * @param value The serviceAccountId to set.
        * @return This builder for chaining.
@@ -3999,6 +4298,10 @@ public final class Ydb {
         return this;
       }
       /**
+       * <pre>
+       * Service account ID for interaction with database
+       * </pre>
+       *
        * <code>string service_account_id = 11;</code>
        * @return This builder for chaining.
        */
@@ -4009,6 +4312,10 @@ public final class Ydb {
         return this;
       }
       /**
+       * <pre>
+       * Service account ID for interaction with database
+       * </pre>
+       *
        * <code>string service_account_id = 11;</code>
        * @param value The bytes for serviceAccountId to set.
        * @return This builder for chaining.
@@ -4028,7 +4335,8 @@ public final class Ydb {
       private int cleanupPolicy_ = 0;
       /**
        * <pre>
-       * Cleanup policy
+       * Cleanup policy determine how to clean collections when activating the transfer. 
+       * One of `YDB_CLEANUP_POLICY_DISABLED` or `YDB_CLEANUP_POLICY_DROP`
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
@@ -4039,7 +4347,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Cleanup policy
+       * Cleanup policy determine how to clean collections when activating the transfer. 
+       * One of `YDB_CLEANUP_POLICY_DISABLED` or `YDB_CLEANUP_POLICY_DROP`
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
@@ -4054,7 +4363,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Cleanup policy
+       * Cleanup policy determine how to clean collections when activating the transfer. 
+       * One of `YDB_CLEANUP_POLICY_DISABLED` or `YDB_CLEANUP_POLICY_DROP`
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
@@ -4068,7 +4378,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Cleanup policy
+       * Cleanup policy determine how to clean collections when activating the transfer. 
+       * One of `YDB_CLEANUP_POLICY_DISABLED` or `YDB_CLEANUP_POLICY_DROP`
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
@@ -4086,7 +4397,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Cleanup policy
+       * Cleanup policy determine how to clean collections when activating the transfer. 
+       * One of `YDB_CLEANUP_POLICY_DISABLED` or `YDB_CLEANUP_POLICY_DROP`
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
@@ -4102,7 +4414,9 @@ public final class Ydb {
       private java.lang.Object subnetId_ = "";
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 30;</code>
@@ -4122,7 +4436,9 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 30;</code>
@@ -4143,7 +4459,9 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 30;</code>
@@ -4162,7 +4480,9 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 30;</code>
@@ -4176,7 +4496,9 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 30;</code>
@@ -4198,7 +4520,7 @@ public final class Ydb {
       private java.lang.Object saKeyContent_ = "";
       /**
        * <pre>
-       * SA content
+       * Authentication key
        * </pre>
        *
        * <code>string sa_key_content = 32;</code>
@@ -4218,7 +4540,7 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * SA content
+       * Authentication key
        * </pre>
        *
        * <code>string sa_key_content = 32;</code>
@@ -4239,7 +4561,7 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * SA content
+       * Authentication key
        * </pre>
        *
        * <code>string sa_key_content = 32;</code>
@@ -4258,7 +4580,7 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * SA content
+       * Authentication key
        * </pre>
        *
        * <code>string sa_key_content = 32;</code>
@@ -4272,7 +4594,7 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * SA content
+       * Authentication key
        * </pre>
        *
        * <code>string sa_key_content = 32;</code>
@@ -4300,7 +4622,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 33;</code>
@@ -4312,7 +4635,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 33;</code>
@@ -4323,7 +4647,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 33;</code>
@@ -4335,7 +4660,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 33;</code>
@@ -4348,7 +4674,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 33;</code>
@@ -4368,7 +4695,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 33;</code>
@@ -4387,7 +4715,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 33;</code>
@@ -4404,7 +4733,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 33;</code>
@@ -4418,7 +4748,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 33;</code>
@@ -4440,8 +4771,8 @@ public final class Ydb {
       private boolean isTableColumnOriented_ ;
       /**
        * <pre>
-       * Should create column-oriented table (OLAP). By default it creates row-oriented
-       * (OLTP)
+       * Whether a column-oriented (i.e. OLAP) tables should be created. 
+       * Default is `false` (create row-oriented OLTP tables)
        * </pre>
        *
        * <code>bool is_table_column_oriented = 34;</code>
@@ -4453,8 +4784,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Should create column-oriented table (OLAP). By default it creates row-oriented
-       * (OLTP)
+       * Whether a column-oriented (i.e. OLAP) tables should be created. 
+       * Default is `false` (create row-oriented OLTP tables)
        * </pre>
        *
        * <code>bool is_table_column_oriented = 34;</code>
@@ -4469,8 +4800,8 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Should create column-oriented table (OLAP). By default it creates row-oriented
-       * (OLTP)
+       * Whether a column-oriented (i.e. OLAP) tables should be created. 
+       * Default is `false` (create row-oriented OLTP tables)
        * </pre>
        *
        * <code>bool is_table_column_oriented = 34;</code>
@@ -4486,7 +4817,9 @@ public final class Ydb {
       private int defaultCompression_ = 0;
       /**
        * <pre>
-       * Compression that will be used for default columns family on YDB table creation
+       * Compression that will be used for default columns family on YDB table creation.
+       * One of `YDB_DEFAULT_COMPRESSION_UNSPECIFIED`,
+       * `YDB_DEFAULT_COMPRESSION_DISABLED`, `YDB_DEFAULT_COMPRESSION_LZ4`
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbDefaultCompression default_compression = 35;</code>
@@ -4497,7 +4830,9 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Compression that will be used for default columns family on YDB table creation
+       * Compression that will be used for default columns family on YDB table creation.
+       * One of `YDB_DEFAULT_COMPRESSION_UNSPECIFIED`,
+       * `YDB_DEFAULT_COMPRESSION_DISABLED`, `YDB_DEFAULT_COMPRESSION_LZ4`
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbDefaultCompression default_compression = 35;</code>
@@ -4512,7 +4847,9 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Compression that will be used for default columns family on YDB table creation
+       * Compression that will be used for default columns family on YDB table creation.
+       * One of `YDB_DEFAULT_COMPRESSION_UNSPECIFIED`,
+       * `YDB_DEFAULT_COMPRESSION_DISABLED`, `YDB_DEFAULT_COMPRESSION_LZ4`
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbDefaultCompression default_compression = 35;</code>
@@ -4526,7 +4863,9 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Compression that will be used for default columns family on YDB table creation
+       * Compression that will be used for default columns family on YDB table creation.
+       * One of `YDB_DEFAULT_COMPRESSION_UNSPECIFIED`,
+       * `YDB_DEFAULT_COMPRESSION_DISABLED`, `YDB_DEFAULT_COMPRESSION_LZ4`
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbDefaultCompression default_compression = 35;</code>
@@ -4544,7 +4883,9 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Compression that will be used for default columns family on YDB table creation
+       * Compression that will be used for default columns family on YDB table creation.
+       * One of `YDB_DEFAULT_COMPRESSION_UNSPECIFIED`,
+       * `YDB_DEFAULT_COMPRESSION_DISABLED`, `YDB_DEFAULT_COMPRESSION_LZ4`
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbDefaultCompression default_compression = 35;</code>
@@ -4559,6 +4900,10 @@ public final class Ydb {
 
       private boolean isSchemaMigrationDisabled_ ;
       /**
+       * <pre>
+       * Whether can change table schema if schema changed on source
+       * </pre>
+       *
        * <code>bool is_schema_migration_disabled = 36;</code>
        * @return The isSchemaMigrationDisabled.
        */
@@ -4567,6 +4912,10 @@ public final class Ydb {
         return isSchemaMigrationDisabled_;
       }
       /**
+       * <pre>
+       * Whether can change table schema if schema changed on source
+       * </pre>
+       *
        * <code>bool is_schema_migration_disabled = 36;</code>
        * @param value The isSchemaMigrationDisabled to set.
        * @return This builder for chaining.
@@ -4578,6 +4927,10 @@ public final class Ydb {
         return this;
       }
       /**
+       * <pre>
+       * Whether can change table schema if schema changed on source
+       * </pre>
+       *
        * <code>bool is_schema_migration_disabled = 36;</code>
        * @return This builder for chaining.
        */

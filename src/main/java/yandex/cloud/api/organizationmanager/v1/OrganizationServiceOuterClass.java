@@ -7259,7 +7259,7 @@ public final class OrganizationServiceOuterClass {
       "en\030\003 \001(\tB\n\212\3101\006<=2000\"t\n\"ListOrganization" +
       "OperationsResponse\0225\n\noperations\030\001 \003(\0132!" +
       ".yandex.cloud.operation.Operation\022\027\n\017nex" +
-      "t_page_token\030\002 \001(\t2\240\014\n\023OrganizationServi" +
+      "t_page_token\030\002 \001(\t2\347\024\n\023OrganizationServi" +
       "ce\022\267\001\n\003Get\022;.yandex.cloud.organizationma" +
       "nager.v1.GetOrganizationRequest\0321.yandex" +
       ".cloud.organizationmanager.v1.Organizati" +
@@ -7298,11 +7298,38 @@ public final class OrganizationServiceOuterClass {
       "\001\202\323\344\223\002N\"I/organization-manager/v1/organi" +
       "zations/{resource_id}:updateAccessBindin" +
       "gs:\001*\262\322*<\n#access.UpdateAccessBindingsMe" +
-      "tadata\022\025google.protobuf.EmptyB\206\001\n\'yandex" +
-      ".cloud.api.organizationmanager.v1Z[githu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/organizationmanager/v1;organizationm" +
-      "anagerb\006proto3"
+      "tadata\022\025google.protobuf.Empty\022\336\001\n\030ListAc" +
+      "cessPolicyBindings\0224.yandex.cloud.access" +
+      ".ListAccessPolicyBindingsRequest\0325.yande" +
+      "x.cloud.access.ListAccessPolicyBindingsR" +
+      "esponse\"U\202\323\344\223\002O\022M/organization-manager/v" +
+      "1/organizations/{resource_id}:listAccess" +
+      "PolicyBindings\022\374\001\n\020BindAccessPolicy\022,.ya" +
+      "ndex.cloud.access.BindAccessPolicyReques" +
+      "t\032!.yandex.cloud.operation.Operation\"\226\001\202" +
+      "\323\344\223\002J\"E/organization-manager/v1/organiza" +
+      "tions/{resource_id}:bindAccessPolicy:\001*\262" +
+      "\322*B\n\037access.BindAccessPolicyMetadata\022\037ac" +
+      "cess.BindAccessPolicyResponse\022\206\002\n\022Unbind" +
+      "AccessPolicy\022..yandex.cloud.access.Unbin" +
+      "dAccessPolicyRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"\234\001\202\323\344\223\002L\"G/organization-" +
+      "manager/v1/organizations/{resource_id}:u" +
+      "nbindAccessPolicy:\001*\262\322*F\n!access.UnbindA" +
+      "ccessPolicyMetadata\022!access.UnbindAccess" +
+      "PolicyResponse\022\333\002\n#UpdateAccessPolicyBin" +
+      "dingParameters\022?.yandex.cloud.access.Upd" +
+      "ateAccessPolicyBindingParametersRequest\032" +
+      "!.yandex.cloud.operation.Operation\"\317\001\202\323\344" +
+      "\223\002]2X/organization-manager/v1/organizati" +
+      "ons/{resource_id}:updateAccessPolicyBind" +
+      "ingParameters:\001*\262\322*h\n2access.UpdateAcces" +
+      "sPolicyBindingParametersMetadata\0222access" +
+      ".UpdateAccessPolicyBindingParametersResp" +
+      "onseB\206\001\n\'yandex.cloud.api.organizationma" +
+      "nager.v1Z[github.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/organizationmanager/v" +
+      "1;organizationmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

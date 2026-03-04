@@ -142,6 +142,37 @@ public final class DnsZoneServiceGrpc {
     return getUpdateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Move",
+      requestType = yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod;
+    if ((getMoveMethod = DnsZoneServiceGrpc.getMoveMethod) == null) {
+      synchronized (DnsZoneServiceGrpc.class) {
+        if ((getMoveMethod = DnsZoneServiceGrpc.getMoveMethod) == null) {
+          DnsZoneServiceGrpc.getMoveMethod = getMoveMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Move"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new DnsZoneServiceMethodDescriptorSupplier("Move"))
+              .build();
+        }
+      }
+    }
+    return getMoveMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.DeleteDnsZoneRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
 
@@ -546,6 +577,16 @@ public final class DnsZoneServiceGrpc {
 
     /**
      * <pre>
+     * Moves the specified DNS zone to another folder.
+     * </pre>
+     */
+    public void move(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified DNS zone. 
      * </pre>
      */
@@ -578,7 +619,7 @@ public final class DnsZoneServiceGrpc {
      * <pre>
      * Method with strict control for changing zone state. Returns error when:
      * 1. Deleted record is not found.
-     * 2. Found record with matched type and name but different TTL or value.
+     * 2. Found record with matched type and name but different TTL, value, or description.
      * 3. Attempted to add record with existing name and type.
      * Deletions happen first. If a record with the same name and type exists in both lists,
      * then the existing record will be deleted, and a new one added.
@@ -680,6 +721,13 @@ public final class DnsZoneServiceGrpc {
                 yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
+          .addMethod(
+            getMoveMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_MOVE)))
           .addMethod(
             getDeleteMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -818,6 +866,17 @@ public final class DnsZoneServiceGrpc {
 
     /**
      * <pre>
+     * Moves the specified DNS zone to another folder.
+     * </pre>
+     */
+    public void move(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getMoveMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified DNS zone. 
      * </pre>
      */
@@ -853,7 +912,7 @@ public final class DnsZoneServiceGrpc {
      * <pre>
      * Method with strict control for changing zone state. Returns error when:
      * 1. Deleted record is not found.
-     * 2. Found record with matched type and name but different TTL or value.
+     * 2. Found record with matched type and name but different TTL, value, or description.
      * 3. Attempted to add record with existing name and type.
      * Deletions happen first. If a record with the same name and type exists in both lists,
      * then the existing record will be deleted, and a new one added.
@@ -993,6 +1052,16 @@ public final class DnsZoneServiceGrpc {
 
     /**
      * <pre>
+     * Moves the specified DNS zone to another folder.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMoveMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified DNS zone. 
      * </pre>
      */
@@ -1025,7 +1094,7 @@ public final class DnsZoneServiceGrpc {
      * <pre>
      * Method with strict control for changing zone state. Returns error when:
      * 1. Deleted record is not found.
-     * 2. Found record with matched type and name but different TTL or value.
+     * 2. Found record with matched type and name but different TTL, value, or description.
      * 3. Attempted to add record with existing name and type.
      * Deletions happen first. If a record with the same name and type exists in both lists,
      * then the existing record will be deleted, and a new one added.
@@ -1162,6 +1231,17 @@ public final class DnsZoneServiceGrpc {
 
     /**
      * <pre>
+     * Moves the specified DNS zone to another folder.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> move(
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getMoveMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified DNS zone. 
      * </pre>
      */
@@ -1197,7 +1277,7 @@ public final class DnsZoneServiceGrpc {
      * <pre>
      * Method with strict control for changing zone state. Returns error when:
      * 1. Deleted record is not found.
-     * 2. Found record with matched type and name but different TTL or value.
+     * 2. Found record with matched type and name but different TTL, value, or description.
      * 3. Attempted to add record with existing name and type.
      * Deletions happen first. If a record with the same name and type exists in both lists,
      * then the existing record will be deleted, and a new one added.
@@ -1281,16 +1361,17 @@ public final class DnsZoneServiceGrpc {
   private static final int METHODID_LIST = 1;
   private static final int METHODID_CREATE = 2;
   private static final int METHODID_UPDATE = 3;
-  private static final int METHODID_DELETE = 4;
-  private static final int METHODID_GET_RECORD_SET = 5;
-  private static final int METHODID_LIST_RECORD_SETS = 6;
-  private static final int METHODID_UPDATE_RECORD_SETS = 7;
-  private static final int METHODID_UPSERT_RECORD_SETS = 8;
-  private static final int METHODID_LIST_OPERATIONS = 9;
-  private static final int METHODID_LIST_ACCESS_BINDINGS = 10;
-  private static final int METHODID_SET_ACCESS_BINDINGS = 11;
-  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 12;
-  private static final int METHODID_UPDATE_PRIVATE_NETWORKS = 13;
+  private static final int METHODID_MOVE = 4;
+  private static final int METHODID_DELETE = 5;
+  private static final int METHODID_GET_RECORD_SET = 6;
+  private static final int METHODID_LIST_RECORD_SETS = 7;
+  private static final int METHODID_UPDATE_RECORD_SETS = 8;
+  private static final int METHODID_UPSERT_RECORD_SETS = 9;
+  private static final int METHODID_LIST_OPERATIONS = 10;
+  private static final int METHODID_LIST_ACCESS_BINDINGS = 11;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 12;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 13;
+  private static final int METHODID_UPDATE_PRIVATE_NETWORKS = 14;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1323,6 +1404,10 @@ public final class DnsZoneServiceGrpc {
           break;
         case METHODID_UPDATE:
           serviceImpl.update((yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_MOVE:
+          serviceImpl.move((yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_DELETE:
@@ -1430,6 +1515,7 @@ public final class DnsZoneServiceGrpc {
               .addMethod(getListMethod())
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
+              .addMethod(getMoveMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getGetRecordSetMethod())
               .addMethod(getListRecordSetsMethod())

@@ -2742,7 +2742,7 @@ public final class FederatedCredentialServiceOuterClass {
      * Id of the external subject.
      * </pre>
      *
-     * <code>string external_subject_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string external_subject_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The externalSubjectId.
      */
     java.lang.String getExternalSubjectId();
@@ -2751,7 +2751,7 @@ public final class FederatedCredentialServiceOuterClass {
      * Id of the external subject.
      * </pre>
      *
-     * <code>string external_subject_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string external_subject_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for externalSubjectId.
      */
     com.google.protobuf.ByteString
@@ -2956,7 +2956,7 @@ public final class FederatedCredentialServiceOuterClass {
      * Id of the external subject.
      * </pre>
      *
-     * <code>string external_subject_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string external_subject_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The externalSubjectId.
      */
     @java.lang.Override
@@ -2977,7 +2977,7 @@ public final class FederatedCredentialServiceOuterClass {
      * Id of the external subject.
      * </pre>
      *
-     * <code>string external_subject_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string external_subject_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for externalSubjectId.
      */
     @java.lang.Override
@@ -3534,7 +3534,7 @@ public final class FederatedCredentialServiceOuterClass {
        * Id of the external subject.
        * </pre>
        *
-       * <code>string external_subject_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string external_subject_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The externalSubjectId.
        */
       public java.lang.String getExternalSubjectId() {
@@ -3554,7 +3554,7 @@ public final class FederatedCredentialServiceOuterClass {
        * Id of the external subject.
        * </pre>
        *
-       * <code>string external_subject_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string external_subject_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for externalSubjectId.
        */
       public com.google.protobuf.ByteString
@@ -3575,7 +3575,7 @@ public final class FederatedCredentialServiceOuterClass {
        * Id of the external subject.
        * </pre>
        *
-       * <code>string external_subject_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string external_subject_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The externalSubjectId to set.
        * @return This builder for chaining.
        */
@@ -3594,7 +3594,7 @@ public final class FederatedCredentialServiceOuterClass {
        * Id of the external subject.
        * </pre>
        *
-       * <code>string external_subject_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string external_subject_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearExternalSubjectId() {
@@ -3608,7 +3608,7 @@ public final class FederatedCredentialServiceOuterClass {
        * Id of the external subject.
        * </pre>
        *
-       * <code>string external_subject_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string external_subject_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for externalSubjectId to set.
        * @return This builder for chaining.
        */
@@ -5557,41 +5557,41 @@ public final class FederatedCredentialServiceOuterClass {
       "eratedCredentialsResponse\022P\n\025federated_c" +
       "redentials\030\001 \003(\01321.yandex.cloud.iam.v1.w" +
       "orkload.FederatedCredential\022\027\n\017next_page" +
-      "_token\030\002 \001(\t\"\234\001\n CreateFederatedCredenti" +
+      "_token\030\002 \001(\t\"\236\001\n CreateFederatedCredenti" +
       "alRequest\022(\n\022service_account_id\030\001 \001(\tB\014\350" +
       "\3071\001\212\3101\004<=50\022#\n\rfederation_id\030\002 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022)\n\023external_subject_id\030\003 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\"D\n!CreateFederatedCredential" +
-      "Metadata\022\037\n\027federated_credential_id\030\001 \001(" +
-      "\t\"Q\n DeleteFederatedCredentialRequest\022-\n" +
-      "\027federated_credential_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\"D\n!DeleteFederatedCredentialMetadat" +
-      "a\022\037\n\027federated_credential_id\030\001 \001(\t2\346\006\n\032F" +
-      "ederatedCredentialService\022\276\001\n\003Get\022;.yand" +
-      "ex.cloud.iam.v1.workload.GetFederatedCre" +
-      "dentialRequest\0321.yandex.cloud.iam.v1.wor" +
-      "kload.FederatedCredential\"G\202\323\344\223\002A\022?/iam/" +
-      "v1/workload/federatedCredentials/{federa" +
-      "ted_credential_id}\022\264\001\n\004List\022=.yandex.clo" +
-      "ud.iam.v1.workload.ListFederatedCredenti" +
-      "alsRequest\032>.yandex.cloud.iam.v1.workloa" +
-      "d.ListFederatedCredentialsResponse\"-\202\323\344\223" +
-      "\002\'\022%/iam/v1/workload/federatedCredential" +
-      "s\022\331\001\n\006Create\022>.yandex.cloud.iam.v1.workl" +
-      "oad.CreateFederatedCredentialRequest\032!.y" +
-      "andex.cloud.operation.Operation\"l\202\323\344\223\002*\"" +
-      "%/iam/v1/workload/federatedCredentials:\001" +
-      "*\262\322*8\n!CreateFederatedCredentialMetadata" +
-      "\022\023FederatedCredential\022\363\001\n\006Delete\022>.yande" +
-      "x.cloud.iam.v1.workload.DeleteFederatedC" +
-      "redentialRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"\205\001\202\323\344\223\002A*?/iam/v1/workload/f" +
-      "ederatedCredentials/{federated_credentia" +
-      "l_id}\262\322*:\n!DeleteFederatedCredentialMeta" +
-      "data\022\025google.protobuf.EmptyBm\n yandex.cl" +
-      "oud.api.iam.v1.workloadZIgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/iam/v1" +
-      "/workload;workloadb\006proto3"
+      "\212\3101\004<=50\022+\n\023external_subject_id\030\003 \001(\tB\016\350" +
+      "\3071\001\212\3101\006<=1000\"D\n!CreateFederatedCredenti" +
+      "alMetadata\022\037\n\027federated_credential_id\030\001 " +
+      "\001(\t\"Q\n DeleteFederatedCredentialRequest\022" +
+      "-\n\027federated_credential_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\"D\n!DeleteFederatedCredentialMetad" +
+      "ata\022\037\n\027federated_credential_id\030\001 \001(\t2\346\006\n" +
+      "\032FederatedCredentialService\022\276\001\n\003Get\022;.ya" +
+      "ndex.cloud.iam.v1.workload.GetFederatedC" +
+      "redentialRequest\0321.yandex.cloud.iam.v1.w" +
+      "orkload.FederatedCredential\"G\202\323\344\223\002A\022?/ia" +
+      "m/v1/workload/federatedCredentials/{fede" +
+      "rated_credential_id}\022\264\001\n\004List\022=.yandex.c" +
+      "loud.iam.v1.workload.ListFederatedCreden" +
+      "tialsRequest\032>.yandex.cloud.iam.v1.workl" +
+      "oad.ListFederatedCredentialsResponse\"-\202\323" +
+      "\344\223\002\'\022%/iam/v1/workload/federatedCredenti" +
+      "als\022\331\001\n\006Create\022>.yandex.cloud.iam.v1.wor" +
+      "kload.CreateFederatedCredentialRequest\032!" +
+      ".yandex.cloud.operation.Operation\"l\202\323\344\223\002" +
+      "*\"%/iam/v1/workload/federatedCredentials" +
+      ":\001*\262\322*8\n!CreateFederatedCredentialMetada" +
+      "ta\022\023FederatedCredential\022\363\001\n\006Delete\022>.yan" +
+      "dex.cloud.iam.v1.workload.DeleteFederate" +
+      "dCredentialRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"\205\001\202\323\344\223\002A*?/iam/v1/workload" +
+      "/federatedCredentials/{federated_credent" +
+      "ial_id}\262\322*:\n!DeleteFederatedCredentialMe" +
+      "tadata\022\025google.protobuf.EmptyBm\n yandex." +
+      "cloud.api.iam.v1.workloadZIgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/iam/" +
+      "v1/workload;workloadb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

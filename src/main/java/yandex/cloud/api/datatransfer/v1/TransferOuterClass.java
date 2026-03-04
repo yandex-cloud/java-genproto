@@ -550,16 +550,28 @@ public final class TransferOuterClass {
     yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointOrBuilder getTargetOrBuilder();
 
     /**
+     * <pre>
+     * Runtime parameters for the transfer
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.Runtime runtime = 9;</code>
      * @return Whether the runtime field is set.
      */
     boolean hasRuntime();
     /**
+     * <pre>
+     * Runtime parameters for the transfer
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.Runtime runtime = 9;</code>
      * @return The runtime.
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime getRuntime();
     /**
+     * <pre>
+     * Runtime parameters for the transfer
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.Runtime runtime = 9;</code>
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.RuntimeOrBuilder getRuntimeOrBuilder();
@@ -576,22 +588,40 @@ public final class TransferOuterClass {
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferStatus getStatus();
 
     /**
+     * <pre>
+     * Type of the transfer. One of SNAPSHOT_ONLY, INCREMENT_ONLY,
+     * SNAPSHOT_AND_INCREMENT
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.TransferType type = 12;</code>
      * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
+     * <pre>
+     * Type of the transfer. One of SNAPSHOT_ONLY, INCREMENT_ONLY,
+     * SNAPSHOT_AND_INCREMENT
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.TransferType type = 12;</code>
      * @return The type.
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferType getType();
 
     /**
+     * <pre>
+     * Error description if transfer has any errors.
+     * </pre>
+     *
      * <code>string warning = 15;</code>
      * @return The warning.
      */
     java.lang.String getWarning();
     /**
+     * <pre>
+     * Error description if transfer has any errors.
+     * </pre>
+     *
      * <code>string warning = 15;</code>
      * @return The bytes for warning.
      */
@@ -599,16 +629,28 @@ public final class TransferOuterClass {
         getWarningBytes();
 
     /**
+     * <pre>
+     * Transformation for the transfer.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.Transformation transformation = 17;</code>
      * @return Whether the transformation field is set.
      */
     boolean hasTransformation();
     /**
+     * <pre>
+     * Transformation for the transfer.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.Transformation transformation = 17;</code>
      * @return The transformation.
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transformation getTransformation();
     /**
+     * <pre>
+     * Transformation for the transfer.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.Transformation transformation = 17;</code>
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransformationOrBuilder getTransformationOrBuilder();
@@ -635,16 +677,28 @@ public final class TransferOuterClass {
     boolean getPrestable();
 
     /**
+     * <pre>
+     * Replication runtime parameters for the transfer
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 24;</code>
      * @return Whether the replicationRuntime field is set.
      */
     boolean hasReplicationRuntime();
     /**
+     * <pre>
+     * Replication runtime parameters for the transfer
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 24;</code>
      * @return The replicationRuntime.
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime getReplicationRuntime();
     /**
+     * <pre>
+     * Replication runtime parameters for the transfer
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 24;</code>
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.RuntimeOrBuilder getReplicationRuntimeOrBuilder();
@@ -1176,6 +1230,10 @@ public final class TransferOuterClass {
     public static final int RUNTIME_FIELD_NUMBER = 9;
     private yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime runtime_;
     /**
+     * <pre>
+     * Runtime parameters for the transfer
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.Runtime runtime = 9;</code>
      * @return Whether the runtime field is set.
      */
@@ -1184,6 +1242,10 @@ public final class TransferOuterClass {
       return runtime_ != null;
     }
     /**
+     * <pre>
+     * Runtime parameters for the transfer
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.Runtime runtime = 9;</code>
      * @return The runtime.
      */
@@ -1192,6 +1254,10 @@ public final class TransferOuterClass {
       return runtime_ == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.getDefaultInstance() : runtime_;
     }
     /**
+     * <pre>
+     * Runtime parameters for the transfer
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.Runtime runtime = 9;</code>
      */
     @java.lang.Override
@@ -1221,6 +1287,11 @@ public final class TransferOuterClass {
     public static final int TYPE_FIELD_NUMBER = 12;
     private int type_;
     /**
+     * <pre>
+     * Type of the transfer. One of SNAPSHOT_ONLY, INCREMENT_ONLY,
+     * SNAPSHOT_AND_INCREMENT
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.TransferType type = 12;</code>
      * @return The enum numeric value on the wire for type.
      */
@@ -1228,6 +1299,11 @@ public final class TransferOuterClass {
       return type_;
     }
     /**
+     * <pre>
+     * Type of the transfer. One of SNAPSHOT_ONLY, INCREMENT_ONLY,
+     * SNAPSHOT_AND_INCREMENT
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.TransferType type = 12;</code>
      * @return The type.
      */
@@ -1240,6 +1316,10 @@ public final class TransferOuterClass {
     public static final int WARNING_FIELD_NUMBER = 15;
     private volatile java.lang.Object warning_;
     /**
+     * <pre>
+     * Error description if transfer has any errors.
+     * </pre>
+     *
      * <code>string warning = 15;</code>
      * @return The warning.
      */
@@ -1257,6 +1337,10 @@ public final class TransferOuterClass {
       }
     }
     /**
+     * <pre>
+     * Error description if transfer has any errors.
+     * </pre>
+     *
      * <code>string warning = 15;</code>
      * @return The bytes for warning.
      */
@@ -1278,6 +1362,10 @@ public final class TransferOuterClass {
     public static final int TRANSFORMATION_FIELD_NUMBER = 17;
     private yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transformation transformation_;
     /**
+     * <pre>
+     * Transformation for the transfer.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.Transformation transformation = 17;</code>
      * @return Whether the transformation field is set.
      */
@@ -1286,6 +1374,10 @@ public final class TransferOuterClass {
       return transformation_ != null;
     }
     /**
+     * <pre>
+     * Transformation for the transfer.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.Transformation transformation = 17;</code>
      * @return The transformation.
      */
@@ -1294,6 +1386,10 @@ public final class TransferOuterClass {
       return transformation_ == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transformation.getDefaultInstance() : transformation_;
     }
     /**
+     * <pre>
+     * Transformation for the transfer.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.Transformation transformation = 17;</code>
      */
     @java.lang.Override
@@ -1341,6 +1437,10 @@ public final class TransferOuterClass {
     public static final int REPLICATION_RUNTIME_FIELD_NUMBER = 24;
     private yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime replicationRuntime_;
     /**
+     * <pre>
+     * Replication runtime parameters for the transfer
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 24;</code>
      * @return Whether the replicationRuntime field is set.
      */
@@ -1349,6 +1449,10 @@ public final class TransferOuterClass {
       return replicationRuntime_ != null;
     }
     /**
+     * <pre>
+     * Replication runtime parameters for the transfer
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 24;</code>
      * @return The replicationRuntime.
      */
@@ -1357,6 +1461,10 @@ public final class TransferOuterClass {
       return replicationRuntime_ == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.getDefaultInstance() : replicationRuntime_;
     }
     /**
+     * <pre>
+     * Replication runtime parameters for the transfer
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 24;</code>
      */
     @java.lang.Override
@@ -2696,6 +2804,10 @@ public final class TransferOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime, yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RuntimeOrBuilder> runtimeBuilder_;
       /**
+       * <pre>
+       * Runtime parameters for the transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Runtime runtime = 9;</code>
        * @return Whether the runtime field is set.
        */
@@ -2703,6 +2815,10 @@ public final class TransferOuterClass {
         return runtimeBuilder_ != null || runtime_ != null;
       }
       /**
+       * <pre>
+       * Runtime parameters for the transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Runtime runtime = 9;</code>
        * @return The runtime.
        */
@@ -2714,6 +2830,10 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Runtime parameters for the transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Runtime runtime = 9;</code>
        */
       public Builder setRuntime(yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime value) {
@@ -2730,6 +2850,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Runtime parameters for the transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Runtime runtime = 9;</code>
        */
       public Builder setRuntime(
@@ -2744,6 +2868,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Runtime parameters for the transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Runtime runtime = 9;</code>
        */
       public Builder mergeRuntime(yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime value) {
@@ -2762,6 +2890,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Runtime parameters for the transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Runtime runtime = 9;</code>
        */
       public Builder clearRuntime() {
@@ -2776,6 +2908,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Runtime parameters for the transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Runtime runtime = 9;</code>
        */
       public yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.Builder getRuntimeBuilder() {
@@ -2784,6 +2920,10 @@ public final class TransferOuterClass {
         return getRuntimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Runtime parameters for the transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Runtime runtime = 9;</code>
        */
       public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RuntimeOrBuilder getRuntimeOrBuilder() {
@@ -2795,6 +2935,10 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Runtime parameters for the transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Runtime runtime = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2867,6 +3011,11 @@ public final class TransferOuterClass {
 
       private int type_ = 0;
       /**
+       * <pre>
+       * Type of the transfer. One of SNAPSHOT_ONLY, INCREMENT_ONLY,
+       * SNAPSHOT_AND_INCREMENT
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.TransferType type = 12;</code>
        * @return The enum numeric value on the wire for type.
        */
@@ -2874,6 +3023,11 @@ public final class TransferOuterClass {
         return type_;
       }
       /**
+       * <pre>
+       * Type of the transfer. One of SNAPSHOT_ONLY, INCREMENT_ONLY,
+       * SNAPSHOT_AND_INCREMENT
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.TransferType type = 12;</code>
        * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
@@ -2885,6 +3039,11 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Type of the transfer. One of SNAPSHOT_ONLY, INCREMENT_ONLY,
+       * SNAPSHOT_AND_INCREMENT
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.TransferType type = 12;</code>
        * @return The type.
        */
@@ -2895,6 +3054,11 @@ public final class TransferOuterClass {
         return result == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransferType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Type of the transfer. One of SNAPSHOT_ONLY, INCREMENT_ONLY,
+       * SNAPSHOT_AND_INCREMENT
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.TransferType type = 12;</code>
        * @param value The type to set.
        * @return This builder for chaining.
@@ -2909,6 +3073,11 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Type of the transfer. One of SNAPSHOT_ONLY, INCREMENT_ONLY,
+       * SNAPSHOT_AND_INCREMENT
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.TransferType type = 12;</code>
        * @return This builder for chaining.
        */
@@ -2921,6 +3090,10 @@ public final class TransferOuterClass {
 
       private java.lang.Object warning_ = "";
       /**
+       * <pre>
+       * Error description if transfer has any errors.
+       * </pre>
+       *
        * <code>string warning = 15;</code>
        * @return The warning.
        */
@@ -2937,6 +3110,10 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Error description if transfer has any errors.
+       * </pre>
+       *
        * <code>string warning = 15;</code>
        * @return The bytes for warning.
        */
@@ -2954,6 +3131,10 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Error description if transfer has any errors.
+       * </pre>
+       *
        * <code>string warning = 15;</code>
        * @param value The warning to set.
        * @return This builder for chaining.
@@ -2969,6 +3150,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Error description if transfer has any errors.
+       * </pre>
+       *
        * <code>string warning = 15;</code>
        * @return This builder for chaining.
        */
@@ -2979,6 +3164,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Error description if transfer has any errors.
+       * </pre>
+       *
        * <code>string warning = 15;</code>
        * @param value The bytes for warning to set.
        * @return This builder for chaining.
@@ -2999,6 +3188,10 @@ public final class TransferOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transformation, yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transformation.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransformationOrBuilder> transformationBuilder_;
       /**
+       * <pre>
+       * Transformation for the transfer.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Transformation transformation = 17;</code>
        * @return Whether the transformation field is set.
        */
@@ -3006,6 +3199,10 @@ public final class TransferOuterClass {
         return transformationBuilder_ != null || transformation_ != null;
       }
       /**
+       * <pre>
+       * Transformation for the transfer.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Transformation transformation = 17;</code>
        * @return The transformation.
        */
@@ -3017,6 +3214,10 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Transformation for the transfer.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Transformation transformation = 17;</code>
        */
       public Builder setTransformation(yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transformation value) {
@@ -3033,6 +3234,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Transformation for the transfer.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Transformation transformation = 17;</code>
        */
       public Builder setTransformation(
@@ -3047,6 +3252,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Transformation for the transfer.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Transformation transformation = 17;</code>
        */
       public Builder mergeTransformation(yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transformation value) {
@@ -3065,6 +3274,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Transformation for the transfer.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Transformation transformation = 17;</code>
        */
       public Builder clearTransformation() {
@@ -3079,6 +3292,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Transformation for the transfer.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Transformation transformation = 17;</code>
        */
       public yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transformation.Builder getTransformationBuilder() {
@@ -3087,6 +3304,10 @@ public final class TransferOuterClass {
         return getTransformationFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Transformation for the transfer.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Transformation transformation = 17;</code>
        */
       public yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransformationOrBuilder getTransformationOrBuilder() {
@@ -3098,6 +3319,10 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Transformation for the transfer.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Transformation transformation = 17;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3268,6 +3493,10 @@ public final class TransferOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime, yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RuntimeOrBuilder> replicationRuntimeBuilder_;
       /**
+       * <pre>
+       * Replication runtime parameters for the transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 24;</code>
        * @return Whether the replicationRuntime field is set.
        */
@@ -3275,6 +3504,10 @@ public final class TransferOuterClass {
         return replicationRuntimeBuilder_ != null || replicationRuntime_ != null;
       }
       /**
+       * <pre>
+       * Replication runtime parameters for the transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 24;</code>
        * @return The replicationRuntime.
        */
@@ -3286,6 +3519,10 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Replication runtime parameters for the transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 24;</code>
        */
       public Builder setReplicationRuntime(yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime value) {
@@ -3302,6 +3539,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Replication runtime parameters for the transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 24;</code>
        */
       public Builder setReplicationRuntime(
@@ -3316,6 +3557,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Replication runtime parameters for the transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 24;</code>
        */
       public Builder mergeReplicationRuntime(yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime value) {
@@ -3334,6 +3579,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Replication runtime parameters for the transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 24;</code>
        */
       public Builder clearReplicationRuntime() {
@@ -3348,6 +3597,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Replication runtime parameters for the transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 24;</code>
        */
       public yandex.cloud.api.datatransfer.v1.TransferOuterClass.Runtime.Builder getReplicationRuntimeBuilder() {
@@ -3356,6 +3609,10 @@ public final class TransferOuterClass {
         return getReplicationRuntimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Replication runtime parameters for the transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 24;</code>
        */
       public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RuntimeOrBuilder getReplicationRuntimeOrBuilder() {
@@ -3367,6 +3624,10 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Replication runtime parameters for the transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.Runtime replication_runtime = 24;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4158,18 +4419,30 @@ public final class TransferOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Number of workers.
+     * </pre>
+     *
      * <code>int64 job_count = 1;</code>
      * @return The jobCount.
      */
     long getJobCount();
 
     /**
+     * <pre>
+     * Number of threads.
+     * </pre>
+     *
      * <code>int64 process_count = 2;</code>
      * @return The processCount.
      */
     long getProcessCount();
   }
   /**
+   * <pre>
+   * Parallel snapshot parameters
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.ShardingUploadParams}
    */
   public static final class ShardingUploadParams extends
@@ -4259,6 +4532,10 @@ public final class TransferOuterClass {
     public static final int JOB_COUNT_FIELD_NUMBER = 1;
     private long jobCount_;
     /**
+     * <pre>
+     * Number of workers.
+     * </pre>
+     *
      * <code>int64 job_count = 1;</code>
      * @return The jobCount.
      */
@@ -4270,6 +4547,10 @@ public final class TransferOuterClass {
     public static final int PROCESS_COUNT_FIELD_NUMBER = 2;
     private long processCount_;
     /**
+     * <pre>
+     * Number of threads.
+     * </pre>
+     *
      * <code>int64 process_count = 2;</code>
      * @return The processCount.
      */
@@ -4447,6 +4728,10 @@ public final class TransferOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Parallel snapshot parameters
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.ShardingUploadParams}
      */
     public static final class Builder extends
@@ -4601,6 +4886,10 @@ public final class TransferOuterClass {
 
       private long jobCount_ ;
       /**
+       * <pre>
+       * Number of workers.
+       * </pre>
+       *
        * <code>int64 job_count = 1;</code>
        * @return The jobCount.
        */
@@ -4609,6 +4898,10 @@ public final class TransferOuterClass {
         return jobCount_;
       }
       /**
+       * <pre>
+       * Number of workers.
+       * </pre>
+       *
        * <code>int64 job_count = 1;</code>
        * @param value The jobCount to set.
        * @return This builder for chaining.
@@ -4620,6 +4913,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Number of workers.
+       * </pre>
+       *
        * <code>int64 job_count = 1;</code>
        * @return This builder for chaining.
        */
@@ -4632,6 +4929,10 @@ public final class TransferOuterClass {
 
       private long processCount_ ;
       /**
+       * <pre>
+       * Number of threads.
+       * </pre>
+       *
        * <code>int64 process_count = 2;</code>
        * @return The processCount.
        */
@@ -4640,6 +4941,10 @@ public final class TransferOuterClass {
         return processCount_;
       }
       /**
+       * <pre>
+       * Number of threads.
+       * </pre>
+       *
        * <code>int64 process_count = 2;</code>
        * @param value The processCount to set.
        * @return This builder for chaining.
@@ -4651,6 +4956,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Number of threads.
+       * </pre>
+       *
        * <code>int64 process_count = 2;</code>
        * @return This builder for chaining.
        */
@@ -4718,27 +5027,47 @@ public final class TransferOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Number of workers in parallel replication.
+     * </pre>
+     *
      * <code>int64 job_count = 1;</code>
      * @return The jobCount.
      */
     long getJobCount();
 
     /**
+     * <pre>
+     * Parallel snapshot parameters
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.ShardingUploadParams upload_shard_params = 8;</code>
      * @return Whether the uploadShardParams field is set.
      */
     boolean hasUploadShardParams();
     /**
+     * <pre>
+     * Parallel snapshot parameters
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.ShardingUploadParams upload_shard_params = 8;</code>
      * @return The uploadShardParams.
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.ShardingUploadParams getUploadShardParams();
     /**
+     * <pre>
+     * Parallel snapshot parameters
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.ShardingUploadParams upload_shard_params = 8;</code>
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.ShardingUploadParamsOrBuilder getUploadShardParamsOrBuilder();
   }
   /**
+   * <pre>
+   * YC Runtime parameters for the transfer
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.YcRuntime}
    */
   public static final class YcRuntime extends
@@ -4836,6 +5165,10 @@ public final class TransferOuterClass {
     public static final int JOB_COUNT_FIELD_NUMBER = 1;
     private long jobCount_;
     /**
+     * <pre>
+     * Number of workers in parallel replication.
+     * </pre>
+     *
      * <code>int64 job_count = 1;</code>
      * @return The jobCount.
      */
@@ -4847,6 +5180,10 @@ public final class TransferOuterClass {
     public static final int UPLOAD_SHARD_PARAMS_FIELD_NUMBER = 8;
     private yandex.cloud.api.datatransfer.v1.TransferOuterClass.ShardingUploadParams uploadShardParams_;
     /**
+     * <pre>
+     * Parallel snapshot parameters
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.ShardingUploadParams upload_shard_params = 8;</code>
      * @return Whether the uploadShardParams field is set.
      */
@@ -4855,6 +5192,10 @@ public final class TransferOuterClass {
       return uploadShardParams_ != null;
     }
     /**
+     * <pre>
+     * Parallel snapshot parameters
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.ShardingUploadParams upload_shard_params = 8;</code>
      * @return The uploadShardParams.
      */
@@ -4863,6 +5204,10 @@ public final class TransferOuterClass {
       return uploadShardParams_ == null ? yandex.cloud.api.datatransfer.v1.TransferOuterClass.ShardingUploadParams.getDefaultInstance() : uploadShardParams_;
     }
     /**
+     * <pre>
+     * Parallel snapshot parameters
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.ShardingUploadParams upload_shard_params = 8;</code>
      */
     @java.lang.Override
@@ -5043,6 +5388,10 @@ public final class TransferOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * YC Runtime parameters for the transfer
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.YcRuntime}
      */
     public static final class Builder extends
@@ -5205,6 +5554,10 @@ public final class TransferOuterClass {
 
       private long jobCount_ ;
       /**
+       * <pre>
+       * Number of workers in parallel replication.
+       * </pre>
+       *
        * <code>int64 job_count = 1;</code>
        * @return The jobCount.
        */
@@ -5213,6 +5566,10 @@ public final class TransferOuterClass {
         return jobCount_;
       }
       /**
+       * <pre>
+       * Number of workers in parallel replication.
+       * </pre>
+       *
        * <code>int64 job_count = 1;</code>
        * @param value The jobCount to set.
        * @return This builder for chaining.
@@ -5224,6 +5581,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Number of workers in parallel replication.
+       * </pre>
+       *
        * <code>int64 job_count = 1;</code>
        * @return This builder for chaining.
        */
@@ -5238,6 +5599,10 @@ public final class TransferOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.TransferOuterClass.ShardingUploadParams, yandex.cloud.api.datatransfer.v1.TransferOuterClass.ShardingUploadParams.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.ShardingUploadParamsOrBuilder> uploadShardParamsBuilder_;
       /**
+       * <pre>
+       * Parallel snapshot parameters
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ShardingUploadParams upload_shard_params = 8;</code>
        * @return Whether the uploadShardParams field is set.
        */
@@ -5245,6 +5610,10 @@ public final class TransferOuterClass {
         return uploadShardParamsBuilder_ != null || uploadShardParams_ != null;
       }
       /**
+       * <pre>
+       * Parallel snapshot parameters
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ShardingUploadParams upload_shard_params = 8;</code>
        * @return The uploadShardParams.
        */
@@ -5256,6 +5625,10 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Parallel snapshot parameters
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ShardingUploadParams upload_shard_params = 8;</code>
        */
       public Builder setUploadShardParams(yandex.cloud.api.datatransfer.v1.TransferOuterClass.ShardingUploadParams value) {
@@ -5272,6 +5645,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Parallel snapshot parameters
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ShardingUploadParams upload_shard_params = 8;</code>
        */
       public Builder setUploadShardParams(
@@ -5286,6 +5663,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Parallel snapshot parameters
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ShardingUploadParams upload_shard_params = 8;</code>
        */
       public Builder mergeUploadShardParams(yandex.cloud.api.datatransfer.v1.TransferOuterClass.ShardingUploadParams value) {
@@ -5304,6 +5685,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Parallel snapshot parameters
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ShardingUploadParams upload_shard_params = 8;</code>
        */
       public Builder clearUploadShardParams() {
@@ -5318,6 +5703,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Parallel snapshot parameters
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ShardingUploadParams upload_shard_params = 8;</code>
        */
       public yandex.cloud.api.datatransfer.v1.TransferOuterClass.ShardingUploadParams.Builder getUploadShardParamsBuilder() {
@@ -5326,6 +5715,10 @@ public final class TransferOuterClass {
         return getUploadShardParamsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Parallel snapshot parameters
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ShardingUploadParams upload_shard_params = 8;</code>
        */
       public yandex.cloud.api.datatransfer.v1.TransferOuterClass.ShardingUploadParamsOrBuilder getUploadShardParamsOrBuilder() {
@@ -5337,6 +5730,10 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Parallel snapshot parameters
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ShardingUploadParams upload_shard_params = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -19839,121 +20236,229 @@ public final class TransferOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Mask field transformer allows you to hash data
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.MaskFieldTransformer mask_field = 1;</code>
      * @return Whether the maskField field is set.
      */
     boolean hasMaskField();
     /**
+     * <pre>
+     * Mask field transformer allows you to hash data
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.MaskFieldTransformer mask_field = 1;</code>
      * @return The maskField.
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.MaskFieldTransformer getMaskField();
     /**
+     * <pre>
+     * Mask field transformer allows you to hash data
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.MaskFieldTransformer mask_field = 1;</code>
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.MaskFieldTransformerOrBuilder getMaskFieldOrBuilder();
 
     /**
+     * <pre>
+     * Set up a list of table columns to transfer
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.FilterColumnsTransformer filter_columns = 2;</code>
      * @return Whether the filterColumns field is set.
      */
     boolean hasFilterColumns();
     /**
+     * <pre>
+     * Set up a list of table columns to transfer
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.FilterColumnsTransformer filter_columns = 2;</code>
      * @return The filterColumns.
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterColumnsTransformer getFilterColumns();
     /**
+     * <pre>
+     * Set up a list of table columns to transfer
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.FilterColumnsTransformer filter_columns = 2;</code>
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterColumnsTransformerOrBuilder getFilterColumnsOrBuilder();
 
     /**
+     * <pre>
+     * Set rules for renaming tables by specifying the current names of the tables in
+     * the source and new names for these tables in the target
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.RenameTablesTransformer rename_tables = 4;</code>
      * @return Whether the renameTables field is set.
      */
     boolean hasRenameTables();
     /**
+     * <pre>
+     * Set rules for renaming tables by specifying the current names of the tables in
+     * the source and new names for these tables in the target
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.RenameTablesTransformer rename_tables = 4;</code>
      * @return The renameTables.
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.RenameTablesTransformer getRenameTables();
     /**
+     * <pre>
+     * Set rules for renaming tables by specifying the current names of the tables in
+     * the source and new names for these tables in the target
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.RenameTablesTransformer rename_tables = 4;</code>
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.RenameTablesTransformerOrBuilder getRenameTablesOrBuilder();
 
     /**
+     * <pre>
+     * Override primary keys.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.ReplacePrimaryKeyTransformer replace_primary_key = 6;</code>
      * @return Whether the replacePrimaryKey field is set.
      */
     boolean hasReplacePrimaryKey();
     /**
+     * <pre>
+     * Override primary keys.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.ReplacePrimaryKeyTransformer replace_primary_key = 6;</code>
      * @return The replacePrimaryKey.
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.ReplacePrimaryKeyTransformer getReplacePrimaryKey();
     /**
+     * <pre>
+     * Override primary keys.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.ReplacePrimaryKeyTransformer replace_primary_key = 6;</code>
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.ReplacePrimaryKeyTransformerOrBuilder getReplacePrimaryKeyOrBuilder();
 
     /**
+     * <pre>
+     * Convert column values to strings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.ToStringTransformer convert_to_string = 7;</code>
      * @return Whether the convertToString field is set.
      */
     boolean hasConvertToString();
     /**
+     * <pre>
+     * Convert column values to strings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.ToStringTransformer convert_to_string = 7;</code>
      * @return The convertToString.
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.ToStringTransformer getConvertToString();
     /**
+     * <pre>
+     * Convert column values to strings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.ToStringTransformer convert_to_string = 7;</code>
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.ToStringTransformerOrBuilder getConvertToStringOrBuilder();
 
     /**
+     * <pre>
+     * Set the number of shards for particular tables and a list of columns whose
+     * values will be used for calculating a hash to determine a shard.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.SharderTransformer sharder_transformer = 9;</code>
      * @return Whether the sharderTransformer field is set.
      */
     boolean hasSharderTransformer();
     /**
+     * <pre>
+     * Set the number of shards for particular tables and a list of columns whose
+     * values will be used for calculating a hash to determine a shard.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.SharderTransformer sharder_transformer = 9;</code>
      * @return The sharderTransformer.
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.SharderTransformer getSharderTransformer();
     /**
+     * <pre>
+     * Set the number of shards for particular tables and a list of columns whose
+     * values will be used for calculating a hash to determine a shard.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.SharderTransformer sharder_transformer = 9;</code>
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.SharderTransformerOrBuilder getSharderTransformerOrBuilder();
 
     /**
+     * <pre>
+     * Splits the X table into multiple tables (X_1, X_2, ..., X_n) based on data.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.TableSplitterTransformer table_splitter_transformer = 13;</code>
      * @return Whether the tableSplitterTransformer field is set.
      */
     boolean hasTableSplitterTransformer();
     /**
+     * <pre>
+     * Splits the X table into multiple tables (X_1, X_2, ..., X_n) based on data.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.TableSplitterTransformer table_splitter_transformer = 13;</code>
      * @return The tableSplitterTransformer.
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.TableSplitterTransformer getTableSplitterTransformer();
     /**
+     * <pre>
+     * Splits the X table into multiple tables (X_1, X_2, ..., X_n) based on data.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.TableSplitterTransformer table_splitter_transformer = 13;</code>
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.TableSplitterTransformerOrBuilder getTableSplitterTransformerOrBuilder();
 
     /**
+     * <pre>
+     * This filter only applies to transfers with queues (Logbroker or Apache Kafka®)
+     * as a data source. When running a transfer, only the strings meeting the
+     * specified criteria remain in a changefeed.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.FilterRowsTransformer filter_rows = 14;</code>
      * @return Whether the filterRows field is set.
      */
     boolean hasFilterRows();
     /**
+     * <pre>
+     * This filter only applies to transfers with queues (Logbroker or Apache Kafka®)
+     * as a data source. When running a transfer, only the strings meeting the
+     * specified criteria remain in a changefeed.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.FilterRowsTransformer filter_rows = 14;</code>
      * @return The filterRows.
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterRowsTransformer getFilterRows();
     /**
+     * <pre>
+     * This filter only applies to transfers with queues (Logbroker or Apache Kafka®)
+     * as a data source. When running a transfer, only the strings meeting the
+     * specified criteria remain in a changefeed.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.FilterRowsTransformer filter_rows = 14;</code>
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterRowsTransformerOrBuilder getFilterRowsOrBuilder();
@@ -20209,6 +20714,10 @@ public final class TransferOuterClass {
 
     public static final int MASK_FIELD_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Mask field transformer allows you to hash data
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.MaskFieldTransformer mask_field = 1;</code>
      * @return Whether the maskField field is set.
      */
@@ -20217,6 +20726,10 @@ public final class TransferOuterClass {
       return transformerCase_ == 1;
     }
     /**
+     * <pre>
+     * Mask field transformer allows you to hash data
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.MaskFieldTransformer mask_field = 1;</code>
      * @return The maskField.
      */
@@ -20228,6 +20741,10 @@ public final class TransferOuterClass {
       return yandex.cloud.api.datatransfer.v1.TransferOuterClass.MaskFieldTransformer.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Mask field transformer allows you to hash data
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.MaskFieldTransformer mask_field = 1;</code>
      */
     @java.lang.Override
@@ -20240,6 +20757,10 @@ public final class TransferOuterClass {
 
     public static final int FILTER_COLUMNS_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Set up a list of table columns to transfer
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.FilterColumnsTransformer filter_columns = 2;</code>
      * @return Whether the filterColumns field is set.
      */
@@ -20248,6 +20769,10 @@ public final class TransferOuterClass {
       return transformerCase_ == 2;
     }
     /**
+     * <pre>
+     * Set up a list of table columns to transfer
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.FilterColumnsTransformer filter_columns = 2;</code>
      * @return The filterColumns.
      */
@@ -20259,6 +20784,10 @@ public final class TransferOuterClass {
       return yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterColumnsTransformer.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Set up a list of table columns to transfer
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.FilterColumnsTransformer filter_columns = 2;</code>
      */
     @java.lang.Override
@@ -20271,6 +20800,11 @@ public final class TransferOuterClass {
 
     public static final int RENAME_TABLES_FIELD_NUMBER = 4;
     /**
+     * <pre>
+     * Set rules for renaming tables by specifying the current names of the tables in
+     * the source and new names for these tables in the target
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.RenameTablesTransformer rename_tables = 4;</code>
      * @return Whether the renameTables field is set.
      */
@@ -20279,6 +20813,11 @@ public final class TransferOuterClass {
       return transformerCase_ == 4;
     }
     /**
+     * <pre>
+     * Set rules for renaming tables by specifying the current names of the tables in
+     * the source and new names for these tables in the target
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.RenameTablesTransformer rename_tables = 4;</code>
      * @return The renameTables.
      */
@@ -20290,6 +20829,11 @@ public final class TransferOuterClass {
       return yandex.cloud.api.datatransfer.v1.TransferOuterClass.RenameTablesTransformer.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Set rules for renaming tables by specifying the current names of the tables in
+     * the source and new names for these tables in the target
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.RenameTablesTransformer rename_tables = 4;</code>
      */
     @java.lang.Override
@@ -20302,6 +20846,10 @@ public final class TransferOuterClass {
 
     public static final int REPLACE_PRIMARY_KEY_FIELD_NUMBER = 6;
     /**
+     * <pre>
+     * Override primary keys.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.ReplacePrimaryKeyTransformer replace_primary_key = 6;</code>
      * @return Whether the replacePrimaryKey field is set.
      */
@@ -20310,6 +20858,10 @@ public final class TransferOuterClass {
       return transformerCase_ == 6;
     }
     /**
+     * <pre>
+     * Override primary keys.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.ReplacePrimaryKeyTransformer replace_primary_key = 6;</code>
      * @return The replacePrimaryKey.
      */
@@ -20321,6 +20873,10 @@ public final class TransferOuterClass {
       return yandex.cloud.api.datatransfer.v1.TransferOuterClass.ReplacePrimaryKeyTransformer.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Override primary keys.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.ReplacePrimaryKeyTransformer replace_primary_key = 6;</code>
      */
     @java.lang.Override
@@ -20333,6 +20889,10 @@ public final class TransferOuterClass {
 
     public static final int CONVERT_TO_STRING_FIELD_NUMBER = 7;
     /**
+     * <pre>
+     * Convert column values to strings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.ToStringTransformer convert_to_string = 7;</code>
      * @return Whether the convertToString field is set.
      */
@@ -20341,6 +20901,10 @@ public final class TransferOuterClass {
       return transformerCase_ == 7;
     }
     /**
+     * <pre>
+     * Convert column values to strings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.ToStringTransformer convert_to_string = 7;</code>
      * @return The convertToString.
      */
@@ -20352,6 +20916,10 @@ public final class TransferOuterClass {
       return yandex.cloud.api.datatransfer.v1.TransferOuterClass.ToStringTransformer.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Convert column values to strings
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.ToStringTransformer convert_to_string = 7;</code>
      */
     @java.lang.Override
@@ -20364,6 +20932,11 @@ public final class TransferOuterClass {
 
     public static final int SHARDER_TRANSFORMER_FIELD_NUMBER = 9;
     /**
+     * <pre>
+     * Set the number of shards for particular tables and a list of columns whose
+     * values will be used for calculating a hash to determine a shard.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.SharderTransformer sharder_transformer = 9;</code>
      * @return Whether the sharderTransformer field is set.
      */
@@ -20372,6 +20945,11 @@ public final class TransferOuterClass {
       return transformerCase_ == 9;
     }
     /**
+     * <pre>
+     * Set the number of shards for particular tables and a list of columns whose
+     * values will be used for calculating a hash to determine a shard.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.SharderTransformer sharder_transformer = 9;</code>
      * @return The sharderTransformer.
      */
@@ -20383,6 +20961,11 @@ public final class TransferOuterClass {
       return yandex.cloud.api.datatransfer.v1.TransferOuterClass.SharderTransformer.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Set the number of shards for particular tables and a list of columns whose
+     * values will be used for calculating a hash to determine a shard.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.SharderTransformer sharder_transformer = 9;</code>
      */
     @java.lang.Override
@@ -20395,6 +20978,10 @@ public final class TransferOuterClass {
 
     public static final int TABLE_SPLITTER_TRANSFORMER_FIELD_NUMBER = 13;
     /**
+     * <pre>
+     * Splits the X table into multiple tables (X_1, X_2, ..., X_n) based on data.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.TableSplitterTransformer table_splitter_transformer = 13;</code>
      * @return Whether the tableSplitterTransformer field is set.
      */
@@ -20403,6 +20990,10 @@ public final class TransferOuterClass {
       return transformerCase_ == 13;
     }
     /**
+     * <pre>
+     * Splits the X table into multiple tables (X_1, X_2, ..., X_n) based on data.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.TableSplitterTransformer table_splitter_transformer = 13;</code>
      * @return The tableSplitterTransformer.
      */
@@ -20414,6 +21005,10 @@ public final class TransferOuterClass {
       return yandex.cloud.api.datatransfer.v1.TransferOuterClass.TableSplitterTransformer.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Splits the X table into multiple tables (X_1, X_2, ..., X_n) based on data.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.TableSplitterTransformer table_splitter_transformer = 13;</code>
      */
     @java.lang.Override
@@ -20426,6 +21021,12 @@ public final class TransferOuterClass {
 
     public static final int FILTER_ROWS_FIELD_NUMBER = 14;
     /**
+     * <pre>
+     * This filter only applies to transfers with queues (Logbroker or Apache Kafka®)
+     * as a data source. When running a transfer, only the strings meeting the
+     * specified criteria remain in a changefeed.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.FilterRowsTransformer filter_rows = 14;</code>
      * @return Whether the filterRows field is set.
      */
@@ -20434,6 +21035,12 @@ public final class TransferOuterClass {
       return transformerCase_ == 14;
     }
     /**
+     * <pre>
+     * This filter only applies to transfers with queues (Logbroker or Apache Kafka®)
+     * as a data source. When running a transfer, only the strings meeting the
+     * specified criteria remain in a changefeed.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.FilterRowsTransformer filter_rows = 14;</code>
      * @return The filterRows.
      */
@@ -20445,6 +21052,12 @@ public final class TransferOuterClass {
       return yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterRowsTransformer.getDefaultInstance();
     }
     /**
+     * <pre>
+     * This filter only applies to transfers with queues (Logbroker or Apache Kafka®)
+     * as a data source. When running a transfer, only the strings meeting the
+     * specified criteria remain in a changefeed.
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.FilterRowsTransformer filter_rows = 14;</code>
      */
     @java.lang.Override
@@ -20988,6 +21601,10 @@ public final class TransferOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.TransferOuterClass.MaskFieldTransformer, yandex.cloud.api.datatransfer.v1.TransferOuterClass.MaskFieldTransformer.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.MaskFieldTransformerOrBuilder> maskFieldBuilder_;
       /**
+       * <pre>
+       * Mask field transformer allows you to hash data
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.MaskFieldTransformer mask_field = 1;</code>
        * @return Whether the maskField field is set.
        */
@@ -20996,6 +21613,10 @@ public final class TransferOuterClass {
         return transformerCase_ == 1;
       }
       /**
+       * <pre>
+       * Mask field transformer allows you to hash data
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.MaskFieldTransformer mask_field = 1;</code>
        * @return The maskField.
        */
@@ -21014,6 +21635,10 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Mask field transformer allows you to hash data
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.MaskFieldTransformer mask_field = 1;</code>
        */
       public Builder setMaskField(yandex.cloud.api.datatransfer.v1.TransferOuterClass.MaskFieldTransformer value) {
@@ -21030,6 +21655,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Mask field transformer allows you to hash data
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.MaskFieldTransformer mask_field = 1;</code>
        */
       public Builder setMaskField(
@@ -21044,6 +21673,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Mask field transformer allows you to hash data
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.MaskFieldTransformer mask_field = 1;</code>
        */
       public Builder mergeMaskField(yandex.cloud.api.datatransfer.v1.TransferOuterClass.MaskFieldTransformer value) {
@@ -21066,6 +21699,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Mask field transformer allows you to hash data
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.MaskFieldTransformer mask_field = 1;</code>
        */
       public Builder clearMaskField() {
@@ -21085,12 +21722,20 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Mask field transformer allows you to hash data
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.MaskFieldTransformer mask_field = 1;</code>
        */
       public yandex.cloud.api.datatransfer.v1.TransferOuterClass.MaskFieldTransformer.Builder getMaskFieldBuilder() {
         return getMaskFieldFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Mask field transformer allows you to hash data
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.MaskFieldTransformer mask_field = 1;</code>
        */
       @java.lang.Override
@@ -21105,6 +21750,10 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Mask field transformer allows you to hash data
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.MaskFieldTransformer mask_field = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -21129,6 +21778,10 @@ public final class TransferOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterColumnsTransformer, yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterColumnsTransformer.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterColumnsTransformerOrBuilder> filterColumnsBuilder_;
       /**
+       * <pre>
+       * Set up a list of table columns to transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.FilterColumnsTransformer filter_columns = 2;</code>
        * @return Whether the filterColumns field is set.
        */
@@ -21137,6 +21790,10 @@ public final class TransferOuterClass {
         return transformerCase_ == 2;
       }
       /**
+       * <pre>
+       * Set up a list of table columns to transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.FilterColumnsTransformer filter_columns = 2;</code>
        * @return The filterColumns.
        */
@@ -21155,6 +21812,10 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set up a list of table columns to transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.FilterColumnsTransformer filter_columns = 2;</code>
        */
       public Builder setFilterColumns(yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterColumnsTransformer value) {
@@ -21171,6 +21832,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set up a list of table columns to transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.FilterColumnsTransformer filter_columns = 2;</code>
        */
       public Builder setFilterColumns(
@@ -21185,6 +21850,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set up a list of table columns to transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.FilterColumnsTransformer filter_columns = 2;</code>
        */
       public Builder mergeFilterColumns(yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterColumnsTransformer value) {
@@ -21207,6 +21876,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set up a list of table columns to transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.FilterColumnsTransformer filter_columns = 2;</code>
        */
       public Builder clearFilterColumns() {
@@ -21226,12 +21899,20 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set up a list of table columns to transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.FilterColumnsTransformer filter_columns = 2;</code>
        */
       public yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterColumnsTransformer.Builder getFilterColumnsBuilder() {
         return getFilterColumnsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Set up a list of table columns to transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.FilterColumnsTransformer filter_columns = 2;</code>
        */
       @java.lang.Override
@@ -21246,6 +21927,10 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set up a list of table columns to transfer
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.FilterColumnsTransformer filter_columns = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -21270,6 +21955,11 @@ public final class TransferOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.TransferOuterClass.RenameTablesTransformer, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RenameTablesTransformer.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.RenameTablesTransformerOrBuilder> renameTablesBuilder_;
       /**
+       * <pre>
+       * Set rules for renaming tables by specifying the current names of the tables in
+       * the source and new names for these tables in the target
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.RenameTablesTransformer rename_tables = 4;</code>
        * @return Whether the renameTables field is set.
        */
@@ -21278,6 +21968,11 @@ public final class TransferOuterClass {
         return transformerCase_ == 4;
       }
       /**
+       * <pre>
+       * Set rules for renaming tables by specifying the current names of the tables in
+       * the source and new names for these tables in the target
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.RenameTablesTransformer rename_tables = 4;</code>
        * @return The renameTables.
        */
@@ -21296,6 +21991,11 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set rules for renaming tables by specifying the current names of the tables in
+       * the source and new names for these tables in the target
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.RenameTablesTransformer rename_tables = 4;</code>
        */
       public Builder setRenameTables(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RenameTablesTransformer value) {
@@ -21312,6 +22012,11 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set rules for renaming tables by specifying the current names of the tables in
+       * the source and new names for these tables in the target
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.RenameTablesTransformer rename_tables = 4;</code>
        */
       public Builder setRenameTables(
@@ -21326,6 +22031,11 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set rules for renaming tables by specifying the current names of the tables in
+       * the source and new names for these tables in the target
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.RenameTablesTransformer rename_tables = 4;</code>
        */
       public Builder mergeRenameTables(yandex.cloud.api.datatransfer.v1.TransferOuterClass.RenameTablesTransformer value) {
@@ -21348,6 +22058,11 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set rules for renaming tables by specifying the current names of the tables in
+       * the source and new names for these tables in the target
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.RenameTablesTransformer rename_tables = 4;</code>
        */
       public Builder clearRenameTables() {
@@ -21367,12 +22082,22 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set rules for renaming tables by specifying the current names of the tables in
+       * the source and new names for these tables in the target
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.RenameTablesTransformer rename_tables = 4;</code>
        */
       public yandex.cloud.api.datatransfer.v1.TransferOuterClass.RenameTablesTransformer.Builder getRenameTablesBuilder() {
         return getRenameTablesFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Set rules for renaming tables by specifying the current names of the tables in
+       * the source and new names for these tables in the target
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.RenameTablesTransformer rename_tables = 4;</code>
        */
       @java.lang.Override
@@ -21387,6 +22112,11 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set rules for renaming tables by specifying the current names of the tables in
+       * the source and new names for these tables in the target
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.RenameTablesTransformer rename_tables = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -21411,6 +22141,10 @@ public final class TransferOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.TransferOuterClass.ReplacePrimaryKeyTransformer, yandex.cloud.api.datatransfer.v1.TransferOuterClass.ReplacePrimaryKeyTransformer.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.ReplacePrimaryKeyTransformerOrBuilder> replacePrimaryKeyBuilder_;
       /**
+       * <pre>
+       * Override primary keys.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ReplacePrimaryKeyTransformer replace_primary_key = 6;</code>
        * @return Whether the replacePrimaryKey field is set.
        */
@@ -21419,6 +22153,10 @@ public final class TransferOuterClass {
         return transformerCase_ == 6;
       }
       /**
+       * <pre>
+       * Override primary keys.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ReplacePrimaryKeyTransformer replace_primary_key = 6;</code>
        * @return The replacePrimaryKey.
        */
@@ -21437,6 +22175,10 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Override primary keys.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ReplacePrimaryKeyTransformer replace_primary_key = 6;</code>
        */
       public Builder setReplacePrimaryKey(yandex.cloud.api.datatransfer.v1.TransferOuterClass.ReplacePrimaryKeyTransformer value) {
@@ -21453,6 +22195,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override primary keys.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ReplacePrimaryKeyTransformer replace_primary_key = 6;</code>
        */
       public Builder setReplacePrimaryKey(
@@ -21467,6 +22213,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override primary keys.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ReplacePrimaryKeyTransformer replace_primary_key = 6;</code>
        */
       public Builder mergeReplacePrimaryKey(yandex.cloud.api.datatransfer.v1.TransferOuterClass.ReplacePrimaryKeyTransformer value) {
@@ -21489,6 +22239,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override primary keys.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ReplacePrimaryKeyTransformer replace_primary_key = 6;</code>
        */
       public Builder clearReplacePrimaryKey() {
@@ -21508,12 +22262,20 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Override primary keys.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ReplacePrimaryKeyTransformer replace_primary_key = 6;</code>
        */
       public yandex.cloud.api.datatransfer.v1.TransferOuterClass.ReplacePrimaryKeyTransformer.Builder getReplacePrimaryKeyBuilder() {
         return getReplacePrimaryKeyFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Override primary keys.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ReplacePrimaryKeyTransformer replace_primary_key = 6;</code>
        */
       @java.lang.Override
@@ -21528,6 +22290,10 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Override primary keys.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ReplacePrimaryKeyTransformer replace_primary_key = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -21552,6 +22318,10 @@ public final class TransferOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.TransferOuterClass.ToStringTransformer, yandex.cloud.api.datatransfer.v1.TransferOuterClass.ToStringTransformer.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.ToStringTransformerOrBuilder> convertToStringBuilder_;
       /**
+       * <pre>
+       * Convert column values to strings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ToStringTransformer convert_to_string = 7;</code>
        * @return Whether the convertToString field is set.
        */
@@ -21560,6 +22330,10 @@ public final class TransferOuterClass {
         return transformerCase_ == 7;
       }
       /**
+       * <pre>
+       * Convert column values to strings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ToStringTransformer convert_to_string = 7;</code>
        * @return The convertToString.
        */
@@ -21578,6 +22352,10 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Convert column values to strings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ToStringTransformer convert_to_string = 7;</code>
        */
       public Builder setConvertToString(yandex.cloud.api.datatransfer.v1.TransferOuterClass.ToStringTransformer value) {
@@ -21594,6 +22372,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Convert column values to strings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ToStringTransformer convert_to_string = 7;</code>
        */
       public Builder setConvertToString(
@@ -21608,6 +22390,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Convert column values to strings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ToStringTransformer convert_to_string = 7;</code>
        */
       public Builder mergeConvertToString(yandex.cloud.api.datatransfer.v1.TransferOuterClass.ToStringTransformer value) {
@@ -21630,6 +22416,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Convert column values to strings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ToStringTransformer convert_to_string = 7;</code>
        */
       public Builder clearConvertToString() {
@@ -21649,12 +22439,20 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Convert column values to strings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ToStringTransformer convert_to_string = 7;</code>
        */
       public yandex.cloud.api.datatransfer.v1.TransferOuterClass.ToStringTransformer.Builder getConvertToStringBuilder() {
         return getConvertToStringFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Convert column values to strings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ToStringTransformer convert_to_string = 7;</code>
        */
       @java.lang.Override
@@ -21669,6 +22467,10 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Convert column values to strings
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.ToStringTransformer convert_to_string = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -21693,6 +22495,11 @@ public final class TransferOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.TransferOuterClass.SharderTransformer, yandex.cloud.api.datatransfer.v1.TransferOuterClass.SharderTransformer.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.SharderTransformerOrBuilder> sharderTransformerBuilder_;
       /**
+       * <pre>
+       * Set the number of shards for particular tables and a list of columns whose
+       * values will be used for calculating a hash to determine a shard.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.SharderTransformer sharder_transformer = 9;</code>
        * @return Whether the sharderTransformer field is set.
        */
@@ -21701,6 +22508,11 @@ public final class TransferOuterClass {
         return transformerCase_ == 9;
       }
       /**
+       * <pre>
+       * Set the number of shards for particular tables and a list of columns whose
+       * values will be used for calculating a hash to determine a shard.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.SharderTransformer sharder_transformer = 9;</code>
        * @return The sharderTransformer.
        */
@@ -21719,6 +22531,11 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set the number of shards for particular tables and a list of columns whose
+       * values will be used for calculating a hash to determine a shard.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.SharderTransformer sharder_transformer = 9;</code>
        */
       public Builder setSharderTransformer(yandex.cloud.api.datatransfer.v1.TransferOuterClass.SharderTransformer value) {
@@ -21735,6 +22552,11 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set the number of shards for particular tables and a list of columns whose
+       * values will be used for calculating a hash to determine a shard.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.SharderTransformer sharder_transformer = 9;</code>
        */
       public Builder setSharderTransformer(
@@ -21749,6 +22571,11 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set the number of shards for particular tables and a list of columns whose
+       * values will be used for calculating a hash to determine a shard.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.SharderTransformer sharder_transformer = 9;</code>
        */
       public Builder mergeSharderTransformer(yandex.cloud.api.datatransfer.v1.TransferOuterClass.SharderTransformer value) {
@@ -21771,6 +22598,11 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set the number of shards for particular tables and a list of columns whose
+       * values will be used for calculating a hash to determine a shard.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.SharderTransformer sharder_transformer = 9;</code>
        */
       public Builder clearSharderTransformer() {
@@ -21790,12 +22622,22 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set the number of shards for particular tables and a list of columns whose
+       * values will be used for calculating a hash to determine a shard.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.SharderTransformer sharder_transformer = 9;</code>
        */
       public yandex.cloud.api.datatransfer.v1.TransferOuterClass.SharderTransformer.Builder getSharderTransformerBuilder() {
         return getSharderTransformerFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Set the number of shards for particular tables and a list of columns whose
+       * values will be used for calculating a hash to determine a shard.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.SharderTransformer sharder_transformer = 9;</code>
        */
       @java.lang.Override
@@ -21810,6 +22652,11 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set the number of shards for particular tables and a list of columns whose
+       * values will be used for calculating a hash to determine a shard.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.SharderTransformer sharder_transformer = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -21834,6 +22681,10 @@ public final class TransferOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.TransferOuterClass.TableSplitterTransformer, yandex.cloud.api.datatransfer.v1.TransferOuterClass.TableSplitterTransformer.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.TableSplitterTransformerOrBuilder> tableSplitterTransformerBuilder_;
       /**
+       * <pre>
+       * Splits the X table into multiple tables (X_1, X_2, ..., X_n) based on data.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.TableSplitterTransformer table_splitter_transformer = 13;</code>
        * @return Whether the tableSplitterTransformer field is set.
        */
@@ -21842,6 +22693,10 @@ public final class TransferOuterClass {
         return transformerCase_ == 13;
       }
       /**
+       * <pre>
+       * Splits the X table into multiple tables (X_1, X_2, ..., X_n) based on data.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.TableSplitterTransformer table_splitter_transformer = 13;</code>
        * @return The tableSplitterTransformer.
        */
@@ -21860,6 +22715,10 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Splits the X table into multiple tables (X_1, X_2, ..., X_n) based on data.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.TableSplitterTransformer table_splitter_transformer = 13;</code>
        */
       public Builder setTableSplitterTransformer(yandex.cloud.api.datatransfer.v1.TransferOuterClass.TableSplitterTransformer value) {
@@ -21876,6 +22735,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Splits the X table into multiple tables (X_1, X_2, ..., X_n) based on data.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.TableSplitterTransformer table_splitter_transformer = 13;</code>
        */
       public Builder setTableSplitterTransformer(
@@ -21890,6 +22753,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Splits the X table into multiple tables (X_1, X_2, ..., X_n) based on data.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.TableSplitterTransformer table_splitter_transformer = 13;</code>
        */
       public Builder mergeTableSplitterTransformer(yandex.cloud.api.datatransfer.v1.TransferOuterClass.TableSplitterTransformer value) {
@@ -21912,6 +22779,10 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Splits the X table into multiple tables (X_1, X_2, ..., X_n) based on data.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.TableSplitterTransformer table_splitter_transformer = 13;</code>
        */
       public Builder clearTableSplitterTransformer() {
@@ -21931,12 +22802,20 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Splits the X table into multiple tables (X_1, X_2, ..., X_n) based on data.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.TableSplitterTransformer table_splitter_transformer = 13;</code>
        */
       public yandex.cloud.api.datatransfer.v1.TransferOuterClass.TableSplitterTransformer.Builder getTableSplitterTransformerBuilder() {
         return getTableSplitterTransformerFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Splits the X table into multiple tables (X_1, X_2, ..., X_n) based on data.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.TableSplitterTransformer table_splitter_transformer = 13;</code>
        */
       @java.lang.Override
@@ -21951,6 +22830,10 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * Splits the X table into multiple tables (X_1, X_2, ..., X_n) based on data.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.TableSplitterTransformer table_splitter_transformer = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -21975,6 +22858,12 @@ public final class TransferOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterRowsTransformer, yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterRowsTransformer.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterRowsTransformerOrBuilder> filterRowsBuilder_;
       /**
+       * <pre>
+       * This filter only applies to transfers with queues (Logbroker or Apache Kafka®)
+       * as a data source. When running a transfer, only the strings meeting the
+       * specified criteria remain in a changefeed.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.FilterRowsTransformer filter_rows = 14;</code>
        * @return Whether the filterRows field is set.
        */
@@ -21983,6 +22872,12 @@ public final class TransferOuterClass {
         return transformerCase_ == 14;
       }
       /**
+       * <pre>
+       * This filter only applies to transfers with queues (Logbroker or Apache Kafka®)
+       * as a data source. When running a transfer, only the strings meeting the
+       * specified criteria remain in a changefeed.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.FilterRowsTransformer filter_rows = 14;</code>
        * @return The filterRows.
        */
@@ -22001,6 +22896,12 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * This filter only applies to transfers with queues (Logbroker or Apache Kafka®)
+       * as a data source. When running a transfer, only the strings meeting the
+       * specified criteria remain in a changefeed.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.FilterRowsTransformer filter_rows = 14;</code>
        */
       public Builder setFilterRows(yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterRowsTransformer value) {
@@ -22017,6 +22918,12 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * This filter only applies to transfers with queues (Logbroker or Apache Kafka®)
+       * as a data source. When running a transfer, only the strings meeting the
+       * specified criteria remain in a changefeed.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.FilterRowsTransformer filter_rows = 14;</code>
        */
       public Builder setFilterRows(
@@ -22031,6 +22938,12 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * This filter only applies to transfers with queues (Logbroker or Apache Kafka®)
+       * as a data source. When running a transfer, only the strings meeting the
+       * specified criteria remain in a changefeed.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.FilterRowsTransformer filter_rows = 14;</code>
        */
       public Builder mergeFilterRows(yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterRowsTransformer value) {
@@ -22053,6 +22966,12 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * This filter only applies to transfers with queues (Logbroker or Apache Kafka®)
+       * as a data source. When running a transfer, only the strings meeting the
+       * specified criteria remain in a changefeed.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.FilterRowsTransformer filter_rows = 14;</code>
        */
       public Builder clearFilterRows() {
@@ -22072,12 +22991,24 @@ public final class TransferOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * This filter only applies to transfers with queues (Logbroker or Apache Kafka®)
+       * as a data source. When running a transfer, only the strings meeting the
+       * specified criteria remain in a changefeed.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.FilterRowsTransformer filter_rows = 14;</code>
        */
       public yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterRowsTransformer.Builder getFilterRowsBuilder() {
         return getFilterRowsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * This filter only applies to transfers with queues (Logbroker or Apache Kafka®)
+       * as a data source. When running a transfer, only the strings meeting the
+       * specified criteria remain in a changefeed.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.FilterRowsTransformer filter_rows = 14;</code>
        */
       @java.lang.Override
@@ -22092,6 +23023,12 @@ public final class TransferOuterClass {
         }
       }
       /**
+       * <pre>
+       * This filter only applies to transfers with queues (Logbroker or Apache Kafka®)
+       * as a data source. When running a transfer, only the strings meeting the
+       * specified criteria remain in a changefeed.
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.FilterRowsTransformer filter_rows = 14;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -22171,7 +23108,8 @@ public final class TransferOuterClass {
 
     /**
      * <pre>
-     * Transformers are set as a list.
+     * A list of transformers. You can specify exactly 1 transformer in each element of
+     * list
      * When activating a transfer, a transformation plan is made for the tables that
      * match the specified criteria.
      * Transformers are applied to the tables in the sequence specified in the list.
@@ -22183,7 +23121,8 @@ public final class TransferOuterClass {
         getTransformersList();
     /**
      * <pre>
-     * Transformers are set as a list.
+     * A list of transformers. You can specify exactly 1 transformer in each element of
+     * list
      * When activating a transfer, a transformation plan is made for the tables that
      * match the specified criteria.
      * Transformers are applied to the tables in the sequence specified in the list.
@@ -22194,7 +23133,8 @@ public final class TransferOuterClass {
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transformer getTransformers(int index);
     /**
      * <pre>
-     * Transformers are set as a list.
+     * A list of transformers. You can specify exactly 1 transformer in each element of
+     * list
      * When activating a transfer, a transformation plan is made for the tables that
      * match the specified criteria.
      * Transformers are applied to the tables in the sequence specified in the list.
@@ -22205,7 +23145,8 @@ public final class TransferOuterClass {
     int getTransformersCount();
     /**
      * <pre>
-     * Transformers are set as a list.
+     * A list of transformers. You can specify exactly 1 transformer in each element of
+     * list
      * When activating a transfer, a transformation plan is made for the tables that
      * match the specified criteria.
      * Transformers are applied to the tables in the sequence specified in the list.
@@ -22217,7 +23158,8 @@ public final class TransferOuterClass {
         getTransformersOrBuilderList();
     /**
      * <pre>
-     * Transformers are set as a list.
+     * A list of transformers. You can specify exactly 1 transformer in each element of
+     * list
      * When activating a transfer, a transformation plan is made for the tables that
      * match the specified criteria.
      * Transformers are applied to the tables in the sequence specified in the list.
@@ -22331,7 +23273,8 @@ public final class TransferOuterClass {
     private java.util.List<yandex.cloud.api.datatransfer.v1.TransferOuterClass.Transformer> transformers_;
     /**
      * <pre>
-     * Transformers are set as a list.
+     * A list of transformers. You can specify exactly 1 transformer in each element of
+     * list
      * When activating a transfer, a transformation plan is made for the tables that
      * match the specified criteria.
      * Transformers are applied to the tables in the sequence specified in the list.
@@ -22345,7 +23288,8 @@ public final class TransferOuterClass {
     }
     /**
      * <pre>
-     * Transformers are set as a list.
+     * A list of transformers. You can specify exactly 1 transformer in each element of
+     * list
      * When activating a transfer, a transformation plan is made for the tables that
      * match the specified criteria.
      * Transformers are applied to the tables in the sequence specified in the list.
@@ -22360,7 +23304,8 @@ public final class TransferOuterClass {
     }
     /**
      * <pre>
-     * Transformers are set as a list.
+     * A list of transformers. You can specify exactly 1 transformer in each element of
+     * list
      * When activating a transfer, a transformation plan is made for the tables that
      * match the specified criteria.
      * Transformers are applied to the tables in the sequence specified in the list.
@@ -22374,7 +23319,8 @@ public final class TransferOuterClass {
     }
     /**
      * <pre>
-     * Transformers are set as a list.
+     * A list of transformers. You can specify exactly 1 transformer in each element of
+     * list
      * When activating a transfer, a transformation plan is made for the tables that
      * match the specified criteria.
      * Transformers are applied to the tables in the sequence specified in the list.
@@ -22388,7 +23334,8 @@ public final class TransferOuterClass {
     }
     /**
      * <pre>
-     * Transformers are set as a list.
+     * A list of transformers. You can specify exactly 1 transformer in each element of
+     * list
      * When activating a transfer, a transformation plan is made for the tables that
      * match the specified criteria.
      * Transformers are applied to the tables in the sequence specified in the list.
@@ -22766,7 +23713,8 @@ public final class TransferOuterClass {
 
       /**
        * <pre>
-       * Transformers are set as a list.
+       * A list of transformers. You can specify exactly 1 transformer in each element of
+       * list
        * When activating a transfer, a transformation plan is made for the tables that
        * match the specified criteria.
        * Transformers are applied to the tables in the sequence specified in the list.
@@ -22783,7 +23731,8 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * Transformers are set as a list.
+       * A list of transformers. You can specify exactly 1 transformer in each element of
+       * list
        * When activating a transfer, a transformation plan is made for the tables that
        * match the specified criteria.
        * Transformers are applied to the tables in the sequence specified in the list.
@@ -22800,7 +23749,8 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * Transformers are set as a list.
+       * A list of transformers. You can specify exactly 1 transformer in each element of
+       * list
        * When activating a transfer, a transformation plan is made for the tables that
        * match the specified criteria.
        * Transformers are applied to the tables in the sequence specified in the list.
@@ -22817,7 +23767,8 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * Transformers are set as a list.
+       * A list of transformers. You can specify exactly 1 transformer in each element of
+       * list
        * When activating a transfer, a transformation plan is made for the tables that
        * match the specified criteria.
        * Transformers are applied to the tables in the sequence specified in the list.
@@ -22841,7 +23792,8 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * Transformers are set as a list.
+       * A list of transformers. You can specify exactly 1 transformer in each element of
+       * list
        * When activating a transfer, a transformation plan is made for the tables that
        * match the specified criteria.
        * Transformers are applied to the tables in the sequence specified in the list.
@@ -22862,7 +23814,8 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * Transformers are set as a list.
+       * A list of transformers. You can specify exactly 1 transformer in each element of
+       * list
        * When activating a transfer, a transformation plan is made for the tables that
        * match the specified criteria.
        * Transformers are applied to the tables in the sequence specified in the list.
@@ -22885,7 +23838,8 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * Transformers are set as a list.
+       * A list of transformers. You can specify exactly 1 transformer in each element of
+       * list
        * When activating a transfer, a transformation plan is made for the tables that
        * match the specified criteria.
        * Transformers are applied to the tables in the sequence specified in the list.
@@ -22909,7 +23863,8 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * Transformers are set as a list.
+       * A list of transformers. You can specify exactly 1 transformer in each element of
+       * list
        * When activating a transfer, a transformation plan is made for the tables that
        * match the specified criteria.
        * Transformers are applied to the tables in the sequence specified in the list.
@@ -22930,7 +23885,8 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * Transformers are set as a list.
+       * A list of transformers. You can specify exactly 1 transformer in each element of
+       * list
        * When activating a transfer, a transformation plan is made for the tables that
        * match the specified criteria.
        * Transformers are applied to the tables in the sequence specified in the list.
@@ -22951,7 +23907,8 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * Transformers are set as a list.
+       * A list of transformers. You can specify exactly 1 transformer in each element of
+       * list
        * When activating a transfer, a transformation plan is made for the tables that
        * match the specified criteria.
        * Transformers are applied to the tables in the sequence specified in the list.
@@ -22973,7 +23930,8 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * Transformers are set as a list.
+       * A list of transformers. You can specify exactly 1 transformer in each element of
+       * list
        * When activating a transfer, a transformation plan is made for the tables that
        * match the specified criteria.
        * Transformers are applied to the tables in the sequence specified in the list.
@@ -22993,7 +23951,8 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * Transformers are set as a list.
+       * A list of transformers. You can specify exactly 1 transformer in each element of
+       * list
        * When activating a transfer, a transformation plan is made for the tables that
        * match the specified criteria.
        * Transformers are applied to the tables in the sequence specified in the list.
@@ -23013,7 +23972,8 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * Transformers are set as a list.
+       * A list of transformers. You can specify exactly 1 transformer in each element of
+       * list
        * When activating a transfer, a transformation plan is made for the tables that
        * match the specified criteria.
        * Transformers are applied to the tables in the sequence specified in the list.
@@ -23027,7 +23987,8 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * Transformers are set as a list.
+       * A list of transformers. You can specify exactly 1 transformer in each element of
+       * list
        * When activating a transfer, a transformation plan is made for the tables that
        * match the specified criteria.
        * Transformers are applied to the tables in the sequence specified in the list.
@@ -23044,7 +24005,8 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * Transformers are set as a list.
+       * A list of transformers. You can specify exactly 1 transformer in each element of
+       * list
        * When activating a transfer, a transformation plan is made for the tables that
        * match the specified criteria.
        * Transformers are applied to the tables in the sequence specified in the list.
@@ -23062,7 +24024,8 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * Transformers are set as a list.
+       * A list of transformers. You can specify exactly 1 transformer in each element of
+       * list
        * When activating a transfer, a transformation plan is made for the tables that
        * match the specified criteria.
        * Transformers are applied to the tables in the sequence specified in the list.
@@ -23076,7 +24039,8 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * Transformers are set as a list.
+       * A list of transformers. You can specify exactly 1 transformer in each element of
+       * list
        * When activating a transfer, a transformation plan is made for the tables that
        * match the specified criteria.
        * Transformers are applied to the tables in the sequence specified in the list.
@@ -23091,7 +24055,8 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * Transformers are set as a list.
+       * A list of transformers. You can specify exactly 1 transformer in each element of
+       * list
        * When activating a transfer, a transformation plan is made for the tables that
        * match the specified criteria.
        * Transformers are applied to the tables in the sequence specified in the list.

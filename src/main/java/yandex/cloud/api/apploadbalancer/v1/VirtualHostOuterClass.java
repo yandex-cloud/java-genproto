@@ -10801,6 +10801,33 @@ public final class VirtualHostOuterClass {
      */
     boolean getDisableSecurityProfile();
 
+    /**
+     * <pre>
+     * Client certificates forwarding settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 6;</code>
+     * @return Whether the clientCertificateForward field is set.
+     */
+    boolean hasClientCertificateForward();
+    /**
+     * <pre>
+     * Client certificates forwarding settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 6;</code>
+     * @return The clientCertificateForward.
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward getClientCertificateForward();
+    /**
+     * <pre>
+     * Client certificates forwarding settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 6;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForwardOrBuilder getClientCertificateForwardOrBuilder();
+
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.RouteCase getRouteCase();
   }
   /**
@@ -10904,6 +10931,19 @@ public final class VirtualHostOuterClass {
             case 40: {
 
               disableSecurityProfile_ = input.readBool();
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.Builder subBuilder = null;
+              if (clientCertificateForward_ != null) {
+                subBuilder = clientCertificateForward_.toBuilder();
+              }
+              clientCertificateForward_ = input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(clientCertificateForward_);
+                clientCertificateForward_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -11152,6 +11192,44 @@ public final class VirtualHostOuterClass {
       return disableSecurityProfile_;
     }
 
+    public static final int CLIENT_CERTIFICATE_FORWARD_FIELD_NUMBER = 6;
+    private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward clientCertificateForward_;
+    /**
+     * <pre>
+     * Client certificates forwarding settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 6;</code>
+     * @return Whether the clientCertificateForward field is set.
+     */
+    @java.lang.Override
+    public boolean hasClientCertificateForward() {
+      return clientCertificateForward_ != null;
+    }
+    /**
+     * <pre>
+     * Client certificates forwarding settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 6;</code>
+     * @return The clientCertificateForward.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward getClientCertificateForward() {
+      return clientCertificateForward_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.getDefaultInstance() : clientCertificateForward_;
+    }
+    /**
+     * <pre>
+     * Client certificates forwarding settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForwardOrBuilder getClientCertificateForwardOrBuilder() {
+      return getClientCertificateForward();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11181,6 +11259,9 @@ public final class VirtualHostOuterClass {
       if (disableSecurityProfile_ != false) {
         output.writeBool(5, disableSecurityProfile_);
       }
+      if (clientCertificateForward_ != null) {
+        output.writeMessage(6, getClientCertificateForward());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11209,6 +11290,10 @@ public final class VirtualHostOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, disableSecurityProfile_);
       }
+      if (clientCertificateForward_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getClientCertificateForward());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -11233,6 +11318,11 @@ public final class VirtualHostOuterClass {
       }
       if (getDisableSecurityProfile()
           != other.getDisableSecurityProfile()) return false;
+      if (hasClientCertificateForward() != other.hasClientCertificateForward()) return false;
+      if (hasClientCertificateForward()) {
+        if (!getClientCertificateForward()
+            .equals(other.getClientCertificateForward())) return false;
+      }
       if (!getRouteCase().equals(other.getRouteCase())) return false;
       switch (routeCase_) {
         case 2:
@@ -11266,6 +11356,10 @@ public final class VirtualHostOuterClass {
       hash = (37 * hash) + DISABLE_SECURITY_PROFILE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDisableSecurityProfile());
+      if (hasClientCertificateForward()) {
+        hash = (37 * hash) + CLIENT_CERTIFICATE_FORWARD_FIELD_NUMBER;
+        hash = (53 * hash) + getClientCertificateForward().hashCode();
+      }
       switch (routeCase_) {
         case 2:
           hash = (37 * hash) + HTTP_FIELD_NUMBER;
@@ -11426,6 +11520,12 @@ public final class VirtualHostOuterClass {
         }
         disableSecurityProfile_ = false;
 
+        if (clientCertificateForwardBuilder_ == null) {
+          clientCertificateForward_ = null;
+        } else {
+          clientCertificateForward_ = null;
+          clientCertificateForwardBuilder_ = null;
+        }
         routeCase_ = 0;
         route_ = null;
         return this;
@@ -11475,6 +11575,11 @@ public final class VirtualHostOuterClass {
           result.routeOptions_ = routeOptionsBuilder_.build();
         }
         result.disableSecurityProfile_ = disableSecurityProfile_;
+        if (clientCertificateForwardBuilder_ == null) {
+          result.clientCertificateForward_ = clientCertificateForward_;
+        } else {
+          result.clientCertificateForward_ = clientCertificateForwardBuilder_.build();
+        }
         result.routeCase_ = routeCase_;
         onBuilt();
         return result;
@@ -11533,6 +11638,9 @@ public final class VirtualHostOuterClass {
         }
         if (other.getDisableSecurityProfile() != false) {
           setDisableSecurityProfile(other.getDisableSecurityProfile());
+        }
+        if (other.hasClientCertificateForward()) {
+          mergeClientCertificateForward(other.getClientCertificateForward());
         }
         switch (other.getRouteCase()) {
           case HTTP: {
@@ -12202,6 +12310,161 @@ public final class VirtualHostOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward clientCertificateForward_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForwardOrBuilder> clientCertificateForwardBuilder_;
+      /**
+       * <pre>
+       * Client certificates forwarding settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 6;</code>
+       * @return Whether the clientCertificateForward field is set.
+       */
+      public boolean hasClientCertificateForward() {
+        return clientCertificateForwardBuilder_ != null || clientCertificateForward_ != null;
+      }
+      /**
+       * <pre>
+       * Client certificates forwarding settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 6;</code>
+       * @return The clientCertificateForward.
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward getClientCertificateForward() {
+        if (clientCertificateForwardBuilder_ == null) {
+          return clientCertificateForward_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.getDefaultInstance() : clientCertificateForward_;
+        } else {
+          return clientCertificateForwardBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Client certificates forwarding settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 6;</code>
+       */
+      public Builder setClientCertificateForward(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward value) {
+        if (clientCertificateForwardBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          clientCertificateForward_ = value;
+          onChanged();
+        } else {
+          clientCertificateForwardBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Client certificates forwarding settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 6;</code>
+       */
+      public Builder setClientCertificateForward(
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.Builder builderForValue) {
+        if (clientCertificateForwardBuilder_ == null) {
+          clientCertificateForward_ = builderForValue.build();
+          onChanged();
+        } else {
+          clientCertificateForwardBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Client certificates forwarding settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 6;</code>
+       */
+      public Builder mergeClientCertificateForward(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward value) {
+        if (clientCertificateForwardBuilder_ == null) {
+          if (clientCertificateForward_ != null) {
+            clientCertificateForward_ =
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.newBuilder(clientCertificateForward_).mergeFrom(value).buildPartial();
+          } else {
+            clientCertificateForward_ = value;
+          }
+          onChanged();
+        } else {
+          clientCertificateForwardBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Client certificates forwarding settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 6;</code>
+       */
+      public Builder clearClientCertificateForward() {
+        if (clientCertificateForwardBuilder_ == null) {
+          clientCertificateForward_ = null;
+          onChanged();
+        } else {
+          clientCertificateForward_ = null;
+          clientCertificateForwardBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Client certificates forwarding settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 6;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.Builder getClientCertificateForwardBuilder() {
+        
+        onChanged();
+        return getClientCertificateForwardFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Client certificates forwarding settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 6;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForwardOrBuilder getClientCertificateForwardOrBuilder() {
+        if (clientCertificateForwardBuilder_ != null) {
+          return clientCertificateForwardBuilder_.getMessageOrBuilder();
+        } else {
+          return clientCertificateForward_ == null ?
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.getDefaultInstance() : clientCertificateForward_;
+        }
+      }
+      /**
+       * <pre>
+       * Client certificates forwarding settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificateForward client_certificate_forward = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForwardOrBuilder> 
+          getClientCertificateForwardFieldBuilder() {
+        if (clientCertificateForwardBuilder_ == null) {
+          clientCertificateForwardBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForwardOrBuilder>(
+                  getClientCertificateForward(),
+                  getParentForChildren(),
+                  isClean());
+          clientCertificateForward_ = null;
+        }
+        return clientCertificateForwardBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -12250,6 +12513,982 @@ public final class VirtualHostOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClientCertificateForwardOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.ClientCertificateForward)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * If specified, ALB will set specified header with the provided client certificate (if it is validated by trusted CA).
+     * </pre>
+     *
+     * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert)"];</code>
+     * @return The httpHeader.
+     */
+    java.lang.String getHttpHeader();
+    /**
+     * <pre>
+     * If specified, ALB will set specified header with the provided client certificate (if it is validated by trusted CA).
+     * </pre>
+     *
+     * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert)"];</code>
+     * @return The bytes for httpHeader.
+     */
+    com.google.protobuf.ByteString
+        getHttpHeaderBytes();
+
+    /**
+     * <pre>
+     * If specified, ALB will set specified header with the provided client certificate's Issuer (if it is validated by trusted CA).
+     * </pre>
+     *
+     * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn)"];</code>
+     * @return The issuerHeaderName.
+     */
+    java.lang.String getIssuerHeaderName();
+    /**
+     * <pre>
+     * If specified, ALB will set specified header with the provided client certificate's Issuer (if it is validated by trusted CA).
+     * </pre>
+     *
+     * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn)"];</code>
+     * @return The bytes for issuerHeaderName.
+     */
+    com.google.protobuf.ByteString
+        getIssuerHeaderNameBytes();
+
+    /**
+     * <pre>
+     * If specified, ALB will set specified header with the provided client certificate's Subject (if it is validated by trusted CA).
+     * </pre>
+     *
+     * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn)"];</code>
+     * @return The subjectHeaderName.
+     */
+    java.lang.String getSubjectHeaderName();
+    /**
+     * <pre>
+     * If specified, ALB will set specified header with the provided client certificate's Subject (if it is validated by trusted CA).
+     * </pre>
+     *
+     * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn)"];</code>
+     * @return The bytes for subjectHeaderName.
+     */
+    com.google.protobuf.ByteString
+        getSubjectHeaderNameBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ClientCertificateForward}
+   */
+  public static final class ClientCertificateForward extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.ClientCertificateForward)
+      ClientCertificateForwardOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ClientCertificateForward.newBuilder() to construct.
+    private ClientCertificateForward(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClientCertificateForward() {
+      httpHeader_ = "";
+      issuerHeaderName_ = "";
+      subjectHeaderName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClientCertificateForward();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ClientCertificateForward(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              httpHeader_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              issuerHeaderName_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subjectHeaderName_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_ClientCertificateForward_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_ClientCertificateForward_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.Builder.class);
+    }
+
+    public static final int HTTP_HEADER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object httpHeader_;
+    /**
+     * <pre>
+     * If specified, ALB will set specified header with the provided client certificate (if it is validated by trusted CA).
+     * </pre>
+     *
+     * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert)"];</code>
+     * @return The httpHeader.
+     */
+    @java.lang.Override
+    public java.lang.String getHttpHeader() {
+      java.lang.Object ref = httpHeader_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        httpHeader_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * If specified, ALB will set specified header with the provided client certificate (if it is validated by trusted CA).
+     * </pre>
+     *
+     * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert)"];</code>
+     * @return The bytes for httpHeader.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHttpHeaderBytes() {
+      java.lang.Object ref = httpHeader_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        httpHeader_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISSUER_HEADER_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object issuerHeaderName_;
+    /**
+     * <pre>
+     * If specified, ALB will set specified header with the provided client certificate's Issuer (if it is validated by trusted CA).
+     * </pre>
+     *
+     * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn)"];</code>
+     * @return The issuerHeaderName.
+     */
+    @java.lang.Override
+    public java.lang.String getIssuerHeaderName() {
+      java.lang.Object ref = issuerHeaderName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        issuerHeaderName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * If specified, ALB will set specified header with the provided client certificate's Issuer (if it is validated by trusted CA).
+     * </pre>
+     *
+     * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn)"];</code>
+     * @return The bytes for issuerHeaderName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIssuerHeaderNameBytes() {
+      java.lang.Object ref = issuerHeaderName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        issuerHeaderName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBJECT_HEADER_NAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object subjectHeaderName_;
+    /**
+     * <pre>
+     * If specified, ALB will set specified header with the provided client certificate's Subject (if it is validated by trusted CA).
+     * </pre>
+     *
+     * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn)"];</code>
+     * @return The subjectHeaderName.
+     */
+    @java.lang.Override
+    public java.lang.String getSubjectHeaderName() {
+      java.lang.Object ref = subjectHeaderName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subjectHeaderName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * If specified, ALB will set specified header with the provided client certificate's Subject (if it is validated by trusted CA).
+     * </pre>
+     *
+     * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn)"];</code>
+     * @return The bytes for subjectHeaderName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubjectHeaderNameBytes() {
+      java.lang.Object ref = subjectHeaderName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subjectHeaderName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpHeader_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, httpHeader_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuerHeaderName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, issuerHeaderName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectHeaderName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, subjectHeaderName_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpHeader_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, httpHeader_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuerHeaderName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, issuerHeaderName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectHeaderName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, subjectHeaderName_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward) obj;
+
+      if (!getHttpHeader()
+          .equals(other.getHttpHeader())) return false;
+      if (!getIssuerHeaderName()
+          .equals(other.getIssuerHeaderName())) return false;
+      if (!getSubjectHeaderName()
+          .equals(other.getSubjectHeaderName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HTTP_HEADER_FIELD_NUMBER;
+      hash = (53 * hash) + getHttpHeader().hashCode();
+      hash = (37 * hash) + ISSUER_HEADER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getIssuerHeaderName().hashCode();
+      hash = (37 * hash) + SUBJECT_HEADER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getSubjectHeaderName().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ClientCertificateForward}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.ClientCertificateForward)
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForwardOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_ClientCertificateForward_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_ClientCertificateForward_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        httpHeader_ = "";
+
+        issuerHeaderName_ = "";
+
+        subjectHeaderName_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_ClientCertificateForward_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward getDefaultInstanceForType() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward build() {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward buildPartial() {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward result = new yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward(this);
+        result.httpHeader_ = httpHeader_;
+        result.issuerHeaderName_ = issuerHeaderName_;
+        result.subjectHeaderName_ = subjectHeaderName_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward) {
+          return mergeFrom((yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward other) {
+        if (other == yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward.getDefaultInstance()) return this;
+        if (!other.getHttpHeader().isEmpty()) {
+          httpHeader_ = other.httpHeader_;
+          onChanged();
+        }
+        if (!other.getIssuerHeaderName().isEmpty()) {
+          issuerHeaderName_ = other.issuerHeaderName_;
+          onChanged();
+        }
+        if (!other.getSubjectHeaderName().isEmpty()) {
+          subjectHeaderName_ = other.subjectHeaderName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object httpHeader_ = "";
+      /**
+       * <pre>
+       * If specified, ALB will set specified header with the provided client certificate (if it is validated by trusted CA).
+       * </pre>
+       *
+       * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert)"];</code>
+       * @return The httpHeader.
+       */
+      public java.lang.String getHttpHeader() {
+        java.lang.Object ref = httpHeader_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          httpHeader_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * If specified, ALB will set specified header with the provided client certificate (if it is validated by trusted CA).
+       * </pre>
+       *
+       * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert)"];</code>
+       * @return The bytes for httpHeader.
+       */
+      public com.google.protobuf.ByteString
+          getHttpHeaderBytes() {
+        java.lang.Object ref = httpHeader_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          httpHeader_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * If specified, ALB will set specified header with the provided client certificate (if it is validated by trusted CA).
+       * </pre>
+       *
+       * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert)"];</code>
+       * @param value The httpHeader to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHttpHeader(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        httpHeader_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If specified, ALB will set specified header with the provided client certificate (if it is validated by trusted CA).
+       * </pre>
+       *
+       * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert)"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHttpHeader() {
+        
+        httpHeader_ = getDefaultInstance().getHttpHeader();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If specified, ALB will set specified header with the provided client certificate (if it is validated by trusted CA).
+       * </pre>
+       *
+       * <code>string http_header = 1 [(.yandex.cloud.pattern) = "(?i:ssl-client-cert|client-cert|x-ssl-client-cert)"];</code>
+       * @param value The bytes for httpHeader to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHttpHeaderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        httpHeader_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object issuerHeaderName_ = "";
+      /**
+       * <pre>
+       * If specified, ALB will set specified header with the provided client certificate's Issuer (if it is validated by trusted CA).
+       * </pre>
+       *
+       * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn)"];</code>
+       * @return The issuerHeaderName.
+       */
+      public java.lang.String getIssuerHeaderName() {
+        java.lang.Object ref = issuerHeaderName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          issuerHeaderName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * If specified, ALB will set specified header with the provided client certificate's Issuer (if it is validated by trusted CA).
+       * </pre>
+       *
+       * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn)"];</code>
+       * @return The bytes for issuerHeaderName.
+       */
+      public com.google.protobuf.ByteString
+          getIssuerHeaderNameBytes() {
+        java.lang.Object ref = issuerHeaderName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          issuerHeaderName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * If specified, ALB will set specified header with the provided client certificate's Issuer (if it is validated by trusted CA).
+       * </pre>
+       *
+       * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn)"];</code>
+       * @param value The issuerHeaderName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuerHeaderName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        issuerHeaderName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If specified, ALB will set specified header with the provided client certificate's Issuer (if it is validated by trusted CA).
+       * </pre>
+       *
+       * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn)"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuerHeaderName() {
+        
+        issuerHeaderName_ = getDefaultInstance().getIssuerHeaderName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If specified, ALB will set specified header with the provided client certificate's Issuer (if it is validated by trusted CA).
+       * </pre>
+       *
+       * <code>string issuer_header_name = 2 [(.yandex.cloud.pattern) = "(?i:ssl-client-issuer-dn|client-cert-issuer|x-ssl-client-issuer-dn)"];</code>
+       * @param value The bytes for issuerHeaderName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuerHeaderNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        issuerHeaderName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subjectHeaderName_ = "";
+      /**
+       * <pre>
+       * If specified, ALB will set specified header with the provided client certificate's Subject (if it is validated by trusted CA).
+       * </pre>
+       *
+       * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn)"];</code>
+       * @return The subjectHeaderName.
+       */
+      public java.lang.String getSubjectHeaderName() {
+        java.lang.Object ref = subjectHeaderName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subjectHeaderName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * If specified, ALB will set specified header with the provided client certificate's Subject (if it is validated by trusted CA).
+       * </pre>
+       *
+       * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn)"];</code>
+       * @return The bytes for subjectHeaderName.
+       */
+      public com.google.protobuf.ByteString
+          getSubjectHeaderNameBytes() {
+        java.lang.Object ref = subjectHeaderName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subjectHeaderName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * If specified, ALB will set specified header with the provided client certificate's Subject (if it is validated by trusted CA).
+       * </pre>
+       *
+       * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn)"];</code>
+       * @param value The subjectHeaderName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectHeaderName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subjectHeaderName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If specified, ALB will set specified header with the provided client certificate's Subject (if it is validated by trusted CA).
+       * </pre>
+       *
+       * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn)"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubjectHeaderName() {
+        
+        subjectHeaderName_ = getDefaultInstance().getSubjectHeaderName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If specified, ALB will set specified header with the provided client certificate's Subject (if it is validated by trusted CA).
+       * </pre>
+       *
+       * <code>string subject_header_name = 3 [(.yandex.cloud.pattern) = "(?i:ssl-client-subject-dn|client-cert-subject|x-ssl-client-subject-dn)"];</code>
+       * @param value The bytes for subjectHeaderName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectHeaderNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subjectHeaderName_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.ClientCertificateForward)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.ClientCertificateForward)
+    private static final yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward();
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ClientCertificateForward>
+        PARSER = new com.google.protobuf.AbstractParser<ClientCertificateForward>() {
+      @java.lang.Override
+      public ClientCertificateForward parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ClientCertificateForward(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClientCertificateForward> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClientCertificateForward> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.ClientCertificateForward getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -30285,6 +31524,11 @@ public final class VirtualHostOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_apploadbalancer_v1_Route_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_apploadbalancer_v1_ClientCertificateForward_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_apploadbalancer_v1_ClientCertificateForward_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRoute_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -30397,87 +31641,97 @@ public final class VirtualHostOuterClass {
       ".StringMatchB\022\n\nidentifier\022\004\300\3011\001\"x\n\022Head" +
       "erModification\022\014\n\004name\030\001 \001(\t\022\020\n\006append\030\002" +
       " \001(\tH\000\022\021\n\007replace\030\003 \001(\tH\000\022\020\n\006remove\030\004 \001(" +
-      "\010H\000\022\020\n\006rename\030\005 \001(\tH\000B\013\n\toperation\"\212\002\n\005R" +
+      "\010H\000\022\020\n\006rename\030\005 \001(\tH\000B\013\n\toperation\"\351\002\n\005R" +
       "oute\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022:\n\004http\030\002 \001(\0132*" +
       ".yandex.cloud.apploadbalancer.v1.HttpRou" +
       "teH\000\022:\n\004grpc\030\003 \001(\0132*.yandex.cloud.apploa" +
       "dbalancer.v1.GrpcRouteH\000\022D\n\rroute_option" +
       "s\030\004 \001(\0132-.yandex.cloud.apploadbalancer.v" +
       "1.RouteOptions\022 \n\030disable_security_profi" +
-      "le\030\005 \001(\010B\r\n\005route\022\004\300\3011\001\"\265\002\n\tHttpRoute\022>\n" +
-      "\005match\030\001 \001(\0132/.yandex.cloud.apploadbalan" +
-      "cer.v1.HttpRouteMatch\022A\n\005route\030\002 \001(\01320.y" +
-      "andex.cloud.apploadbalancer.v1.HttpRoute" +
-      "ActionH\000\022C\n\010redirect\030\003 \001(\0132/.yandex.clou" +
-      "d.apploadbalancer.v1.RedirectActionH\000\022P\n" +
-      "\017direct_response\030\004 \001(\01325.yandex.cloud.ap" +
-      "ploadbalancer.v1.DirectResponseActionH\000B" +
-      "\016\n\006action\022\004\300\3011\001\"\364\001\n\tGrpcRoute\022>\n\005match\030\001" +
-      " \001(\0132/.yandex.cloud.apploadbalancer.v1.G" +
-      "rpcRouteMatch\022A\n\005route\030\002 \001(\01320.yandex.cl" +
-      "oud.apploadbalancer.v1.GrpcRouteActionH\000" +
-      "\022T\n\017status_response\030\003 \001(\01329.yandex.cloud" +
-      ".apploadbalancer.v1.GrpcStatusResponseAc" +
-      "tionH\000B\016\n\006action\022\004\300\3011\001\"}\n\024HttpRouteHeade" +
-      "rMatch\022(\n\004name\030\001 \001(\tB\032\212\3101\0051-256\362\3071\r[-0-9" +
-      "a-zA-Z]+\022;\n\005value\030\002 \001(\0132,.yandex.cloud.a" +
-      "pploadbalancer.v1.StringMatch\"\202\001\n\030HttpRo" +
-      "uteQueryParamMatch\022)\n\004name\030\001 \001(\tB\033\212\3101\0051-" +
-      "256\362\3071\016[-_0-9a-zA-Z]+\022;\n\005value\030\002 \001(\0132,.y" +
-      "andex.cloud.apploadbalancer.v1.StringMat" +
-      "ch\"\222\002\n\016HttpRouteMatch\022\023\n\013http_method\030\001 \003" +
-      "(\t\022:\n\004path\030\002 \001(\0132,.yandex.cloud.apploadb" +
-      "alancer.v1.StringMatch\022P\n\007headers\030\003 \003(\0132" +
-      "5.yandex.cloud.apploadbalancer.v1.HttpRo" +
-      "uteHeaderMatchB\010\202\3101\004<=32\022]\n\020query_parame" +
-      "ters\030\004 \003(\01329.yandex.cloud.apploadbalance" +
-      "r.v1.HttpRouteQueryParamMatchB\010\202\3101\004<=32\"" +
-      "L\n\016GrpcRouteMatch\022:\n\004fqmn\030\001 \001(\0132,.yandex" +
-      ".cloud.apploadbalancer.v1.StringMatch\"b\n" +
-      "\013StringMatch\022\025\n\013exact_match\030\001 \001(\tH\000\022\026\n\014p" +
-      "refix_match\030\002 \001(\tH\000\022\025\n\013regex_match\030\003 \001(\t" +
-      "H\000B\r\n\005match\022\004\300\3011\001\"\372\002\n\016RedirectAction\022\026\n\016" +
-      "replace_scheme\030\001 \001(\t\022\024\n\014replace_host\030\002 \001" +
-      "(\t\022\024\n\014replace_port\030\003 \001(\003\022\026\n\014replace_path" +
-      "\030\004 \001(\tH\000\022\030\n\016replace_prefix\030\005 \001(\tH\000\022\024\n\014re" +
-      "move_query\030\006 \001(\010\022[\n\rresponse_code\030\007 \001(\0162" +
-      "D.yandex.cloud.apploadbalancer.v1.Redire" +
-      "ctAction.RedirectResponseCode\"w\n\024Redirec" +
-      "tResponseCode\022\025\n\021MOVED_PERMANENTLY\020\000\022\t\n\005" +
-      "FOUND\020\001\022\r\n\tSEE_OTHER\020\002\022\026\n\022TEMPORARY_REDI" +
-      "RECT\020\003\022\026\n\022PERMANENT_REDIRECT\020\004B\006\n\004path\"k" +
-      "\n\024DirectResponseAction\022\033\n\006status\030\001 \001(\003B\013" +
-      "\372\3071\007100-599\0226\n\004body\030\002 \001(\0132(.yandex.cloud" +
-      ".apploadbalancer.v1.Payload\"\202\002\n\030GrpcStat" +
-      "usResponseAction\022P\n\006status\030\001 \001(\0162@.yande" +
+      "le\030\005 \001(\010\022]\n\032client_certificate_forward\030\006" +
+      " \001(\01329.yandex.cloud.apploadbalancer.v1.C" +
+      "lientCertificateForwardB\r\n\005route\022\004\300\3011\001\"\265" +
+      "\002\n\030ClientCertificateForward\022K\n\013http_head" +
+      "er\030\001 \001(\tB6\362\30712(?i:ssl-client-cert|client" +
+      "-cert|x-ssl-client-cert)\022c\n\022issuer_heade" +
+      "r_name\030\002 \001(\tBG\362\3071C(?i:ssl-client-issuer-" +
+      "dn|client-cert-issuer|x-ssl-client-issue" +
+      "r-dn)\022g\n\023subject_header_name\030\003 \001(\tBJ\362\3071F" +
+      "(?i:ssl-client-subject-dn|client-cert-su" +
+      "bject|x-ssl-client-subject-dn)\"\265\002\n\tHttpR" +
+      "oute\022>\n\005match\030\001 \001(\0132/.yandex.cloud.applo" +
+      "adbalancer.v1.HttpRouteMatch\022A\n\005route\030\002 " +
+      "\001(\01320.yandex.cloud.apploadbalancer.v1.Ht" +
+      "tpRouteActionH\000\022C\n\010redirect\030\003 \001(\0132/.yand" +
+      "ex.cloud.apploadbalancer.v1.RedirectActi" +
+      "onH\000\022P\n\017direct_response\030\004 \001(\01325.yandex.c" +
+      "loud.apploadbalancer.v1.DirectResponseAc" +
+      "tionH\000B\016\n\006action\022\004\300\3011\001\"\364\001\n\tGrpcRoute\022>\n\005" +
+      "match\030\001 \001(\0132/.yandex.cloud.apploadbalanc" +
+      "er.v1.GrpcRouteMatch\022A\n\005route\030\002 \001(\01320.ya" +
+      "ndex.cloud.apploadbalancer.v1.GrpcRouteA" +
+      "ctionH\000\022T\n\017status_response\030\003 \001(\01329.yande" +
       "x.cloud.apploadbalancer.v1.GrpcStatusRes" +
-      "ponseAction.Status\"\223\001\n\006Status\022\006\n\002OK\020\000\022\024\n" +
-      "\020INVALID_ARGUMENT\020\001\022\r\n\tNOT_FOUND\020\002\022\025\n\021PE" +
-      "RMISSION_DENIED\020\003\022\023\n\017UNAUTHENTICATED\020\004\022\021" +
-      "\n\rUNIMPLEMENTED\020\005\022\014\n\010INTERNAL\020\006\022\017\n\013UNAVA" +
-      "ILABLE\020\007\"\235\003\n\017HttpRouteAction\022\036\n\020backend_" +
-      "group_id\030\001 \001(\tB\004\350\3071\001\022*\n\007timeout\030\002 \001(\0132\031." +
-      "google.protobuf.Duration\022/\n\014idle_timeout" +
-      "\030\003 \001(\0132\031.google.protobuf.Duration\022\026\n\014hos" +
-      "t_rewrite\030\004 \001(\tH\000\022\033\n\021auto_host_rewrite\030\005" +
-      " \001(\010H\000\022\026\n\016prefix_rewrite\030\006 \001(\t\022\025\n\rupgrad" +
-      "e_types\030\007 \003(\t\022>\n\nrate_limit\030\010 \001(\0132*.yand" +
-      "ex.cloud.apploadbalancer.v1.RateLimit\022O\n" +
-      "\rregex_rewrite\030\t \001(\01328.yandex.cloud.appl" +
-      "oadbalancer.v1.RegexMatchAndSubstituteB\030" +
-      "\n\026host_rewrite_specifier\"<\n\027RegexMatchAn" +
-      "dSubstitute\022\r\n\005regex\030\001 \001(\t\022\022\n\nsubstitute" +
-      "\030\002 \001(\t\"\241\002\n\017GrpcRouteAction\022\036\n\020backend_gr" +
-      "oup_id\030\001 \001(\tB\004\350\3071\001\022.\n\013max_timeout\030\002 \001(\0132" +
-      "\031.google.protobuf.Duration\022/\n\014idle_timeo" +
-      "ut\030\003 \001(\0132\031.google.protobuf.Duration\022\026\n\014h" +
-      "ost_rewrite\030\004 \001(\tH\000\022\033\n\021auto_host_rewrite" +
-      "\030\005 \001(\010H\000\022>\n\nrate_limit\030\006 \001(\0132*.yandex.cl" +
-      "oud.apploadbalancer.v1.RateLimitB\030\n\026host" +
-      "_rewrite_specifierBz\n#yandex.cloud.api.a" +
-      "pploadbalancer.v1ZSgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/apploadbalan" +
-      "cer/v1;apploadbalancerb\006proto3"
+      "ponseActionH\000B\016\n\006action\022\004\300\3011\001\"}\n\024HttpRou" +
+      "teHeaderMatch\022(\n\004name\030\001 \001(\tB\032\212\3101\0051-256\362\307" +
+      "1\r[-0-9a-zA-Z]+\022;\n\005value\030\002 \001(\0132,.yandex." +
+      "cloud.apploadbalancer.v1.StringMatch\"\202\001\n" +
+      "\030HttpRouteQueryParamMatch\022)\n\004name\030\001 \001(\tB" +
+      "\033\212\3101\0051-256\362\3071\016[-_0-9a-zA-Z]+\022;\n\005value\030\002 " +
+      "\001(\0132,.yandex.cloud.apploadbalancer.v1.St" +
+      "ringMatch\"\222\002\n\016HttpRouteMatch\022\023\n\013http_met" +
+      "hod\030\001 \003(\t\022:\n\004path\030\002 \001(\0132,.yandex.cloud.a" +
+      "pploadbalancer.v1.StringMatch\022P\n\007headers" +
+      "\030\003 \003(\01325.yandex.cloud.apploadbalancer.v1" +
+      ".HttpRouteHeaderMatchB\010\202\3101\004<=32\022]\n\020query" +
+      "_parameters\030\004 \003(\01329.yandex.cloud.appload" +
+      "balancer.v1.HttpRouteQueryParamMatchB\010\202\310" +
+      "1\004<=32\"L\n\016GrpcRouteMatch\022:\n\004fqmn\030\001 \001(\0132," +
+      ".yandex.cloud.apploadbalancer.v1.StringM" +
+      "atch\"b\n\013StringMatch\022\025\n\013exact_match\030\001 \001(\t" +
+      "H\000\022\026\n\014prefix_match\030\002 \001(\tH\000\022\025\n\013regex_matc" +
+      "h\030\003 \001(\tH\000B\r\n\005match\022\004\300\3011\001\"\372\002\n\016RedirectAct" +
+      "ion\022\026\n\016replace_scheme\030\001 \001(\t\022\024\n\014replace_h" +
+      "ost\030\002 \001(\t\022\024\n\014replace_port\030\003 \001(\003\022\026\n\014repla" +
+      "ce_path\030\004 \001(\tH\000\022\030\n\016replace_prefix\030\005 \001(\tH" +
+      "\000\022\024\n\014remove_query\030\006 \001(\010\022[\n\rresponse_code" +
+      "\030\007 \001(\0162D.yandex.cloud.apploadbalancer.v1" +
+      ".RedirectAction.RedirectResponseCode\"w\n\024" +
+      "RedirectResponseCode\022\025\n\021MOVED_PERMANENTL" +
+      "Y\020\000\022\t\n\005FOUND\020\001\022\r\n\tSEE_OTHER\020\002\022\026\n\022TEMPORA" +
+      "RY_REDIRECT\020\003\022\026\n\022PERMANENT_REDIRECT\020\004B\006\n" +
+      "\004path\"k\n\024DirectResponseAction\022\033\n\006status\030" +
+      "\001 \001(\003B\013\372\3071\007100-599\0226\n\004body\030\002 \001(\0132(.yande" +
+      "x.cloud.apploadbalancer.v1.Payload\"\202\002\n\030G" +
+      "rpcStatusResponseAction\022P\n\006status\030\001 \001(\0162" +
+      "@.yandex.cloud.apploadbalancer.v1.GrpcSt" +
+      "atusResponseAction.Status\"\223\001\n\006Status\022\006\n\002" +
+      "OK\020\000\022\024\n\020INVALID_ARGUMENT\020\001\022\r\n\tNOT_FOUND\020" +
+      "\002\022\025\n\021PERMISSION_DENIED\020\003\022\023\n\017UNAUTHENTICA" +
+      "TED\020\004\022\021\n\rUNIMPLEMENTED\020\005\022\014\n\010INTERNAL\020\006\022\017" +
+      "\n\013UNAVAILABLE\020\007\"\235\003\n\017HttpRouteAction\022\036\n\020b" +
+      "ackend_group_id\030\001 \001(\tB\004\350\3071\001\022*\n\007timeout\030\002" +
+      " \001(\0132\031.google.protobuf.Duration\022/\n\014idle_" +
+      "timeout\030\003 \001(\0132\031.google.protobuf.Duration" +
+      "\022\026\n\014host_rewrite\030\004 \001(\tH\000\022\033\n\021auto_host_re" +
+      "write\030\005 \001(\010H\000\022\026\n\016prefix_rewrite\030\006 \001(\t\022\025\n" +
+      "\rupgrade_types\030\007 \003(\t\022>\n\nrate_limit\030\010 \001(\013" +
+      "2*.yandex.cloud.apploadbalancer.v1.RateL" +
+      "imit\022O\n\rregex_rewrite\030\t \001(\01328.yandex.clo" +
+      "ud.apploadbalancer.v1.RegexMatchAndSubst" +
+      "ituteB\030\n\026host_rewrite_specifier\"<\n\027Regex" +
+      "MatchAndSubstitute\022\r\n\005regex\030\001 \001(\t\022\022\n\nsub" +
+      "stitute\030\002 \001(\t\"\241\002\n\017GrpcRouteAction\022\036\n\020bac" +
+      "kend_group_id\030\001 \001(\tB\004\350\3071\001\022.\n\013max_timeout" +
+      "\030\002 \001(\0132\031.google.protobuf.Duration\022/\n\014idl" +
+      "e_timeout\030\003 \001(\0132\031.google.protobuf.Durati" +
+      "on\022\026\n\014host_rewrite\030\004 \001(\tH\000\022\033\n\021auto_host_" +
+      "rewrite\030\005 \001(\010H\000\022>\n\nrate_limit\030\006 \001(\0132*.ya" +
+      "ndex.cloud.apploadbalancer.v1.RateLimitB" +
+      "\030\n\026host_rewrite_specifierBz\n#yandex.clou" +
+      "d.api.apploadbalancer.v1ZSgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/applo" +
+      "adbalancer/v1;apploadbalancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -30534,81 +31788,87 @@ public final class VirtualHostOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_Route_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_Route_descriptor,
-        new java.lang.String[] { "Name", "Http", "Grpc", "RouteOptions", "DisableSecurityProfile", "Route", });
-    internal_static_yandex_cloud_apploadbalancer_v1_HttpRoute_descriptor =
+        new java.lang.String[] { "Name", "Http", "Grpc", "RouteOptions", "DisableSecurityProfile", "ClientCertificateForward", "Route", });
+    internal_static_yandex_cloud_apploadbalancer_v1_ClientCertificateForward_descriptor =
       getDescriptor().getMessageTypes().get(7);
+    internal_static_yandex_cloud_apploadbalancer_v1_ClientCertificateForward_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_apploadbalancer_v1_ClientCertificateForward_descriptor,
+        new java.lang.String[] { "HttpHeader", "IssuerHeaderName", "SubjectHeaderName", });
+    internal_static_yandex_cloud_apploadbalancer_v1_HttpRoute_descriptor =
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRoute_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_HttpRoute_descriptor,
         new java.lang.String[] { "Match", "Route", "Redirect", "DirectResponse", "Action", });
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRoute_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRoute_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_GrpcRoute_descriptor,
         new java.lang.String[] { "Match", "Route", "StatusResponse", "Action", });
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteHeaderMatch_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteHeaderMatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteHeaderMatch_descriptor,
         new java.lang.String[] { "Name", "Value", });
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteQueryParamMatch_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteQueryParamMatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteQueryParamMatch_descriptor,
         new java.lang.String[] { "Name", "Value", });
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteMatch_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteMatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteMatch_descriptor,
         new java.lang.String[] { "HttpMethod", "Path", "Headers", "QueryParameters", });
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteMatch_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteMatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteMatch_descriptor,
         new java.lang.String[] { "Fqmn", });
     internal_static_yandex_cloud_apploadbalancer_v1_StringMatch_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_apploadbalancer_v1_StringMatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_StringMatch_descriptor,
         new java.lang.String[] { "ExactMatch", "PrefixMatch", "RegexMatch", "Match", });
     internal_static_yandex_cloud_apploadbalancer_v1_RedirectAction_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_apploadbalancer_v1_RedirectAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_RedirectAction_descriptor,
         new java.lang.String[] { "ReplaceScheme", "ReplaceHost", "ReplacePort", "ReplacePath", "ReplacePrefix", "RemoveQuery", "ResponseCode", "Path", });
     internal_static_yandex_cloud_apploadbalancer_v1_DirectResponseAction_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_apploadbalancer_v1_DirectResponseAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_DirectResponseAction_descriptor,
         new java.lang.String[] { "Status", "Body", });
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcStatusResponseAction_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcStatusResponseAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_GrpcStatusResponseAction_descriptor,
         new java.lang.String[] { "Status", });
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteAction_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteAction_descriptor,
         new java.lang.String[] { "BackendGroupId", "Timeout", "IdleTimeout", "HostRewrite", "AutoHostRewrite", "PrefixRewrite", "UpgradeTypes", "RateLimit", "RegexRewrite", "HostRewriteSpecifier", });
     internal_static_yandex_cloud_apploadbalancer_v1_RegexMatchAndSubstitute_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_apploadbalancer_v1_RegexMatchAndSubstitute_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_RegexMatchAndSubstitute_descriptor,
         new java.lang.String[] { "Regex", "Substitute", });
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteAction_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteAction_descriptor,

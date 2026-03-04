@@ -289,30 +289,32 @@ public final class WafProfileOuterClass {
 
     /**
      * <pre>
-     * Core rule set settings. See [Basic rule set](/docs/smartwebsecurity/concepts/waf#rules-set) for details.
+     * The parameter is deprecated. Core rule set settings.
      * </pre>
      *
-     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11;</code>
+     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the coreRuleSet field is set.
      */
-    boolean hasCoreRuleSet();
+    @java.lang.Deprecated boolean hasCoreRuleSet();
     /**
      * <pre>
-     * Core rule set settings. See [Basic rule set](/docs/smartwebsecurity/concepts/waf#rules-set) for details.
+     * The parameter is deprecated. Core rule set settings.
      * </pre>
      *
-     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11;</code>
+     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11 [deprecated = true];</code>
+     * @deprecated
      * @return The coreRuleSet.
      */
-    yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet getCoreRuleSet();
+    @java.lang.Deprecated yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet getCoreRuleSet();
     /**
      * <pre>
-     * Core rule set settings. See [Basic rule set](/docs/smartwebsecurity/concepts/waf#rules-set) for details.
+     * The parameter is deprecated. Core rule set settings.
      * </pre>
      *
-     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11;</code>
+     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11 [deprecated = true];</code>
      */
-    yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSetOrBuilder getCoreRuleSetOrBuilder();
+    @java.lang.Deprecated yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSetOrBuilder getCoreRuleSetOrBuilder();
 
     /**
      * <pre>
@@ -8559,7 +8561,7 @@ public final class WafProfileOuterClass {
     public enum RuleSetCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      CORE_RULE_SET(11),
+      @java.lang.Deprecated CORE_RULE_SET(11),
       RULESET_NOT_SET(0);
       private final int value;
       private RuleSetCase(int value) {
@@ -9081,26 +9083,28 @@ public final class WafProfileOuterClass {
     public static final int CORE_RULE_SET_FIELD_NUMBER = 11;
     /**
      * <pre>
-     * Core rule set settings. See [Basic rule set](/docs/smartwebsecurity/concepts/waf#rules-set) for details.
+     * The parameter is deprecated. Core rule set settings.
      * </pre>
      *
-     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11;</code>
+     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the coreRuleSet field is set.
      */
     @java.lang.Override
-    public boolean hasCoreRuleSet() {
+    @java.lang.Deprecated public boolean hasCoreRuleSet() {
       return ruleSetCase_ == 11;
     }
     /**
      * <pre>
-     * Core rule set settings. See [Basic rule set](/docs/smartwebsecurity/concepts/waf#rules-set) for details.
+     * The parameter is deprecated. Core rule set settings.
      * </pre>
      *
-     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11;</code>
+     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11 [deprecated = true];</code>
+     * @deprecated
      * @return The coreRuleSet.
      */
     @java.lang.Override
-    public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet getCoreRuleSet() {
+    @java.lang.Deprecated public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet getCoreRuleSet() {
       if (ruleSetCase_ == 11) {
          return (yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet) ruleSet_;
       }
@@ -9108,13 +9112,13 @@ public final class WafProfileOuterClass {
     }
     /**
      * <pre>
-     * Core rule set settings. See [Basic rule set](/docs/smartwebsecurity/concepts/waf#rules-set) for details.
+     * The parameter is deprecated. Core rule set settings.
      * </pre>
      *
-     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11;</code>
+     * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11 [deprecated = true];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSetOrBuilder getCoreRuleSetOrBuilder() {
+    @java.lang.Deprecated public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSetOrBuilder getCoreRuleSetOrBuilder() {
       if (ruleSetCase_ == 11) {
          return (yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet) ruleSet_;
       }
@@ -11380,26 +11384,28 @@ public final class WafProfileOuterClass {
           yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet.Builder, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSetOrBuilder> coreRuleSetBuilder_;
       /**
        * <pre>
-       * Core rule set settings. See [Basic rule set](/docs/smartwebsecurity/concepts/waf#rules-set) for details.
+       * The parameter is deprecated. Core rule set settings.
        * </pre>
        *
-       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11;</code>
+       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the coreRuleSet field is set.
        */
       @java.lang.Override
-      public boolean hasCoreRuleSet() {
+      @java.lang.Deprecated public boolean hasCoreRuleSet() {
         return ruleSetCase_ == 11;
       }
       /**
        * <pre>
-       * Core rule set settings. See [Basic rule set](/docs/smartwebsecurity/concepts/waf#rules-set) for details.
+       * The parameter is deprecated. Core rule set settings.
        * </pre>
        *
-       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11;</code>
+       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11 [deprecated = true];</code>
+       * @deprecated
        * @return The coreRuleSet.
        */
       @java.lang.Override
-      public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet getCoreRuleSet() {
+      @java.lang.Deprecated public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet getCoreRuleSet() {
         if (coreRuleSetBuilder_ == null) {
           if (ruleSetCase_ == 11) {
             return (yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet) ruleSet_;
@@ -11414,12 +11420,12 @@ public final class WafProfileOuterClass {
       }
       /**
        * <pre>
-       * Core rule set settings. See [Basic rule set](/docs/smartwebsecurity/concepts/waf#rules-set) for details.
+       * The parameter is deprecated. Core rule set settings.
        * </pre>
        *
-       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11;</code>
+       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11 [deprecated = true];</code>
        */
-      public Builder setCoreRuleSet(yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet value) {
+      @java.lang.Deprecated public Builder setCoreRuleSet(yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet value) {
         if (coreRuleSetBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11434,12 +11440,12 @@ public final class WafProfileOuterClass {
       }
       /**
        * <pre>
-       * Core rule set settings. See [Basic rule set](/docs/smartwebsecurity/concepts/waf#rules-set) for details.
+       * The parameter is deprecated. Core rule set settings.
        * </pre>
        *
-       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11;</code>
+       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11 [deprecated = true];</code>
        */
-      public Builder setCoreRuleSet(
+      @java.lang.Deprecated public Builder setCoreRuleSet(
           yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet.Builder builderForValue) {
         if (coreRuleSetBuilder_ == null) {
           ruleSet_ = builderForValue.build();
@@ -11452,12 +11458,12 @@ public final class WafProfileOuterClass {
       }
       /**
        * <pre>
-       * Core rule set settings. See [Basic rule set](/docs/smartwebsecurity/concepts/waf#rules-set) for details.
+       * The parameter is deprecated. Core rule set settings.
        * </pre>
        *
-       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11;</code>
+       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11 [deprecated = true];</code>
        */
-      public Builder mergeCoreRuleSet(yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet value) {
+      @java.lang.Deprecated public Builder mergeCoreRuleSet(yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet value) {
         if (coreRuleSetBuilder_ == null) {
           if (ruleSetCase_ == 11 &&
               ruleSet_ != yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet.getDefaultInstance()) {
@@ -11478,12 +11484,12 @@ public final class WafProfileOuterClass {
       }
       /**
        * <pre>
-       * Core rule set settings. See [Basic rule set](/docs/smartwebsecurity/concepts/waf#rules-set) for details.
+       * The parameter is deprecated. Core rule set settings.
        * </pre>
        *
-       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11;</code>
+       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11 [deprecated = true];</code>
        */
-      public Builder clearCoreRuleSet() {
+      @java.lang.Deprecated public Builder clearCoreRuleSet() {
         if (coreRuleSetBuilder_ == null) {
           if (ruleSetCase_ == 11) {
             ruleSetCase_ = 0;
@@ -11501,23 +11507,23 @@ public final class WafProfileOuterClass {
       }
       /**
        * <pre>
-       * Core rule set settings. See [Basic rule set](/docs/smartwebsecurity/concepts/waf#rules-set) for details.
+       * The parameter is deprecated. Core rule set settings.
        * </pre>
        *
-       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11;</code>
+       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11 [deprecated = true];</code>
        */
-      public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet.Builder getCoreRuleSetBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet.Builder getCoreRuleSetBuilder() {
         return getCoreRuleSetFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Core rule set settings. See [Basic rule set](/docs/smartwebsecurity/concepts/waf#rules-set) for details.
+       * The parameter is deprecated. Core rule set settings.
        * </pre>
        *
-       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11;</code>
+       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11 [deprecated = true];</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSetOrBuilder getCoreRuleSetOrBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSetOrBuilder getCoreRuleSetOrBuilder() {
         if ((ruleSetCase_ == 11) && (coreRuleSetBuilder_ != null)) {
           return coreRuleSetBuilder_.getMessageOrBuilder();
         } else {
@@ -11529,10 +11535,10 @@ public final class WafProfileOuterClass {
       }
       /**
        * <pre>
-       * Core rule set settings. See [Basic rule set](/docs/smartwebsecurity/concepts/waf#rules-set) for details.
+       * The parameter is deprecated. Core rule set settings.
        * </pre>
        *
-       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11;</code>
+       * <code>.yandex.cloud.smartwebsecurity.v1.waf.WafProfile.CoreRuleSet core_rule_set = 11 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSet.Builder, yandex.cloud.api.smartwebsecurity.v1.waf.WafProfileOuterClass.WafProfile.CoreRuleSetOrBuilder> 
@@ -16491,7 +16497,7 @@ public final class WafProfileOuterClass {
       "ecurity.v1.waf\032\037google/protobuf/timestam" +
       "p.proto\032\035yandex/cloud/validation.proto\0327" +
       "yandex/cloud/smartwebsecurity/v1/securit" +
-      "y_profile.proto\"\261\025\n\nWafProfile\022\020\n\002id\030\001 \001" +
+      "y_profile.proto\"\265\025\n\nWafProfile\022\020\n\002id\030\001 \001" +
       "(\tB\004\350\3071\001\022\027\n\tfolder_id\030\002 \001(\tB\004\350\3071\001\022\026\n\010clo" +
       "ud_id\030\003 \001(\tB\004\350\3071\001\0228\n\004name\030\004 \001(\tB*\350\3071\001\212\3101" +
       "\0041-50\362\3071\032[a-zA-Z0-9][a-zA-Z0-9-_.]*\022\036\n\013d" +
@@ -16504,81 +16510,82 @@ public final class WafProfileOuterClass {
       "dex.cloud.smartwebsecurity.v1.waf.WafPro" +
       "fileRule\022V\n\017exclusion_rules\030\n \003(\0132=.yand" +
       "ex.cloud.smartwebsecurity.v1.waf.WafProf" +
-      "ileExclusionRule\022U\n\rcore_rule_set\030\013 \001(\0132" +
+      "ileExclusionRule\022Y\n\rcore_rule_set\030\013 \001(\0132" +
       "<.yandex.cloud.smartwebsecurity.v1.waf.W" +
-      "afProfile.CoreRuleSetH\000\022e\n\024analyze_reque" +
-      "st_body\030\014 \001(\0132C.yandex.cloud.smartwebsec" +
-      "urity.v1.waf.WafProfile.AnalyzeRequestBo" +
-      "dyB\002\030\001\022U\n\trule_sets\030\r \003(\0132B.yandex.cloud" +
-      ".smartwebsecurity.v1.waf.WafProfile.WafP" +
-      "rofileRuleSet\022\033\n\023match_all_rule_sets\030\016 \001" +
-      "(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\032\245\001\n\013CoreRuleSet\022*\n\025inbound_ano" +
-      "maly_score\030\001 \001(\003B\013\372\3071\0072-10000\022#\n\016paranoi" +
-      "a_level\030\002 \001(\003B\013\372\3071\0071,2,3,4\022E\n\010rule_set\030\003" +
-      " \001(\0132-.yandex.cloud.smartwebsecurity.v1." +
-      "waf.RuleSetB\004\350\3071\001\032\371\001\n\022AnalyzeRequestBody" +
-      "\022\022\n\nis_enabled\030\001 \001(\010\0220\n\nsize_limit\030\002 \001(\003" +
-      "B\034\372\3071\0300,8,16,32,64,128,256,512\022e\n\021size_l" +
-      "imit_action\030\003 \001(\0162J.yandex.cloud.smartwe" +
+      "afProfile.CoreRuleSetB\002\030\001H\000\022e\n\024analyze_r" +
+      "equest_body\030\014 \001(\0132C.yandex.cloud.smartwe" +
       "bsecurity.v1.waf.WafProfile.AnalyzeReque" +
-      "stBody.Action\"6\n\006Action\022\026\n\022ACTION_UNSPEC" +
-      "IFIED\020\000\022\n\n\006IGNORE\020\001\022\010\n\004DENY\020\002\032\213\013\n\021WafPro" +
-      "fileRuleSet\022q\n\rcore_rule_set\030\001 \001(\0132X.yan" +
-      "dex.cloud.smartwebsecurity.v1.waf.WafPro" +
-      "file.WafProfileRuleSet.WafProfileCoreRul" +
-      "eSetH\000\022m\n\013ya_rule_set\030\002 \001(\0132V.yandex.clo" +
-      "ud.smartwebsecurity.v1.waf.WafProfile.Wa" +
-      "fProfileRuleSet.WafProfileYaRuleSetH\000\022m\n" +
-      "\013ml_rule_set\030\003 \001(\0132V.yandex.cloud.smartw" +
-      "ebsecurity.v1.waf.WafProfile.WafProfileR" +
-      "uleSet.WafProfileMlRuleSetH\000\022\036\n\010priority" +
-      "\030\004 \001(\003B\014\372\3071\0101-999999\022\022\n\nis_enabled\030\005 \001(\010" +
-      "\022`\n\006action\030\006 \001(\0162P.yandex.cloud.smartweb" +
-      "security.v1.waf.WafProfile.WafProfileRul" +
-      "eSet.RuleSetAction\032\375\001\n\tRuleGroup\022\n\n\002id\030\001" +
-      " \001(\t\022c\n\006action\030\002 \001(\0162S.yandex.cloud.smar" +
+      "stBodyB\002\030\001\022U\n\trule_sets\030\r \003(\0132B.yandex.c" +
+      "loud.smartwebsecurity.v1.waf.WafProfile." +
+      "WafProfileRuleSet\022\033\n\023match_all_rule_sets" +
+      "\030\016 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\032\245\001\n\013CoreRuleSet\022*\n\025inbound" +
+      "_anomaly_score\030\001 \001(\003B\013\372\3071\0072-10000\022#\n\016par" +
+      "anoia_level\030\002 \001(\003B\013\372\3071\0071,2,3,4\022E\n\010rule_s" +
+      "et\030\003 \001(\0132-.yandex.cloud.smartwebsecurity" +
+      ".v1.waf.RuleSetB\004\350\3071\001\032\371\001\n\022AnalyzeRequest" +
+      "Body\022\022\n\nis_enabled\030\001 \001(\010\0220\n\nsize_limit\030\002" +
+      " \001(\003B\034\372\3071\0300,8,16,32,64,128,256,512\022e\n\021si" +
+      "ze_limit_action\030\003 \001(\0162J.yandex.cloud.sma" +
+      "rtwebsecurity.v1.waf.WafProfile.AnalyzeR" +
+      "equestBody.Action\"6\n\006Action\022\026\n\022ACTION_UN" +
+      "SPECIFIED\020\000\022\n\n\006IGNORE\020\001\022\010\n\004DENY\020\002\032\213\013\n\021Wa" +
+      "fProfileRuleSet\022q\n\rcore_rule_set\030\001 \001(\0132X" +
+      ".yandex.cloud.smartwebsecurity.v1.waf.Wa" +
+      "fProfile.WafProfileRuleSet.WafProfileCor" +
+      "eRuleSetH\000\022m\n\013ya_rule_set\030\002 \001(\0132V.yandex" +
+      ".cloud.smartwebsecurity.v1.waf.WafProfil" +
+      "e.WafProfileRuleSet.WafProfileYaRuleSetH" +
+      "\000\022m\n\013ml_rule_set\030\003 \001(\0132V.yandex.cloud.sm" +
+      "artwebsecurity.v1.waf.WafProfile.WafProf" +
+      "ileRuleSet.WafProfileMlRuleSetH\000\022\036\n\010prio" +
+      "rity\030\004 \001(\003B\014\372\3071\0101-999999\022\022\n\nis_enabled\030\005" +
+      " \001(\010\022`\n\006action\030\006 \001(\0162P.yandex.cloud.smar" +
       "twebsecurity.v1.waf.WafProfile.WafProfil" +
-      "eRuleSet.RuleGroup.Action\022*\n\025inbound_ano" +
-      "maly_score\030\003 \001(\003B\013\372\3071\0071-10000\022\022\n\nis_enab" +
-      "led\030\004 \001(\010\"?\n\006Action\022\026\n\022ACTION_UNSPECIFIE" +
-      "D\020\000\022\010\n\004DENY\020\001\022\007\n\003LOG\020\002\022\n\n\006IGNORE\020\003\032\257\001\n\025W" +
-      "afProfileCoreRuleSet\022E\n\010rule_set\030\001 \001(\0132-" +
-      ".yandex.cloud.smartwebsecurity.v1.waf.Ru" +
-      "leSetB\004\350\3071\001\022*\n\025inbound_anomaly_score\030\002 \001" +
-      "(\003B\013\372\3071\0072-10000\022#\n\016paranoia_level\030\003 \001(\003B" +
-      "\013\372\3071\0071,2,3,4\032\277\001\n\023WafProfileYaRuleSet\022E\n\010" +
-      "rule_set\030\001 \001(\0132-.yandex.cloud.smartwebse" +
-      "curity.v1.waf.RuleSetB\004\350\3071\001\022a\n\013rule_grou" +
-      "ps\030\002 \003(\0132L.yandex.cloud.smartwebsecurity" +
-      ".v1.waf.WafProfile.WafProfileRuleSet.Rul" +
-      "eGroup\032\277\001\n\023WafProfileMlRuleSet\022E\n\010rule_s" +
-      "et\030\001 \001(\0132-.yandex.cloud.smartwebsecurity" +
-      ".v1.waf.RuleSetB\004\350\3071\001\022a\n\013rule_groups\030\002 \003" +
-      "(\0132L.yandex.cloud.smartwebsecurity.v1.wa" +
-      "f.WafProfile.WafProfileRuleSet.RuleGroup" +
-      "\"G\n\rRuleSetAction\022\037\n\033RULE_SET_ACTION_UNS" +
-      "PECIFIED\020\000\022\010\n\004DENY\020\001\022\013\n\007CAPTCHA\020\002B\020\n\010rul" +
-      "e_set\022\004\300\3011\001B\020\n\010rule_set\022\004\300\3011\001J\004\010\010\020\t\"P\n\016W" +
-      "afProfileRule\022\025\n\007rule_id\030\001 \001(\tB\004\350\3071\001\022\022\n\n" +
-      "is_enabled\030\002 \001(\010\022\023\n\013is_blocking\030\003 \001(\010\"\303\002" +
-      "\n\027WafProfileExclusionRule\022\022\n\004name\030\001 \001(\tB" +
-      "\004\350\3071\001\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=512\022>\n" +
-      "\tcondition\030\003 \001(\0132+.yandex.cloud.smartweb" +
-      "security.v1.Condition\022g\n\rexclude_rules\030\004" +
-      " \001(\0132J.yandex.cloud.smartwebsecurity.v1." +
-      "waf.WafProfileExclusionRule.ExcludeRules" +
-      "B\004\350\3071\001\022\024\n\014log_excluded\030\005 \001(\010\0325\n\014ExcludeR" +
-      "ules\022\023\n\013exclude_all\030\001 \001(\010\022\020\n\010rule_ids\030\002 " +
-      "\003(\t\"\321\001\n\007RuleSet\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\025\n\007v" +
-      "ersion\030\002 \001(\tB\004\350\3071\001\022G\n\004type\030\003 \001(\01629.yande" +
-      "x.cloud.smartwebsecurity.v1.waf.RuleSet." +
-      "RuleSetType\022\n\n\002id\030\004 \001(\t\"F\n\013RuleSetType\022\035" +
-      "\n\031RULE_SET_TYPE_UNSPECIFIED\020\000\022\010\n\004CORE\020\001\022" +
-      "\006\n\002YA\020\002\022\006\n\002ML\020\003B\205\001\n(yandex.cloud.api.sma" +
-      "rtwebsecurity.v1.wafZYgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/smartwebs" +
-      "ecurity/v1/waf;smartwebsecurityb\006proto3"
+      "eRuleSet.RuleSetAction\032\375\001\n\tRuleGroup\022\n\n\002" +
+      "id\030\001 \001(\t\022c\n\006action\030\002 \001(\0162S.yandex.cloud." +
+      "smartwebsecurity.v1.waf.WafProfile.WafPr" +
+      "ofileRuleSet.RuleGroup.Action\022*\n\025inbound" +
+      "_anomaly_score\030\003 \001(\003B\013\372\3071\0071-10000\022\022\n\nis_" +
+      "enabled\030\004 \001(\010\"?\n\006Action\022\026\n\022ACTION_UNSPEC" +
+      "IFIED\020\000\022\010\n\004DENY\020\001\022\007\n\003LOG\020\002\022\n\n\006IGNORE\020\003\032\257" +
+      "\001\n\025WafProfileCoreRuleSet\022E\n\010rule_set\030\001 \001" +
+      "(\0132-.yandex.cloud.smartwebsecurity.v1.wa" +
+      "f.RuleSetB\004\350\3071\001\022*\n\025inbound_anomaly_score" +
+      "\030\002 \001(\003B\013\372\3071\0072-10000\022#\n\016paranoia_level\030\003 " +
+      "\001(\003B\013\372\3071\0071,2,3,4\032\277\001\n\023WafProfileYaRuleSet" +
+      "\022E\n\010rule_set\030\001 \001(\0132-.yandex.cloud.smartw" +
+      "ebsecurity.v1.waf.RuleSetB\004\350\3071\001\022a\n\013rule_" +
+      "groups\030\002 \003(\0132L.yandex.cloud.smartwebsecu" +
+      "rity.v1.waf.WafProfile.WafProfileRuleSet" +
+      ".RuleGroup\032\277\001\n\023WafProfileMlRuleSet\022E\n\010ru" +
+      "le_set\030\001 \001(\0132-.yandex.cloud.smartwebsecu" +
+      "rity.v1.waf.RuleSetB\004\350\3071\001\022a\n\013rule_groups" +
+      "\030\002 \003(\0132L.yandex.cloud.smartwebsecurity.v" +
+      "1.waf.WafProfile.WafProfileRuleSet.RuleG" +
+      "roup\"G\n\rRuleSetAction\022\037\n\033RULE_SET_ACTION" +
+      "_UNSPECIFIED\020\000\022\010\n\004DENY\020\001\022\013\n\007CAPTCHA\020\002B\020\n" +
+      "\010rule_set\022\004\300\3011\001B\020\n\010rule_set\022\004\300\3011\001J\004\010\010\020\t\"" +
+      "P\n\016WafProfileRule\022\025\n\007rule_id\030\001 \001(\tB\004\350\3071\001" +
+      "\022\022\n\nis_enabled\030\002 \001(\010\022\023\n\013is_blocking\030\003 \001(" +
+      "\010\"\303\002\n\027WafProfileExclusionRule\022\022\n\004name\030\001 " +
+      "\001(\tB\004\350\3071\001\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=51" +
+      "2\022>\n\tcondition\030\003 \001(\0132+.yandex.cloud.smar" +
+      "twebsecurity.v1.Condition\022g\n\rexclude_rul" +
+      "es\030\004 \001(\0132J.yandex.cloud.smartwebsecurity" +
+      ".v1.waf.WafProfileExclusionRule.ExcludeR" +
+      "ulesB\004\350\3071\001\022\024\n\014log_excluded\030\005 \001(\010\0325\n\014Excl" +
+      "udeRules\022\023\n\013exclude_all\030\001 \001(\010\022\020\n\010rule_id" +
+      "s\030\002 \003(\t\"\321\001\n\007RuleSet\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022" +
+      "\025\n\007version\030\002 \001(\tB\004\350\3071\001\022G\n\004type\030\003 \001(\01629.y" +
+      "andex.cloud.smartwebsecurity.v1.waf.Rule" +
+      "Set.RuleSetType\022\n\n\002id\030\004 \001(\t\"F\n\013RuleSetTy" +
+      "pe\022\035\n\031RULE_SET_TYPE_UNSPECIFIED\020\000\022\010\n\004COR" +
+      "E\020\001\022\006\n\002YA\020\002\022\006\n\002ML\020\003B\205\001\n(yandex.cloud.api" +
+      ".smartwebsecurity.v1.wafZYgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/smart" +
+      "websecurity/v1/waf;smartwebsecurityb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

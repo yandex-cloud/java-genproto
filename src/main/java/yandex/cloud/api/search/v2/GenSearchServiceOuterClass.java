@@ -1127,6 +1127,16 @@ public final class GenSearchServiceOuterClass {
      */
     yandex.cloud.api.search.v2.SearchQueryOuterClass.SearchMetadataOrBuilder getMetadataOrBuilder();
 
+    /**
+     * <pre>
+     * Return rich structured answer
+     * </pre>
+     *
+     * <code>bool enable_rich_structured_answer = 12;</code>
+     * @return The enableRichStructuredAnswer.
+     */
+    boolean getEnableRichStructuredAnswer();
+
     public yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.SiteOptionsCase getSiteOptionsCase();
   }
   /**
@@ -1277,6 +1287,11 @@ public final class GenSearchServiceOuterClass {
                 metadata_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 96: {
+
+              enableRichStructuredAnswer_ = input.readBool();
               break;
             }
             default: {
@@ -5212,6 +5227,21 @@ public final class GenSearchServiceOuterClass {
       return getMetadata();
     }
 
+    public static final int ENABLE_RICH_STRUCTURED_ANSWER_FIELD_NUMBER = 12;
+    private boolean enableRichStructuredAnswer_;
+    /**
+     * <pre>
+     * Return rich structured answer
+     * </pre>
+     *
+     * <code>bool enable_rich_structured_answer = 12;</code>
+     * @return The enableRichStructuredAnswer.
+     */
+    @java.lang.Override
+    public boolean getEnableRichStructuredAnswer() {
+      return enableRichStructuredAnswer_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5258,6 +5288,9 @@ public final class GenSearchServiceOuterClass {
       }
       if (metadata_ != null) {
         output.writeMessage(11, getMetadata());
+      }
+      if (enableRichStructuredAnswer_ != false) {
+        output.writeBool(12, enableRichStructuredAnswer_);
       }
       unknownFields.writeTo(output);
     }
@@ -5311,6 +5344,10 @@ public final class GenSearchServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getMetadata());
       }
+      if (enableRichStructuredAnswer_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, enableRichStructuredAnswer_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5344,6 +5381,8 @@ public final class GenSearchServiceOuterClass {
         if (!getMetadata()
             .equals(other.getMetadata())) return false;
       }
+      if (getEnableRichStructuredAnswer()
+          != other.getEnableRichStructuredAnswer()) return false;
       if (!getSiteOptionsCase().equals(other.getSiteOptionsCase())) return false;
       switch (siteOptionsCase_) {
         case 3:
@@ -5397,6 +5436,9 @@ public final class GenSearchServiceOuterClass {
         hash = (37 * hash) + METADATA_FIELD_NUMBER;
         hash = (53 * hash) + getMetadata().hashCode();
       }
+      hash = (37 * hash) + ENABLE_RICH_STRUCTURED_ANSWER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnableRichStructuredAnswer());
       switch (siteOptionsCase_) {
         case 3:
           hash = (37 * hash) + SITE_FIELD_NUMBER;
@@ -5576,6 +5618,8 @@ public final class GenSearchServiceOuterClass {
           metadata_ = null;
           metadataBuilder_ = null;
         }
+        enableRichStructuredAnswer_ = false;
+
         siteOptionsCase_ = 0;
         siteOptions_ = null;
         return this;
@@ -5654,6 +5698,7 @@ public final class GenSearchServiceOuterClass {
         } else {
           result.metadata_ = metadataBuilder_.build();
         }
+        result.enableRichStructuredAnswer_ = enableRichStructuredAnswer_;
         result.siteOptionsCase_ = siteOptionsCase_;
         onBuilt();
         return result;
@@ -5773,6 +5818,9 @@ public final class GenSearchServiceOuterClass {
         }
         if (other.hasMetadata()) {
           mergeMetadata(other.getMetadata());
+        }
+        if (other.getEnableRichStructuredAnswer() != false) {
+          setEnableRichStructuredAnswer(other.getEnableRichStructuredAnswer());
         }
         switch (other.getSiteOptionsCase()) {
           case SITE: {
@@ -7336,6 +7384,49 @@ public final class GenSearchServiceOuterClass {
         }
         return metadataBuilder_;
       }
+
+      private boolean enableRichStructuredAnswer_ ;
+      /**
+       * <pre>
+       * Return rich structured answer
+       * </pre>
+       *
+       * <code>bool enable_rich_structured_answer = 12;</code>
+       * @return The enableRichStructuredAnswer.
+       */
+      @java.lang.Override
+      public boolean getEnableRichStructuredAnswer() {
+        return enableRichStructuredAnswer_;
+      }
+      /**
+       * <pre>
+       * Return rich structured answer
+       * </pre>
+       *
+       * <code>bool enable_rich_structured_answer = 12;</code>
+       * @param value The enableRichStructuredAnswer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnableRichStructuredAnswer(boolean value) {
+        
+        enableRichStructuredAnswer_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Return rich structured answer
+       * </pre>
+       *
+       * <code>bool enable_rich_structured_answer = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnableRichStructuredAnswer() {
+        
+        enableRichStructuredAnswer_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7588,6 +7679,16 @@ public final class GenSearchServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getHintsBytes(int index);
+
+    /**
+     * <pre>
+     * The answer may contain inappropriate content
+     * </pre>
+     *
+     * <code>bool problematic_answer = 8;</code>
+     * @return The problematicAnswer.
+     */
+    boolean getProblematicAnswer();
   }
   /**
    * Protobuf type {@code yandex.cloud.searchapi.v2.GenSearchResponse}
@@ -7693,6 +7794,11 @@ public final class GenSearchServiceOuterClass {
                 mutable_bitField0_ |= 0x00000004;
               }
               hints_.add(s);
+              break;
+            }
+            case 64: {
+
+              problematicAnswer_ = input.readBool();
               break;
             }
             default: {
@@ -9692,6 +9798,21 @@ public final class GenSearchServiceOuterClass {
       return hints_.getByteString(index);
     }
 
+    public static final int PROBLEMATIC_ANSWER_FIELD_NUMBER = 8;
+    private boolean problematicAnswer_;
+    /**
+     * <pre>
+     * The answer may contain inappropriate content
+     * </pre>
+     *
+     * <code>bool problematic_answer = 8;</code>
+     * @return The problematicAnswer.
+     */
+    @java.lang.Override
+    public boolean getProblematicAnswer() {
+      return problematicAnswer_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9726,6 +9847,9 @@ public final class GenSearchServiceOuterClass {
       }
       for (int i = 0; i < hints_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, hints_.getRaw(i));
+      }
+      if (problematicAnswer_ != false) {
+        output.writeBool(8, problematicAnswer_);
       }
       unknownFields.writeTo(output);
     }
@@ -9767,6 +9891,10 @@ public final class GenSearchServiceOuterClass {
         size += dataSize;
         size += 1 * getHintsList().size();
       }
+      if (problematicAnswer_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, problematicAnswer_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -9799,6 +9927,8 @@ public final class GenSearchServiceOuterClass {
           != other.getIsBulletAnswer()) return false;
       if (!getHintsList()
           .equals(other.getHintsList())) return false;
+      if (getProblematicAnswer()
+          != other.getProblematicAnswer()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9834,6 +9964,9 @@ public final class GenSearchServiceOuterClass {
         hash = (37 * hash) + HINTS_FIELD_NUMBER;
         hash = (53 * hash) + getHintsList().hashCode();
       }
+      hash = (37 * hash) + PROBLEMATIC_ANSWER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getProblematicAnswer());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9995,6 +10128,8 @@ public final class GenSearchServiceOuterClass {
 
         hints_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
+        problematicAnswer_ = false;
+
         return this;
       }
 
@@ -10053,6 +10188,7 @@ public final class GenSearchServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.hints_ = hints_;
+        result.problematicAnswer_ = problematicAnswer_;
         onBuilt();
         return result;
       }
@@ -10175,6 +10311,9 @@ public final class GenSearchServiceOuterClass {
             hints_.addAll(other.hints_);
           }
           onChanged();
+        }
+        if (other.getProblematicAnswer() != false) {
+          setProblematicAnswer(other.getProblematicAnswer());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11312,6 +11451,49 @@ public final class GenSearchServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private boolean problematicAnswer_ ;
+      /**
+       * <pre>
+       * The answer may contain inappropriate content
+       * </pre>
+       *
+       * <code>bool problematic_answer = 8;</code>
+       * @return The problematicAnswer.
+       */
+      @java.lang.Override
+      public boolean getProblematicAnswer() {
+        return problematicAnswer_;
+      }
+      /**
+       * <pre>
+       * The answer may contain inappropriate content
+       * </pre>
+       *
+       * <code>bool problematic_answer = 8;</code>
+       * @param value The problematicAnswer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProblematicAnswer(boolean value) {
+        
+        problematicAnswer_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The answer may contain inappropriate content
+       * </pre>
+       *
+       * <code>bool problematic_answer = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProblematicAnswer() {
+        
+        problematicAnswer_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -11426,7 +11608,7 @@ public final class GenSearchServiceOuterClass {
       "ogle/api/annotations.proto\"i\n\020GenSearchM" +
       "essage\022 \n\007content\030\001 \001(\tB\017\350\3071\001\212\3101\007<=16384" +
       "\0223\n\004role\030\002 \001(\0162\037.yandex.cloud.searchapi." +
-      "v2.RoleB\004\350\3071\001\"\276\t\n\020GenSearchRequest\022H\n\010me" +
+      "v2.RoleB\004\350\3071\001\"\345\t\n\020GenSearchRequest\022H\n\010me" +
       "ssages\030\001 \003(\0132+.yandex.cloud.searchapi.v2" +
       ".GenSearchMessageB\t\202\3101\0051-100\022\037\n\tfolder_i" +
       "d\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022F\n\004site\030\003 \001(\01326.ya" +
@@ -11442,40 +11624,42 @@ public final class GenSearchServiceOuterClass {
       "andex.cloud.searchapi.v2.SearchQuery.Sea" +
       "rchType\022\033\n\023get_partial_results\030\n \001(\010\022;\n\010" +
       "metadata\030\013 \001(\0132).yandex.cloud.searchapi." +
-      "v2.SearchMetadata\032/\n\nSiteOption\022!\n\004site\030" +
-      "\001 \003(\tB\023\212\3101\006<=1024\202\3101\005<=100\032-\n\tUrlOption\022" +
-      " \n\003url\030\001 \003(\tB\023\212\3101\006<=1024\202\3101\005<=100\032/\n\nHos" +
-      "tOption\022!\n\004host\030\001 \003(\tB\023\212\3101\006<=1024\202\3101\005<=1" +
-      "00\032\231\003\n\014SearchFilter\022\030\n\004date\030\001 \001(\tB\010\212\3101\004<" +
-      "=25H\000\022\025\n\004lang\030\002 \001(\tB\005\212\3101\0012H\000\022T\n\006format\030\003" +
-      " \001(\0162B.yandex.cloud.searchapi.v2.GenSear" +
-      "chRequest.SearchFilter.DocFormatH\000\"\357\001\n\tD" +
-      "ocFormat\022\032\n\026DOC_FORMAT_UNSPECIFIED\020\000\022\022\n\016" +
-      "DOC_FORMAT_PDF\020\001\022\022\n\016DOC_FORMAT_XLS\020\002\022\022\n\016" +
-      "DOC_FORMAT_ODS\020\003\022\022\n\016DOC_FORMAT_RTF\020\004\022\022\n\016" +
-      "DOC_FORMAT_PPT\020\005\022\022\n\016DOC_FORMAT_ODP\020\006\022\022\n\016" +
-      "DOC_FORMAT_SWF\020\007\022\022\n\016DOC_FORMAT_ODT\020\010\022\022\n\016" +
-      "DOC_FORMAT_ODG\020\t\022\022\n\016DOC_FORMAT_DOC\020\nB\020\n\016" +
-      "filter_optionsB\016\n\014site_options\"\255\003\n\021GenSe" +
-      "archResponse\022<\n\007message\030\001 \001(\0132+.yandex.c" +
-      "loud.searchapi.v2.GenSearchMessage\022D\n\007so" +
-      "urces\030\002 \003(\01323.yandex.cloud.searchapi.v2." +
-      "GenSearchResponse.Source\022P\n\016search_queri" +
-      "es\030\003 \003(\01328.yandex.cloud.searchapi.v2.Gen" +
-      "SearchResponse.SearchQuery\022\034\n\024fixed_miss" +
-      "pell_query\030\004 \001(\t\022\032\n\022is_answer_rejected\030\005" +
-      " \001(\010\022\030\n\020is_bullet_answer\030\006 \001(\010\022\r\n\005hints\030" +
-      "\007 \003(\t\0322\n\006Source\022\013\n\003url\030\001 \001(\t\022\r\n\005title\030\002 " +
-      "\001(\t\022\014\n\004used\030\003 \001(\010\032+\n\013SearchQuery\022\014\n\004text" +
-      "\030\001 \001(\t\022\016\n\006req_id\030\002 \001(\t*?\n\004Role\022\024\n\020ROLE_U" +
-      "NSPECIFIED\020\000\022\r\n\tROLE_USER\020\001\022\022\n\016ROLE_ASSI" +
-      "STANT\020\0022\225\001\n\020GenSearchService\022\200\001\n\006Search\022" +
-      "+.yandex.cloud.searchapi.v2.GenSearchReq" +
-      "uest\032,.yandex.cloud.searchapi.v2.GenSear" +
-      "chResponse\"\031\202\323\344\223\002\023\"\016/v2/gen/search:\001*0\001B" +
-      "e\n\032yandex.cloud.api.search.v2ZGgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "searchapi/v2;searchapib\006proto3"
+      "v2.SearchMetadata\022%\n\035enable_rich_structu" +
+      "red_answer\030\014 \001(\010\032/\n\nSiteOption\022!\n\004site\030\001" +
+      " \003(\tB\023\212\3101\006<=1024\202\3101\005<=100\032-\n\tUrlOption\022 " +
+      "\n\003url\030\001 \003(\tB\023\212\3101\006<=1024\202\3101\005<=100\032/\n\nHost" +
+      "Option\022!\n\004host\030\001 \003(\tB\023\212\3101\006<=1024\202\3101\005<=10" +
+      "0\032\231\003\n\014SearchFilter\022\030\n\004date\030\001 \001(\tB\010\212\3101\004<=" +
+      "25H\000\022\025\n\004lang\030\002 \001(\tB\005\212\3101\0012H\000\022T\n\006format\030\003 " +
+      "\001(\0162B.yandex.cloud.searchapi.v2.GenSearc" +
+      "hRequest.SearchFilter.DocFormatH\000\"\357\001\n\tDo" +
+      "cFormat\022\032\n\026DOC_FORMAT_UNSPECIFIED\020\000\022\022\n\016D" +
+      "OC_FORMAT_PDF\020\001\022\022\n\016DOC_FORMAT_XLS\020\002\022\022\n\016D" +
+      "OC_FORMAT_ODS\020\003\022\022\n\016DOC_FORMAT_RTF\020\004\022\022\n\016D" +
+      "OC_FORMAT_PPT\020\005\022\022\n\016DOC_FORMAT_ODP\020\006\022\022\n\016D" +
+      "OC_FORMAT_SWF\020\007\022\022\n\016DOC_FORMAT_ODT\020\010\022\022\n\016D" +
+      "OC_FORMAT_ODG\020\t\022\022\n\016DOC_FORMAT_DOC\020\nB\020\n\016f" +
+      "ilter_optionsB\016\n\014site_options\"\311\003\n\021GenSea" +
+      "rchResponse\022<\n\007message\030\001 \001(\0132+.yandex.cl" +
+      "oud.searchapi.v2.GenSearchMessage\022D\n\007sou" +
+      "rces\030\002 \003(\01323.yandex.cloud.searchapi.v2.G" +
+      "enSearchResponse.Source\022P\n\016search_querie" +
+      "s\030\003 \003(\01328.yandex.cloud.searchapi.v2.GenS" +
+      "earchResponse.SearchQuery\022\034\n\024fixed_missp" +
+      "ell_query\030\004 \001(\t\022\032\n\022is_answer_rejected\030\005 " +
+      "\001(\010\022\030\n\020is_bullet_answer\030\006 \001(\010\022\r\n\005hints\030\007" +
+      " \003(\t\022\032\n\022problematic_answer\030\010 \001(\010\0322\n\006Sour" +
+      "ce\022\013\n\003url\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\014\n\004used\030\003" +
+      " \001(\010\032+\n\013SearchQuery\022\014\n\004text\030\001 \001(\t\022\016\n\006req" +
+      "_id\030\002 \001(\t*?\n\004Role\022\024\n\020ROLE_UNSPECIFIED\020\000\022" +
+      "\r\n\tROLE_USER\020\001\022\022\n\016ROLE_ASSISTANT\020\0022\225\001\n\020G" +
+      "enSearchService\022\200\001\n\006Search\022+.yandex.clou" +
+      "d.searchapi.v2.GenSearchRequest\032,.yandex" +
+      ".cloud.searchapi.v2.GenSearchResponse\"\031\202" +
+      "\323\344\223\002\023\"\016/v2/gen/search:\001*0\001Be\n\032yandex.clo" +
+      "ud.api.search.v2ZGgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/searchapi/v2;" +
+      "searchapib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11495,7 +11679,7 @@ public final class GenSearchServiceOuterClass {
     internal_static_yandex_cloud_searchapi_v2_GenSearchRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_searchapi_v2_GenSearchRequest_descriptor,
-        new java.lang.String[] { "Messages", "FolderId", "Site", "Host", "Url", "FixMisspell", "EnableNrfmDocs", "SearchFilters", "SearchType", "GetPartialResults", "Metadata", "SiteOptions", });
+        new java.lang.String[] { "Messages", "FolderId", "Site", "Host", "Url", "FixMisspell", "EnableNrfmDocs", "SearchFilters", "SearchType", "GetPartialResults", "Metadata", "EnableRichStructuredAnswer", "SiteOptions", });
     internal_static_yandex_cloud_searchapi_v2_GenSearchRequest_SiteOption_descriptor =
       internal_static_yandex_cloud_searchapi_v2_GenSearchRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_searchapi_v2_GenSearchRequest_SiteOption_fieldAccessorTable = new
@@ -11525,7 +11709,7 @@ public final class GenSearchServiceOuterClass {
     internal_static_yandex_cloud_searchapi_v2_GenSearchResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_searchapi_v2_GenSearchResponse_descriptor,
-        new java.lang.String[] { "Message", "Sources", "SearchQueries", "FixedMisspellQuery", "IsAnswerRejected", "IsBulletAnswer", "Hints", });
+        new java.lang.String[] { "Message", "Sources", "SearchQueries", "FixedMisspellQuery", "IsAnswerRejected", "IsBulletAnswer", "Hints", "ProblematicAnswer", });
     internal_static_yandex_cloud_searchapi_v2_GenSearchResponse_Source_descriptor =
       internal_static_yandex_cloud_searchapi_v2_GenSearchResponse_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_searchapi_v2_GenSearchResponse_Source_fieldAccessorTable = new

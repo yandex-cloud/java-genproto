@@ -775,6 +775,134 @@ public final class UnitFormatOuterClass {
      * <code>UNIT_CORE_CPU = 94;</code>
      */
     UNIT_CORE_CPU(94),
+    /**
+     * <pre>
+     * Ampere (A).
+     * </pre>
+     *
+     * <code>UNIT_AMPERE = 95;</code>
+     */
+    UNIT_AMPERE(95),
+    /**
+     * <pre>
+     * Kiloampere (kA).
+     * </pre>
+     *
+     * <code>UNIT_KILOAMPERE = 96;</code>
+     */
+    UNIT_KILOAMPERE(96),
+    /**
+     * <pre>
+     * Megaampere (MA).
+     * </pre>
+     *
+     * <code>UNIT_MEGAAMPERE = 97;</code>
+     */
+    UNIT_MEGAAMPERE(97),
+    /**
+     * <pre>
+     * Gigaampere (GA).
+     * </pre>
+     *
+     * <code>UNIT_GIGAAMPERE = 98;</code>
+     */
+    UNIT_GIGAAMPERE(98),
+    /**
+     * <pre>
+     * Volt (V).
+     * </pre>
+     *
+     * <code>UNIT_VOLT = 99;</code>
+     */
+    UNIT_VOLT(99),
+    /**
+     * <pre>
+     * Kilovolt (kV).
+     * </pre>
+     *
+     * <code>UNIT_KILOVOLT = 100;</code>
+     */
+    UNIT_KILOVOLT(100),
+    /**
+     * <pre>
+     * Megavolt (MV).
+     * </pre>
+     *
+     * <code>UNIT_MEGAVOLT = 101;</code>
+     */
+    UNIT_MEGAVOLT(101),
+    /**
+     * <pre>
+     * Gigavolt (GV).
+     * </pre>
+     *
+     * <code>UNIT_GIGAVOLT = 102;</code>
+     */
+    UNIT_GIGAVOLT(102),
+    /**
+     * <pre>
+     * Watt (W).
+     * </pre>
+     *
+     * <code>UNIT_WATT = 103;</code>
+     */
+    UNIT_WATT(103),
+    /**
+     * <pre>
+     * Kilowatt (kW).
+     * </pre>
+     *
+     * <code>UNIT_KILOWATT = 104;</code>
+     */
+    UNIT_KILOWATT(104),
+    /**
+     * <pre>
+     * Megawatt (MW).
+     * </pre>
+     *
+     * <code>UNIT_MEGAWATT = 105;</code>
+     */
+    UNIT_MEGAWATT(105),
+    /**
+     * <pre>
+     * Gigawatt (GW).
+     * </pre>
+     *
+     * <code>UNIT_GIGAWATT = 106;</code>
+     */
+    UNIT_GIGAWATT(106),
+    /**
+     * <pre>
+     * Ohm (Ohm).
+     * </pre>
+     *
+     * <code>UNIT_OHM = 107;</code>
+     */
+    UNIT_OHM(107),
+    /**
+     * <pre>
+     * Kiloohm (kOhm).
+     * </pre>
+     *
+     * <code>UNIT_KILOOHM = 108;</code>
+     */
+    UNIT_KILOOHM(108),
+    /**
+     * <pre>
+     * Megaohm (MOhm).
+     * </pre>
+     *
+     * <code>UNIT_MEGAOHM = 109;</code>
+     */
+    UNIT_MEGAOHM(109),
+    /**
+     * <pre>
+     * Gigaohm (GOhm).
+     * </pre>
+     *
+     * <code>UNIT_GIGAOHM = 110;</code>
+     */
+    UNIT_GIGAOHM(110),
     UNRECOGNIZED(-1),
     ;
 
@@ -1534,6 +1662,134 @@ public final class UnitFormatOuterClass {
      * <code>UNIT_CORE_CPU = 94;</code>
      */
     public static final int UNIT_CORE_CPU_VALUE = 94;
+    /**
+     * <pre>
+     * Ampere (A).
+     * </pre>
+     *
+     * <code>UNIT_AMPERE = 95;</code>
+     */
+    public static final int UNIT_AMPERE_VALUE = 95;
+    /**
+     * <pre>
+     * Kiloampere (kA).
+     * </pre>
+     *
+     * <code>UNIT_KILOAMPERE = 96;</code>
+     */
+    public static final int UNIT_KILOAMPERE_VALUE = 96;
+    /**
+     * <pre>
+     * Megaampere (MA).
+     * </pre>
+     *
+     * <code>UNIT_MEGAAMPERE = 97;</code>
+     */
+    public static final int UNIT_MEGAAMPERE_VALUE = 97;
+    /**
+     * <pre>
+     * Gigaampere (GA).
+     * </pre>
+     *
+     * <code>UNIT_GIGAAMPERE = 98;</code>
+     */
+    public static final int UNIT_GIGAAMPERE_VALUE = 98;
+    /**
+     * <pre>
+     * Volt (V).
+     * </pre>
+     *
+     * <code>UNIT_VOLT = 99;</code>
+     */
+    public static final int UNIT_VOLT_VALUE = 99;
+    /**
+     * <pre>
+     * Kilovolt (kV).
+     * </pre>
+     *
+     * <code>UNIT_KILOVOLT = 100;</code>
+     */
+    public static final int UNIT_KILOVOLT_VALUE = 100;
+    /**
+     * <pre>
+     * Megavolt (MV).
+     * </pre>
+     *
+     * <code>UNIT_MEGAVOLT = 101;</code>
+     */
+    public static final int UNIT_MEGAVOLT_VALUE = 101;
+    /**
+     * <pre>
+     * Gigavolt (GV).
+     * </pre>
+     *
+     * <code>UNIT_GIGAVOLT = 102;</code>
+     */
+    public static final int UNIT_GIGAVOLT_VALUE = 102;
+    /**
+     * <pre>
+     * Watt (W).
+     * </pre>
+     *
+     * <code>UNIT_WATT = 103;</code>
+     */
+    public static final int UNIT_WATT_VALUE = 103;
+    /**
+     * <pre>
+     * Kilowatt (kW).
+     * </pre>
+     *
+     * <code>UNIT_KILOWATT = 104;</code>
+     */
+    public static final int UNIT_KILOWATT_VALUE = 104;
+    /**
+     * <pre>
+     * Megawatt (MW).
+     * </pre>
+     *
+     * <code>UNIT_MEGAWATT = 105;</code>
+     */
+    public static final int UNIT_MEGAWATT_VALUE = 105;
+    /**
+     * <pre>
+     * Gigawatt (GW).
+     * </pre>
+     *
+     * <code>UNIT_GIGAWATT = 106;</code>
+     */
+    public static final int UNIT_GIGAWATT_VALUE = 106;
+    /**
+     * <pre>
+     * Ohm (Ohm).
+     * </pre>
+     *
+     * <code>UNIT_OHM = 107;</code>
+     */
+    public static final int UNIT_OHM_VALUE = 107;
+    /**
+     * <pre>
+     * Kiloohm (kOhm).
+     * </pre>
+     *
+     * <code>UNIT_KILOOHM = 108;</code>
+     */
+    public static final int UNIT_KILOOHM_VALUE = 108;
+    /**
+     * <pre>
+     * Megaohm (MOhm).
+     * </pre>
+     *
+     * <code>UNIT_MEGAOHM = 109;</code>
+     */
+    public static final int UNIT_MEGAOHM_VALUE = 109;
+    /**
+     * <pre>
+     * Gigaohm (GOhm).
+     * </pre>
+     *
+     * <code>UNIT_GIGAOHM = 110;</code>
+     */
+    public static final int UNIT_GIGAOHM_VALUE = 110;
 
 
     public final int getNumber() {
@@ -1655,6 +1911,22 @@ public final class UnitFormatOuterClass {
         case 92: return UNIT_MICROCORE_CPU;
         case 93: return UNIT_MILLICORE_CPU;
         case 94: return UNIT_CORE_CPU;
+        case 95: return UNIT_AMPERE;
+        case 96: return UNIT_KILOAMPERE;
+        case 97: return UNIT_MEGAAMPERE;
+        case 98: return UNIT_GIGAAMPERE;
+        case 99: return UNIT_VOLT;
+        case 100: return UNIT_KILOVOLT;
+        case 101: return UNIT_MEGAVOLT;
+        case 102: return UNIT_GIGAVOLT;
+        case 103: return UNIT_WATT;
+        case 104: return UNIT_KILOWATT;
+        case 105: return UNIT_MEGAWATT;
+        case 106: return UNIT_GIGAWATT;
+        case 107: return UNIT_OHM;
+        case 108: return UNIT_KILOOHM;
+        case 109: return UNIT_MEGAOHM;
+        case 110: return UNIT_GIGAOHM;
         default: return null;
       }
     }
@@ -1721,7 +1993,7 @@ public final class UnitFormatOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n,yandex/cloud/monitoring/v3/unit_format" +
-      ".proto\022\032yandex.cloud.monitoring.v3*\372\021\n\nU" +
+      ".proto\022\032yandex.cloud.monitoring.v3*\236\024\n\nU" +
       "nitFormat\022\033\n\027UNIT_FORMAT_UNSPECIFIED\020\000\022\r" +
       "\n\tUNIT_NONE\020\001\022\016\n\nUNIT_COUNT\020\002\022\020\n\014UNIT_PE" +
       "RCENT\020\003\022\025\n\021UNIT_PERCENT_UNIT\020\004\022\024\n\020UNIT_N" +
@@ -1779,10 +2051,17 @@ public final class UnitFormatOuterClass {
       "T_VIRTUAL_CPU\020Y\022\034\n\030UNIT_MESSAGES_PER_SEC" +
       "OND\020Z\022\025\n\021UNIT_NANOCORE_CPU\020[\022\026\n\022UNIT_MIC" +
       "ROCORE_CPU\020\\\022\026\n\022UNIT_MILLICORE_CPU\020]\022\021\n\r" +
-      "UNIT_CORE_CPU\020^Bk\n\036yandex.cloud.api.moni" +
-      "toring.v3ZIgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/monitoring/v3;monito" +
-      "ringb\006proto3"
+      "UNIT_CORE_CPU\020^\022\017\n\013UNIT_AMPERE\020_\022\023\n\017UNIT" +
+      "_KILOAMPERE\020`\022\023\n\017UNIT_MEGAAMPERE\020a\022\023\n\017UN" +
+      "IT_GIGAAMPERE\020b\022\r\n\tUNIT_VOLT\020c\022\021\n\rUNIT_K" +
+      "ILOVOLT\020d\022\021\n\rUNIT_MEGAVOLT\020e\022\021\n\rUNIT_GIG" +
+      "AVOLT\020f\022\r\n\tUNIT_WATT\020g\022\021\n\rUNIT_KILOWATT\020" +
+      "h\022\021\n\rUNIT_MEGAWATT\020i\022\021\n\rUNIT_GIGAWATT\020j\022" +
+      "\014\n\010UNIT_OHM\020k\022\020\n\014UNIT_KILOOHM\020l\022\020\n\014UNIT_" +
+      "MEGAOHM\020m\022\020\n\014UNIT_GIGAOHM\020nBk\n\036yandex.cl" +
+      "oud.api.monitoring.v3ZIgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/monitori" +
+      "ng/v3;monitoringb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

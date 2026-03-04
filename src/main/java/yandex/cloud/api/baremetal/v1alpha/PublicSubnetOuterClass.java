@@ -424,6 +424,33 @@ public final class PublicSubnetOuterClass {
 
     /**
      * <pre>
+     * ID of the public prefix pool that the public subnet belongs to.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue public_prefix_pool_id = 14;</code>
+     * @return Whether the publicPrefixPoolId field is set.
+     */
+    boolean hasPublicPrefixPoolId();
+    /**
+     * <pre>
+     * ID of the public prefix pool that the public subnet belongs to.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue public_prefix_pool_id = 14;</code>
+     * @return The publicPrefixPoolId.
+     */
+    com.google.protobuf.StringValue getPublicPrefixPoolId();
+    /**
+     * <pre>
+     * ID of the public prefix pool that the public subnet belongs to.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue public_prefix_pool_id = 14;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getPublicPrefixPoolIdOrBuilder();
+
+    /**
+     * <pre>
      * Creation timestamp.
      * </pre>
      *
@@ -502,6 +529,33 @@ public final class PublicSubnetOuterClass {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * Timestamp when deletion of the public subnet is allowed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deletion_unlocked_at = 201;</code>
+     * @return Whether the deletionUnlockedAt field is set.
+     */
+    boolean hasDeletionUnlockedAt();
+    /**
+     * <pre>
+     * Timestamp when deletion of the public subnet is allowed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deletion_unlocked_at = 201;</code>
+     * @return The deletionUnlockedAt.
+     */
+    com.google.protobuf.Timestamp getDeletionUnlockedAt();
+    /**
+     * <pre>
+     * Timestamp when deletion of the public subnet is allowed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deletion_unlocked_at = 201;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDeletionUnlockedAtOrBuilder();
   }
   /**
    * <pre>
@@ -644,6 +698,19 @@ public final class PublicSubnetOuterClass {
               gatewayIp_ = s;
               break;
             }
+            case 114: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (publicPrefixPoolId_ != null) {
+                subBuilder = publicPrefixPoolId_.toBuilder();
+              }
+              publicPrefixPoolId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(publicPrefixPoolId_);
+                publicPrefixPoolId_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             case 802: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
               if (createdAt_ != null) {
@@ -668,6 +735,19 @@ public final class PublicSubnetOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 1610: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (deletionUnlockedAt_ != null) {
+                subBuilder = deletionUnlockedAt_.toBuilder();
+              }
+              deletionUnlockedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deletionUnlockedAt_);
+                deletionUnlockedAt_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1218,6 +1298,44 @@ public final class PublicSubnetOuterClass {
       }
     }
 
+    public static final int PUBLIC_PREFIX_POOL_ID_FIELD_NUMBER = 14;
+    private com.google.protobuf.StringValue publicPrefixPoolId_;
+    /**
+     * <pre>
+     * ID of the public prefix pool that the public subnet belongs to.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue public_prefix_pool_id = 14;</code>
+     * @return Whether the publicPrefixPoolId field is set.
+     */
+    @java.lang.Override
+    public boolean hasPublicPrefixPoolId() {
+      return publicPrefixPoolId_ != null;
+    }
+    /**
+     * <pre>
+     * ID of the public prefix pool that the public subnet belongs to.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue public_prefix_pool_id = 14;</code>
+     * @return The publicPrefixPoolId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getPublicPrefixPoolId() {
+      return publicPrefixPoolId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : publicPrefixPoolId_;
+    }
+    /**
+     * <pre>
+     * ID of the public prefix pool that the public subnet belongs to.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue public_prefix_pool_id = 14;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getPublicPrefixPoolIdOrBuilder() {
+      return getPublicPrefixPoolId();
+    }
+
     public static final int CREATED_AT_FIELD_NUMBER = 100;
     private com.google.protobuf.Timestamp createdAt_;
     /**
@@ -1353,6 +1471,44 @@ public final class PublicSubnetOuterClass {
       return map.get(key);
     }
 
+    public static final int DELETION_UNLOCKED_AT_FIELD_NUMBER = 201;
+    private com.google.protobuf.Timestamp deletionUnlockedAt_;
+    /**
+     * <pre>
+     * Timestamp when deletion of the public subnet is allowed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deletion_unlocked_at = 201;</code>
+     * @return Whether the deletionUnlockedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeletionUnlockedAt() {
+      return deletionUnlockedAt_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp when deletion of the public subnet is allowed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deletion_unlocked_at = 201;</code>
+     * @return The deletionUnlockedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getDeletionUnlockedAt() {
+      return deletionUnlockedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deletionUnlockedAt_;
+    }
+    /**
+     * <pre>
+     * Timestamp when deletion of the public subnet is allowed.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deletion_unlocked_at = 201;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getDeletionUnlockedAtOrBuilder() {
+      return getDeletionUnlockedAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1403,6 +1559,9 @@ public final class PublicSubnetOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gatewayIp_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 13, gatewayIp_);
       }
+      if (publicPrefixPoolId_ != null) {
+        output.writeMessage(14, getPublicPrefixPoolId());
+      }
       if (createdAt_ != null) {
         output.writeMessage(100, getCreatedAt());
       }
@@ -1412,6 +1571,9 @@ public final class PublicSubnetOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           200);
+      if (deletionUnlockedAt_ != null) {
+        output.writeMessage(201, getDeletionUnlockedAt());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1465,6 +1627,10 @@ public final class PublicSubnetOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gatewayIp_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, gatewayIp_);
       }
+      if (publicPrefixPoolId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getPublicPrefixPoolId());
+      }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(100, getCreatedAt());
@@ -1478,6 +1644,10 @@ public final class PublicSubnetOuterClass {
             .build();
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(200, labels__);
+      }
+      if (deletionUnlockedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(201, getDeletionUnlockedAt());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1520,6 +1690,11 @@ public final class PublicSubnetOuterClass {
       }
       if (!getGatewayIp()
           .equals(other.getGatewayIp())) return false;
+      if (hasPublicPrefixPoolId() != other.hasPublicPrefixPoolId()) return false;
+      if (hasPublicPrefixPoolId()) {
+        if (!getPublicPrefixPoolId()
+            .equals(other.getPublicPrefixPoolId())) return false;
+      }
       if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
         if (!getCreatedAt()
@@ -1527,6 +1702,11 @@ public final class PublicSubnetOuterClass {
       }
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (hasDeletionUnlockedAt() != other.hasDeletionUnlockedAt()) return false;
+      if (hasDeletionUnlockedAt()) {
+        if (!getDeletionUnlockedAt()
+            .equals(other.getDeletionUnlockedAt())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1567,6 +1747,10 @@ public final class PublicSubnetOuterClass {
       }
       hash = (37 * hash) + GATEWAY_IP_FIELD_NUMBER;
       hash = (53 * hash) + getGatewayIp().hashCode();
+      if (hasPublicPrefixPoolId()) {
+        hash = (37 * hash) + PUBLIC_PREFIX_POOL_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getPublicPrefixPoolId().hashCode();
+      }
       if (hasCreatedAt()) {
         hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getCreatedAt().hashCode();
@@ -1574,6 +1758,10 @@ public final class PublicSubnetOuterClass {
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      if (hasDeletionUnlockedAt()) {
+        hash = (37 * hash) + DELETION_UNLOCKED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getDeletionUnlockedAt().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1762,6 +1950,12 @@ public final class PublicSubnetOuterClass {
         }
         gatewayIp_ = "";
 
+        if (publicPrefixPoolIdBuilder_ == null) {
+          publicPrefixPoolId_ = null;
+        } else {
+          publicPrefixPoolId_ = null;
+          publicPrefixPoolIdBuilder_ = null;
+        }
         if (createdAtBuilder_ == null) {
           createdAt_ = null;
         } else {
@@ -1769,6 +1963,12 @@ public final class PublicSubnetOuterClass {
           createdAtBuilder_ = null;
         }
         internalGetMutableLabels().clear();
+        if (deletionUnlockedAtBuilder_ == null) {
+          deletionUnlockedAt_ = null;
+        } else {
+          deletionUnlockedAt_ = null;
+          deletionUnlockedAtBuilder_ = null;
+        }
         return this;
       }
 
@@ -1816,6 +2016,11 @@ public final class PublicSubnetOuterClass {
           result.dhcpOptions_ = dhcpOptionsBuilder_.build();
         }
         result.gatewayIp_ = gatewayIp_;
+        if (publicPrefixPoolIdBuilder_ == null) {
+          result.publicPrefixPoolId_ = publicPrefixPoolId_;
+        } else {
+          result.publicPrefixPoolId_ = publicPrefixPoolIdBuilder_.build();
+        }
         if (createdAtBuilder_ == null) {
           result.createdAt_ = createdAt_;
         } else {
@@ -1823,6 +2028,11 @@ public final class PublicSubnetOuterClass {
         }
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        if (deletionUnlockedAtBuilder_ == null) {
+          result.deletionUnlockedAt_ = deletionUnlockedAt_;
+        } else {
+          result.deletionUnlockedAt_ = deletionUnlockedAtBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1922,11 +2132,17 @@ public final class PublicSubnetOuterClass {
           gatewayIp_ = other.gatewayIp_;
           onChanged();
         }
+        if (other.hasPublicPrefixPoolId()) {
+          mergePublicPrefixPoolId(other.getPublicPrefixPoolId());
+        }
         if (other.hasCreatedAt()) {
           mergeCreatedAt(other.getCreatedAt());
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (other.hasDeletionUnlockedAt()) {
+          mergeDeletionUnlockedAt(other.getDeletionUnlockedAt());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3148,6 +3364,161 @@ public final class PublicSubnetOuterClass {
         return this;
       }
 
+      private com.google.protobuf.StringValue publicPrefixPoolId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> publicPrefixPoolIdBuilder_;
+      /**
+       * <pre>
+       * ID of the public prefix pool that the public subnet belongs to.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue public_prefix_pool_id = 14;</code>
+       * @return Whether the publicPrefixPoolId field is set.
+       */
+      public boolean hasPublicPrefixPoolId() {
+        return publicPrefixPoolIdBuilder_ != null || publicPrefixPoolId_ != null;
+      }
+      /**
+       * <pre>
+       * ID of the public prefix pool that the public subnet belongs to.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue public_prefix_pool_id = 14;</code>
+       * @return The publicPrefixPoolId.
+       */
+      public com.google.protobuf.StringValue getPublicPrefixPoolId() {
+        if (publicPrefixPoolIdBuilder_ == null) {
+          return publicPrefixPoolId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : publicPrefixPoolId_;
+        } else {
+          return publicPrefixPoolIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * ID of the public prefix pool that the public subnet belongs to.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue public_prefix_pool_id = 14;</code>
+       */
+      public Builder setPublicPrefixPoolId(com.google.protobuf.StringValue value) {
+        if (publicPrefixPoolIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          publicPrefixPoolId_ = value;
+          onChanged();
+        } else {
+          publicPrefixPoolIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the public prefix pool that the public subnet belongs to.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue public_prefix_pool_id = 14;</code>
+       */
+      public Builder setPublicPrefixPoolId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (publicPrefixPoolIdBuilder_ == null) {
+          publicPrefixPoolId_ = builderForValue.build();
+          onChanged();
+        } else {
+          publicPrefixPoolIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the public prefix pool that the public subnet belongs to.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue public_prefix_pool_id = 14;</code>
+       */
+      public Builder mergePublicPrefixPoolId(com.google.protobuf.StringValue value) {
+        if (publicPrefixPoolIdBuilder_ == null) {
+          if (publicPrefixPoolId_ != null) {
+            publicPrefixPoolId_ =
+              com.google.protobuf.StringValue.newBuilder(publicPrefixPoolId_).mergeFrom(value).buildPartial();
+          } else {
+            publicPrefixPoolId_ = value;
+          }
+          onChanged();
+        } else {
+          publicPrefixPoolIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the public prefix pool that the public subnet belongs to.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue public_prefix_pool_id = 14;</code>
+       */
+      public Builder clearPublicPrefixPoolId() {
+        if (publicPrefixPoolIdBuilder_ == null) {
+          publicPrefixPoolId_ = null;
+          onChanged();
+        } else {
+          publicPrefixPoolId_ = null;
+          publicPrefixPoolIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the public prefix pool that the public subnet belongs to.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue public_prefix_pool_id = 14;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getPublicPrefixPoolIdBuilder() {
+        
+        onChanged();
+        return getPublicPrefixPoolIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * ID of the public prefix pool that the public subnet belongs to.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue public_prefix_pool_id = 14;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getPublicPrefixPoolIdOrBuilder() {
+        if (publicPrefixPoolIdBuilder_ != null) {
+          return publicPrefixPoolIdBuilder_.getMessageOrBuilder();
+        } else {
+          return publicPrefixPoolId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : publicPrefixPoolId_;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the public prefix pool that the public subnet belongs to.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue public_prefix_pool_id = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getPublicPrefixPoolIdFieldBuilder() {
+        if (publicPrefixPoolIdBuilder_ == null) {
+          publicPrefixPoolIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getPublicPrefixPoolId(),
+                  getParentForChildren(),
+                  isClean());
+          publicPrefixPoolId_ = null;
+        }
+        return publicPrefixPoolIdBuilder_;
+      }
+
       private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
@@ -3461,6 +3832,161 @@ public final class PublicSubnetOuterClass {
             .putAll(values);
         return this;
       }
+
+      private com.google.protobuf.Timestamp deletionUnlockedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deletionUnlockedAtBuilder_;
+      /**
+       * <pre>
+       * Timestamp when deletion of the public subnet is allowed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deletion_unlocked_at = 201;</code>
+       * @return Whether the deletionUnlockedAt field is set.
+       */
+      public boolean hasDeletionUnlockedAt() {
+        return deletionUnlockedAtBuilder_ != null || deletionUnlockedAt_ != null;
+      }
+      /**
+       * <pre>
+       * Timestamp when deletion of the public subnet is allowed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deletion_unlocked_at = 201;</code>
+       * @return The deletionUnlockedAt.
+       */
+      public com.google.protobuf.Timestamp getDeletionUnlockedAt() {
+        if (deletionUnlockedAtBuilder_ == null) {
+          return deletionUnlockedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deletionUnlockedAt_;
+        } else {
+          return deletionUnlockedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp when deletion of the public subnet is allowed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deletion_unlocked_at = 201;</code>
+       */
+      public Builder setDeletionUnlockedAt(com.google.protobuf.Timestamp value) {
+        if (deletionUnlockedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deletionUnlockedAt_ = value;
+          onChanged();
+        } else {
+          deletionUnlockedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp when deletion of the public subnet is allowed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deletion_unlocked_at = 201;</code>
+       */
+      public Builder setDeletionUnlockedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (deletionUnlockedAtBuilder_ == null) {
+          deletionUnlockedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          deletionUnlockedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp when deletion of the public subnet is allowed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deletion_unlocked_at = 201;</code>
+       */
+      public Builder mergeDeletionUnlockedAt(com.google.protobuf.Timestamp value) {
+        if (deletionUnlockedAtBuilder_ == null) {
+          if (deletionUnlockedAt_ != null) {
+            deletionUnlockedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(deletionUnlockedAt_).mergeFrom(value).buildPartial();
+          } else {
+            deletionUnlockedAt_ = value;
+          }
+          onChanged();
+        } else {
+          deletionUnlockedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp when deletion of the public subnet is allowed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deletion_unlocked_at = 201;</code>
+       */
+      public Builder clearDeletionUnlockedAt() {
+        if (deletionUnlockedAtBuilder_ == null) {
+          deletionUnlockedAt_ = null;
+          onChanged();
+        } else {
+          deletionUnlockedAt_ = null;
+          deletionUnlockedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp when deletion of the public subnet is allowed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deletion_unlocked_at = 201;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDeletionUnlockedAtBuilder() {
+        
+        onChanged();
+        return getDeletionUnlockedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp when deletion of the public subnet is allowed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deletion_unlocked_at = 201;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDeletionUnlockedAtOrBuilder() {
+        if (deletionUnlockedAtBuilder_ != null) {
+          return deletionUnlockedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return deletionUnlockedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : deletionUnlockedAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp when deletion of the public subnet is allowed.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deletion_unlocked_at = 201;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDeletionUnlockedAtFieldBuilder() {
+        if (deletionUnlockedAtBuilder_ == null) {
+          deletionUnlockedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDeletionUnlockedAt(),
+                  getParentForChildren(),
+                  isClean());
+          deletionUnlockedAt_ = null;
+        }
+        return deletionUnlockedAtBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3535,32 +4061,37 @@ public final class PublicSubnetOuterClass {
     java.lang.String[] descriptorData = {
       "\n2yandex/cloud/baremetal/v1alpha/public_" +
       "subnet.proto\022\036yandex.cloud.baremetal.v1a" +
-      "lpha\032\037google/protobuf/timestamp.proto\032)y" +
-      "andex/cloud/baremetal/v1alpha/dhcp.proto" +
-      "\"\207\004\n\014PublicSubnet\022\n\n\002id\030\001 \001(\t\022\020\n\010cloud_i" +
-      "d\030\002 \001(\t\022\021\n\tfolder_id\030\003 \001(\t\022\014\n\004name\030\004 \001(\t" +
-      "\022\023\n\013description\030\005 \001(\t\022\017\n\007zone_id\030\007 \001(\t\022\031" +
-      "\n\021hardware_pool_ids\030\010 \003(\t\022>\n\004type\030\t \001(\0162" +
-      "0.yandex.cloud.baremetal.v1alpha.PublicS" +
-      "ubnetType\022\025\n\rprefix_length\030\n \001(\003\022\014\n\004cidr" +
-      "\030\013 \001(\t\022A\n\014dhcp_options\030\014 \001(\0132+.yandex.cl" +
-      "oud.baremetal.v1alpha.DhcpOptions\022\022\n\ngat" +
-      "eway_ip\030\r \001(\t\022.\n\ncreated_at\030d \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022I\n\006labels\030\310\001 \003(\01328" +
-      ".yandex.cloud.baremetal.v1alpha.PublicSu" +
-      "bnet.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\006\020\007J\004\010\016\020dJ\005\010e\020" +
-      "\310\001*T\n\020PublicSubnetType\022\"\n\036PUBLIC_SUBNET_" +
-      "TYPE_UNSPECIFIED\020\000\022\r\n\tDEDICATED\020\001\022\r\n\tEPH" +
-      "EMERAL\020\002Br\n\"yandex.cloud.api.baremetal.v" +
-      "1alphaZLgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/baremetal/v1alpha;barem" +
-      "etalb\006proto3"
+      "lpha\032\037google/protobuf/timestamp.proto\032\036g" +
+      "oogle/protobuf/wrappers.proto\032)yandex/cl" +
+      "oud/baremetal/v1alpha/dhcp.proto\"\377\004\n\014Pub" +
+      "licSubnet\022\n\n\002id\030\001 \001(\t\022\020\n\010cloud_id\030\002 \001(\t\022" +
+      "\021\n\tfolder_id\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\022\023\n\013desc" +
+      "ription\030\005 \001(\t\022\017\n\007zone_id\030\007 \001(\t\022\031\n\021hardwa" +
+      "re_pool_ids\030\010 \003(\t\022>\n\004type\030\t \001(\01620.yandex" +
+      ".cloud.baremetal.v1alpha.PublicSubnetTyp" +
+      "e\022\025\n\rprefix_length\030\n \001(\003\022\014\n\004cidr\030\013 \001(\t\022A" +
+      "\n\014dhcp_options\030\014 \001(\0132+.yandex.cloud.bare" +
+      "metal.v1alpha.DhcpOptions\022\022\n\ngateway_ip\030" +
+      "\r \001(\t\022;\n\025public_prefix_pool_id\030\016 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\022.\n\ncreated_at" +
+      "\030d \001(\0132\032.google.protobuf.Timestamp\022I\n\006la" +
+      "bels\030\310\001 \003(\01328.yandex.cloud.baremetal.v1a" +
+      "lpha.PublicSubnet.LabelsEntry\0229\n\024deletio" +
+      "n_unlocked_at\030\311\001 \001(\0132\032.google.protobuf.T" +
+      "imestamp\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001J\004\010\006\020\007J\004\010\017\020dJ\005\010e\020\310\001*T\n\020Pu" +
+      "blicSubnetType\022\"\n\036PUBLIC_SUBNET_TYPE_UNS" +
+      "PECIFIED\020\000\022\r\n\tDEDICATED\020\001\022\r\n\tEPHEMERAL\020\002" +
+      "Br\n\"yandex.cloud.api.baremetal.v1alphaZL" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/baremetal/v1alpha;baremetalb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.baremetal.v1alpha.Dhcp.getDescriptor(),
         });
     internal_static_yandex_cloud_baremetal_v1alpha_PublicSubnet_descriptor =
@@ -3568,7 +4099,7 @@ public final class PublicSubnetOuterClass {
     internal_static_yandex_cloud_baremetal_v1alpha_PublicSubnet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_baremetal_v1alpha_PublicSubnet_descriptor,
-        new java.lang.String[] { "Id", "CloudId", "FolderId", "Name", "Description", "ZoneId", "HardwarePoolIds", "Type", "PrefixLength", "Cidr", "DhcpOptions", "GatewayIp", "CreatedAt", "Labels", });
+        new java.lang.String[] { "Id", "CloudId", "FolderId", "Name", "Description", "ZoneId", "HardwarePoolIds", "Type", "PrefixLength", "Cidr", "DhcpOptions", "GatewayIp", "PublicPrefixPoolId", "CreatedAt", "Labels", "DeletionUnlockedAt", });
     internal_static_yandex_cloud_baremetal_v1alpha_PublicSubnet_LabelsEntry_descriptor =
       internal_static_yandex_cloud_baremetal_v1alpha_PublicSubnet_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_baremetal_v1alpha_PublicSubnet_LabelsEntry_fieldAccessorTable = new
@@ -3576,6 +4107,7 @@ public final class PublicSubnetOuterClass {
         internal_static_yandex_cloud_baremetal_v1alpha_PublicSubnet_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.baremetal.v1alpha.Dhcp.getDescriptor();
   }
 

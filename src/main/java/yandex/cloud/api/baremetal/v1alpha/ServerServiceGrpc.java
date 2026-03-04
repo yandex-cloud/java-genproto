@@ -494,6 +494,8 @@ public final class ServerServiceGrpc {
 
     /**
      * <pre>
+     * (-- api-linter: yc::1702::method-verb-prefix=disabled
+     *     Required for backward compatibility with old clients. --)
      * Powers off the specified server.
      * </pre>
      */
@@ -504,6 +506,8 @@ public final class ServerServiceGrpc {
 
     /**
      * <pre>
+     * (-- api-linter: yc::1702::method-verb-prefix=disabled
+     *     Required for backward compatibility with old clients. --)
      * Powers on the specified server.
      * </pre>
      */
@@ -514,6 +518,8 @@ public final class ServerServiceGrpc {
 
     /**
      * <pre>
+     * (-- api-linter: yc::1702::method-verb-prefix=disabled
+     *     Required for backward compatibility with old clients. --)
      * Reboots the specified server.
      * </pre>
      */
@@ -524,6 +530,8 @@ public final class ServerServiceGrpc {
 
     /**
      * <pre>
+     * (-- api-linter: yc::1702::method-verb-prefix=disabled
+     *     Required for backward compatibility with old clients. --)
      * Reinstalls the specified server.
      * </pre>
      */
@@ -727,6 +735,8 @@ public final class ServerServiceGrpc {
 
     /**
      * <pre>
+     * (-- api-linter: yc::1702::method-verb-prefix=disabled
+     *     Required for backward compatibility with old clients. --)
      * Powers off the specified server.
      * </pre>
      */
@@ -738,6 +748,8 @@ public final class ServerServiceGrpc {
 
     /**
      * <pre>
+     * (-- api-linter: yc::1702::method-verb-prefix=disabled
+     *     Required for backward compatibility with old clients. --)
      * Powers on the specified server.
      * </pre>
      */
@@ -749,6 +761,8 @@ public final class ServerServiceGrpc {
 
     /**
      * <pre>
+     * (-- api-linter: yc::1702::method-verb-prefix=disabled
+     *     Required for backward compatibility with old clients. --)
      * Reboots the specified server.
      * </pre>
      */
@@ -760,6 +774,8 @@ public final class ServerServiceGrpc {
 
     /**
      * <pre>
+     * (-- api-linter: yc::1702::method-verb-prefix=disabled
+     *     Required for backward compatibility with old clients. --)
      * Reinstalls the specified server.
      * </pre>
      */
@@ -873,6 +889,8 @@ public final class ServerServiceGrpc {
 
     /**
      * <pre>
+     * (-- api-linter: yc::1702::method-verb-prefix=disabled
+     *     Required for backward compatibility with old clients. --)
      * Powers off the specified server.
      * </pre>
      */
@@ -883,6 +901,8 @@ public final class ServerServiceGrpc {
 
     /**
      * <pre>
+     * (-- api-linter: yc::1702::method-verb-prefix=disabled
+     *     Required for backward compatibility with old clients. --)
      * Powers on the specified server.
      * </pre>
      */
@@ -893,6 +913,8 @@ public final class ServerServiceGrpc {
 
     /**
      * <pre>
+     * (-- api-linter: yc::1702::method-verb-prefix=disabled
+     *     Required for backward compatibility with old clients. --)
      * Reboots the specified server.
      * </pre>
      */
@@ -903,6 +925,8 @@ public final class ServerServiceGrpc {
 
     /**
      * <pre>
+     * (-- api-linter: yc::1702::method-verb-prefix=disabled
+     *     Required for backward compatibility with old clients. --)
      * Reinstalls the specified server.
      * </pre>
      */
@@ -1017,6 +1041,8 @@ public final class ServerServiceGrpc {
 
     /**
      * <pre>
+     * (-- api-linter: yc::1702::method-verb-prefix=disabled
+     *     Required for backward compatibility with old clients. --)
      * Powers off the specified server.
      * </pre>
      */
@@ -1028,6 +1054,8 @@ public final class ServerServiceGrpc {
 
     /**
      * <pre>
+     * (-- api-linter: yc::1702::method-verb-prefix=disabled
+     *     Required for backward compatibility with old clients. --)
      * Powers on the specified server.
      * </pre>
      */
@@ -1039,6 +1067,8 @@ public final class ServerServiceGrpc {
 
     /**
      * <pre>
+     * (-- api-linter: yc::1702::method-verb-prefix=disabled
+     *     Required for backward compatibility with old clients. --)
      * Reboots the specified server.
      * </pre>
      */
@@ -1050,6 +1080,8 @@ public final class ServerServiceGrpc {
 
     /**
      * <pre>
+     * (-- api-linter: yc::1702::method-verb-prefix=disabled
+     *     Required for backward compatibility with old clients. --)
      * Reinstalls the specified server.
      * </pre>
      */

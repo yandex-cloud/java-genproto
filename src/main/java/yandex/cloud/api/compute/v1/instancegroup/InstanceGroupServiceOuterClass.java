@@ -33849,6 +33849,3276 @@ public final class InstanceGroupServiceOuterClass {
 
   }
 
+  public interface DisableZonesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.instancegroup.DisableZonesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the instance group to disable zones.
+     * </pre>
+     *
+     * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The instanceGroupId.
+     */
+    java.lang.String getInstanceGroupId();
+    /**
+     * <pre>
+     * ID of the instance group to disable zones.
+     * </pre>
+     *
+     * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for instanceGroupId.
+     */
+    com.google.protobuf.ByteString
+        getInstanceGroupIdBytes();
+
+    /**
+     * <pre>
+     * Zone IDs to disable.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the zoneIds.
+     */
+    java.util.List<java.lang.String>
+        getZoneIdsList();
+    /**
+     * <pre>
+     * Zone IDs to disable.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of zoneIds.
+     */
+    int getZoneIdsCount();
+    /**
+     * <pre>
+     * Zone IDs to disable.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    java.lang.String getZoneIds(int index);
+    /**
+     * <pre>
+     * Zone IDs to disable.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getZoneIdsBytes(int index);
+
+    /**
+     * <pre>
+     * The interval during which the zones will be disabled. Format 1m-72h.
+     * If not set then zone will be disabled until it is removed through a separate call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <pre>
+     * The interval during which the zones will be disabled. Format 1m-72h.
+     * If not set then zone will be disabled until it is removed through a separate call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+     * @return The duration.
+     */
+    com.google.protobuf.Duration getDuration();
+    /**
+     * <pre>
+     * The interval during which the zones will be disabled. Format 1m-72h.
+     * If not set then zone will be disabled until it is removed through a separate call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDurationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.DisableZonesRequest}
+   */
+  public static final class DisableZonesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.instancegroup.DisableZonesRequest)
+      DisableZonesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DisableZonesRequest.newBuilder() to construct.
+    private DisableZonesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DisableZonesRequest() {
+      instanceGroupId_ = "";
+      zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DisableZonesRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DisableZonesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceGroupId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                zoneIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              zoneIds_.add(s);
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (duration_ != null) {
+                subBuilder = duration_.toBuilder();
+              }
+              duration_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(duration_);
+                duration_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_DisableZonesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_DisableZonesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest.Builder.class);
+    }
+
+    public static final int INSTANCE_GROUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceGroupId_;
+    /**
+     * <pre>
+     * ID of the instance group to disable zones.
+     * </pre>
+     *
+     * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The instanceGroupId.
+     */
+    @java.lang.Override
+    public java.lang.String getInstanceGroupId() {
+      java.lang.Object ref = instanceGroupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceGroupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the instance group to disable zones.
+     * </pre>
+     *
+     * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for instanceGroupId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInstanceGroupIdBytes() {
+      java.lang.Object ref = instanceGroupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceGroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ZONE_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList zoneIds_;
+    /**
+     * <pre>
+     * Zone IDs to disable.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the zoneIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getZoneIdsList() {
+      return zoneIds_;
+    }
+    /**
+     * <pre>
+     * Zone IDs to disable.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of zoneIds.
+     */
+    public int getZoneIdsCount() {
+      return zoneIds_.size();
+    }
+    /**
+     * <pre>
+     * Zone IDs to disable.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    public java.lang.String getZoneIds(int index) {
+      return zoneIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Zone IDs to disable.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getZoneIdsBytes(int index) {
+      return zoneIds_.getByteString(index);
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration duration_;
+    /**
+     * <pre>
+     * The interval during which the zones will be disabled. Format 1m-72h.
+     * If not set then zone will be disabled until it is removed through a separate call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+     * @return Whether the duration field is set.
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return duration_ != null;
+    }
+    /**
+     * <pre>
+     * The interval during which the zones will be disabled. Format 1m-72h.
+     * If not set then zone will be disabled until it is removed through a separate call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDuration() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+    /**
+     * <pre>
+     * The interval during which the zones will be disabled. Format 1m-72h.
+     * If not set then zone will be disabled until it is removed through a separate call.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+      return getDuration();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceGroupId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceGroupId_);
+      }
+      for (int i = 0; i < zoneIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, zoneIds_.getRaw(i));
+      }
+      if (duration_ != null) {
+        output.writeMessage(3, getDuration());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceGroupId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceGroupId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < zoneIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(zoneIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getZoneIdsList().size();
+      }
+      if (duration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDuration());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest other = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest) obj;
+
+      if (!getInstanceGroupId()
+          .equals(other.getInstanceGroupId())) return false;
+      if (!getZoneIdsList()
+          .equals(other.getZoneIdsList())) return false;
+      if (hasDuration() != other.hasDuration()) return false;
+      if (hasDuration()) {
+        if (!getDuration()
+            .equals(other.getDuration())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceGroupId().hashCode();
+      if (getZoneIdsCount() > 0) {
+        hash = (37 * hash) + ZONE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getZoneIdsList().hashCode();
+      }
+      if (hasDuration()) {
+        hash = (37 * hash) + DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDuration().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.DisableZonesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.instancegroup.DisableZonesRequest)
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_DisableZonesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_DisableZonesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceGroupId_ = "";
+
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (durationBuilder_ == null) {
+          duration_ = null;
+        } else {
+          duration_ = null;
+          durationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_DisableZonesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest build() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest buildPartial() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest result = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.instanceGroupId_ = instanceGroupId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.zoneIds_ = zoneIds_;
+        if (durationBuilder_ == null) {
+          result.duration_ = duration_;
+        } else {
+          result.duration_ = durationBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest) {
+          return mergeFrom((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest other) {
+        if (other == yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest.getDefaultInstance()) return this;
+        if (!other.getInstanceGroupId().isEmpty()) {
+          instanceGroupId_ = other.instanceGroupId_;
+          onChanged();
+        }
+        if (!other.zoneIds_.isEmpty()) {
+          if (zoneIds_.isEmpty()) {
+            zoneIds_ = other.zoneIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureZoneIdsIsMutable();
+            zoneIds_.addAll(other.zoneIds_);
+          }
+          onChanged();
+        }
+        if (other.hasDuration()) {
+          mergeDuration(other.getDuration());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object instanceGroupId_ = "";
+      /**
+       * <pre>
+       * ID of the instance group to disable zones.
+       * </pre>
+       *
+       * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The instanceGroupId.
+       */
+      public java.lang.String getInstanceGroupId() {
+        java.lang.Object ref = instanceGroupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceGroupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance group to disable zones.
+       * </pre>
+       *
+       * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for instanceGroupId.
+       */
+      public com.google.protobuf.ByteString
+          getInstanceGroupIdBytes() {
+        java.lang.Object ref = instanceGroupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceGroupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance group to disable zones.
+       * </pre>
+       *
+       * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The instanceGroupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance group to disable zones.
+       * </pre>
+       *
+       * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInstanceGroupId() {
+        
+        instanceGroupId_ = getDefaultInstance().getInstanceGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance group to disable zones.
+       * </pre>
+       *
+       * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for instanceGroupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceGroupId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureZoneIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = new com.google.protobuf.LazyStringArrayList(zoneIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Zone IDs to disable.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the zoneIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getZoneIdsList() {
+        return zoneIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Zone IDs to disable.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return The count of zoneIds.
+       */
+      public int getZoneIdsCount() {
+        return zoneIds_.size();
+      }
+      /**
+       * <pre>
+       * Zone IDs to disable.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the element to return.
+       * @return The zoneIds at the given index.
+       */
+      public java.lang.String getZoneIds(int index) {
+        return zoneIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Zone IDs to disable.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the zoneIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getZoneIdsBytes(int index) {
+        return zoneIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Zone IDs to disable.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index to set the value at.
+       * @param value The zoneIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to disable.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to disable.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param values The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllZoneIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureZoneIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, zoneIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to disable.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZoneIds() {
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to disable.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The bytes of the zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration duration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
+      /**
+       * <pre>
+       * The interval during which the zones will be disabled. Format 1m-72h.
+       * If not set then zone will be disabled until it is removed through a separate call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+       * @return Whether the duration field is set.
+       */
+      public boolean hasDuration() {
+        return durationBuilder_ != null || duration_ != null;
+      }
+      /**
+       * <pre>
+       * The interval during which the zones will be disabled. Format 1m-72h.
+       * If not set then zone will be disabled until it is removed through a separate call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+       * @return The duration.
+       */
+      public com.google.protobuf.Duration getDuration() {
+        if (durationBuilder_ == null) {
+          return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        } else {
+          return durationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The interval during which the zones will be disabled. Format 1m-72h.
+       * If not set then zone will be disabled until it is removed through a separate call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+       */
+      public Builder setDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          duration_ = value;
+          onChanged();
+        } else {
+          durationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The interval during which the zones will be disabled. Format 1m-72h.
+       * If not set then zone will be disabled until it is removed through a separate call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+       */
+      public Builder setDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (durationBuilder_ == null) {
+          duration_ = builderForValue.build();
+          onChanged();
+        } else {
+          durationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The interval during which the zones will be disabled. Format 1m-72h.
+       * If not set then zone will be disabled until it is removed through a separate call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+       */
+      public Builder mergeDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (duration_ != null) {
+            duration_ =
+              com.google.protobuf.Duration.newBuilder(duration_).mergeFrom(value).buildPartial();
+          } else {
+            duration_ = value;
+          }
+          onChanged();
+        } else {
+          durationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The interval during which the zones will be disabled. Format 1m-72h.
+       * If not set then zone will be disabled until it is removed through a separate call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+       */
+      public Builder clearDuration() {
+        if (durationBuilder_ == null) {
+          duration_ = null;
+          onChanged();
+        } else {
+          duration_ = null;
+          durationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The interval during which the zones will be disabled. Format 1m-72h.
+       * If not set then zone will be disabled until it is removed through a separate call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+       */
+      public com.google.protobuf.Duration.Builder getDurationBuilder() {
+        
+        onChanged();
+        return getDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The interval during which the zones will be disabled. Format 1m-72h.
+       * If not set then zone will be disabled until it is removed through a separate call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+        if (durationBuilder_ != null) {
+          return durationBuilder_.getMessageOrBuilder();
+        } else {
+          return duration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        }
+      }
+      /**
+       * <pre>
+       * The interval during which the zones will be disabled. Format 1m-72h.
+       * If not set then zone will be disabled until it is removed through a separate call.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1m-72h"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDurationFieldBuilder() {
+        if (durationBuilder_ == null) {
+          durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDuration(),
+                  getParentForChildren(),
+                  isClean());
+          duration_ = null;
+        }
+        return durationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.instancegroup.DisableZonesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.instancegroup.DisableZonesRequest)
+    private static final yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest();
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DisableZonesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DisableZonesRequest>() {
+      @java.lang.Override
+      public DisableZonesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DisableZonesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DisableZonesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DisableZonesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DisableZonesMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.instancegroup.DisableZonesMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the instance group on which the zones were disabled.
+     * </pre>
+     *
+     * <code>string instance_group_id = 1;</code>
+     * @return The instanceGroupId.
+     */
+    java.lang.String getInstanceGroupId();
+    /**
+     * <pre>
+     * ID of the instance group on which the zones were disabled.
+     * </pre>
+     *
+     * <code>string instance_group_id = 1;</code>
+     * @return The bytes for instanceGroupId.
+     */
+    com.google.protobuf.ByteString
+        getInstanceGroupIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.DisableZonesMetadata}
+   */
+  public static final class DisableZonesMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.instancegroup.DisableZonesMetadata)
+      DisableZonesMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DisableZonesMetadata.newBuilder() to construct.
+    private DisableZonesMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DisableZonesMetadata() {
+      instanceGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DisableZonesMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DisableZonesMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceGroupId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_DisableZonesMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_DisableZonesMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata.Builder.class);
+    }
+
+    public static final int INSTANCE_GROUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceGroupId_;
+    /**
+     * <pre>
+     * ID of the instance group on which the zones were disabled.
+     * </pre>
+     *
+     * <code>string instance_group_id = 1;</code>
+     * @return The instanceGroupId.
+     */
+    @java.lang.Override
+    public java.lang.String getInstanceGroupId() {
+      java.lang.Object ref = instanceGroupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceGroupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the instance group on which the zones were disabled.
+     * </pre>
+     *
+     * <code>string instance_group_id = 1;</code>
+     * @return The bytes for instanceGroupId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInstanceGroupIdBytes() {
+      java.lang.Object ref = instanceGroupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceGroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceGroupId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceGroupId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceGroupId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceGroupId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata other = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata) obj;
+
+      if (!getInstanceGroupId()
+          .equals(other.getInstanceGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceGroupId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.DisableZonesMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.instancegroup.DisableZonesMetadata)
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_DisableZonesMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_DisableZonesMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceGroupId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_DisableZonesMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata build() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata buildPartial() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata result = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata(this);
+        result.instanceGroupId_ = instanceGroupId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata) {
+          return mergeFrom((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata other) {
+        if (other == yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata.getDefaultInstance()) return this;
+        if (!other.getInstanceGroupId().isEmpty()) {
+          instanceGroupId_ = other.instanceGroupId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object instanceGroupId_ = "";
+      /**
+       * <pre>
+       * ID of the instance group on which the zones were disabled.
+       * </pre>
+       *
+       * <code>string instance_group_id = 1;</code>
+       * @return The instanceGroupId.
+       */
+      public java.lang.String getInstanceGroupId() {
+        java.lang.Object ref = instanceGroupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceGroupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance group on which the zones were disabled.
+       * </pre>
+       *
+       * <code>string instance_group_id = 1;</code>
+       * @return The bytes for instanceGroupId.
+       */
+      public com.google.protobuf.ByteString
+          getInstanceGroupIdBytes() {
+        java.lang.Object ref = instanceGroupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceGroupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance group on which the zones were disabled.
+       * </pre>
+       *
+       * <code>string instance_group_id = 1;</code>
+       * @param value The instanceGroupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance group on which the zones were disabled.
+       * </pre>
+       *
+       * <code>string instance_group_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInstanceGroupId() {
+        
+        instanceGroupId_ = getDefaultInstance().getInstanceGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance group on which the zones were disabled.
+       * </pre>
+       *
+       * <code>string instance_group_id = 1;</code>
+       * @param value The bytes for instanceGroupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.instancegroup.DisableZonesMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.instancegroup.DisableZonesMetadata)
+    private static final yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata();
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DisableZonesMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DisableZonesMetadata>() {
+      @java.lang.Override
+      public DisableZonesMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DisableZonesMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DisableZonesMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DisableZonesMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EnableZonesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.instancegroup.EnableZonesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the instance group to enable zones.
+     * </pre>
+     *
+     * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The instanceGroupId.
+     */
+    java.lang.String getInstanceGroupId();
+    /**
+     * <pre>
+     * ID of the instance group to enable zones.
+     * </pre>
+     *
+     * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for instanceGroupId.
+     */
+    com.google.protobuf.ByteString
+        getInstanceGroupIdBytes();
+
+    /**
+     * <pre>
+     * Zone IDs to enable.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the zoneIds.
+     */
+    java.util.List<java.lang.String>
+        getZoneIdsList();
+    /**
+     * <pre>
+     * Zone IDs to enable.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of zoneIds.
+     */
+    int getZoneIdsCount();
+    /**
+     * <pre>
+     * Zone IDs to enable.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    java.lang.String getZoneIds(int index);
+    /**
+     * <pre>
+     * Zone IDs to enable.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getZoneIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.EnableZonesRequest}
+   */
+  public static final class EnableZonesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.instancegroup.EnableZonesRequest)
+      EnableZonesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EnableZonesRequest.newBuilder() to construct.
+    private EnableZonesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EnableZonesRequest() {
+      instanceGroupId_ = "";
+      zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EnableZonesRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EnableZonesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceGroupId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                zoneIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              zoneIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_EnableZonesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_EnableZonesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest.Builder.class);
+    }
+
+    public static final int INSTANCE_GROUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceGroupId_;
+    /**
+     * <pre>
+     * ID of the instance group to enable zones.
+     * </pre>
+     *
+     * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The instanceGroupId.
+     */
+    @java.lang.Override
+    public java.lang.String getInstanceGroupId() {
+      java.lang.Object ref = instanceGroupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceGroupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the instance group to enable zones.
+     * </pre>
+     *
+     * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for instanceGroupId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInstanceGroupIdBytes() {
+      java.lang.Object ref = instanceGroupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceGroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ZONE_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList zoneIds_;
+    /**
+     * <pre>
+     * Zone IDs to enable.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the zoneIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getZoneIdsList() {
+      return zoneIds_;
+    }
+    /**
+     * <pre>
+     * Zone IDs to enable.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of zoneIds.
+     */
+    public int getZoneIdsCount() {
+      return zoneIds_.size();
+    }
+    /**
+     * <pre>
+     * Zone IDs to enable.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    public java.lang.String getZoneIds(int index) {
+      return zoneIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Zone IDs to enable.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getZoneIdsBytes(int index) {
+      return zoneIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceGroupId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceGroupId_);
+      }
+      for (int i = 0; i < zoneIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, zoneIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceGroupId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceGroupId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < zoneIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(zoneIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getZoneIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest other = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest) obj;
+
+      if (!getInstanceGroupId()
+          .equals(other.getInstanceGroupId())) return false;
+      if (!getZoneIdsList()
+          .equals(other.getZoneIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceGroupId().hashCode();
+      if (getZoneIdsCount() > 0) {
+        hash = (37 * hash) + ZONE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getZoneIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.EnableZonesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.instancegroup.EnableZonesRequest)
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_EnableZonesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_EnableZonesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceGroupId_ = "";
+
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_EnableZonesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest build() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest buildPartial() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest result = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.instanceGroupId_ = instanceGroupId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.zoneIds_ = zoneIds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest) {
+          return mergeFrom((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest other) {
+        if (other == yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest.getDefaultInstance()) return this;
+        if (!other.getInstanceGroupId().isEmpty()) {
+          instanceGroupId_ = other.instanceGroupId_;
+          onChanged();
+        }
+        if (!other.zoneIds_.isEmpty()) {
+          if (zoneIds_.isEmpty()) {
+            zoneIds_ = other.zoneIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureZoneIdsIsMutable();
+            zoneIds_.addAll(other.zoneIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object instanceGroupId_ = "";
+      /**
+       * <pre>
+       * ID of the instance group to enable zones.
+       * </pre>
+       *
+       * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The instanceGroupId.
+       */
+      public java.lang.String getInstanceGroupId() {
+        java.lang.Object ref = instanceGroupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceGroupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance group to enable zones.
+       * </pre>
+       *
+       * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for instanceGroupId.
+       */
+      public com.google.protobuf.ByteString
+          getInstanceGroupIdBytes() {
+        java.lang.Object ref = instanceGroupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceGroupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance group to enable zones.
+       * </pre>
+       *
+       * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The instanceGroupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance group to enable zones.
+       * </pre>
+       *
+       * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInstanceGroupId() {
+        
+        instanceGroupId_ = getDefaultInstance().getInstanceGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance group to enable zones.
+       * </pre>
+       *
+       * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for instanceGroupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceGroupId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureZoneIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = new com.google.protobuf.LazyStringArrayList(zoneIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Zone IDs to enable.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the zoneIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getZoneIdsList() {
+        return zoneIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Zone IDs to enable.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return The count of zoneIds.
+       */
+      public int getZoneIdsCount() {
+        return zoneIds_.size();
+      }
+      /**
+       * <pre>
+       * Zone IDs to enable.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the element to return.
+       * @return The zoneIds at the given index.
+       */
+      public java.lang.String getZoneIds(int index) {
+        return zoneIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Zone IDs to enable.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the zoneIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getZoneIdsBytes(int index) {
+        return zoneIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Zone IDs to enable.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index to set the value at.
+       * @param value The zoneIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to enable.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to enable.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param values The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllZoneIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureZoneIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, zoneIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to enable.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZoneIds() {
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to enable.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The bytes of the zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.instancegroup.EnableZonesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.instancegroup.EnableZonesRequest)
+    private static final yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest();
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EnableZonesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<EnableZonesRequest>() {
+      @java.lang.Override
+      public EnableZonesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EnableZonesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EnableZonesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EnableZonesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EnableZonesMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.instancegroup.EnableZonesMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the instance group on which the zones were enabled.
+     * </pre>
+     *
+     * <code>string instance_group_id = 1;</code>
+     * @return The instanceGroupId.
+     */
+    java.lang.String getInstanceGroupId();
+    /**
+     * <pre>
+     * ID of the instance group on which the zones were enabled.
+     * </pre>
+     *
+     * <code>string instance_group_id = 1;</code>
+     * @return The bytes for instanceGroupId.
+     */
+    com.google.protobuf.ByteString
+        getInstanceGroupIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.EnableZonesMetadata}
+   */
+  public static final class EnableZonesMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.instancegroup.EnableZonesMetadata)
+      EnableZonesMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EnableZonesMetadata.newBuilder() to construct.
+    private EnableZonesMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EnableZonesMetadata() {
+      instanceGroupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EnableZonesMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EnableZonesMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceGroupId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_EnableZonesMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_EnableZonesMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata.Builder.class);
+    }
+
+    public static final int INSTANCE_GROUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceGroupId_;
+    /**
+     * <pre>
+     * ID of the instance group on which the zones were enabled.
+     * </pre>
+     *
+     * <code>string instance_group_id = 1;</code>
+     * @return The instanceGroupId.
+     */
+    @java.lang.Override
+    public java.lang.String getInstanceGroupId() {
+      java.lang.Object ref = instanceGroupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceGroupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the instance group on which the zones were enabled.
+     * </pre>
+     *
+     * <code>string instance_group_id = 1;</code>
+     * @return The bytes for instanceGroupId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInstanceGroupIdBytes() {
+      java.lang.Object ref = instanceGroupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceGroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceGroupId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceGroupId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceGroupId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceGroupId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata other = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata) obj;
+
+      if (!getInstanceGroupId()
+          .equals(other.getInstanceGroupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceGroupId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.EnableZonesMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.instancegroup.EnableZonesMetadata)
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_EnableZonesMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_EnableZonesMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceGroupId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_EnableZonesMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata build() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata buildPartial() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata result = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata(this);
+        result.instanceGroupId_ = instanceGroupId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata) {
+          return mergeFrom((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata other) {
+        if (other == yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata.getDefaultInstance()) return this;
+        if (!other.getInstanceGroupId().isEmpty()) {
+          instanceGroupId_ = other.instanceGroupId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object instanceGroupId_ = "";
+      /**
+       * <pre>
+       * ID of the instance group on which the zones were enabled.
+       * </pre>
+       *
+       * <code>string instance_group_id = 1;</code>
+       * @return The instanceGroupId.
+       */
+      public java.lang.String getInstanceGroupId() {
+        java.lang.Object ref = instanceGroupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceGroupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance group on which the zones were enabled.
+       * </pre>
+       *
+       * <code>string instance_group_id = 1;</code>
+       * @return The bytes for instanceGroupId.
+       */
+      public com.google.protobuf.ByteString
+          getInstanceGroupIdBytes() {
+        java.lang.Object ref = instanceGroupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceGroupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance group on which the zones were enabled.
+       * </pre>
+       *
+       * <code>string instance_group_id = 1;</code>
+       * @param value The instanceGroupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance group on which the zones were enabled.
+       * </pre>
+       *
+       * <code>string instance_group_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInstanceGroupId() {
+        
+        instanceGroupId_ = getDefaultInstance().getInstanceGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance group on which the zones were enabled.
+       * </pre>
+       *
+       * <code>string instance_group_id = 1;</code>
+       * @param value The bytes for instanceGroupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.instancegroup.EnableZonesMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.instancegroup.EnableZonesMetadata)
+    private static final yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata();
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EnableZonesMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<EnableZonesMetadata>() {
+      @java.lang.Override
+      public EnableZonesMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EnableZonesMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EnableZonesMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EnableZonesMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessesRequest_descriptor;
   private static final 
@@ -34024,6 +37294,26 @@ public final class InstanceGroupServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupLogRecordsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_instancegroup_DisableZonesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_instancegroup_DisableZonesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_instancegroup_DisableZonesMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_instancegroup_DisableZonesMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_instancegroup_EnableZonesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_instancegroup_EnableZonesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_instancegroup_EnableZonesMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_instancegroup_EnableZonesMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -34036,280 +37326,298 @@ public final class InstanceGroupServiceOuterClass {
       "\nByandex/cloud/compute/v1/instancegroup/" +
       "instance_group_service.proto\022%yandex.clo" +
       "ud.compute.v1.instancegroup\032\034google/api/" +
-      "annotations.proto\032 google/protobuf/field" +
-      "_mask.proto\032 yandex/cloud/access/access." +
-      "proto\032 yandex/cloud/api/operation.proto\032" +
-      ":yandex/cloud/compute/v1/instancegroup/i" +
-      "nstance_group.proto\032&yandex/cloud/operat" +
-      "ion/operation.proto\032\035yandex/cloud/valida" +
-      "tion.proto\"J\n#ResumeInstanceGroupProcess" +
-      "esRequest\022#\n\021instance_group_id\030\001 \001(\tB\010\212\310" +
-      "1\004<=50\"?\n\"ResumeInstanceGroupProcessMeta" +
-      "data\022\031\n\021instance_group_id\030\001 \001(\t\"I\n\"Pause" +
-      "InstanceGroupProcessesRequest\022#\n\021instanc" +
-      "e_group_id\030\001 \001(\tB\010\212\3101\004<=50\">\n!PauseInsta" +
-      "nceGroupProcessMetadata\022\031\n\021instance_grou" +
-      "p_id\030\001 \001(\t\"\212\001\n\027GetInstanceGroupRequest\022\'" +
-      "\n\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "F\n\004view\030\002 \001(\01628.yandex.cloud.compute.v1." +
-      "instancegroup.InstanceGroupView\"\247\t\n\032Crea" +
-      "teInstanceGroupRequest\022\027\n\tfolder_id\030\001 \001(" +
-      "\tB\004\350\3071\001\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0" +
-      "-9]{0,61}[a-z0-9])?\022\036\n\013description\030\004 \001(\t" +
-      "B\t\212\3101\005<=256\022\246\001\n\006labels\030\005 \003(\0132M.yandex.cl" +
-      "oud.compute.v1.instancegroup.CreateInsta" +
-      "nceGroupRequest.LabelsEntryBG\202\3101\004<=64\212\3101" +
-      "\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024" +
-      "[a-z][-_./\\@0-9a-z]*\022X\n\021instance_templat" +
-      "e\030\006 \001(\01327.yandex.cloud.compute.v1.instan" +
-      "cegroup.InstanceTemplateB\004\350\3071\001\022N\n\014scale_" +
-      "policy\030\007 \001(\01322.yandex.cloud.compute.v1.i" +
-      "nstancegroup.ScalePolicyB\004\350\3071\001\022P\n\rdeploy" +
-      "_policy\030\010 \001(\01323.yandex.cloud.compute.v1." +
-      "instancegroup.DeployPolicyB\004\350\3071\001\022X\n\021allo" +
-      "cation_policy\030\t \001(\01327.yandex.cloud.compu" +
-      "te.v1.instancegroup.AllocationPolicyB\004\350\307" +
-      "1\001\022S\n\022load_balancer_spec\030\n \001(\01327.yandex." +
-      "cloud.compute.v1.instancegroup.LoadBalan" +
-      "cerSpec\022S\n\022health_checks_spec\030\013 \001(\01327.ya" +
-      "ndex.cloud.compute.v1.instancegroup.Heal" +
-      "thChecksSpec\022\032\n\022service_account_id\030\014 \001(\t" +
-      "\022B\n\tvariables\030\r \003(\0132/.yandex.cloud.compu" +
-      "te.v1.instancegroup.Variable\022\033\n\023deletion" +
-      "_protection\030\016 \001(\010\022j\n\036application_load_ba" +
-      "lancer_spec\030\017 \001(\0132B.yandex.cloud.compute" +
-      ".v1.instancegroup.ApplicationLoadBalance" +
-      "rSpec\022U\n\023auto_healing_policy\030\020 \001(\01328.yan" +
-      "dex.cloud.compute.v1.instancegroup.AutoH" +
-      "ealingPolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\002\020\003\"m\n\"CreateInsta" +
-      "nceGroupFromYamlRequest\022\027\n\tfolder_id\030\001 \001" +
-      "(\tB\004\350\3071\001\022.\n\023instance_group_yaml\030\002 \001(\tB\021\350" +
-      "\3071\001\212\3101\t<=1048576\"B\n\033CreateInstanceGroupM" +
-      "etadata\022#\n\021instance_group_id\030\001 \001(\tB\010\212\3101\004" +
-      "<=50\"\356\t\n\032UpdateInstanceGroupRequest\022\'\n\021i" +
-      "nstance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013" +
-      "update_mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
-      "dMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9" +
-      "]{0,61}[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t" +
-      "\212\3101\005<=256\022\246\001\n\006labels\030\005 \003(\0132M.yandex.clou" +
-      "d.compute.v1.instancegroup.UpdateInstanc" +
-      "eGroupRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<" +
-      "=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a" +
-      "-z][-_./\\@0-9a-z]*\022X\n\021instance_template\030" +
-      "\006 \001(\01327.yandex.cloud.compute.v1.instance" +
-      "group.InstanceTemplateB\004\350\3071\001\022N\n\014scale_po" +
-      "licy\030\007 \001(\01322.yandex.cloud.compute.v1.ins" +
-      "tancegroup.ScalePolicyB\004\350\3071\001\022P\n\rdeploy_p" +
-      "olicy\030\010 \001(\01323.yandex.cloud.compute.v1.in" +
-      "stancegroup.DeployPolicyB\004\350\3071\001\022X\n\021alloca" +
-      "tion_policy\030\t \001(\01327.yandex.cloud.compute" +
-      ".v1.instancegroup.AllocationPolicyB\004\350\3071\001" +
-      "\022S\n\022health_checks_spec\030\013 \001(\01327.yandex.cl" +
-      "oud.compute.v1.instancegroup.HealthCheck" +
-      "sSpec\022\032\n\022service_account_id\030\014 \001(\t\022S\n\022loa" +
-      "d_balancer_spec\030\016 \001(\01327.yandex.cloud.com" +
-      "pute.v1.instancegroup.LoadBalancerSpec\022B" +
-      "\n\tvariables\030\017 \003(\0132/.yandex.cloud.compute" +
-      ".v1.instancegroup.Variable\022\033\n\023deletion_p" +
-      "rotection\030\020 \001(\010\022j\n\036application_load_bala" +
-      "ncer_spec\030\021 \001(\0132B.yandex.cloud.compute.v" +
-      "1.instancegroup.ApplicationLoadBalancerS" +
-      "pec\022U\n\023auto_healing_policy\030\022 \001(\01328.yande" +
-      "x.cloud.compute.v1.instancegroup.AutoHea" +
-      "lingPolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001J\004\010\r\020\016J\004\010\n\020\013\"}\n\"UpdateI" +
-      "nstanceGroupFromYamlRequest\022\'\n\021instance_" +
-      "group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022.\n\023instance" +
-      "_group_yaml\030\002 \001(\tB\021\350\3071\001\212\3101\t<=1048576\"8\n\033" +
-      "UpdateInstanceGroupMetadata\022\031\n\021instance_" +
-      "group_id\030\001 \001(\t\"D\n\031StartInstanceGroupRequ" +
-      "est\022\'\n\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\"7\n\032StartInstanceGroupMetadata\022\031\n\021in" +
-      "stance_group_id\030\001 \001(\t\"C\n\030StopInstanceGro" +
-      "upRequest\022\'\n\021instance_group_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\"6\n\031StopInstanceGroupMetadata\022" +
-      "\031\n\021instance_group_id\030\001 \001(\t\"^\n\025RollingRes" +
-      "tartRequest\022\'\n\021instance_group_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022\034\n\024managed_instance_ids\030\002 \003" +
-      "(\t\"3\n\026RollingRestartMetadata\022\031\n\021instance" +
-      "_group_id\030\001 \001(\t\"_\n\026RollingRecreateReques" +
+      "annotations.proto\032\036google/protobuf/durat" +
+      "ion.proto\032 google/protobuf/field_mask.pr" +
+      "oto\032 yandex/cloud/access/access.proto\032 y" +
+      "andex/cloud/api/operation.proto\032:yandex/" +
+      "cloud/compute/v1/instancegroup/instance_" +
+      "group.proto\032&yandex/cloud/operation/oper" +
+      "ation.proto\032\035yandex/cloud/validation.pro" +
+      "to\"J\n#ResumeInstanceGroupProcessesReques" +
+      "t\022#\n\021instance_group_id\030\001 \001(\tB\010\212\3101\004<=50\"?" +
+      "\n\"ResumeInstanceGroupProcessMetadata\022\031\n\021" +
+      "instance_group_id\030\001 \001(\t\"I\n\"PauseInstance" +
+      "GroupProcessesRequest\022#\n\021instance_group_" +
+      "id\030\001 \001(\tB\010\212\3101\004<=50\">\n!PauseInstanceGroup" +
+      "ProcessMetadata\022\031\n\021instance_group_id\030\001 \001" +
+      "(\t\"\212\001\n\027GetInstanceGroupRequest\022\'\n\021instan" +
+      "ce_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022F\n\004view\030" +
+      "\002 \001(\01628.yandex.cloud.compute.v1.instance" +
+      "group.InstanceGroupView\"\247\t\n\032CreateInstan" +
+      "ceGroupRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022" +
+      "2\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61" +
+      "}[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=" +
+      "256\022\246\001\n\006labels\030\005 \003(\0132M.yandex.cloud.comp" +
+      "ute.v1.instancegroup.CreateInstanceGroup" +
+      "Request.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071" +
+      "\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_" +
+      "./\\@0-9a-z]*\022X\n\021instance_template\030\006 \001(\0132" +
+      "7.yandex.cloud.compute.v1.instancegroup." +
+      "InstanceTemplateB\004\350\3071\001\022N\n\014scale_policy\030\007" +
+      " \001(\01322.yandex.cloud.compute.v1.instanceg" +
+      "roup.ScalePolicyB\004\350\3071\001\022P\n\rdeploy_policy\030" +
+      "\010 \001(\01323.yandex.cloud.compute.v1.instance" +
+      "group.DeployPolicyB\004\350\3071\001\022X\n\021allocation_p" +
+      "olicy\030\t \001(\01327.yandex.cloud.compute.v1.in" +
+      "stancegroup.AllocationPolicyB\004\350\3071\001\022S\n\022lo" +
+      "ad_balancer_spec\030\n \001(\01327.yandex.cloud.co" +
+      "mpute.v1.instancegroup.LoadBalancerSpec\022" +
+      "S\n\022health_checks_spec\030\013 \001(\01327.yandex.clo" +
+      "ud.compute.v1.instancegroup.HealthChecks" +
+      "Spec\022\032\n\022service_account_id\030\014 \001(\t\022B\n\tvari" +
+      "ables\030\r \003(\0132/.yandex.cloud.compute.v1.in" +
+      "stancegroup.Variable\022\033\n\023deletion_protect" +
+      "ion\030\016 \001(\010\022j\n\036application_load_balancer_s" +
+      "pec\030\017 \001(\0132B.yandex.cloud.compute.v1.inst" +
+      "ancegroup.ApplicationLoadBalancerSpec\022U\n" +
+      "\023auto_healing_policy\030\020 \001(\01328.yandex.clou" +
+      "d.compute.v1.instancegroup.AutoHealingPo" +
+      "licy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001J\004\010\002\020\003\"m\n\"CreateInstanceGroup" +
+      "FromYamlRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001" +
+      "\022.\n\023instance_group_yaml\030\002 \001(\tB\021\350\3071\001\212\3101\t<" +
+      "=1048576\"B\n\033CreateInstanceGroupMetadata\022" +
+      "#\n\021instance_group_id\030\001 \001(\tB\010\212\3101\004<=50\"\356\t\n" +
+      "\032UpdateInstanceGroupRequest\022\'\n\021instance_" +
+      "group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_m" +
+      "ask\030\002 \001(\0132\032.google.protobuf.FieldMask\0222\n" +
+      "\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[" +
+      "a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=25" +
+      "6\022\246\001\n\006labels\030\005 \003(\0132M.yandex.cloud.comput" +
+      "e.v1.instancegroup.UpdateInstanceGroupRe" +
+      "quest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[" +
+      "-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./" +
+      "\\@0-9a-z]*\022X\n\021instance_template\030\006 \001(\01327." +
+      "yandex.cloud.compute.v1.instancegroup.In" +
+      "stanceTemplateB\004\350\3071\001\022N\n\014scale_policy\030\007 \001" +
+      "(\01322.yandex.cloud.compute.v1.instancegro" +
+      "up.ScalePolicyB\004\350\3071\001\022P\n\rdeploy_policy\030\010 " +
+      "\001(\01323.yandex.cloud.compute.v1.instancegr" +
+      "oup.DeployPolicyB\004\350\3071\001\022X\n\021allocation_pol" +
+      "icy\030\t \001(\01327.yandex.cloud.compute.v1.inst" +
+      "ancegroup.AllocationPolicyB\004\350\3071\001\022S\n\022heal" +
+      "th_checks_spec\030\013 \001(\01327.yandex.cloud.comp" +
+      "ute.v1.instancegroup.HealthChecksSpec\022\032\n" +
+      "\022service_account_id\030\014 \001(\t\022S\n\022load_balanc" +
+      "er_spec\030\016 \001(\01327.yandex.cloud.compute.v1." +
+      "instancegroup.LoadBalancerSpec\022B\n\tvariab" +
+      "les\030\017 \003(\0132/.yandex.cloud.compute.v1.inst" +
+      "ancegroup.Variable\022\033\n\023deletion_protectio" +
+      "n\030\020 \001(\010\022j\n\036application_load_balancer_spe" +
+      "c\030\021 \001(\0132B.yandex.cloud.compute.v1.instan" +
+      "cegroup.ApplicationLoadBalancerSpec\022U\n\023a" +
+      "uto_healing_policy\030\022 \001(\01328.yandex.cloud." +
+      "compute.v1.instancegroup.AutoHealingPoli" +
+      "cy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001J\004\010\r\020\016J\004\010\n\020\013\"}\n\"UpdateInstanceG" +
+      "roupFromYamlRequest\022\'\n\021instance_group_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022.\n\023instance_group_y" +
+      "aml\030\002 \001(\tB\021\350\3071\001\212\3101\t<=1048576\"8\n\033UpdateIn" +
+      "stanceGroupMetadata\022\031\n\021instance_group_id" +
+      "\030\001 \001(\t\"D\n\031StartInstanceGroupRequest\022\'\n\021i" +
+      "nstance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"7\n\032" +
+      "StartInstanceGroupMetadata\022\031\n\021instance_g" +
+      "roup_id\030\001 \001(\t\"C\n\030StopInstanceGroupReques" +
       "t\022\'\n\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022\034\n\024managed_instance_ids\030\002 \003(\t\"4\n\027Roll" +
-      "ingRecreateMetadata\022\031\n\021instance_group_id" +
-      "\030\001 \001(\t\"E\n\032DeleteInstanceGroupRequest\022\'\n\021" +
-      "instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"8\n" +
-      "\033DeleteInstanceGroupMetadata\022\031\n\021instance" +
-      "_group_id\030\001 \001(\t\"4\n\027DeleteInstancesMetada" +
-      "ta\022\031\n\021instance_group_id\030\001 \001(\t\"2\n\025StopIns" +
-      "tancesMetadata\022\031\n\021instance_group_id\030\001 \001(" +
-      "\t\"\327\001\n\031ListInstanceGroupsRequest\022\027\n\tfolde" +
-      "r_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
-      "\006<=1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=1000\022" +
-      "\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\022F\n\004view\030\005 \001(" +
-      "\01628.yandex.cloud.compute.v1.instancegrou" +
-      "p.InstanceGroupView\"\204\001\n\032ListInstanceGrou" +
-      "psResponse\022M\n\017instance_groups\030\001 \003(\01324.ya" +
-      "ndex.cloud.compute.v1.instancegroup.Inst" +
-      "anceGroup\022\027\n\017next_page_token\030\002 \001(\t\"\247\001\n!L" +
-      "istInstanceGroupInstancesRequest\022\'\n\021inst" +
-      "ance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpag" +
-      "e_size\030\002 \001(\003B\n\372\3071\006<=1000\022\036\n\npage_token\030\003" +
-      " \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=" +
-      "1000\"\210\001\n\"ListInstanceGroupInstancesRespo" +
-      "nse\022I\n\tinstances\030\001 \003(\01326.yandex.cloud.co" +
-      "mpute.v1.instancegroup.ManagedInstance\022\027" +
-      "\n\017next_page_token\030\002 \001(\t\"\210\001\n\026DeleteInstan" +
-      "cesRequest\022\'\n\021instance_group_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022-\n\024managed_instance_ids\030\002 \003(" +
-      "\tB\017\202\3101\003>=1\212\3101\004<=50\022\026\n\016create_another\030\003 \001" +
-      "(\010\"n\n\024StopInstancesRequest\022\'\n\021instance_g" +
-      "roup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022-\n\024managed_i" +
-      "nstance_ids\030\002 \003(\tB\017\202\3101\003>=1\212\3101\004<=50\"\250\001\n\"L" +
-      "istInstanceGroupOperationsRequest\022\'\n\021ins" +
-      "tance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpa" +
-      "ge_size\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030" +
-      "\003 \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<" +
-      "=1000\"u\n#ListInstanceGroupOperationsResp" +
-      "onse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud." +
-      "operation.Operation\022\027\n\017next_page_token\030\002" +
-      " \001(\t\"\240\001\n\"ListInstanceGroupLogRecordsRequ" +
-      "est\022\037\n\021instance_group_id\030\001 \001(\tB\004\350\3071\001\022\035\n\t" +
-      "page_size\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_toke" +
-      "n\030\003 \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101" +
-      "\006<=1000\"\205\001\n#ListInstanceGroupLogRecordsR" +
-      "esponse\022E\n\013log_records\030\001 \003(\01320.yandex.cl" +
-      "oud.compute.v1.instancegroup.LogRecord\022\027" +
-      "\n\017next_page_token\030\002 \001(\t*(\n\021InstanceGroup" +
-      "View\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\0012\224%\n\024InstanceGr" +
-      "oupService\022\263\001\n\003Get\022>.yandex.cloud.comput" +
-      "e.v1.instancegroup.GetInstanceGroupReque" +
-      "st\0324.yandex.cloud.compute.v1.instancegro" +
-      "up.InstanceGroup\"6\202\323\344\223\0020\022./compute/v1/in" +
-      "stanceGroups/{instance_group_id}\022\257\001\n\004Lis" +
-      "t\022@.yandex.cloud.compute.v1.instancegrou" +
-      "p.ListInstanceGroupsRequest\032A.yandex.clo" +
-      "ud.compute.v1.instancegroup.ListInstance" +
-      "GroupsResponse\"\"\202\323\344\223\002\034\022\032/compute/v1/inst" +
-      "anceGroups\022\305\001\n\006Create\022A.yandex.cloud.com" +
-      "pute.v1.instancegroup.CreateInstanceGrou" +
-      "pRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"U\202\323\344\223\002\037\"\032/compute/v1/instanceGroups:" +
-      "\001*\262\322*,\n\033CreateInstanceGroupMetadata\022\rIns" +
-      "tanceGroup\022\332\001\n\016CreateFromYaml\022I.yandex.c" +
-      "loud.compute.v1.instancegroup.CreateInst" +
-      "anceGroupFromYamlRequest\032!.yandex.cloud." +
-      "operation.Operation\"Z\202\323\344\223\002$\"\037/compute/v1" +
-      "/instanceGroups:yaml:\001*\262\322*,\n\033CreateInsta" +
-      "nceGroupMetadata\022\rInstanceGroup\022\331\001\n\006Upda" +
-      "te\022A.yandex.cloud.compute.v1.instancegro" +
-      "up.UpdateInstanceGroupRequest\032!.yandex.c" +
-      "loud.operation.Operation\"i\202\323\344\223\00232./compu" +
-      "te/v1/instanceGroups/{instance_group_id}" +
-      ":\001*\262\322*,\n\033UpdateInstanceGroupMetadata\022\rIn" +
-      "stanceGroup\022\356\001\n\016UpdateFromYaml\022I.yandex." +
-      "cloud.compute.v1.instancegroup.UpdateIns" +
-      "tanceGroupFromYamlRequest\032!.yandex.cloud" +
-      ".operation.Operation\"n\202\323\344\223\002823/compute/v" +
-      "1/instanceGroups/{instance_group_id}:yam" +
-      "l:\001*\262\322*,\n\033UpdateInstanceGroupMetadata\022\rI" +
-      "nstanceGroup\022\325\001\n\004Stop\022?.yandex.cloud.com" +
-      "pute.v1.instancegroup.StopInstanceGroupR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"i\202\323\344\223\0025\"3/compute/v1/instanceGroups/{i" +
-      "nstance_group_id}:stop\262\322**\n\031StopInstance" +
-      "GroupMetadata\022\rInstanceGroup\022\346\001\n\016Rolling" +
-      "Restart\022<.yandex.cloud.compute.v1.instan" +
-      "cegroup.RollingRestartRequest\032!.yandex.c" +
-      "loud.operation.Operation\"s\202\323\344\223\002B\"=/compu" +
-      "te/v1/instanceGroups/{instance_group_id}" +
-      ":rollingRestart:\001*\262\322*\'\n\026RollingRestartMe" +
-      "tadata\022\rInstanceGroup\022\352\001\n\017RollingRecreat" +
-      "e\022=.yandex.cloud.compute.v1.instancegrou" +
-      "p.RollingRecreateRequest\032!.yandex.cloud." +
-      "operation.Operation\"u\202\323\344\223\002C\">/compute/v1" +
-      "/instanceGroups/{instance_group_id}:roll" +
-      "ingRecreate:\001*\262\322*(\n\027RollingRecreateMetad" +
-      "ata\022\rInstanceGroup\022\331\001\n\005Start\022@.yandex.cl" +
-      "oud.compute.v1.instancegroup.StartInstan" +
-      "ceGroupRequest\032!.yandex.cloud.operation." +
-      "Operation\"k\202\323\344\223\0026\"4/compute/v1/instanceG" +
-      "roups/{instance_group_id}:start\262\322*+\n\032Sta" +
-      "rtInstanceGroupMetadata\022\rInstanceGroup\022\336" +
-      "\001\n\006Delete\022A.yandex.cloud.compute.v1.inst" +
-      "ancegroup.DeleteInstanceGroupRequest\032!.y" +
-      "andex.cloud.operation.Operation\"n\202\323\344\223\0020*" +
-      "./compute/v1/instanceGroups/{instance_gr" +
-      "oup_id}\262\322*4\n\033DeleteInstanceGroupMetadata" +
-      "\022\025google.protobuf.Empty\022\346\001\n\rListInstance" +
-      "s\022H.yandex.cloud.compute.v1.instancegrou" +
-      "p.ListInstanceGroupInstancesRequest\032I.ya" +
-      "ndex.cloud.compute.v1.instancegroup.List" +
-      "InstanceGroupInstancesResponse\"@\202\323\344\223\002:\0228" +
+      "50\"6\n\031StopInstanceGroupMetadata\022\031\n\021insta" +
+      "nce_group_id\030\001 \001(\t\"^\n\025RollingRestartRequ" +
+      "est\022\'\n\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022\034\n\024managed_instance_ids\030\002 \003(\t\"3\n\026Ro" +
+      "llingRestartMetadata\022\031\n\021instance_group_i" +
+      "d\030\001 \001(\t\"_\n\026RollingRecreateRequest\022\'\n\021ins" +
+      "tance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\034\n\024ma" +
+      "naged_instance_ids\030\002 \003(\t\"4\n\027RollingRecre" +
+      "ateMetadata\022\031\n\021instance_group_id\030\001 \001(\t\"E" +
+      "\n\032DeleteInstanceGroupRequest\022\'\n\021instance" +
+      "_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"8\n\033DeleteI" +
+      "nstanceGroupMetadata\022\031\n\021instance_group_i" +
+      "d\030\001 \001(\t\"4\n\027DeleteInstancesMetadata\022\031\n\021in" +
+      "stance_group_id\030\001 \001(\t\"2\n\025StopInstancesMe" +
+      "tadata\022\031\n\021instance_group_id\030\001 \001(\t\"\327\001\n\031Li" +
+      "stInstanceGroupsRequest\022\027\n\tfolder_id\030\001 \001" +
+      "(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022" +
+      "\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=1000\022\032\n\006filte" +
+      "r\030\004 \001(\tB\n\212\3101\006<=1000\022F\n\004view\030\005 \001(\01628.yand" +
+      "ex.cloud.compute.v1.instancegroup.Instan" +
+      "ceGroupView\"\204\001\n\032ListInstanceGroupsRespon" +
+      "se\022M\n\017instance_groups\030\001 \003(\01324.yandex.clo" +
+      "ud.compute.v1.instancegroup.InstanceGrou" +
+      "p\022\027\n\017next_page_token\030\002 \001(\t\"\247\001\n!ListInsta" +
+      "nceGroupInstancesRequest\022\'\n\021instance_gro" +
+      "up_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002" +
+      " \001(\003B\n\372\3071\006<=1000\022\036\n\npage_token\030\003 \001(\tB\n\212\310" +
+      "1\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"\210\001\n" +
+      "\"ListInstanceGroupInstancesResponse\022I\n\ti" +
+      "nstances\030\001 \003(\01326.yandex.cloud.compute.v1" +
+      ".instancegroup.ManagedInstance\022\027\n\017next_p" +
+      "age_token\030\002 \001(\t\"\210\001\n\026DeleteInstancesReque" +
+      "st\022\'\n\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022-\n\024managed_instance_ids\030\002 \003(\tB\017\202\3101\003>" +
+      "=1\212\3101\004<=50\022\026\n\016create_another\030\003 \001(\010\"n\n\024St" +
+      "opInstancesRequest\022\'\n\021instance_group_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022-\n\024managed_instance_" +
+      "ids\030\002 \003(\tB\017\202\3101\003>=1\212\3101\004<=50\"\250\001\n\"ListInsta" +
+      "nceGroupOperationsRequest\022\'\n\021instance_gr" +
+      "oup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030" +
+      "\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212" +
+      "\3101\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"u\n" +
+      "#ListInstanceGroupOperationsResponse\0225\n\n" +
+      "operations\030\001 \003(\0132!.yandex.cloud.operatio" +
+      "n.Operation\022\027\n\017next_page_token\030\002 \001(\t\"\240\001\n" +
+      "\"ListInstanceGroupLogRecordsRequest\022\037\n\021i" +
+      "nstance_group_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_siz" +
+      "e\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB" +
+      "\n\212\3101\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"" +
+      "\205\001\n#ListInstanceGroupLogRecordsResponse\022" +
+      "E\n\013log_records\030\001 \003(\01320.yandex.cloud.comp" +
+      "ute.v1.instancegroup.LogRecord\022\027\n\017next_p" +
+      "age_token\030\002 \001(\t\"\221\001\n\023DisableZonesRequest\022" +
+      "\'\n\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022\030\n\010zone_ids\030\002 \003(\tB\006\202\3101\002>0\0227\n\010duration\030\003" +
+      " \001(\0132\031.google.protobuf.DurationB\n\372\3071\0061m-" +
+      "72h\"1\n\024DisableZonesMetadata\022\031\n\021instance_" +
+      "group_id\030\001 \001(\t\"W\n\022EnableZonesRequest\022\'\n\021" +
+      "instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\030\n" +
+      "\010zone_ids\030\002 \003(\tB\006\202\3101\002>0\"0\n\023EnableZonesMe" +
+      "tadata\022\031\n\021instance_group_id\030\001 \001(\t*(\n\021Ins" +
+      "tanceGroupView\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\0012\307\'\n\024" +
+      "InstanceGroupService\022\263\001\n\003Get\022>.yandex.cl" +
+      "oud.compute.v1.instancegroup.GetInstance" +
+      "GroupRequest\0324.yandex.cloud.compute.v1.i" +
+      "nstancegroup.InstanceGroup\"6\202\323\344\223\0020\022./com" +
+      "pute/v1/instanceGroups/{instance_group_i" +
+      "d}\022\257\001\n\004List\022@.yandex.cloud.compute.v1.in" +
+      "stancegroup.ListInstanceGroupsRequest\032A." +
+      "yandex.cloud.compute.v1.instancegroup.Li" +
+      "stInstanceGroupsResponse\"\"\202\323\344\223\002\034\022\032/compu" +
+      "te/v1/instanceGroups\022\305\001\n\006Create\022A.yandex" +
+      ".cloud.compute.v1.instancegroup.CreateIn" +
+      "stanceGroupRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"U\202\323\344\223\002\037\"\032/compute/v1/insta" +
+      "nceGroups:\001*\262\322*,\n\033CreateInstanceGroupMet" +
+      "adata\022\rInstanceGroup\022\332\001\n\016CreateFromYaml\022" +
+      "I.yandex.cloud.compute.v1.instancegroup." +
+      "CreateInstanceGroupFromYamlRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"Z\202\323\344\223\002$\"\037/" +
+      "compute/v1/instanceGroups:yaml:\001*\262\322*,\n\033C" +
+      "reateInstanceGroupMetadata\022\rInstanceGrou" +
+      "p\022\331\001\n\006Update\022A.yandex.cloud.compute.v1.i" +
+      "nstancegroup.UpdateInstanceGroupRequest\032" +
+      "!.yandex.cloud.operation.Operation\"i\202\323\344\223" +
+      "\00232./compute/v1/instanceGroups/{instance" +
+      "_group_id}:\001*\262\322*,\n\033UpdateInstanceGroupMe" +
+      "tadata\022\rInstanceGroup\022\356\001\n\016UpdateFromYaml" +
+      "\022I.yandex.cloud.compute.v1.instancegroup" +
+      ".UpdateInstanceGroupFromYamlRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"n\202\323\344\223\002823" +
       "/compute/v1/instanceGroups/{instance_gro" +
-      "up_id}/instances\022\352\001\n\017DeleteInstances\022=.y" +
-      "andex.cloud.compute.v1.instancegroup.Del" +
-      "eteInstancesRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"u\202\323\344\223\002C\">/compute/v1/inst" +
-      "anceGroups/{instance_group_id}:deleteIns" +
-      "tances:\001*\262\322*(\n\027DeleteInstancesMetadata\022\r" +
-      "InstanceGroup\022\342\001\n\rStopInstances\022;.yandex" +
+      "up_id}:yaml:\001*\262\322*,\n\033UpdateInstanceGroupM" +
+      "etadata\022\rInstanceGroup\022\325\001\n\004Stop\022?.yandex" +
       ".cloud.compute.v1.instancegroup.StopInst" +
-      "ancesRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"q\202\323\344\223\002A\"</compute/v1/instanceGro" +
-      "ups/{instance_group_id}:stopInstances:\001*" +
-      "\262\322*&\n\025StopInstancesMetadata\022\rInstanceGro" +
-      "up\022\352\001\n\016ListOperations\022I.yandex.cloud.com" +
-      "pute.v1.instancegroup.ListInstanceGroupO" +
-      "perationsRequest\032J.yandex.cloud.compute." +
-      "v1.instancegroup.ListInstanceGroupOperat" +
-      "ionsResponse\"A\202\323\344\223\002;\0229/compute/v1/instan" +
-      "ceGroups/{instance_group_id}/operations\022" +
-      "\344\001\n\016ListLogRecords\022I.yandex.cloud.comput" +
-      "e.v1.instancegroup.ListInstanceGroupLogR" +
-      "ecordsRequest\032J.yandex.cloud.compute.v1." +
-      "instancegroup.ListInstanceGroupLogRecord" +
-      "sResponse\";\202\323\344\223\0025\0223/compute/v1/instanceG" +
-      "roups/{instance_group_id}:logs\022\272\001\n\022ListA" +
-      "ccessBindings\022..yandex.cloud.access.List" +
-      "AccessBindingsRequest\032/.yandex.cloud.acc" +
-      "ess.ListAccessBindingsResponse\"C\202\323\344\223\002=\022;" +
-      "/compute/v1/instanceGroups/{resource_id}" +
-      ":listAccessBindings\022\352\001\n\021SetAccessBinding" +
-      "s\022-.yandex.cloud.access.SetAccessBinding" +
-      "sRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"\202\001\202\323\344\223\002?\":/compute/v1/instanceGroups" +
-      "/{resource_id}:setAccessBindings:\001*\262\322*9\n" +
-      " access.SetAccessBindingsMetadata\022\025googl" +
-      "e.protobuf.Empty\022\366\001\n\024UpdateAccessBinding" +
-      "s\0220.yandex.cloud.access.UpdateAccessBind" +
-      "ingsRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"\210\001\202\323\344\223\002B\"=/compute/v1/instanceGro" +
-      "ups/{resource_id}:updateAccessBindings:\001" +
-      "*\262\322*<\n#access.UpdateAccessBindingsMetada" +
-      "ta\022\025google.protobuf.Empty\022\203\002\n\017ResumeProc" +
-      "esses\022J.yandex.cloud.compute.v1.instance" +
-      "group.ResumeInstanceGroupProcessesReques" +
-      "t\032!.yandex.cloud.operation.Operation\"\200\001\202" +
-      "\323\344\223\002C\">/compute/v1/instanceGroups/{insta" +
-      "nce_group_id}:resumeProcesses:\001*\262\322*3\n\"Re" +
-      "sumeInstanceGroupProcessMetadata\022\rInstan" +
-      "ceGroup\022\376\001\n\016PauseProcesses\022I.yandex.clou" +
-      "d.compute.v1.instancegroup.PauseInstance" +
-      "GroupProcessesRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"~\202\323\344\223\002B\"=/compute/v1/in" +
-      "stanceGroups/{instance_group_id}:pausePr" +
-      "ocesses:\001*\262\322*2\n!PauseInstanceGroupProces" +
-      "sMetadata\022\rInstanceGroupB\204\001\n)yandex.clou" +
-      "d.api.compute.v1.instancegroupZWgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/compute/v1/instancegroup;instancegroupb" +
-      "\006proto3"
+      "anceGroupRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"i\202\323\344\223\0025\"3/compute/v1/instanc" +
+      "eGroups/{instance_group_id}:stop\262\322**\n\031St" +
+      "opInstanceGroupMetadata\022\rInstanceGroup\022\346" +
+      "\001\n\016RollingRestart\022<.yandex.cloud.compute" +
+      ".v1.instancegroup.RollingRestartRequest\032" +
+      "!.yandex.cloud.operation.Operation\"s\202\323\344\223" +
+      "\002B\"=/compute/v1/instanceGroups/{instance" +
+      "_group_id}:rollingRestart:\001*\262\322*\'\n\026Rollin" +
+      "gRestartMetadata\022\rInstanceGroup\022\352\001\n\017Roll" +
+      "ingRecreate\022=.yandex.cloud.compute.v1.in" +
+      "stancegroup.RollingRecreateRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"u\202\323\344\223\002C\">/" +
+      "compute/v1/instanceGroups/{instance_grou" +
+      "p_id}:rollingRecreate:\001*\262\322*(\n\027RollingRec" +
+      "reateMetadata\022\rInstanceGroup\022\331\001\n\005Start\022@" +
+      ".yandex.cloud.compute.v1.instancegroup.S" +
+      "tartInstanceGroupRequest\032!.yandex.cloud." +
+      "operation.Operation\"k\202\323\344\223\0026\"4/compute/v1" +
+      "/instanceGroups/{instance_group_id}:star" +
+      "t\262\322*+\n\032StartInstanceGroupMetadata\022\rInsta" +
+      "nceGroup\022\336\001\n\006Delete\022A.yandex.cloud.compu" +
+      "te.v1.instancegroup.DeleteInstanceGroupR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"n\202\323\344\223\0020*./compute/v1/instanceGroups/{i" +
+      "nstance_group_id}\262\322*4\n\033DeleteInstanceGro" +
+      "upMetadata\022\025google.protobuf.Empty\022\346\001\n\rLi" +
+      "stInstances\022H.yandex.cloud.compute.v1.in" +
+      "stancegroup.ListInstanceGroupInstancesRe" +
+      "quest\032I.yandex.cloud.compute.v1.instance" +
+      "group.ListInstanceGroupInstancesResponse" +
+      "\"@\202\323\344\223\002:\0228/compute/v1/instanceGroups/{in" +
+      "stance_group_id}/instances\022\352\001\n\017DeleteIns" +
+      "tances\022=.yandex.cloud.compute.v1.instanc" +
+      "egroup.DeleteInstancesRequest\032!.yandex.c" +
+      "loud.operation.Operation\"u\202\323\344\223\002C\">/compu" +
+      "te/v1/instanceGroups/{instance_group_id}" +
+      ":deleteInstances:\001*\262\322*(\n\027DeleteInstances" +
+      "Metadata\022\rInstanceGroup\022\342\001\n\rStopInstance" +
+      "s\022;.yandex.cloud.compute.v1.instancegrou" +
+      "p.StopInstancesRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"q\202\323\344\223\002A\"</compute/v1/i" +
+      "nstanceGroups/{instance_group_id}:stopIn" +
+      "stances:\001*\262\322*&\n\025StopInstancesMetadata\022\rI" +
+      "nstanceGroup\022\352\001\n\016ListOperations\022I.yandex" +
+      ".cloud.compute.v1.instancegroup.ListInst" +
+      "anceGroupOperationsRequest\032J.yandex.clou" +
+      "d.compute.v1.instancegroup.ListInstanceG" +
+      "roupOperationsResponse\"A\202\323\344\223\002;\0229/compute" +
+      "/v1/instanceGroups/{instance_group_id}/o" +
+      "perations\022\344\001\n\016ListLogRecords\022I.yandex.cl" +
+      "oud.compute.v1.instancegroup.ListInstanc" +
+      "eGroupLogRecordsRequest\032J.yandex.cloud.c" +
+      "ompute.v1.instancegroup.ListInstanceGrou" +
+      "pLogRecordsResponse\";\202\323\344\223\0025\0223/compute/v1" +
+      "/instanceGroups/{instance_group_id}:logs" +
+      "\022\272\001\n\022ListAccessBindings\022..yandex.cloud.a" +
+      "ccess.ListAccessBindingsRequest\032/.yandex" +
+      ".cloud.access.ListAccessBindingsResponse" +
+      "\"C\202\323\344\223\002=\022;/compute/v1/instanceGroups/{re" +
+      "source_id}:listAccessBindings\022\352\001\n\021SetAcc" +
+      "essBindings\022-.yandex.cloud.access.SetAcc" +
+      "essBindingsRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"\202\001\202\323\344\223\002?\":/compute/v1/inst" +
+      "anceGroups/{resource_id}:setAccessBindin" +
+      "gs:\001*\262\322*9\n access.SetAccessBindingsMetad" +
+      "ata\022\025google.protobuf.Empty\022\366\001\n\024UpdateAcc" +
+      "essBindings\0220.yandex.cloud.access.Update" +
+      "AccessBindingsRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"\210\001\202\323\344\223\002B\"=/compute/v1/i" +
+      "nstanceGroups/{resource_id}:updateAccess" +
+      "Bindings:\001*\262\322*<\n#access.UpdateAccessBind" +
+      "ingsMetadata\022\025google.protobuf.Empty\022\203\002\n\017" +
+      "ResumeProcesses\022J.yandex.cloud.compute.v" +
+      "1.instancegroup.ResumeInstanceGroupProce" +
+      "ssesRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"\200\001\202\323\344\223\002C\">/compute/v1/instanceGro" +
+      "ups/{instance_group_id}:resumeProcesses:" +
+      "\001*\262\322*3\n\"ResumeInstanceGroupProcessMetada" +
+      "ta\022\rInstanceGroup\022\376\001\n\016PauseProcesses\022I.y" +
+      "andex.cloud.compute.v1.instancegroup.Pau" +
+      "seInstanceGroupProcessesRequest\032!.yandex" +
+      ".cloud.operation.Operation\"~\202\323\344\223\002B\"=/com" +
+      "pute/v1/instanceGroups/{instance_group_i" +
+      "d}:pauseProcesses:\001*\262\322*2\n!PauseInstanceG" +
+      "roupProcessMetadata\022\rInstanceGroup\022\230\001\n\014D" +
+      "isableZones\022:.yandex.cloud.compute.v1.in" +
+      "stancegroup.DisableZonesRequest\032!.yandex" +
+      ".cloud.operation.Operation\")\262\322*%\n\024Disabl" +
+      "eZonesMetadata\022\rInstanceGroup\022\225\001\n\013Enable" +
+      "Zones\0229.yandex.cloud.compute.v1.instance" +
+      "group.EnableZonesRequest\032!.yandex.cloud." +
+      "operation.Operation\"(\262\322*$\n\023EnableZonesMe" +
+      "tadata\022\rInstanceGroupB\204\001\n)yandex.cloud.a" +
+      "pi.compute.v1.instancegroupZWgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/co" +
+      "mpute/v1/instancegroup;instancegroupb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
@@ -34527,6 +37835,30 @@ public final class InstanceGroupServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupLogRecordsResponse_descriptor,
         new java.lang.String[] { "LogRecords", "NextPageToken", });
+    internal_static_yandex_cloud_compute_v1_instancegroup_DisableZonesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(33);
+    internal_static_yandex_cloud_compute_v1_instancegroup_DisableZonesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_instancegroup_DisableZonesRequest_descriptor,
+        new java.lang.String[] { "InstanceGroupId", "ZoneIds", "Duration", });
+    internal_static_yandex_cloud_compute_v1_instancegroup_DisableZonesMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(34);
+    internal_static_yandex_cloud_compute_v1_instancegroup_DisableZonesMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_instancegroup_DisableZonesMetadata_descriptor,
+        new java.lang.String[] { "InstanceGroupId", });
+    internal_static_yandex_cloud_compute_v1_instancegroup_EnableZonesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(35);
+    internal_static_yandex_cloud_compute_v1_instancegroup_EnableZonesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_instancegroup_EnableZonesRequest_descriptor,
+        new java.lang.String[] { "InstanceGroupId", "ZoneIds", });
+    internal_static_yandex_cloud_compute_v1_instancegroup_EnableZonesMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(36);
+    internal_static_yandex_cloud_compute_v1_instancegroup_EnableZonesMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_instancegroup_EnableZonesMetadata_descriptor,
+        new java.lang.String[] { "InstanceGroupId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -34540,6 +37872,7 @@ public final class InstanceGroupServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();

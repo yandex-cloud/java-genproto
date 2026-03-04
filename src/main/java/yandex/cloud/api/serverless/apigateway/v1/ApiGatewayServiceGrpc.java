@@ -173,6 +173,68 @@ public final class ApiGatewayServiceGrpc {
     return getDeleteMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ResumeApiGatewayRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getResumeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Resume",
+      requestType = yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ResumeApiGatewayRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ResumeApiGatewayRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getResumeMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ResumeApiGatewayRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getResumeMethod;
+    if ((getResumeMethod = ApiGatewayServiceGrpc.getResumeMethod) == null) {
+      synchronized (ApiGatewayServiceGrpc.class) {
+        if ((getResumeMethod = ApiGatewayServiceGrpc.getResumeMethod) == null) {
+          ApiGatewayServiceGrpc.getResumeMethod = getResumeMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ResumeApiGatewayRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Resume"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ResumeApiGatewayRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ApiGatewayServiceMethodDescriptorSupplier("Resume"))
+              .build();
+        }
+      }
+    }
+    return getResumeMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.StopApiGatewayRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getStopMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Stop",
+      requestType = yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.StopApiGatewayRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.StopApiGatewayRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getStopMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.StopApiGatewayRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getStopMethod;
+    if ((getStopMethod = ApiGatewayServiceGrpc.getStopMethod) == null) {
+      synchronized (ApiGatewayServiceGrpc.class) {
+        if ((getStopMethod = ApiGatewayServiceGrpc.getStopMethod) == null) {
+          ApiGatewayServiceGrpc.getStopMethod = getStopMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.StopApiGatewayRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Stop"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.StopApiGatewayRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ApiGatewayServiceMethodDescriptorSupplier("Stop"))
+              .build();
+        }
+      }
+    }
+    return getStopMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getAddDomainMethod;
 
@@ -495,6 +557,26 @@ public final class ApiGatewayServiceGrpc {
 
     /**
      * <pre>
+     * Resumes the specified API gateway.
+     * </pre>
+     */
+    public void resume(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ResumeApiGatewayRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResumeMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Stops the specified API gateway.
+     * </pre>
+     */
+    public void stop(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.StopApiGatewayRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStopMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Attaches domain to the specified API gateway.
      * </pre>
      */
@@ -600,6 +682,20 @@ public final class ApiGatewayServiceGrpc {
                 yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.DeleteApiGatewayRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
+          .addMethod(
+            getResumeMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ResumeApiGatewayRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_RESUME)))
+          .addMethod(
+            getStopMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.StopApiGatewayRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_STOP)))
           .addMethod(
             getAddDomainMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -725,6 +821,28 @@ public final class ApiGatewayServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Resumes the specified API gateway.
+     * </pre>
+     */
+    public void resume(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ResumeApiGatewayRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getResumeMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Stops the specified API gateway.
+     * </pre>
+     */
+    public void stop(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.StopApiGatewayRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getStopMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -876,6 +994,26 @@ public final class ApiGatewayServiceGrpc {
 
     /**
      * <pre>
+     * Resumes the specified API gateway.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation resume(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ResumeApiGatewayRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getResumeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Stops the specified API gateway.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation stop(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.StopApiGatewayRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getStopMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Attaches domain to the specified API gateway.
      * </pre>
      */
@@ -1021,6 +1159,28 @@ public final class ApiGatewayServiceGrpc {
 
     /**
      * <pre>
+     * Resumes the specified API gateway.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> resume(
+        yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ResumeApiGatewayRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getResumeMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Stops the specified API gateway.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> stop(
+        yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.StopApiGatewayRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getStopMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Attaches domain to the specified API gateway.
      * </pre>
      */
@@ -1102,13 +1262,15 @@ public final class ApiGatewayServiceGrpc {
   private static final int METHODID_CREATE = 2;
   private static final int METHODID_UPDATE = 3;
   private static final int METHODID_DELETE = 4;
-  private static final int METHODID_ADD_DOMAIN = 5;
-  private static final int METHODID_REMOVE_DOMAIN = 6;
-  private static final int METHODID_GET_OPENAPI_SPEC = 7;
-  private static final int METHODID_LIST_OPERATIONS = 8;
-  private static final int METHODID_LIST_ACCESS_BINDINGS = 9;
-  private static final int METHODID_SET_ACCESS_BINDINGS = 10;
-  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 11;
+  private static final int METHODID_RESUME = 5;
+  private static final int METHODID_STOP = 6;
+  private static final int METHODID_ADD_DOMAIN = 7;
+  private static final int METHODID_REMOVE_DOMAIN = 8;
+  private static final int METHODID_GET_OPENAPI_SPEC = 9;
+  private static final int METHODID_LIST_OPERATIONS = 10;
+  private static final int METHODID_LIST_ACCESS_BINDINGS = 11;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 12;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 13;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1145,6 +1307,14 @@ public final class ApiGatewayServiceGrpc {
           break;
         case METHODID_DELETE:
           serviceImpl.delete((yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.DeleteApiGatewayRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_RESUME:
+          serviceImpl.resume((yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.ResumeApiGatewayRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_STOP:
+          serviceImpl.stop((yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.StopApiGatewayRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_ADD_DOMAIN:
@@ -1241,6 +1411,8 @@ public final class ApiGatewayServiceGrpc {
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
+              .addMethod(getResumeMethod())
+              .addMethod(getStopMethod())
               .addMethod(getAddDomainMethod())
               .addMethod(getRemoveDomainMethod())
               .addMethod(getGetOpenapiSpecMethod())

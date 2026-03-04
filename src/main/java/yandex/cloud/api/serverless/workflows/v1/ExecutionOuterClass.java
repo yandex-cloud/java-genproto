@@ -376,6 +376,10 @@ public final class ExecutionOuterClass {
     }
 
     /**
+     * <pre>
+     * Workflow execution status.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.serverless.workflows.v1.Execution.Status}
      */
     public enum Status
@@ -3955,6 +3959,33 @@ public final class ExecutionOuterClass {
     com.google.protobuf.ByteString
         getInputJsonBytes();
 
+    /**
+     * <pre>
+     * Input value for the Workflow execution.
+     * </pre>
+     *
+     * <code>.google.protobuf.Value input_value = 2;</code>
+     * @return Whether the inputValue field is set.
+     */
+    boolean hasInputValue();
+    /**
+     * <pre>
+     * Input value for the Workflow execution.
+     * </pre>
+     *
+     * <code>.google.protobuf.Value input_value = 2;</code>
+     * @return The inputValue.
+     */
+    com.google.protobuf.Value getInputValue();
+    /**
+     * <pre>
+     * Input value for the Workflow execution.
+     * </pre>
+     *
+     * <code>.google.protobuf.Value input_value = 2;</code>
+     */
+    com.google.protobuf.ValueOrBuilder getInputValueOrBuilder();
+
     public yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.ExecutionInput.InputCase getInputCase();
   }
   /**
@@ -4008,6 +4039,20 @@ public final class ExecutionOuterClass {
               input_ = s;
               break;
             }
+            case 18: {
+              com.google.protobuf.Value.Builder subBuilder = null;
+              if (inputCase_ == 2) {
+                subBuilder = ((com.google.protobuf.Value) input_).toBuilder();
+              }
+              input_ =
+                  input.readMessage(com.google.protobuf.Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.google.protobuf.Value) input_);
+                input_ = subBuilder.buildPartial();
+              }
+              inputCase_ = 2;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4046,6 +4091,7 @@ public final class ExecutionOuterClass {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       INPUT_JSON(1),
+      INPUT_VALUE(2),
       INPUT_NOT_SET(0);
       private final int value;
       private InputCase(int value) {
@@ -4064,6 +4110,7 @@ public final class ExecutionOuterClass {
       public static InputCase forNumber(int value) {
         switch (value) {
           case 1: return INPUT_JSON;
+          case 2: return INPUT_VALUE;
           case 0: return INPUT_NOT_SET;
           default: return null;
         }
@@ -4143,6 +4190,49 @@ public final class ExecutionOuterClass {
       }
     }
 
+    public static final int INPUT_VALUE_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Input value for the Workflow execution.
+     * </pre>
+     *
+     * <code>.google.protobuf.Value input_value = 2;</code>
+     * @return Whether the inputValue field is set.
+     */
+    @java.lang.Override
+    public boolean hasInputValue() {
+      return inputCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Input value for the Workflow execution.
+     * </pre>
+     *
+     * <code>.google.protobuf.Value input_value = 2;</code>
+     * @return The inputValue.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Value getInputValue() {
+      if (inputCase_ == 2) {
+         return (com.google.protobuf.Value) input_;
+      }
+      return com.google.protobuf.Value.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Input value for the Workflow execution.
+     * </pre>
+     *
+     * <code>.google.protobuf.Value input_value = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ValueOrBuilder getInputValueOrBuilder() {
+      if (inputCase_ == 2) {
+         return (com.google.protobuf.Value) input_;
+      }
+      return com.google.protobuf.Value.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4160,6 +4250,9 @@ public final class ExecutionOuterClass {
       if (inputCase_ == 1) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, input_);
       }
+      if (inputCase_ == 2) {
+        output.writeMessage(2, (com.google.protobuf.Value) input_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4171,6 +4264,10 @@ public final class ExecutionOuterClass {
       size = 0;
       if (inputCase_ == 1) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, input_);
+      }
+      if (inputCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.google.protobuf.Value) input_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4193,6 +4290,10 @@ public final class ExecutionOuterClass {
           if (!getInputJson()
               .equals(other.getInputJson())) return false;
           break;
+        case 2:
+          if (!getInputValue()
+              .equals(other.getInputValue())) return false;
+          break;
         case 0:
         default:
       }
@@ -4211,6 +4312,10 @@ public final class ExecutionOuterClass {
         case 1:
           hash = (37 * hash) + INPUT_JSON_FIELD_NUMBER;
           hash = (53 * hash) + getInputJson().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + INPUT_VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getInputValue().hashCode();
           break;
         case 0:
         default:
@@ -4379,6 +4484,13 @@ public final class ExecutionOuterClass {
         if (inputCase_ == 1) {
           result.input_ = input_;
         }
+        if (inputCase_ == 2) {
+          if (inputValueBuilder_ == null) {
+            result.input_ = input_;
+          } else {
+            result.input_ = inputValueBuilder_.build();
+          }
+        }
         result.inputCase_ = inputCase_;
         onBuilt();
         return result;
@@ -4433,6 +4545,10 @@ public final class ExecutionOuterClass {
             inputCase_ = 1;
             input_ = other.input_;
             onChanged();
+            break;
+          }
+          case INPUT_VALUE: {
+            mergeInputValue(other.getInputValue());
             break;
           }
           case INPUT_NOT_SET: {
@@ -4602,6 +4718,183 @@ public final class ExecutionOuterClass {
         input_ = value;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Value, com.google.protobuf.Value.Builder, com.google.protobuf.ValueOrBuilder> inputValueBuilder_;
+      /**
+       * <pre>
+       * Input value for the Workflow execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Value input_value = 2;</code>
+       * @return Whether the inputValue field is set.
+       */
+      @java.lang.Override
+      public boolean hasInputValue() {
+        return inputCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Input value for the Workflow execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Value input_value = 2;</code>
+       * @return The inputValue.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Value getInputValue() {
+        if (inputValueBuilder_ == null) {
+          if (inputCase_ == 2) {
+            return (com.google.protobuf.Value) input_;
+          }
+          return com.google.protobuf.Value.getDefaultInstance();
+        } else {
+          if (inputCase_ == 2) {
+            return inputValueBuilder_.getMessage();
+          }
+          return com.google.protobuf.Value.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Input value for the Workflow execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Value input_value = 2;</code>
+       */
+      public Builder setInputValue(com.google.protobuf.Value value) {
+        if (inputValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          input_ = value;
+          onChanged();
+        } else {
+          inputValueBuilder_.setMessage(value);
+        }
+        inputCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Input value for the Workflow execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Value input_value = 2;</code>
+       */
+      public Builder setInputValue(
+          com.google.protobuf.Value.Builder builderForValue) {
+        if (inputValueBuilder_ == null) {
+          input_ = builderForValue.build();
+          onChanged();
+        } else {
+          inputValueBuilder_.setMessage(builderForValue.build());
+        }
+        inputCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Input value for the Workflow execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Value input_value = 2;</code>
+       */
+      public Builder mergeInputValue(com.google.protobuf.Value value) {
+        if (inputValueBuilder_ == null) {
+          if (inputCase_ == 2 &&
+              input_ != com.google.protobuf.Value.getDefaultInstance()) {
+            input_ = com.google.protobuf.Value.newBuilder((com.google.protobuf.Value) input_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            input_ = value;
+          }
+          onChanged();
+        } else {
+          if (inputCase_ == 2) {
+            inputValueBuilder_.mergeFrom(value);
+          }
+          inputValueBuilder_.setMessage(value);
+        }
+        inputCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Input value for the Workflow execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Value input_value = 2;</code>
+       */
+      public Builder clearInputValue() {
+        if (inputValueBuilder_ == null) {
+          if (inputCase_ == 2) {
+            inputCase_ = 0;
+            input_ = null;
+            onChanged();
+          }
+        } else {
+          if (inputCase_ == 2) {
+            inputCase_ = 0;
+            input_ = null;
+          }
+          inputValueBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Input value for the Workflow execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Value input_value = 2;</code>
+       */
+      public com.google.protobuf.Value.Builder getInputValueBuilder() {
+        return getInputValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Input value for the Workflow execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Value input_value = 2;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ValueOrBuilder getInputValueOrBuilder() {
+        if ((inputCase_ == 2) && (inputValueBuilder_ != null)) {
+          return inputValueBuilder_.getMessageOrBuilder();
+        } else {
+          if (inputCase_ == 2) {
+            return (com.google.protobuf.Value) input_;
+          }
+          return com.google.protobuf.Value.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Input value for the Workflow execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Value input_value = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Value, com.google.protobuf.Value.Builder, com.google.protobuf.ValueOrBuilder> 
+          getInputValueFieldBuilder() {
+        if (inputValueBuilder_ == null) {
+          if (!(inputCase_ == 2)) {
+            input_ = com.google.protobuf.Value.getDefaultInstance();
+          }
+          inputValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Value, com.google.protobuf.Value.Builder, com.google.protobuf.ValueOrBuilder>(
+                  (com.google.protobuf.Value) input_,
+                  getParentForChildren(),
+                  isClean());
+          input_ = null;
+        }
+        inputCase_ = 2;
+        onChanged();;
+        return inputValueBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6217,41 +6510,44 @@ public final class ExecutionOuterClass {
       "\n4yandex/cloud/serverless/workflows/v1/e" +
       "xecution.proto\022$yandex.cloud.serverless." +
       "workflows.v1\032\036google/protobuf/duration.p" +
-      "roto\032\037google/protobuf/timestamp.proto\032\035y" +
-      "andex/cloud/validation.proto\"\226\004\n\tExecuti" +
-      "on\022\n\n\002id\030\001 \001(\t\022\023\n\013workflow_id\030\002 \001(\t\022C\n\005i" +
-      "nput\030\004 \001(\01324.yandex.cloud.serverless.wor" +
-      "kflows.v1.ExecutionInput\022E\n\006result\030\005 \001(\013" +
-      "25.yandex.cloud.serverless.workflows.v1." +
-      "ExecutionResult\022C\n\005error\030\006 \001(\01324.yandex." +
-      "cloud.serverless.workflows.v1.ExecutionE" +
-      "rror\022F\n\006status\030\007 \001(\01626.yandex.cloud.serv" +
-      "erless.workflows.v1.Execution.Status\022.\n\n" +
-      "started_at\030\010 \001(\0132\032.google.protobuf.Times" +
-      "tamp\022+\n\010duration\030\t \001(\0132\031.google.protobuf" +
-      ".Duration\"l\n\006Status\022\026\n\022STATUS_UNSPECIFIE" +
-      "D\020\000\022\n\n\006QUEUED\020\001\022\013\n\007RUNNING\020\002\022\n\n\006PAUSED\020\003" +
-      "\022\013\n\007STOPPED\020\004\022\n\n\006FAILED\020\005\022\014\n\010FINISHED\020\006J" +
-      "\004\010\003\020\004\"\336\001\n\020ExecutionPreview\022\n\n\002id\030\001 \001(\t\022\023" +
-      "\n\013workflow_id\030\002 \001(\t\022F\n\006status\030\004 \001(\01626.ya" +
-      "ndex.cloud.serverless.workflows.v1.Execu" +
-      "tion.Status\022.\n\nstarted_at\030\005 \001(\0132\032.google" +
-      ".protobuf.Timestamp\022+\n\010duration\030\006 \001(\0132\031." +
-      "google.protobuf.DurationJ\004\010\003\020\004\"5\n\016Execut" +
-      "ionInput\022\024\n\ninput_json\030\001 \001(\tH\000B\r\n\005input\022" +
-      "\004\300\3011\001\"8\n\017ExecutionResult\022\025\n\013result_json\030" +
-      "\001 \001(\tH\000B\016\n\006result\022\004\300\3011\001\"5\n\016ExecutionErro" +
-      "r\022\017\n\007message\030\001 \001(\t\022\022\n\nerror_code\030\002 \001(\tB~" +
-      "\n(yandex.cloud.api.serverless.workflows." +
-      "v1ZRgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/serverless/workflows/v1;wor" +
-      "kflowsb\006proto3"
+      "roto\032\037google/protobuf/timestamp.proto\032\034g" +
+      "oogle/protobuf/struct.proto\032\035yandex/clou" +
+      "d/validation.proto\"\226\004\n\tExecution\022\n\n\002id\030\001" +
+      " \001(\t\022\023\n\013workflow_id\030\002 \001(\t\022C\n\005input\030\004 \001(\013" +
+      "24.yandex.cloud.serverless.workflows.v1." +
+      "ExecutionInput\022E\n\006result\030\005 \001(\01325.yandex." +
+      "cloud.serverless.workflows.v1.ExecutionR" +
+      "esult\022C\n\005error\030\006 \001(\01324.yandex.cloud.serv" +
+      "erless.workflows.v1.ExecutionError\022F\n\006st" +
+      "atus\030\007 \001(\01626.yandex.cloud.serverless.wor" +
+      "kflows.v1.Execution.Status\022.\n\nstarted_at" +
+      "\030\010 \001(\0132\032.google.protobuf.Timestamp\022+\n\010du" +
+      "ration\030\t \001(\0132\031.google.protobuf.Duration\"" +
+      "l\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\n\n\006QUE" +
+      "UED\020\001\022\013\n\007RUNNING\020\002\022\n\n\006PAUSED\020\003\022\013\n\007STOPPE" +
+      "D\020\004\022\n\n\006FAILED\020\005\022\014\n\010FINISHED\020\006J\004\010\003\020\004\"\336\001\n\020" +
+      "ExecutionPreview\022\n\n\002id\030\001 \001(\t\022\023\n\013workflow" +
+      "_id\030\002 \001(\t\022F\n\006status\030\004 \001(\01626.yandex.cloud" +
+      ".serverless.workflows.v1.Execution.Statu" +
+      "s\022.\n\nstarted_at\030\005 \001(\0132\032.google.protobuf." +
+      "Timestamp\022+\n\010duration\030\006 \001(\0132\031.google.pro" +
+      "tobuf.DurationJ\004\010\003\020\004\"d\n\016ExecutionInput\022\024" +
+      "\n\ninput_json\030\001 \001(\tH\000\022-\n\013input_value\030\002 \001(" +
+      "\0132\026.google.protobuf.ValueH\000B\r\n\005input\022\004\300\301" +
+      "1\001\"8\n\017ExecutionResult\022\025\n\013result_json\030\001 \001" +
+      "(\tH\000B\016\n\006result\022\004\300\3011\001\"5\n\016ExecutionError\022\017" +
+      "\n\007message\030\001 \001(\t\022\022\n\nerror_code\030\002 \001(\tB~\n(y" +
+      "andex.cloud.api.serverless.workflows.v1Z" +
+      "Rgithub.com/yandex-cloud/go-genproto/yan" +
+      "dex/cloud/serverless/workflows/v1;workfl" +
+      "owsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.StructProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_serverless_workflows_v1_Execution_descriptor =
@@ -6271,7 +6567,7 @@ public final class ExecutionOuterClass {
     internal_static_yandex_cloud_serverless_workflows_v1_ExecutionInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_workflows_v1_ExecutionInput_descriptor,
-        new java.lang.String[] { "InputJson", "Input", });
+        new java.lang.String[] { "InputJson", "InputValue", "Input", });
     internal_static_yandex_cloud_serverless_workflows_v1_ExecutionResult_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_serverless_workflows_v1_ExecutionResult_fieldAccessorTable = new
@@ -6291,6 +6587,7 @@ public final class ExecutionOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.StructProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

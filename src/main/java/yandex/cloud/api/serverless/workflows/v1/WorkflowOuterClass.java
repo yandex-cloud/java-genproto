@@ -328,6 +328,36 @@ public final class WorkflowOuterClass {
      * <code>.yandex.cloud.serverless.workflows.v1.WorkflowSchedule schedule = 13;</code>
      */
     yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowScheduleOrBuilder getScheduleOrBuilder();
+
+    /**
+     * <pre>
+     * Ability of the Workflow to be executed without authentication.
+     * </pre>
+     *
+     * <code>bool is_public = 14;</code>
+     * @return The isPublic.
+     */
+    boolean getIsPublic();
+
+    /**
+     * <pre>
+     * Execution URL of the Workflow.
+     * </pre>
+     *
+     * <code>string execution_url = 15;</code>
+     * @return The executionUrl.
+     */
+    java.lang.String getExecutionUrl();
+    /**
+     * <pre>
+     * Execution URL of the Workflow.
+     * </pre>
+     *
+     * <code>string execution_url = 15;</code>
+     * @return The bytes for executionUrl.
+     */
+    com.google.protobuf.ByteString
+        getExecutionUrlBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.workflows.v1.Workflow}
@@ -349,6 +379,7 @@ public final class WorkflowOuterClass {
       status_ = 0;
       networkId_ = "";
       serviceAccountId_ = "";
+      executionUrl_ = "";
     }
 
     @java.lang.Override
@@ -492,6 +523,17 @@ public final class WorkflowOuterClass {
                 schedule_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 112: {
+
+              isPublic_ = input.readBool();
+              break;
+            }
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              executionUrl_ = s;
               break;
             }
             default: {
@@ -1289,6 +1331,67 @@ public final class WorkflowOuterClass {
       return getSchedule();
     }
 
+    public static final int IS_PUBLIC_FIELD_NUMBER = 14;
+    private boolean isPublic_;
+    /**
+     * <pre>
+     * Ability of the Workflow to be executed without authentication.
+     * </pre>
+     *
+     * <code>bool is_public = 14;</code>
+     * @return The isPublic.
+     */
+    @java.lang.Override
+    public boolean getIsPublic() {
+      return isPublic_;
+    }
+
+    public static final int EXECUTION_URL_FIELD_NUMBER = 15;
+    private volatile java.lang.Object executionUrl_;
+    /**
+     * <pre>
+     * Execution URL of the Workflow.
+     * </pre>
+     *
+     * <code>string execution_url = 15;</code>
+     * @return The executionUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getExecutionUrl() {
+      java.lang.Object ref = executionUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        executionUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Execution URL of the Workflow.
+     * </pre>
+     *
+     * <code>string execution_url = 15;</code>
+     * @return The bytes for executionUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExecutionUrlBytes() {
+      java.lang.Object ref = executionUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        executionUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1344,6 +1447,12 @@ public final class WorkflowOuterClass {
       }
       if (schedule_ != null) {
         output.writeMessage(13, getSchedule());
+      }
+      if (isPublic_ != false) {
+        output.writeBool(14, isPublic_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(executionUrl_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, executionUrl_);
       }
       unknownFields.writeTo(output);
     }
@@ -1406,6 +1515,13 @@ public final class WorkflowOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getSchedule());
       }
+      if (isPublic_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(14, isPublic_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(executionUrl_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, executionUrl_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1458,6 +1574,10 @@ public final class WorkflowOuterClass {
         if (!getSchedule()
             .equals(other.getSchedule())) return false;
       }
+      if (getIsPublic()
+          != other.getIsPublic()) return false;
+      if (!getExecutionUrl()
+          .equals(other.getExecutionUrl())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1506,6 +1626,11 @@ public final class WorkflowOuterClass {
         hash = (37 * hash) + SCHEDULE_FIELD_NUMBER;
         hash = (53 * hash) + getSchedule().hashCode();
       }
+      hash = (37 * hash) + IS_PUBLIC_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsPublic());
+      hash = (37 * hash) + EXECUTION_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getExecutionUrl().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1702,6 +1827,10 @@ public final class WorkflowOuterClass {
           schedule_ = null;
           scheduleBuilder_ = null;
         }
+        isPublic_ = false;
+
+        executionUrl_ = "";
+
         return this;
       }
 
@@ -1759,6 +1888,8 @@ public final class WorkflowOuterClass {
         } else {
           result.schedule_ = scheduleBuilder_.build();
         }
+        result.isPublic_ = isPublic_;
+        result.executionUrl_ = executionUrl_;
         onBuilt();
         return result;
       }
@@ -1850,6 +1981,13 @@ public final class WorkflowOuterClass {
         }
         if (other.hasSchedule()) {
           mergeSchedule(other.getSchedule());
+        }
+        if (other.getIsPublic() != false) {
+          setIsPublic(other.getIsPublic());
+        }
+        if (!other.getExecutionUrl().isEmpty()) {
+          executionUrl_ = other.executionUrl_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3352,6 +3490,145 @@ public final class WorkflowOuterClass {
         }
         return scheduleBuilder_;
       }
+
+      private boolean isPublic_ ;
+      /**
+       * <pre>
+       * Ability of the Workflow to be executed without authentication.
+       * </pre>
+       *
+       * <code>bool is_public = 14;</code>
+       * @return The isPublic.
+       */
+      @java.lang.Override
+      public boolean getIsPublic() {
+        return isPublic_;
+      }
+      /**
+       * <pre>
+       * Ability of the Workflow to be executed without authentication.
+       * </pre>
+       *
+       * <code>bool is_public = 14;</code>
+       * @param value The isPublic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsPublic(boolean value) {
+        
+        isPublic_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Ability of the Workflow to be executed without authentication.
+       * </pre>
+       *
+       * <code>bool is_public = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsPublic() {
+        
+        isPublic_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object executionUrl_ = "";
+      /**
+       * <pre>
+       * Execution URL of the Workflow.
+       * </pre>
+       *
+       * <code>string execution_url = 15;</code>
+       * @return The executionUrl.
+       */
+      public java.lang.String getExecutionUrl() {
+        java.lang.Object ref = executionUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          executionUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Execution URL of the Workflow.
+       * </pre>
+       *
+       * <code>string execution_url = 15;</code>
+       * @return The bytes for executionUrl.
+       */
+      public com.google.protobuf.ByteString
+          getExecutionUrlBytes() {
+        java.lang.Object ref = executionUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          executionUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Execution URL of the Workflow.
+       * </pre>
+       *
+       * <code>string execution_url = 15;</code>
+       * @param value The executionUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExecutionUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        executionUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Execution URL of the Workflow.
+       * </pre>
+       *
+       * <code>string execution_url = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExecutionUrl() {
+        
+        executionUrl_ = getDefaultInstance().getExecutionUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Execution URL of the Workflow.
+       * </pre>
+       *
+       * <code>string execution_url = 15;</code>
+       * @param value The bytes for executionUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExecutionUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        executionUrl_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3665,6 +3942,36 @@ public final class WorkflowOuterClass {
      * @return The express.
      */
     boolean getExpress();
+
+    /**
+     * <pre>
+     * Ability of the Workflow to be executed without authentication.
+     * </pre>
+     *
+     * <code>bool is_public = 12;</code>
+     * @return The isPublic.
+     */
+    boolean getIsPublic();
+
+    /**
+     * <pre>
+     * Execution URL of the Workflow.
+     * </pre>
+     *
+     * <code>string execution_url = 13;</code>
+     * @return The executionUrl.
+     */
+    java.lang.String getExecutionUrl();
+    /**
+     * <pre>
+     * Execution URL of the Workflow.
+     * </pre>
+     *
+     * <code>string execution_url = 13;</code>
+     * @return The bytes for executionUrl.
+     */
+    com.google.protobuf.ByteString
+        getExecutionUrlBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.workflows.v1.WorkflowPreview}
@@ -3686,6 +3993,7 @@ public final class WorkflowOuterClass {
       status_ = 0;
       networkId_ = "";
       serviceAccountId_ = "";
+      executionUrl_ = "";
     }
 
     @java.lang.Override
@@ -3803,6 +4111,17 @@ public final class WorkflowOuterClass {
             case 88: {
 
               express_ = input.readBool();
+              break;
+            }
+            case 96: {
+
+              isPublic_ = input.readBool();
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              executionUrl_ = s;
               break;
             }
             default: {
@@ -4340,6 +4659,67 @@ public final class WorkflowOuterClass {
       return express_;
     }
 
+    public static final int IS_PUBLIC_FIELD_NUMBER = 12;
+    private boolean isPublic_;
+    /**
+     * <pre>
+     * Ability of the Workflow to be executed without authentication.
+     * </pre>
+     *
+     * <code>bool is_public = 12;</code>
+     * @return The isPublic.
+     */
+    @java.lang.Override
+    public boolean getIsPublic() {
+      return isPublic_;
+    }
+
+    public static final int EXECUTION_URL_FIELD_NUMBER = 13;
+    private volatile java.lang.Object executionUrl_;
+    /**
+     * <pre>
+     * Execution URL of the Workflow.
+     * </pre>
+     *
+     * <code>string execution_url = 13;</code>
+     * @return The executionUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getExecutionUrl() {
+      java.lang.Object ref = executionUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        executionUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Execution URL of the Workflow.
+     * </pre>
+     *
+     * <code>string execution_url = 13;</code>
+     * @return The bytes for executionUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExecutionUrlBytes() {
+      java.lang.Object ref = executionUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        executionUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4389,6 +4769,12 @@ public final class WorkflowOuterClass {
       }
       if (express_ != false) {
         output.writeBool(11, express_);
+      }
+      if (isPublic_ != false) {
+        output.writeBool(12, isPublic_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(executionUrl_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, executionUrl_);
       }
       unknownFields.writeTo(output);
     }
@@ -4443,6 +4829,13 @@ public final class WorkflowOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(11, express_);
       }
+      if (isPublic_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, isPublic_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(executionUrl_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, executionUrl_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4485,6 +4878,10 @@ public final class WorkflowOuterClass {
           .equals(other.getServiceAccountId())) return false;
       if (getExpress()
           != other.getExpress()) return false;
+      if (getIsPublic()
+          != other.getIsPublic()) return false;
+      if (!getExecutionUrl()
+          .equals(other.getExecutionUrl())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4525,6 +4922,11 @@ public final class WorkflowOuterClass {
       hash = (37 * hash) + EXPRESS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getExpress());
+      hash = (37 * hash) + IS_PUBLIC_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsPublic());
+      hash = (37 * hash) + EXECUTION_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getExecutionUrl().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4709,6 +5111,10 @@ public final class WorkflowOuterClass {
 
         express_ = false;
 
+        isPublic_ = false;
+
+        executionUrl_ = "";
+
         return this;
       }
 
@@ -4756,6 +5162,8 @@ public final class WorkflowOuterClass {
         result.networkId_ = networkId_;
         result.serviceAccountId_ = serviceAccountId_;
         result.express_ = express_;
+        result.isPublic_ = isPublic_;
+        result.executionUrl_ = executionUrl_;
         onBuilt();
         return result;
       }
@@ -4841,6 +5249,13 @@ public final class WorkflowOuterClass {
         }
         if (other.getExpress() != false) {
           setExpress(other.getExpress());
+        }
+        if (other.getIsPublic() != false) {
+          setIsPublic(other.getIsPublic());
+        }
+        if (!other.getExecutionUrl().isEmpty()) {
+          executionUrl_ = other.executionUrl_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6030,6 +6445,145 @@ public final class WorkflowOuterClass {
       public Builder clearExpress() {
         
         express_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isPublic_ ;
+      /**
+       * <pre>
+       * Ability of the Workflow to be executed without authentication.
+       * </pre>
+       *
+       * <code>bool is_public = 12;</code>
+       * @return The isPublic.
+       */
+      @java.lang.Override
+      public boolean getIsPublic() {
+        return isPublic_;
+      }
+      /**
+       * <pre>
+       * Ability of the Workflow to be executed without authentication.
+       * </pre>
+       *
+       * <code>bool is_public = 12;</code>
+       * @param value The isPublic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsPublic(boolean value) {
+        
+        isPublic_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Ability of the Workflow to be executed without authentication.
+       * </pre>
+       *
+       * <code>bool is_public = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsPublic() {
+        
+        isPublic_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object executionUrl_ = "";
+      /**
+       * <pre>
+       * Execution URL of the Workflow.
+       * </pre>
+       *
+       * <code>string execution_url = 13;</code>
+       * @return The executionUrl.
+       */
+      public java.lang.String getExecutionUrl() {
+        java.lang.Object ref = executionUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          executionUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Execution URL of the Workflow.
+       * </pre>
+       *
+       * <code>string execution_url = 13;</code>
+       * @return The bytes for executionUrl.
+       */
+      public com.google.protobuf.ByteString
+          getExecutionUrlBytes() {
+        java.lang.Object ref = executionUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          executionUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Execution URL of the Workflow.
+       * </pre>
+       *
+       * <code>string execution_url = 13;</code>
+       * @param value The executionUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExecutionUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        executionUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Execution URL of the Workflow.
+       * </pre>
+       *
+       * <code>string execution_url = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExecutionUrl() {
+        
+        executionUrl_ = getDefaultInstance().getExecutionUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Execution URL of the Workflow.
+       * </pre>
+       *
+       * <code>string execution_url = 13;</code>
+       * @param value The bytes for executionUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExecutionUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        executionUrl_ = value;
         onChanged();
         return this;
       }
@@ -8880,7 +9434,7 @@ public final class WorkflowOuterClass {
       "orkflow.proto\022$yandex.cloud.serverless.w" +
       "orkflows.v1\032\037google/protobuf/timestamp.p" +
       "roto\032\'yandex/cloud/logging/v1/log_entry." +
-      "proto\032\035yandex/cloud/validation.proto\"\307\005\n" +
+      "proto\032\035yandex/cloud/validation.proto\"\361\005\n" +
       "\010Workflow\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t" +
       "\022R\n\rspecification\030\003 \001(\0132;.yandex.cloud.s" +
       "erverless.workflows.v1.WorkflowSpecifica" +
@@ -8895,33 +9449,35 @@ public final class WorkflowOuterClass {
       "\n \001(\t\022\032\n\022service_account_id\030\013 \001(\t\022\017\n\007exp" +
       "ress\030\014 \001(\010\022H\n\010schedule\030\r \001(\01326.yandex.cl" +
       "oud.serverless.workflows.v1.WorkflowSche" +
-      "dule\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001\"a\n\006Status\022\026\n\022STATUS_UNSPECIF" +
-      "IED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010UPDAT" +
-      "ING\020\003\022\014\n\010DELETING\020\004\022\t\n\005ERROR\020\005\"\324\003\n\017Workf" +
-      "lowPreview\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(" +
-      "\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobuf." +
-      "Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005" +
-      " \001(\t\022Q\n\006labels\030\006 \003(\0132A.yandex.cloud.serv" +
-      "erless.workflows.v1.WorkflowPreview.Labe" +
-      "lsEntry\022E\n\006status\030\007 \001(\01625.yandex.cloud.s" +
-      "erverless.workflows.v1.Workflow.Status\022E" +
-      "\n\013log_options\030\010 \001(\01320.yandex.cloud.serve" +
-      "rless.workflows.v1.LogOptions\022\022\n\nnetwork" +
-      "_id\030\t \001(\t\022\032\n\022service_account_id\030\n \001(\t\022\017\n" +
-      "\007express\030\013 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\":\n\025WorkflowSpecifi" +
-      "cation\022\023\n\tspec_yaml\030\001 \001(\tH\000B\014\n\004spec\022\004\300\3011" +
-      "\001\"\226\001\n\nLogOptions\022\020\n\010disabled\030\001 \001(\010\022\026\n\014lo" +
-      "g_group_id\030\002 \001(\tH\000\022\023\n\tfolder_id\030\003 \001(\tH\000\022" +
-      ":\n\tmin_level\030\004 \001(\0162\'.yandex.cloud.loggin" +
-      "g.v1.LogLevel.LevelB\r\n\013destination\"R\n\020Wo" +
-      "rkflowSchedule\022&\n\017cron_expression\030\001 \001(\tB" +
-      "\r\350\3071\001\212\3101\005<=100\022\026\n\010timezone\030\002 \001(\tB\004\350\3071\001B~" +
-      "\n(yandex.cloud.api.serverless.workflows." +
-      "v1ZRgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/serverless/workflows/v1;wor" +
-      "kflowsb\006proto3"
+      "dule\022\021\n\tis_public\030\016 \001(\010\022\025\n\rexecution_url" +
+      "\030\017 \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\"a\n\006Status\022\026\n\022STATUS_UNSPEC" +
+      "IFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010UPD" +
+      "ATING\020\003\022\014\n\010DELETING\020\004\022\t\n\005ERROR\020\005\"\376\003\n\017Wor" +
+      "kflowPreview\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 " +
+      "\001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description" +
+      "\030\005 \001(\t\022Q\n\006labels\030\006 \003(\0132A.yandex.cloud.se" +
+      "rverless.workflows.v1.WorkflowPreview.La" +
+      "belsEntry\022E\n\006status\030\007 \001(\01625.yandex.cloud" +
+      ".serverless.workflows.v1.Workflow.Status" +
+      "\022E\n\013log_options\030\010 \001(\01320.yandex.cloud.ser" +
+      "verless.workflows.v1.LogOptions\022\022\n\nnetwo" +
+      "rk_id\030\t \001(\t\022\032\n\022service_account_id\030\n \001(\t\022" +
+      "\017\n\007express\030\013 \001(\010\022\021\n\tis_public\030\014 \001(\010\022\025\n\re" +
+      "xecution_url\030\r \001(\t\032-\n\013LabelsEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\":\n\025WorkflowSpe" +
+      "cification\022\023\n\tspec_yaml\030\001 \001(\tH\000B\014\n\004spec\022" +
+      "\004\300\3011\001\"\226\001\n\nLogOptions\022\020\n\010disabled\030\001 \001(\010\022\026" +
+      "\n\014log_group_id\030\002 \001(\tH\000\022\023\n\tfolder_id\030\003 \001(" +
+      "\tH\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex.cloud.lo" +
+      "gging.v1.LogLevel.LevelB\r\n\013destination\"R" +
+      "\n\020WorkflowSchedule\022&\n\017cron_expression\030\001 " +
+      "\001(\tB\r\350\3071\001\212\3101\005<=100\022\026\n\010timezone\030\002 \001(\tB\004\350\307" +
+      "1\001B~\n(yandex.cloud.api.serverless.workfl" +
+      "ows.v1ZRgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/serverless/workflows/v1" +
+      ";workflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8935,7 +9491,7 @@ public final class WorkflowOuterClass {
     internal_static_yandex_cloud_serverless_workflows_v1_Workflow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_workflows_v1_Workflow_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "Specification", "CreatedAt", "Name", "Description", "Labels", "Status", "LogOptions", "NetworkId", "ServiceAccountId", "Express", "Schedule", });
+        new java.lang.String[] { "Id", "FolderId", "Specification", "CreatedAt", "Name", "Description", "Labels", "Status", "LogOptions", "NetworkId", "ServiceAccountId", "Express", "Schedule", "IsPublic", "ExecutionUrl", });
     internal_static_yandex_cloud_serverless_workflows_v1_Workflow_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_workflows_v1_Workflow_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_workflows_v1_Workflow_LabelsEntry_fieldAccessorTable = new
@@ -8947,7 +9503,7 @@ public final class WorkflowOuterClass {
     internal_static_yandex_cloud_serverless_workflows_v1_WorkflowPreview_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_workflows_v1_WorkflowPreview_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "LogOptions", "NetworkId", "ServiceAccountId", "Express", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "LogOptions", "NetworkId", "ServiceAccountId", "Express", "IsPublic", "ExecutionUrl", });
     internal_static_yandex_cloud_serverless_workflows_v1_WorkflowPreview_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_workflows_v1_WorkflowPreview_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_workflows_v1_WorkflowPreview_LabelsEntry_fieldAccessorTable = new

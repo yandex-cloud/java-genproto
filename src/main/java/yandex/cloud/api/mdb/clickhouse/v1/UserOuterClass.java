@@ -8409,7 +8409,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Enables or disables new query analyzer.
-     * Default value: **true** for versions 25.5 and higher, **false** for versions 25.4 and lower.
+     * Default value: **true** for versions 25.9 and higher, **false** for version 25.8, **true** for versions from 25.5 to 25.7, **false** for versions 25.4 and lower.
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer).
      * </pre>
      *
@@ -8420,7 +8420,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Enables or disables new query analyzer.
-     * Default value: **true** for versions 25.5 and higher, **false** for versions 25.4 and lower.
+     * Default value: **true** for versions 25.9 and higher, **false** for version 25.8, **true** for versions from 25.5 to 25.7, **false** for versions 25.4 and lower.
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer).
      * </pre>
      *
@@ -8431,7 +8431,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Enables or disables new query analyzer.
-     * Default value: **true** for versions 25.5 and higher, **false** for versions 25.4 and lower.
+     * Default value: **true** for versions 25.9 and higher, **false** for version 25.8, **true** for versions from 25.5 to 25.7, **false** for versions 25.4 and lower.
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer).
      * </pre>
      *
@@ -8513,6 +8513,78 @@ public final class UserOuterClass {
      * <code>.google.protobuf.BoolValue final = 171;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getFinalOrBuilder();
+
+    /**
+     * <pre>
+     * When enabled, ClickHouse will detect Hive-style partitioning in path (/name=value/) in file-like table engines
+     * File/S3/URL/HDFS/AzureBlobStorage and will allow to use partition columns as virtual columns in the query.
+     * These virtual columns will have the same names as in the partitioned path, but starting with _.
+     * Default value: **true** for versions 25.1 and higher, **false** for versions 24.12 and lower.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#use_hive_partitioning).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_hive_partitioning = 172;</code>
+     * @return Whether the useHivePartitioning field is set.
+     */
+    boolean hasUseHivePartitioning();
+    /**
+     * <pre>
+     * When enabled, ClickHouse will detect Hive-style partitioning in path (/name=value/) in file-like table engines
+     * File/S3/URL/HDFS/AzureBlobStorage and will allow to use partition columns as virtual columns in the query.
+     * These virtual columns will have the same names as in the partitioned path, but starting with _.
+     * Default value: **true** for versions 25.1 and higher, **false** for versions 24.12 and lower.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#use_hive_partitioning).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_hive_partitioning = 172;</code>
+     * @return The useHivePartitioning.
+     */
+    com.google.protobuf.BoolValue getUseHivePartitioning();
+    /**
+     * <pre>
+     * When enabled, ClickHouse will detect Hive-style partitioning in path (/name=value/) in file-like table engines
+     * File/S3/URL/HDFS/AzureBlobStorage and will allow to use partition columns as virtual columns in the query.
+     * These virtual columns will have the same names as in the partitioned path, but starting with _.
+     * Default value: **true** for versions 25.1 and higher, **false** for versions 24.12 and lower.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#use_hive_partitioning).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_hive_partitioning = 172;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getUseHivePartitioningOrBuilder();
+
+    /**
+     * <pre>
+     * Enables or disables showing data lake catalogs in system tables.
+     * Default value: **false** for versions 25.10 and higher, **true** for versions 25.9 and lower.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#show_data_lake_catalogs_in_system_tables).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue show_data_lake_catalogs_in_system_tables = 173;</code>
+     * @return Whether the showDataLakeCatalogsInSystemTables field is set.
+     */
+    boolean hasShowDataLakeCatalogsInSystemTables();
+    /**
+     * <pre>
+     * Enables or disables showing data lake catalogs in system tables.
+     * Default value: **false** for versions 25.10 and higher, **true** for versions 25.9 and lower.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#show_data_lake_catalogs_in_system_tables).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue show_data_lake_catalogs_in_system_tables = 173;</code>
+     * @return The showDataLakeCatalogsInSystemTables.
+     */
+    com.google.protobuf.BoolValue getShowDataLakeCatalogsInSystemTables();
+    /**
+     * <pre>
+     * Enables or disables showing data lake catalogs in system tables.
+     * Default value: **false** for versions 25.10 and higher, **true** for versions 25.9 and lower.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#show_data_lake_catalogs_in_system_tables).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue show_data_lake_catalogs_in_system_tables = 173;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getShowDataLakeCatalogsInSystemTablesOrBuilder();
 
     /**
      * <pre>
@@ -10741,6 +10813,32 @@ public final class UserOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(final_);
                 final_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1378: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (useHivePartitioning_ != null) {
+                subBuilder = useHivePartitioning_.toBuilder();
+              }
+              useHivePartitioning_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(useHivePartitioning_);
+                useHivePartitioning_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1386: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (showDataLakeCatalogsInSystemTables_ != null) {
+                subBuilder = showDataLakeCatalogsInSystemTables_.toBuilder();
+              }
+              showDataLakeCatalogsInSystemTables_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(showDataLakeCatalogsInSystemTables_);
+                showDataLakeCatalogsInSystemTables_ = subBuilder.buildPartial();
               }
 
               break;
@@ -20295,7 +20393,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Enables or disables new query analyzer.
-     * Default value: **true** for versions 25.5 and higher, **false** for versions 25.4 and lower.
+     * Default value: **true** for versions 25.9 and higher, **false** for version 25.8, **true** for versions from 25.5 to 25.7, **false** for versions 25.4 and lower.
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer).
      * </pre>
      *
@@ -20309,7 +20407,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Enables or disables new query analyzer.
-     * Default value: **true** for versions 25.5 and higher, **false** for versions 25.4 and lower.
+     * Default value: **true** for versions 25.9 and higher, **false** for version 25.8, **true** for versions from 25.5 to 25.7, **false** for versions 25.4 and lower.
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer).
      * </pre>
      *
@@ -20323,7 +20421,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Enables or disables new query analyzer.
-     * Default value: **true** for versions 25.5 and higher, **false** for versions 25.4 and lower.
+     * Default value: **true** for versions 25.9 and higher, **false** for version 25.8, **true** for versions from 25.5 to 25.7, **false** for versions 25.4 and lower.
      * For details, see [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer).
      * </pre>
      *
@@ -20429,6 +20527,100 @@ public final class UserOuterClass {
     @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getFinalOrBuilder() {
       return getFinal();
+    }
+
+    public static final int USE_HIVE_PARTITIONING_FIELD_NUMBER = 172;
+    private com.google.protobuf.BoolValue useHivePartitioning_;
+    /**
+     * <pre>
+     * When enabled, ClickHouse will detect Hive-style partitioning in path (/name=value/) in file-like table engines
+     * File/S3/URL/HDFS/AzureBlobStorage and will allow to use partition columns as virtual columns in the query.
+     * These virtual columns will have the same names as in the partitioned path, but starting with _.
+     * Default value: **true** for versions 25.1 and higher, **false** for versions 24.12 and lower.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#use_hive_partitioning).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_hive_partitioning = 172;</code>
+     * @return Whether the useHivePartitioning field is set.
+     */
+    @java.lang.Override
+    public boolean hasUseHivePartitioning() {
+      return useHivePartitioning_ != null;
+    }
+    /**
+     * <pre>
+     * When enabled, ClickHouse will detect Hive-style partitioning in path (/name=value/) in file-like table engines
+     * File/S3/URL/HDFS/AzureBlobStorage and will allow to use partition columns as virtual columns in the query.
+     * These virtual columns will have the same names as in the partitioned path, but starting with _.
+     * Default value: **true** for versions 25.1 and higher, **false** for versions 24.12 and lower.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#use_hive_partitioning).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_hive_partitioning = 172;</code>
+     * @return The useHivePartitioning.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getUseHivePartitioning() {
+      return useHivePartitioning_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : useHivePartitioning_;
+    }
+    /**
+     * <pre>
+     * When enabled, ClickHouse will detect Hive-style partitioning in path (/name=value/) in file-like table engines
+     * File/S3/URL/HDFS/AzureBlobStorage and will allow to use partition columns as virtual columns in the query.
+     * These virtual columns will have the same names as in the partitioned path, but starting with _.
+     * Default value: **true** for versions 25.1 and higher, **false** for versions 24.12 and lower.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#use_hive_partitioning).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_hive_partitioning = 172;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getUseHivePartitioningOrBuilder() {
+      return getUseHivePartitioning();
+    }
+
+    public static final int SHOW_DATA_LAKE_CATALOGS_IN_SYSTEM_TABLES_FIELD_NUMBER = 173;
+    private com.google.protobuf.BoolValue showDataLakeCatalogsInSystemTables_;
+    /**
+     * <pre>
+     * Enables or disables showing data lake catalogs in system tables.
+     * Default value: **false** for versions 25.10 and higher, **true** for versions 25.9 and lower.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#show_data_lake_catalogs_in_system_tables).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue show_data_lake_catalogs_in_system_tables = 173;</code>
+     * @return Whether the showDataLakeCatalogsInSystemTables field is set.
+     */
+    @java.lang.Override
+    public boolean hasShowDataLakeCatalogsInSystemTables() {
+      return showDataLakeCatalogsInSystemTables_ != null;
+    }
+    /**
+     * <pre>
+     * Enables or disables showing data lake catalogs in system tables.
+     * Default value: **false** for versions 25.10 and higher, **true** for versions 25.9 and lower.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#show_data_lake_catalogs_in_system_tables).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue show_data_lake_catalogs_in_system_tables = 173;</code>
+     * @return The showDataLakeCatalogsInSystemTables.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getShowDataLakeCatalogsInSystemTables() {
+      return showDataLakeCatalogsInSystemTables_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : showDataLakeCatalogsInSystemTables_;
+    }
+    /**
+     * <pre>
+     * Enables or disables showing data lake catalogs in system tables.
+     * Default value: **false** for versions 25.10 and higher, **true** for versions 25.9 and lower.
+     * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#show_data_lake_catalogs_in_system_tables).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue show_data_lake_catalogs_in_system_tables = 173;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getShowDataLakeCatalogsInSystemTablesOrBuilder() {
+      return getShowDataLakeCatalogsInSystemTables();
     }
 
     public static final int COMPILE_FIELD_NUMBER = 44;
@@ -21116,6 +21308,12 @@ public final class UserOuterClass {
       }
       if (final_ != null) {
         output.writeMessage(171, getFinal());
+      }
+      if (useHivePartitioning_ != null) {
+        output.writeMessage(172, getUseHivePartitioning());
+      }
+      if (showDataLakeCatalogsInSystemTables_ != null) {
+        output.writeMessage(173, getShowDataLakeCatalogsInSystemTables());
       }
       unknownFields.writeTo(output);
     }
@@ -21806,6 +22004,14 @@ public final class UserOuterClass {
       if (final_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(171, getFinal());
+      }
+      if (useHivePartitioning_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(172, getUseHivePartitioning());
+      }
+      if (showDataLakeCatalogsInSystemTables_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(173, getShowDataLakeCatalogsInSystemTables());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -22550,6 +22756,16 @@ public final class UserOuterClass {
         if (!getFinal()
             .equals(other.getFinal())) return false;
       }
+      if (hasUseHivePartitioning() != other.hasUseHivePartitioning()) return false;
+      if (hasUseHivePartitioning()) {
+        if (!getUseHivePartitioning()
+            .equals(other.getUseHivePartitioning())) return false;
+      }
+      if (hasShowDataLakeCatalogsInSystemTables() != other.hasShowDataLakeCatalogsInSystemTables()) return false;
+      if (hasShowDataLakeCatalogsInSystemTables()) {
+        if (!getShowDataLakeCatalogsInSystemTables()
+            .equals(other.getShowDataLakeCatalogsInSystemTables())) return false;
+      }
       if (hasCompile() != other.hasCompile()) return false;
       if (hasCompile()) {
         if (!getCompile()
@@ -23192,6 +23408,14 @@ public final class UserOuterClass {
       if (hasFinal()) {
         hash = (37 * hash) + FINAL_FIELD_NUMBER;
         hash = (53 * hash) + getFinal().hashCode();
+      }
+      if (hasUseHivePartitioning()) {
+        hash = (37 * hash) + USE_HIVE_PARTITIONING_FIELD_NUMBER;
+        hash = (53 * hash) + getUseHivePartitioning().hashCode();
+      }
+      if (hasShowDataLakeCatalogsInSystemTables()) {
+        hash = (37 * hash) + SHOW_DATA_LAKE_CATALOGS_IN_SYSTEM_TABLES_FIELD_NUMBER;
+        hash = (53 * hash) + getShowDataLakeCatalogsInSystemTables().hashCode();
       }
       if (hasCompile()) {
         hash = (37 * hash) + COMPILE_FIELD_NUMBER;
@@ -24237,6 +24461,18 @@ public final class UserOuterClass {
           final_ = null;
           finalBuilder_ = null;
         }
+        if (useHivePartitioningBuilder_ == null) {
+          useHivePartitioning_ = null;
+        } else {
+          useHivePartitioning_ = null;
+          useHivePartitioningBuilder_ = null;
+        }
+        if (showDataLakeCatalogsInSystemTablesBuilder_ == null) {
+          showDataLakeCatalogsInSystemTables_ = null;
+        } else {
+          showDataLakeCatalogsInSystemTables_ = null;
+          showDataLakeCatalogsInSystemTablesBuilder_ = null;
+        }
         if (compileBuilder_ == null) {
           compile_ = null;
         } else {
@@ -25017,6 +25253,16 @@ public final class UserOuterClass {
         } else {
           result.final_ = finalBuilder_.build();
         }
+        if (useHivePartitioningBuilder_ == null) {
+          result.useHivePartitioning_ = useHivePartitioning_;
+        } else {
+          result.useHivePartitioning_ = useHivePartitioningBuilder_.build();
+        }
+        if (showDataLakeCatalogsInSystemTablesBuilder_ == null) {
+          result.showDataLakeCatalogsInSystemTables_ = showDataLakeCatalogsInSystemTables_;
+        } else {
+          result.showDataLakeCatalogsInSystemTables_ = showDataLakeCatalogsInSystemTablesBuilder_.build();
+        }
         if (compileBuilder_ == null) {
           result.compile_ = compile_;
         } else {
@@ -25589,6 +25835,12 @@ public final class UserOuterClass {
         }
         if (other.hasFinal()) {
           mergeFinal(other.getFinal());
+        }
+        if (other.hasUseHivePartitioning()) {
+          mergeUseHivePartitioning(other.getUseHivePartitioning());
+        }
+        if (other.hasShowDataLakeCatalogsInSystemTables()) {
+          mergeShowDataLakeCatalogsInSystemTables(other.getShowDataLakeCatalogsInSystemTables());
         }
         if (other.hasCompile()) {
           mergeCompile(other.getCompile());
@@ -52698,7 +52950,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Enables or disables new query analyzer.
-       * Default value: **true** for versions 25.5 and higher, **false** for versions 25.4 and lower.
+       * Default value: **true** for versions 25.9 and higher, **false** for version 25.8, **true** for versions from 25.5 to 25.7, **false** for versions 25.4 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer).
        * </pre>
        *
@@ -52711,7 +52963,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Enables or disables new query analyzer.
-       * Default value: **true** for versions 25.5 and higher, **false** for versions 25.4 and lower.
+       * Default value: **true** for versions 25.9 and higher, **false** for version 25.8, **true** for versions from 25.5 to 25.7, **false** for versions 25.4 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer).
        * </pre>
        *
@@ -52728,7 +52980,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Enables or disables new query analyzer.
-       * Default value: **true** for versions 25.5 and higher, **false** for versions 25.4 and lower.
+       * Default value: **true** for versions 25.9 and higher, **false** for version 25.8, **true** for versions from 25.5 to 25.7, **false** for versions 25.4 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer).
        * </pre>
        *
@@ -52750,7 +53002,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Enables or disables new query analyzer.
-       * Default value: **true** for versions 25.5 and higher, **false** for versions 25.4 and lower.
+       * Default value: **true** for versions 25.9 and higher, **false** for version 25.8, **true** for versions from 25.5 to 25.7, **false** for versions 25.4 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer).
        * </pre>
        *
@@ -52770,7 +53022,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Enables or disables new query analyzer.
-       * Default value: **true** for versions 25.5 and higher, **false** for versions 25.4 and lower.
+       * Default value: **true** for versions 25.9 and higher, **false** for version 25.8, **true** for versions from 25.5 to 25.7, **false** for versions 25.4 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer).
        * </pre>
        *
@@ -52794,7 +53046,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Enables or disables new query analyzer.
-       * Default value: **true** for versions 25.5 and higher, **false** for versions 25.4 and lower.
+       * Default value: **true** for versions 25.9 and higher, **false** for version 25.8, **true** for versions from 25.5 to 25.7, **false** for versions 25.4 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer).
        * </pre>
        *
@@ -52814,7 +53066,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Enables or disables new query analyzer.
-       * Default value: **true** for versions 25.5 and higher, **false** for versions 25.4 and lower.
+       * Default value: **true** for versions 25.9 and higher, **false** for version 25.8, **true** for versions from 25.5 to 25.7, **false** for versions 25.4 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer).
        * </pre>
        *
@@ -52828,7 +53080,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Enables or disables new query analyzer.
-       * Default value: **true** for versions 25.5 and higher, **false** for versions 25.4 and lower.
+       * Default value: **true** for versions 25.9 and higher, **false** for version 25.8, **true** for versions from 25.5 to 25.7, **false** for versions 25.4 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer).
        * </pre>
        *
@@ -52845,7 +53097,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Enables or disables new query analyzer.
-       * Default value: **true** for versions 25.5 and higher, **false** for versions 25.4 and lower.
+       * Default value: **true** for versions 25.9 and higher, **false** for version 25.8, **true** for versions from 25.5 to 25.7, **false** for versions 25.4 and lower.
        * For details, see [ClickHouse documentation](https://clickhouse.com/docs/guides/developer/understanding-query-execution-with-the-analyzer#analyzer).
        * </pre>
        *
@@ -53236,6 +53488,370 @@ public final class UserOuterClass {
           final_ = null;
         }
         return finalBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue useHivePartitioning_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> useHivePartitioningBuilder_;
+      /**
+       * <pre>
+       * When enabled, ClickHouse will detect Hive-style partitioning in path (/name=value/) in file-like table engines
+       * File/S3/URL/HDFS/AzureBlobStorage and will allow to use partition columns as virtual columns in the query.
+       * These virtual columns will have the same names as in the partitioned path, but starting with _.
+       * Default value: **true** for versions 25.1 and higher, **false** for versions 24.12 and lower.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#use_hive_partitioning).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_hive_partitioning = 172;</code>
+       * @return Whether the useHivePartitioning field is set.
+       */
+      public boolean hasUseHivePartitioning() {
+        return useHivePartitioningBuilder_ != null || useHivePartitioning_ != null;
+      }
+      /**
+       * <pre>
+       * When enabled, ClickHouse will detect Hive-style partitioning in path (/name=value/) in file-like table engines
+       * File/S3/URL/HDFS/AzureBlobStorage and will allow to use partition columns as virtual columns in the query.
+       * These virtual columns will have the same names as in the partitioned path, but starting with _.
+       * Default value: **true** for versions 25.1 and higher, **false** for versions 24.12 and lower.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#use_hive_partitioning).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_hive_partitioning = 172;</code>
+       * @return The useHivePartitioning.
+       */
+      public com.google.protobuf.BoolValue getUseHivePartitioning() {
+        if (useHivePartitioningBuilder_ == null) {
+          return useHivePartitioning_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : useHivePartitioning_;
+        } else {
+          return useHivePartitioningBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * When enabled, ClickHouse will detect Hive-style partitioning in path (/name=value/) in file-like table engines
+       * File/S3/URL/HDFS/AzureBlobStorage and will allow to use partition columns as virtual columns in the query.
+       * These virtual columns will have the same names as in the partitioned path, but starting with _.
+       * Default value: **true** for versions 25.1 and higher, **false** for versions 24.12 and lower.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#use_hive_partitioning).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_hive_partitioning = 172;</code>
+       */
+      public Builder setUseHivePartitioning(com.google.protobuf.BoolValue value) {
+        if (useHivePartitioningBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          useHivePartitioning_ = value;
+          onChanged();
+        } else {
+          useHivePartitioningBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When enabled, ClickHouse will detect Hive-style partitioning in path (/name=value/) in file-like table engines
+       * File/S3/URL/HDFS/AzureBlobStorage and will allow to use partition columns as virtual columns in the query.
+       * These virtual columns will have the same names as in the partitioned path, but starting with _.
+       * Default value: **true** for versions 25.1 and higher, **false** for versions 24.12 and lower.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#use_hive_partitioning).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_hive_partitioning = 172;</code>
+       */
+      public Builder setUseHivePartitioning(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (useHivePartitioningBuilder_ == null) {
+          useHivePartitioning_ = builderForValue.build();
+          onChanged();
+        } else {
+          useHivePartitioningBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When enabled, ClickHouse will detect Hive-style partitioning in path (/name=value/) in file-like table engines
+       * File/S3/URL/HDFS/AzureBlobStorage and will allow to use partition columns as virtual columns in the query.
+       * These virtual columns will have the same names as in the partitioned path, but starting with _.
+       * Default value: **true** for versions 25.1 and higher, **false** for versions 24.12 and lower.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#use_hive_partitioning).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_hive_partitioning = 172;</code>
+       */
+      public Builder mergeUseHivePartitioning(com.google.protobuf.BoolValue value) {
+        if (useHivePartitioningBuilder_ == null) {
+          if (useHivePartitioning_ != null) {
+            useHivePartitioning_ =
+              com.google.protobuf.BoolValue.newBuilder(useHivePartitioning_).mergeFrom(value).buildPartial();
+          } else {
+            useHivePartitioning_ = value;
+          }
+          onChanged();
+        } else {
+          useHivePartitioningBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When enabled, ClickHouse will detect Hive-style partitioning in path (/name=value/) in file-like table engines
+       * File/S3/URL/HDFS/AzureBlobStorage and will allow to use partition columns as virtual columns in the query.
+       * These virtual columns will have the same names as in the partitioned path, but starting with _.
+       * Default value: **true** for versions 25.1 and higher, **false** for versions 24.12 and lower.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#use_hive_partitioning).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_hive_partitioning = 172;</code>
+       */
+      public Builder clearUseHivePartitioning() {
+        if (useHivePartitioningBuilder_ == null) {
+          useHivePartitioning_ = null;
+          onChanged();
+        } else {
+          useHivePartitioning_ = null;
+          useHivePartitioningBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When enabled, ClickHouse will detect Hive-style partitioning in path (/name=value/) in file-like table engines
+       * File/S3/URL/HDFS/AzureBlobStorage and will allow to use partition columns as virtual columns in the query.
+       * These virtual columns will have the same names as in the partitioned path, but starting with _.
+       * Default value: **true** for versions 25.1 and higher, **false** for versions 24.12 and lower.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#use_hive_partitioning).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_hive_partitioning = 172;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getUseHivePartitioningBuilder() {
+        
+        onChanged();
+        return getUseHivePartitioningFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * When enabled, ClickHouse will detect Hive-style partitioning in path (/name=value/) in file-like table engines
+       * File/S3/URL/HDFS/AzureBlobStorage and will allow to use partition columns as virtual columns in the query.
+       * These virtual columns will have the same names as in the partitioned path, but starting with _.
+       * Default value: **true** for versions 25.1 and higher, **false** for versions 24.12 and lower.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#use_hive_partitioning).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_hive_partitioning = 172;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getUseHivePartitioningOrBuilder() {
+        if (useHivePartitioningBuilder_ != null) {
+          return useHivePartitioningBuilder_.getMessageOrBuilder();
+        } else {
+          return useHivePartitioning_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : useHivePartitioning_;
+        }
+      }
+      /**
+       * <pre>
+       * When enabled, ClickHouse will detect Hive-style partitioning in path (/name=value/) in file-like table engines
+       * File/S3/URL/HDFS/AzureBlobStorage and will allow to use partition columns as virtual columns in the query.
+       * These virtual columns will have the same names as in the partitioned path, but starting with _.
+       * Default value: **true** for versions 25.1 and higher, **false** for versions 24.12 and lower.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#use_hive_partitioning).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_hive_partitioning = 172;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getUseHivePartitioningFieldBuilder() {
+        if (useHivePartitioningBuilder_ == null) {
+          useHivePartitioningBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getUseHivePartitioning(),
+                  getParentForChildren(),
+                  isClean());
+          useHivePartitioning_ = null;
+        }
+        return useHivePartitioningBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue showDataLakeCatalogsInSystemTables_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> showDataLakeCatalogsInSystemTablesBuilder_;
+      /**
+       * <pre>
+       * Enables or disables showing data lake catalogs in system tables.
+       * Default value: **false** for versions 25.10 and higher, **true** for versions 25.9 and lower.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#show_data_lake_catalogs_in_system_tables).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue show_data_lake_catalogs_in_system_tables = 173;</code>
+       * @return Whether the showDataLakeCatalogsInSystemTables field is set.
+       */
+      public boolean hasShowDataLakeCatalogsInSystemTables() {
+        return showDataLakeCatalogsInSystemTablesBuilder_ != null || showDataLakeCatalogsInSystemTables_ != null;
+      }
+      /**
+       * <pre>
+       * Enables or disables showing data lake catalogs in system tables.
+       * Default value: **false** for versions 25.10 and higher, **true** for versions 25.9 and lower.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#show_data_lake_catalogs_in_system_tables).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue show_data_lake_catalogs_in_system_tables = 173;</code>
+       * @return The showDataLakeCatalogsInSystemTables.
+       */
+      public com.google.protobuf.BoolValue getShowDataLakeCatalogsInSystemTables() {
+        if (showDataLakeCatalogsInSystemTablesBuilder_ == null) {
+          return showDataLakeCatalogsInSystemTables_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : showDataLakeCatalogsInSystemTables_;
+        } else {
+          return showDataLakeCatalogsInSystemTablesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enables or disables showing data lake catalogs in system tables.
+       * Default value: **false** for versions 25.10 and higher, **true** for versions 25.9 and lower.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#show_data_lake_catalogs_in_system_tables).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue show_data_lake_catalogs_in_system_tables = 173;</code>
+       */
+      public Builder setShowDataLakeCatalogsInSystemTables(com.google.protobuf.BoolValue value) {
+        if (showDataLakeCatalogsInSystemTablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          showDataLakeCatalogsInSystemTables_ = value;
+          onChanged();
+        } else {
+          showDataLakeCatalogsInSystemTablesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables showing data lake catalogs in system tables.
+       * Default value: **false** for versions 25.10 and higher, **true** for versions 25.9 and lower.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#show_data_lake_catalogs_in_system_tables).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue show_data_lake_catalogs_in_system_tables = 173;</code>
+       */
+      public Builder setShowDataLakeCatalogsInSystemTables(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (showDataLakeCatalogsInSystemTablesBuilder_ == null) {
+          showDataLakeCatalogsInSystemTables_ = builderForValue.build();
+          onChanged();
+        } else {
+          showDataLakeCatalogsInSystemTablesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables showing data lake catalogs in system tables.
+       * Default value: **false** for versions 25.10 and higher, **true** for versions 25.9 and lower.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#show_data_lake_catalogs_in_system_tables).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue show_data_lake_catalogs_in_system_tables = 173;</code>
+       */
+      public Builder mergeShowDataLakeCatalogsInSystemTables(com.google.protobuf.BoolValue value) {
+        if (showDataLakeCatalogsInSystemTablesBuilder_ == null) {
+          if (showDataLakeCatalogsInSystemTables_ != null) {
+            showDataLakeCatalogsInSystemTables_ =
+              com.google.protobuf.BoolValue.newBuilder(showDataLakeCatalogsInSystemTables_).mergeFrom(value).buildPartial();
+          } else {
+            showDataLakeCatalogsInSystemTables_ = value;
+          }
+          onChanged();
+        } else {
+          showDataLakeCatalogsInSystemTablesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables showing data lake catalogs in system tables.
+       * Default value: **false** for versions 25.10 and higher, **true** for versions 25.9 and lower.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#show_data_lake_catalogs_in_system_tables).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue show_data_lake_catalogs_in_system_tables = 173;</code>
+       */
+      public Builder clearShowDataLakeCatalogsInSystemTables() {
+        if (showDataLakeCatalogsInSystemTablesBuilder_ == null) {
+          showDataLakeCatalogsInSystemTables_ = null;
+          onChanged();
+        } else {
+          showDataLakeCatalogsInSystemTables_ = null;
+          showDataLakeCatalogsInSystemTablesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables showing data lake catalogs in system tables.
+       * Default value: **false** for versions 25.10 and higher, **true** for versions 25.9 and lower.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#show_data_lake_catalogs_in_system_tables).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue show_data_lake_catalogs_in_system_tables = 173;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getShowDataLakeCatalogsInSystemTablesBuilder() {
+        
+        onChanged();
+        return getShowDataLakeCatalogsInSystemTablesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enables or disables showing data lake catalogs in system tables.
+       * Default value: **false** for versions 25.10 and higher, **true** for versions 25.9 and lower.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#show_data_lake_catalogs_in_system_tables).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue show_data_lake_catalogs_in_system_tables = 173;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getShowDataLakeCatalogsInSystemTablesOrBuilder() {
+        if (showDataLakeCatalogsInSystemTablesBuilder_ != null) {
+          return showDataLakeCatalogsInSystemTablesBuilder_.getMessageOrBuilder();
+        } else {
+          return showDataLakeCatalogsInSystemTables_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : showDataLakeCatalogsInSystemTables_;
+        }
+      }
+      /**
+       * <pre>
+       * Enables or disables showing data lake catalogs in system tables.
+       * Default value: **false** for versions 25.10 and higher, **true** for versions 25.9 and lower.
+       * For details, see [ClickHouse documentation](https://clickhouse.com/docs/operations/settings/settings#show_data_lake_catalogs_in_system_tables).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue show_data_lake_catalogs_in_system_tables = 173;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getShowDataLakeCatalogsInSystemTablesFieldBuilder() {
+        if (showDataLakeCatalogsInSystemTablesBuilder_ == null) {
+          showDataLakeCatalogsInSystemTablesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getShowDataLakeCatalogsInSystemTables(),
+                  getParentForChildren(),
+                  isClean());
+          showDataLakeCatalogsInSystemTables_ = null;
+        }
+        return showDataLakeCatalogsInSystemTablesBuilder_;
       }
 
       private com.google.protobuf.BoolValue compile_;
@@ -58889,7 +59505,7 @@ public final class UserOuterClass {
       "ickhouse.v1.UserQuota\022M\n\022connection_mana" +
       "ger\030\006 \001(\01321.yandex.cloud.mdb.clickhouse." +
       "v1.ConnectionManager\")\n\nPermission\022\025\n\rda" +
-      "tabase_name\030\001 \001(\tJ\004\010\002\020\003\"\261y\n\014UserSettings" +
+      "tabase_name\030\001 \001(\tJ\004\010\002\020\003\"\274z\n\014UserSettings" +
       "\0226\n\010readonly\030\001 \001(\0132\033.google.protobuf.Int" +
       "64ValueB\007\372\3071\0030-2\022-\n\tallow_ddl\030\002 \001(\0132\032.go" +
       "ogle.protobuf.BoolValue\022A\n\035allow_introsp" +
@@ -59185,122 +59801,125 @@ public final class UserOuterClass {
       "enable_analyzer\030\247\001 \001(\0132\032.google.protobuf" +
       ".BoolValue\022=\n\030s3_use_adaptive_timeouts\030\252" +
       "\001 \001(\0132\032.google.protobuf.BoolValue\022*\n\005fin" +
-      "al\030\253\001 \001(\0132\032.google.protobuf.BoolValue\022/\n" +
-      "\007compile\030, \001(\0132\032.google.protobuf.BoolVal" +
-      "ueB\002\030\001\022=\n\024min_count_to_compile\030- \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\002\030\001\022=\n\024async_i" +
-      "nsert_threads\030v \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\002\030\001\022C\n\032async_insert_stale_timeo" +
-      "ut\030{ \001(\0132\033.google.protobuf.Int64ValueB\002\030" +
-      "\001\"\322\001\n\026DistributedProductMode\022(\n$DISTRIBU" +
-      "TED_PRODUCT_MODE_UNSPECIFIED\020\000\022!\n\035DISTRI" +
-      "BUTED_PRODUCT_MODE_DENY\020\001\022\"\n\036DISTRIBUTED" +
-      "_PRODUCT_MODE_LOCAL\020\002\022#\n\037DISTRIBUTED_PRO" +
-      "DUCT_MODE_GLOBAL\020\003\022\"\n\036DISTRIBUTED_PRODUC" +
-      "T_MODE_ALLOW\020\004\"\242\003\n\030DistributedDdlOutputM" +
-      "ode\022+\n\'DISTRIBUTED_DDL_OUTPUT_MODE_UNSPE" +
-      "CIFIED\020\000\022%\n!DISTRIBUTED_DDL_OUTPUT_MODE_" +
-      "THROW\020\001\022$\n DISTRIBUTED_DDL_OUTPUT_MODE_N" +
-      "ONE\020\002\0226\n2DISTRIBUTED_DDL_OUTPUT_MODE_NUL" +
-      "L_STATUS_ON_TIMEOUT\020\003\022+\n\'DISTRIBUTED_DDL" +
-      "_OUTPUT_MODE_NEVER_THROW\020\004\0220\n,DISTRIBUTE" +
-      "D_DDL_OUTPUT_MODE_NONE_ONLY_ACTIVE\020\005\022B\n>" +
-      "DISTRIBUTED_DDL_OUTPUT_MODE_NULL_STATUS_" +
-      "ON_TIMEOUT_ONLY_ACTIVE\020\006\0221\n-DISTRIBUTED_" +
-      "DDL_OUTPUT_MODE_THROW_ONLY_ACTIVE\020\007\"\320\001\n\r" +
-      "LoadBalancing\022\036\n\032LOAD_BALANCING_UNSPECIF" +
-      "IED\020\000\022\031\n\025LOAD_BALANCING_RANDOM\020\001\022#\n\037LOAD" +
-      "_BALANCING_NEAREST_HOSTNAME\020\002\022\033\n\027LOAD_BA" +
-      "LANCING_IN_ORDER\020\003\022\"\n\036LOAD_BALANCING_FIR" +
-      "ST_OR_RANDOM\020\004\022\036\n\032LOAD_BALANCING_ROUND_R" +
-      "OBIN\020\005\"\235\002\n\031LocalFilesystemReadMethod\022,\n(" +
-      "LOCAL_FILESYSTEM_READ_METHOD_UNSPECIFIED" +
-      "\020\000\022%\n!LOCAL_FILESYSTEM_READ_METHOD_READ\020" +
-      "\001\0221\n-LOCAL_FILESYSTEM_READ_METHOD_PREAD_" +
-      "THREADPOOL\020\002\022&\n\"LOCAL_FILESYSTEM_READ_ME" +
-      "THOD_PREAD\020\003\022%\n!LOCAL_FILESYSTEM_READ_ME" +
-      "THOD_NMAP\020\004\022)\n%LOCAL_FILESYSTEM_READ_MET" +
-      "HOD_IO_URING\020\005\"\241\001\n\032RemoteFilesystemReadM" +
-      "ethod\022-\n)REMOTE_FILESYSTEM_READ_METHOD_U" +
-      "NSPECIFIED\020\000\022&\n\"REMOTE_FILESYSTEM_READ_M" +
-      "ETHOD_READ\020\001\022,\n(REMOTE_FILESYSTEM_READ_M" +
-      "ETHOD_THREADPOOL\020\002\"_\n\014OverflowMode\022\035\n\031OV" +
-      "ERFLOW_MODE_UNSPECIFIED\020\000\022\027\n\023OVERFLOW_MO" +
-      "DE_THROW\020\001\022\027\n\023OVERFLOW_MODE_BREAK\020\002\"\241\001\n\023" +
-      "GroupByOverflowMode\022&\n\"GROUP_BY_OVERFLOW" +
-      "_MODE_UNSPECIFIED\020\000\022 \n\034GROUP_BY_OVERFLOW" +
-      "_MODE_THROW\020\001\022 \n\034GROUP_BY_OVERFLOW_MODE_" +
-      "BREAK\020\002\022\036\n\032GROUP_BY_OVERFLOW_MODE_ANY\020\003\"" +
-      "\262\001\n\023DateTimeInputFormat\022&\n\"DATE_TIME_INP" +
-      "UT_FORMAT_UNSPECIFIED\020\000\022&\n\"DATE_TIME_INP" +
-      "UT_FORMAT_BEST_EFFORT\020\001\022 \n\034DATE_TIME_INP" +
-      "UT_FORMAT_BASIC\020\002\022)\n%DATE_TIME_INPUT_FOR" +
-      "MAT_BEST_EFFORT_US\020\003\"\260\001\n\024DateTimeOutputF" +
-      "ormat\022\'\n#DATE_TIME_OUTPUT_FORMAT_UNSPECI" +
-      "FIED\020\000\022\"\n\036DATE_TIME_OUTPUT_FORMAT_SIMPLE" +
-      "\020\001\022\037\n\033DATE_TIME_OUTPUT_FORMAT_ISO\020\002\022*\n&D" +
-      "ATE_TIME_OUTPUT_FORMAT_UNIX_TIMESTAMP\020\003\"" +
-      "\255\002\n\030FormatRegexpEscapingRule\022+\n\'FORMAT_R" +
-      "EGEXP_ESCAPING_RULE_UNSPECIFIED\020\000\022\'\n#FOR" +
-      "MAT_REGEXP_ESCAPING_RULE_ESCAPED\020\001\022&\n\"FO" +
-      "RMAT_REGEXP_ESCAPING_RULE_QUOTED\020\002\022#\n\037FO" +
-      "RMAT_REGEXP_ESCAPING_RULE_CSV\020\003\022$\n FORMA" +
-      "T_REGEXP_ESCAPING_RULE_JSON\020\004\022#\n\037FORMAT_" +
-      "REGEXP_ESCAPING_RULE_XML\020\005\022#\n\037FORMAT_REG" +
-      "EXP_ESCAPING_RULE_RAW\020\006\"q\n\tQuotaMode\022\032\n\026" +
-      "QUOTA_MODE_UNSPECIFIED\020\000\022\026\n\022QUOTA_MODE_D" +
-      "EFAULT\020\001\022\024\n\020QUOTA_MODE_KEYED\020\002\022\032\n\026QUOTA_" +
-      "MODE_KEYED_BY_IP\020\003\"\232\002\n*QueryCacheNondete" +
-      "rministicFunctionHandling\022>\n:QUERY_CACHE" +
-      "_NONDETERMINISTIC_FUNCTION_HANDLING_UNSP" +
-      "ECIFIED\020\000\0228\n4QUERY_CACHE_NONDETERMINISTI" +
-      "C_FUNCTION_HANDLING_THROW\020\001\0227\n3QUERY_CAC" +
-      "HE_NONDETERMINISTIC_FUNCTION_HANDLING_SA" +
-      "VE\020\002\0229\n5QUERY_CACHE_NONDETERMINISTIC_FUN" +
-      "CTION_HANDLING_IGNORE\020\003\"\331\001\n\035QueryCacheSy" +
-      "stemTableHandling\0221\n-QUERY_CACHE_SYSTEM_" +
-      "TABLE_HANDLING_UNSPECIFIED\020\000\022+\n\'QUERY_CA" +
-      "CHE_SYSTEM_TABLE_HANDLING_THROW\020\001\022*\n&QUE" +
-      "RY_CACHE_SYSTEM_TABLE_HANDLING_SAVE\020\002\022,\n" +
-      "(QUERY_CACHE_SYSTEM_TABLE_HANDLING_IGNOR" +
-      "E\020\003\"\266\002\n\033CountDistinctImplementation\022-\n)C" +
-      "OUNT_DISTINCT_IMPLEMENTATION_UNSPECIFIED" +
-      "\020\000\022&\n\"COUNT_DISTINCT_IMPLEMENTATION_UNIQ" +
-      "\020\001\022/\n+COUNT_DISTINCT_IMPLEMENTATION_UNIQ" +
-      "_COMBINED\020\002\0222\n.COUNT_DISTINCT_IMPLEMENTA" +
-      "TION_UNIQ_COMBINED_64\020\003\022-\n)COUNT_DISTINC" +
-      "T_IMPLEMENTATION_UNIQ_HLL_12\020\004\022,\n(COUNT_" +
-      "DISTINCT_IMPLEMENTATION_UNIQ_EXACT\020\005\"\220\002\n" +
-      "\rJoinAlgorithm\022\036\n\032JOIN_ALGORITHM_UNSPECI" +
-      "FIED\020\000\022\027\n\023JOIN_ALGORITHM_HASH\020\001\022 \n\034JOIN_" +
-      "ALGORITHM_PARALLEL_HASH\020\002\022 \n\034JOIN_ALGORI" +
-      "THM_PARTIAL_MERGE\020\003\022\031\n\025JOIN_ALGORITHM_DI" +
-      "RECT\020\004\022\027\n\023JOIN_ALGORITHM_AUTO\020\005\022%\n!JOIN_" +
-      "ALGORITHM_FULL_SORTING_MERGE\020\006\022\'\n#JOIN_A",
-      "LGORITHM_PREFER_PARTIAL_MERGE\020\007J\004\010R\020SJ\004\010" +
-      "S\020T\"\356\002\n\tUserQuota\022B\n\021interval_duration\030\001" +
-      " \001(\0132\033.google.protobuf.Int64ValueB\n\372\3071\006>" +
-      "=1000\0225\n\007queries\030\002 \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\007\372\3071\003>=0\0224\n\006errors\030\003 \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\007\372\3071\003>=0\0229\n\013re" +
-      "sult_rows\030\004 \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\007\372\3071\003>=0\0227\n\tread_rows\030\005 \001(\0132\033.googl" +
-      "e.protobuf.Int64ValueB\007\372\3071\003>=0\022<\n\016execut" +
-      "ion_time\030\006 \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\007\372\3071\003>=0\"*\n\021ConnectionManager\022\025\n\rcon" +
-      "nection_id\030\001 \001(\t\"\324\002\n\010UserSpec\0228\n\004name\030\001 " +
-      "\001(\tB*\350\3071\001\212\3101\0041-32\362\3071\032[a-zA-Z0-9_][a-zA-Z" +
-      "0-9_-]*\022\033\n\010password\030\002 \001(\tB\t\212\3101\0058-128\0225\n\021" +
-      "generate_password\030\006 \001(\0132\032.google.protobu" +
-      "f.BoolValue\022?\n\013permissions\030\003 \003(\0132*.yande" +
-      "x.cloud.mdb.clickhouse.v1.Permission\022>\n\010" +
-      "settings\030\004 \001(\0132,.yandex.cloud.mdb.clickh" +
-      "ouse.v1.UserSettings\0229\n\006quotas\030\005 \003(\0132).y" +
-      "andex.cloud.mdb.clickhouse.v1.UserQuotaB" +
-      "s\n\"yandex.cloud.api.mdb.clickhouse.v1ZMg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/mdb/clickhouse/v1;clickhouseb\006pr" +
-      "oto3"
+      "al\030\253\001 \001(\0132\032.google.protobuf.BoolValue\022:\n" +
+      "\025use_hive_partitioning\030\254\001 \001(\0132\032.google.p" +
+      "rotobuf.BoolValue\022M\n(show_data_lake_cata" +
+      "logs_in_system_tables\030\255\001 \001(\0132\032.google.pr" +
+      "otobuf.BoolValue\022/\n\007compile\030, \001(\0132\032.goog" +
+      "le.protobuf.BoolValueB\002\030\001\022=\n\024min_count_t" +
+      "o_compile\030- \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\002\030\001\022=\n\024async_insert_threads\030v \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\002\030\001\022C\n\032async" +
+      "_insert_stale_timeout\030{ \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\002\030\001\"\322\001\n\026DistributedProd" +
+      "uctMode\022(\n$DISTRIBUTED_PRODUCT_MODE_UNSP" +
+      "ECIFIED\020\000\022!\n\035DISTRIBUTED_PRODUCT_MODE_DE" +
+      "NY\020\001\022\"\n\036DISTRIBUTED_PRODUCT_MODE_LOCAL\020\002" +
+      "\022#\n\037DISTRIBUTED_PRODUCT_MODE_GLOBAL\020\003\022\"\n" +
+      "\036DISTRIBUTED_PRODUCT_MODE_ALLOW\020\004\"\242\003\n\030Di" +
+      "stributedDdlOutputMode\022+\n\'DISTRIBUTED_DD" +
+      "L_OUTPUT_MODE_UNSPECIFIED\020\000\022%\n!DISTRIBUT" +
+      "ED_DDL_OUTPUT_MODE_THROW\020\001\022$\n DISTRIBUTE" +
+      "D_DDL_OUTPUT_MODE_NONE\020\002\0226\n2DISTRIBUTED_" +
+      "DDL_OUTPUT_MODE_NULL_STATUS_ON_TIMEOUT\020\003" +
+      "\022+\n\'DISTRIBUTED_DDL_OUTPUT_MODE_NEVER_TH" +
+      "ROW\020\004\0220\n,DISTRIBUTED_DDL_OUTPUT_MODE_NON" +
+      "E_ONLY_ACTIVE\020\005\022B\n>DISTRIBUTED_DDL_OUTPU" +
+      "T_MODE_NULL_STATUS_ON_TIMEOUT_ONLY_ACTIV" +
+      "E\020\006\0221\n-DISTRIBUTED_DDL_OUTPUT_MODE_THROW" +
+      "_ONLY_ACTIVE\020\007\"\320\001\n\rLoadBalancing\022\036\n\032LOAD" +
+      "_BALANCING_UNSPECIFIED\020\000\022\031\n\025LOAD_BALANCI" +
+      "NG_RANDOM\020\001\022#\n\037LOAD_BALANCING_NEAREST_HO" +
+      "STNAME\020\002\022\033\n\027LOAD_BALANCING_IN_ORDER\020\003\022\"\n" +
+      "\036LOAD_BALANCING_FIRST_OR_RANDOM\020\004\022\036\n\032LOA" +
+      "D_BALANCING_ROUND_ROBIN\020\005\"\235\002\n\031LocalFiles" +
+      "ystemReadMethod\022,\n(LOCAL_FILESYSTEM_READ" +
+      "_METHOD_UNSPECIFIED\020\000\022%\n!LOCAL_FILESYSTE" +
+      "M_READ_METHOD_READ\020\001\0221\n-LOCAL_FILESYSTEM" +
+      "_READ_METHOD_PREAD_THREADPOOL\020\002\022&\n\"LOCAL" +
+      "_FILESYSTEM_READ_METHOD_PREAD\020\003\022%\n!LOCAL" +
+      "_FILESYSTEM_READ_METHOD_NMAP\020\004\022)\n%LOCAL_" +
+      "FILESYSTEM_READ_METHOD_IO_URING\020\005\"\241\001\n\032Re" +
+      "moteFilesystemReadMethod\022-\n)REMOTE_FILES" +
+      "YSTEM_READ_METHOD_UNSPECIFIED\020\000\022&\n\"REMOT" +
+      "E_FILESYSTEM_READ_METHOD_READ\020\001\022,\n(REMOT" +
+      "E_FILESYSTEM_READ_METHOD_THREADPOOL\020\002\"_\n" +
+      "\014OverflowMode\022\035\n\031OVERFLOW_MODE_UNSPECIFI" +
+      "ED\020\000\022\027\n\023OVERFLOW_MODE_THROW\020\001\022\027\n\023OVERFLO" +
+      "W_MODE_BREAK\020\002\"\241\001\n\023GroupByOverflowMode\022&" +
+      "\n\"GROUP_BY_OVERFLOW_MODE_UNSPECIFIED\020\000\022 " +
+      "\n\034GROUP_BY_OVERFLOW_MODE_THROW\020\001\022 \n\034GROU" +
+      "P_BY_OVERFLOW_MODE_BREAK\020\002\022\036\n\032GROUP_BY_O" +
+      "VERFLOW_MODE_ANY\020\003\"\262\001\n\023DateTimeInputForm" +
+      "at\022&\n\"DATE_TIME_INPUT_FORMAT_UNSPECIFIED" +
+      "\020\000\022&\n\"DATE_TIME_INPUT_FORMAT_BEST_EFFORT" +
+      "\020\001\022 \n\034DATE_TIME_INPUT_FORMAT_BASIC\020\002\022)\n%" +
+      "DATE_TIME_INPUT_FORMAT_BEST_EFFORT_US\020\003\"" +
+      "\260\001\n\024DateTimeOutputFormat\022\'\n#DATE_TIME_OU" +
+      "TPUT_FORMAT_UNSPECIFIED\020\000\022\"\n\036DATE_TIME_O" +
+      "UTPUT_FORMAT_SIMPLE\020\001\022\037\n\033DATE_TIME_OUTPU" +
+      "T_FORMAT_ISO\020\002\022*\n&DATE_TIME_OUTPUT_FORMA" +
+      "T_UNIX_TIMESTAMP\020\003\"\255\002\n\030FormatRegexpEscap" +
+      "ingRule\022+\n\'FORMAT_REGEXP_ESCAPING_RULE_U" +
+      "NSPECIFIED\020\000\022\'\n#FORMAT_REGEXP_ESCAPING_R" +
+      "ULE_ESCAPED\020\001\022&\n\"FORMAT_REGEXP_ESCAPING_" +
+      "RULE_QUOTED\020\002\022#\n\037FORMAT_REGEXP_ESCAPING_" +
+      "RULE_CSV\020\003\022$\n FORMAT_REGEXP_ESCAPING_RUL" +
+      "E_JSON\020\004\022#\n\037FORMAT_REGEXP_ESCAPING_RULE_" +
+      "XML\020\005\022#\n\037FORMAT_REGEXP_ESCAPING_RULE_RAW" +
+      "\020\006\"q\n\tQuotaMode\022\032\n\026QUOTA_MODE_UNSPECIFIE" +
+      "D\020\000\022\026\n\022QUOTA_MODE_DEFAULT\020\001\022\024\n\020QUOTA_MOD" +
+      "E_KEYED\020\002\022\032\n\026QUOTA_MODE_KEYED_BY_IP\020\003\"\232\002" +
+      "\n*QueryCacheNondeterministicFunctionHand" +
+      "ling\022>\n:QUERY_CACHE_NONDETERMINISTIC_FUN" +
+      "CTION_HANDLING_UNSPECIFIED\020\000\0228\n4QUERY_CA" +
+      "CHE_NONDETERMINISTIC_FUNCTION_HANDLING_T" +
+      "HROW\020\001\0227\n3QUERY_CACHE_NONDETERMINISTIC_F" +
+      "UNCTION_HANDLING_SAVE\020\002\0229\n5QUERY_CACHE_N" +
+      "ONDETERMINISTIC_FUNCTION_HANDLING_IGNORE" +
+      "\020\003\"\331\001\n\035QueryCacheSystemTableHandling\0221\n-" +
+      "QUERY_CACHE_SYSTEM_TABLE_HANDLING_UNSPEC" +
+      "IFIED\020\000\022+\n\'QUERY_CACHE_SYSTEM_TABLE_HAND" +
+      "LING_THROW\020\001\022*\n&QUERY_CACHE_SYSTEM_TABLE" +
+      "_HANDLING_SAVE\020\002\022,\n(QUERY_CACHE_SYSTEM_T" +
+      "ABLE_HANDLING_IGNORE\020\003\"\266\002\n\033CountDistinct" +
+      "Implementation\022-\n)COUNT_DISTINCT_IMPLEME" +
+      "NTATION_UNSPECIFIED\020\000\022&\n\"COUNT_DISTINCT_" +
+      "IMPLEMENTATION_UNIQ\020\001\022/\n+COUNT_DISTINCT_" +
+      "IMPLEMENTATION_UNIQ_COMBINED\020\002\0222\n.COUNT_" +
+      "DISTINCT_IMPLEMENTATION_UNIQ_COMBINED_64" +
+      "\020\003\022-\n)COUNT_DISTINCT_IMPLEMENTATION_UNIQ" +
+      "_HLL_12\020\004\022,\n(COUNT_DISTINCT_IMPLEMENTATI" +
+      "ON_UNIQ_EXACT\020\005\"\220\002\n\rJoinAlgorithm\022\036\n\032JOI" +
+      "N_ALGORITHM_UNSPECIFIED\020\000\022\027\n\023JOIN_ALGORI" +
+      "THM_HASH\020\001\022 \n\034JOIN_ALGORITHM_PARALLEL_HA",
+      "SH\020\002\022 \n\034JOIN_ALGORITHM_PARTIAL_MERGE\020\003\022\031" +
+      "\n\025JOIN_ALGORITHM_DIRECT\020\004\022\027\n\023JOIN_ALGORI" +
+      "THM_AUTO\020\005\022%\n!JOIN_ALGORITHM_FULL_SORTIN" +
+      "G_MERGE\020\006\022\'\n#JOIN_ALGORITHM_PREFER_PARTI" +
+      "AL_MERGE\020\007J\004\010R\020SJ\004\010S\020T\"\356\002\n\tUserQuota\022B\n\021" +
+      "interval_duration\030\001 \001(\0132\033.google.protobu" +
+      "f.Int64ValueB\n\372\3071\006>=1000\0225\n\007queries\030\002 \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022" +
+      "4\n\006errors\030\003 \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\007\372\3071\003>=0\0229\n\013result_rows\030\004 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\007\372\3071\003>=0\0227\n\tread" +
+      "_rows\030\005 \001(\0132\033.google.protobuf.Int64Value" +
+      "B\007\372\3071\003>=0\022<\n\016execution_time\030\006 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\007\372\3071\003>=0\"*\n\021Conne" +
+      "ctionManager\022\025\n\rconnection_id\030\001 \001(\t\"\324\002\n\010" +
+      "UserSpec\0228\n\004name\030\001 \001(\tB*\350\3071\001\212\3101\0041-32\362\3071\032" +
+      "[a-zA-Z0-9_][a-zA-Z0-9_-]*\022\033\n\010password\030\002" +
+      " \001(\tB\t\212\3101\0058-128\0225\n\021generate_password\030\006 \001" +
+      "(\0132\032.google.protobuf.BoolValue\022?\n\013permis" +
+      "sions\030\003 \003(\0132*.yandex.cloud.mdb.clickhous" +
+      "e.v1.Permission\022>\n\010settings\030\004 \001(\0132,.yand" +
+      "ex.cloud.mdb.clickhouse.v1.UserSettings\022" +
+      "9\n\006quotas\030\005 \003(\0132).yandex.cloud.mdb.click" +
+      "house.v1.UserQuotaBs\n\"yandex.cloud.api.m" +
+      "db.clickhouse.v1ZMgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/mdb/clickhous" +
+      "e/v1;clickhouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -59325,7 +59944,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_descriptor,
-        new java.lang.String[] { "Readonly", "AllowDdl", "AllowIntrospectionFunctions", "ConnectTimeout", "ConnectTimeoutWithFailover", "ReceiveTimeout", "SendTimeout", "IdleConnectionTimeout", "TimeoutBeforeCheckingExecutionSpeed", "InsertQuorum", "InsertQuorumTimeout", "InsertQuorumParallel", "SelectSequentialConsistency", "ReplicationAlterPartitionsSync", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "DistributedDdlOutputMode", "SkipUnavailableShards", "UseHedgedRequests", "HedgedConnectionTimeoutMs", "LoadBalancing", "PreferLocalhostReplica", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MaxPartitionsPerInsertBlock", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "DeduplicateBlocksInDependentMaterializedViews", "LocalFilesystemReadMethod", "RemoteFilesystemReadMethod", "Priority", "MaxThreads", "MaxInsertThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MemoryOvercommitRatioDenominator", "MemoryOvercommitRatioDenominatorForUser", "MemoryUsageOvercommitMaxWaitMicroseconds", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "MaxTemporaryDataOnDiskSizeForQuery", "MaxTemporaryDataOnDiskSizeForUser", "MaxConcurrentQueriesForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxRowsInSet", "MaxBytesInSet", "SetOverflowMode", "MaxRowsInJoin", "MaxBytesInJoin", "JoinOverflowMode", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "MaxParserDepth", "MinExecutionSpeed", "MinExecutionSpeedBytes", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "InputFormatNullAsDefault", "InputFormatWithNamesUseHeader", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "DateTimeInputFormat", "DateTimeOutputFormat", "LowCardinalityAllowInNativeFormat", "EmptyResultForAggregationByEmptySet", "FormatRegexp", "FormatRegexpEscapingRule", "FormatRegexpSkipUnmatched", "InputFormatParallelParsing", "InputFormatImportNestedJson", "FormatAvroSchemaRegistryUrl", "DataTypeDefaultNullable", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", "CancelHttpReadonlyQueriesOnClientClose", "MaxHttpGetRedirects", "HttpMaxFieldNameSize", "HttpMaxFieldValueSize", "QuotaMode", "AsyncInsert", "WaitForAsyncInsert", "WaitForAsyncInsertTimeout", "AsyncInsertMaxDataSize", "AsyncInsertBusyTimeout", "AsyncInsertUseAdaptiveBusyTimeout", "LogQueryThreads", "LogQueryViews", "LogQueriesProbability", "LogProcessorsProfiles", "UseQueryCache", "EnableReadsFromQueryCache", "EnableWritesToQueryCache", "QueryCacheMinQueryRuns", "QueryCacheMinQueryDuration", "QueryCacheTtl", "QueryCacheMaxEntries", "QueryCacheMaxSizeInBytes", "QueryCacheTag", "QueryCacheShareBetweenUsers", "QueryCacheNondeterministicFunctionHandling", "QueryCacheSystemTableHandling", "CountDistinctImplementation", "JoinedSubqueryRequiresAlias", "JoinUseNulls", "TransformNullIn", "InsertNullAsDefault", "JoinAlgorithm", "AnyJoinDistinctRightTableKeys", "AllowSuspiciousLowCardinalityTypes", "FlattenNested", "MemoryProfilerStep", "MemoryProfilerSampleProbability", "MaxFinalThreads", "MaxReadBufferSize", "InsertKeeperMaxRetries", "DoNotMergeAcrossPartitionsSelectFinal", "IgnoreMaterializedViewsWithDroppedTargetTable", "EnableAnalyzer", "S3UseAdaptiveTimeouts", "Final", "Compile", "MinCountToCompile", "AsyncInsertThreads", "AsyncInsertStaleTimeout", });
+        new java.lang.String[] { "Readonly", "AllowDdl", "AllowIntrospectionFunctions", "ConnectTimeout", "ConnectTimeoutWithFailover", "ReceiveTimeout", "SendTimeout", "IdleConnectionTimeout", "TimeoutBeforeCheckingExecutionSpeed", "InsertQuorum", "InsertQuorumTimeout", "InsertQuorumParallel", "SelectSequentialConsistency", "ReplicationAlterPartitionsSync", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "DistributedDdlOutputMode", "SkipUnavailableShards", "UseHedgedRequests", "HedgedConnectionTimeoutMs", "LoadBalancing", "PreferLocalhostReplica", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MaxPartitionsPerInsertBlock", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "DeduplicateBlocksInDependentMaterializedViews", "LocalFilesystemReadMethod", "RemoteFilesystemReadMethod", "Priority", "MaxThreads", "MaxInsertThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MemoryOvercommitRatioDenominator", "MemoryOvercommitRatioDenominatorForUser", "MemoryUsageOvercommitMaxWaitMicroseconds", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "MaxTemporaryDataOnDiskSizeForQuery", "MaxTemporaryDataOnDiskSizeForUser", "MaxConcurrentQueriesForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxRowsInSet", "MaxBytesInSet", "SetOverflowMode", "MaxRowsInJoin", "MaxBytesInJoin", "JoinOverflowMode", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "MaxParserDepth", "MinExecutionSpeed", "MinExecutionSpeedBytes", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "InputFormatNullAsDefault", "InputFormatWithNamesUseHeader", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "DateTimeInputFormat", "DateTimeOutputFormat", "LowCardinalityAllowInNativeFormat", "EmptyResultForAggregationByEmptySet", "FormatRegexp", "FormatRegexpEscapingRule", "FormatRegexpSkipUnmatched", "InputFormatParallelParsing", "InputFormatImportNestedJson", "FormatAvroSchemaRegistryUrl", "DataTypeDefaultNullable", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", "CancelHttpReadonlyQueriesOnClientClose", "MaxHttpGetRedirects", "HttpMaxFieldNameSize", "HttpMaxFieldValueSize", "QuotaMode", "AsyncInsert", "WaitForAsyncInsert", "WaitForAsyncInsertTimeout", "AsyncInsertMaxDataSize", "AsyncInsertBusyTimeout", "AsyncInsertUseAdaptiveBusyTimeout", "LogQueryThreads", "LogQueryViews", "LogQueriesProbability", "LogProcessorsProfiles", "UseQueryCache", "EnableReadsFromQueryCache", "EnableWritesToQueryCache", "QueryCacheMinQueryRuns", "QueryCacheMinQueryDuration", "QueryCacheTtl", "QueryCacheMaxEntries", "QueryCacheMaxSizeInBytes", "QueryCacheTag", "QueryCacheShareBetweenUsers", "QueryCacheNondeterministicFunctionHandling", "QueryCacheSystemTableHandling", "CountDistinctImplementation", "JoinedSubqueryRequiresAlias", "JoinUseNulls", "TransformNullIn", "InsertNullAsDefault", "JoinAlgorithm", "AnyJoinDistinctRightTableKeys", "AllowSuspiciousLowCardinalityTypes", "FlattenNested", "MemoryProfilerStep", "MemoryProfilerSampleProbability", "MaxFinalThreads", "MaxReadBufferSize", "InsertKeeperMaxRetries", "DoNotMergeAcrossPartitionsSelectFinal", "IgnoreMaterializedViewsWithDroppedTargetTable", "EnableAnalyzer", "S3UseAdaptiveTimeouts", "Final", "UseHivePartitioning", "ShowDataLakeCatalogsInSystemTables", "Compile", "MinCountToCompile", "AsyncInsertThreads", "AsyncInsertStaleTimeout", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_fieldAccessorTable = new

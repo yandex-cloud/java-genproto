@@ -4501,6 +4501,2019 @@ public final class DatabaseServiceOuterClass {
 
   }
 
+  public interface UpdateDatabaseRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mysql.v1.UpdateDatabaseRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the cluster to update a database in.
+     * To get the cluster ID use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the cluster to update a database in.
+     * To get the cluster ID use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Name of the database to update.
+     * To get the name of the database use a [DatabaseService.List] request.
+     * </pre>
+     *
+     * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The databaseName.
+     */
+    java.lang.String getDatabaseName();
+    /**
+     * <pre>
+     * Name of the database to update.
+     * To get the name of the database use a [DatabaseService.List] request.
+     * </pre>
+     *
+     * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for databaseName.
+     */
+    com.google.protobuf.ByteString
+        getDatabaseNameBytes();
+
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Database resource should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return Whether the updateMask field is set.
+     */
+    boolean hasUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Database resource should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return The updateMask.
+     */
+    com.google.protobuf.FieldMask getUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Database resource should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     */
+    com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
+
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the database
+     * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 4;</code>
+     * @return The enum numeric value on the wire for deletionProtectionMode.
+     */
+    int getDeletionProtectionModeValue();
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the database
+     * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 4;</code>
+     * @return The deletionProtectionMode.
+     */
+    yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode getDeletionProtectionMode();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.mysql.v1.UpdateDatabaseRequest}
+   */
+  public static final class UpdateDatabaseRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.UpdateDatabaseRequest)
+      UpdateDatabaseRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateDatabaseRequest.newBuilder() to construct.
+    private UpdateDatabaseRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateDatabaseRequest() {
+      clusterId_ = "";
+      databaseName_ = "";
+      deletionProtectionMode_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateDatabaseRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateDatabaseRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              databaseName_ = s;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.FieldMask.Builder subBuilder = null;
+              if (updateMask_ != null) {
+                subBuilder = updateMask_.toBuilder();
+              }
+              updateMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updateMask_);
+                updateMask_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              deletionProtectionMode_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_UpdateDatabaseRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_UpdateDatabaseRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest.class, yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the cluster to update a database in.
+     * To get the cluster ID use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
+     */
+    @java.lang.Override
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the cluster to update a database in.
+     * To get the cluster ID use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATABASE_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object databaseName_;
+    /**
+     * <pre>
+     * Name of the database to update.
+     * To get the name of the database use a [DatabaseService.List] request.
+     * </pre>
+     *
+     * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The databaseName.
+     */
+    @java.lang.Override
+    public java.lang.String getDatabaseName() {
+      java.lang.Object ref = databaseName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        databaseName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the database to update.
+     * To get the name of the database use a [DatabaseService.List] request.
+     * </pre>
+     *
+     * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * @return The bytes for databaseName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatabaseNameBytes() {
+      java.lang.Object ref = databaseName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        databaseName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPDATE_MASK_FIELD_NUMBER = 3;
+    private com.google.protobuf.FieldMask updateMask_;
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Database resource should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return Whether the updateMask field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdateMask() {
+      return updateMask_ != null;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Database resource should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return The updateMask.
+     */
+    @java.lang.Override
+    public com.google.protobuf.FieldMask getUpdateMask() {
+      return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Database resource should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+      return getUpdateMask();
+    }
+
+    public static final int DELETION_PROTECTION_MODE_FIELD_NUMBER = 4;
+    private int deletionProtectionMode_;
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the database
+     * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 4;</code>
+     * @return The enum numeric value on the wire for deletionProtectionMode.
+     */
+    @java.lang.Override public int getDeletionProtectionModeValue() {
+      return deletionProtectionMode_;
+    }
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the database
+     * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 4;</code>
+     * @return The deletionProtectionMode.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode getDeletionProtectionMode() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode result = yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode.valueOf(deletionProtectionMode_);
+      return result == null ? yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, databaseName_);
+      }
+      if (updateMask_ != null) {
+        output.writeMessage(3, getUpdateMask());
+      }
+      if (deletionProtectionMode_ != yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode.DELETION_PROTECTION_MODE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, deletionProtectionMode_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, databaseName_);
+      }
+      if (updateMask_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getUpdateMask());
+      }
+      if (deletionProtectionMode_ != yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode.DELETION_PROTECTION_MODE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, deletionProtectionMode_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest other = (yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest) obj;
+
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getDatabaseName()
+          .equals(other.getDatabaseName())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
+      if (hasUpdateMask()) {
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
+      }
+      if (deletionProtectionMode_ != other.deletionProtectionMode_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + DATABASE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDatabaseName().hashCode();
+      if (hasUpdateMask()) {
+        hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdateMask().hashCode();
+      }
+      hash = (37 * hash) + DELETION_PROTECTION_MODE_FIELD_NUMBER;
+      hash = (53 * hash) + deletionProtectionMode_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mysql.v1.UpdateDatabaseRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mysql.v1.UpdateDatabaseRequest)
+        yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_UpdateDatabaseRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_UpdateDatabaseRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest.class, yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        databaseName_ = "";
+
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+        deletionProtectionMode_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_UpdateDatabaseRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest build() {
+        yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest buildPartial() {
+        yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest result = new yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest(this);
+        result.clusterId_ = clusterId_;
+        result.databaseName_ = databaseName_;
+        if (updateMaskBuilder_ == null) {
+          result.updateMask_ = updateMask_;
+        } else {
+          result.updateMask_ = updateMaskBuilder_.build();
+        }
+        result.deletionProtectionMode_ = deletionProtectionMode_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest other) {
+        if (other == yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.getDatabaseName().isEmpty()) {
+          databaseName_ = other.databaseName_;
+          onChanged();
+        }
+        if (other.hasUpdateMask()) {
+          mergeUpdateMask(other.getUpdateMask());
+        }
+        if (other.deletionProtectionMode_ != 0) {
+          setDeletionProtectionModeValue(other.getDeletionProtectionModeValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the cluster to update a database in.
+       * To get the cluster ID use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cluster to update a database in.
+       * To get the cluster ID use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cluster to update a database in.
+       * To get the cluster ID use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cluster to update a database in.
+       * To get the cluster ID use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cluster to update a database in.
+       * To get the cluster ID use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object databaseName_ = "";
+      /**
+       * <pre>
+       * Name of the database to update.
+       * To get the name of the database use a [DatabaseService.List] request.
+       * </pre>
+       *
+       * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The databaseName.
+       */
+      public java.lang.String getDatabaseName() {
+        java.lang.Object ref = databaseName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          databaseName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the database to update.
+       * To get the name of the database use a [DatabaseService.List] request.
+       * </pre>
+       *
+       * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for databaseName.
+       */
+      public com.google.protobuf.ByteString
+          getDatabaseNameBytes() {
+        java.lang.Object ref = databaseName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          databaseName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the database to update.
+       * To get the name of the database use a [DatabaseService.List] request.
+       * </pre>
+       *
+       * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The databaseName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabaseName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        databaseName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the database to update.
+       * To get the name of the database use a [DatabaseService.List] request.
+       * </pre>
+       *
+       * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatabaseName() {
+        
+        databaseName_ = getDefaultInstance().getDatabaseName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the database to update.
+       * To get the name of the database use a [DatabaseService.List] request.
+       * </pre>
+       *
+       * <code>string database_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @param value The bytes for databaseName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabaseNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        databaseName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.FieldMask updateMask_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Database resource should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       * @return Whether the updateMask field is set.
+       */
+      public boolean hasUpdateMask() {
+        return updateMaskBuilder_ != null || updateMask_ != null;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Database resource should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       * @return The updateMask.
+       */
+      public com.google.protobuf.FieldMask getUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        } else {
+          return updateMaskBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Database resource should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updateMask_ = value;
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Database resource should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public Builder setUpdateMask(
+          com.google.protobuf.FieldMask.Builder builderForValue) {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = builderForValue.build();
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Database resource should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (updateMask_ != null) {
+            updateMask_ =
+              com.google.protobuf.FieldMask.newBuilder(updateMask_).mergeFrom(value).buildPartial();
+          } else {
+            updateMask_ = value;
+          }
+          onChanged();
+        } else {
+          updateMaskBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Database resource should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public Builder clearUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+          onChanged();
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Database resource should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
+        
+        onChanged();
+        return getUpdateMaskFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Database resource should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+        if (updateMaskBuilder_ != null) {
+          return updateMaskBuilder_.getMessageOrBuilder();
+        } else {
+          return updateMask_ == null ?
+              com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Database resource should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+          getUpdateMaskFieldBuilder() {
+        if (updateMaskBuilder_ == null) {
+          updateMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                  getUpdateMask(),
+                  getParentForChildren(),
+                  isClean());
+          updateMask_ = null;
+        }
+        return updateMaskBuilder_;
+      }
+
+      private int deletionProtectionMode_ = 0;
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 4;</code>
+       * @return The enum numeric value on the wire for deletionProtectionMode.
+       */
+      @java.lang.Override public int getDeletionProtectionModeValue() {
+        return deletionProtectionMode_;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 4;</code>
+       * @param value The enum numeric value on the wire for deletionProtectionMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeletionProtectionModeValue(int value) {
+        
+        deletionProtectionMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 4;</code>
+       * @return The deletionProtectionMode.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode getDeletionProtectionMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode result = yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode.valueOf(deletionProtectionMode_);
+        return result == null ? yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 4;</code>
+       * @param value The deletionProtectionMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeletionProtectionMode(yandex.cloud.api.mdb.mysql.v1.DeletionProtection.DeletionProtectionMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        deletionProtectionMode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the database
+       * Default value: `DELETION_PROTECTION_MODE_DISABLED` (protection is disabled)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.DeletionProtectionMode deletion_protection_mode = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeletionProtectionMode() {
+        
+        deletionProtectionMode_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mysql.v1.UpdateDatabaseRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mysql.v1.UpdateDatabaseRequest)
+    private static final yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest();
+    }
+
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateDatabaseRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateDatabaseRequest>() {
+      @java.lang.Override
+      public UpdateDatabaseRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateDatabaseRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateDatabaseRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateDatabaseRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateDatabaseMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mysql.v1.UpdateDatabaseMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the cluster where a database is being updated.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the cluster where a database is being updated.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Name of the database that is being updated.
+     * </pre>
+     *
+     * <code>string database_name = 2;</code>
+     * @return The databaseName.
+     */
+    java.lang.String getDatabaseName();
+    /**
+     * <pre>
+     * Name of the database that is being updated.
+     * </pre>
+     *
+     * <code>string database_name = 2;</code>
+     * @return The bytes for databaseName.
+     */
+    com.google.protobuf.ByteString
+        getDatabaseNameBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.mysql.v1.UpdateDatabaseMetadata}
+   */
+  public static final class UpdateDatabaseMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.UpdateDatabaseMetadata)
+      UpdateDatabaseMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateDatabaseMetadata.newBuilder() to construct.
+    private UpdateDatabaseMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateDatabaseMetadata() {
+      clusterId_ = "";
+      databaseName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateDatabaseMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateDatabaseMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              databaseName_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_UpdateDatabaseMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_UpdateDatabaseMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata.class, yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the cluster where a database is being updated.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
+     */
+    @java.lang.Override
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the cluster where a database is being updated.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATABASE_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object databaseName_;
+    /**
+     * <pre>
+     * Name of the database that is being updated.
+     * </pre>
+     *
+     * <code>string database_name = 2;</code>
+     * @return The databaseName.
+     */
+    @java.lang.Override
+    public java.lang.String getDatabaseName() {
+      java.lang.Object ref = databaseName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        databaseName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the database that is being updated.
+     * </pre>
+     *
+     * <code>string database_name = 2;</code>
+     * @return The bytes for databaseName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatabaseNameBytes() {
+      java.lang.Object ref = databaseName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        databaseName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, databaseName_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, databaseName_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata other = (yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata) obj;
+
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getDatabaseName()
+          .equals(other.getDatabaseName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + DATABASE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDatabaseName().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mysql.v1.UpdateDatabaseMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mysql.v1.UpdateDatabaseMetadata)
+        yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_UpdateDatabaseMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_UpdateDatabaseMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata.class, yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        databaseName_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_UpdateDatabaseMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata build() {
+        yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata buildPartial() {
+        yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata result = new yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata(this);
+        result.clusterId_ = clusterId_;
+        result.databaseName_ = databaseName_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata) {
+          return mergeFrom((yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata other) {
+        if (other == yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.getDatabaseName().isEmpty()) {
+          databaseName_ = other.databaseName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the cluster where a database is being updated.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cluster where a database is being updated.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cluster where a database is being updated.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cluster where a database is being updated.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cluster where a database is being updated.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object databaseName_ = "";
+      /**
+       * <pre>
+       * Name of the database that is being updated.
+       * </pre>
+       *
+       * <code>string database_name = 2;</code>
+       * @return The databaseName.
+       */
+      public java.lang.String getDatabaseName() {
+        java.lang.Object ref = databaseName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          databaseName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the database that is being updated.
+       * </pre>
+       *
+       * <code>string database_name = 2;</code>
+       * @return The bytes for databaseName.
+       */
+      public com.google.protobuf.ByteString
+          getDatabaseNameBytes() {
+        java.lang.Object ref = databaseName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          databaseName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the database that is being updated.
+       * </pre>
+       *
+       * <code>string database_name = 2;</code>
+       * @param value The databaseName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabaseName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        databaseName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the database that is being updated.
+       * </pre>
+       *
+       * <code>string database_name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatabaseName() {
+        
+        databaseName_ = getDefaultInstance().getDatabaseName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the database that is being updated.
+       * </pre>
+       *
+       * <code>string database_name = 2;</code>
+       * @param value The bytes for databaseName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabaseNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        databaseName_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mysql.v1.UpdateDatabaseMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mysql.v1.UpdateDatabaseMetadata)
+    private static final yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata();
+    }
+
+    public static yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateDatabaseMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateDatabaseMetadata>() {
+      @java.lang.Override
+      public UpdateDatabaseMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateDatabaseMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateDatabaseMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateDatabaseMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mysql.v1.DatabaseServiceOuterClass.UpdateDatabaseMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface DeleteDatabaseRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mysql.v1.DeleteDatabaseRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -6125,6 +8138,16 @@ public final class DatabaseServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_mysql_v1_CreateDatabaseMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mysql_v1_UpdateDatabaseRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mysql_v1_UpdateDatabaseRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mysql_v1_UpdateDatabaseMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mysql_v1_UpdateDatabaseMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_mysql_v1_DeleteDatabaseRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -6145,60 +8168,77 @@ public final class DatabaseServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n0yandex/cloud/mdb/mysql/v1/database_ser" +
       "vice.proto\022\031yandex.cloud.mdb.mysql.v1\032\034g" +
-      "oogle/api/annotations.proto\032 yandex/clou" +
-      "d/api/operation.proto\032&yandex/cloud/oper" +
-      "ation/operation.proto\032\035yandex/cloud/vali" +
-      "dation.proto\032(yandex/cloud/mdb/mysql/v1/" +
-      "database.proto\"m\n\022GetDatabaseRequest\022 \n\n" +
-      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0225\n\rdataba" +
-      "se_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-" +
-      "9_-]*\"v\n\024ListDatabasesRequest\022 \n\ncluster" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
-      "(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
-      "<=100\"h\n\025ListDatabasesResponse\0226\n\tdataba" +
-      "ses\030\001 \003(\0132#.yandex.cloud.mdb.mysql.v1.Da" +
-      "tabase\022\027\n\017next_page_token\030\002 \001(\t\"\177\n\025Creat" +
-      "eDatabaseRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022D\n\rdatabase_spec\030\002 \001(\0132\'.yand" +
-      "ex.cloud.mdb.mysql.v1.DatabaseSpecB\004\350\3071\001" +
-      "\"C\n\026CreateDatabaseMetadata\022\022\n\ncluster_id" +
-      "\030\001 \001(\t\022\025\n\rdatabase_name\030\002 \001(\t\"p\n\025DeleteD" +
-      "atabaseRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\0225\n\rdatabase_name\030\002 \001(\tB\036\350\3071\001\212\3101" +
-      "\004<=63\362\3071\016[a-zA-Z0-9_-]*\"C\n\026DeleteDatabas" +
-      "eMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\025\n\rdatabas" +
-      "e_name\030\002 \001(\t2\201\006\n\017DatabaseService\022\244\001\n\003Get" +
-      "\022-.yandex.cloud.mdb.mysql.v1.GetDatabase" +
-      "Request\032#.yandex.cloud.mdb.mysql.v1.Data" +
-      "base\"I\202\323\344\223\002C\022A/managed-mysql/v1/clusters" +
-      "/{cluster_id}/databases/{database_name}\022" +
-      "\244\001\n\004List\022/.yandex.cloud.mdb.mysql.v1.Lis" +
-      "tDatabasesRequest\0320.yandex.cloud.mdb.mys" +
-      "ql.v1.ListDatabasesResponse\"9\202\323\344\223\0023\0221/ma" +
+      "oogle/api/annotations.proto\032 google/prot" +
+      "obuf/field_mask.proto\032 yandex/cloud/api/" +
+      "operation.proto\032&yandex/cloud/operation/" +
+      "operation.proto\032\035yandex/cloud/validation" +
+      ".proto\032(yandex/cloud/mdb/mysql/v1/databa" +
+      "se.proto\0323yandex/cloud/mdb/mysql/v1/dele" +
+      "tion_protection.proto\"m\n\022GetDatabaseRequ" +
+      "est\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0225\n" +
+      "\rdatabase_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a" +
+      "-zA-Z0-9_-]*\"v\n\024ListDatabasesRequest\022 \n\n" +
+      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_s" +
+      "ize\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(" +
+      "\tB\t\212\3101\005<=100\"h\n\025ListDatabasesResponse\0226\n" +
+      "\tdatabases\030\001 \003(\0132#.yandex.cloud.mdb.mysq" +
+      "l.v1.Database\022\027\n\017next_page_token\030\002 \001(\t\"\177" +
+      "\n\025CreateDatabaseRequest\022 \n\ncluster_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022D\n\rdatabase_spec\030\002 \001(\013" +
+      "2\'.yandex.cloud.mdb.mysql.v1.DatabaseSpe" +
+      "cB\004\350\3071\001\"C\n\026CreateDatabaseMetadata\022\022\n\nclu" +
+      "ster_id\030\001 \001(\t\022\025\n\rdatabase_name\030\002 \001(\t\"\366\001\n" +
+      "\025UpdateDatabaseRequest\022 \n\ncluster_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\0225\n\rdatabase_name\030\002 \001(\tB" +
+      "\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022/\n\013updat" +
+      "e_mask\030\003 \001(\0132\032.google.protobuf.FieldMask" +
+      "\022S\n\030deletion_protection_mode\030\004 \001(\01621.yan" +
+      "dex.cloud.mdb.mysql.v1.DeletionProtectio" +
+      "nMode\"C\n\026UpdateDatabaseMetadata\022\022\n\nclust" +
+      "er_id\030\001 \001(\t\022\025\n\rdatabase_name\030\002 \001(\t\"p\n\025De" +
+      "leteDatabaseRequest\022 \n\ncluster_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\0225\n\rdatabase_name\030\002 \001(\tB\036\350\307" +
+      "1\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"C\n\026DeleteDa" +
+      "tabaseMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\025\n\rda" +
+      "tabase_name\030\002 \001(\t2\325\007\n\017DatabaseService\022\244\001" +
+      "\n\003Get\022-.yandex.cloud.mdb.mysql.v1.GetDat" +
+      "abaseRequest\032#.yandex.cloud.mdb.mysql.v1" +
+      ".Database\"I\202\323\344\223\002C\022A/managed-mysql/v1/clu" +
+      "sters/{cluster_id}/databases/{database_n" +
+      "ame}\022\244\001\n\004List\022/.yandex.cloud.mdb.mysql.v" +
+      "1.ListDatabasesRequest\0320.yandex.cloud.md" +
+      "b.mysql.v1.ListDatabasesResponse\"9\202\323\344\223\0023" +
+      "\0221/managed-mysql/v1/clusters/{cluster_id" +
+      "}/databases\022\301\001\n\006Create\0220.yandex.cloud.md" +
+      "b.mysql.v1.CreateDatabaseRequest\032!.yande" +
+      "x.cloud.operation.Operation\"b\202\323\344\223\0026\"1/ma" +
       "naged-mysql/v1/clusters/{cluster_id}/dat" +
-      "abases\022\301\001\n\006Create\0220.yandex.cloud.mdb.mys" +
-      "ql.v1.CreateDatabaseRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"b\202\323\344\223\0026\"1/managed" +
-      "-mysql/v1/clusters/{cluster_id}/database" +
-      "s:\001*\262\322*\"\n\026CreateDatabaseMetadata\022\010Databa" +
-      "se\022\333\001\n\006Delete\0220.yandex.cloud.mdb.mysql.v" +
-      "1.DeleteDatabaseRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"|\202\323\344\223\002C*A/managed-mys" +
-      "ql/v1/clusters/{cluster_id}/databases/{d" +
-      "atabase_name}\262\322*/\n\026DeleteDatabaseMetadat" +
-      "a\022\025google.protobuf.EmptyBd\n\035yandex.cloud" +
-      ".api.mdb.mysql.v1ZCgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/mdb/mysql/v1" +
-      ";mysqlb\006proto3"
+      "abases:\001*\262\322*\"\n\026CreateDatabaseMetadata\022\010D" +
+      "atabase\022\321\001\n\006Update\0220.yandex.cloud.mdb.my" +
+      "sql.v1.UpdateDatabaseRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"r\202\323\344\223\002F2A/manage" +
+      "d-mysql/v1/clusters/{cluster_id}/databas" +
+      "es/{database_name}:\001*\262\322*\"\n\026UpdateDatabas" +
+      "eMetadata\022\010Database\022\333\001\n\006Delete\0220.yandex." +
+      "cloud.mdb.mysql.v1.DeleteDatabaseRequest" +
+      "\032!.yandex.cloud.operation.Operation\"|\202\323\344" +
+      "\223\002C*A/managed-mysql/v1/clusters/{cluster" +
+      "_id}/databases/{database_name}\262\322*/\n\026Dele" +
+      "teDatabaseMetadata\022\025google.protobuf.Empt" +
+      "yBd\n\035yandex.cloud.api.mdb.mysql.v1ZCgith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/mdb/mysql/v1;mysqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.mdb.mysql.v1.DatabaseOuterClass.getDescriptor(),
+          yandex.cloud.api.mdb.mysql.v1.DeletionProtection.getDescriptor(),
         });
     internal_static_yandex_cloud_mdb_mysql_v1_GetDatabaseRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -6230,14 +8270,26 @@ public final class DatabaseServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_CreateDatabaseMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "DatabaseName", });
-    internal_static_yandex_cloud_mdb_mysql_v1_DeleteDatabaseRequest_descriptor =
+    internal_static_yandex_cloud_mdb_mysql_v1_UpdateDatabaseRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_mdb_mysql_v1_UpdateDatabaseRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mysql_v1_UpdateDatabaseRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "DatabaseName", "UpdateMask", "DeletionProtectionMode", });
+    internal_static_yandex_cloud_mdb_mysql_v1_UpdateDatabaseMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_mdb_mysql_v1_UpdateDatabaseMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mysql_v1_UpdateDatabaseMetadata_descriptor,
+        new java.lang.String[] { "ClusterId", "DatabaseName", });
+    internal_static_yandex_cloud_mdb_mysql_v1_DeleteDatabaseRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_mdb_mysql_v1_DeleteDatabaseRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_DeleteDatabaseRequest_descriptor,
         new java.lang.String[] { "ClusterId", "DatabaseName", });
     internal_static_yandex_cloud_mdb_mysql_v1_DeleteDatabaseMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_mdb_mysql_v1_DeleteDatabaseMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_DeleteDatabaseMetadata_descriptor,
@@ -6253,10 +8305,12 @@ public final class DatabaseServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.mdb.mysql.v1.DatabaseOuterClass.getDescriptor();
+    yandex.cloud.api.mdb.mysql.v1.DeletionProtection.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

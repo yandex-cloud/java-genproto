@@ -6576,7 +6576,7 @@ public final class Mongodb44Enterprise {
        * The maximum number of simultaneous connections that mongod will accept.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
        * @return Whether the maxIncomingConnections field is set.
        */
       boolean hasMaxIncomingConnections();
@@ -6585,7 +6585,7 @@ public final class Mongodb44Enterprise {
        * The maximum number of simultaneous connections that mongod will accept.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
        * @return The maxIncomingConnections.
        */
       com.google.protobuf.Int64Value getMaxIncomingConnections();
@@ -6594,7 +6594,7 @@ public final class Mongodb44Enterprise {
        * The maximum number of simultaneous connections that mongod will accept.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
        */
       com.google.protobuf.Int64ValueOrBuilder getMaxIncomingConnectionsOrBuilder();
 
@@ -7795,7 +7795,7 @@ public final class Mongodb44Enterprise {
        * The maximum number of simultaneous connections that mongod will accept.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
        * @return Whether the maxIncomingConnections field is set.
        */
       @java.lang.Override
@@ -7807,7 +7807,7 @@ public final class Mongodb44Enterprise {
        * The maximum number of simultaneous connections that mongod will accept.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
        * @return The maxIncomingConnections.
        */
       @java.lang.Override
@@ -7819,7 +7819,7 @@ public final class Mongodb44Enterprise {
        * The maximum number of simultaneous connections that mongod will accept.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
        */
       @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getMaxIncomingConnectionsOrBuilder() {
@@ -8217,7 +8217,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongod will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          * @return Whether the maxIncomingConnections field is set.
          */
         public boolean hasMaxIncomingConnections() {
@@ -8228,7 +8228,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongod will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          * @return The maxIncomingConnections.
          */
         public com.google.protobuf.Int64Value getMaxIncomingConnections() {
@@ -8243,7 +8243,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongod will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         public Builder setMaxIncomingConnections(com.google.protobuf.Int64Value value) {
           if (maxIncomingConnectionsBuilder_ == null) {
@@ -8263,7 +8263,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongod will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         public Builder setMaxIncomingConnections(
             com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -8281,7 +8281,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongod will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         public Builder mergeMaxIncomingConnections(com.google.protobuf.Int64Value value) {
           if (maxIncomingConnectionsBuilder_ == null) {
@@ -8303,7 +8303,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongod will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         public Builder clearMaxIncomingConnections() {
           if (maxIncomingConnectionsBuilder_ == null) {
@@ -8321,7 +8321,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongod will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         public com.google.protobuf.Int64Value.Builder getMaxIncomingConnectionsBuilder() {
           
@@ -8333,7 +8333,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongod will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         public com.google.protobuf.Int64ValueOrBuilder getMaxIncomingConnectionsOrBuilder() {
           if (maxIncomingConnectionsBuilder_ != null) {
@@ -8348,7 +8348,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongod will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -17463,7 +17463,7 @@ public final class Mongodb44Enterprise {
        * The maximum number of simultaneous connections that mongocfg will accept.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
        * @return Whether the maxIncomingConnections field is set.
        */
       boolean hasMaxIncomingConnections();
@@ -17472,7 +17472,7 @@ public final class Mongodb44Enterprise {
        * The maximum number of simultaneous connections that mongocfg will accept.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
        * @return The maxIncomingConnections.
        */
       com.google.protobuf.Int64Value getMaxIncomingConnections();
@@ -17481,7 +17481,7 @@ public final class Mongodb44Enterprise {
        * The maximum number of simultaneous connections that mongocfg will accept.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
        */
       com.google.protobuf.Int64ValueOrBuilder getMaxIncomingConnectionsOrBuilder();
     }
@@ -17582,7 +17582,7 @@ public final class Mongodb44Enterprise {
        * The maximum number of simultaneous connections that mongocfg will accept.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
        * @return Whether the maxIncomingConnections field is set.
        */
       @java.lang.Override
@@ -17594,7 +17594,7 @@ public final class Mongodb44Enterprise {
        * The maximum number of simultaneous connections that mongocfg will accept.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
        * @return The maxIncomingConnections.
        */
       @java.lang.Override
@@ -17606,7 +17606,7 @@ public final class Mongodb44Enterprise {
        * The maximum number of simultaneous connections that mongocfg will accept.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
        */
       @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getMaxIncomingConnectionsOrBuilder() {
@@ -17936,7 +17936,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongocfg will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          * @return Whether the maxIncomingConnections field is set.
          */
         public boolean hasMaxIncomingConnections() {
@@ -17947,7 +17947,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongocfg will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          * @return The maxIncomingConnections.
          */
         public com.google.protobuf.Int64Value getMaxIncomingConnections() {
@@ -17962,7 +17962,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongocfg will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         public Builder setMaxIncomingConnections(com.google.protobuf.Int64Value value) {
           if (maxIncomingConnectionsBuilder_ == null) {
@@ -17982,7 +17982,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongocfg will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         public Builder setMaxIncomingConnections(
             com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -18000,7 +18000,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongocfg will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         public Builder mergeMaxIncomingConnections(com.google.protobuf.Int64Value value) {
           if (maxIncomingConnectionsBuilder_ == null) {
@@ -18022,7 +18022,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongocfg will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         public Builder clearMaxIncomingConnections() {
           if (maxIncomingConnectionsBuilder_ == null) {
@@ -18040,7 +18040,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongocfg will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         public com.google.protobuf.Int64Value.Builder getMaxIncomingConnectionsBuilder() {
           
@@ -18052,7 +18052,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongocfg will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         public com.google.protobuf.Int64ValueOrBuilder getMaxIncomingConnectionsOrBuilder() {
           if (maxIncomingConnectionsBuilder_ != null) {
@@ -18067,7 +18067,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongocfg will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -19271,7 +19271,7 @@ public final class Mongodb44Enterprise {
        * The maximum number of simultaneous connections that mongos will accept.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
        * @return Whether the maxIncomingConnections field is set.
        */
       boolean hasMaxIncomingConnections();
@@ -19280,7 +19280,7 @@ public final class Mongodb44Enterprise {
        * The maximum number of simultaneous connections that mongos will accept.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
        * @return The maxIncomingConnections.
        */
       com.google.protobuf.Int64Value getMaxIncomingConnections();
@@ -19289,7 +19289,7 @@ public final class Mongodb44Enterprise {
        * The maximum number of simultaneous connections that mongos will accept.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
        */
       com.google.protobuf.Int64ValueOrBuilder getMaxIncomingConnectionsOrBuilder();
 
@@ -20490,7 +20490,7 @@ public final class Mongodb44Enterprise {
        * The maximum number of simultaneous connections that mongos will accept.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
        * @return Whether the maxIncomingConnections field is set.
        */
       @java.lang.Override
@@ -20502,7 +20502,7 @@ public final class Mongodb44Enterprise {
        * The maximum number of simultaneous connections that mongos will accept.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
        * @return The maxIncomingConnections.
        */
       @java.lang.Override
@@ -20514,7 +20514,7 @@ public final class Mongodb44Enterprise {
        * The maximum number of simultaneous connections that mongos will accept.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+       * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
        */
       @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getMaxIncomingConnectionsOrBuilder() {
@@ -20912,7 +20912,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongos will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          * @return Whether the maxIncomingConnections field is set.
          */
         public boolean hasMaxIncomingConnections() {
@@ -20923,7 +20923,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongos will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          * @return The maxIncomingConnections.
          */
         public com.google.protobuf.Int64Value getMaxIncomingConnections() {
@@ -20938,7 +20938,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongos will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         public Builder setMaxIncomingConnections(com.google.protobuf.Int64Value value) {
           if (maxIncomingConnectionsBuilder_ == null) {
@@ -20958,7 +20958,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongos will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         public Builder setMaxIncomingConnections(
             com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -20976,7 +20976,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongos will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         public Builder mergeMaxIncomingConnections(com.google.protobuf.Int64Value value) {
           if (maxIncomingConnectionsBuilder_ == null) {
@@ -20998,7 +20998,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongos will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         public Builder clearMaxIncomingConnections() {
           if (maxIncomingConnectionsBuilder_ == null) {
@@ -21016,7 +21016,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongos will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         public com.google.protobuf.Int64Value.Builder getMaxIncomingConnectionsBuilder() {
           
@@ -21028,7 +21028,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongos will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         public com.google.protobuf.Int64ValueOrBuilder getMaxIncomingConnectionsOrBuilder() {
           if (maxIncomingConnectionsBuilder_ != null) {
@@ -21043,7 +21043,7 @@ public final class Mongodb44Enterprise {
          * The maximum number of simultaneous connections that mongos will accept.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-16384"];</code>
+         * <code>.google.protobuf.Int64Value max_incoming_connections = 1 [(.yandex.cloud.value) = "10-32768"];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -25686,7 +25686,7 @@ public final class Mongodb44Enterprise {
       "\n\020MODE_UNSPECIFIED\020\000\022\007\n\003OFF\020\001\022\013\n\007SLOW_OP" +
       "\020\002\022\007\n\003ALL\020\003\032\244\003\n\007Network\022K\n\030max_incoming_" +
       "connections\030\001 \001(\0132\033.google.protobuf.Int6" +
-      "4ValueB\014\372\3071\01010-16384\022g\n\013compression\030\002 \001(" +
+      "4ValueB\014\372\3071\01010-32768\022g\n\013compression\030\002 \001(" +
       "\0132R.yandex.cloud.mdb.mongodb.v1.config.M" +
       "ongodConfig4_4_enterprise.Network.Compre" +
       "ssion\032\342\001\n\013Compression\022{\n\013compressors\030\001 \003" +
@@ -25731,12 +25731,12 @@ public final class Mongodb44Enterprise {
       "_UNSPECIFIED\020\000\022\007\n\003OFF\020\001\022\013\n\007SLOW_OP\020\002\022\007\n\003" +
       "ALL\020\003\032V\n\007Network\022K\n\030max_incoming_connect" +
       "ions\030\001 \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\014\372\3071\01010-16384\"\230\004\n\032MongosConfig4_4_enterp" +
+      "\014\372\3071\01010-32768\"\230\004\n\032MongosConfig4_4_enterp" +
       "rise\022S\n\003net\030\001 \001(\0132F.yandex.cloud.mdb.mon" +
       "godb.v1.config.MongosConfig4_4_enterpris" +
       "e.Network\032\244\003\n\007Network\022K\n\030max_incoming_co" +
       "nnections\030\001 \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\014\372\3071\01010-16384\022g\n\013compression\030\002 \001(\0132" +
+      "alueB\014\372\3071\01010-32768\022g\n\013compression\030\002 \001(\0132" +
       "R.yandex.cloud.mdb.mongodb.v1.config.Mon" +
       "gosConfig4_4_enterprise.Network.Compress" +
       "ion\032\342\001\n\013Compression\022{\n\013compressors\030\001 \003(\016" +

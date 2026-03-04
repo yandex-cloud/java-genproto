@@ -20,64 +20,144 @@ public final class Opensearch {
 
     /**
      * <pre>
-     * the maximum number of allowed boolean clauses in a query
+     * Defines the maximum product of fields and terms that are queryable simultaneously.
+     * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
+     * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
+     * New thread pools use the updated value.
+     * Default value: **1024**.
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+     * <code>.google.protobuf.Int64Value max_clause_count = 3 [json_name = "max_clause_count", (.yandex.cloud.value) = "1-2147483647"];</code>
      * @return Whether the maxClauseCount field is set.
      */
     boolean hasMaxClauseCount();
     /**
      * <pre>
-     * the maximum number of allowed boolean clauses in a query
+     * Defines the maximum product of fields and terms that are queryable simultaneously.
+     * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
+     * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
+     * New thread pools use the updated value.
+     * Default value: **1024**.
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+     * <code>.google.protobuf.Int64Value max_clause_count = 3 [json_name = "max_clause_count", (.yandex.cloud.value) = "1-2147483647"];</code>
      * @return The maxClauseCount.
      */
     com.google.protobuf.Int64Value getMaxClauseCount();
     /**
      * <pre>
-     * the maximum number of allowed boolean clauses in a query
+     * Defines the maximum product of fields and terms that are queryable simultaneously.
+     * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
+     * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
+     * New thread pools use the updated value.
+     * Default value: **1024**.
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+     * <code>.google.protobuf.Int64Value max_clause_count = 3 [json_name = "max_clause_count", (.yandex.cloud.value) = "1-2147483647"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxClauseCountOrBuilder();
 
     /**
      * <pre>
-     * the percentage or absolute value (10%, 512mb) of heap space that is allocated to fielddata
+     * The maximum size of the field data cache.
+     * May be specified as an absolute value (for example, 8GB) or a percentage of the node heap (for example, 50%).
+     * This setting is dynamic. If you don't specify this setting, the maximum size is 35%.
+     * This value should be smaller than the **indices.breaker.fielddata.limit**
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
      * </pre>
      *
-     * <code>string fielddata_cache_size = 4;</code>
+     * <code>string fielddata_cache_size = 4 [json_name = "fielddata_cache_size"];</code>
      * @return The fielddataCacheSize.
      */
     java.lang.String getFielddataCacheSize();
     /**
      * <pre>
-     * the percentage or absolute value (10%, 512mb) of heap space that is allocated to fielddata
+     * The maximum size of the field data cache.
+     * May be specified as an absolute value (for example, 8GB) or a percentage of the node heap (for example, 50%).
+     * This setting is dynamic. If you don't specify this setting, the maximum size is 35%.
+     * This value should be smaller than the **indices.breaker.fielddata.limit**
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
      * </pre>
      *
-     * <code>string fielddata_cache_size = 4;</code>
+     * <code>string fielddata_cache_size = 4 [json_name = "fielddata_cache_size"];</code>
      * @return The bytes for fielddataCacheSize.
      */
     com.google.protobuf.ByteString
         getFielddataCacheSizeBytes();
 
     /**
-     * <code>string reindex_remote_whitelist = 6;</code>
+     * <pre>
+     * The maximum number of aggregation buckets allowed in a single response. Default is 65535
+     * Default value: **65535**.
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/search-settings).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value search_max_buckets = 5 [json_name = "search_max_buckets", (.yandex.cloud.value) = "0-2147483647"];</code>
+     * @return Whether the searchMaxBuckets field is set.
+     */
+    boolean hasSearchMaxBuckets();
+    /**
+     * <pre>
+     * The maximum number of aggregation buckets allowed in a single response. Default is 65535
+     * Default value: **65535**.
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/search-settings).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value search_max_buckets = 5 [json_name = "search_max_buckets", (.yandex.cloud.value) = "0-2147483647"];</code>
+     * @return The searchMaxBuckets.
+     */
+    com.google.protobuf.Int64Value getSearchMaxBuckets();
+    /**
+     * <pre>
+     * The maximum number of aggregation buckets allowed in a single response. Default is 65535
+     * Default value: **65535**.
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/search-settings).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value search_max_buckets = 5 [json_name = "search_max_buckets", (.yandex.cloud.value) = "0-2147483647"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSearchMaxBucketsOrBuilder();
+
+    /**
+     * <pre>
+     * Allowed remote hosts
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/api-reference/document-apis/reindex/#remote-cluster-allow-list).
+     * </pre>
+     *
+     * <code>string reindex_remote_whitelist = 6 [json_name = "reindex_remote_whitelist"];</code>
      * @return The reindexRemoteWhitelist.
      */
     java.lang.String getReindexRemoteWhitelist();
     /**
-     * <code>string reindex_remote_whitelist = 6;</code>
+     * <pre>
+     * Allowed remote hosts
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/api-reference/document-apis/reindex/#remote-cluster-allow-list).
+     * </pre>
+     *
+     * <code>string reindex_remote_whitelist = 6 [json_name = "reindex_remote_whitelist"];</code>
      * @return The bytes for reindexRemoteWhitelist.
      */
     com.google.protobuf.ByteString
         getReindexRemoteWhitelistBytes();
   }
   /**
+   * <pre>
+   * OpenSearch server configuration settings.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2}
    */
   public static final class OpenSearchConfig2 extends
@@ -143,6 +223,19 @@ public final class Opensearch {
               fielddataCacheSize_ = s;
               break;
             }
+            case 42: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (searchMaxBuckets_ != null) {
+                subBuilder = searchMaxBuckets_.toBuilder();
+              }
+              searchMaxBuckets_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(searchMaxBuckets_);
+                searchMaxBuckets_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             case 50: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -185,10 +278,16 @@ public final class Opensearch {
     private com.google.protobuf.Int64Value maxClauseCount_;
     /**
      * <pre>
-     * the maximum number of allowed boolean clauses in a query
+     * Defines the maximum product of fields and terms that are queryable simultaneously.
+     * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
+     * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
+     * New thread pools use the updated value.
+     * Default value: **1024**.
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+     * <code>.google.protobuf.Int64Value max_clause_count = 3 [json_name = "max_clause_count", (.yandex.cloud.value) = "1-2147483647"];</code>
      * @return Whether the maxClauseCount field is set.
      */
     @java.lang.Override
@@ -197,10 +296,16 @@ public final class Opensearch {
     }
     /**
      * <pre>
-     * the maximum number of allowed boolean clauses in a query
+     * Defines the maximum product of fields and terms that are queryable simultaneously.
+     * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
+     * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
+     * New thread pools use the updated value.
+     * Default value: **1024**.
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+     * <code>.google.protobuf.Int64Value max_clause_count = 3 [json_name = "max_clause_count", (.yandex.cloud.value) = "1-2147483647"];</code>
      * @return The maxClauseCount.
      */
     @java.lang.Override
@@ -209,10 +314,16 @@ public final class Opensearch {
     }
     /**
      * <pre>
-     * the maximum number of allowed boolean clauses in a query
+     * Defines the maximum product of fields and terms that are queryable simultaneously.
+     * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
+     * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
+     * New thread pools use the updated value.
+     * Default value: **1024**.
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+     * <code>.google.protobuf.Int64Value max_clause_count = 3 [json_name = "max_clause_count", (.yandex.cloud.value) = "1-2147483647"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaxClauseCountOrBuilder() {
@@ -223,10 +334,15 @@ public final class Opensearch {
     private volatile java.lang.Object fielddataCacheSize_;
     /**
      * <pre>
-     * the percentage or absolute value (10%, 512mb) of heap space that is allocated to fielddata
+     * The maximum size of the field data cache.
+     * May be specified as an absolute value (for example, 8GB) or a percentage of the node heap (for example, 50%).
+     * This setting is dynamic. If you don't specify this setting, the maximum size is 35%.
+     * This value should be smaller than the **indices.breaker.fielddata.limit**
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
      * </pre>
      *
-     * <code>string fielddata_cache_size = 4;</code>
+     * <code>string fielddata_cache_size = 4 [json_name = "fielddata_cache_size"];</code>
      * @return The fielddataCacheSize.
      */
     @java.lang.Override
@@ -244,10 +360,15 @@ public final class Opensearch {
     }
     /**
      * <pre>
-     * the percentage or absolute value (10%, 512mb) of heap space that is allocated to fielddata
+     * The maximum size of the field data cache.
+     * May be specified as an absolute value (for example, 8GB) or a percentage of the node heap (for example, 50%).
+     * This setting is dynamic. If you don't specify this setting, the maximum size is 35%.
+     * This value should be smaller than the **indices.breaker.fielddata.limit**
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
      * </pre>
      *
-     * <code>string fielddata_cache_size = 4;</code>
+     * <code>string fielddata_cache_size = 4 [json_name = "fielddata_cache_size"];</code>
      * @return The bytes for fielddataCacheSize.
      */
     @java.lang.Override
@@ -265,10 +386,63 @@ public final class Opensearch {
       }
     }
 
+    public static final int SEARCH_MAX_BUCKETS_FIELD_NUMBER = 5;
+    private com.google.protobuf.Int64Value searchMaxBuckets_;
+    /**
+     * <pre>
+     * The maximum number of aggregation buckets allowed in a single response. Default is 65535
+     * Default value: **65535**.
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/search-settings).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value search_max_buckets = 5 [json_name = "search_max_buckets", (.yandex.cloud.value) = "0-2147483647"];</code>
+     * @return Whether the searchMaxBuckets field is set.
+     */
+    @java.lang.Override
+    public boolean hasSearchMaxBuckets() {
+      return searchMaxBuckets_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum number of aggregation buckets allowed in a single response. Default is 65535
+     * Default value: **65535**.
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/search-settings).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value search_max_buckets = 5 [json_name = "search_max_buckets", (.yandex.cloud.value) = "0-2147483647"];</code>
+     * @return The searchMaxBuckets.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getSearchMaxBuckets() {
+      return searchMaxBuckets_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : searchMaxBuckets_;
+    }
+    /**
+     * <pre>
+     * The maximum number of aggregation buckets allowed in a single response. Default is 65535
+     * Default value: **65535**.
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/search-settings).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value search_max_buckets = 5 [json_name = "search_max_buckets", (.yandex.cloud.value) = "0-2147483647"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getSearchMaxBucketsOrBuilder() {
+      return getSearchMaxBuckets();
+    }
+
     public static final int REINDEX_REMOTE_WHITELIST_FIELD_NUMBER = 6;
     private volatile java.lang.Object reindexRemoteWhitelist_;
     /**
-     * <code>string reindex_remote_whitelist = 6;</code>
+     * <pre>
+     * Allowed remote hosts
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/api-reference/document-apis/reindex/#remote-cluster-allow-list).
+     * </pre>
+     *
+     * <code>string reindex_remote_whitelist = 6 [json_name = "reindex_remote_whitelist"];</code>
      * @return The reindexRemoteWhitelist.
      */
     @java.lang.Override
@@ -285,7 +459,13 @@ public final class Opensearch {
       }
     }
     /**
-     * <code>string reindex_remote_whitelist = 6;</code>
+     * <pre>
+     * Allowed remote hosts
+     * Change of the setting is applied with restart.
+     * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/api-reference/document-apis/reindex/#remote-cluster-allow-list).
+     * </pre>
+     *
+     * <code>string reindex_remote_whitelist = 6 [json_name = "reindex_remote_whitelist"];</code>
      * @return The bytes for reindexRemoteWhitelist.
      */
     @java.lang.Override
@@ -323,6 +503,9 @@ public final class Opensearch {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fielddataCacheSize_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, fielddataCacheSize_);
       }
+      if (searchMaxBuckets_ != null) {
+        output.writeMessage(5, getSearchMaxBuckets());
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reindexRemoteWhitelist_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, reindexRemoteWhitelist_);
       }
@@ -341,6 +524,10 @@ public final class Opensearch {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fielddataCacheSize_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, fielddataCacheSize_);
+      }
+      if (searchMaxBuckets_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getSearchMaxBuckets());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reindexRemoteWhitelist_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, reindexRemoteWhitelist_);
@@ -367,6 +554,11 @@ public final class Opensearch {
       }
       if (!getFielddataCacheSize()
           .equals(other.getFielddataCacheSize())) return false;
+      if (hasSearchMaxBuckets() != other.hasSearchMaxBuckets()) return false;
+      if (hasSearchMaxBuckets()) {
+        if (!getSearchMaxBuckets()
+            .equals(other.getSearchMaxBuckets())) return false;
+      }
       if (!getReindexRemoteWhitelist()
           .equals(other.getReindexRemoteWhitelist())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -386,6 +578,10 @@ public final class Opensearch {
       }
       hash = (37 * hash) + FIELDDATA_CACHE_SIZE_FIELD_NUMBER;
       hash = (53 * hash) + getFielddataCacheSize().hashCode();
+      if (hasSearchMaxBuckets()) {
+        hash = (37 * hash) + SEARCH_MAX_BUCKETS_FIELD_NUMBER;
+        hash = (53 * hash) + getSearchMaxBuckets().hashCode();
+      }
       hash = (37 * hash) + REINDEX_REMOTE_WHITELIST_FIELD_NUMBER;
       hash = (53 * hash) + getReindexRemoteWhitelist().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -484,6 +680,10 @@ public final class Opensearch {
       return builder;
     }
     /**
+     * <pre>
+     * OpenSearch server configuration settings.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2}
      */
     public static final class Builder extends
@@ -529,6 +729,12 @@ public final class Opensearch {
         }
         fielddataCacheSize_ = "";
 
+        if (searchMaxBucketsBuilder_ == null) {
+          searchMaxBuckets_ = null;
+        } else {
+          searchMaxBuckets_ = null;
+          searchMaxBucketsBuilder_ = null;
+        }
         reindexRemoteWhitelist_ = "";
 
         return this;
@@ -563,6 +769,11 @@ public final class Opensearch {
           result.maxClauseCount_ = maxClauseCountBuilder_.build();
         }
         result.fielddataCacheSize_ = fielddataCacheSize_;
+        if (searchMaxBucketsBuilder_ == null) {
+          result.searchMaxBuckets_ = searchMaxBuckets_;
+        } else {
+          result.searchMaxBuckets_ = searchMaxBucketsBuilder_.build();
+        }
         result.reindexRemoteWhitelist_ = reindexRemoteWhitelist_;
         onBuilt();
         return result;
@@ -619,6 +830,9 @@ public final class Opensearch {
           fielddataCacheSize_ = other.fielddataCacheSize_;
           onChanged();
         }
+        if (other.hasSearchMaxBuckets()) {
+          mergeSearchMaxBuckets(other.getSearchMaxBuckets());
+        }
         if (!other.getReindexRemoteWhitelist().isEmpty()) {
           reindexRemoteWhitelist_ = other.reindexRemoteWhitelist_;
           onChanged();
@@ -657,10 +871,16 @@ public final class Opensearch {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxClauseCountBuilder_;
       /**
        * <pre>
-       * the maximum number of allowed boolean clauses in a query
+       * Defines the maximum product of fields and terms that are queryable simultaneously.
+       * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
+       * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
+       * New thread pools use the updated value.
+       * Default value: **1024**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+       * <code>.google.protobuf.Int64Value max_clause_count = 3 [json_name = "max_clause_count", (.yandex.cloud.value) = "1-2147483647"];</code>
        * @return Whether the maxClauseCount field is set.
        */
       public boolean hasMaxClauseCount() {
@@ -668,10 +888,16 @@ public final class Opensearch {
       }
       /**
        * <pre>
-       * the maximum number of allowed boolean clauses in a query
+       * Defines the maximum product of fields and terms that are queryable simultaneously.
+       * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
+       * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
+       * New thread pools use the updated value.
+       * Default value: **1024**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+       * <code>.google.protobuf.Int64Value max_clause_count = 3 [json_name = "max_clause_count", (.yandex.cloud.value) = "1-2147483647"];</code>
        * @return The maxClauseCount.
        */
       public com.google.protobuf.Int64Value getMaxClauseCount() {
@@ -683,10 +909,16 @@ public final class Opensearch {
       }
       /**
        * <pre>
-       * the maximum number of allowed boolean clauses in a query
+       * Defines the maximum product of fields and terms that are queryable simultaneously.
+       * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
+       * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
+       * New thread pools use the updated value.
+       * Default value: **1024**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+       * <code>.google.protobuf.Int64Value max_clause_count = 3 [json_name = "max_clause_count", (.yandex.cloud.value) = "1-2147483647"];</code>
        */
       public Builder setMaxClauseCount(com.google.protobuf.Int64Value value) {
         if (maxClauseCountBuilder_ == null) {
@@ -703,10 +935,16 @@ public final class Opensearch {
       }
       /**
        * <pre>
-       * the maximum number of allowed boolean clauses in a query
+       * Defines the maximum product of fields and terms that are queryable simultaneously.
+       * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
+       * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
+       * New thread pools use the updated value.
+       * Default value: **1024**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+       * <code>.google.protobuf.Int64Value max_clause_count = 3 [json_name = "max_clause_count", (.yandex.cloud.value) = "1-2147483647"];</code>
        */
       public Builder setMaxClauseCount(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -721,10 +959,16 @@ public final class Opensearch {
       }
       /**
        * <pre>
-       * the maximum number of allowed boolean clauses in a query
+       * Defines the maximum product of fields and terms that are queryable simultaneously.
+       * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
+       * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
+       * New thread pools use the updated value.
+       * Default value: **1024**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+       * <code>.google.protobuf.Int64Value max_clause_count = 3 [json_name = "max_clause_count", (.yandex.cloud.value) = "1-2147483647"];</code>
        */
       public Builder mergeMaxClauseCount(com.google.protobuf.Int64Value value) {
         if (maxClauseCountBuilder_ == null) {
@@ -743,10 +987,16 @@ public final class Opensearch {
       }
       /**
        * <pre>
-       * the maximum number of allowed boolean clauses in a query
+       * Defines the maximum product of fields and terms that are queryable simultaneously.
+       * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
+       * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
+       * New thread pools use the updated value.
+       * Default value: **1024**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+       * <code>.google.protobuf.Int64Value max_clause_count = 3 [json_name = "max_clause_count", (.yandex.cloud.value) = "1-2147483647"];</code>
        */
       public Builder clearMaxClauseCount() {
         if (maxClauseCountBuilder_ == null) {
@@ -761,10 +1011,16 @@ public final class Opensearch {
       }
       /**
        * <pre>
-       * the maximum number of allowed boolean clauses in a query
+       * Defines the maximum product of fields and terms that are queryable simultaneously.
+       * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
+       * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
+       * New thread pools use the updated value.
+       * Default value: **1024**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+       * <code>.google.protobuf.Int64Value max_clause_count = 3 [json_name = "max_clause_count", (.yandex.cloud.value) = "1-2147483647"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getMaxClauseCountBuilder() {
         
@@ -773,10 +1029,16 @@ public final class Opensearch {
       }
       /**
        * <pre>
-       * the maximum number of allowed boolean clauses in a query
+       * Defines the maximum product of fields and terms that are queryable simultaneously.
+       * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
+       * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
+       * New thread pools use the updated value.
+       * Default value: **1024**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+       * <code>.google.protobuf.Int64Value max_clause_count = 3 [json_name = "max_clause_count", (.yandex.cloud.value) = "1-2147483647"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMaxClauseCountOrBuilder() {
         if (maxClauseCountBuilder_ != null) {
@@ -788,10 +1050,16 @@ public final class Opensearch {
       }
       /**
        * <pre>
-       * the maximum number of allowed boolean clauses in a query
+       * Defines the maximum product of fields and terms that are queryable simultaneously.
+       * Before OpenSearch 2.16, a cluster restart was required in order to apply this static setting.
+       * Now dynamic, existing search thread pools may use the old static value initially, causing **TooManyClauses** exceptions.
+       * New thread pools use the updated value.
+       * Default value: **1024**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_clause_count = 3;</code>
+       * <code>.google.protobuf.Int64Value max_clause_count = 3 [json_name = "max_clause_count", (.yandex.cloud.value) = "1-2147483647"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -810,10 +1078,15 @@ public final class Opensearch {
       private java.lang.Object fielddataCacheSize_ = "";
       /**
        * <pre>
-       * the percentage or absolute value (10%, 512mb) of heap space that is allocated to fielddata
+       * The maximum size of the field data cache.
+       * May be specified as an absolute value (for example, 8GB) or a percentage of the node heap (for example, 50%).
+       * This setting is dynamic. If you don't specify this setting, the maximum size is 35%.
+       * This value should be smaller than the **indices.breaker.fielddata.limit**
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
        * </pre>
        *
-       * <code>string fielddata_cache_size = 4;</code>
+       * <code>string fielddata_cache_size = 4 [json_name = "fielddata_cache_size"];</code>
        * @return The fielddataCacheSize.
        */
       public java.lang.String getFielddataCacheSize() {
@@ -830,10 +1103,15 @@ public final class Opensearch {
       }
       /**
        * <pre>
-       * the percentage or absolute value (10%, 512mb) of heap space that is allocated to fielddata
+       * The maximum size of the field data cache.
+       * May be specified as an absolute value (for example, 8GB) or a percentage of the node heap (for example, 50%).
+       * This setting is dynamic. If you don't specify this setting, the maximum size is 35%.
+       * This value should be smaller than the **indices.breaker.fielddata.limit**
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
        * </pre>
        *
-       * <code>string fielddata_cache_size = 4;</code>
+       * <code>string fielddata_cache_size = 4 [json_name = "fielddata_cache_size"];</code>
        * @return The bytes for fielddataCacheSize.
        */
       public com.google.protobuf.ByteString
@@ -851,10 +1129,15 @@ public final class Opensearch {
       }
       /**
        * <pre>
-       * the percentage or absolute value (10%, 512mb) of heap space that is allocated to fielddata
+       * The maximum size of the field data cache.
+       * May be specified as an absolute value (for example, 8GB) or a percentage of the node heap (for example, 50%).
+       * This setting is dynamic. If you don't specify this setting, the maximum size is 35%.
+       * This value should be smaller than the **indices.breaker.fielddata.limit**
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
        * </pre>
        *
-       * <code>string fielddata_cache_size = 4;</code>
+       * <code>string fielddata_cache_size = 4 [json_name = "fielddata_cache_size"];</code>
        * @param value The fielddataCacheSize to set.
        * @return This builder for chaining.
        */
@@ -870,10 +1153,15 @@ public final class Opensearch {
       }
       /**
        * <pre>
-       * the percentage or absolute value (10%, 512mb) of heap space that is allocated to fielddata
+       * The maximum size of the field data cache.
+       * May be specified as an absolute value (for example, 8GB) or a percentage of the node heap (for example, 50%).
+       * This setting is dynamic. If you don't specify this setting, the maximum size is 35%.
+       * This value should be smaller than the **indices.breaker.fielddata.limit**
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
        * </pre>
        *
-       * <code>string fielddata_cache_size = 4;</code>
+       * <code>string fielddata_cache_size = 4 [json_name = "fielddata_cache_size"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFielddataCacheSize() {
@@ -884,10 +1172,15 @@ public final class Opensearch {
       }
       /**
        * <pre>
-       * the percentage or absolute value (10%, 512mb) of heap space that is allocated to fielddata
+       * The maximum size of the field data cache.
+       * May be specified as an absolute value (for example, 8GB) or a percentage of the node heap (for example, 50%).
+       * This setting is dynamic. If you don't specify this setting, the maximum size is 35%.
+       * This value should be smaller than the **indices.breaker.fielddata.limit**
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/index-settings/#dynamic-cluster-level-index-settings).
        * </pre>
        *
-       * <code>string fielddata_cache_size = 4;</code>
+       * <code>string fielddata_cache_size = 4 [json_name = "fielddata_cache_size"];</code>
        * @param value The bytes for fielddataCacheSize to set.
        * @return This builder for chaining.
        */
@@ -903,9 +1196,197 @@ public final class Opensearch {
         return this;
       }
 
+      private com.google.protobuf.Int64Value searchMaxBuckets_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> searchMaxBucketsBuilder_;
+      /**
+       * <pre>
+       * The maximum number of aggregation buckets allowed in a single response. Default is 65535
+       * Default value: **65535**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/search-settings).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value search_max_buckets = 5 [json_name = "search_max_buckets", (.yandex.cloud.value) = "0-2147483647"];</code>
+       * @return Whether the searchMaxBuckets field is set.
+       */
+      public boolean hasSearchMaxBuckets() {
+        return searchMaxBucketsBuilder_ != null || searchMaxBuckets_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum number of aggregation buckets allowed in a single response. Default is 65535
+       * Default value: **65535**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/search-settings).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value search_max_buckets = 5 [json_name = "search_max_buckets", (.yandex.cloud.value) = "0-2147483647"];</code>
+       * @return The searchMaxBuckets.
+       */
+      public com.google.protobuf.Int64Value getSearchMaxBuckets() {
+        if (searchMaxBucketsBuilder_ == null) {
+          return searchMaxBuckets_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : searchMaxBuckets_;
+        } else {
+          return searchMaxBucketsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum number of aggregation buckets allowed in a single response. Default is 65535
+       * Default value: **65535**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/search-settings).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value search_max_buckets = 5 [json_name = "search_max_buckets", (.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public Builder setSearchMaxBuckets(com.google.protobuf.Int64Value value) {
+        if (searchMaxBucketsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          searchMaxBuckets_ = value;
+          onChanged();
+        } else {
+          searchMaxBucketsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of aggregation buckets allowed in a single response. Default is 65535
+       * Default value: **65535**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/search-settings).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value search_max_buckets = 5 [json_name = "search_max_buckets", (.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public Builder setSearchMaxBuckets(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (searchMaxBucketsBuilder_ == null) {
+          searchMaxBuckets_ = builderForValue.build();
+          onChanged();
+        } else {
+          searchMaxBucketsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of aggregation buckets allowed in a single response. Default is 65535
+       * Default value: **65535**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/search-settings).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value search_max_buckets = 5 [json_name = "search_max_buckets", (.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public Builder mergeSearchMaxBuckets(com.google.protobuf.Int64Value value) {
+        if (searchMaxBucketsBuilder_ == null) {
+          if (searchMaxBuckets_ != null) {
+            searchMaxBuckets_ =
+              com.google.protobuf.Int64Value.newBuilder(searchMaxBuckets_).mergeFrom(value).buildPartial();
+          } else {
+            searchMaxBuckets_ = value;
+          }
+          onChanged();
+        } else {
+          searchMaxBucketsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of aggregation buckets allowed in a single response. Default is 65535
+       * Default value: **65535**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/search-settings).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value search_max_buckets = 5 [json_name = "search_max_buckets", (.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public Builder clearSearchMaxBuckets() {
+        if (searchMaxBucketsBuilder_ == null) {
+          searchMaxBuckets_ = null;
+          onChanged();
+        } else {
+          searchMaxBuckets_ = null;
+          searchMaxBucketsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of aggregation buckets allowed in a single response. Default is 65535
+       * Default value: **65535**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/search-settings).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value search_max_buckets = 5 [json_name = "search_max_buckets", (.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSearchMaxBucketsBuilder() {
+        
+        onChanged();
+        return getSearchMaxBucketsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum number of aggregation buckets allowed in a single response. Default is 65535
+       * Default value: **65535**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/search-settings).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value search_max_buckets = 5 [json_name = "search_max_buckets", (.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSearchMaxBucketsOrBuilder() {
+        if (searchMaxBucketsBuilder_ != null) {
+          return searchMaxBucketsBuilder_.getMessageOrBuilder();
+        } else {
+          return searchMaxBuckets_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : searchMaxBuckets_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum number of aggregation buckets allowed in a single response. Default is 65535
+       * Default value: **65535**.
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/install-and-configure/configuring-opensearch/search-settings).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value search_max_buckets = 5 [json_name = "search_max_buckets", (.yandex.cloud.value) = "0-2147483647"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSearchMaxBucketsFieldBuilder() {
+        if (searchMaxBucketsBuilder_ == null) {
+          searchMaxBucketsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSearchMaxBuckets(),
+                  getParentForChildren(),
+                  isClean());
+          searchMaxBuckets_ = null;
+        }
+        return searchMaxBucketsBuilder_;
+      }
+
       private java.lang.Object reindexRemoteWhitelist_ = "";
       /**
-       * <code>string reindex_remote_whitelist = 6;</code>
+       * <pre>
+       * Allowed remote hosts
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/api-reference/document-apis/reindex/#remote-cluster-allow-list).
+       * </pre>
+       *
+       * <code>string reindex_remote_whitelist = 6 [json_name = "reindex_remote_whitelist"];</code>
        * @return The reindexRemoteWhitelist.
        */
       public java.lang.String getReindexRemoteWhitelist() {
@@ -921,7 +1402,13 @@ public final class Opensearch {
         }
       }
       /**
-       * <code>string reindex_remote_whitelist = 6;</code>
+       * <pre>
+       * Allowed remote hosts
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/api-reference/document-apis/reindex/#remote-cluster-allow-list).
+       * </pre>
+       *
+       * <code>string reindex_remote_whitelist = 6 [json_name = "reindex_remote_whitelist"];</code>
        * @return The bytes for reindexRemoteWhitelist.
        */
       public com.google.protobuf.ByteString
@@ -938,7 +1425,13 @@ public final class Opensearch {
         }
       }
       /**
-       * <code>string reindex_remote_whitelist = 6;</code>
+       * <pre>
+       * Allowed remote hosts
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/api-reference/document-apis/reindex/#remote-cluster-allow-list).
+       * </pre>
+       *
+       * <code>string reindex_remote_whitelist = 6 [json_name = "reindex_remote_whitelist"];</code>
        * @param value The reindexRemoteWhitelist to set.
        * @return This builder for chaining.
        */
@@ -953,7 +1446,13 @@ public final class Opensearch {
         return this;
       }
       /**
-       * <code>string reindex_remote_whitelist = 6;</code>
+       * <pre>
+       * Allowed remote hosts
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/api-reference/document-apis/reindex/#remote-cluster-allow-list).
+       * </pre>
+       *
+       * <code>string reindex_remote_whitelist = 6 [json_name = "reindex_remote_whitelist"];</code>
        * @return This builder for chaining.
        */
       public Builder clearReindexRemoteWhitelist() {
@@ -963,7 +1462,13 @@ public final class Opensearch {
         return this;
       }
       /**
-       * <code>string reindex_remote_whitelist = 6;</code>
+       * <pre>
+       * Allowed remote hosts
+       * Change of the setting is applied with restart.
+       * For details, see [OpenSearch documentation](https://docs.opensearch.org/latest/api-reference/document-apis/reindex/#remote-cluster-allow-list).
+       * </pre>
+       *
+       * <code>string reindex_remote_whitelist = 6 [json_name = "reindex_remote_whitelist"];</code>
        * @param value The bytes for reindexRemoteWhitelist to set.
        * @return This builder for chaining.
        */
@@ -1036,46 +1541,82 @@ public final class Opensearch {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Effective configuration (a combination of user-defined configuration and default configuration).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 effective_config = 1 [(.yandex.cloud.required) = true];</code>
      * @return Whether the effectiveConfig field is set.
      */
     boolean hasEffectiveConfig();
     /**
+     * <pre>
+     * Effective configuration (a combination of user-defined configuration and default configuration).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 effective_config = 1 [(.yandex.cloud.required) = true];</code>
      * @return The effectiveConfig.
      */
     yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2 getEffectiveConfig();
     /**
+     * <pre>
+     * Effective configuration (a combination of user-defined configuration and default configuration).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 effective_config = 1 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2OrBuilder getEffectiveConfigOrBuilder();
 
     /**
+     * <pre>
+     * User-defined configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 user_config = 2;</code>
      * @return Whether the userConfig field is set.
      */
     boolean hasUserConfig();
     /**
+     * <pre>
+     * User-defined configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 user_config = 2;</code>
      * @return The userConfig.
      */
     yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2 getUserConfig();
     /**
+     * <pre>
+     * User-defined configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 user_config = 2;</code>
      */
     yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2OrBuilder getUserConfigOrBuilder();
 
     /**
+     * <pre>
+     * Default configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 default_config = 3;</code>
      * @return Whether the defaultConfig field is set.
      */
     boolean hasDefaultConfig();
     /**
+     * <pre>
+     * Default configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 default_config = 3;</code>
      * @return The defaultConfig.
      */
     yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2 getDefaultConfig();
     /**
+     * <pre>
+     * Default configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 default_config = 3;</code>
      */
     yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2OrBuilder getDefaultConfigOrBuilder();
@@ -1199,6 +1740,10 @@ public final class Opensearch {
     public static final int EFFECTIVE_CONFIG_FIELD_NUMBER = 1;
     private yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2 effectiveConfig_;
     /**
+     * <pre>
+     * Effective configuration (a combination of user-defined configuration and default configuration).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 effective_config = 1 [(.yandex.cloud.required) = true];</code>
      * @return Whether the effectiveConfig field is set.
      */
@@ -1207,6 +1752,10 @@ public final class Opensearch {
       return effectiveConfig_ != null;
     }
     /**
+     * <pre>
+     * Effective configuration (a combination of user-defined configuration and default configuration).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 effective_config = 1 [(.yandex.cloud.required) = true];</code>
      * @return The effectiveConfig.
      */
@@ -1215,6 +1764,10 @@ public final class Opensearch {
       return effectiveConfig_ == null ? yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2.getDefaultInstance() : effectiveConfig_;
     }
     /**
+     * <pre>
+     * Effective configuration (a combination of user-defined configuration and default configuration).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 effective_config = 1 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
@@ -1225,6 +1778,10 @@ public final class Opensearch {
     public static final int USER_CONFIG_FIELD_NUMBER = 2;
     private yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2 userConfig_;
     /**
+     * <pre>
+     * User-defined configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 user_config = 2;</code>
      * @return Whether the userConfig field is set.
      */
@@ -1233,6 +1790,10 @@ public final class Opensearch {
       return userConfig_ != null;
     }
     /**
+     * <pre>
+     * User-defined configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 user_config = 2;</code>
      * @return The userConfig.
      */
@@ -1241,6 +1802,10 @@ public final class Opensearch {
       return userConfig_ == null ? yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2.getDefaultInstance() : userConfig_;
     }
     /**
+     * <pre>
+     * User-defined configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 user_config = 2;</code>
      */
     @java.lang.Override
@@ -1251,6 +1816,10 @@ public final class Opensearch {
     public static final int DEFAULT_CONFIG_FIELD_NUMBER = 3;
     private yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2 defaultConfig_;
     /**
+     * <pre>
+     * Default configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 default_config = 3;</code>
      * @return Whether the defaultConfig field is set.
      */
@@ -1259,6 +1828,10 @@ public final class Opensearch {
       return defaultConfig_ != null;
     }
     /**
+     * <pre>
+     * Default configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 default_config = 3;</code>
      * @return The defaultConfig.
      */
@@ -1267,6 +1840,10 @@ public final class Opensearch {
       return defaultConfig_ == null ? yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2.getDefaultInstance() : defaultConfig_;
     }
     /**
+     * <pre>
+     * Default configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 default_config = 3;</code>
      */
     @java.lang.Override
@@ -1653,6 +2230,10 @@ public final class Opensearch {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2, yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2.Builder, yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2OrBuilder> effectiveConfigBuilder_;
       /**
+       * <pre>
+       * Effective configuration (a combination of user-defined configuration and default configuration).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 effective_config = 1 [(.yandex.cloud.required) = true];</code>
        * @return Whether the effectiveConfig field is set.
        */
@@ -1660,6 +2241,10 @@ public final class Opensearch {
         return effectiveConfigBuilder_ != null || effectiveConfig_ != null;
       }
       /**
+       * <pre>
+       * Effective configuration (a combination of user-defined configuration and default configuration).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 effective_config = 1 [(.yandex.cloud.required) = true];</code>
        * @return The effectiveConfig.
        */
@@ -1671,6 +2256,10 @@ public final class Opensearch {
         }
       }
       /**
+       * <pre>
+       * Effective configuration (a combination of user-defined configuration and default configuration).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 effective_config = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setEffectiveConfig(yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2 value) {
@@ -1687,6 +2276,10 @@ public final class Opensearch {
         return this;
       }
       /**
+       * <pre>
+       * Effective configuration (a combination of user-defined configuration and default configuration).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 effective_config = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setEffectiveConfig(
@@ -1701,6 +2294,10 @@ public final class Opensearch {
         return this;
       }
       /**
+       * <pre>
+       * Effective configuration (a combination of user-defined configuration and default configuration).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 effective_config = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeEffectiveConfig(yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2 value) {
@@ -1719,6 +2316,10 @@ public final class Opensearch {
         return this;
       }
       /**
+       * <pre>
+       * Effective configuration (a combination of user-defined configuration and default configuration).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 effective_config = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearEffectiveConfig() {
@@ -1733,6 +2334,10 @@ public final class Opensearch {
         return this;
       }
       /**
+       * <pre>
+       * Effective configuration (a combination of user-defined configuration and default configuration).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 effective_config = 1 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2.Builder getEffectiveConfigBuilder() {
@@ -1741,6 +2346,10 @@ public final class Opensearch {
         return getEffectiveConfigFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Effective configuration (a combination of user-defined configuration and default configuration).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 effective_config = 1 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2OrBuilder getEffectiveConfigOrBuilder() {
@@ -1752,6 +2361,10 @@ public final class Opensearch {
         }
       }
       /**
+       * <pre>
+       * Effective configuration (a combination of user-defined configuration and default configuration).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 effective_config = 1 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1772,6 +2385,10 @@ public final class Opensearch {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2, yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2.Builder, yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2OrBuilder> userConfigBuilder_;
       /**
+       * <pre>
+       * User-defined configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 user_config = 2;</code>
        * @return Whether the userConfig field is set.
        */
@@ -1779,6 +2396,10 @@ public final class Opensearch {
         return userConfigBuilder_ != null || userConfig_ != null;
       }
       /**
+       * <pre>
+       * User-defined configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 user_config = 2;</code>
        * @return The userConfig.
        */
@@ -1790,6 +2411,10 @@ public final class Opensearch {
         }
       }
       /**
+       * <pre>
+       * User-defined configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 user_config = 2;</code>
        */
       public Builder setUserConfig(yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2 value) {
@@ -1806,6 +2431,10 @@ public final class Opensearch {
         return this;
       }
       /**
+       * <pre>
+       * User-defined configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 user_config = 2;</code>
        */
       public Builder setUserConfig(
@@ -1820,6 +2449,10 @@ public final class Opensearch {
         return this;
       }
       /**
+       * <pre>
+       * User-defined configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 user_config = 2;</code>
        */
       public Builder mergeUserConfig(yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2 value) {
@@ -1838,6 +2471,10 @@ public final class Opensearch {
         return this;
       }
       /**
+       * <pre>
+       * User-defined configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 user_config = 2;</code>
        */
       public Builder clearUserConfig() {
@@ -1852,6 +2489,10 @@ public final class Opensearch {
         return this;
       }
       /**
+       * <pre>
+       * User-defined configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 user_config = 2;</code>
        */
       public yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2.Builder getUserConfigBuilder() {
@@ -1860,6 +2501,10 @@ public final class Opensearch {
         return getUserConfigFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * User-defined configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 user_config = 2;</code>
        */
       public yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2OrBuilder getUserConfigOrBuilder() {
@@ -1871,6 +2516,10 @@ public final class Opensearch {
         }
       }
       /**
+       * <pre>
+       * User-defined configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 user_config = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1891,6 +2540,10 @@ public final class Opensearch {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2, yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2.Builder, yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2OrBuilder> defaultConfigBuilder_;
       /**
+       * <pre>
+       * Default configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 default_config = 3;</code>
        * @return Whether the defaultConfig field is set.
        */
@@ -1898,6 +2551,10 @@ public final class Opensearch {
         return defaultConfigBuilder_ != null || defaultConfig_ != null;
       }
       /**
+       * <pre>
+       * Default configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 default_config = 3;</code>
        * @return The defaultConfig.
        */
@@ -1909,6 +2566,10 @@ public final class Opensearch {
         }
       }
       /**
+       * <pre>
+       * Default configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 default_config = 3;</code>
        */
       public Builder setDefaultConfig(yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2 value) {
@@ -1925,6 +2586,10 @@ public final class Opensearch {
         return this;
       }
       /**
+       * <pre>
+       * Default configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 default_config = 3;</code>
        */
       public Builder setDefaultConfig(
@@ -1939,6 +2604,10 @@ public final class Opensearch {
         return this;
       }
       /**
+       * <pre>
+       * Default configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 default_config = 3;</code>
        */
       public Builder mergeDefaultConfig(yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2 value) {
@@ -1957,6 +2626,10 @@ public final class Opensearch {
         return this;
       }
       /**
+       * <pre>
+       * Default configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 default_config = 3;</code>
        */
       public Builder clearDefaultConfig() {
@@ -1971,6 +2644,10 @@ public final class Opensearch {
         return this;
       }
       /**
+       * <pre>
+       * Default configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 default_config = 3;</code>
        */
       public yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2.Builder getDefaultConfigBuilder() {
@@ -1979,6 +2656,10 @@ public final class Opensearch {
         return getDefaultConfigFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Default configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 default_config = 3;</code>
        */
       public yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfig2OrBuilder getDefaultConfigOrBuilder() {
@@ -1990,6 +2671,10 @@ public final class Opensearch {
         }
       }
       /**
+       * <pre>
+       * Default configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.opensearch.v1.config.OpenSearchConfig2 default_config = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2080,21 +2765,26 @@ public final class Opensearch {
       "\n6yandex/cloud/mdb/opensearch/v1/config/" +
       "opensearch.proto\022%yandex.cloud.mdb.opens" +
       "earch.v1.config\032\036google/protobuf/wrapper" +
-      "s.proto\032\035yandex/cloud/validation.proto\"\220" +
-      "\001\n\021OpenSearchConfig2\0225\n\020max_clause_count" +
-      "\030\003 \001(\0132\033.google.protobuf.Int64Value\022\034\n\024f" +
-      "ielddata_cache_size\030\004 \001(\t\022 \n\030reindex_rem" +
-      "ote_whitelist\030\006 \001(\tJ\004\010\005\020\006\"\221\002\n\024OpenSearch" +
-      "ConfigSet2\022X\n\020effective_config\030\001 \001(\01328.y" +
-      "andex.cloud.mdb.opensearch.v1.config.Ope" +
-      "nSearchConfig2B\004\350\3071\001\022M\n\013user_config\030\002 \001(" +
-      "\01328.yandex.cloud.mdb.opensearch.v1.confi" +
-      "g.OpenSearchConfig2\022P\n\016default_config\030\003 " +
-      "\001(\01328.yandex.cloud.mdb.opensearch.v1.con" +
-      "fig.OpenSearchConfig2Bz\n\"yandex.cloud.ap" +
-      "i.mdb.opensearch.v1ZTgithub.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/mdb/opense" +
-      "arch/v1/config;opensearchb\006proto3"
+      "s.proto\032\035yandex/cloud/validation.proto\"\275" +
+      "\002\n\021OpenSearchConfig2\022Y\n\020max_clause_count" +
+      "\030\003 \001(\0132\033.google.protobuf.Int64ValueB\020\372\3071" +
+      "\0141-2147483647R\020max_clause_count\0222\n\024field" +
+      "data_cache_size\030\004 \001(\tR\024fielddata_cache_s" +
+      "ize\022]\n\022search_max_buckets\030\005 \001(\0132\033.google" +
+      ".protobuf.Int64ValueB\020\372\3071\0140-2147483647R\022" +
+      "search_max_buckets\022:\n\030reindex_remote_whi" +
+      "telist\030\006 \001(\tR\030reindex_remote_whitelist\"\221" +
+      "\002\n\024OpenSearchConfigSet2\022X\n\020effective_con" +
+      "fig\030\001 \001(\01328.yandex.cloud.mdb.opensearch." +
+      "v1.config.OpenSearchConfig2B\004\350\3071\001\022M\n\013use" +
+      "r_config\030\002 \001(\01328.yandex.cloud.mdb.opense" +
+      "arch.v1.config.OpenSearchConfig2\022P\n\016defa" +
+      "ult_config\030\003 \001(\01328.yandex.cloud.mdb.open" +
+      "search.v1.config.OpenSearchConfig2Bz\n\"ya" +
+      "ndex.cloud.api.mdb.opensearch.v1ZTgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/mdb/opensearch/v1/config;opensearchb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2107,7 +2797,7 @@ public final class Opensearch {
     internal_static_yandex_cloud_mdb_opensearch_v1_config_OpenSearchConfig2_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_config_OpenSearchConfig2_descriptor,
-        new java.lang.String[] { "MaxClauseCount", "FielddataCacheSize", "ReindexRemoteWhitelist", });
+        new java.lang.String[] { "MaxClauseCount", "FielddataCacheSize", "SearchMaxBuckets", "ReindexRemoteWhitelist", });
     internal_static_yandex_cloud_mdb_opensearch_v1_config_OpenSearchConfigSet2_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_opensearch_v1_config_OpenSearchConfigSet2_fieldAccessorTable = new
@@ -2117,6 +2807,7 @@ public final class Opensearch {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.WrappersProto.getDescriptor();

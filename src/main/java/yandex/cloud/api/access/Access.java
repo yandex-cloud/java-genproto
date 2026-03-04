@@ -1981,6 +1981,3950 @@ public final class Access {
 
   }
 
+  public interface AccessPolicyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.access.AccessPolicy)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the access policy template.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * ID of the access policy template.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Name of the access policy template.
+     * </pre>
+     *
+     * <code>string name = 2;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the access policy template.
+     * </pre>
+     *
+     * <code>string name = 2;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Description of the access policy template.
+     * </pre>
+     *
+     * <code>string description = 3;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description of the access policy template.
+     * </pre>
+     *
+     * <code>string description = 3;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.access.AccessPolicy}
+   */
+  public static final class AccessPolicy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.access.AccessPolicy)
+      AccessPolicyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AccessPolicy.newBuilder() to construct.
+    private AccessPolicy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AccessPolicy() {
+      id_ = "";
+      name_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AccessPolicy();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AccessPolicy(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_AccessPolicy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_AccessPolicy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.access.Access.AccessPolicy.class, yandex.cloud.api.access.Access.AccessPolicy.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * ID of the access policy template.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the access policy template.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the access policy template.
+     * </pre>
+     *
+     * <code>string name = 2;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the access policy template.
+     * </pre>
+     *
+     * <code>string name = 2;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Description of the access policy template.
+     * </pre>
+     *
+     * <code>string description = 3;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description of the access policy template.
+     * </pre>
+     *
+     * <code>string description = 3;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.access.Access.AccessPolicy)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.access.Access.AccessPolicy other = (yandex.cloud.api.access.Access.AccessPolicy) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.access.Access.AccessPolicy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.access.Access.AccessPolicy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.access.AccessPolicy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.access.AccessPolicy)
+        yandex.cloud.api.access.Access.AccessPolicyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_AccessPolicy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_AccessPolicy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.access.Access.AccessPolicy.class, yandex.cloud.api.access.Access.AccessPolicy.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.access.Access.AccessPolicy.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        name_ = "";
+
+        description_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_AccessPolicy_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.AccessPolicy getDefaultInstanceForType() {
+        return yandex.cloud.api.access.Access.AccessPolicy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.AccessPolicy build() {
+        yandex.cloud.api.access.Access.AccessPolicy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.AccessPolicy buildPartial() {
+        yandex.cloud.api.access.Access.AccessPolicy result = new yandex.cloud.api.access.Access.AccessPolicy(this);
+        result.id_ = id_;
+        result.name_ = name_;
+        result.description_ = description_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.access.Access.AccessPolicy) {
+          return mergeFrom((yandex.cloud.api.access.Access.AccessPolicy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.access.Access.AccessPolicy other) {
+        if (other == yandex.cloud.api.access.Access.AccessPolicy.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.access.Access.AccessPolicy parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.access.Access.AccessPolicy) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * ID of the access policy template.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the access policy template.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the access policy template.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the access policy template.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the access policy template.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the access policy template.
+       * </pre>
+       *
+       * <code>string name = 2;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the access policy template.
+       * </pre>
+       *
+       * <code>string name = 2;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the access policy template.
+       * </pre>
+       *
+       * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the access policy template.
+       * </pre>
+       *
+       * <code>string name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the access policy template.
+       * </pre>
+       *
+       * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description of the access policy template.
+       * </pre>
+       *
+       * <code>string description = 3;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the access policy template.
+       * </pre>
+       *
+       * <code>string description = 3;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the access policy template.
+       * </pre>
+       *
+       * <code>string description = 3;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the access policy template.
+       * </pre>
+       *
+       * <code>string description = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the access policy template.
+       * </pre>
+       *
+       * <code>string description = 3;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.access.AccessPolicy)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.access.AccessPolicy)
+    private static final yandex.cloud.api.access.Access.AccessPolicy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.access.Access.AccessPolicy();
+    }
+
+    public static yandex.cloud.api.access.Access.AccessPolicy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AccessPolicy>
+        PARSER = new com.google.protobuf.AbstractParser<AccessPolicy>() {
+      @java.lang.Override
+      public AccessPolicy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AccessPolicy(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AccessPolicy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AccessPolicy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.AccessPolicy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AccessPolicyBindingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.access.AccessPolicyBinding)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the access policy template being applied.
+     * </pre>
+     *
+     * <code>string access_policy_template_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The accessPolicyTemplateId.
+     */
+    java.lang.String getAccessPolicyTemplateId();
+    /**
+     * <pre>
+     * ID of the access policy template being applied.
+     * </pre>
+     *
+     * <code>string access_policy_template_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for accessPolicyTemplateId.
+     */
+    com.google.protobuf.ByteString
+        getAccessPolicyTemplateIdBytes();
+
+    /**
+     * <code>map&lt;string, string&gt; parameters = 2;</code>
+     */
+    int getParametersCount();
+    /**
+     * <code>map&lt;string, string&gt; parameters = 2;</code>
+     */
+    boolean containsParameters(
+        java.lang.String key);
+    /**
+     * Use {@link #getParametersMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getParameters();
+    /**
+     * <code>map&lt;string, string&gt; parameters = 2;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getParametersMap();
+    /**
+     * <code>map&lt;string, string&gt; parameters = 2;</code>
+     */
+
+    java.lang.String getParametersOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; parameters = 2;</code>
+     */
+
+    java.lang.String getParametersOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.access.AccessPolicyBinding}
+   */
+  public static final class AccessPolicyBinding extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.access.AccessPolicyBinding)
+      AccessPolicyBindingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AccessPolicyBinding.newBuilder() to construct.
+    private AccessPolicyBinding(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AccessPolicyBinding() {
+      accessPolicyTemplateId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AccessPolicyBinding();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AccessPolicyBinding(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              accessPolicyTemplateId_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                parameters_ = com.google.protobuf.MapField.newMapField(
+                    ParametersDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              parameters__ = input.readMessage(
+                  ParametersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              parameters_.getMutableMap().put(
+                  parameters__.getKey(), parameters__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_AccessPolicyBinding_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetParameters();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_AccessPolicyBinding_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.access.Access.AccessPolicyBinding.class, yandex.cloud.api.access.Access.AccessPolicyBinding.Builder.class);
+    }
+
+    public static final int ACCESS_POLICY_TEMPLATE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object accessPolicyTemplateId_;
+    /**
+     * <pre>
+     * ID of the access policy template being applied.
+     * </pre>
+     *
+     * <code>string access_policy_template_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The accessPolicyTemplateId.
+     */
+    @java.lang.Override
+    public java.lang.String getAccessPolicyTemplateId() {
+      java.lang.Object ref = accessPolicyTemplateId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accessPolicyTemplateId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the access policy template being applied.
+     * </pre>
+     *
+     * <code>string access_policy_template_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for accessPolicyTemplateId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccessPolicyTemplateIdBytes() {
+      java.lang.Object ref = accessPolicyTemplateId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accessPolicyTemplateId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARAMETERS_FIELD_NUMBER = 2;
+    private static final class ParametersDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_AccessPolicyBinding_ParametersEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> parameters_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetParameters() {
+      if (parameters_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            ParametersDefaultEntryHolder.defaultEntry);
+      }
+      return parameters_;
+    }
+
+    public int getParametersCount() {
+      return internalGetParameters().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; parameters = 2;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsParameters(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetParameters().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getParametersMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getParameters() {
+      return getParametersMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; parameters = 2;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getParametersMap() {
+      return internalGetParameters().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; parameters = 2;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getParametersOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetParameters().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; parameters = 2;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getParametersOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetParameters().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessPolicyTemplateId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, accessPolicyTemplateId_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetParameters(),
+          ParametersDefaultEntryHolder.defaultEntry,
+          2);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessPolicyTemplateId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, accessPolicyTemplateId_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetParameters().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        parameters__ = ParametersDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, parameters__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.access.Access.AccessPolicyBinding)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.access.Access.AccessPolicyBinding other = (yandex.cloud.api.access.Access.AccessPolicyBinding) obj;
+
+      if (!getAccessPolicyTemplateId()
+          .equals(other.getAccessPolicyTemplateId())) return false;
+      if (!internalGetParameters().equals(
+          other.internalGetParameters())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACCESS_POLICY_TEMPLATE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAccessPolicyTemplateId().hashCode();
+      if (!internalGetParameters().getMap().isEmpty()) {
+        hash = (37 * hash) + PARAMETERS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetParameters().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.access.Access.AccessPolicyBinding parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicyBinding parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicyBinding parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicyBinding parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicyBinding parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicyBinding parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicyBinding parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicyBinding parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicyBinding parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicyBinding parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicyBinding parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.AccessPolicyBinding parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.access.Access.AccessPolicyBinding prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.access.AccessPolicyBinding}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.access.AccessPolicyBinding)
+        yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_AccessPolicyBinding_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetParameters();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetMutableParameters();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_AccessPolicyBinding_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.access.Access.AccessPolicyBinding.class, yandex.cloud.api.access.Access.AccessPolicyBinding.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.access.Access.AccessPolicyBinding.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        accessPolicyTemplateId_ = "";
+
+        internalGetMutableParameters().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_AccessPolicyBinding_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.AccessPolicyBinding getDefaultInstanceForType() {
+        return yandex.cloud.api.access.Access.AccessPolicyBinding.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.AccessPolicyBinding build() {
+        yandex.cloud.api.access.Access.AccessPolicyBinding result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.AccessPolicyBinding buildPartial() {
+        yandex.cloud.api.access.Access.AccessPolicyBinding result = new yandex.cloud.api.access.Access.AccessPolicyBinding(this);
+        int from_bitField0_ = bitField0_;
+        result.accessPolicyTemplateId_ = accessPolicyTemplateId_;
+        result.parameters_ = internalGetParameters();
+        result.parameters_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.access.Access.AccessPolicyBinding) {
+          return mergeFrom((yandex.cloud.api.access.Access.AccessPolicyBinding)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.access.Access.AccessPolicyBinding other) {
+        if (other == yandex.cloud.api.access.Access.AccessPolicyBinding.getDefaultInstance()) return this;
+        if (!other.getAccessPolicyTemplateId().isEmpty()) {
+          accessPolicyTemplateId_ = other.accessPolicyTemplateId_;
+          onChanged();
+        }
+        internalGetMutableParameters().mergeFrom(
+            other.internalGetParameters());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.access.Access.AccessPolicyBinding parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.access.Access.AccessPolicyBinding) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object accessPolicyTemplateId_ = "";
+      /**
+       * <pre>
+       * ID of the access policy template being applied.
+       * </pre>
+       *
+       * <code>string access_policy_template_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The accessPolicyTemplateId.
+       */
+      public java.lang.String getAccessPolicyTemplateId() {
+        java.lang.Object ref = accessPolicyTemplateId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accessPolicyTemplateId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the access policy template being applied.
+       * </pre>
+       *
+       * <code>string access_policy_template_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for accessPolicyTemplateId.
+       */
+      public com.google.protobuf.ByteString
+          getAccessPolicyTemplateIdBytes() {
+        java.lang.Object ref = accessPolicyTemplateId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accessPolicyTemplateId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the access policy template being applied.
+       * </pre>
+       *
+       * <code>string access_policy_template_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The accessPolicyTemplateId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessPolicyTemplateId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        accessPolicyTemplateId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the access policy template being applied.
+       * </pre>
+       *
+       * <code>string access_policy_template_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccessPolicyTemplateId() {
+        
+        accessPolicyTemplateId_ = getDefaultInstance().getAccessPolicyTemplateId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the access policy template being applied.
+       * </pre>
+       *
+       * <code>string access_policy_template_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for accessPolicyTemplateId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessPolicyTemplateIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        accessPolicyTemplateId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> parameters_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetParameters() {
+        if (parameters_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              ParametersDefaultEntryHolder.defaultEntry);
+        }
+        return parameters_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableParameters() {
+        onChanged();;
+        if (parameters_ == null) {
+          parameters_ = com.google.protobuf.MapField.newMapField(
+              ParametersDefaultEntryHolder.defaultEntry);
+        }
+        if (!parameters_.isMutable()) {
+          parameters_ = parameters_.copy();
+        }
+        return parameters_;
+      }
+
+      public int getParametersCount() {
+        return internalGetParameters().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; parameters = 2;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsParameters(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetParameters().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getParametersMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getParameters() {
+        return getParametersMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; parameters = 2;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getParametersMap() {
+        return internalGetParameters().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; parameters = 2;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getParametersOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetParameters().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; parameters = 2;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getParametersOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetParameters().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearParameters() {
+        internalGetMutableParameters().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; parameters = 2;</code>
+       */
+
+      public Builder removeParameters(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableParameters().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableParameters() {
+        return internalGetMutableParameters().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; parameters = 2;</code>
+       */
+      public Builder putParameters(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableParameters().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; parameters = 2;</code>
+       */
+
+      public Builder putAllParameters(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableParameters().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.access.AccessPolicyBinding)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.access.AccessPolicyBinding)
+    private static final yandex.cloud.api.access.Access.AccessPolicyBinding DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.access.Access.AccessPolicyBinding();
+    }
+
+    public static yandex.cloud.api.access.Access.AccessPolicyBinding getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AccessPolicyBinding>
+        PARSER = new com.google.protobuf.AbstractParser<AccessPolicyBinding>() {
+      @java.lang.Override
+      public AccessPolicyBinding parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AccessPolicyBinding(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AccessPolicyBinding> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AccessPolicyBinding> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.AccessPolicyBinding getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BindAccessPolicyRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.access.BindAccessPolicyRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the resource for which access policy bindings are being set.
+     * To get the resource ID, use a corresponding List request.
+     * </pre>
+     *
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
+     */
+    java.lang.String getResourceId();
+    /**
+     * <pre>
+     * ID of the resource for which access policy bindings are being set.
+     * To get the resource ID, use a corresponding List request.
+     * </pre>
+     *
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
+     */
+    com.google.protobuf.ByteString
+        getResourceIdBytes();
+
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the accessPolicyBinding field is set.
+     */
+    boolean hasAccessPolicyBinding();
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The accessPolicyBinding.
+     */
+    yandex.cloud.api.access.Access.AccessPolicyBinding getAccessPolicyBinding();
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder getAccessPolicyBindingOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.access.BindAccessPolicyRequest}
+   */
+  public static final class BindAccessPolicyRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.access.BindAccessPolicyRequest)
+      BindAccessPolicyRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BindAccessPolicyRequest.newBuilder() to construct.
+    private BindAccessPolicyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BindAccessPolicyRequest() {
+      resourceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BindAccessPolicyRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BindAccessPolicyRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourceId_ = s;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.access.Access.AccessPolicyBinding.Builder subBuilder = null;
+              if (accessPolicyBinding_ != null) {
+                subBuilder = accessPolicyBinding_.toBuilder();
+              }
+              accessPolicyBinding_ = input.readMessage(yandex.cloud.api.access.Access.AccessPolicyBinding.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(accessPolicyBinding_);
+                accessPolicyBinding_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_BindAccessPolicyRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_BindAccessPolicyRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.access.Access.BindAccessPolicyRequest.class, yandex.cloud.api.access.Access.BindAccessPolicyRequest.Builder.class);
+    }
+
+    public static final int RESOURCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object resourceId_;
+    /**
+     * <pre>
+     * ID of the resource for which access policy bindings are being set.
+     * To get the resource ID, use a corresponding List request.
+     * </pre>
+     *
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the resource for which access policy bindings are being set.
+     * To get the resource ID, use a corresponding List request.
+     * </pre>
+     *
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCESS_POLICY_BINDING_FIELD_NUMBER = 2;
+    private yandex.cloud.api.access.Access.AccessPolicyBinding accessPolicyBinding_;
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the accessPolicyBinding field is set.
+     */
+    @java.lang.Override
+    public boolean hasAccessPolicyBinding() {
+      return accessPolicyBinding_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The accessPolicyBinding.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.AccessPolicyBinding getAccessPolicyBinding() {
+      return accessPolicyBinding_ == null ? yandex.cloud.api.access.Access.AccessPolicyBinding.getDefaultInstance() : accessPolicyBinding_;
+    }
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder getAccessPolicyBindingOrBuilder() {
+      return getAccessPolicyBinding();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
+      }
+      if (accessPolicyBinding_ != null) {
+        output.writeMessage(2, getAccessPolicyBinding());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
+      }
+      if (accessPolicyBinding_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAccessPolicyBinding());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.access.Access.BindAccessPolicyRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.access.Access.BindAccessPolicyRequest other = (yandex.cloud.api.access.Access.BindAccessPolicyRequest) obj;
+
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (hasAccessPolicyBinding() != other.hasAccessPolicyBinding()) return false;
+      if (hasAccessPolicyBinding()) {
+        if (!getAccessPolicyBinding()
+            .equals(other.getAccessPolicyBinding())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceId().hashCode();
+      if (hasAccessPolicyBinding()) {
+        hash = (37 * hash) + ACCESS_POLICY_BINDING_FIELD_NUMBER;
+        hash = (53 * hash) + getAccessPolicyBinding().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.access.Access.BindAccessPolicyRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.access.Access.BindAccessPolicyRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.access.BindAccessPolicyRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.access.BindAccessPolicyRequest)
+        yandex.cloud.api.access.Access.BindAccessPolicyRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_BindAccessPolicyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_BindAccessPolicyRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.access.Access.BindAccessPolicyRequest.class, yandex.cloud.api.access.Access.BindAccessPolicyRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.access.Access.BindAccessPolicyRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        resourceId_ = "";
+
+        if (accessPolicyBindingBuilder_ == null) {
+          accessPolicyBinding_ = null;
+        } else {
+          accessPolicyBinding_ = null;
+          accessPolicyBindingBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_BindAccessPolicyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.BindAccessPolicyRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.access.Access.BindAccessPolicyRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.BindAccessPolicyRequest build() {
+        yandex.cloud.api.access.Access.BindAccessPolicyRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.BindAccessPolicyRequest buildPartial() {
+        yandex.cloud.api.access.Access.BindAccessPolicyRequest result = new yandex.cloud.api.access.Access.BindAccessPolicyRequest(this);
+        result.resourceId_ = resourceId_;
+        if (accessPolicyBindingBuilder_ == null) {
+          result.accessPolicyBinding_ = accessPolicyBinding_;
+        } else {
+          result.accessPolicyBinding_ = accessPolicyBindingBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.access.Access.BindAccessPolicyRequest) {
+          return mergeFrom((yandex.cloud.api.access.Access.BindAccessPolicyRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.access.Access.BindAccessPolicyRequest other) {
+        if (other == yandex.cloud.api.access.Access.BindAccessPolicyRequest.getDefaultInstance()) return this;
+        if (!other.getResourceId().isEmpty()) {
+          resourceId_ = other.resourceId_;
+          onChanged();
+        }
+        if (other.hasAccessPolicyBinding()) {
+          mergeAccessPolicyBinding(other.getAccessPolicyBinding());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.access.Access.BindAccessPolicyRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.access.Access.BindAccessPolicyRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object resourceId_ = "";
+      /**
+       * <pre>
+       * ID of the resource for which access policy bindings are being set.
+       * To get the resource ID, use a corresponding List request.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The resourceId.
+       */
+      public java.lang.String getResourceId() {
+        java.lang.Object ref = resourceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the resource for which access policy bindings are being set.
+       * To get the resource ID, use a corresponding List request.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for resourceId.
+       */
+      public com.google.protobuf.ByteString
+          getResourceIdBytes() {
+        java.lang.Object ref = resourceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the resource for which access policy bindings are being set.
+       * To get the resource ID, use a corresponding List request.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the resource for which access policy bindings are being set.
+       * To get the resource ID, use a corresponding List request.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceId() {
+        
+        resourceId_ = getDefaultInstance().getResourceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the resource for which access policy bindings are being set.
+       * To get the resource ID, use a corresponding List request.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.access.Access.AccessPolicyBinding accessPolicyBinding_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.access.Access.AccessPolicyBinding, yandex.cloud.api.access.Access.AccessPolicyBinding.Builder, yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder> accessPolicyBindingBuilder_;
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the accessPolicyBinding field is set.
+       */
+      public boolean hasAccessPolicyBinding() {
+        return accessPolicyBindingBuilder_ != null || accessPolicyBinding_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The accessPolicyBinding.
+       */
+      public yandex.cloud.api.access.Access.AccessPolicyBinding getAccessPolicyBinding() {
+        if (accessPolicyBindingBuilder_ == null) {
+          return accessPolicyBinding_ == null ? yandex.cloud.api.access.Access.AccessPolicyBinding.getDefaultInstance() : accessPolicyBinding_;
+        } else {
+          return accessPolicyBindingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setAccessPolicyBinding(yandex.cloud.api.access.Access.AccessPolicyBinding value) {
+        if (accessPolicyBindingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          accessPolicyBinding_ = value;
+          onChanged();
+        } else {
+          accessPolicyBindingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setAccessPolicyBinding(
+          yandex.cloud.api.access.Access.AccessPolicyBinding.Builder builderForValue) {
+        if (accessPolicyBindingBuilder_ == null) {
+          accessPolicyBinding_ = builderForValue.build();
+          onChanged();
+        } else {
+          accessPolicyBindingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergeAccessPolicyBinding(yandex.cloud.api.access.Access.AccessPolicyBinding value) {
+        if (accessPolicyBindingBuilder_ == null) {
+          if (accessPolicyBinding_ != null) {
+            accessPolicyBinding_ =
+              yandex.cloud.api.access.Access.AccessPolicyBinding.newBuilder(accessPolicyBinding_).mergeFrom(value).buildPartial();
+          } else {
+            accessPolicyBinding_ = value;
+          }
+          onChanged();
+        } else {
+          accessPolicyBindingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearAccessPolicyBinding() {
+        if (accessPolicyBindingBuilder_ == null) {
+          accessPolicyBinding_ = null;
+          onChanged();
+        } else {
+          accessPolicyBinding_ = null;
+          accessPolicyBindingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.access.Access.AccessPolicyBinding.Builder getAccessPolicyBindingBuilder() {
+        
+        onChanged();
+        return getAccessPolicyBindingFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder getAccessPolicyBindingOrBuilder() {
+        if (accessPolicyBindingBuilder_ != null) {
+          return accessPolicyBindingBuilder_.getMessageOrBuilder();
+        } else {
+          return accessPolicyBinding_ == null ?
+              yandex.cloud.api.access.Access.AccessPolicyBinding.getDefaultInstance() : accessPolicyBinding_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.access.Access.AccessPolicyBinding, yandex.cloud.api.access.Access.AccessPolicyBinding.Builder, yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder> 
+          getAccessPolicyBindingFieldBuilder() {
+        if (accessPolicyBindingBuilder_ == null) {
+          accessPolicyBindingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.access.Access.AccessPolicyBinding, yandex.cloud.api.access.Access.AccessPolicyBinding.Builder, yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder>(
+                  getAccessPolicyBinding(),
+                  getParentForChildren(),
+                  isClean());
+          accessPolicyBinding_ = null;
+        }
+        return accessPolicyBindingBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.access.BindAccessPolicyRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.access.BindAccessPolicyRequest)
+    private static final yandex.cloud.api.access.Access.BindAccessPolicyRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.access.Access.BindAccessPolicyRequest();
+    }
+
+    public static yandex.cloud.api.access.Access.BindAccessPolicyRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BindAccessPolicyRequest>
+        PARSER = new com.google.protobuf.AbstractParser<BindAccessPolicyRequest>() {
+      @java.lang.Override
+      public BindAccessPolicyRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BindAccessPolicyRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BindAccessPolicyRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BindAccessPolicyRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.BindAccessPolicyRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BindAccessPolicyMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.access.BindAccessPolicyMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the resource for which access policy bindings are being set.
+     * </pre>
+     *
+     * <code>string resource_id = 1;</code>
+     * @return The resourceId.
+     */
+    java.lang.String getResourceId();
+    /**
+     * <pre>
+     * ID of the resource for which access policy bindings are being set.
+     * </pre>
+     *
+     * <code>string resource_id = 1;</code>
+     * @return The bytes for resourceId.
+     */
+    com.google.protobuf.ByteString
+        getResourceIdBytes();
+
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+     * @return Whether the accessPolicyBinding field is set.
+     */
+    boolean hasAccessPolicyBinding();
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+     * @return The accessPolicyBinding.
+     */
+    yandex.cloud.api.access.Access.AccessPolicyBinding getAccessPolicyBinding();
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+     */
+    yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder getAccessPolicyBindingOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.access.BindAccessPolicyMetadata}
+   */
+  public static final class BindAccessPolicyMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.access.BindAccessPolicyMetadata)
+      BindAccessPolicyMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BindAccessPolicyMetadata.newBuilder() to construct.
+    private BindAccessPolicyMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BindAccessPolicyMetadata() {
+      resourceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BindAccessPolicyMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BindAccessPolicyMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourceId_ = s;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.access.Access.AccessPolicyBinding.Builder subBuilder = null;
+              if (accessPolicyBinding_ != null) {
+                subBuilder = accessPolicyBinding_.toBuilder();
+              }
+              accessPolicyBinding_ = input.readMessage(yandex.cloud.api.access.Access.AccessPolicyBinding.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(accessPolicyBinding_);
+                accessPolicyBinding_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_BindAccessPolicyMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_BindAccessPolicyMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.access.Access.BindAccessPolicyMetadata.class, yandex.cloud.api.access.Access.BindAccessPolicyMetadata.Builder.class);
+    }
+
+    public static final int RESOURCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object resourceId_;
+    /**
+     * <pre>
+     * ID of the resource for which access policy bindings are being set.
+     * </pre>
+     *
+     * <code>string resource_id = 1;</code>
+     * @return The resourceId.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the resource for which access policy bindings are being set.
+     * </pre>
+     *
+     * <code>string resource_id = 1;</code>
+     * @return The bytes for resourceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCESS_POLICY_BINDING_FIELD_NUMBER = 2;
+    private yandex.cloud.api.access.Access.AccessPolicyBinding accessPolicyBinding_;
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+     * @return Whether the accessPolicyBinding field is set.
+     */
+    @java.lang.Override
+    public boolean hasAccessPolicyBinding() {
+      return accessPolicyBinding_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+     * @return The accessPolicyBinding.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.AccessPolicyBinding getAccessPolicyBinding() {
+      return accessPolicyBinding_ == null ? yandex.cloud.api.access.Access.AccessPolicyBinding.getDefaultInstance() : accessPolicyBinding_;
+    }
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder getAccessPolicyBindingOrBuilder() {
+      return getAccessPolicyBinding();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
+      }
+      if (accessPolicyBinding_ != null) {
+        output.writeMessage(2, getAccessPolicyBinding());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
+      }
+      if (accessPolicyBinding_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAccessPolicyBinding());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.access.Access.BindAccessPolicyMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.access.Access.BindAccessPolicyMetadata other = (yandex.cloud.api.access.Access.BindAccessPolicyMetadata) obj;
+
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (hasAccessPolicyBinding() != other.hasAccessPolicyBinding()) return false;
+      if (hasAccessPolicyBinding()) {
+        if (!getAccessPolicyBinding()
+            .equals(other.getAccessPolicyBinding())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceId().hashCode();
+      if (hasAccessPolicyBinding()) {
+        hash = (37 * hash) + ACCESS_POLICY_BINDING_FIELD_NUMBER;
+        hash = (53 * hash) + getAccessPolicyBinding().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.access.Access.BindAccessPolicyMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.access.Access.BindAccessPolicyMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.access.BindAccessPolicyMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.access.BindAccessPolicyMetadata)
+        yandex.cloud.api.access.Access.BindAccessPolicyMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_BindAccessPolicyMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_BindAccessPolicyMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.access.Access.BindAccessPolicyMetadata.class, yandex.cloud.api.access.Access.BindAccessPolicyMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.access.Access.BindAccessPolicyMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        resourceId_ = "";
+
+        if (accessPolicyBindingBuilder_ == null) {
+          accessPolicyBinding_ = null;
+        } else {
+          accessPolicyBinding_ = null;
+          accessPolicyBindingBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_BindAccessPolicyMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.BindAccessPolicyMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.access.Access.BindAccessPolicyMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.BindAccessPolicyMetadata build() {
+        yandex.cloud.api.access.Access.BindAccessPolicyMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.BindAccessPolicyMetadata buildPartial() {
+        yandex.cloud.api.access.Access.BindAccessPolicyMetadata result = new yandex.cloud.api.access.Access.BindAccessPolicyMetadata(this);
+        result.resourceId_ = resourceId_;
+        if (accessPolicyBindingBuilder_ == null) {
+          result.accessPolicyBinding_ = accessPolicyBinding_;
+        } else {
+          result.accessPolicyBinding_ = accessPolicyBindingBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.access.Access.BindAccessPolicyMetadata) {
+          return mergeFrom((yandex.cloud.api.access.Access.BindAccessPolicyMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.access.Access.BindAccessPolicyMetadata other) {
+        if (other == yandex.cloud.api.access.Access.BindAccessPolicyMetadata.getDefaultInstance()) return this;
+        if (!other.getResourceId().isEmpty()) {
+          resourceId_ = other.resourceId_;
+          onChanged();
+        }
+        if (other.hasAccessPolicyBinding()) {
+          mergeAccessPolicyBinding(other.getAccessPolicyBinding());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.access.Access.BindAccessPolicyMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.access.Access.BindAccessPolicyMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object resourceId_ = "";
+      /**
+       * <pre>
+       * ID of the resource for which access policy bindings are being set.
+       * </pre>
+       *
+       * <code>string resource_id = 1;</code>
+       * @return The resourceId.
+       */
+      public java.lang.String getResourceId() {
+        java.lang.Object ref = resourceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the resource for which access policy bindings are being set.
+       * </pre>
+       *
+       * <code>string resource_id = 1;</code>
+       * @return The bytes for resourceId.
+       */
+      public com.google.protobuf.ByteString
+          getResourceIdBytes() {
+        java.lang.Object ref = resourceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the resource for which access policy bindings are being set.
+       * </pre>
+       *
+       * <code>string resource_id = 1;</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the resource for which access policy bindings are being set.
+       * </pre>
+       *
+       * <code>string resource_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceId() {
+        
+        resourceId_ = getDefaultInstance().getResourceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the resource for which access policy bindings are being set.
+       * </pre>
+       *
+       * <code>string resource_id = 1;</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.access.Access.AccessPolicyBinding accessPolicyBinding_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.access.Access.AccessPolicyBinding, yandex.cloud.api.access.Access.AccessPolicyBinding.Builder, yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder> accessPolicyBindingBuilder_;
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+       * @return Whether the accessPolicyBinding field is set.
+       */
+      public boolean hasAccessPolicyBinding() {
+        return accessPolicyBindingBuilder_ != null || accessPolicyBinding_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+       * @return The accessPolicyBinding.
+       */
+      public yandex.cloud.api.access.Access.AccessPolicyBinding getAccessPolicyBinding() {
+        if (accessPolicyBindingBuilder_ == null) {
+          return accessPolicyBinding_ == null ? yandex.cloud.api.access.Access.AccessPolicyBinding.getDefaultInstance() : accessPolicyBinding_;
+        } else {
+          return accessPolicyBindingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+       */
+      public Builder setAccessPolicyBinding(yandex.cloud.api.access.Access.AccessPolicyBinding value) {
+        if (accessPolicyBindingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          accessPolicyBinding_ = value;
+          onChanged();
+        } else {
+          accessPolicyBindingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+       */
+      public Builder setAccessPolicyBinding(
+          yandex.cloud.api.access.Access.AccessPolicyBinding.Builder builderForValue) {
+        if (accessPolicyBindingBuilder_ == null) {
+          accessPolicyBinding_ = builderForValue.build();
+          onChanged();
+        } else {
+          accessPolicyBindingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+       */
+      public Builder mergeAccessPolicyBinding(yandex.cloud.api.access.Access.AccessPolicyBinding value) {
+        if (accessPolicyBindingBuilder_ == null) {
+          if (accessPolicyBinding_ != null) {
+            accessPolicyBinding_ =
+              yandex.cloud.api.access.Access.AccessPolicyBinding.newBuilder(accessPolicyBinding_).mergeFrom(value).buildPartial();
+          } else {
+            accessPolicyBinding_ = value;
+          }
+          onChanged();
+        } else {
+          accessPolicyBindingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+       */
+      public Builder clearAccessPolicyBinding() {
+        if (accessPolicyBindingBuilder_ == null) {
+          accessPolicyBinding_ = null;
+          onChanged();
+        } else {
+          accessPolicyBinding_ = null;
+          accessPolicyBindingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+       */
+      public yandex.cloud.api.access.Access.AccessPolicyBinding.Builder getAccessPolicyBindingBuilder() {
+        
+        onChanged();
+        return getAccessPolicyBindingFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+       */
+      public yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder getAccessPolicyBindingOrBuilder() {
+        if (accessPolicyBindingBuilder_ != null) {
+          return accessPolicyBindingBuilder_.getMessageOrBuilder();
+        } else {
+          return accessPolicyBinding_ == null ?
+              yandex.cloud.api.access.Access.AccessPolicyBinding.getDefaultInstance() : accessPolicyBinding_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.access.Access.AccessPolicyBinding, yandex.cloud.api.access.Access.AccessPolicyBinding.Builder, yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder> 
+          getAccessPolicyBindingFieldBuilder() {
+        if (accessPolicyBindingBuilder_ == null) {
+          accessPolicyBindingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.access.Access.AccessPolicyBinding, yandex.cloud.api.access.Access.AccessPolicyBinding.Builder, yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder>(
+                  getAccessPolicyBinding(),
+                  getParentForChildren(),
+                  isClean());
+          accessPolicyBinding_ = null;
+        }
+        return accessPolicyBindingBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.access.BindAccessPolicyMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.access.BindAccessPolicyMetadata)
+    private static final yandex.cloud.api.access.Access.BindAccessPolicyMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.access.Access.BindAccessPolicyMetadata();
+    }
+
+    public static yandex.cloud.api.access.Access.BindAccessPolicyMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BindAccessPolicyMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<BindAccessPolicyMetadata>() {
+      @java.lang.Override
+      public BindAccessPolicyMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BindAccessPolicyMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BindAccessPolicyMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BindAccessPolicyMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.BindAccessPolicyMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BindAccessPolicyResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.access.BindAccessPolicyResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.access.BindAccessPolicyResponse}
+   */
+  public static final class BindAccessPolicyResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.access.BindAccessPolicyResponse)
+      BindAccessPolicyResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BindAccessPolicyResponse.newBuilder() to construct.
+    private BindAccessPolicyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BindAccessPolicyResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BindAccessPolicyResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BindAccessPolicyResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_BindAccessPolicyResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_BindAccessPolicyResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.access.Access.BindAccessPolicyResponse.class, yandex.cloud.api.access.Access.BindAccessPolicyResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.access.Access.BindAccessPolicyResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.access.Access.BindAccessPolicyResponse other = (yandex.cloud.api.access.Access.BindAccessPolicyResponse) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.access.Access.BindAccessPolicyResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.BindAccessPolicyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.access.Access.BindAccessPolicyResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.access.BindAccessPolicyResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.access.BindAccessPolicyResponse)
+        yandex.cloud.api.access.Access.BindAccessPolicyResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_BindAccessPolicyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_BindAccessPolicyResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.access.Access.BindAccessPolicyResponse.class, yandex.cloud.api.access.Access.BindAccessPolicyResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.access.Access.BindAccessPolicyResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_BindAccessPolicyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.BindAccessPolicyResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.access.Access.BindAccessPolicyResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.BindAccessPolicyResponse build() {
+        yandex.cloud.api.access.Access.BindAccessPolicyResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.BindAccessPolicyResponse buildPartial() {
+        yandex.cloud.api.access.Access.BindAccessPolicyResponse result = new yandex.cloud.api.access.Access.BindAccessPolicyResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.access.Access.BindAccessPolicyResponse) {
+          return mergeFrom((yandex.cloud.api.access.Access.BindAccessPolicyResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.access.Access.BindAccessPolicyResponse other) {
+        if (other == yandex.cloud.api.access.Access.BindAccessPolicyResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.access.Access.BindAccessPolicyResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.access.Access.BindAccessPolicyResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.access.BindAccessPolicyResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.access.BindAccessPolicyResponse)
+    private static final yandex.cloud.api.access.Access.BindAccessPolicyResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.access.Access.BindAccessPolicyResponse();
+    }
+
+    public static yandex.cloud.api.access.Access.BindAccessPolicyResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BindAccessPolicyResponse>
+        PARSER = new com.google.protobuf.AbstractParser<BindAccessPolicyResponse>() {
+      @java.lang.Override
+      public BindAccessPolicyResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BindAccessPolicyResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BindAccessPolicyResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BindAccessPolicyResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.BindAccessPolicyResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ListAccessBindingsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.access.ListAccessBindingsRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -4049,6 +7993,6055 @@ public final class Access {
 
     @java.lang.Override
     public yandex.cloud.api.access.Access.ListAccessBindingsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListAccessPolicyBindingsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.access.ListAccessPolicyBindingsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the resource to list access policy bindings for.
+     * To get the resource ID, use a corresponding List request.
+     * For example, use the [yandex.cloud.resourcemanager.v1.CloudService.List] request to get the Cloud resource ID.
+     * </pre>
+     *
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
+     */
+    java.lang.String getResourceId();
+    /**
+     * <pre>
+     * ID of the resource to list access policy bindings for.
+     * To get the resource ID, use a corresponding List request.
+     * For example, use the [yandex.cloud.resourcemanager.v1.CloudService.List] request to get the Cloud resource ID.
+     * </pre>
+     *
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
+     */
+    com.google.protobuf.ByteString
+        getResourceIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of results per page that should be returned.
+     * If the number of available results is larger than [page_size], the service returns a
+     * [ListAccessPolicyBindingsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. Set [page_token] to the
+     * [ListAccessPolicyBindingsResponse.next_page_token]
+     * returned by a previous list request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. Set [page_token] to the
+     * [ListAccessPolicyBindingsResponse.next_page_token]
+     * returned by a previous list request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.access.ListAccessPolicyBindingsRequest}
+   */
+  public static final class ListAccessPolicyBindingsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.access.ListAccessPolicyBindingsRequest)
+      ListAccessPolicyBindingsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListAccessPolicyBindingsRequest.newBuilder() to construct.
+    private ListAccessPolicyBindingsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListAccessPolicyBindingsRequest() {
+      resourceId_ = "";
+      pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListAccessPolicyBindingsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListAccessPolicyBindingsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourceId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_ListAccessPolicyBindingsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_ListAccessPolicyBindingsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest.class, yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest.Builder.class);
+    }
+
+    public static final int RESOURCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object resourceId_;
+    /**
+     * <pre>
+     * ID of the resource to list access policy bindings for.
+     * To get the resource ID, use a corresponding List request.
+     * For example, use the [yandex.cloud.resourcemanager.v1.CloudService.List] request to get the Cloud resource ID.
+     * </pre>
+     *
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the resource to list access policy bindings for.
+     * To get the resource ID, use a corresponding List request.
+     * For example, use the [yandex.cloud.resourcemanager.v1.CloudService.List] request to get the Cloud resource ID.
+     * </pre>
+     *
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page that should be returned.
+     * If the number of available results is larger than [page_size], the service returns a
+     * [ListAccessPolicyBindingsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. Set [page_token] to the
+     * [ListAccessPolicyBindingsResponse.next_page_token]
+     * returned by a previous list request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. Set [page_token] to the
+     * [ListAccessPolicyBindingsResponse.next_page_token]
+     * returned by a previous list request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest other = (yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest) obj;
+
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.access.ListAccessPolicyBindingsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.access.ListAccessPolicyBindingsRequest)
+        yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_ListAccessPolicyBindingsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_ListAccessPolicyBindingsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest.class, yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        resourceId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_ListAccessPolicyBindingsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest build() {
+        yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest buildPartial() {
+        yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest result = new yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest(this);
+        result.resourceId_ = resourceId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest) {
+          return mergeFrom((yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest other) {
+        if (other == yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest.getDefaultInstance()) return this;
+        if (!other.getResourceId().isEmpty()) {
+          resourceId_ = other.resourceId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object resourceId_ = "";
+      /**
+       * <pre>
+       * ID of the resource to list access policy bindings for.
+       * To get the resource ID, use a corresponding List request.
+       * For example, use the [yandex.cloud.resourcemanager.v1.CloudService.List] request to get the Cloud resource ID.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The resourceId.
+       */
+      public java.lang.String getResourceId() {
+        java.lang.Object ref = resourceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the resource to list access policy bindings for.
+       * To get the resource ID, use a corresponding List request.
+       * For example, use the [yandex.cloud.resourcemanager.v1.CloudService.List] request to get the Cloud resource ID.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for resourceId.
+       */
+      public com.google.protobuf.ByteString
+          getResourceIdBytes() {
+        java.lang.Object ref = resourceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the resource to list access policy bindings for.
+       * To get the resource ID, use a corresponding List request.
+       * For example, use the [yandex.cloud.resourcemanager.v1.CloudService.List] request to get the Cloud resource ID.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the resource to list access policy bindings for.
+       * To get the resource ID, use a corresponding List request.
+       * For example, use the [yandex.cloud.resourcemanager.v1.CloudService.List] request to get the Cloud resource ID.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceId() {
+        
+        resourceId_ = getDefaultInstance().getResourceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the resource to list access policy bindings for.
+       * To get the resource ID, use a corresponding List request.
+       * For example, use the [yandex.cloud.resourcemanager.v1.CloudService.List] request to get the Cloud resource ID.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page that should be returned.
+       * If the number of available results is larger than [page_size], the service returns a
+       * [ListAccessPolicyBindingsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page that should be returned.
+       * If the number of available results is larger than [page_size], the service returns a
+       * [ListAccessPolicyBindingsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page that should be returned.
+       * If the number of available results is larger than [page_size], the service returns a
+       * [ListAccessPolicyBindingsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. Set [page_token] to the
+       * [ListAccessPolicyBindingsResponse.next_page_token]
+       * returned by a previous list request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. Set [page_token] to the
+       * [ListAccessPolicyBindingsResponse.next_page_token]
+       * returned by a previous list request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. Set [page_token] to the
+       * [ListAccessPolicyBindingsResponse.next_page_token]
+       * returned by a previous list request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. Set [page_token] to the
+       * [ListAccessPolicyBindingsResponse.next_page_token]
+       * returned by a previous list request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. Set [page_token] to the
+       * [ListAccessPolicyBindingsResponse.next_page_token]
+       * returned by a previous list request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.access.ListAccessPolicyBindingsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.access.ListAccessPolicyBindingsRequest)
+    private static final yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest();
+    }
+
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListAccessPolicyBindingsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListAccessPolicyBindingsRequest>() {
+      @java.lang.Override
+      public ListAccessPolicyBindingsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListAccessPolicyBindingsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListAccessPolicyBindingsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListAccessPolicyBindingsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.ListAccessPolicyBindingsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListAccessPolicyBindingsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.access.ListAccessPolicyBindingsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of access policy bindings for the specified resource.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.access.Access.AccessPolicyBinding> 
+        getAccessPolicyBindingsList();
+    /**
+     * <pre>
+     * List of access policy bindings for the specified resource.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+     */
+    yandex.cloud.api.access.Access.AccessPolicyBinding getAccessPolicyBindings(int index);
+    /**
+     * <pre>
+     * List of access policy bindings for the specified resource.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+     */
+    int getAccessPolicyBindingsCount();
+    /**
+     * <pre>
+     * List of access policy bindings for the specified resource.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder> 
+        getAccessPolicyBindingsOrBuilderList();
+    /**
+     * <pre>
+     * List of access policy bindings for the specified resource.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+     */
+    yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder getAccessPolicyBindingsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than
+     * [ListAccessPolicyBindingsRequest.page_size]
+     * , use the [next_page_token] as the value for the
+     * [ListAccessPolicyBindingsRequest.page_token]
+     * query parameter in the next list request. Each subsequent list request will have its own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than
+     * [ListAccessPolicyBindingsRequest.page_size]
+     * , use the [next_page_token] as the value for the
+     * [ListAccessPolicyBindingsRequest.page_token]
+     * query parameter in the next list request. Each subsequent list request will have its own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.access.ListAccessPolicyBindingsResponse}
+   */
+  public static final class ListAccessPolicyBindingsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.access.ListAccessPolicyBindingsResponse)
+      ListAccessPolicyBindingsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListAccessPolicyBindingsResponse.newBuilder() to construct.
+    private ListAccessPolicyBindingsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListAccessPolicyBindingsResponse() {
+      accessPolicyBindings_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListAccessPolicyBindingsResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListAccessPolicyBindingsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                accessPolicyBindings_ = new java.util.ArrayList<yandex.cloud.api.access.Access.AccessPolicyBinding>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              accessPolicyBindings_.add(
+                  input.readMessage(yandex.cloud.api.access.Access.AccessPolicyBinding.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          accessPolicyBindings_ = java.util.Collections.unmodifiableList(accessPolicyBindings_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_ListAccessPolicyBindingsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_ListAccessPolicyBindingsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse.class, yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse.Builder.class);
+    }
+
+    public static final int ACCESS_POLICY_BINDINGS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.access.Access.AccessPolicyBinding> accessPolicyBindings_;
+    /**
+     * <pre>
+     * List of access policy bindings for the specified resource.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.access.Access.AccessPolicyBinding> getAccessPolicyBindingsList() {
+      return accessPolicyBindings_;
+    }
+    /**
+     * <pre>
+     * List of access policy bindings for the specified resource.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder> 
+        getAccessPolicyBindingsOrBuilderList() {
+      return accessPolicyBindings_;
+    }
+    /**
+     * <pre>
+     * List of access policy bindings for the specified resource.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+     */
+    @java.lang.Override
+    public int getAccessPolicyBindingsCount() {
+      return accessPolicyBindings_.size();
+    }
+    /**
+     * <pre>
+     * List of access policy bindings for the specified resource.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.AccessPolicyBinding getAccessPolicyBindings(int index) {
+      return accessPolicyBindings_.get(index);
+    }
+    /**
+     * <pre>
+     * List of access policy bindings for the specified resource.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder getAccessPolicyBindingsOrBuilder(
+        int index) {
+      return accessPolicyBindings_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than
+     * [ListAccessPolicyBindingsRequest.page_size]
+     * , use the [next_page_token] as the value for the
+     * [ListAccessPolicyBindingsRequest.page_token]
+     * query parameter in the next list request. Each subsequent list request will have its own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than
+     * [ListAccessPolicyBindingsRequest.page_size]
+     * , use the [next_page_token] as the value for the
+     * [ListAccessPolicyBindingsRequest.page_token]
+     * query parameter in the next list request. Each subsequent list request will have its own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < accessPolicyBindings_.size(); i++) {
+        output.writeMessage(1, accessPolicyBindings_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < accessPolicyBindings_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, accessPolicyBindings_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse other = (yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse) obj;
+
+      if (!getAccessPolicyBindingsList()
+          .equals(other.getAccessPolicyBindingsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAccessPolicyBindingsCount() > 0) {
+        hash = (37 * hash) + ACCESS_POLICY_BINDINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getAccessPolicyBindingsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.access.ListAccessPolicyBindingsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.access.ListAccessPolicyBindingsResponse)
+        yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_ListAccessPolicyBindingsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_ListAccessPolicyBindingsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse.class, yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAccessPolicyBindingsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (accessPolicyBindingsBuilder_ == null) {
+          accessPolicyBindings_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          accessPolicyBindingsBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_ListAccessPolicyBindingsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse build() {
+        yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse buildPartial() {
+        yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse result = new yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (accessPolicyBindingsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            accessPolicyBindings_ = java.util.Collections.unmodifiableList(accessPolicyBindings_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.accessPolicyBindings_ = accessPolicyBindings_;
+        } else {
+          result.accessPolicyBindings_ = accessPolicyBindingsBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse) {
+          return mergeFrom((yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse other) {
+        if (other == yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse.getDefaultInstance()) return this;
+        if (accessPolicyBindingsBuilder_ == null) {
+          if (!other.accessPolicyBindings_.isEmpty()) {
+            if (accessPolicyBindings_.isEmpty()) {
+              accessPolicyBindings_ = other.accessPolicyBindings_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAccessPolicyBindingsIsMutable();
+              accessPolicyBindings_.addAll(other.accessPolicyBindings_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.accessPolicyBindings_.isEmpty()) {
+            if (accessPolicyBindingsBuilder_.isEmpty()) {
+              accessPolicyBindingsBuilder_.dispose();
+              accessPolicyBindingsBuilder_ = null;
+              accessPolicyBindings_ = other.accessPolicyBindings_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              accessPolicyBindingsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAccessPolicyBindingsFieldBuilder() : null;
+            } else {
+              accessPolicyBindingsBuilder_.addAllMessages(other.accessPolicyBindings_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.access.Access.AccessPolicyBinding> accessPolicyBindings_ =
+        java.util.Collections.emptyList();
+      private void ensureAccessPolicyBindingsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          accessPolicyBindings_ = new java.util.ArrayList<yandex.cloud.api.access.Access.AccessPolicyBinding>(accessPolicyBindings_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.access.Access.AccessPolicyBinding, yandex.cloud.api.access.Access.AccessPolicyBinding.Builder, yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder> accessPolicyBindingsBuilder_;
+
+      /**
+       * <pre>
+       * List of access policy bindings for the specified resource.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.access.Access.AccessPolicyBinding> getAccessPolicyBindingsList() {
+        if (accessPolicyBindingsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(accessPolicyBindings_);
+        } else {
+          return accessPolicyBindingsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of access policy bindings for the specified resource.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+       */
+      public int getAccessPolicyBindingsCount() {
+        if (accessPolicyBindingsBuilder_ == null) {
+          return accessPolicyBindings_.size();
+        } else {
+          return accessPolicyBindingsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of access policy bindings for the specified resource.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+       */
+      public yandex.cloud.api.access.Access.AccessPolicyBinding getAccessPolicyBindings(int index) {
+        if (accessPolicyBindingsBuilder_ == null) {
+          return accessPolicyBindings_.get(index);
+        } else {
+          return accessPolicyBindingsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of access policy bindings for the specified resource.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+       */
+      public Builder setAccessPolicyBindings(
+          int index, yandex.cloud.api.access.Access.AccessPolicyBinding value) {
+        if (accessPolicyBindingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccessPolicyBindingsIsMutable();
+          accessPolicyBindings_.set(index, value);
+          onChanged();
+        } else {
+          accessPolicyBindingsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of access policy bindings for the specified resource.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+       */
+      public Builder setAccessPolicyBindings(
+          int index, yandex.cloud.api.access.Access.AccessPolicyBinding.Builder builderForValue) {
+        if (accessPolicyBindingsBuilder_ == null) {
+          ensureAccessPolicyBindingsIsMutable();
+          accessPolicyBindings_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          accessPolicyBindingsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of access policy bindings for the specified resource.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+       */
+      public Builder addAccessPolicyBindings(yandex.cloud.api.access.Access.AccessPolicyBinding value) {
+        if (accessPolicyBindingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccessPolicyBindingsIsMutable();
+          accessPolicyBindings_.add(value);
+          onChanged();
+        } else {
+          accessPolicyBindingsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of access policy bindings for the specified resource.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+       */
+      public Builder addAccessPolicyBindings(
+          int index, yandex.cloud.api.access.Access.AccessPolicyBinding value) {
+        if (accessPolicyBindingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccessPolicyBindingsIsMutable();
+          accessPolicyBindings_.add(index, value);
+          onChanged();
+        } else {
+          accessPolicyBindingsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of access policy bindings for the specified resource.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+       */
+      public Builder addAccessPolicyBindings(
+          yandex.cloud.api.access.Access.AccessPolicyBinding.Builder builderForValue) {
+        if (accessPolicyBindingsBuilder_ == null) {
+          ensureAccessPolicyBindingsIsMutable();
+          accessPolicyBindings_.add(builderForValue.build());
+          onChanged();
+        } else {
+          accessPolicyBindingsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of access policy bindings for the specified resource.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+       */
+      public Builder addAccessPolicyBindings(
+          int index, yandex.cloud.api.access.Access.AccessPolicyBinding.Builder builderForValue) {
+        if (accessPolicyBindingsBuilder_ == null) {
+          ensureAccessPolicyBindingsIsMutable();
+          accessPolicyBindings_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          accessPolicyBindingsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of access policy bindings for the specified resource.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+       */
+      public Builder addAllAccessPolicyBindings(
+          java.lang.Iterable<? extends yandex.cloud.api.access.Access.AccessPolicyBinding> values) {
+        if (accessPolicyBindingsBuilder_ == null) {
+          ensureAccessPolicyBindingsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, accessPolicyBindings_);
+          onChanged();
+        } else {
+          accessPolicyBindingsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of access policy bindings for the specified resource.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+       */
+      public Builder clearAccessPolicyBindings() {
+        if (accessPolicyBindingsBuilder_ == null) {
+          accessPolicyBindings_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          accessPolicyBindingsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of access policy bindings for the specified resource.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+       */
+      public Builder removeAccessPolicyBindings(int index) {
+        if (accessPolicyBindingsBuilder_ == null) {
+          ensureAccessPolicyBindingsIsMutable();
+          accessPolicyBindings_.remove(index);
+          onChanged();
+        } else {
+          accessPolicyBindingsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of access policy bindings for the specified resource.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+       */
+      public yandex.cloud.api.access.Access.AccessPolicyBinding.Builder getAccessPolicyBindingsBuilder(
+          int index) {
+        return getAccessPolicyBindingsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of access policy bindings for the specified resource.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+       */
+      public yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder getAccessPolicyBindingsOrBuilder(
+          int index) {
+        if (accessPolicyBindingsBuilder_ == null) {
+          return accessPolicyBindings_.get(index);  } else {
+          return accessPolicyBindingsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of access policy bindings for the specified resource.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder> 
+           getAccessPolicyBindingsOrBuilderList() {
+        if (accessPolicyBindingsBuilder_ != null) {
+          return accessPolicyBindingsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(accessPolicyBindings_);
+        }
+      }
+      /**
+       * <pre>
+       * List of access policy bindings for the specified resource.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+       */
+      public yandex.cloud.api.access.Access.AccessPolicyBinding.Builder addAccessPolicyBindingsBuilder() {
+        return getAccessPolicyBindingsFieldBuilder().addBuilder(
+            yandex.cloud.api.access.Access.AccessPolicyBinding.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of access policy bindings for the specified resource.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+       */
+      public yandex.cloud.api.access.Access.AccessPolicyBinding.Builder addAccessPolicyBindingsBuilder(
+          int index) {
+        return getAccessPolicyBindingsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.access.Access.AccessPolicyBinding.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of access policy bindings for the specified resource.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.access.AccessPolicyBinding access_policy_bindings = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.access.Access.AccessPolicyBinding.Builder> 
+           getAccessPolicyBindingsBuilderList() {
+        return getAccessPolicyBindingsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.access.Access.AccessPolicyBinding, yandex.cloud.api.access.Access.AccessPolicyBinding.Builder, yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder> 
+          getAccessPolicyBindingsFieldBuilder() {
+        if (accessPolicyBindingsBuilder_ == null) {
+          accessPolicyBindingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.access.Access.AccessPolicyBinding, yandex.cloud.api.access.Access.AccessPolicyBinding.Builder, yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder>(
+                  accessPolicyBindings_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          accessPolicyBindings_ = null;
+        }
+        return accessPolicyBindingsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than
+       * [ListAccessPolicyBindingsRequest.page_size]
+       * , use the [next_page_token] as the value for the
+       * [ListAccessPolicyBindingsRequest.page_token]
+       * query parameter in the next list request. Each subsequent list request will have its own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than
+       * [ListAccessPolicyBindingsRequest.page_size]
+       * , use the [next_page_token] as the value for the
+       * [ListAccessPolicyBindingsRequest.page_token]
+       * query parameter in the next list request. Each subsequent list request will have its own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than
+       * [ListAccessPolicyBindingsRequest.page_size]
+       * , use the [next_page_token] as the value for the
+       * [ListAccessPolicyBindingsRequest.page_token]
+       * query parameter in the next list request. Each subsequent list request will have its own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than
+       * [ListAccessPolicyBindingsRequest.page_size]
+       * , use the [next_page_token] as the value for the
+       * [ListAccessPolicyBindingsRequest.page_token]
+       * query parameter in the next list request. Each subsequent list request will have its own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than
+       * [ListAccessPolicyBindingsRequest.page_size]
+       * , use the [next_page_token] as the value for the
+       * [ListAccessPolicyBindingsRequest.page_token]
+       * query parameter in the next list request. Each subsequent list request will have its own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.access.ListAccessPolicyBindingsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.access.ListAccessPolicyBindingsResponse)
+    private static final yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse();
+    }
+
+    public static yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListAccessPolicyBindingsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListAccessPolicyBindingsResponse>() {
+      @java.lang.Override
+      public ListAccessPolicyBindingsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListAccessPolicyBindingsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListAccessPolicyBindingsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListAccessPolicyBindingsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.ListAccessPolicyBindingsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UnbindAccessPolicyRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.access.UnbindAccessPolicyRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the resource for which access policy bindings are being removed.
+     * To get the resource ID, use a corresponding List request.
+     * </pre>
+     *
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
+     */
+    java.lang.String getResourceId();
+    /**
+     * <pre>
+     * ID of the resource for which access policy bindings are being removed.
+     * To get the resource ID, use a corresponding List request.
+     * </pre>
+     *
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
+     */
+    com.google.protobuf.ByteString
+        getResourceIdBytes();
+
+    /**
+     * <pre>
+     * ID of the access policy.
+     * </pre>
+     *
+     * <code>string access_policy_template_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The accessPolicyTemplateId.
+     */
+    java.lang.String getAccessPolicyTemplateId();
+    /**
+     * <pre>
+     * ID of the access policy.
+     * </pre>
+     *
+     * <code>string access_policy_template_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for accessPolicyTemplateId.
+     */
+    com.google.protobuf.ByteString
+        getAccessPolicyTemplateIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.access.UnbindAccessPolicyRequest}
+   */
+  public static final class UnbindAccessPolicyRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.access.UnbindAccessPolicyRequest)
+      UnbindAccessPolicyRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UnbindAccessPolicyRequest.newBuilder() to construct.
+    private UnbindAccessPolicyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UnbindAccessPolicyRequest() {
+      resourceId_ = "";
+      accessPolicyTemplateId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UnbindAccessPolicyRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UnbindAccessPolicyRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourceId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              accessPolicyTemplateId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UnbindAccessPolicyRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UnbindAccessPolicyRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.access.Access.UnbindAccessPolicyRequest.class, yandex.cloud.api.access.Access.UnbindAccessPolicyRequest.Builder.class);
+    }
+
+    public static final int RESOURCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object resourceId_;
+    /**
+     * <pre>
+     * ID of the resource for which access policy bindings are being removed.
+     * To get the resource ID, use a corresponding List request.
+     * </pre>
+     *
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the resource for which access policy bindings are being removed.
+     * To get the resource ID, use a corresponding List request.
+     * </pre>
+     *
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCESS_POLICY_TEMPLATE_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object accessPolicyTemplateId_;
+    /**
+     * <pre>
+     * ID of the access policy.
+     * </pre>
+     *
+     * <code>string access_policy_template_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The accessPolicyTemplateId.
+     */
+    @java.lang.Override
+    public java.lang.String getAccessPolicyTemplateId() {
+      java.lang.Object ref = accessPolicyTemplateId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accessPolicyTemplateId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the access policy.
+     * </pre>
+     *
+     * <code>string access_policy_template_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for accessPolicyTemplateId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccessPolicyTemplateIdBytes() {
+      java.lang.Object ref = accessPolicyTemplateId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accessPolicyTemplateId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessPolicyTemplateId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, accessPolicyTemplateId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessPolicyTemplateId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, accessPolicyTemplateId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.access.Access.UnbindAccessPolicyRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.access.Access.UnbindAccessPolicyRequest other = (yandex.cloud.api.access.Access.UnbindAccessPolicyRequest) obj;
+
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (!getAccessPolicyTemplateId()
+          .equals(other.getAccessPolicyTemplateId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceId().hashCode();
+      hash = (37 * hash) + ACCESS_POLICY_TEMPLATE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAccessPolicyTemplateId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.access.Access.UnbindAccessPolicyRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.access.UnbindAccessPolicyRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.access.UnbindAccessPolicyRequest)
+        yandex.cloud.api.access.Access.UnbindAccessPolicyRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UnbindAccessPolicyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UnbindAccessPolicyRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.access.Access.UnbindAccessPolicyRequest.class, yandex.cloud.api.access.Access.UnbindAccessPolicyRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.access.Access.UnbindAccessPolicyRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        resourceId_ = "";
+
+        accessPolicyTemplateId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UnbindAccessPolicyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.UnbindAccessPolicyRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.access.Access.UnbindAccessPolicyRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.UnbindAccessPolicyRequest build() {
+        yandex.cloud.api.access.Access.UnbindAccessPolicyRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.UnbindAccessPolicyRequest buildPartial() {
+        yandex.cloud.api.access.Access.UnbindAccessPolicyRequest result = new yandex.cloud.api.access.Access.UnbindAccessPolicyRequest(this);
+        result.resourceId_ = resourceId_;
+        result.accessPolicyTemplateId_ = accessPolicyTemplateId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.access.Access.UnbindAccessPolicyRequest) {
+          return mergeFrom((yandex.cloud.api.access.Access.UnbindAccessPolicyRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.access.Access.UnbindAccessPolicyRequest other) {
+        if (other == yandex.cloud.api.access.Access.UnbindAccessPolicyRequest.getDefaultInstance()) return this;
+        if (!other.getResourceId().isEmpty()) {
+          resourceId_ = other.resourceId_;
+          onChanged();
+        }
+        if (!other.getAccessPolicyTemplateId().isEmpty()) {
+          accessPolicyTemplateId_ = other.accessPolicyTemplateId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.access.Access.UnbindAccessPolicyRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.access.Access.UnbindAccessPolicyRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object resourceId_ = "";
+      /**
+       * <pre>
+       * ID of the resource for which access policy bindings are being removed.
+       * To get the resource ID, use a corresponding List request.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The resourceId.
+       */
+      public java.lang.String getResourceId() {
+        java.lang.Object ref = resourceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the resource for which access policy bindings are being removed.
+       * To get the resource ID, use a corresponding List request.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for resourceId.
+       */
+      public com.google.protobuf.ByteString
+          getResourceIdBytes() {
+        java.lang.Object ref = resourceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the resource for which access policy bindings are being removed.
+       * To get the resource ID, use a corresponding List request.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the resource for which access policy bindings are being removed.
+       * To get the resource ID, use a corresponding List request.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceId() {
+        
+        resourceId_ = getDefaultInstance().getResourceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the resource for which access policy bindings are being removed.
+       * To get the resource ID, use a corresponding List request.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object accessPolicyTemplateId_ = "";
+      /**
+       * <pre>
+       * ID of the access policy.
+       * </pre>
+       *
+       * <code>string access_policy_template_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The accessPolicyTemplateId.
+       */
+      public java.lang.String getAccessPolicyTemplateId() {
+        java.lang.Object ref = accessPolicyTemplateId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accessPolicyTemplateId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the access policy.
+       * </pre>
+       *
+       * <code>string access_policy_template_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for accessPolicyTemplateId.
+       */
+      public com.google.protobuf.ByteString
+          getAccessPolicyTemplateIdBytes() {
+        java.lang.Object ref = accessPolicyTemplateId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accessPolicyTemplateId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the access policy.
+       * </pre>
+       *
+       * <code>string access_policy_template_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The accessPolicyTemplateId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessPolicyTemplateId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        accessPolicyTemplateId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the access policy.
+       * </pre>
+       *
+       * <code>string access_policy_template_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccessPolicyTemplateId() {
+        
+        accessPolicyTemplateId_ = getDefaultInstance().getAccessPolicyTemplateId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the access policy.
+       * </pre>
+       *
+       * <code>string access_policy_template_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for accessPolicyTemplateId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessPolicyTemplateIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        accessPolicyTemplateId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.access.UnbindAccessPolicyRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.access.UnbindAccessPolicyRequest)
+    private static final yandex.cloud.api.access.Access.UnbindAccessPolicyRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.access.Access.UnbindAccessPolicyRequest();
+    }
+
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UnbindAccessPolicyRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UnbindAccessPolicyRequest>() {
+      @java.lang.Override
+      public UnbindAccessPolicyRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UnbindAccessPolicyRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UnbindAccessPolicyRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UnbindAccessPolicyRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.UnbindAccessPolicyRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UnbindAccessPolicyMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.access.UnbindAccessPolicyMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the resource for which access policy bindings are being removed.
+     * </pre>
+     *
+     * <code>string resource_id = 1;</code>
+     * @return The resourceId.
+     */
+    java.lang.String getResourceId();
+    /**
+     * <pre>
+     * ID of the resource for which access policy bindings are being removed.
+     * </pre>
+     *
+     * <code>string resource_id = 1;</code>
+     * @return The bytes for resourceId.
+     */
+    com.google.protobuf.ByteString
+        getResourceIdBytes();
+
+    /**
+     * <pre>
+     * ID of the access policy.
+     * </pre>
+     *
+     * <code>string access_policy_template_id = 2;</code>
+     * @return The accessPolicyTemplateId.
+     */
+    java.lang.String getAccessPolicyTemplateId();
+    /**
+     * <pre>
+     * ID of the access policy.
+     * </pre>
+     *
+     * <code>string access_policy_template_id = 2;</code>
+     * @return The bytes for accessPolicyTemplateId.
+     */
+    com.google.protobuf.ByteString
+        getAccessPolicyTemplateIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.access.UnbindAccessPolicyMetadata}
+   */
+  public static final class UnbindAccessPolicyMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.access.UnbindAccessPolicyMetadata)
+      UnbindAccessPolicyMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UnbindAccessPolicyMetadata.newBuilder() to construct.
+    private UnbindAccessPolicyMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UnbindAccessPolicyMetadata() {
+      resourceId_ = "";
+      accessPolicyTemplateId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UnbindAccessPolicyMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UnbindAccessPolicyMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourceId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              accessPolicyTemplateId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UnbindAccessPolicyMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UnbindAccessPolicyMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata.class, yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata.Builder.class);
+    }
+
+    public static final int RESOURCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object resourceId_;
+    /**
+     * <pre>
+     * ID of the resource for which access policy bindings are being removed.
+     * </pre>
+     *
+     * <code>string resource_id = 1;</code>
+     * @return The resourceId.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the resource for which access policy bindings are being removed.
+     * </pre>
+     *
+     * <code>string resource_id = 1;</code>
+     * @return The bytes for resourceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCESS_POLICY_TEMPLATE_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object accessPolicyTemplateId_;
+    /**
+     * <pre>
+     * ID of the access policy.
+     * </pre>
+     *
+     * <code>string access_policy_template_id = 2;</code>
+     * @return The accessPolicyTemplateId.
+     */
+    @java.lang.Override
+    public java.lang.String getAccessPolicyTemplateId() {
+      java.lang.Object ref = accessPolicyTemplateId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accessPolicyTemplateId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the access policy.
+     * </pre>
+     *
+     * <code>string access_policy_template_id = 2;</code>
+     * @return The bytes for accessPolicyTemplateId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccessPolicyTemplateIdBytes() {
+      java.lang.Object ref = accessPolicyTemplateId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accessPolicyTemplateId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessPolicyTemplateId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, accessPolicyTemplateId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessPolicyTemplateId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, accessPolicyTemplateId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata other = (yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata) obj;
+
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (!getAccessPolicyTemplateId()
+          .equals(other.getAccessPolicyTemplateId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceId().hashCode();
+      hash = (37 * hash) + ACCESS_POLICY_TEMPLATE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAccessPolicyTemplateId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.access.UnbindAccessPolicyMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.access.UnbindAccessPolicyMetadata)
+        yandex.cloud.api.access.Access.UnbindAccessPolicyMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UnbindAccessPolicyMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UnbindAccessPolicyMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata.class, yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        resourceId_ = "";
+
+        accessPolicyTemplateId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UnbindAccessPolicyMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata build() {
+        yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata buildPartial() {
+        yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata result = new yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata(this);
+        result.resourceId_ = resourceId_;
+        result.accessPolicyTemplateId_ = accessPolicyTemplateId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata) {
+          return mergeFrom((yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata other) {
+        if (other == yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata.getDefaultInstance()) return this;
+        if (!other.getResourceId().isEmpty()) {
+          resourceId_ = other.resourceId_;
+          onChanged();
+        }
+        if (!other.getAccessPolicyTemplateId().isEmpty()) {
+          accessPolicyTemplateId_ = other.accessPolicyTemplateId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object resourceId_ = "";
+      /**
+       * <pre>
+       * ID of the resource for which access policy bindings are being removed.
+       * </pre>
+       *
+       * <code>string resource_id = 1;</code>
+       * @return The resourceId.
+       */
+      public java.lang.String getResourceId() {
+        java.lang.Object ref = resourceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the resource for which access policy bindings are being removed.
+       * </pre>
+       *
+       * <code>string resource_id = 1;</code>
+       * @return The bytes for resourceId.
+       */
+      public com.google.protobuf.ByteString
+          getResourceIdBytes() {
+        java.lang.Object ref = resourceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the resource for which access policy bindings are being removed.
+       * </pre>
+       *
+       * <code>string resource_id = 1;</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the resource for which access policy bindings are being removed.
+       * </pre>
+       *
+       * <code>string resource_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceId() {
+        
+        resourceId_ = getDefaultInstance().getResourceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the resource for which access policy bindings are being removed.
+       * </pre>
+       *
+       * <code>string resource_id = 1;</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object accessPolicyTemplateId_ = "";
+      /**
+       * <pre>
+       * ID of the access policy.
+       * </pre>
+       *
+       * <code>string access_policy_template_id = 2;</code>
+       * @return The accessPolicyTemplateId.
+       */
+      public java.lang.String getAccessPolicyTemplateId() {
+        java.lang.Object ref = accessPolicyTemplateId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accessPolicyTemplateId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the access policy.
+       * </pre>
+       *
+       * <code>string access_policy_template_id = 2;</code>
+       * @return The bytes for accessPolicyTemplateId.
+       */
+      public com.google.protobuf.ByteString
+          getAccessPolicyTemplateIdBytes() {
+        java.lang.Object ref = accessPolicyTemplateId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accessPolicyTemplateId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the access policy.
+       * </pre>
+       *
+       * <code>string access_policy_template_id = 2;</code>
+       * @param value The accessPolicyTemplateId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessPolicyTemplateId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        accessPolicyTemplateId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the access policy.
+       * </pre>
+       *
+       * <code>string access_policy_template_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccessPolicyTemplateId() {
+        
+        accessPolicyTemplateId_ = getDefaultInstance().getAccessPolicyTemplateId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the access policy.
+       * </pre>
+       *
+       * <code>string access_policy_template_id = 2;</code>
+       * @param value The bytes for accessPolicyTemplateId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessPolicyTemplateIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        accessPolicyTemplateId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.access.UnbindAccessPolicyMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.access.UnbindAccessPolicyMetadata)
+    private static final yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata();
+    }
+
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UnbindAccessPolicyMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<UnbindAccessPolicyMetadata>() {
+      @java.lang.Override
+      public UnbindAccessPolicyMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UnbindAccessPolicyMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UnbindAccessPolicyMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UnbindAccessPolicyMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.UnbindAccessPolicyMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UnbindAccessPolicyResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.access.UnbindAccessPolicyResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.access.UnbindAccessPolicyResponse}
+   */
+  public static final class UnbindAccessPolicyResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.access.UnbindAccessPolicyResponse)
+      UnbindAccessPolicyResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UnbindAccessPolicyResponse.newBuilder() to construct.
+    private UnbindAccessPolicyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UnbindAccessPolicyResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UnbindAccessPolicyResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UnbindAccessPolicyResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UnbindAccessPolicyResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UnbindAccessPolicyResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.access.Access.UnbindAccessPolicyResponse.class, yandex.cloud.api.access.Access.UnbindAccessPolicyResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.access.Access.UnbindAccessPolicyResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.access.Access.UnbindAccessPolicyResponse other = (yandex.cloud.api.access.Access.UnbindAccessPolicyResponse) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.access.Access.UnbindAccessPolicyResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.access.UnbindAccessPolicyResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.access.UnbindAccessPolicyResponse)
+        yandex.cloud.api.access.Access.UnbindAccessPolicyResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UnbindAccessPolicyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UnbindAccessPolicyResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.access.Access.UnbindAccessPolicyResponse.class, yandex.cloud.api.access.Access.UnbindAccessPolicyResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.access.Access.UnbindAccessPolicyResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UnbindAccessPolicyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.UnbindAccessPolicyResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.access.Access.UnbindAccessPolicyResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.UnbindAccessPolicyResponse build() {
+        yandex.cloud.api.access.Access.UnbindAccessPolicyResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.UnbindAccessPolicyResponse buildPartial() {
+        yandex.cloud.api.access.Access.UnbindAccessPolicyResponse result = new yandex.cloud.api.access.Access.UnbindAccessPolicyResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.access.Access.UnbindAccessPolicyResponse) {
+          return mergeFrom((yandex.cloud.api.access.Access.UnbindAccessPolicyResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.access.Access.UnbindAccessPolicyResponse other) {
+        if (other == yandex.cloud.api.access.Access.UnbindAccessPolicyResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.access.Access.UnbindAccessPolicyResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.access.Access.UnbindAccessPolicyResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.access.UnbindAccessPolicyResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.access.UnbindAccessPolicyResponse)
+    private static final yandex.cloud.api.access.Access.UnbindAccessPolicyResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.access.Access.UnbindAccessPolicyResponse();
+    }
+
+    public static yandex.cloud.api.access.Access.UnbindAccessPolicyResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UnbindAccessPolicyResponse>
+        PARSER = new com.google.protobuf.AbstractParser<UnbindAccessPolicyResponse>() {
+      @java.lang.Override
+      public UnbindAccessPolicyResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UnbindAccessPolicyResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UnbindAccessPolicyResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UnbindAccessPolicyResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.UnbindAccessPolicyResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateAccessPolicyBindingParametersRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.access.UpdateAccessPolicyBindingParametersRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
+     */
+    java.lang.String getResourceId();
+    /**
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
+     */
+    com.google.protobuf.ByteString
+        getResourceIdBytes();
+
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the accessPolicyBinding field is set.
+     */
+    boolean hasAccessPolicyBinding();
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The accessPolicyBinding.
+     */
+    yandex.cloud.api.access.Access.AccessPolicyBinding getAccessPolicyBinding();
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder getAccessPolicyBindingOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.access.UpdateAccessPolicyBindingParametersRequest}
+   */
+  public static final class UpdateAccessPolicyBindingParametersRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.access.UpdateAccessPolicyBindingParametersRequest)
+      UpdateAccessPolicyBindingParametersRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateAccessPolicyBindingParametersRequest.newBuilder() to construct.
+    private UpdateAccessPolicyBindingParametersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateAccessPolicyBindingParametersRequest() {
+      resourceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateAccessPolicyBindingParametersRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateAccessPolicyBindingParametersRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourceId_ = s;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.access.Access.AccessPolicyBinding.Builder subBuilder = null;
+              if (accessPolicyBinding_ != null) {
+                subBuilder = accessPolicyBinding_.toBuilder();
+              }
+              accessPolicyBinding_ = input.readMessage(yandex.cloud.api.access.Access.AccessPolicyBinding.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(accessPolicyBinding_);
+                accessPolicyBinding_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest.class, yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest.Builder.class);
+    }
+
+    public static final int RESOURCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object resourceId_;
+    /**
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCESS_POLICY_BINDING_FIELD_NUMBER = 2;
+    private yandex.cloud.api.access.Access.AccessPolicyBinding accessPolicyBinding_;
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the accessPolicyBinding field is set.
+     */
+    @java.lang.Override
+    public boolean hasAccessPolicyBinding() {
+      return accessPolicyBinding_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The accessPolicyBinding.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.AccessPolicyBinding getAccessPolicyBinding() {
+      return accessPolicyBinding_ == null ? yandex.cloud.api.access.Access.AccessPolicyBinding.getDefaultInstance() : accessPolicyBinding_;
+    }
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder getAccessPolicyBindingOrBuilder() {
+      return getAccessPolicyBinding();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
+      }
+      if (accessPolicyBinding_ != null) {
+        output.writeMessage(2, getAccessPolicyBinding());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
+      }
+      if (accessPolicyBinding_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAccessPolicyBinding());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest other = (yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest) obj;
+
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (hasAccessPolicyBinding() != other.hasAccessPolicyBinding()) return false;
+      if (hasAccessPolicyBinding()) {
+        if (!getAccessPolicyBinding()
+            .equals(other.getAccessPolicyBinding())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceId().hashCode();
+      if (hasAccessPolicyBinding()) {
+        hash = (37 * hash) + ACCESS_POLICY_BINDING_FIELD_NUMBER;
+        hash = (53 * hash) + getAccessPolicyBinding().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.access.UpdateAccessPolicyBindingParametersRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.access.UpdateAccessPolicyBindingParametersRequest)
+        yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest.class, yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        resourceId_ = "";
+
+        if (accessPolicyBindingBuilder_ == null) {
+          accessPolicyBinding_ = null;
+        } else {
+          accessPolicyBinding_ = null;
+          accessPolicyBindingBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest build() {
+        yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest buildPartial() {
+        yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest result = new yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest(this);
+        result.resourceId_ = resourceId_;
+        if (accessPolicyBindingBuilder_ == null) {
+          result.accessPolicyBinding_ = accessPolicyBinding_;
+        } else {
+          result.accessPolicyBinding_ = accessPolicyBindingBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest) {
+          return mergeFrom((yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest other) {
+        if (other == yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest.getDefaultInstance()) return this;
+        if (!other.getResourceId().isEmpty()) {
+          resourceId_ = other.resourceId_;
+          onChanged();
+        }
+        if (other.hasAccessPolicyBinding()) {
+          mergeAccessPolicyBinding(other.getAccessPolicyBinding());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object resourceId_ = "";
+      /**
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The resourceId.
+       */
+      public java.lang.String getResourceId() {
+        java.lang.Object ref = resourceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for resourceId.
+       */
+      public com.google.protobuf.ByteString
+          getResourceIdBytes() {
+        java.lang.Object ref = resourceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceId() {
+        
+        resourceId_ = getDefaultInstance().getResourceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.access.Access.AccessPolicyBinding accessPolicyBinding_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.access.Access.AccessPolicyBinding, yandex.cloud.api.access.Access.AccessPolicyBinding.Builder, yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder> accessPolicyBindingBuilder_;
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the accessPolicyBinding field is set.
+       */
+      public boolean hasAccessPolicyBinding() {
+        return accessPolicyBindingBuilder_ != null || accessPolicyBinding_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The accessPolicyBinding.
+       */
+      public yandex.cloud.api.access.Access.AccessPolicyBinding getAccessPolicyBinding() {
+        if (accessPolicyBindingBuilder_ == null) {
+          return accessPolicyBinding_ == null ? yandex.cloud.api.access.Access.AccessPolicyBinding.getDefaultInstance() : accessPolicyBinding_;
+        } else {
+          return accessPolicyBindingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setAccessPolicyBinding(yandex.cloud.api.access.Access.AccessPolicyBinding value) {
+        if (accessPolicyBindingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          accessPolicyBinding_ = value;
+          onChanged();
+        } else {
+          accessPolicyBindingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setAccessPolicyBinding(
+          yandex.cloud.api.access.Access.AccessPolicyBinding.Builder builderForValue) {
+        if (accessPolicyBindingBuilder_ == null) {
+          accessPolicyBinding_ = builderForValue.build();
+          onChanged();
+        } else {
+          accessPolicyBindingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergeAccessPolicyBinding(yandex.cloud.api.access.Access.AccessPolicyBinding value) {
+        if (accessPolicyBindingBuilder_ == null) {
+          if (accessPolicyBinding_ != null) {
+            accessPolicyBinding_ =
+              yandex.cloud.api.access.Access.AccessPolicyBinding.newBuilder(accessPolicyBinding_).mergeFrom(value).buildPartial();
+          } else {
+            accessPolicyBinding_ = value;
+          }
+          onChanged();
+        } else {
+          accessPolicyBindingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearAccessPolicyBinding() {
+        if (accessPolicyBindingBuilder_ == null) {
+          accessPolicyBinding_ = null;
+          onChanged();
+        } else {
+          accessPolicyBinding_ = null;
+          accessPolicyBindingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.access.Access.AccessPolicyBinding.Builder getAccessPolicyBindingBuilder() {
+        
+        onChanged();
+        return getAccessPolicyBindingFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder getAccessPolicyBindingOrBuilder() {
+        if (accessPolicyBindingBuilder_ != null) {
+          return accessPolicyBindingBuilder_.getMessageOrBuilder();
+        } else {
+          return accessPolicyBinding_ == null ?
+              yandex.cloud.api.access.Access.AccessPolicyBinding.getDefaultInstance() : accessPolicyBinding_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.access.Access.AccessPolicyBinding, yandex.cloud.api.access.Access.AccessPolicyBinding.Builder, yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder> 
+          getAccessPolicyBindingFieldBuilder() {
+        if (accessPolicyBindingBuilder_ == null) {
+          accessPolicyBindingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.access.Access.AccessPolicyBinding, yandex.cloud.api.access.Access.AccessPolicyBinding.Builder, yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder>(
+                  getAccessPolicyBinding(),
+                  getParentForChildren(),
+                  isClean());
+          accessPolicyBinding_ = null;
+        }
+        return accessPolicyBindingBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.access.UpdateAccessPolicyBindingParametersRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.access.UpdateAccessPolicyBindingParametersRequest)
+    private static final yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest();
+    }
+
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateAccessPolicyBindingParametersRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateAccessPolicyBindingParametersRequest>() {
+      @java.lang.Override
+      public UpdateAccessPolicyBindingParametersRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateAccessPolicyBindingParametersRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateAccessPolicyBindingParametersRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateAccessPolicyBindingParametersRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateAccessPolicyBindingParametersMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.access.UpdateAccessPolicyBindingParametersMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string resource_id = 1;</code>
+     * @return The resourceId.
+     */
+    java.lang.String getResourceId();
+    /**
+     * <code>string resource_id = 1;</code>
+     * @return The bytes for resourceId.
+     */
+    com.google.protobuf.ByteString
+        getResourceIdBytes();
+
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+     * @return Whether the accessPolicyBinding field is set.
+     */
+    boolean hasAccessPolicyBinding();
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+     * @return The accessPolicyBinding.
+     */
+    yandex.cloud.api.access.Access.AccessPolicyBinding getAccessPolicyBinding();
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+     */
+    yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder getAccessPolicyBindingOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.access.UpdateAccessPolicyBindingParametersMetadata}
+   */
+  public static final class UpdateAccessPolicyBindingParametersMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.access.UpdateAccessPolicyBindingParametersMetadata)
+      UpdateAccessPolicyBindingParametersMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateAccessPolicyBindingParametersMetadata.newBuilder() to construct.
+    private UpdateAccessPolicyBindingParametersMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateAccessPolicyBindingParametersMetadata() {
+      resourceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateAccessPolicyBindingParametersMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateAccessPolicyBindingParametersMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourceId_ = s;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.access.Access.AccessPolicyBinding.Builder subBuilder = null;
+              if (accessPolicyBinding_ != null) {
+                subBuilder = accessPolicyBinding_.toBuilder();
+              }
+              accessPolicyBinding_ = input.readMessage(yandex.cloud.api.access.Access.AccessPolicyBinding.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(accessPolicyBinding_);
+                accessPolicyBinding_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata.class, yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata.Builder.class);
+    }
+
+    public static final int RESOURCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object resourceId_;
+    /**
+     * <code>string resource_id = 1;</code>
+     * @return The resourceId.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string resource_id = 1;</code>
+     * @return The bytes for resourceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCESS_POLICY_BINDING_FIELD_NUMBER = 2;
+    private yandex.cloud.api.access.Access.AccessPolicyBinding accessPolicyBinding_;
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+     * @return Whether the accessPolicyBinding field is set.
+     */
+    @java.lang.Override
+    public boolean hasAccessPolicyBinding() {
+      return accessPolicyBinding_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+     * @return The accessPolicyBinding.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.AccessPolicyBinding getAccessPolicyBinding() {
+      return accessPolicyBinding_ == null ? yandex.cloud.api.access.Access.AccessPolicyBinding.getDefaultInstance() : accessPolicyBinding_;
+    }
+    /**
+     * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder getAccessPolicyBindingOrBuilder() {
+      return getAccessPolicyBinding();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
+      }
+      if (accessPolicyBinding_ != null) {
+        output.writeMessage(2, getAccessPolicyBinding());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
+      }
+      if (accessPolicyBinding_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAccessPolicyBinding());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata other = (yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata) obj;
+
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (hasAccessPolicyBinding() != other.hasAccessPolicyBinding()) return false;
+      if (hasAccessPolicyBinding()) {
+        if (!getAccessPolicyBinding()
+            .equals(other.getAccessPolicyBinding())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceId().hashCode();
+      if (hasAccessPolicyBinding()) {
+        hash = (37 * hash) + ACCESS_POLICY_BINDING_FIELD_NUMBER;
+        hash = (53 * hash) + getAccessPolicyBinding().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.access.UpdateAccessPolicyBindingParametersMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.access.UpdateAccessPolicyBindingParametersMetadata)
+        yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata.class, yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        resourceId_ = "";
+
+        if (accessPolicyBindingBuilder_ == null) {
+          accessPolicyBinding_ = null;
+        } else {
+          accessPolicyBinding_ = null;
+          accessPolicyBindingBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata build() {
+        yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata buildPartial() {
+        yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata result = new yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata(this);
+        result.resourceId_ = resourceId_;
+        if (accessPolicyBindingBuilder_ == null) {
+          result.accessPolicyBinding_ = accessPolicyBinding_;
+        } else {
+          result.accessPolicyBinding_ = accessPolicyBindingBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata) {
+          return mergeFrom((yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata other) {
+        if (other == yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata.getDefaultInstance()) return this;
+        if (!other.getResourceId().isEmpty()) {
+          resourceId_ = other.resourceId_;
+          onChanged();
+        }
+        if (other.hasAccessPolicyBinding()) {
+          mergeAccessPolicyBinding(other.getAccessPolicyBinding());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object resourceId_ = "";
+      /**
+       * <code>string resource_id = 1;</code>
+       * @return The resourceId.
+       */
+      public java.lang.String getResourceId() {
+        java.lang.Object ref = resourceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string resource_id = 1;</code>
+       * @return The bytes for resourceId.
+       */
+      public com.google.protobuf.ByteString
+          getResourceIdBytes() {
+        java.lang.Object ref = resourceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string resource_id = 1;</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resource_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceId() {
+        
+        resourceId_ = getDefaultInstance().getResourceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resource_id = 1;</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.access.Access.AccessPolicyBinding accessPolicyBinding_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.access.Access.AccessPolicyBinding, yandex.cloud.api.access.Access.AccessPolicyBinding.Builder, yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder> accessPolicyBindingBuilder_;
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+       * @return Whether the accessPolicyBinding field is set.
+       */
+      public boolean hasAccessPolicyBinding() {
+        return accessPolicyBindingBuilder_ != null || accessPolicyBinding_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+       * @return The accessPolicyBinding.
+       */
+      public yandex.cloud.api.access.Access.AccessPolicyBinding getAccessPolicyBinding() {
+        if (accessPolicyBindingBuilder_ == null) {
+          return accessPolicyBinding_ == null ? yandex.cloud.api.access.Access.AccessPolicyBinding.getDefaultInstance() : accessPolicyBinding_;
+        } else {
+          return accessPolicyBindingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+       */
+      public Builder setAccessPolicyBinding(yandex.cloud.api.access.Access.AccessPolicyBinding value) {
+        if (accessPolicyBindingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          accessPolicyBinding_ = value;
+          onChanged();
+        } else {
+          accessPolicyBindingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+       */
+      public Builder setAccessPolicyBinding(
+          yandex.cloud.api.access.Access.AccessPolicyBinding.Builder builderForValue) {
+        if (accessPolicyBindingBuilder_ == null) {
+          accessPolicyBinding_ = builderForValue.build();
+          onChanged();
+        } else {
+          accessPolicyBindingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+       */
+      public Builder mergeAccessPolicyBinding(yandex.cloud.api.access.Access.AccessPolicyBinding value) {
+        if (accessPolicyBindingBuilder_ == null) {
+          if (accessPolicyBinding_ != null) {
+            accessPolicyBinding_ =
+              yandex.cloud.api.access.Access.AccessPolicyBinding.newBuilder(accessPolicyBinding_).mergeFrom(value).buildPartial();
+          } else {
+            accessPolicyBinding_ = value;
+          }
+          onChanged();
+        } else {
+          accessPolicyBindingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+       */
+      public Builder clearAccessPolicyBinding() {
+        if (accessPolicyBindingBuilder_ == null) {
+          accessPolicyBinding_ = null;
+          onChanged();
+        } else {
+          accessPolicyBinding_ = null;
+          accessPolicyBindingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+       */
+      public yandex.cloud.api.access.Access.AccessPolicyBinding.Builder getAccessPolicyBindingBuilder() {
+        
+        onChanged();
+        return getAccessPolicyBindingFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+       */
+      public yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder getAccessPolicyBindingOrBuilder() {
+        if (accessPolicyBindingBuilder_ != null) {
+          return accessPolicyBindingBuilder_.getMessageOrBuilder();
+        } else {
+          return accessPolicyBinding_ == null ?
+              yandex.cloud.api.access.Access.AccessPolicyBinding.getDefaultInstance() : accessPolicyBinding_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.access.AccessPolicyBinding access_policy_binding = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.access.Access.AccessPolicyBinding, yandex.cloud.api.access.Access.AccessPolicyBinding.Builder, yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder> 
+          getAccessPolicyBindingFieldBuilder() {
+        if (accessPolicyBindingBuilder_ == null) {
+          accessPolicyBindingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.access.Access.AccessPolicyBinding, yandex.cloud.api.access.Access.AccessPolicyBinding.Builder, yandex.cloud.api.access.Access.AccessPolicyBindingOrBuilder>(
+                  getAccessPolicyBinding(),
+                  getParentForChildren(),
+                  isClean());
+          accessPolicyBinding_ = null;
+        }
+        return accessPolicyBindingBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.access.UpdateAccessPolicyBindingParametersMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.access.UpdateAccessPolicyBindingParametersMetadata)
+    private static final yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata();
+    }
+
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateAccessPolicyBindingParametersMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateAccessPolicyBindingParametersMetadata>() {
+      @java.lang.Override
+      public UpdateAccessPolicyBindingParametersMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateAccessPolicyBindingParametersMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateAccessPolicyBindingParametersMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateAccessPolicyBindingParametersMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateAccessPolicyBindingParametersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.access.UpdateAccessPolicyBindingParametersResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.access.UpdateAccessPolicyBindingParametersResponse}
+   */
+  public static final class UpdateAccessPolicyBindingParametersResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.access.UpdateAccessPolicyBindingParametersResponse)
+      UpdateAccessPolicyBindingParametersResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateAccessPolicyBindingParametersResponse.newBuilder() to construct.
+    private UpdateAccessPolicyBindingParametersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateAccessPolicyBindingParametersResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateAccessPolicyBindingParametersResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateAccessPolicyBindingParametersResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse.class, yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse other = (yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.access.UpdateAccessPolicyBindingParametersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.access.UpdateAccessPolicyBindingParametersResponse)
+        yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse.class, yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.access.Access.internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse build() {
+        yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse buildPartial() {
+        yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse result = new yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse) {
+          return mergeFrom((yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse other) {
+        if (other == yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.access.UpdateAccessPolicyBindingParametersResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.access.UpdateAccessPolicyBindingParametersResponse)
+    private static final yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse();
+    }
+
+    public static yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateAccessPolicyBindingParametersResponse>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateAccessPolicyBindingParametersResponse>() {
+      @java.lang.Override
+      public UpdateAccessPolicyBindingParametersResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateAccessPolicyBindingParametersResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateAccessPolicyBindingParametersResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateAccessPolicyBindingParametersResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.access.Access.UpdateAccessPolicyBindingParametersResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9193,6 +19186,36 @@ public final class Access {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_access_AccessBinding_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_access_AccessPolicy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_access_AccessPolicy_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_access_AccessPolicyBinding_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_access_AccessPolicyBinding_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_access_AccessPolicyBinding_ParametersEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_access_AccessPolicyBinding_ParametersEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_access_BindAccessPolicyRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_access_BindAccessPolicyRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_access_BindAccessPolicyMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_access_BindAccessPolicyMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_access_BindAccessPolicyResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_access_BindAccessPolicyResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_access_ListAccessBindingsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -9202,6 +19225,46 @@ public final class Access {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_access_ListAccessBindingsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_access_ListAccessPolicyBindingsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_access_ListAccessPolicyBindingsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_access_ListAccessPolicyBindingsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_access_ListAccessPolicyBindingsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_access_UnbindAccessPolicyRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_access_UnbindAccessPolicyRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_access_UnbindAccessPolicyMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_access_UnbindAccessPolicyMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_access_UnbindAccessPolicyResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_access_UnbindAccessPolicyResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_access_SetAccessBindingsRequest_descriptor;
   private static final 
@@ -9247,34 +19310,68 @@ public final class Access {
       "=100\022\033\n\004type\030\002 \001(\tB\r\350\3071\001\212\3101\005<=100\"c\n\rAcc" +
       "essBinding\022\035\n\007role_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
       "0\0223\n\007subject\030\002 \001(\0132\034.yandex.cloud.access" +
-      ".SubjectB\004\350\3071\001\"|\n\031ListAccessBindingsRequ" +
-      "est\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
-      "\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_to" +
-      "ken\030\003 \001(\tB\t\212\3101\005<=100\"r\n\032ListAccessBindin" +
-      "gsResponse\022;\n\017access_bindings\030\001 \003(\0132\".ya" +
-      "ndex.cloud.access.AccessBinding\022\027\n\017next_" +
-      "page_token\030\002 \001(\t\"\206\001\n\030SetAccessBindingsRe" +
-      "quest\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022G\n\017access_bindings\030\002 \003(\0132\".yandex.cloud" +
-      ".access.AccessBindingB\n\202\3101\006<=1000\"0\n\031Set" +
-      "AccessBindingsMetadata\022\023\n\013resource_id\030\001 " +
-      "\001(\t\"\224\001\n\033UpdateAccessBindingsRequest\022!\n\013r" +
-      "esource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022R\n\025access" +
-      "_binding_deltas\030\002 \003(\0132\'.yandex.cloud.acc" +
-      "ess.AccessBindingDeltaB\n\202\3101\0061-1000\"3\n\034Up" +
-      "dateAccessBindingsMetadata\022\023\n\013resource_i" +
-      "d\030\001 \001(\t\"\226\001\n\022AccessBindingDelta\022>\n\006action" +
-      "\030\001 \001(\0162(.yandex.cloud.access.AccessBindi" +
-      "ngActionB\004\350\3071\001\022@\n\016access_binding\030\002 \001(\0132\"" +
-      ".yandex.cloud.access.AccessBindingB\004\350\3071\001" +
-      "\"b\n\035AccessBindingsOperationResult\022A\n\020eff" +
-      "ective_deltas\030\001 \003(\0132\'.yandex.cloud.acces" +
-      "s.AccessBindingDelta*Q\n\023AccessBindingAct" +
-      "ion\022%\n!ACCESS_BINDING_ACTION_UNSPECIFIED" +
-      "\020\000\022\007\n\003ADD\020\001\022\n\n\006REMOVE\020\002BY\n\027yandex.cloud." +
-      "api.accessZ>github.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/access;accessb\006prot" +
-      "o3"
+      ".SubjectB\004\350\3071\001\"=\n\014AccessPolicy\022\n\n\002id\030\001 \001" +
+      "(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\"\307\001" +
+      "\n\023AccessPolicyBinding\022/\n\031access_policy_t" +
+      "emplate_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022L\n\nparame" +
+      "ters\030\002 \003(\01328.yandex.cloud.access.AccessP" +
+      "olicyBinding.ParametersEntry\0321\n\017Paramete" +
+      "rsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "\213\001\n\027BindAccessPolicyRequest\022!\n\013resource_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022M\n\025access_policy_" +
+      "binding\030\002 \001(\0132(.yandex.cloud.access.Acce" +
+      "ssPolicyBindingB\004\350\3071\001\"x\n\030BindAccessPolic" +
+      "yMetadata\022\023\n\013resource_id\030\001 \001(\t\022G\n\025access" +
+      "_policy_binding\030\002 \001(\0132(.yandex.cloud.acc" +
+      "ess.AccessPolicyBinding\"\032\n\030BindAccessPol" +
+      "icyResponse\"|\n\031ListAccessBindingsRequest" +
+      "\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tp" +
+      "age_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token" +
+      "\030\003 \001(\tB\t\212\3101\005<=100\"r\n\032ListAccessBindingsR" +
+      "esponse\022;\n\017access_bindings\030\001 \003(\0132\".yande" +
+      "x.cloud.access.AccessBinding\022\027\n\017next_pag" +
+      "e_token\030\002 \001(\t\"\202\001\n\037ListAccessPolicyBindin" +
+      "gsRequest\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\np" +
+      "age_token\030\003 \001(\tB\t\212\3101\005<=100\"\205\001\n ListAcces" +
+      "sPolicyBindingsResponse\022H\n\026access_policy" +
+      "_bindings\030\001 \003(\0132(.yandex.cloud.access.Ac" +
+      "cessPolicyBinding\022\027\n\017next_page_token\030\002 \001" +
+      "(\t\"g\n\031UnbindAccessPolicyRequest\022!\n\013resou" +
+      "rce_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\'\n\031access_pol" +
+      "icy_template_id\030\002 \001(\tB\004\350\3071\001\"T\n\032UnbindAcc" +
+      "essPolicyMetadata\022\023\n\013resource_id\030\001 \001(\t\022!" +
+      "\n\031access_policy_template_id\030\002 \001(\t\"\034\n\032Unb" +
+      "indAccessPolicyResponse\"\236\001\n*UpdateAccess" +
+      "PolicyBindingParametersRequest\022!\n\013resour" +
+      "ce_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022M\n\025access_poli" +
+      "cy_binding\030\002 \001(\0132(.yandex.cloud.access.A" +
+      "ccessPolicyBindingB\004\350\3071\001\"\213\001\n+UpdateAcces" +
+      "sPolicyBindingParametersMetadata\022\023\n\013reso" +
+      "urce_id\030\001 \001(\t\022G\n\025access_policy_binding\030\002" +
+      " \001(\0132(.yandex.cloud.access.AccessPolicyB" +
+      "inding\"-\n+UpdateAccessPolicyBindingParam" +
+      "etersResponse\"\206\001\n\030SetAccessBindingsReque" +
+      "st\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022G\n" +
+      "\017access_bindings\030\002 \003(\0132\".yandex.cloud.ac" +
+      "cess.AccessBindingB\n\202\3101\006<=1000\"0\n\031SetAcc" +
+      "essBindingsMetadata\022\023\n\013resource_id\030\001 \001(\t" +
+      "\"\224\001\n\033UpdateAccessBindingsRequest\022!\n\013reso" +
+      "urce_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022R\n\025access_bi" +
+      "nding_deltas\030\002 \003(\0132\'.yandex.cloud.access" +
+      ".AccessBindingDeltaB\n\202\3101\0061-1000\"3\n\034Updat" +
+      "eAccessBindingsMetadata\022\023\n\013resource_id\030\001" +
+      " \001(\t\"\226\001\n\022AccessBindingDelta\022>\n\006action\030\001 " +
+      "\001(\0162(.yandex.cloud.access.AccessBindingA" +
+      "ctionB\004\350\3071\001\022@\n\016access_binding\030\002 \001(\0132\".ya" +
+      "ndex.cloud.access.AccessBindingB\004\350\3071\001\"b\n" +
+      "\035AccessBindingsOperationResult\022A\n\020effect" +
+      "ive_deltas\030\001 \003(\0132\'.yandex.cloud.access.A" +
+      "ccessBindingDelta*Q\n\023AccessBindingAction" +
+      "\022%\n!ACCESS_BINDING_ACTION_UNSPECIFIED\020\000\022" +
+      "\007\n\003ADD\020\001\022\n\n\006REMOVE\020\002BY\n\027yandex.cloud.api" +
+      ".accessZ>github.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/access;accessb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9293,50 +19390,134 @@ public final class Access {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_access_AccessBinding_descriptor,
         new java.lang.String[] { "RoleId", "Subject", });
-    internal_static_yandex_cloud_access_ListAccessBindingsRequest_descriptor =
+    internal_static_yandex_cloud_access_AccessPolicy_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_access_AccessPolicy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_access_AccessPolicy_descriptor,
+        new java.lang.String[] { "Id", "Name", "Description", });
+    internal_static_yandex_cloud_access_AccessPolicyBinding_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_access_AccessPolicyBinding_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_access_AccessPolicyBinding_descriptor,
+        new java.lang.String[] { "AccessPolicyTemplateId", "Parameters", });
+    internal_static_yandex_cloud_access_AccessPolicyBinding_ParametersEntry_descriptor =
+      internal_static_yandex_cloud_access_AccessPolicyBinding_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_access_AccessPolicyBinding_ParametersEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_access_AccessPolicyBinding_ParametersEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_access_BindAccessPolicyRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_access_BindAccessPolicyRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_access_BindAccessPolicyRequest_descriptor,
+        new java.lang.String[] { "ResourceId", "AccessPolicyBinding", });
+    internal_static_yandex_cloud_access_BindAccessPolicyMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_access_BindAccessPolicyMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_access_BindAccessPolicyMetadata_descriptor,
+        new java.lang.String[] { "ResourceId", "AccessPolicyBinding", });
+    internal_static_yandex_cloud_access_BindAccessPolicyResponse_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_access_BindAccessPolicyResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_access_BindAccessPolicyResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_yandex_cloud_access_ListAccessBindingsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_access_ListAccessBindingsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_access_ListAccessBindingsRequest_descriptor,
         new java.lang.String[] { "ResourceId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_access_ListAccessBindingsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_access_ListAccessBindingsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_access_ListAccessBindingsResponse_descriptor,
         new java.lang.String[] { "AccessBindings", "NextPageToken", });
+    internal_static_yandex_cloud_access_ListAccessPolicyBindingsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_access_ListAccessPolicyBindingsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_access_ListAccessPolicyBindingsRequest_descriptor,
+        new java.lang.String[] { "ResourceId", "PageSize", "PageToken", });
+    internal_static_yandex_cloud_access_ListAccessPolicyBindingsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_access_ListAccessPolicyBindingsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_access_ListAccessPolicyBindingsResponse_descriptor,
+        new java.lang.String[] { "AccessPolicyBindings", "NextPageToken", });
+    internal_static_yandex_cloud_access_UnbindAccessPolicyRequest_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_access_UnbindAccessPolicyRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_access_UnbindAccessPolicyRequest_descriptor,
+        new java.lang.String[] { "ResourceId", "AccessPolicyTemplateId", });
+    internal_static_yandex_cloud_access_UnbindAccessPolicyMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_access_UnbindAccessPolicyMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_access_UnbindAccessPolicyMetadata_descriptor,
+        new java.lang.String[] { "ResourceId", "AccessPolicyTemplateId", });
+    internal_static_yandex_cloud_access_UnbindAccessPolicyResponse_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_access_UnbindAccessPolicyResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_access_UnbindAccessPolicyResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersRequest_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersRequest_descriptor,
+        new java.lang.String[] { "ResourceId", "AccessPolicyBinding", });
+    internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersMetadata_descriptor,
+        new java.lang.String[] { "ResourceId", "AccessPolicyBinding", });
+    internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersResponse_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_access_UpdateAccessPolicyBindingParametersResponse_descriptor,
+        new java.lang.String[] { });
     internal_static_yandex_cloud_access_SetAccessBindingsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_access_SetAccessBindingsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_access_SetAccessBindingsRequest_descriptor,
         new java.lang.String[] { "ResourceId", "AccessBindings", });
     internal_static_yandex_cloud_access_SetAccessBindingsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_access_SetAccessBindingsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_access_SetAccessBindingsMetadata_descriptor,
         new java.lang.String[] { "ResourceId", });
     internal_static_yandex_cloud_access_UpdateAccessBindingsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_access_UpdateAccessBindingsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_access_UpdateAccessBindingsRequest_descriptor,
         new java.lang.String[] { "ResourceId", "AccessBindingDeltas", });
     internal_static_yandex_cloud_access_UpdateAccessBindingsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_access_UpdateAccessBindingsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_access_UpdateAccessBindingsMetadata_descriptor,
         new java.lang.String[] { "ResourceId", });
     internal_static_yandex_cloud_access_AccessBindingDelta_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_access_AccessBindingDelta_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_access_AccessBindingDelta_descriptor,
         new java.lang.String[] { "Action", "AccessBinding", });
     internal_static_yandex_cloud_access_AccessBindingsOperationResult_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_access_AccessBindingsOperationResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_access_AccessBindingsOperationResult_descriptor,

@@ -197,6 +197,26 @@ public final class DesktopImageOuterClass {
      * @return The minDiskSize.
      */
     long getMinDiskSize();
+
+    /**
+     * <pre>
+     * Description of the image.
+     * </pre>
+     *
+     * <code>string description = 16;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description of the image.
+     * </pre>
+     *
+     * <code>string description = 16;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * <pre>
@@ -219,6 +239,7 @@ public final class DesktopImageOuterClass {
       folderId_ = "";
       status_ = 0;
       name_ = "";
+      description_ = "";
     }
 
     @java.lang.Override
@@ -310,6 +331,12 @@ public final class DesktopImageOuterClass {
             case 120: {
 
               minDiskSize_ = input.readInt64();
+              break;
+            }
+            case 130: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
             default: {
@@ -836,6 +863,52 @@ public final class DesktopImageOuterClass {
       return minDiskSize_;
     }
 
+    public static final int DESCRIPTION_FIELD_NUMBER = 16;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Description of the image.
+     * </pre>
+     *
+     * <code>string description = 16;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description of the image.
+     * </pre>
+     *
+     * <code>string description = 16;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -876,6 +949,9 @@ public final class DesktopImageOuterClass {
       }
       if (minDiskSize_ != 0L) {
         output.writeInt64(15, minDiskSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, description_);
       }
       unknownFields.writeTo(output);
     }
@@ -921,6 +997,9 @@ public final class DesktopImageOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(15, minDiskSize_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, description_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -954,6 +1033,8 @@ public final class DesktopImageOuterClass {
           != other.getStorageSize()) return false;
       if (getMinDiskSize()
           != other.getMinDiskSize()) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -987,6 +1068,8 @@ public final class DesktopImageOuterClass {
       hash = (37 * hash) + MIN_DISK_SIZE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getMinDiskSize());
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1165,6 +1248,8 @@ public final class DesktopImageOuterClass {
 
         minDiskSize_ = 0L;
 
+        description_ = "";
+
         return this;
       }
 
@@ -1205,6 +1290,7 @@ public final class DesktopImageOuterClass {
         result.labels_.makeImmutable();
         result.storageSize_ = storageSize_;
         result.minDiskSize_ = minDiskSize_;
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -1278,6 +1364,10 @@ public final class DesktopImageOuterClass {
         }
         if (other.getMinDiskSize() != 0L) {
           setMinDiskSize(other.getMinDiskSize());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2070,6 +2160,102 @@ public final class DesktopImageOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description of the image.
+       * </pre>
+       *
+       * <code>string description = 16;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the image.
+       * </pre>
+       *
+       * <code>string description = 16;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the image.
+       * </pre>
+       *
+       * <code>string description = 16;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the image.
+       * </pre>
+       *
+       * <code>string description = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the image.
+       * </pre>
+       *
+       * <code>string description = 16;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2144,7 +2330,7 @@ public final class DesktopImageOuterClass {
     java.lang.String[] descriptorData = {
       "\n0yandex/cloud/clouddesktop/v1/desktop_i" +
       "mage.proto\022 yandex.cloud.clouddesktop.v1" +
-      ".api\032\037google/protobuf/timestamp.proto\"\266\003" +
+      ".api\032\037google/protobuf/timestamp.proto\"\313\003" +
       "\n\014DesktopImage\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030" +
       "\002 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.proto" +
       "buf.Timestamp\022E\n\006status\030\005 \001(\01625.yandex.c" +
@@ -2152,14 +2338,14 @@ public final class DesktopImageOuterClass {
       "atus\022\014\n\004name\030\013 \001(\t\022J\n\006labels\030\r \003(\0132:.yan" +
       "dex.cloud.clouddesktop.v1.api.DesktopIma" +
       "ge.LabelsEntry\022\024\n\014storage_size\030\016 \001(\003\022\025\n\r" +
-      "min_disk_size\030\017 \001(\003\032-\n\013LabelsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"H\n\006Status\022\026\n\022" +
-      "STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006AC" +
-      "TIVE\020\002\022\014\n\010DELETING\020\003J\004\010\003\020\004J\004\010\006\020\013J\004\010\014\020\rBq" +
-      "\n yandex.cloud.api.clouddesktop.v1ZMgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/clouddesktop/v1;clouddesktopb\006proto" +
-      "3"
+      "min_disk_size\030\017 \001(\003\022\023\n\013description\030\020 \001(\t" +
+      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001\"H\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
+      "\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020" +
+      "\003J\004\010\003\020\004J\004\010\006\020\013J\004\010\014\020\rBq\n yandex.cloud.api." +
+      "clouddesktop.v1ZMgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/clouddesktop/v" +
+      "1;clouddesktopb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2171,7 +2357,7 @@ public final class DesktopImageOuterClass {
     internal_static_yandex_cloud_clouddesktop_v1_api_DesktopImage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_clouddesktop_v1_api_DesktopImage_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Status", "Name", "Labels", "StorageSize", "MinDiskSize", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Status", "Name", "Labels", "StorageSize", "MinDiskSize", "Description", });
     internal_static_yandex_cloud_clouddesktop_v1_api_DesktopImage_LabelsEntry_descriptor =
       internal_static_yandex_cloud_clouddesktop_v1_api_DesktopImage_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_clouddesktop_v1_api_DesktopImage_LabelsEntry_fieldAccessorTable = new

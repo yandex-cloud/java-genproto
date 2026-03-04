@@ -2435,6 +2435,90 @@ public final class CaptchaServiceOuterClass {
      */
     yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder getOverrideVariantsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * If true, Yandex team won't be able to read internal data.
+     * </pre>
+     *
+     * <code>bool disallow_data_processing = 14;</code>
+     * @return The disallowDataProcessing.
+     */
+    boolean getDisallowDataProcessing();
+
+    /**
+     * <pre>
+     * Optional description of the captcha.
+     * </pre>
+     *
+     * <code>string description = 15 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Optional description of the captcha.
+     * </pre>
+     *
+     * <code>string description = 15 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 16 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 16 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 16 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 16 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 16 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code yandex.cloud.smartcaptcha.v1.CreateCaptchaRequest}
@@ -2458,6 +2542,7 @@ public final class CaptchaServiceOuterClass {
       challengeType_ = 0;
       securityRules_ = java.util.Collections.emptyList();
       overrideVariants_ = java.util.Collections.emptyList();
+      description_ = "";
     }
 
     @java.lang.Override
@@ -2564,6 +2649,30 @@ public final class CaptchaServiceOuterClass {
                   input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.parser(), extensionRegistry));
               break;
             }
+            case 112: {
+
+              disallowDataProcessing_ = input.readBool();
+              break;
+            }
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 130: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000008;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2597,6 +2706,18 @@ public final class CaptchaServiceOuterClass {
       return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 16:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -3027,6 +3148,164 @@ public final class CaptchaServiceOuterClass {
       return overrideVariants_.get(index);
     }
 
+    public static final int DISALLOW_DATA_PROCESSING_FIELD_NUMBER = 14;
+    private boolean disallowDataProcessing_;
+    /**
+     * <pre>
+     * If true, Yandex team won't be able to read internal data.
+     * </pre>
+     *
+     * <code>bool disallow_data_processing = 14;</code>
+     * @return The disallowDataProcessing.
+     */
+    @java.lang.Override
+    public boolean getDisallowDataProcessing() {
+      return disallowDataProcessing_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 15;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Optional description of the captcha.
+     * </pre>
+     *
+     * <code>string description = 15 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional description of the captcha.
+     * </pre>
+     *
+     * <code>string description = 15 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 16;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 16 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 16 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 16 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 16 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3074,6 +3353,18 @@ public final class CaptchaServiceOuterClass {
       for (int i = 0; i < overrideVariants_.size(); i++) {
         output.writeMessage(13, overrideVariants_.get(i));
       }
+      if (disallowDataProcessing_ != false) {
+        output.writeBool(14, disallowDataProcessing_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, description_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          16);
       unknownFields.writeTo(output);
     }
 
@@ -3128,6 +3419,23 @@ public final class CaptchaServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, overrideVariants_.get(i));
       }
+      if (disallowDataProcessing_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(14, disallowDataProcessing_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, description_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(16, labels__);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3162,6 +3470,12 @@ public final class CaptchaServiceOuterClass {
           != other.getDeletionProtection()) return false;
       if (!getOverrideVariantsList()
           .equals(other.getOverrideVariantsList())) return false;
+      if (getDisallowDataProcessing()
+          != other.getDisallowDataProcessing()) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3202,6 +3516,15 @@ public final class CaptchaServiceOuterClass {
       if (getOverrideVariantsCount() > 0) {
         hash = (37 * hash) + OVERRIDE_VARIANTS_FIELD_NUMBER;
         hash = (53 * hash) + getOverrideVariantsList().hashCode();
+      }
+      hash = (37 * hash) + DISALLOW_DATA_PROCESSING_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDisallowDataProcessing());
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3310,6 +3633,28 @@ public final class CaptchaServiceOuterClass {
         return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 16:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 16:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -3368,6 +3713,11 @@ public final class CaptchaServiceOuterClass {
         } else {
           overrideVariantsBuilder_.clear();
         }
+        disallowDataProcessing_ = false;
+
+        description_ = "";
+
+        internalGetMutableLabels().clear();
         return this;
       }
 
@@ -3426,6 +3776,10 @@ public final class CaptchaServiceOuterClass {
         } else {
           result.overrideVariants_ = overrideVariantsBuilder_.build();
         }
+        result.disallowDataProcessing_ = disallowDataProcessing_;
+        result.description_ = description_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -3563,6 +3917,15 @@ public final class CaptchaServiceOuterClass {
             }
           }
         }
+        if (other.getDisallowDataProcessing() != false) {
+          setDisallowDataProcessing(other.getDisallowDataProcessing());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4962,6 +5325,304 @@ public final class CaptchaServiceOuterClass {
           overrideVariants_ = null;
         }
         return overrideVariantsBuilder_;
+      }
+
+      private boolean disallowDataProcessing_ ;
+      /**
+       * <pre>
+       * If true, Yandex team won't be able to read internal data.
+       * </pre>
+       *
+       * <code>bool disallow_data_processing = 14;</code>
+       * @return The disallowDataProcessing.
+       */
+      @java.lang.Override
+      public boolean getDisallowDataProcessing() {
+        return disallowDataProcessing_;
+      }
+      /**
+       * <pre>
+       * If true, Yandex team won't be able to read internal data.
+       * </pre>
+       *
+       * <code>bool disallow_data_processing = 14;</code>
+       * @param value The disallowDataProcessing to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisallowDataProcessing(boolean value) {
+        
+        disallowDataProcessing_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If true, Yandex team won't be able to read internal data.
+       * </pre>
+       *
+       * <code>bool disallow_data_processing = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDisallowDataProcessing() {
+        
+        disallowDataProcessing_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Optional description of the captcha.
+       * </pre>
+       *
+       * <code>string description = 15 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional description of the captcha.
+       * </pre>
+       *
+       * <code>string description = 15 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional description of the captcha.
+       * </pre>
+       *
+       * <code>string description = 15 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional description of the captcha.
+       * </pre>
+       *
+       * <code>string description = 15 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional description of the captcha.
+       * </pre>
+       *
+       * <code>string description = 15 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 16 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 16 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 16 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 16 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 16 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 16 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 16 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7126,6 +7787,90 @@ public final class CaptchaServiceOuterClass {
      */
     yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariantOrBuilder getOverrideVariantsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * If true, Yandex team won't be able to read internal data.
+     * </pre>
+     *
+     * <code>bool disallow_data_processing = 15;</code>
+     * @return The disallowDataProcessing.
+     */
+    boolean getDisallowDataProcessing();
+
+    /**
+     * <pre>
+     * Optional description of the captcha.
+     * </pre>
+     *
+     * <code>string description = 16 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Optional description of the captcha.
+     * </pre>
+     *
+     * <code>string description = 16 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 17 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 17 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 17 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 17 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 17 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code yandex.cloud.smartcaptcha.v1.UpdateCaptchaRequest}
@@ -7149,6 +7894,7 @@ public final class CaptchaServiceOuterClass {
       challengeType_ = 0;
       securityRules_ = java.util.Collections.emptyList();
       overrideVariants_ = java.util.Collections.emptyList();
+      description_ = "";
     }
 
     @java.lang.Override
@@ -7268,6 +8014,30 @@ public final class CaptchaServiceOuterClass {
                   input.readMessage(yandex.cloud.api.smartcaptcha.v1.CaptchaOuterClass.OverrideVariant.parser(), extensionRegistry));
               break;
             }
+            case 120: {
+
+              disallowDataProcessing_ = input.readBool();
+              break;
+            }
+            case 130: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 138: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000008;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -7301,6 +8071,18 @@ public final class CaptchaServiceOuterClass {
       return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 17:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -7769,6 +8551,164 @@ public final class CaptchaServiceOuterClass {
       return overrideVariants_.get(index);
     }
 
+    public static final int DISALLOW_DATA_PROCESSING_FIELD_NUMBER = 15;
+    private boolean disallowDataProcessing_;
+    /**
+     * <pre>
+     * If true, Yandex team won't be able to read internal data.
+     * </pre>
+     *
+     * <code>bool disallow_data_processing = 15;</code>
+     * @return The disallowDataProcessing.
+     */
+    @java.lang.Override
+    public boolean getDisallowDataProcessing() {
+      return disallowDataProcessing_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 16;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Optional description of the captcha.
+     * </pre>
+     *
+     * <code>string description = 16 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional description of the captcha.
+     * </pre>
+     *
+     * <code>string description = 16 [(.yandex.cloud.length) = "&lt;=512"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 17;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 17 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 17 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 17 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 17 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7819,6 +8759,18 @@ public final class CaptchaServiceOuterClass {
       for (int i = 0; i < overrideVariants_.size(); i++) {
         output.writeMessage(14, overrideVariants_.get(i));
       }
+      if (disallowDataProcessing_ != false) {
+        output.writeBool(15, disallowDataProcessing_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, description_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          17);
       unknownFields.writeTo(output);
     }
 
@@ -7877,6 +8829,23 @@ public final class CaptchaServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, overrideVariants_.get(i));
       }
+      if (disallowDataProcessing_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(15, disallowDataProcessing_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, description_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(17, labels__);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7916,6 +8885,12 @@ public final class CaptchaServiceOuterClass {
           != other.getDeletionProtection()) return false;
       if (!getOverrideVariantsList()
           .equals(other.getOverrideVariantsList())) return false;
+      if (getDisallowDataProcessing()
+          != other.getDisallowDataProcessing()) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7960,6 +8935,15 @@ public final class CaptchaServiceOuterClass {
       if (getOverrideVariantsCount() > 0) {
         hash = (37 * hash) + OVERRIDE_VARIANTS_FIELD_NUMBER;
         hash = (53 * hash) + getOverrideVariantsList().hashCode();
+      }
+      hash = (37 * hash) + DISALLOW_DATA_PROCESSING_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDisallowDataProcessing());
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8068,6 +9052,28 @@ public final class CaptchaServiceOuterClass {
         return yandex.cloud.api.smartcaptcha.v1.CaptchaServiceOuterClass.internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 17:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 17:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -8132,6 +9138,11 @@ public final class CaptchaServiceOuterClass {
         } else {
           overrideVariantsBuilder_.clear();
         }
+        disallowDataProcessing_ = false;
+
+        description_ = "";
+
+        internalGetMutableLabels().clear();
         return this;
       }
 
@@ -8195,6 +9206,10 @@ public final class CaptchaServiceOuterClass {
         } else {
           result.overrideVariants_ = overrideVariantsBuilder_.build();
         }
+        result.disallowDataProcessing_ = disallowDataProcessing_;
+        result.description_ = description_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -8335,6 +9350,15 @@ public final class CaptchaServiceOuterClass {
             }
           }
         }
+        if (other.getDisallowDataProcessing() != false) {
+          setDisallowDataProcessing(other.getDisallowDataProcessing());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -9890,6 +10914,304 @@ public final class CaptchaServiceOuterClass {
         }
         return overrideVariantsBuilder_;
       }
+
+      private boolean disallowDataProcessing_ ;
+      /**
+       * <pre>
+       * If true, Yandex team won't be able to read internal data.
+       * </pre>
+       *
+       * <code>bool disallow_data_processing = 15;</code>
+       * @return The disallowDataProcessing.
+       */
+      @java.lang.Override
+      public boolean getDisallowDataProcessing() {
+        return disallowDataProcessing_;
+      }
+      /**
+       * <pre>
+       * If true, Yandex team won't be able to read internal data.
+       * </pre>
+       *
+       * <code>bool disallow_data_processing = 15;</code>
+       * @param value The disallowDataProcessing to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisallowDataProcessing(boolean value) {
+        
+        disallowDataProcessing_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If true, Yandex team won't be able to read internal data.
+       * </pre>
+       *
+       * <code>bool disallow_data_processing = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDisallowDataProcessing() {
+        
+        disallowDataProcessing_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Optional description of the captcha.
+       * </pre>
+       *
+       * <code>string description = 16 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional description of the captcha.
+       * </pre>
+       *
+       * <code>string description = 16 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional description of the captcha.
+       * </pre>
+       *
+       * <code>string description = 16 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional description of the captcha.
+       * </pre>
+       *
+       * <code>string description = 16 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional description of the captcha.
+       * </pre>
+       *
+       * <code>string description = 16 [(.yandex.cloud.length) = "&lt;=512"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 17 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 17 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 17 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 17 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 17 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 17 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 17 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10568,6 +11890,11 @@ public final class CaptchaServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -10587,6 +11914,11 @@ public final class CaptchaServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_LabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaMetadata_descriptor;
   private static final 
@@ -10613,7 +11945,7 @@ public final class CaptchaServiceOuterClass {
       "ptchasRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\310" +
       "1\004<=50\"\\\n\024ListCaptchasResponse\0228\n\tresour" +
       "ces\030\003 \003(\0132%.yandex.cloud.smartcaptcha.v1" +
-      ".CaptchaJ\004\010\001\020\002J\004\010\002\020\003\"\312\004\n\024CreateCaptchaRe" +
+      ".CaptchaJ\004\010\001\020\002J\004\010\002\020\003\"\315\006\n\024CreateCaptchaRe" +
       "quest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222" +
       "\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}" +
       "[a-z0-9])?\022\025\n\rallowed_sites\030\003 \003(\t\022C\n\ncom" +
@@ -10627,58 +11959,70 @@ public final class CaptchaServiceOuterClass {
       "ules\030\013 \003(\0132*.yandex.cloud.smartcaptcha.v" +
       "1.SecurityRule\022\033\n\023deletion_protection\030\014 " +
       "\001(\010\022H\n\021override_variants\030\r \003(\0132-.yandex." +
-      "cloud.smartcaptcha.v1.OverrideVariantJ\004\010" +
-      "\007\020\010J\004\010\n\020\013\"+\n\025CreateCaptchaMetadata\022\022\n\nca" +
-      "ptcha_id\030\001 \001(\t\"8\n\024DeleteCaptchaRequest\022 " +
-      "\n\ncaptcha_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025Dele" +
-      "teCaptchaMetadata\022\022\n\ncaptcha_id\030\001 \001(\t\"\374\004" +
-      "\n\024UpdateCaptchaRequest\022 \n\ncaptcha_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032." +
-      "google.protobuf.FieldMask\0222\n\004name\030\003 \001(\tB" +
-      "$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\025\n" +
-      "\rallowed_sites\030\004 \003(\t\022C\n\ncomplexity\030\005 \001(\016" +
-      "2/.yandex.cloud.smartcaptcha.v1.CaptchaC" +
-      "omplexity\022\022\n\nstyle_json\030\006 \001(\t\022\037\n\027turn_of" +
-      "f_hostname_check\030\007 \001(\010\022I\n\016pre_check_type" +
-      "\030\t \001(\01621.yandex.cloud.smartcaptcha.v1.Ca" +
-      "ptchaPreCheckType\022J\n\016challenge_type\030\n \001(" +
-      "\01622.yandex.cloud.smartcaptcha.v1.Captcha" +
-      "ChallengeType\022B\n\016security_rules\030\014 \003(\0132*." +
-      "yandex.cloud.smartcaptcha.v1.SecurityRul" +
-      "e\022\033\n\023deletion_protection\030\r \001(\010\022H\n\021overri" +
-      "de_variants\030\016 \003(\0132-.yandex.cloud.smartca" +
-      "ptcha.v1.OverrideVariantJ\004\010\010\020\tJ\004\010\013\020\014\"+\n\025" +
-      "UpdateCaptchaMetadata\022\022\n\ncaptcha_id\030\001 \001(" +
-      "\t2\213\010\n\016CaptchaService\022\215\001\n\003Get\022/.yandex.cl" +
-      "oud.smartcaptcha.v1.GetCaptchaRequest\032%." +
-      "yandex.cloud.smartcaptcha.v1.Captcha\".\202\323" +
-      "\344\223\002(\022&/smartcaptcha/v1/captchas/{captcha" +
-      "_id}\022\254\001\n\014GetSecretKey\022/.yandex.cloud.sma" +
-      "rtcaptcha.v1.GetCaptchaRequest\032..yandex." +
-      "cloud.smartcaptcha.v1.CaptchaSecretKey\";" +
-      "\202\323\344\223\0025\0223/smartcaptcha/v1/captchas/{captc" +
-      "ha_id}:getSecretKey\022\220\001\n\004List\0221.yandex.cl" +
-      "oud.smartcaptcha.v1.ListCaptchasRequest\032" +
-      "2.yandex.cloud.smartcaptcha.v1.ListCaptc" +
-      "hasResponse\"!\202\323\344\223\002\033\022\031/smartcaptcha/v1/ca" +
-      "ptchas\022\251\001\n\006Create\0222.yandex.cloud.smartca" +
-      "ptcha.v1.CreateCaptchaRequest\032!.yandex.c" +
-      "loud.operation.Operation\"H\202\323\344\223\002\036\"\031/smart" +
-      "captcha/v1/captchas:\001*\262\322* \n\025CreateCaptch" +
-      "aMetadata\022\007Captcha\022\266\001\n\006Update\0222.yandex.c" +
-      "loud.smartcaptcha.v1.UpdateCaptchaReques" +
-      "t\032!.yandex.cloud.operation.Operation\"U\202\323" +
-      "\344\223\002+2&/smartcaptcha/v1/captchas/{captcha" +
-      "_id}:\001*\262\322* \n\025UpdateCaptchaMetadata\022\007Capt" +
-      "cha\022\301\001\n\006Delete\0222.yandex.cloud.smartcaptc" +
-      "ha.v1.DeleteCaptchaRequest\032!.yandex.clou" +
-      "d.operation.Operation\"`\202\323\344\223\002(*&/smartcap" +
-      "tcha/v1/captchas/{captcha_id}\262\322*.\n\025Delet" +
-      "eCaptchaMetadata\022\025google.protobuf.EmptyB" +
-      "q\n yandex.cloud.api.smartcaptcha.v1ZMgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/smartcaptcha/v1;smartcaptchab\006prot" +
-      "o3"
+      "cloud.smartcaptcha.v1.OverrideVariant\022 \n" +
+      "\030disallow_data_processing\030\016 \001(\010\022\036\n\013descr" +
+      "iption\030\017 \001(\tB\t\212\3101\005<=512\022\217\001\n\006labels\030\020 \003(\013" +
+      "2>.yandex.cloud.smartcaptcha.v1.CreateCa" +
+      "ptchaRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=" +
+      "63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-" +
+      "_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001J\004\010\007\020\010J\004\010\n\020\013\"+\n\025CreateCa" +
+      "ptchaMetadata\022\022\n\ncaptcha_id\030\001 \001(\t\"8\n\024Del" +
+      "eteCaptchaRequest\022 \n\ncaptcha_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\"+\n\025DeleteCaptchaMetadata\022\022\n\n" +
+      "captcha_id\030\001 \001(\t\"\377\006\n\024UpdateCaptchaReques" +
+      "t\022 \n\ncaptcha_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013u" +
+      "pdate_mask\030\002 \001(\0132\032.google.protobuf.Field" +
+      "Mask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]" +
+      "{0,61}[a-z0-9])?\022\025\n\rallowed_sites\030\004 \003(\t\022" +
+      "C\n\ncomplexity\030\005 \001(\0162/.yandex.cloud.smart" +
+      "captcha.v1.CaptchaComplexity\022\022\n\nstyle_js" +
+      "on\030\006 \001(\t\022\037\n\027turn_off_hostname_check\030\007 \001(" +
+      "\010\022I\n\016pre_check_type\030\t \001(\01621.yandex.cloud" +
+      ".smartcaptcha.v1.CaptchaPreCheckType\022J\n\016" +
+      "challenge_type\030\n \001(\01622.yandex.cloud.smar" +
+      "tcaptcha.v1.CaptchaChallengeType\022B\n\016secu" +
+      "rity_rules\030\014 \003(\0132*.yandex.cloud.smartcap" +
+      "tcha.v1.SecurityRule\022\033\n\023deletion_protect" +
+      "ion\030\r \001(\010\022H\n\021override_variants\030\016 \003(\0132-.y" +
+      "andex.cloud.smartcaptcha.v1.OverrideVari" +
+      "ant\022 \n\030disallow_data_processing\030\017 \001(\010\022\036\n" +
+      "\013description\030\020 \001(\tB\t\212\3101\005<=512\022\217\001\n\006labels" +
+      "\030\021 \003(\0132>.yandex.cloud.smartcaptcha.v1.Up" +
+      "dateCaptchaRequest.LabelsEntryB?\202\3101\004<=64" +
+      "\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[" +
+      "a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\010\020\tJ\004\010\013\020\014\"+\n\025Up" +
+      "dateCaptchaMetadata\022\022\n\ncaptcha_id\030\001 \001(\t2" +
+      "\213\010\n\016CaptchaService\022\215\001\n\003Get\022/.yandex.clou" +
+      "d.smartcaptcha.v1.GetCaptchaRequest\032%.ya" +
+      "ndex.cloud.smartcaptcha.v1.Captcha\".\202\323\344\223" +
+      "\002(\022&/smartcaptcha/v1/captchas/{captcha_i" +
+      "d}\022\254\001\n\014GetSecretKey\022/.yandex.cloud.smart" +
+      "captcha.v1.GetCaptchaRequest\032..yandex.cl" +
+      "oud.smartcaptcha.v1.CaptchaSecretKey\";\202\323" +
+      "\344\223\0025\0223/smartcaptcha/v1/captchas/{captcha" +
+      "_id}:getSecretKey\022\220\001\n\004List\0221.yandex.clou" +
+      "d.smartcaptcha.v1.ListCaptchasRequest\0322." +
+      "yandex.cloud.smartcaptcha.v1.ListCaptcha" +
+      "sResponse\"!\202\323\344\223\002\033\022\031/smartcaptcha/v1/capt" +
+      "chas\022\251\001\n\006Create\0222.yandex.cloud.smartcapt" +
+      "cha.v1.CreateCaptchaRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"H\202\323\344\223\002\036\"\031/smartca" +
+      "ptcha/v1/captchas:\001*\262\322* \n\025CreateCaptchaM" +
+      "etadata\022\007Captcha\022\266\001\n\006Update\0222.yandex.clo" +
+      "ud.smartcaptcha.v1.UpdateCaptchaRequest\032" +
+      "!.yandex.cloud.operation.Operation\"U\202\323\344\223" +
+      "\002+2&/smartcaptcha/v1/captchas/{captcha_i" +
+      "d}:\001*\262\322* \n\025UpdateCaptchaMetadata\022\007Captch" +
+      "a\022\301\001\n\006Delete\0222.yandex.cloud.smartcaptcha" +
+      ".v1.DeleteCaptchaRequest\032!.yandex.cloud." +
+      "operation.Operation\"`\202\323\344\223\002(*&/smartcaptc" +
+      "ha/v1/captchas/{captcha_id}\262\322*.\n\025DeleteC" +
+      "aptchaMetadata\022\025google.protobuf.EmptyBq\n" +
+      " yandex.cloud.api.smartcaptcha.v1ZMgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/smartcaptcha/v1;smartcaptchab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10713,7 +12057,13 @@ public final class CaptchaServiceOuterClass {
     internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "AllowedSites", "Complexity", "StyleJson", "TurnOffHostnameCheck", "PreCheckType", "ChallengeType", "SecurityRules", "DeletionProtection", "OverrideVariants", });
+        new java.lang.String[] { "FolderId", "Name", "AllowedSites", "Complexity", "StyleJson", "TurnOffHostnameCheck", "PreCheckType", "ChallengeType", "SecurityRules", "DeletionProtection", "OverrideVariants", "DisallowDataProcessing", "Description", "Labels", });
+    internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaMetadata_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_smartcaptcha_v1_CreateCaptchaMetadata_fieldAccessorTable = new
@@ -10737,7 +12087,13 @@ public final class CaptchaServiceOuterClass {
     internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_descriptor,
-        new java.lang.String[] { "CaptchaId", "UpdateMask", "Name", "AllowedSites", "Complexity", "StyleJson", "TurnOffHostnameCheck", "PreCheckType", "ChallengeType", "SecurityRules", "DeletionProtection", "OverrideVariants", });
+        new java.lang.String[] { "CaptchaId", "UpdateMask", "Name", "AllowedSites", "Complexity", "StyleJson", "TurnOffHostnameCheck", "PreCheckType", "ChallengeType", "SecurityRules", "DeletionProtection", "OverrideVariants", "DisallowDataProcessing", "Description", "Labels", });
+    internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaMetadata_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_smartcaptcha_v1_UpdateCaptchaMetadata_fieldAccessorTable = new
@@ -10749,8 +12105,10 @@ public final class CaptchaServiceOuterClass {
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.mapKey);
     registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();

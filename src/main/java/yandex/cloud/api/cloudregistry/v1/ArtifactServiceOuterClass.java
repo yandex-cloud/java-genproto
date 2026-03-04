@@ -1855,25 +1855,43 @@ public final class ArtifactServiceOuterClass {
       "ry.v1\032 yandex/cloud/api/operation.proto\032" +
       "\035yandex/cloud/validation.proto\032,yandex/c" +
       "loud/cloudregistry/v1/artifact.proto\032&ya" +
-      "ndex/cloud/operation/operation.proto\032\034go" +
-      "ogle/api/annotations.proto\"7\n\022GetArtifac" +
-      "tRequest\022!\n\013artifact_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\":\n\025DeleteArtifactRequest\022!\n\013artifact" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteArtifac" +
-      "tMetadata\022\023\n\013artifact_id\030\001 \001(\t2\364\002\n\017Artif" +
-      "actService\022\225\001\n\003Get\0221.yandex.cloud.cloudr" +
-      "egistry.v1.GetArtifactRequest\032\'.yandex.c" +
-      "loud.cloudregistry.v1.Artifact\"2\202\323\344\223\002,\022*" +
-      "/cloud-registry/v1/artifacts/{artifact_i" +
-      "d}\022\310\001\n\006Delete\0224.yandex.cloud.cloudregist" +
-      "ry.v1.DeleteArtifactRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"e\202\323\344\223\002,**/cloud-r" +
-      "egistry/v1/artifacts/{artifact_id}\262\322*/\n\026" +
-      "DeleteArtifactMetadata\022\025google.protobuf." +
-      "EmptyBt\n!yandex.cloud.api.cloudregistry." +
-      "v1ZOgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/cloudregistry/v1;cloudregis" +
-      "tryb\006proto3"
+      "ndex/cloud/operation/operation.proto\032 ya" +
+      "ndex/cloud/access/access.proto\032\034google/a" +
+      "pi/annotations.proto\"7\n\022GetArtifactReque" +
+      "st\022!\n\013artifact_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\":\n" +
+      "\025DeleteArtifactRequest\022!\n\013artifact_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteArtifactMetad" +
+      "ata\022\023\n\013artifact_id\030\001 \001(\t2\235\010\n\017ArtifactSer" +
+      "vice\022\225\001\n\003Get\0221.yandex.cloud.cloudregistr" +
+      "y.v1.GetArtifactRequest\032\'.yandex.cloud.c" +
+      "loudregistry.v1.Artifact\"2\202\323\344\223\002,\022*/cloud" +
+      "-registry/v1/artifacts/{artifact_id}\022\310\001\n" +
+      "\006Delete\0224.yandex.cloud.cloudregistry.v1." +
+      "DeleteArtifactRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"e\202\323\344\223\002,**/cloud-registr" +
+      "y/v1/artifacts/{artifact_id}\262\322*/\n\026Delete" +
+      "ArtifactMetadata\022\025google.protobuf.Empty\022" +
+      "\274\001\n\022ListAccessBindings\022..yandex.cloud.ac" +
+      "cess.ListAccessBindingsRequest\032/.yandex." +
+      "cloud.access.ListAccessBindingsResponse\"" +
+      "E\202\323\344\223\002?\022=/cloud-registry/v1/artifacts/{r" +
+      "esource_id}:listAccessBindings\022\354\001\n\021SetAc" +
+      "cessBindings\022-.yandex.cloud.access.SetAc" +
+      "cessBindingsRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"\204\001\202\323\344\223\002A\"</cloud-registry" +
+      "/v1/artifacts/{resource_id}:setAccessBin" +
+      "dings:\001*\262\322*9\n access.SetAccessBindingsMe" +
+      "tadata\022\025google.protobuf.Empty\022\370\001\n\024Update" +
+      "AccessBindings\0220.yandex.cloud.access.Upd" +
+      "ateAccessBindingsRequest\032!.yandex.cloud." +
+      "operation.Operation\"\212\001\202\323\344\223\002D2?/cloud-reg" +
+      "istry/v1/artifacts/{resource_id}:updateA" +
+      "ccessBindings:\001*\262\322*<\n#access.UpdateAcces" +
+      "sBindingsMetadata\022\025google.protobuf.Empty" +
+      "Bt\n!yandex.cloud.api.cloudregistry.v1ZOg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/cloudregistry/v1;cloudregistryb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1882,6 +1900,7 @@ public final class ArtifactServiceOuterClass {
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.access.Access.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_yandex_cloud_cloudregistry_v1_GetArtifactRequest_descriptor =
@@ -1914,6 +1933,7 @@ public final class ArtifactServiceOuterClass {
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.cloudregistry.v1.ArtifactOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.access.Access.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
 

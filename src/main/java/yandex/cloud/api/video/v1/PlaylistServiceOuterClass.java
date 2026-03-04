@@ -3175,7 +3175,7 @@ public final class PlaylistServiceOuterClass {
      * Optional field that can provide additional information about the playlist.
      * </pre>
      *
-     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=5000"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
@@ -3185,7 +3185,7 @@ public final class PlaylistServiceOuterClass {
      * Optional field that can provide additional information about the playlist.
      * </pre>
      *
-     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=5000"];</code>
      * @return The bytes for description.
      */
     com.google.protobuf.ByteString
@@ -3486,7 +3486,7 @@ public final class PlaylistServiceOuterClass {
      * Optional field that can provide additional information about the playlist.
      * </pre>
      *
-     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=5000"];</code>
      * @return The description.
      */
     @java.lang.Override
@@ -3508,7 +3508,7 @@ public final class PlaylistServiceOuterClass {
      * Optional field that can provide additional information about the playlist.
      * </pre>
      *
-     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=5000"];</code>
      * @return The bytes for description.
      */
     @java.lang.Override
@@ -4253,7 +4253,7 @@ public final class PlaylistServiceOuterClass {
        * Optional field that can provide additional information about the playlist.
        * </pre>
        *
-       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=5000"];</code>
        * @return The description.
        */
       public java.lang.String getDescription() {
@@ -4274,7 +4274,7 @@ public final class PlaylistServiceOuterClass {
        * Optional field that can provide additional information about the playlist.
        * </pre>
        *
-       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=5000"];</code>
        * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
@@ -4296,7 +4296,7 @@ public final class PlaylistServiceOuterClass {
        * Optional field that can provide additional information about the playlist.
        * </pre>
        *
-       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=5000"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
        */
@@ -4316,7 +4316,7 @@ public final class PlaylistServiceOuterClass {
        * Optional field that can provide additional information about the playlist.
        * </pre>
        *
-       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=5000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
@@ -4331,7 +4331,7 @@ public final class PlaylistServiceOuterClass {
        * Optional field that can provide additional information about the playlist.
        * </pre>
        *
-       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=4000"];</code>
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=5000"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
@@ -5538,7 +5538,7 @@ public final class PlaylistServiceOuterClass {
      * Optional field that can provide additional information about the playlist.
      * </pre>
      *
-     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=5000"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
@@ -5548,7 +5548,7 @@ public final class PlaylistServiceOuterClass {
      * Optional field that can provide additional information about the playlist.
      * </pre>
      *
-     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=5000"];</code>
      * @return The bytes for description.
      */
     com.google.protobuf.ByteString
@@ -5907,7 +5907,7 @@ public final class PlaylistServiceOuterClass {
      * Optional field that can provide additional information about the playlist.
      * </pre>
      *
-     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=5000"];</code>
      * @return The description.
      */
     @java.lang.Override
@@ -5929,7 +5929,7 @@ public final class PlaylistServiceOuterClass {
      * Optional field that can provide additional information about the playlist.
      * </pre>
      *
-     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=5000"];</code>
      * @return The bytes for description.
      */
     @java.lang.Override
@@ -6884,7 +6884,7 @@ public final class PlaylistServiceOuterClass {
        * Optional field that can provide additional information about the playlist.
        * </pre>
        *
-       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=5000"];</code>
        * @return The description.
        */
       public java.lang.String getDescription() {
@@ -6905,7 +6905,7 @@ public final class PlaylistServiceOuterClass {
        * Optional field that can provide additional information about the playlist.
        * </pre>
        *
-       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=5000"];</code>
        * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
@@ -6927,7 +6927,7 @@ public final class PlaylistServiceOuterClass {
        * Optional field that can provide additional information about the playlist.
        * </pre>
        *
-       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=5000"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
        */
@@ -6947,7 +6947,7 @@ public final class PlaylistServiceOuterClass {
        * Optional field that can provide additional information about the playlist.
        * </pre>
        *
-       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=5000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
@@ -6962,7 +6962,7 @@ public final class PlaylistServiceOuterClass {
        * Optional field that can provide additional information about the playlist.
        * </pre>
        *
-       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=4000"];</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=5000"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
@@ -13446,7 +13446,7 @@ public final class PlaylistServiceOuterClass {
       "xt_page_token\030d \001(\tJ\004\010\002\020d\"\332\001\n\025CreatePlay" +
       "listRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
       "\004<=50\022\034\n\005title\030\002 \001(\tB\r\350\3071\001\212\3101\005<=300\022\037\n\013d" +
-      "escription\030\003 \001(\tB\n\212\3101\006<=4000\022=\n\005items\030\004 " +
+      "escription\030\003 \001(\tB\n\212\3101\006<=5000\022=\n\005items\030\004 " +
       "\003(\0132#.yandex.cloud.video.v1.PlaylistItem" +
       "B\t\202\3101\005<=100\022!\n\017style_preset_id\030\005 \001(\tB\010\212\310" +
       "1\004<=50\"-\n\026CreatePlaylistMetadata\022\023\n\013play" +
@@ -13454,7 +13454,7 @@ public final class PlaylistServiceOuterClass {
       "!\n\013playlist_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0224\n\nfi" +
       "eld_mask\030\002 \001(\0132\032.google.protobuf.FieldMa" +
       "skB\004\350\3071\001\022\030\n\005title\030\003 \001(\tB\t\212\3101\005<=300\022\037\n\013de" +
-      "scription\030\004 \001(\tB\n\212\3101\006<=4000\022=\n\005items\030\005 \003" +
+      "scription\030\004 \001(\tB\n\212\3101\006<=5000\022=\n\005items\030\005 \003" +
       "(\0132#.yandex.cloud.video.v1.PlaylistItemB" +
       "\t\202\3101\005<=100\022!\n\017style_preset_id\030\006 \001(\tB\010\212\3101" +
       "\004<=50\"-\n\026UpdatePlaylistMetadata\022\023\n\013playl" +

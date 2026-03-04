@@ -20620,6 +20620,33 @@ public final class LoadBalancerOuterClass {
     com.google.protobuf.ByteString
         getCertificateIdsBytes(int index);
 
+    /**
+     * <pre>
+     * Client certificates verification settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificatesVerification client_certificates_verification = 5;</code>
+     * @return Whether the clientCertificatesVerification field is set.
+     */
+    boolean hasClientCertificatesVerification();
+    /**
+     * <pre>
+     * Client certificates verification settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificatesVerification client_certificates_verification = 5;</code>
+     * @return The clientCertificatesVerification.
+     */
+    yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification getClientCertificatesVerification();
+    /**
+     * <pre>
+     * Client certificates verification settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificatesVerification client_certificates_verification = 5;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerificationOrBuilder getClientCertificatesVerificationOrBuilder();
+
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler.HandlerCase getHandlerCase();
   }
   /**
@@ -20708,6 +20735,19 @@ public final class LoadBalancerOuterClass {
                 handler_ = subBuilder.buildPartial();
               }
               handlerCase_ = 4;
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification.Builder subBuilder = null;
+              if (clientCertificatesVerification_ != null) {
+                subBuilder = clientCertificatesVerification_.toBuilder();
+              }
+              clientCertificatesVerification_ = input.readMessage(yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(clientCertificatesVerification_);
+                clientCertificatesVerification_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -20927,6 +20967,44 @@ public final class LoadBalancerOuterClass {
       return certificateIds_.getByteString(index);
     }
 
+    public static final int CLIENT_CERTIFICATES_VERIFICATION_FIELD_NUMBER = 5;
+    private yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification clientCertificatesVerification_;
+    /**
+     * <pre>
+     * Client certificates verification settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificatesVerification client_certificates_verification = 5;</code>
+     * @return Whether the clientCertificatesVerification field is set.
+     */
+    @java.lang.Override
+    public boolean hasClientCertificatesVerification() {
+      return clientCertificatesVerification_ != null;
+    }
+    /**
+     * <pre>
+     * Client certificates verification settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificatesVerification client_certificates_verification = 5;</code>
+     * @return The clientCertificatesVerification.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification getClientCertificatesVerification() {
+      return clientCertificatesVerification_ == null ? yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification.getDefaultInstance() : clientCertificatesVerification_;
+    }
+    /**
+     * <pre>
+     * Client certificates verification settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificatesVerification client_certificates_verification = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerificationOrBuilder getClientCertificatesVerificationOrBuilder() {
+      return getClientCertificatesVerification();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -20949,6 +21027,9 @@ public final class LoadBalancerOuterClass {
       }
       if (handlerCase_ == 4) {
         output.writeMessage(4, (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler) handler_);
+      }
+      if (clientCertificatesVerification_ != null) {
+        output.writeMessage(5, getClientCertificatesVerification());
       }
       unknownFields.writeTo(output);
     }
@@ -20975,6 +21056,10 @@ public final class LoadBalancerOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, (yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler) handler_);
       }
+      if (clientCertificatesVerification_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getClientCertificatesVerification());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -20992,6 +21077,11 @@ public final class LoadBalancerOuterClass {
 
       if (!getCertificateIdsList()
           .equals(other.getCertificateIdsList())) return false;
+      if (hasClientCertificatesVerification() != other.hasClientCertificatesVerification()) return false;
+      if (hasClientCertificatesVerification()) {
+        if (!getClientCertificatesVerification()
+            .equals(other.getClientCertificatesVerification())) return false;
+      }
       if (!getHandlerCase().equals(other.getHandlerCase())) return false;
       switch (handlerCase_) {
         case 2:
@@ -21019,6 +21109,10 @@ public final class LoadBalancerOuterClass {
       if (getCertificateIdsCount() > 0) {
         hash = (37 * hash) + CERTIFICATE_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getCertificateIdsList().hashCode();
+      }
+      if (hasClientCertificatesVerification()) {
+        hash = (37 * hash) + CLIENT_CERTIFICATES_VERIFICATION_FIELD_NUMBER;
+        hash = (53 * hash) + getClientCertificatesVerification().hashCode();
       }
       switch (handlerCase_) {
         case 2:
@@ -21171,6 +21265,12 @@ public final class LoadBalancerOuterClass {
         super.clear();
         certificateIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
+        if (clientCertificatesVerificationBuilder_ == null) {
+          clientCertificatesVerification_ = null;
+        } else {
+          clientCertificatesVerification_ = null;
+          clientCertificatesVerificationBuilder_ = null;
+        }
         handlerCase_ = 0;
         handler_ = null;
         return this;
@@ -21219,6 +21319,11 @@ public final class LoadBalancerOuterClass {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.certificateIds_ = certificateIds_;
+        if (clientCertificatesVerificationBuilder_ == null) {
+          result.clientCertificatesVerification_ = clientCertificatesVerification_;
+        } else {
+          result.clientCertificatesVerification_ = clientCertificatesVerificationBuilder_.build();
+        }
         result.handlerCase_ = handlerCase_;
         onBuilt();
         return result;
@@ -21277,6 +21382,9 @@ public final class LoadBalancerOuterClass {
             certificateIds_.addAll(other.certificateIds_);
           }
           onChanged();
+        }
+        if (other.hasClientCertificatesVerification()) {
+          mergeClientCertificatesVerification(other.getClientCertificatesVerification());
         }
         switch (other.getHandlerCase()) {
           case HTTP_HANDLER: {
@@ -21843,6 +21951,161 @@ public final class LoadBalancerOuterClass {
         certificateIds_.add(value);
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification clientCertificatesVerification_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification, yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification.Builder, yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerificationOrBuilder> clientCertificatesVerificationBuilder_;
+      /**
+       * <pre>
+       * Client certificates verification settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificatesVerification client_certificates_verification = 5;</code>
+       * @return Whether the clientCertificatesVerification field is set.
+       */
+      public boolean hasClientCertificatesVerification() {
+        return clientCertificatesVerificationBuilder_ != null || clientCertificatesVerification_ != null;
+      }
+      /**
+       * <pre>
+       * Client certificates verification settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificatesVerification client_certificates_verification = 5;</code>
+       * @return The clientCertificatesVerification.
+       */
+      public yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification getClientCertificatesVerification() {
+        if (clientCertificatesVerificationBuilder_ == null) {
+          return clientCertificatesVerification_ == null ? yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification.getDefaultInstance() : clientCertificatesVerification_;
+        } else {
+          return clientCertificatesVerificationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Client certificates verification settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificatesVerification client_certificates_verification = 5;</code>
+       */
+      public Builder setClientCertificatesVerification(yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification value) {
+        if (clientCertificatesVerificationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          clientCertificatesVerification_ = value;
+          onChanged();
+        } else {
+          clientCertificatesVerificationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Client certificates verification settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificatesVerification client_certificates_verification = 5;</code>
+       */
+      public Builder setClientCertificatesVerification(
+          yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification.Builder builderForValue) {
+        if (clientCertificatesVerificationBuilder_ == null) {
+          clientCertificatesVerification_ = builderForValue.build();
+          onChanged();
+        } else {
+          clientCertificatesVerificationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Client certificates verification settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificatesVerification client_certificates_verification = 5;</code>
+       */
+      public Builder mergeClientCertificatesVerification(yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification value) {
+        if (clientCertificatesVerificationBuilder_ == null) {
+          if (clientCertificatesVerification_ != null) {
+            clientCertificatesVerification_ =
+              yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification.newBuilder(clientCertificatesVerification_).mergeFrom(value).buildPartial();
+          } else {
+            clientCertificatesVerification_ = value;
+          }
+          onChanged();
+        } else {
+          clientCertificatesVerificationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Client certificates verification settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificatesVerification client_certificates_verification = 5;</code>
+       */
+      public Builder clearClientCertificatesVerification() {
+        if (clientCertificatesVerificationBuilder_ == null) {
+          clientCertificatesVerification_ = null;
+          onChanged();
+        } else {
+          clientCertificatesVerification_ = null;
+          clientCertificatesVerificationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Client certificates verification settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificatesVerification client_certificates_verification = 5;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification.Builder getClientCertificatesVerificationBuilder() {
+        
+        onChanged();
+        return getClientCertificatesVerificationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Client certificates verification settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificatesVerification client_certificates_verification = 5;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerificationOrBuilder getClientCertificatesVerificationOrBuilder() {
+        if (clientCertificatesVerificationBuilder_ != null) {
+          return clientCertificatesVerificationBuilder_.getMessageOrBuilder();
+        } else {
+          return clientCertificatesVerification_ == null ?
+              yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification.getDefaultInstance() : clientCertificatesVerification_;
+        }
+      }
+      /**
+       * <pre>
+       * Client certificates verification settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.ClientCertificatesVerification client_certificates_verification = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification, yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification.Builder, yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerificationOrBuilder> 
+          getClientCertificatesVerificationFieldBuilder() {
+        if (clientCertificatesVerificationBuilder_ == null) {
+          clientCertificatesVerificationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification, yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerification.Builder, yandex.cloud.api.apploadbalancer.v1.Tls.ClientCertificatesVerificationOrBuilder>(
+                  getClientCertificatesVerification(),
+                  getParentForChildren(),
+                  isClean());
+          clientCertificatesVerification_ = null;
+        }
+        return clientCertificatesVerificationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -25587,101 +25850,104 @@ public final class LoadBalancerOuterClass {
       "cloud/validation.proto\032-yandex/cloud/app" +
       "loadbalancer/v1/logging.proto\0322yandex/cl" +
       "oud/apploadbalancer/v1/target_group.prot" +
-      "o\"\302\006\n\014LoadBalancer\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002" +
-      " \001(\t\022\023\n\013description\030\003 \001(\t\022\021\n\tfolder_id\030\004" +
-      " \001(\t\022I\n\006labels\030\005 \003(\01329.yandex.cloud.appl" +
-      "oadbalancer.v1.LoadBalancer.LabelsEntry\022" +
-      "D\n\006status\030\006 \001(\01624.yandex.cloud.apploadba" +
-      "lancer.v1.LoadBalancer.Status\022\021\n\tregion_" +
-      "id\030\007 \001(\t\022\022\n\nnetwork_id\030\010 \001(\t\022<\n\tlistener" +
-      "s\030\t \003(\0132).yandex.cloud.apploadbalancer.v" +
-      "1.Listener\022L\n\021allocation_policy\030\n \001(\01321." +
-      "yandex.cloud.apploadbalancer.v1.Allocati" +
-      "onPolicy\022\024\n\014log_group_id\030\013 \001(\t\022\032\n\022securi" +
-      "ty_group_ids\030\014 \003(\t\022.\n\ncreated_at\030\r \001(\0132\032" +
-      ".google.protobuf.Timestamp\022K\n\021auto_scale" +
-      "_policy\030\016 \001(\01320.yandex.cloud.apploadbala" +
-      "ncer.v1.AutoScalePolicy\022@\n\013log_options\030\017" +
-      " \001(\0132+.yandex.cloud.apploadbalancer.v1.L" +
-      "ogOptions\022\031\n\021allow_zonal_shift\030\020 \001(\010\032-\n\013" +
-      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\"q\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n" +
-      "\010CREATING\020\001\022\014\n\010STARTING\020\002\022\n\n\006ACTIVE\020\003\022\014\n" +
-      "\010STOPPING\020\004\022\013\n\007STOPPED\020\005\022\014\n\010DELETING\020\006\"\237" +
-      "\002\n\007Address\022U\n\025external_ipv4_address\030\001 \001(" +
-      "\01324.yandex.cloud.apploadbalancer.v1.Exte" +
-      "rnalIpv4AddressH\000\022U\n\025internal_ipv4_addre" +
-      "ss\030\002 \001(\01324.yandex.cloud.apploadbalancer." +
-      "v1.InternalIpv4AddressH\000\022U\n\025external_ipv" +
-      "6_address\030\003 \001(\01324.yandex.cloud.apploadba" +
-      "lancer.v1.ExternalIpv6AddressH\000B\017\n\007addre" +
-      "ss\022\004\300\3011\001\"&\n\023ExternalIpv4Address\022\017\n\007addre" +
-      "ss\030\001 \001(\t\"9\n\023InternalIpv4Address\022\017\n\007addre" +
-      "ss\030\001 \001(\t\022\021\n\tsubnet_id\030\002 \001(\t\"&\n\023ExternalI" +
-      "pv6Address\022\017\n\007address\030\001 \001(\t\"\215\001\n\010Location" +
-      "\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tsubnet_id\030\002 \001" +
-      "(\t\022\027\n\017disable_traffic\030\003 \001(\010\022\036\n\022zonal_shi" +
-      "ft_active\030\004 \001(\010B\002\030\001\022\036\n\026zonal_traffic_dis" +
-      "abled\030\005 \001(\010\"]\n\020AllocationPolicy\022I\n\tlocat" +
-      "ions\030\001 \003(\0132).yandex.cloud.apploadbalance" +
-      "r.v1.LocationB\013\202\3101\003>=1\220\3101\001\"\255\002\n\010Listener\022" +
-      "\022\n\004name\030\001 \001(\tB\004\350\3071\001\022<\n\tendpoints\030\002 \003(\0132)" +
-      ".yandex.cloud.apploadbalancer.v1.Endpoin" +
-      "t\022=\n\004http\030\003 \001(\0132-.yandex.cloud.apploadba" +
-      "lancer.v1.HttpListenerH\000\022;\n\003tls\030\004 \001(\0132,." +
-      "yandex.cloud.apploadbalancer.v1.TlsListe" +
-      "nerH\000\022A\n\006stream\030\005 \001(\0132/.yandex.cloud.app" +
-      "loadbalancer.v1.StreamListenerH\000B\020\n\010list" +
-      "ener\022\004\300\3011\001\"q\n\010Endpoint\022C\n\taddresses\030\001 \003(" +
-      "\0132(.yandex.cloud.apploadbalancer.v1.Addr" +
-      "essB\006\202\3101\002>0\022 \n\005ports\030\002 \003(\003B\021\202\3101\002>0\372\3071\0071-" +
-      "65535\"\214\001\n\014HttpListener\022=\n\007handler\030\001 \001(\0132" +
-      ",.yandex.cloud.apploadbalancer.v1.HttpHa" +
-      "ndler\022=\n\tredirects\030\002 \001(\0132*.yandex.cloud." +
-      "apploadbalancer.v1.Redirects\"\232\001\n\013TlsList" +
-      "ener\022J\n\017default_handler\030\001 \001(\0132+.yandex.c" +
-      "loud.apploadbalancer.v1.TlsHandlerB\004\350\3071\001" +
-      "\022?\n\014sni_handlers\030\002 \003(\0132).yandex.cloud.ap" +
-      "ploadbalancer.v1.SniMatch\"W\n\016StreamListe" +
-      "ner\022E\n\007handler\030\001 \001(\0132..yandex.cloud.appl" +
-      "oadbalancer.v1.StreamHandlerB\004\350\3071\001\".\n\014Ht" +
-      "tp2Options\022\036\n\026max_concurrent_streams\030\001 \001" +
-      "(\003\"`\n\rStreamHandler\022\036\n\020backend_group_id\030" +
-      "\001 \001(\tB\004\350\3071\001\022/\n\014idle_timeout\030\002 \001(\0132\031.goog" +
-      "le.protobuf.Duration\"\266\001\n\013HttpHandler\022\026\n\016" +
-      "http_router_id\030\001 \001(\t\022F\n\rhttp2_options\030\002 " +
-      "\001(\0132-.yandex.cloud.apploadbalancer.v1.Ht" +
-      "tp2OptionsH\000\022\026\n\014allow_http10\030\003 \001(\010H\000\022\032\n\022" +
-      "rewrite_request_id\030\004 \001(\010B\023\n\021protocol_set" +
-      "tings\"\"\n\tRedirects\022\025\n\rhttp_to_https\030\001 \001(" +
-      "\010\"\200\001\n\010SniMatch\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\034\n\014se" +
-      "rver_names\030\002 \003(\tB\006\202\3101\002>0\022B\n\007handler\030\003 \001(" +
-      "\0132+.yandex.cloud.apploadbalancer.v1.TlsH" +
-      "andlerB\004\350\3071\001\"\316\001\n\nTlsHandler\022D\n\014http_hand" +
-      "ler\030\002 \001(\0132,.yandex.cloud.apploadbalancer" +
-      ".v1.HttpHandlerH\000\022H\n\016stream_handler\030\004 \001(" +
-      "\0132..yandex.cloud.apploadbalancer.v1.Stre" +
-      "amHandlerH\000\022\037\n\017certificate_ids\030\003 \003(\tB\006\202\310" +
-      "1\002>0B\017\n\007handler\022\004\300\3011\001\"\214\004\n\013TargetState\022N\n" +
-      "\006status\030\001 \001(\0132>.yandex.cloud.apploadbala" +
-      "ncer.v1.TargetState.HealthcheckStatus\022=\n" +
-      "\006target\030\002 \001(\0132\'.yandex.cloud.apploadbala" +
-      "ncer.v1.TargetB\004\350\3071\001\032n\n\021HealthcheckStatu" +
-      "s\022Y\n\rzone_statuses\030\001 \003(\0132B.yandex.cloud." +
-      "apploadbalancer.v1.TargetState.ZoneHealt" +
-      "hcheckStatus\032\215\001\n\025ZoneHealthcheckStatus\022\025" +
-      "\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022C\n\006status\030\002 \001(\01623." +
-      "yandex.cloud.apploadbalancer.v1.TargetSt" +
-      "ate.Status\022\030\n\020failed_active_hc\030\003 \001(\010\"n\n\006" +
-      "Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\013\n\007HEALTH" +
-      "Y\020\001\022\025\n\021PARTIALLY_HEALTHY\020\002\022\r\n\tUNHEALTHY\020" +
-      "\003\022\014\n\010DRAINING\020\004\022\013\n\007TIMEOUT\020\005\"R\n\017AutoScal" +
-      "ePolicy\022!\n\rmin_zone_size\030\001 \001(\003B\n\372\3071\0060-10" +
-      "00\022\034\n\010max_size\030\002 \001(\003B\n\372\3071\0060-1000Bz\n#yand" +
-      "ex.cloud.api.apploadbalancer.v1ZSgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/apploadbalancer/v1;apploadbalancerb\006pr" +
-      "oto3"
+      "o\032)yandex/cloud/apploadbalancer/v1/tls.p" +
+      "roto\"\302\006\n\014LoadBalancer\022\n\n\002id\030\001 \001(\t\022\014\n\004nam" +
+      "e\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\021\n\tfolder_i" +
+      "d\030\004 \001(\t\022I\n\006labels\030\005 \003(\01329.yandex.cloud.a" +
+      "pploadbalancer.v1.LoadBalancer.LabelsEnt" +
+      "ry\022D\n\006status\030\006 \001(\01624.yandex.cloud.apploa" +
+      "dbalancer.v1.LoadBalancer.Status\022\021\n\tregi" +
+      "on_id\030\007 \001(\t\022\022\n\nnetwork_id\030\010 \001(\t\022<\n\tliste" +
+      "ners\030\t \003(\0132).yandex.cloud.apploadbalance" +
+      "r.v1.Listener\022L\n\021allocation_policy\030\n \001(\013" +
+      "21.yandex.cloud.apploadbalancer.v1.Alloc" +
+      "ationPolicy\022\024\n\014log_group_id\030\013 \001(\t\022\032\n\022sec" +
+      "urity_group_ids\030\014 \003(\t\022.\n\ncreated_at\030\r \001(" +
+      "\0132\032.google.protobuf.Timestamp\022K\n\021auto_sc" +
+      "ale_policy\030\016 \001(\01320.yandex.cloud.apploadb" +
+      "alancer.v1.AutoScalePolicy\022@\n\013log_option" +
+      "s\030\017 \001(\0132+.yandex.cloud.apploadbalancer.v" +
+      "1.LogOptions\022\031\n\021allow_zonal_shift\030\020 \001(\010\032" +
+      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001\"q\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000" +
+      "\022\014\n\010CREATING\020\001\022\014\n\010STARTING\020\002\022\n\n\006ACTIVE\020\003" +
+      "\022\014\n\010STOPPING\020\004\022\013\n\007STOPPED\020\005\022\014\n\010DELETING\020" +
+      "\006\"\237\002\n\007Address\022U\n\025external_ipv4_address\030\001" +
+      " \001(\01324.yandex.cloud.apploadbalancer.v1.E" +
+      "xternalIpv4AddressH\000\022U\n\025internal_ipv4_ad" +
+      "dress\030\002 \001(\01324.yandex.cloud.apploadbalanc" +
+      "er.v1.InternalIpv4AddressH\000\022U\n\025external_" +
+      "ipv6_address\030\003 \001(\01324.yandex.cloud.apploa" +
+      "dbalancer.v1.ExternalIpv6AddressH\000B\017\n\007ad" +
+      "dress\022\004\300\3011\001\"&\n\023ExternalIpv4Address\022\017\n\007ad" +
+      "dress\030\001 \001(\t\"9\n\023InternalIpv4Address\022\017\n\007ad" +
+      "dress\030\001 \001(\t\022\021\n\tsubnet_id\030\002 \001(\t\"&\n\023Extern" +
+      "alIpv6Address\022\017\n\007address\030\001 \001(\t\"\215\001\n\010Locat" +
+      "ion\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tsubnet_id\030" +
+      "\002 \001(\t\022\027\n\017disable_traffic\030\003 \001(\010\022\036\n\022zonal_" +
+      "shift_active\030\004 \001(\010B\002\030\001\022\036\n\026zonal_traffic_" +
+      "disabled\030\005 \001(\010\"]\n\020AllocationPolicy\022I\n\tlo" +
+      "cations\030\001 \003(\0132).yandex.cloud.apploadbala" +
+      "ncer.v1.LocationB\013\202\3101\003>=1\220\3101\001\"\255\002\n\010Listen" +
+      "er\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022<\n\tendpoints\030\002 \003(" +
+      "\0132).yandex.cloud.apploadbalancer.v1.Endp" +
+      "oint\022=\n\004http\030\003 \001(\0132-.yandex.cloud.apploa" +
+      "dbalancer.v1.HttpListenerH\000\022;\n\003tls\030\004 \001(\013" +
+      "2,.yandex.cloud.apploadbalancer.v1.TlsLi" +
+      "stenerH\000\022A\n\006stream\030\005 \001(\0132/.yandex.cloud." +
+      "apploadbalancer.v1.StreamListenerH\000B\020\n\010l" +
+      "istener\022\004\300\3011\001\"q\n\010Endpoint\022C\n\taddresses\030\001" +
+      " \003(\0132(.yandex.cloud.apploadbalancer.v1.A" +
+      "ddressB\006\202\3101\002>0\022 \n\005ports\030\002 \003(\003B\021\202\3101\002>0\372\3071" +
+      "\0071-65535\"\214\001\n\014HttpListener\022=\n\007handler\030\001 \001" +
+      "(\0132,.yandex.cloud.apploadbalancer.v1.Htt" +
+      "pHandler\022=\n\tredirects\030\002 \001(\0132*.yandex.clo" +
+      "ud.apploadbalancer.v1.Redirects\"\232\001\n\013TlsL" +
+      "istener\022J\n\017default_handler\030\001 \001(\0132+.yande" +
+      "x.cloud.apploadbalancer.v1.TlsHandlerB\004\350" +
+      "\3071\001\022?\n\014sni_handlers\030\002 \003(\0132).yandex.cloud" +
+      ".apploadbalancer.v1.SniMatch\"W\n\016StreamLi" +
+      "stener\022E\n\007handler\030\001 \001(\0132..yandex.cloud.a" +
+      "pploadbalancer.v1.StreamHandlerB\004\350\3071\001\".\n" +
+      "\014Http2Options\022\036\n\026max_concurrent_streams\030" +
+      "\001 \001(\003\"`\n\rStreamHandler\022\036\n\020backend_group_" +
+      "id\030\001 \001(\tB\004\350\3071\001\022/\n\014idle_timeout\030\002 \001(\0132\031.g" +
+      "oogle.protobuf.Duration\"\266\001\n\013HttpHandler\022" +
+      "\026\n\016http_router_id\030\001 \001(\t\022F\n\rhttp2_options" +
+      "\030\002 \001(\0132-.yandex.cloud.apploadbalancer.v1" +
+      ".Http2OptionsH\000\022\026\n\014allow_http10\030\003 \001(\010H\000\022" +
+      "\032\n\022rewrite_request_id\030\004 \001(\010B\023\n\021protocol_" +
+      "settings\"\"\n\tRedirects\022\025\n\rhttp_to_https\030\001" +
+      " \001(\010\"\200\001\n\010SniMatch\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\034\n" +
+      "\014server_names\030\002 \003(\tB\006\202\3101\002>0\022B\n\007handler\030\003" +
+      " \001(\0132+.yandex.cloud.apploadbalancer.v1.T" +
+      "lsHandlerB\004\350\3071\001\"\271\002\n\nTlsHandler\022D\n\014http_h" +
+      "andler\030\002 \001(\0132,.yandex.cloud.apploadbalan" +
+      "cer.v1.HttpHandlerH\000\022H\n\016stream_handler\030\004" +
+      " \001(\0132..yandex.cloud.apploadbalancer.v1.S" +
+      "treamHandlerH\000\022\037\n\017certificate_ids\030\003 \003(\tB" +
+      "\006\202\3101\002>0\022i\n client_certificates_verificat" +
+      "ion\030\005 \001(\0132?.yandex.cloud.apploadbalancer" +
+      ".v1.ClientCertificatesVerificationB\017\n\007ha" +
+      "ndler\022\004\300\3011\001\"\214\004\n\013TargetState\022N\n\006status\030\001 " +
+      "\001(\0132>.yandex.cloud.apploadbalancer.v1.Ta" +
+      "rgetState.HealthcheckStatus\022=\n\006target\030\002 " +
+      "\001(\0132\'.yandex.cloud.apploadbalancer.v1.Ta" +
+      "rgetB\004\350\3071\001\032n\n\021HealthcheckStatus\022Y\n\rzone_" +
+      "statuses\030\001 \003(\0132B.yandex.cloud.apploadbal" +
+      "ancer.v1.TargetState.ZoneHealthcheckStat" +
+      "us\032\215\001\n\025ZoneHealthcheckStatus\022\025\n\007zone_id\030" +
+      "\001 \001(\tB\004\350\3071\001\022C\n\006status\030\002 \001(\01623.yandex.clo" +
+      "ud.apploadbalancer.v1.TargetState.Status" +
+      "\022\030\n\020failed_active_hc\030\003 \001(\010\"n\n\006Status\022\026\n\022" +
+      "STATUS_UNSPECIFIED\020\000\022\013\n\007HEALTHY\020\001\022\025\n\021PAR" +
+      "TIALLY_HEALTHY\020\002\022\r\n\tUNHEALTHY\020\003\022\014\n\010DRAIN" +
+      "ING\020\004\022\013\n\007TIMEOUT\020\005\"R\n\017AutoScalePolicy\022!\n" +
+      "\rmin_zone_size\030\001 \001(\003B\n\372\3071\0060-1000\022\034\n\010max_" +
+      "size\030\002 \001(\003B\n\372\3071\0060-1000Bz\n#yandex.cloud.a" +
+      "pi.apploadbalancer.v1ZSgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/apploadb" +
+      "alancer/v1;apploadbalancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -25691,6 +25957,7 @@ public final class LoadBalancerOuterClass {
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.apploadbalancer.v1.Logging.getDescriptor(),
           yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.getDescriptor(),
+          yandex.cloud.api.apploadbalancer.v1.Tls.getDescriptor(),
         });
     internal_static_yandex_cloud_apploadbalancer_v1_LoadBalancer_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -25805,7 +26072,7 @@ public final class LoadBalancerOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_TlsHandler_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_TlsHandler_descriptor,
-        new java.lang.String[] { "HttpHandler", "StreamHandler", "CertificateIds", "Handler", });
+        new java.lang.String[] { "HttpHandler", "StreamHandler", "CertificateIds", "ClientCertificatesVerification", "Handler", });
     internal_static_yandex_cloud_apploadbalancer_v1_TargetState_descriptor =
       getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_apploadbalancer_v1_TargetState_fieldAccessorTable = new
@@ -25844,6 +26111,7 @@ public final class LoadBalancerOuterClass {
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.apploadbalancer.v1.Logging.getDescriptor();
     yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.getDescriptor();
+    yandex.cloud.api.apploadbalancer.v1.Tls.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

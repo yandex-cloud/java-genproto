@@ -197,8 +197,6 @@ public final class TrunkConnectionOuterClass {
     /**
      * <pre>
      * ID of pointOfPresence that the trunkConnection is deployed on.
-     * Optional.
-     * If is not set scheduler selects it by himself.
      * </pre>
      *
      * <code>.google.protobuf.StringValue point_of_presence_id = 12;</code>
@@ -208,8 +206,6 @@ public final class TrunkConnectionOuterClass {
     /**
      * <pre>
      * ID of pointOfPresence that the trunkConnection is deployed on.
-     * Optional.
-     * If is not set scheduler selects it by himself.
      * </pre>
      *
      * <code>.google.protobuf.StringValue point_of_presence_id = 12;</code>
@@ -219,8 +215,6 @@ public final class TrunkConnectionOuterClass {
     /**
      * <pre>
      * ID of pointOfPresence that the trunkConnection is deployed on.
-     * Optional.
-     * If is not set scheduler selects it by himself.
      * </pre>
      *
      * <code>.google.protobuf.StringValue point_of_presence_id = 12;</code>
@@ -346,8 +340,7 @@ public final class TrunkConnectionOuterClass {
 
     /**
      * <pre>
-     * Optional deletion protection flag.
-     * If set prohibits deletion of the trunkConnection.
+     * Deletion protection flag.
      * </pre>
      *
      * <code>bool deletion_protection = 25;</code>
@@ -1009,8 +1002,6 @@ public final class TrunkConnectionOuterClass {
       /**
        * <pre>
        * ID of partner that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
        * <code>.google.protobuf.StringValue partner_id = 4;</code>
@@ -1020,8 +1011,6 @@ public final class TrunkConnectionOuterClass {
       /**
        * <pre>
        * ID of partner that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
        * <code>.google.protobuf.StringValue partner_id = 4;</code>
@@ -1031,8 +1020,6 @@ public final class TrunkConnectionOuterClass {
       /**
        * <pre>
        * ID of partner that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
        * <code>.google.protobuf.StringValue partner_id = 4;</code>
@@ -1191,8 +1178,6 @@ public final class TrunkConnectionOuterClass {
       /**
        * <pre>
        * ID of partner that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
        * <code>.google.protobuf.StringValue partner_id = 4;</code>
@@ -1205,8 +1190,6 @@ public final class TrunkConnectionOuterClass {
       /**
        * <pre>
        * ID of partner that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
        * <code>.google.protobuf.StringValue partner_id = 4;</code>
@@ -1219,8 +1202,6 @@ public final class TrunkConnectionOuterClass {
       /**
        * <pre>
        * ID of partner that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
        * <code>.google.protobuf.StringValue partner_id = 4;</code>
@@ -1668,8 +1649,6 @@ public final class TrunkConnectionOuterClass {
         /**
          * <pre>
          * ID of partner that the trunkConnection is deployed on.
-         * Optional.
-         * If is not set scheduler selects it by himself.
          * </pre>
          *
          * <code>.google.protobuf.StringValue partner_id = 4;</code>
@@ -1681,8 +1660,6 @@ public final class TrunkConnectionOuterClass {
         /**
          * <pre>
          * ID of partner that the trunkConnection is deployed on.
-         * Optional.
-         * If is not set scheduler selects it by himself.
          * </pre>
          *
          * <code>.google.protobuf.StringValue partner_id = 4;</code>
@@ -1698,8 +1675,6 @@ public final class TrunkConnectionOuterClass {
         /**
          * <pre>
          * ID of partner that the trunkConnection is deployed on.
-         * Optional.
-         * If is not set scheduler selects it by himself.
          * </pre>
          *
          * <code>.google.protobuf.StringValue partner_id = 4;</code>
@@ -1720,8 +1695,6 @@ public final class TrunkConnectionOuterClass {
         /**
          * <pre>
          * ID of partner that the trunkConnection is deployed on.
-         * Optional.
-         * If is not set scheduler selects it by himself.
          * </pre>
          *
          * <code>.google.protobuf.StringValue partner_id = 4;</code>
@@ -1740,8 +1713,6 @@ public final class TrunkConnectionOuterClass {
         /**
          * <pre>
          * ID of partner that the trunkConnection is deployed on.
-         * Optional.
-         * If is not set scheduler selects it by himself.
          * </pre>
          *
          * <code>.google.protobuf.StringValue partner_id = 4;</code>
@@ -1764,8 +1735,6 @@ public final class TrunkConnectionOuterClass {
         /**
          * <pre>
          * ID of partner that the trunkConnection is deployed on.
-         * Optional.
-         * If is not set scheduler selects it by himself.
          * </pre>
          *
          * <code>.google.protobuf.StringValue partner_id = 4;</code>
@@ -1784,8 +1753,6 @@ public final class TrunkConnectionOuterClass {
         /**
          * <pre>
          * ID of partner that the trunkConnection is deployed on.
-         * Optional.
-         * If is not set scheduler selects it by himself.
          * </pre>
          *
          * <code>.google.protobuf.StringValue partner_id = 4;</code>
@@ -1798,8 +1765,6 @@ public final class TrunkConnectionOuterClass {
         /**
          * <pre>
          * ID of partner that the trunkConnection is deployed on.
-         * Optional.
-         * If is not set scheduler selects it by himself.
          * </pre>
          *
          * <code>.google.protobuf.StringValue partner_id = 4;</code>
@@ -1815,8 +1780,6 @@ public final class TrunkConnectionOuterClass {
         /**
          * <pre>
          * ID of partner that the trunkConnection is deployed on.
-         * Optional.
-         * If is not set scheduler selects it by himself.
          * </pre>
          *
          * <code>.google.protobuf.StringValue partner_id = 4;</code>
@@ -4336,8 +4299,6 @@ public final class TrunkConnectionOuterClass {
     /**
      * <pre>
      * ID of pointOfPresence that the trunkConnection is deployed on.
-     * Optional.
-     * If is not set scheduler selects it by himself.
      * </pre>
      *
      * <code>.google.protobuf.StringValue point_of_presence_id = 12;</code>
@@ -4350,8 +4311,6 @@ public final class TrunkConnectionOuterClass {
     /**
      * <pre>
      * ID of pointOfPresence that the trunkConnection is deployed on.
-     * Optional.
-     * If is not set scheduler selects it by himself.
      * </pre>
      *
      * <code>.google.protobuf.StringValue point_of_presence_id = 12;</code>
@@ -4364,8 +4323,6 @@ public final class TrunkConnectionOuterClass {
     /**
      * <pre>
      * ID of pointOfPresence that the trunkConnection is deployed on.
-     * Optional.
-     * If is not set scheduler selects it by himself.
      * </pre>
      *
      * <code>.google.protobuf.StringValue point_of_presence_id = 12;</code>
@@ -4550,8 +4507,7 @@ public final class TrunkConnectionOuterClass {
     private boolean deletionProtection_;
     /**
      * <pre>
-     * Optional deletion protection flag.
-     * If set prohibits deletion of the trunkConnection.
+     * Deletion protection flag.
      * </pre>
      *
      * <code>bool deletion_protection = 25;</code>
@@ -6281,8 +6237,6 @@ public final class TrunkConnectionOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
        * <code>.google.protobuf.StringValue point_of_presence_id = 12;</code>
@@ -6294,8 +6248,6 @@ public final class TrunkConnectionOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
        * <code>.google.protobuf.StringValue point_of_presence_id = 12;</code>
@@ -6311,8 +6263,6 @@ public final class TrunkConnectionOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
        * <code>.google.protobuf.StringValue point_of_presence_id = 12;</code>
@@ -6333,8 +6283,6 @@ public final class TrunkConnectionOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
        * <code>.google.protobuf.StringValue point_of_presence_id = 12;</code>
@@ -6353,8 +6301,6 @@ public final class TrunkConnectionOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
        * <code>.google.protobuf.StringValue point_of_presence_id = 12;</code>
@@ -6377,8 +6323,6 @@ public final class TrunkConnectionOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
        * <code>.google.protobuf.StringValue point_of_presence_id = 12;</code>
@@ -6397,8 +6341,6 @@ public final class TrunkConnectionOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
        * <code>.google.protobuf.StringValue point_of_presence_id = 12;</code>
@@ -6411,8 +6353,6 @@ public final class TrunkConnectionOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
        * <code>.google.protobuf.StringValue point_of_presence_id = 12;</code>
@@ -6428,8 +6368,6 @@ public final class TrunkConnectionOuterClass {
       /**
        * <pre>
        * ID of pointOfPresence that the trunkConnection is deployed on.
-       * Optional.
-       * If is not set scheduler selects it by himself.
        * </pre>
        *
        * <code>.google.protobuf.StringValue point_of_presence_id = 12;</code>
@@ -6793,8 +6731,7 @@ public final class TrunkConnectionOuterClass {
       private boolean deletionProtection_ ;
       /**
        * <pre>
-       * Optional deletion protection flag.
-       * If set prohibits deletion of the trunkConnection.
+       * Deletion protection flag.
        * </pre>
        *
        * <code>bool deletion_protection = 25;</code>
@@ -6806,8 +6743,7 @@ public final class TrunkConnectionOuterClass {
       }
       /**
        * <pre>
-       * Optional deletion protection flag.
-       * If set prohibits deletion of the trunkConnection.
+       * Deletion protection flag.
        * </pre>
        *
        * <code>bool deletion_protection = 25;</code>
@@ -6822,8 +6758,7 @@ public final class TrunkConnectionOuterClass {
       }
       /**
        * <pre>
-       * Optional deletion protection flag.
-       * If set prohibits deletion of the trunkConnection.
+       * Deletion protection flag.
        * </pre>
        *
        * <code>bool deletion_protection = 25;</code>

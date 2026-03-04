@@ -20,6 +20,10 @@ public final class BucketOuterClass {
   public enum Versioning
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     * <pre>
+     * Versioning unspecified.
+     * </pre>
+     *
      * <code>VERSIONING_UNSPECIFIED = 0;</code>
      */
     VERSIONING_UNSPECIFIED(0),
@@ -61,6 +65,10 @@ public final class BucketOuterClass {
     ;
 
     /**
+     * <pre>
+     * Versioning unspecified.
+     * </pre>
+     *
      * <code>VERSIONING_UNSPECIFIED = 0;</code>
      */
     public static final int VERSIONING_UNSPECIFIED_VALUE = 0;
@@ -708,6 +716,16 @@ public final class BucketOuterClass {
      */
     com.google.protobuf.ByteString
         getResourceIdBytes();
+
+    /**
+     * <pre>
+     * An option to disable static key auth for a bucket.
+     * </pre>
+     *
+     * <code>bool disabled_statickey_auth = 19;</code>
+     * @return The disabledStatickeyAuth.
+     */
+    boolean getDisabledStatickeyAuth();
   }
   /**
    * <pre>
@@ -939,6 +957,11 @@ public final class BucketOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               resourceId_ = s;
+              break;
+            }
+            case 152: {
+
+              disabledStatickeyAuth_ = input.readBool();
               break;
             }
             default: {
@@ -1782,6 +1805,21 @@ public final class BucketOuterClass {
       }
     }
 
+    public static final int DISABLED_STATICKEY_AUTH_FIELD_NUMBER = 19;
+    private boolean disabledStatickeyAuth_;
+    /**
+     * <pre>
+     * An option to disable static key auth for a bucket.
+     * </pre>
+     *
+     * <code>bool disabled_statickey_auth = 19;</code>
+     * @return The disabledStatickeyAuth.
+     */
+    @java.lang.Override
+    public boolean getDisabledStatickeyAuth() {
+      return disabledStatickeyAuth_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1849,6 +1887,9 @@ public final class BucketOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 18, resourceId_);
+      }
+      if (disabledStatickeyAuth_ != false) {
+        output.writeBool(19, disabledStatickeyAuth_);
       }
       unknownFields.writeTo(output);
     }
@@ -1926,6 +1967,10 @@ public final class BucketOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, resourceId_);
       }
+      if (disabledStatickeyAuth_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(19, disabledStatickeyAuth_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2000,6 +2045,8 @@ public final class BucketOuterClass {
       }
       if (!getResourceId()
           .equals(other.getResourceId())) return false;
+      if (getDisabledStatickeyAuth()
+          != other.getDisabledStatickeyAuth()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2070,6 +2117,9 @@ public final class BucketOuterClass {
       }
       hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getResourceId().hashCode();
+      hash = (37 * hash) + DISABLED_STATICKEY_AUTH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDisabledStatickeyAuth());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2291,6 +2341,8 @@ public final class BucketOuterClass {
         }
         resourceId_ = "";
 
+        disabledStatickeyAuth_ = false;
+
         return this;
       }
 
@@ -2392,6 +2444,7 @@ public final class BucketOuterClass {
           result.allowedPrivateEndpoints_ = allowedPrivateEndpointsBuilder_.build();
         }
         result.resourceId_ = resourceId_;
+        result.disabledStatickeyAuth_ = disabledStatickeyAuth_;
         onBuilt();
         return result;
       }
@@ -2567,6 +2620,9 @@ public final class BucketOuterClass {
         if (!other.getResourceId().isEmpty()) {
           resourceId_ = other.resourceId_;
           onChanged();
+        }
+        if (other.getDisabledStatickeyAuth() != false) {
+          setDisabledStatickeyAuth(other.getDisabledStatickeyAuth());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5506,6 +5562,49 @@ public final class BucketOuterClass {
         onChanged();
         return this;
       }
+
+      private boolean disabledStatickeyAuth_ ;
+      /**
+       * <pre>
+       * An option to disable static key auth for a bucket.
+       * </pre>
+       *
+       * <code>bool disabled_statickey_auth = 19;</code>
+       * @return The disabledStatickeyAuth.
+       */
+      @java.lang.Override
+      public boolean getDisabledStatickeyAuth() {
+        return disabledStatickeyAuth_;
+      }
+      /**
+       * <pre>
+       * An option to disable static key auth for a bucket.
+       * </pre>
+       *
+       * <code>bool disabled_statickey_auth = 19;</code>
+       * @param value The disabledStatickeyAuth to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisabledStatickeyAuth(boolean value) {
+        
+        disabledStatickeyAuth_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An option to disable static key auth for a bucket.
+       * </pre>
+       *
+       * <code>bool disabled_statickey_auth = 19;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDisabledStatickeyAuth() {
+        
+        disabledStatickeyAuth_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6658,6 +6757,10 @@ public final class BucketOuterClass {
       public enum Permission
           implements com.google.protobuf.ProtocolMessageEnum {
         /**
+         * <pre>
+         * Permission unspecified.
+         * </pre>
+         *
          * <code>PERMISSION_UNSPECIFIED = 0;</code>
          */
         PERMISSION_UNSPECIFIED(0),
@@ -6717,6 +6820,10 @@ public final class BucketOuterClass {
         ;
 
         /**
+         * <pre>
+         * Permission unspecified.
+         * </pre>
+         *
          * <code>PERMISSION_UNSPECIFIED = 0;</code>
          */
         public static final int PERMISSION_UNSPECIFIED_VALUE = 0;
@@ -6866,6 +6973,10 @@ public final class BucketOuterClass {
       public enum GrantType
           implements com.google.protobuf.ProtocolMessageEnum {
         /**
+         * <pre>
+         * Grant type unspecified.
+         * </pre>
+         *
          * <code>GRANT_TYPE_UNSPECIFIED = 0;</code>
          */
         GRANT_TYPE_UNSPECIFIED(0),
@@ -6908,6 +7019,10 @@ public final class BucketOuterClass {
         ;
 
         /**
+         * <pre>
+         * Grant type unspecified.
+         * </pre>
+         *
          * <code>GRANT_TYPE_UNSPECIFIED = 0;</code>
          */
         public static final int GRANT_TYPE_UNSPECIFIED_VALUE = 0;
@@ -10230,6 +10345,10 @@ public final class BucketOuterClass {
     public enum Method
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Method unspecified.
+       * </pre>
+       *
        * <code>METHOD_UNSPECIFIED = 0;</code>
        */
       METHOD_UNSPECIFIED(0),
@@ -10277,6 +10396,10 @@ public final class BucketOuterClass {
       ;
 
       /**
+       * <pre>
+       * Method unspecified.
+       * </pre>
+       *
        * <code>METHOD_UNSPECIFIED = 0;</code>
        */
       public static final int METHOD_UNSPECIFIED_VALUE = 0;
@@ -12568,6 +12691,10 @@ public final class BucketOuterClass {
     public enum Protocol
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Protocol unspecified.
+       * </pre>
+       *
        * <code>PROTOCOL_UNSPECIFIED = 0;</code>
        */
       PROTOCOL_UNSPECIFIED(0),
@@ -12591,6 +12718,10 @@ public final class BucketOuterClass {
       ;
 
       /**
+       * <pre>
+       * Protocol unspecified.
+       * </pre>
+       *
        * <code>PROTOCOL_UNSPECIFIED = 0;</code>
        */
       public static final int PROTOCOL_UNSPECIFIED_VALUE = 0;
@@ -24216,11 +24347,19 @@ public final class BucketOuterClass {
           com.google.protobuf.MessageOrBuilder {
 
         /**
+         * <pre>
+         * Key prefix that the object must have in order for the rule to apply.
+         * </pre>
+         *
          * <code>string prefix = 1;</code>
          * @return The prefix.
          */
         java.lang.String getPrefix();
         /**
+         * <pre>
+         * Key prefix that the object must have in order for the rule to apply.
+         * </pre>
+         *
          * <code>string prefix = 1;</code>
          * @return The bytes for prefix.
          */
@@ -24228,54 +24367,98 @@ public final class BucketOuterClass {
             getPrefixBytes();
 
         /**
+         * <pre>
+         * Size that the object must be greater.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
          * @return Whether the objectSizeGreaterThan field is set.
          */
         boolean hasObjectSizeGreaterThan();
         /**
+         * <pre>
+         * Size that the object must be greater.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
          * @return The objectSizeGreaterThan.
          */
         com.google.protobuf.Int64Value getObjectSizeGreaterThan();
         /**
+         * <pre>
+         * Size that the object must be greater.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
          */
         com.google.protobuf.Int64ValueOrBuilder getObjectSizeGreaterThanOrBuilder();
 
         /**
+         * <pre>
+         * Size that the object must be less than.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
          * @return Whether the objectSizeLessThan field is set.
          */
         boolean hasObjectSizeLessThan();
         /**
+         * <pre>
+         * Size that the object must be less than.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
          * @return The objectSizeLessThan.
          */
         com.google.protobuf.Int64Value getObjectSizeLessThan();
         /**
+         * <pre>
+         * Size that the object must be less than.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
          */
         com.google.protobuf.Int64ValueOrBuilder getObjectSizeLessThanOrBuilder();
 
         /**
+         * <pre>
+         * Tags that the object's tag set must have for the rule to apply.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
          */
         java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> 
             getTagList();
         /**
+         * <pre>
+         * Tags that the object's tag set must have for the rule to apply.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
          */
         yandex.cloud.api.storage.v1.BucketOuterClass.Tag getTag(int index);
         /**
+         * <pre>
+         * Tags that the object's tag set must have for the rule to apply.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
          */
         int getTagCount();
         /**
+         * <pre>
+         * Tags that the object's tag set must have for the rule to apply.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
          */
         java.util.List<? extends yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder> 
             getTagOrBuilderList();
         /**
+         * <pre>
+         * Tags that the object's tag set must have for the rule to apply.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
          */
         yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder getTagOrBuilder(
@@ -24408,6 +24591,10 @@ public final class BucketOuterClass {
         public static final int PREFIX_FIELD_NUMBER = 1;
         private volatile java.lang.Object prefix_;
         /**
+         * <pre>
+         * Key prefix that the object must have in order for the rule to apply.
+         * </pre>
+         *
          * <code>string prefix = 1;</code>
          * @return The prefix.
          */
@@ -24425,6 +24612,10 @@ public final class BucketOuterClass {
           }
         }
         /**
+         * <pre>
+         * Key prefix that the object must have in order for the rule to apply.
+         * </pre>
+         *
          * <code>string prefix = 1;</code>
          * @return The bytes for prefix.
          */
@@ -24446,6 +24637,10 @@ public final class BucketOuterClass {
         public static final int OBJECT_SIZE_GREATER_THAN_FIELD_NUMBER = 2;
         private com.google.protobuf.Int64Value objectSizeGreaterThan_;
         /**
+         * <pre>
+         * Size that the object must be greater.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
          * @return Whether the objectSizeGreaterThan field is set.
          */
@@ -24454,6 +24649,10 @@ public final class BucketOuterClass {
           return objectSizeGreaterThan_ != null;
         }
         /**
+         * <pre>
+         * Size that the object must be greater.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
          * @return The objectSizeGreaterThan.
          */
@@ -24462,6 +24661,10 @@ public final class BucketOuterClass {
           return objectSizeGreaterThan_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : objectSizeGreaterThan_;
         }
         /**
+         * <pre>
+         * Size that the object must be greater.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
          */
         @java.lang.Override
@@ -24472,6 +24675,10 @@ public final class BucketOuterClass {
         public static final int OBJECT_SIZE_LESS_THAN_FIELD_NUMBER = 3;
         private com.google.protobuf.Int64Value objectSizeLessThan_;
         /**
+         * <pre>
+         * Size that the object must be less than.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
          * @return Whether the objectSizeLessThan field is set.
          */
@@ -24480,6 +24687,10 @@ public final class BucketOuterClass {
           return objectSizeLessThan_ != null;
         }
         /**
+         * <pre>
+         * Size that the object must be less than.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
          * @return The objectSizeLessThan.
          */
@@ -24488,6 +24699,10 @@ public final class BucketOuterClass {
           return objectSizeLessThan_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : objectSizeLessThan_;
         }
         /**
+         * <pre>
+         * Size that the object must be less than.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
          */
         @java.lang.Override
@@ -24498,6 +24713,10 @@ public final class BucketOuterClass {
         public static final int TAG_FIELD_NUMBER = 4;
         private java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> tag_;
         /**
+         * <pre>
+         * Tags that the object's tag set must have for the rule to apply.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
          */
         @java.lang.Override
@@ -24505,6 +24724,10 @@ public final class BucketOuterClass {
           return tag_;
         }
         /**
+         * <pre>
+         * Tags that the object's tag set must have for the rule to apply.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
          */
         @java.lang.Override
@@ -24513,6 +24736,10 @@ public final class BucketOuterClass {
           return tag_;
         }
         /**
+         * <pre>
+         * Tags that the object's tag set must have for the rule to apply.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
          */
         @java.lang.Override
@@ -24520,6 +24747,10 @@ public final class BucketOuterClass {
           return tag_.size();
         }
         /**
+         * <pre>
+         * Tags that the object's tag set must have for the rule to apply.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
          */
         @java.lang.Override
@@ -24527,6 +24758,10 @@ public final class BucketOuterClass {
           return tag_.get(index);
         }
         /**
+         * <pre>
+         * Tags that the object's tag set must have for the rule to apply.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
          */
         @java.lang.Override
@@ -24956,6 +25191,10 @@ public final class BucketOuterClass {
 
           private java.lang.Object prefix_ = "";
           /**
+           * <pre>
+           * Key prefix that the object must have in order for the rule to apply.
+           * </pre>
+           *
            * <code>string prefix = 1;</code>
            * @return The prefix.
            */
@@ -24972,6 +25211,10 @@ public final class BucketOuterClass {
             }
           }
           /**
+           * <pre>
+           * Key prefix that the object must have in order for the rule to apply.
+           * </pre>
+           *
            * <code>string prefix = 1;</code>
            * @return The bytes for prefix.
            */
@@ -24989,6 +25232,10 @@ public final class BucketOuterClass {
             }
           }
           /**
+           * <pre>
+           * Key prefix that the object must have in order for the rule to apply.
+           * </pre>
+           *
            * <code>string prefix = 1;</code>
            * @param value The prefix to set.
            * @return This builder for chaining.
@@ -25004,6 +25251,10 @@ public final class BucketOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Key prefix that the object must have in order for the rule to apply.
+           * </pre>
+           *
            * <code>string prefix = 1;</code>
            * @return This builder for chaining.
            */
@@ -25014,6 +25265,10 @@ public final class BucketOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Key prefix that the object must have in order for the rule to apply.
+           * </pre>
+           *
            * <code>string prefix = 1;</code>
            * @param value The bytes for prefix to set.
            * @return This builder for chaining.
@@ -25034,6 +25289,10 @@ public final class BucketOuterClass {
           private com.google.protobuf.SingleFieldBuilderV3<
               com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> objectSizeGreaterThanBuilder_;
           /**
+           * <pre>
+           * Size that the object must be greater.
+           * </pre>
+           *
            * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
            * @return Whether the objectSizeGreaterThan field is set.
            */
@@ -25041,6 +25300,10 @@ public final class BucketOuterClass {
             return objectSizeGreaterThanBuilder_ != null || objectSizeGreaterThan_ != null;
           }
           /**
+           * <pre>
+           * Size that the object must be greater.
+           * </pre>
+           *
            * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
            * @return The objectSizeGreaterThan.
            */
@@ -25052,6 +25315,10 @@ public final class BucketOuterClass {
             }
           }
           /**
+           * <pre>
+           * Size that the object must be greater.
+           * </pre>
+           *
            * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
            */
           public Builder setObjectSizeGreaterThan(com.google.protobuf.Int64Value value) {
@@ -25068,6 +25335,10 @@ public final class BucketOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Size that the object must be greater.
+           * </pre>
+           *
            * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
            */
           public Builder setObjectSizeGreaterThan(
@@ -25082,6 +25353,10 @@ public final class BucketOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Size that the object must be greater.
+           * </pre>
+           *
            * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
            */
           public Builder mergeObjectSizeGreaterThan(com.google.protobuf.Int64Value value) {
@@ -25100,6 +25375,10 @@ public final class BucketOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Size that the object must be greater.
+           * </pre>
+           *
            * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
            */
           public Builder clearObjectSizeGreaterThan() {
@@ -25114,6 +25393,10 @@ public final class BucketOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Size that the object must be greater.
+           * </pre>
+           *
            * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
            */
           public com.google.protobuf.Int64Value.Builder getObjectSizeGreaterThanBuilder() {
@@ -25122,6 +25405,10 @@ public final class BucketOuterClass {
             return getObjectSizeGreaterThanFieldBuilder().getBuilder();
           }
           /**
+           * <pre>
+           * Size that the object must be greater.
+           * </pre>
+           *
            * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
            */
           public com.google.protobuf.Int64ValueOrBuilder getObjectSizeGreaterThanOrBuilder() {
@@ -25133,6 +25420,10 @@ public final class BucketOuterClass {
             }
           }
           /**
+           * <pre>
+           * Size that the object must be greater.
+           * </pre>
+           *
            * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
@@ -25153,6 +25444,10 @@ public final class BucketOuterClass {
           private com.google.protobuf.SingleFieldBuilderV3<
               com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> objectSizeLessThanBuilder_;
           /**
+           * <pre>
+           * Size that the object must be less than.
+           * </pre>
+           *
            * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
            * @return Whether the objectSizeLessThan field is set.
            */
@@ -25160,6 +25455,10 @@ public final class BucketOuterClass {
             return objectSizeLessThanBuilder_ != null || objectSizeLessThan_ != null;
           }
           /**
+           * <pre>
+           * Size that the object must be less than.
+           * </pre>
+           *
            * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
            * @return The objectSizeLessThan.
            */
@@ -25171,6 +25470,10 @@ public final class BucketOuterClass {
             }
           }
           /**
+           * <pre>
+           * Size that the object must be less than.
+           * </pre>
+           *
            * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
            */
           public Builder setObjectSizeLessThan(com.google.protobuf.Int64Value value) {
@@ -25187,6 +25490,10 @@ public final class BucketOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Size that the object must be less than.
+           * </pre>
+           *
            * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
            */
           public Builder setObjectSizeLessThan(
@@ -25201,6 +25508,10 @@ public final class BucketOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Size that the object must be less than.
+           * </pre>
+           *
            * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
            */
           public Builder mergeObjectSizeLessThan(com.google.protobuf.Int64Value value) {
@@ -25219,6 +25530,10 @@ public final class BucketOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Size that the object must be less than.
+           * </pre>
+           *
            * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
            */
           public Builder clearObjectSizeLessThan() {
@@ -25233,6 +25548,10 @@ public final class BucketOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Size that the object must be less than.
+           * </pre>
+           *
            * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
            */
           public com.google.protobuf.Int64Value.Builder getObjectSizeLessThanBuilder() {
@@ -25241,6 +25560,10 @@ public final class BucketOuterClass {
             return getObjectSizeLessThanFieldBuilder().getBuilder();
           }
           /**
+           * <pre>
+           * Size that the object must be less than.
+           * </pre>
+           *
            * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
            */
           public com.google.protobuf.Int64ValueOrBuilder getObjectSizeLessThanOrBuilder() {
@@ -25252,6 +25575,10 @@ public final class BucketOuterClass {
             }
           }
           /**
+           * <pre>
+           * Size that the object must be less than.
+           * </pre>
+           *
            * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
            */
           private com.google.protobuf.SingleFieldBuilderV3<
@@ -25281,6 +25608,10 @@ public final class BucketOuterClass {
               yandex.cloud.api.storage.v1.BucketOuterClass.Tag, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder> tagBuilder_;
 
           /**
+           * <pre>
+           * Tags that the object's tag set must have for the rule to apply.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
            */
           public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> getTagList() {
@@ -25291,6 +25622,10 @@ public final class BucketOuterClass {
             }
           }
           /**
+           * <pre>
+           * Tags that the object's tag set must have for the rule to apply.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
            */
           public int getTagCount() {
@@ -25301,6 +25636,10 @@ public final class BucketOuterClass {
             }
           }
           /**
+           * <pre>
+           * Tags that the object's tag set must have for the rule to apply.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
            */
           public yandex.cloud.api.storage.v1.BucketOuterClass.Tag getTag(int index) {
@@ -25311,6 +25650,10 @@ public final class BucketOuterClass {
             }
           }
           /**
+           * <pre>
+           * Tags that the object's tag set must have for the rule to apply.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
            */
           public Builder setTag(
@@ -25328,6 +25671,10 @@ public final class BucketOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Tags that the object's tag set must have for the rule to apply.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
            */
           public Builder setTag(
@@ -25342,6 +25689,10 @@ public final class BucketOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Tags that the object's tag set must have for the rule to apply.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
            */
           public Builder addTag(yandex.cloud.api.storage.v1.BucketOuterClass.Tag value) {
@@ -25358,6 +25709,10 @@ public final class BucketOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Tags that the object's tag set must have for the rule to apply.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
            */
           public Builder addTag(
@@ -25375,6 +25730,10 @@ public final class BucketOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Tags that the object's tag set must have for the rule to apply.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
            */
           public Builder addTag(
@@ -25389,6 +25748,10 @@ public final class BucketOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Tags that the object's tag set must have for the rule to apply.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
            */
           public Builder addTag(
@@ -25403,6 +25766,10 @@ public final class BucketOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Tags that the object's tag set must have for the rule to apply.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
            */
           public Builder addAllTag(
@@ -25418,6 +25785,10 @@ public final class BucketOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Tags that the object's tag set must have for the rule to apply.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
            */
           public Builder clearTag() {
@@ -25431,6 +25802,10 @@ public final class BucketOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Tags that the object's tag set must have for the rule to apply.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
            */
           public Builder removeTag(int index) {
@@ -25444,6 +25819,10 @@ public final class BucketOuterClass {
             return this;
           }
           /**
+           * <pre>
+           * Tags that the object's tag set must have for the rule to apply.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
            */
           public yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder getTagBuilder(
@@ -25451,6 +25830,10 @@ public final class BucketOuterClass {
             return getTagFieldBuilder().getBuilder(index);
           }
           /**
+           * <pre>
+           * Tags that the object's tag set must have for the rule to apply.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
            */
           public yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder getTagOrBuilder(
@@ -25461,6 +25844,10 @@ public final class BucketOuterClass {
             }
           }
           /**
+           * <pre>
+           * Tags that the object's tag set must have for the rule to apply.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
            */
           public java.util.List<? extends yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder> 
@@ -25472,6 +25859,10 @@ public final class BucketOuterClass {
             }
           }
           /**
+           * <pre>
+           * Tags that the object's tag set must have for the rule to apply.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
            */
           public yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder addTagBuilder() {
@@ -25479,6 +25870,10 @@ public final class BucketOuterClass {
                 yandex.cloud.api.storage.v1.BucketOuterClass.Tag.getDefaultInstance());
           }
           /**
+           * <pre>
+           * Tags that the object's tag set must have for the rule to apply.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
            */
           public yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder addTagBuilder(
@@ -25487,6 +25882,10 @@ public final class BucketOuterClass {
                 index, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.getDefaultInstance());
           }
           /**
+           * <pre>
+           * Tags that the object's tag set must have for the rule to apply.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
            */
           public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder> 
@@ -37375,6 +37774,10 @@ public final class BucketOuterClass {
     public enum SourceType
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Source type unspecified.
+       * </pre>
+       *
        * <code>SOURCE_TYPE_UNSPECIFIED = 0;</code>
        */
       SOURCE_TYPE_UNSPECIFIED(0),
@@ -37398,6 +37801,10 @@ public final class BucketOuterClass {
       ;
 
       /**
+       * <pre>
+       * Source type unspecified.
+       * </pre>
+       *
        * <code>SOURCE_TYPE_UNSPECIFIED = 0;</code>
        */
       public static final int SOURCE_TYPE_UNSPECIFIED_VALUE = 0;
@@ -39422,27 +39829,47 @@ public final class BucketOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Status
+     * </pre>
+     *
      * <code>.yandex.cloud.storage.v1.ObjectLock.ObjectLockStatus status = 2;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
+     * <pre>
+     * Status
+     * </pre>
+     *
      * <code>.yandex.cloud.storage.v1.ObjectLock.ObjectLockStatus status = 2;</code>
      * @return The status.
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.ObjectLockStatus getStatus();
 
     /**
+     * <pre>
+     * Default retention
+     * </pre>
+     *
      * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
      * @return Whether the defaultRetention field is set.
      */
     boolean hasDefaultRetention();
     /**
+     * <pre>
+     * Default retention
+     * </pre>
+     *
      * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
      * @return The defaultRetention.
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention getDefaultRetention();
     /**
+     * <pre>
+     * Default retention
+     * </pre>
+     *
      * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetentionOrBuilder getDefaultRetentionOrBuilder();
@@ -39559,14 +39986,26 @@ public final class BucketOuterClass {
     public enum ObjectLockStatus
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Object lock status unspecified.
+       * </pre>
+       *
        * <code>OBJECT_LOCK_STATUS_UNSPECIFIED = 0;</code>
        */
       OBJECT_LOCK_STATUS_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Object lock status disabled.
+       * </pre>
+       *
        * <code>OBJECT_LOCK_STATUS_DISABLED = 1;</code>
        */
       OBJECT_LOCK_STATUS_DISABLED(1),
       /**
+       * <pre>
+       * Object lock status enabled.
+       * </pre>
+       *
        * <code>OBJECT_LOCK_STATUS_ENABLED = 2;</code>
        */
       OBJECT_LOCK_STATUS_ENABLED(2),
@@ -39574,14 +40013,26 @@ public final class BucketOuterClass {
       ;
 
       /**
+       * <pre>
+       * Object lock status unspecified.
+       * </pre>
+       *
        * <code>OBJECT_LOCK_STATUS_UNSPECIFIED = 0;</code>
        */
       public static final int OBJECT_LOCK_STATUS_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Object lock status disabled.
+       * </pre>
+       *
        * <code>OBJECT_LOCK_STATUS_DISABLED = 1;</code>
        */
       public static final int OBJECT_LOCK_STATUS_DISABLED_VALUE = 1;
       /**
+       * <pre>
+       * Object lock status enabled.
+       * </pre>
+       *
        * <code>OBJECT_LOCK_STATUS_ENABLED = 2;</code>
        */
       public static final int OBJECT_LOCK_STATUS_ENABLED_VALUE = 2;
@@ -39675,11 +40126,19 @@ public final class BucketOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Mode
+       * </pre>
+       *
        * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention.Mode mode = 1;</code>
        * @return The enum numeric value on the wire for mode.
        */
       int getModeValue();
       /**
+       * <pre>
+       * Mode
+       * </pre>
+       *
        * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention.Mode mode = 1;</code>
        * @return The mode.
        */
@@ -39833,14 +40292,26 @@ public final class BucketOuterClass {
       public enum Mode
           implements com.google.protobuf.ProtocolMessageEnum {
         /**
+         * <pre>
+         * Mode unspecified.
+         * </pre>
+         *
          * <code>MODE_UNSPECIFIED = 0;</code>
          */
         MODE_UNSPECIFIED(0),
         /**
+         * <pre>
+         * Mode governance.
+         * </pre>
+         *
          * <code>MODE_GOVERNANCE = 1;</code>
          */
         MODE_GOVERNANCE(1),
         /**
+         * <pre>
+         * Mode compliance.
+         * </pre>
+         *
          * <code>MODE_COMPLIANCE = 2;</code>
          */
         MODE_COMPLIANCE(2),
@@ -39848,14 +40319,26 @@ public final class BucketOuterClass {
         ;
 
         /**
+         * <pre>
+         * Mode unspecified.
+         * </pre>
+         *
          * <code>MODE_UNSPECIFIED = 0;</code>
          */
         public static final int MODE_UNSPECIFIED_VALUE = 0;
         /**
+         * <pre>
+         * Mode governance.
+         * </pre>
+         *
          * <code>MODE_GOVERNANCE = 1;</code>
          */
         public static final int MODE_GOVERNANCE_VALUE = 1;
         /**
+         * <pre>
+         * Mode compliance.
+         * </pre>
+         *
          * <code>MODE_COMPLIANCE = 2;</code>
          */
         public static final int MODE_COMPLIANCE_VALUE = 2;
@@ -39988,6 +40471,10 @@ public final class BucketOuterClass {
       public static final int MODE_FIELD_NUMBER = 1;
       private int mode_;
       /**
+       * <pre>
+       * Mode
+       * </pre>
+       *
        * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention.Mode mode = 1;</code>
        * @return The enum numeric value on the wire for mode.
        */
@@ -39995,6 +40482,10 @@ public final class BucketOuterClass {
         return mode_;
       }
       /**
+       * <pre>
+       * Mode
+       * </pre>
+       *
        * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention.Mode mode = 1;</code>
        * @return The mode.
        */
@@ -40451,6 +40942,10 @@ public final class BucketOuterClass {
 
         private int mode_ = 0;
         /**
+         * <pre>
+         * Mode
+         * </pre>
+         *
          * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention.Mode mode = 1;</code>
          * @return The enum numeric value on the wire for mode.
          */
@@ -40458,6 +40953,10 @@ public final class BucketOuterClass {
           return mode_;
         }
         /**
+         * <pre>
+         * Mode
+         * </pre>
+         *
          * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention.Mode mode = 1;</code>
          * @param value The enum numeric value on the wire for mode to set.
          * @return This builder for chaining.
@@ -40469,6 +40968,10 @@ public final class BucketOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Mode
+         * </pre>
+         *
          * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention.Mode mode = 1;</code>
          * @return The mode.
          */
@@ -40479,6 +40982,10 @@ public final class BucketOuterClass {
           return result == null ? yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Mode.UNRECOGNIZED : result;
         }
         /**
+         * <pre>
+         * Mode
+         * </pre>
+         *
          * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention.Mode mode = 1;</code>
          * @param value The mode to set.
          * @return This builder for chaining.
@@ -40493,6 +41000,10 @@ public final class BucketOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Mode
+         * </pre>
+         *
          * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention.Mode mode = 1;</code>
          * @return This builder for chaining.
          */
@@ -40672,6 +41183,10 @@ public final class BucketOuterClass {
     public static final int STATUS_FIELD_NUMBER = 2;
     private int status_;
     /**
+     * <pre>
+     * Status
+     * </pre>
+     *
      * <code>.yandex.cloud.storage.v1.ObjectLock.ObjectLockStatus status = 2;</code>
      * @return The enum numeric value on the wire for status.
      */
@@ -40679,6 +41194,10 @@ public final class BucketOuterClass {
       return status_;
     }
     /**
+     * <pre>
+     * Status
+     * </pre>
+     *
      * <code>.yandex.cloud.storage.v1.ObjectLock.ObjectLockStatus status = 2;</code>
      * @return The status.
      */
@@ -40691,6 +41210,10 @@ public final class BucketOuterClass {
     public static final int DEFAULT_RETENTION_FIELD_NUMBER = 3;
     private yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention defaultRetention_;
     /**
+     * <pre>
+     * Default retention
+     * </pre>
+     *
      * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
      * @return Whether the defaultRetention field is set.
      */
@@ -40699,6 +41222,10 @@ public final class BucketOuterClass {
       return defaultRetention_ != null;
     }
     /**
+     * <pre>
+     * Default retention
+     * </pre>
+     *
      * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
      * @return The defaultRetention.
      */
@@ -40707,6 +41234,10 @@ public final class BucketOuterClass {
       return defaultRetention_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.getDefaultInstance() : defaultRetention_;
     }
     /**
+     * <pre>
+     * Default retention
+     * </pre>
+     *
      * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
      */
     @java.lang.Override
@@ -41052,6 +41583,10 @@ public final class BucketOuterClass {
 
       private int status_ = 0;
       /**
+       * <pre>
+       * Status
+       * </pre>
+       *
        * <code>.yandex.cloud.storage.v1.ObjectLock.ObjectLockStatus status = 2;</code>
        * @return The enum numeric value on the wire for status.
        */
@@ -41059,6 +41594,10 @@ public final class BucketOuterClass {
         return status_;
       }
       /**
+       * <pre>
+       * Status
+       * </pre>
+       *
        * <code>.yandex.cloud.storage.v1.ObjectLock.ObjectLockStatus status = 2;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
@@ -41070,6 +41609,10 @@ public final class BucketOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status
+       * </pre>
+       *
        * <code>.yandex.cloud.storage.v1.ObjectLock.ObjectLockStatus status = 2;</code>
        * @return The status.
        */
@@ -41080,6 +41623,10 @@ public final class BucketOuterClass {
         return result == null ? yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.ObjectLockStatus.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Status
+       * </pre>
+       *
        * <code>.yandex.cloud.storage.v1.ObjectLock.ObjectLockStatus status = 2;</code>
        * @param value The status to set.
        * @return This builder for chaining.
@@ -41094,6 +41641,10 @@ public final class BucketOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status
+       * </pre>
+       *
        * <code>.yandex.cloud.storage.v1.ObjectLock.ObjectLockStatus status = 2;</code>
        * @return This builder for chaining.
        */
@@ -41108,6 +41659,10 @@ public final class BucketOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetentionOrBuilder> defaultRetentionBuilder_;
       /**
+       * <pre>
+       * Default retention
+       * </pre>
+       *
        * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
        * @return Whether the defaultRetention field is set.
        */
@@ -41115,6 +41670,10 @@ public final class BucketOuterClass {
         return defaultRetentionBuilder_ != null || defaultRetention_ != null;
       }
       /**
+       * <pre>
+       * Default retention
+       * </pre>
+       *
        * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
        * @return The defaultRetention.
        */
@@ -41126,6 +41685,10 @@ public final class BucketOuterClass {
         }
       }
       /**
+       * <pre>
+       * Default retention
+       * </pre>
+       *
        * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
        */
       public Builder setDefaultRetention(yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention value) {
@@ -41142,6 +41705,10 @@ public final class BucketOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Default retention
+       * </pre>
+       *
        * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
        */
       public Builder setDefaultRetention(
@@ -41156,6 +41723,10 @@ public final class BucketOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Default retention
+       * </pre>
+       *
        * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
        */
       public Builder mergeDefaultRetention(yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention value) {
@@ -41174,6 +41745,10 @@ public final class BucketOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Default retention
+       * </pre>
+       *
        * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
        */
       public Builder clearDefaultRetention() {
@@ -41188,6 +41763,10 @@ public final class BucketOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Default retention
+       * </pre>
+       *
        * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
        */
       public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetention.Builder getDefaultRetentionBuilder() {
@@ -41196,6 +41775,10 @@ public final class BucketOuterClass {
         return getDefaultRetentionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Default retention
+       * </pre>
+       *
        * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
        */
       public yandex.cloud.api.storage.v1.BucketOuterClass.ObjectLock.DefaultRetentionOrBuilder getDefaultRetentionOrBuilder() {
@@ -41207,6 +41790,10 @@ public final class BucketOuterClass {
         }
       }
       /**
+       * <pre>
+       * Default retention
+       * </pre>
+       *
        * <code>.yandex.cloud.storage.v1.ObjectLock.DefaultRetention default_retention = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -41280,24 +41867,44 @@ public final class BucketOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Rules
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
      */
     java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule> 
         getRulesList();
     /**
+     * <pre>
+     * Rules
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule getRules(int index);
     /**
+     * <pre>
+     * Rules
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
      */
     int getRulesCount();
     /**
+     * <pre>
+     * Rules
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRuleOrBuilder> 
         getRulesOrBuilderList();
     /**
+     * <pre>
+     * Rules
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRuleOrBuilder getRulesOrBuilder(
@@ -41399,11 +42006,19 @@ public final class BucketOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * KMS master key ID
+       * </pre>
+       *
        * <code>string kms_master_key_id = 1;</code>
        * @return The kmsMasterKeyId.
        */
       java.lang.String getKmsMasterKeyId();
       /**
+       * <pre>
+       * KMS master key ID
+       * </pre>
+       *
        * <code>string kms_master_key_id = 1;</code>
        * @return The bytes for kmsMasterKeyId.
        */
@@ -41411,11 +42026,19 @@ public final class BucketOuterClass {
           getKmsMasterKeyIdBytes();
 
       /**
+       * <pre>
+       * SSE algorithm
+       * </pre>
+       *
        * <code>string sse_algorithm = 2;</code>
        * @return The sseAlgorithm.
        */
       java.lang.String getSseAlgorithm();
       /**
+       * <pre>
+       * SSE algorithm
+       * </pre>
+       *
        * <code>string sse_algorithm = 2;</code>
        * @return The bytes for sseAlgorithm.
        */
@@ -41516,6 +42139,10 @@ public final class BucketOuterClass {
       public static final int KMS_MASTER_KEY_ID_FIELD_NUMBER = 1;
       private volatile java.lang.Object kmsMasterKeyId_;
       /**
+       * <pre>
+       * KMS master key ID
+       * </pre>
+       *
        * <code>string kms_master_key_id = 1;</code>
        * @return The kmsMasterKeyId.
        */
@@ -41533,6 +42160,10 @@ public final class BucketOuterClass {
         }
       }
       /**
+       * <pre>
+       * KMS master key ID
+       * </pre>
+       *
        * <code>string kms_master_key_id = 1;</code>
        * @return The bytes for kmsMasterKeyId.
        */
@@ -41554,6 +42185,10 @@ public final class BucketOuterClass {
       public static final int SSE_ALGORITHM_FIELD_NUMBER = 2;
       private volatile java.lang.Object sseAlgorithm_;
       /**
+       * <pre>
+       * SSE algorithm
+       * </pre>
+       *
        * <code>string sse_algorithm = 2;</code>
        * @return The sseAlgorithm.
        */
@@ -41571,6 +42206,10 @@ public final class BucketOuterClass {
         }
       }
       /**
+       * <pre>
+       * SSE algorithm
+       * </pre>
+       *
        * <code>string sse_algorithm = 2;</code>
        * @return The bytes for sseAlgorithm.
        */
@@ -41910,6 +42549,10 @@ public final class BucketOuterClass {
 
         private java.lang.Object kmsMasterKeyId_ = "";
         /**
+         * <pre>
+         * KMS master key ID
+         * </pre>
+         *
          * <code>string kms_master_key_id = 1;</code>
          * @return The kmsMasterKeyId.
          */
@@ -41926,6 +42569,10 @@ public final class BucketOuterClass {
           }
         }
         /**
+         * <pre>
+         * KMS master key ID
+         * </pre>
+         *
          * <code>string kms_master_key_id = 1;</code>
          * @return The bytes for kmsMasterKeyId.
          */
@@ -41943,6 +42590,10 @@ public final class BucketOuterClass {
           }
         }
         /**
+         * <pre>
+         * KMS master key ID
+         * </pre>
+         *
          * <code>string kms_master_key_id = 1;</code>
          * @param value The kmsMasterKeyId to set.
          * @return This builder for chaining.
@@ -41958,6 +42609,10 @@ public final class BucketOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * KMS master key ID
+         * </pre>
+         *
          * <code>string kms_master_key_id = 1;</code>
          * @return This builder for chaining.
          */
@@ -41968,6 +42623,10 @@ public final class BucketOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * KMS master key ID
+         * </pre>
+         *
          * <code>string kms_master_key_id = 1;</code>
          * @param value The bytes for kmsMasterKeyId to set.
          * @return This builder for chaining.
@@ -41986,6 +42645,10 @@ public final class BucketOuterClass {
 
         private java.lang.Object sseAlgorithm_ = "";
         /**
+         * <pre>
+         * SSE algorithm
+         * </pre>
+         *
          * <code>string sse_algorithm = 2;</code>
          * @return The sseAlgorithm.
          */
@@ -42002,6 +42665,10 @@ public final class BucketOuterClass {
           }
         }
         /**
+         * <pre>
+         * SSE algorithm
+         * </pre>
+         *
          * <code>string sse_algorithm = 2;</code>
          * @return The bytes for sseAlgorithm.
          */
@@ -42019,6 +42686,10 @@ public final class BucketOuterClass {
           }
         }
         /**
+         * <pre>
+         * SSE algorithm
+         * </pre>
+         *
          * <code>string sse_algorithm = 2;</code>
          * @param value The sseAlgorithm to set.
          * @return This builder for chaining.
@@ -42034,6 +42705,10 @@ public final class BucketOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * SSE algorithm
+         * </pre>
+         *
          * <code>string sse_algorithm = 2;</code>
          * @return This builder for chaining.
          */
@@ -42044,6 +42719,10 @@ public final class BucketOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * SSE algorithm
+         * </pre>
+         *
          * <code>string sse_algorithm = 2;</code>
          * @param value The bytes for sseAlgorithm to set.
          * @return This builder for chaining.
@@ -42115,6 +42794,10 @@ public final class BucketOuterClass {
     public static final int RULES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule> rules_;
     /**
+     * <pre>
+     * Rules
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
      */
     @java.lang.Override
@@ -42122,6 +42805,10 @@ public final class BucketOuterClass {
       return rules_;
     }
     /**
+     * <pre>
+     * Rules
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
      */
     @java.lang.Override
@@ -42130,6 +42817,10 @@ public final class BucketOuterClass {
       return rules_;
     }
     /**
+     * <pre>
+     * Rules
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
      */
     @java.lang.Override
@@ -42137,6 +42828,10 @@ public final class BucketOuterClass {
       return rules_.size();
     }
     /**
+     * <pre>
+     * Rules
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
      */
     @java.lang.Override
@@ -42144,6 +42839,10 @@ public final class BucketOuterClass {
       return rules_.get(index);
     }
     /**
+     * <pre>
+     * Rules
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
      */
     @java.lang.Override
@@ -42507,6 +43206,10 @@ public final class BucketOuterClass {
           yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRuleOrBuilder> rulesBuilder_;
 
       /**
+       * <pre>
+       * Rules
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
        */
       public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule> getRulesList() {
@@ -42517,6 +43220,10 @@ public final class BucketOuterClass {
         }
       }
       /**
+       * <pre>
+       * Rules
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
        */
       public int getRulesCount() {
@@ -42527,6 +43234,10 @@ public final class BucketOuterClass {
         }
       }
       /**
+       * <pre>
+       * Rules
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
        */
       public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule getRules(int index) {
@@ -42537,6 +43248,10 @@ public final class BucketOuterClass {
         }
       }
       /**
+       * <pre>
+       * Rules
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
        */
       public Builder setRules(
@@ -42554,6 +43269,10 @@ public final class BucketOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Rules
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
        */
       public Builder setRules(
@@ -42568,6 +43287,10 @@ public final class BucketOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Rules
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
        */
       public Builder addRules(yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule value) {
@@ -42584,6 +43307,10 @@ public final class BucketOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Rules
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
        */
       public Builder addRules(
@@ -42601,6 +43328,10 @@ public final class BucketOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Rules
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
        */
       public Builder addRules(
@@ -42615,6 +43346,10 @@ public final class BucketOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Rules
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
        */
       public Builder addRules(
@@ -42629,6 +43364,10 @@ public final class BucketOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Rules
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
        */
       public Builder addAllRules(
@@ -42644,6 +43383,10 @@ public final class BucketOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Rules
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
        */
       public Builder clearRules() {
@@ -42657,6 +43400,10 @@ public final class BucketOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Rules
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
        */
       public Builder removeRules(int index) {
@@ -42670,6 +43417,10 @@ public final class BucketOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Rules
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
        */
       public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.Builder getRulesBuilder(
@@ -42677,6 +43428,10 @@ public final class BucketOuterClass {
         return getRulesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Rules
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
        */
       public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRuleOrBuilder getRulesOrBuilder(
@@ -42687,6 +43442,10 @@ public final class BucketOuterClass {
         }
       }
       /**
+       * <pre>
+       * Rules
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRuleOrBuilder> 
@@ -42698,6 +43457,10 @@ public final class BucketOuterClass {
         }
       }
       /**
+       * <pre>
+       * Rules
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
        */
       public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.Builder addRulesBuilder() {
@@ -42705,6 +43468,10 @@ public final class BucketOuterClass {
             yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Rules
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
        */
       public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.Builder addRulesBuilder(
@@ -42713,6 +43480,10 @@ public final class BucketOuterClass {
             index, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Rules
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.storage.v1.Encryption.EncryptionRule rules = 1;</code>
        */
       public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.EncryptionRule.Builder> 
@@ -42841,6 +43612,17 @@ public final class BucketOuterClass {
      */
     com.google.protobuf.ByteString
         getPrivateEndpointsBytes(int index);
+
+    /**
+     * <pre>
+     * if true, cloud console will be able to access a bucket
+     * regardless of private_endpoints list
+     * </pre>
+     *
+     * <code>bool force_cloud_console_access = 3;</code>
+     * @return The forceCloudConsoleAccess.
+     */
+    boolean getForceCloudConsoleAccess();
   }
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints}
@@ -42901,6 +43683,11 @@ public final class BucketOuterClass {
                 mutable_bitField0_ |= 0x00000001;
               }
               privateEndpoints_.add(s);
+              break;
+            }
+            case 24: {
+
+              forceCloudConsoleAccess_ = input.readBool();
               break;
             }
             default: {
@@ -43005,6 +43792,22 @@ public final class BucketOuterClass {
       return privateEndpoints_.getByteString(index);
     }
 
+    public static final int FORCE_CLOUD_CONSOLE_ACCESS_FIELD_NUMBER = 3;
+    private boolean forceCloudConsoleAccess_;
+    /**
+     * <pre>
+     * if true, cloud console will be able to access a bucket
+     * regardless of private_endpoints list
+     * </pre>
+     *
+     * <code>bool force_cloud_console_access = 3;</code>
+     * @return The forceCloudConsoleAccess.
+     */
+    @java.lang.Override
+    public boolean getForceCloudConsoleAccess() {
+      return forceCloudConsoleAccess_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -43024,6 +43827,9 @@ public final class BucketOuterClass {
       }
       for (int i = 0; i < privateEndpoints_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, privateEndpoints_.getRaw(i));
+      }
+      if (forceCloudConsoleAccess_ != false) {
+        output.writeBool(3, forceCloudConsoleAccess_);
       }
       unknownFields.writeTo(output);
     }
@@ -43046,6 +43852,10 @@ public final class BucketOuterClass {
         size += dataSize;
         size += 1 * getPrivateEndpointsList().size();
       }
+      if (forceCloudConsoleAccess_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, forceCloudConsoleAccess_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -43065,6 +43875,8 @@ public final class BucketOuterClass {
           != other.getEnabled()) return false;
       if (!getPrivateEndpointsList()
           .equals(other.getPrivateEndpointsList())) return false;
+      if (getForceCloudConsoleAccess()
+          != other.getForceCloudConsoleAccess()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -43083,6 +43895,9 @@ public final class BucketOuterClass {
         hash = (37 * hash) + PRIVATE_ENDPOINTS_FIELD_NUMBER;
         hash = (53 * hash) + getPrivateEndpointsList().hashCode();
       }
+      hash = (37 * hash) + FORCE_CLOUD_CONSOLE_ACCESS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getForceCloudConsoleAccess());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -43220,6 +44035,8 @@ public final class BucketOuterClass {
 
         privateEndpoints_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
+        forceCloudConsoleAccess_ = false;
+
         return this;
       }
 
@@ -43253,6 +44070,7 @@ public final class BucketOuterClass {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.privateEndpoints_ = privateEndpoints_;
+        result.forceCloudConsoleAccess_ = forceCloudConsoleAccess_;
         onBuilt();
         return result;
       }
@@ -43313,6 +44131,9 @@ public final class BucketOuterClass {
             privateEndpoints_.addAll(other.privateEndpoints_);
           }
           onChanged();
+        }
+        if (other.getForceCloudConsoleAccess() != false) {
+          setForceCloudConsoleAccess(other.getForceCloudConsoleAccess());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -43535,6 +44356,52 @@ public final class BucketOuterClass {
         onChanged();
         return this;
       }
+
+      private boolean forceCloudConsoleAccess_ ;
+      /**
+       * <pre>
+       * if true, cloud console will be able to access a bucket
+       * regardless of private_endpoints list
+       * </pre>
+       *
+       * <code>bool force_cloud_console_access = 3;</code>
+       * @return The forceCloudConsoleAccess.
+       */
+      @java.lang.Override
+      public boolean getForceCloudConsoleAccess() {
+        return forceCloudConsoleAccess_;
+      }
+      /**
+       * <pre>
+       * if true, cloud console will be able to access a bucket
+       * regardless of private_endpoints list
+       * </pre>
+       *
+       * <code>bool force_cloud_console_access = 3;</code>
+       * @param value The forceCloudConsoleAccess to set.
+       * @return This builder for chaining.
+       */
+      public Builder setForceCloudConsoleAccess(boolean value) {
+        
+        forceCloudConsoleAccess_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * if true, cloud console will be able to access a bucket
+       * regardless of private_endpoints list
+       * </pre>
+       *
+       * <code>bool force_cloud_console_access = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearForceCloudConsoleAccess() {
+        
+        forceCloudConsoleAccess_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -43583,6 +44450,5601 @@ public final class BucketOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface InventoryConfigurationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.storage.v1.InventoryConfiguration)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The ID used to identify the inventory configuration.
+     * </pre>
+     *
+     * <code>string id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * The ID used to identify the inventory configuration.
+     * </pre>
+     *
+     * <code>string id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Contains information about where to publish the inventory results.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination destination = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the destination field is set.
+     */
+    boolean hasDestination();
+    /**
+     * <pre>
+     * Contains information about where to publish the inventory results.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination destination = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The destination.
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination getDestination();
+    /**
+     * <pre>
+     * Contains information about where to publish the inventory results.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination destination = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestinationOrBuilder getDestinationOrBuilder();
+
+    /**
+     * <pre>
+     * Object versions to include in the inventory list.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.IncludedObjectVersions included_object_versions = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for includedObjectVersions.
+     */
+    int getIncludedObjectVersionsValue();
+    /**
+     * <pre>
+     * Object versions to include in the inventory list.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.IncludedObjectVersions included_object_versions = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The includedObjectVersions.
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.IncludedObjectVersions getIncludedObjectVersions();
+
+    /**
+     * <pre>
+     * Specifies whether the inventory is enabled.
+     * </pre>
+     *
+     * <code>bool is_enabled = 4;</code>
+     * @return The isEnabled.
+     */
+    boolean getIsEnabled();
+
+    /**
+     * <pre>
+     * Specifies the schedule for generating inventory results.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule schedule = 5 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the schedule field is set.
+     */
+    boolean hasSchedule();
+    /**
+     * <pre>
+     * Specifies the schedule for generating inventory results.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule schedule = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The schedule.
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule getSchedule();
+    /**
+     * <pre>
+     * Specifies the schedule for generating inventory results.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule schedule = 5 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryScheduleOrBuilder getScheduleOrBuilder();
+
+    /**
+     * <pre>
+     * Specifies the filter for objects to include in the inventory.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter filter = 6;</code>
+     * @return Whether the filter field is set.
+     */
+    boolean hasFilter();
+    /**
+     * <pre>
+     * Specifies the filter for objects to include in the inventory.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter filter = 6;</code>
+     * @return The filter.
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter getFilter();
+    /**
+     * <pre>
+     * Specifies the filter for objects to include in the inventory.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter filter = 6;</code>
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilterOrBuilder getFilterOrBuilder();
+
+    /**
+     * <pre>
+     * Contains the optional fields that are included in the inventory results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+     * @return A list containing the optionalFields.
+     */
+    java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.OptionalField> getOptionalFieldsList();
+    /**
+     * <pre>
+     * Contains the optional fields that are included in the inventory results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+     * @return The count of optionalFields.
+     */
+    int getOptionalFieldsCount();
+    /**
+     * <pre>
+     * Contains the optional fields that are included in the inventory results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+     * @param index The index of the element to return.
+     * @return The optionalFields at the given index.
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.OptionalField getOptionalFields(int index);
+    /**
+     * <pre>
+     * Contains the optional fields that are included in the inventory results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+     * @return A list containing the enum numeric values on the wire for optionalFields.
+     */
+    java.util.List<java.lang.Integer>
+    getOptionalFieldsValueList();
+    /**
+     * <pre>
+     * Contains the optional fields that are included in the inventory results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of optionalFields at the given index.
+     */
+    int getOptionalFieldsValue(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.storage.v1.InventoryConfiguration}
+   */
+  public static final class InventoryConfiguration extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.InventoryConfiguration)
+      InventoryConfigurationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InventoryConfiguration.newBuilder() to construct.
+    private InventoryConfiguration(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InventoryConfiguration() {
+      id_ = "";
+      includedObjectVersions_ = 0;
+      optionalFields_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InventoryConfiguration();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private InventoryConfiguration(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination.Builder subBuilder = null;
+              if (destination_ != null) {
+                subBuilder = destination_.toBuilder();
+              }
+              destination_ = input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(destination_);
+                destination_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              includedObjectVersions_ = rawValue;
+              break;
+            }
+            case 32: {
+
+              isEnabled_ = input.readBool();
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.Builder subBuilder = null;
+              if (schedule_ != null) {
+                subBuilder = schedule_.toBuilder();
+              }
+              schedule_ = input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(schedule_);
+                schedule_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter.Builder subBuilder = null;
+              if (filter_ != null) {
+                subBuilder = filter_.toBuilder();
+              }
+              filter_ = input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(filter_);
+                filter_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 56: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                optionalFields_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              optionalFields_.add(rawValue);
+              break;
+            }
+            case 58: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  optionalFields_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                optionalFields_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          optionalFields_ = java.util.Collections.unmodifiableList(optionalFields_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.class, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * Types of object versions to include in the inventory list.
+     * </pre>
+     *
+     * Protobuf enum {@code yandex.cloud.storage.v1.InventoryConfiguration.IncludedObjectVersions}
+     */
+    public enum IncludedObjectVersions
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * UNSPECIFIED
+       * </pre>
+       *
+       * <code>INCLUDED_OBJECT_VERSIONS_UNSPECIFIED = 0;</code>
+       */
+      INCLUDED_OBJECT_VERSIONS_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Include all versions.
+       * </pre>
+       *
+       * <code>ALL = 1;</code>
+       */
+      ALL(1),
+      /**
+       * <pre>
+       * Include only the current version.
+       * </pre>
+       *
+       * <code>CURRENT = 2;</code>
+       */
+      CURRENT(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * UNSPECIFIED
+       * </pre>
+       *
+       * <code>INCLUDED_OBJECT_VERSIONS_UNSPECIFIED = 0;</code>
+       */
+      public static final int INCLUDED_OBJECT_VERSIONS_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Include all versions.
+       * </pre>
+       *
+       * <code>ALL = 1;</code>
+       */
+      public static final int ALL_VALUE = 1;
+      /**
+       * <pre>
+       * Include only the current version.
+       * </pre>
+       *
+       * <code>CURRENT = 2;</code>
+       */
+      public static final int CURRENT_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static IncludedObjectVersions valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static IncludedObjectVersions forNumber(int value) {
+        switch (value) {
+          case 0: return INCLUDED_OBJECT_VERSIONS_UNSPECIFIED;
+          case 1: return ALL;
+          case 2: return CURRENT;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<IncludedObjectVersions>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          IncludedObjectVersions> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<IncludedObjectVersions>() {
+              public IncludedObjectVersions findValueByNumber(int number) {
+                return IncludedObjectVersions.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final IncludedObjectVersions[] VALUES = values();
+
+      public static IncludedObjectVersions valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private IncludedObjectVersions(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.storage.v1.InventoryConfiguration.IncludedObjectVersions)
+    }
+
+    /**
+     * <pre>
+     * Type of optional field.
+     * </pre>
+     *
+     * Protobuf enum {@code yandex.cloud.storage.v1.InventoryConfiguration.OptionalField}
+     */
+    public enum OptionalField
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * UNSPECIFIED  
+       * </pre>
+       *
+       * <code>OPTIONAL_FIELD_UNSPECIFIED = 0;</code>
+       */
+      OPTIONAL_FIELD_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * The object size in bytes.
+       * </pre>
+       *
+       * <code>SIZE = 1;</code>
+       */
+      SIZE(1),
+      /**
+       * <pre>
+       * The object creation date or the last modified date, whichever is the latest.
+       * </pre>
+       *
+       * <code>LAST_MODIFIED_DATE = 2;</code>
+       */
+      LAST_MODIFIED_DATE(2),
+      /**
+       * <pre>
+       * The storage class that's used for storing the object.
+       * </pre>
+       *
+       * <code>STORAGE_CLASS = 3;</code>
+       */
+      STORAGE_CLASS(3),
+      /**
+       * <pre>
+       * The entity tag (ETag) is a hash of the object.
+       * </pre>
+       *
+       * <code>ETAG = 4;</code>
+       */
+      ETAG(4),
+      /**
+       * <pre>
+       * Specifies that the object was uploaded as a multipart upload.
+       * </pre>
+       *
+       * <code>IS_MULTIPART_UPLOADED = 5;</code>
+       */
+      IS_MULTIPART_UPLOADED(5),
+      /**
+       * <pre>
+       * The server-side encryption type that's used to encrypt the object.
+       * </pre>
+       *
+       * <code>ENCRYPTION_STATUS = 6;</code>
+       */
+      ENCRYPTION_STATUS(6),
+      /**
+       * <pre>
+       * The date until which the object is locked.
+       * </pre>
+       *
+       * <code>OBJECT_LOCK_RETAIN_UNTIL_DATE = 7;</code>
+       */
+      OBJECT_LOCK_RETAIN_UNTIL_DATE(7),
+      /**
+       * <pre>
+       * The level of protection applied to the object, either Governance or Compliance.
+       * </pre>
+       *
+       * <code>OBJECT_LOCK_MODE = 8;</code>
+       */
+      OBJECT_LOCK_MODE(8),
+      /**
+       * <pre>
+       * The legal hold status of the locked object.
+       * </pre>
+       *
+       * <code>OBJECT_LOCK_LEGAL_HOLD_STATUS = 9;</code>
+       */
+      OBJECT_LOCK_LEGAL_HOLD_STATUS(9),
+      /**
+       * <pre>
+       * Indicates the algorithm that is used to create the checksum for the object.
+       * </pre>
+       *
+       * <code>CHECKSUM_ALGORITHM = 10;</code>
+       */
+      CHECKSUM_ALGORITHM(10),
+      /**
+       * <pre>
+       * An access control list (ACL) for each object.
+       * </pre>
+       *
+       * <code>OBJECT_ACCESS_CONTROL_LIST = 11;</code>
+       */
+      OBJECT_ACCESS_CONTROL_LIST(11),
+      /**
+       * <pre>
+       * The owner of the object.
+       * </pre>
+       *
+       * <code>OBJECT_OWNER = 12;</code>
+       */
+      OBJECT_OWNER(12),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * UNSPECIFIED  
+       * </pre>
+       *
+       * <code>OPTIONAL_FIELD_UNSPECIFIED = 0;</code>
+       */
+      public static final int OPTIONAL_FIELD_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * The object size in bytes.
+       * </pre>
+       *
+       * <code>SIZE = 1;</code>
+       */
+      public static final int SIZE_VALUE = 1;
+      /**
+       * <pre>
+       * The object creation date or the last modified date, whichever is the latest.
+       * </pre>
+       *
+       * <code>LAST_MODIFIED_DATE = 2;</code>
+       */
+      public static final int LAST_MODIFIED_DATE_VALUE = 2;
+      /**
+       * <pre>
+       * The storage class that's used for storing the object.
+       * </pre>
+       *
+       * <code>STORAGE_CLASS = 3;</code>
+       */
+      public static final int STORAGE_CLASS_VALUE = 3;
+      /**
+       * <pre>
+       * The entity tag (ETag) is a hash of the object.
+       * </pre>
+       *
+       * <code>ETAG = 4;</code>
+       */
+      public static final int ETAG_VALUE = 4;
+      /**
+       * <pre>
+       * Specifies that the object was uploaded as a multipart upload.
+       * </pre>
+       *
+       * <code>IS_MULTIPART_UPLOADED = 5;</code>
+       */
+      public static final int IS_MULTIPART_UPLOADED_VALUE = 5;
+      /**
+       * <pre>
+       * The server-side encryption type that's used to encrypt the object.
+       * </pre>
+       *
+       * <code>ENCRYPTION_STATUS = 6;</code>
+       */
+      public static final int ENCRYPTION_STATUS_VALUE = 6;
+      /**
+       * <pre>
+       * The date until which the object is locked.
+       * </pre>
+       *
+       * <code>OBJECT_LOCK_RETAIN_UNTIL_DATE = 7;</code>
+       */
+      public static final int OBJECT_LOCK_RETAIN_UNTIL_DATE_VALUE = 7;
+      /**
+       * <pre>
+       * The level of protection applied to the object, either Governance or Compliance.
+       * </pre>
+       *
+       * <code>OBJECT_LOCK_MODE = 8;</code>
+       */
+      public static final int OBJECT_LOCK_MODE_VALUE = 8;
+      /**
+       * <pre>
+       * The legal hold status of the locked object.
+       * </pre>
+       *
+       * <code>OBJECT_LOCK_LEGAL_HOLD_STATUS = 9;</code>
+       */
+      public static final int OBJECT_LOCK_LEGAL_HOLD_STATUS_VALUE = 9;
+      /**
+       * <pre>
+       * Indicates the algorithm that is used to create the checksum for the object.
+       * </pre>
+       *
+       * <code>CHECKSUM_ALGORITHM = 10;</code>
+       */
+      public static final int CHECKSUM_ALGORITHM_VALUE = 10;
+      /**
+       * <pre>
+       * An access control list (ACL) for each object.
+       * </pre>
+       *
+       * <code>OBJECT_ACCESS_CONTROL_LIST = 11;</code>
+       */
+      public static final int OBJECT_ACCESS_CONTROL_LIST_VALUE = 11;
+      /**
+       * <pre>
+       * The owner of the object.
+       * </pre>
+       *
+       * <code>OBJECT_OWNER = 12;</code>
+       */
+      public static final int OBJECT_OWNER_VALUE = 12;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static OptionalField valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static OptionalField forNumber(int value) {
+        switch (value) {
+          case 0: return OPTIONAL_FIELD_UNSPECIFIED;
+          case 1: return SIZE;
+          case 2: return LAST_MODIFIED_DATE;
+          case 3: return STORAGE_CLASS;
+          case 4: return ETAG;
+          case 5: return IS_MULTIPART_UPLOADED;
+          case 6: return ENCRYPTION_STATUS;
+          case 7: return OBJECT_LOCK_RETAIN_UNTIL_DATE;
+          case 8: return OBJECT_LOCK_MODE;
+          case 9: return OBJECT_LOCK_LEGAL_HOLD_STATUS;
+          case 10: return CHECKSUM_ALGORITHM;
+          case 11: return OBJECT_ACCESS_CONTROL_LIST;
+          case 12: return OBJECT_OWNER;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<OptionalField>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          OptionalField> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<OptionalField>() {
+              public OptionalField findValueByNumber(int number) {
+                return OptionalField.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final OptionalField[] VALUES = values();
+
+      public static OptionalField valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private OptionalField(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.storage.v1.InventoryConfiguration.OptionalField)
+    }
+
+    public interface InventoryBucketDestinationOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Bucket where inventory results will be published.
+       * </pre>
+       *
+       * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bucket.
+       */
+      java.lang.String getBucket();
+      /**
+       * <pre>
+       * Bucket where inventory results will be published.
+       * </pre>
+       *
+       * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for bucket.
+       */
+      com.google.protobuf.ByteString
+          getBucketBytes();
+
+      /**
+       * <pre>
+       * Specifies the output format of the inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination.Format format = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The enum numeric value on the wire for format.
+       */
+      int getFormatValue();
+      /**
+       * <pre>
+       * Specifies the output format of the inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination.Format format = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The format.
+       */
+      yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.Format getFormat();
+
+      /**
+       * <pre>
+       * The prefix that is prepended to all inventory results.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue prefix = 3;</code>
+       * @return Whether the prefix field is set.
+       */
+      boolean hasPrefix();
+      /**
+       * <pre>
+       * The prefix that is prepended to all inventory results.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue prefix = 3;</code>
+       * @return The prefix.
+       */
+      com.google.protobuf.StringValue getPrefix();
+      /**
+       * <pre>
+       * The prefix that is prepended to all inventory results.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue prefix = 3;</code>
+       */
+      com.google.protobuf.StringValueOrBuilder getPrefixOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination}
+     */
+    public static final class InventoryBucketDestination extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination)
+        InventoryBucketDestinationOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use InventoryBucketDestination.newBuilder() to construct.
+      private InventoryBucketDestination(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private InventoryBucketDestination() {
+        bucket_ = "";
+        format_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new InventoryBucketDestination();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private InventoryBucketDestination(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                bucket_ = s;
+                break;
+              }
+              case 16: {
+                int rawValue = input.readEnum();
+
+                format_ = rawValue;
+                break;
+              }
+              case 26: {
+                com.google.protobuf.StringValue.Builder subBuilder = null;
+                if (prefix_ != null) {
+                  subBuilder = prefix_.toBuilder();
+                }
+                prefix_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(prefix_);
+                  prefix_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryBucketDestination_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryBucketDestination_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.class, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.Builder.class);
+      }
+
+      /**
+       * <pre>
+       * Output format.
+       * </pre>
+       *
+       * Protobuf enum {@code yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination.Format}
+       */
+      public enum Format
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>FORMAT_UNSPECIFIED = 0;</code>
+         */
+        FORMAT_UNSPECIFIED(0),
+        /**
+         * <pre>
+         * CSV format.  
+         * </pre>
+         *
+         * <code>CSV = 1;</code>
+         */
+        CSV(1),
+        UNRECOGNIZED(-1),
+        ;
+
+        /**
+         * <code>FORMAT_UNSPECIFIED = 0;</code>
+         */
+        public static final int FORMAT_UNSPECIFIED_VALUE = 0;
+        /**
+         * <pre>
+         * CSV format.  
+         * </pre>
+         *
+         * <code>CSV = 1;</code>
+         */
+        public static final int CSV_VALUE = 1;
+
+
+        public final int getNumber() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalArgumentException(
+                "Can't get the number of an unknown enum value.");
+          }
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static Format valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static Format forNumber(int value) {
+          switch (value) {
+            case 0: return FORMAT_UNSPECIFIED;
+            case 1: return CSV;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<Format>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            Format> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<Format>() {
+                public Format findValueByNumber(int number) {
+                  return Format.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalStateException(
+                "Can't get the descriptor of an unrecognized enum value.");
+          }
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.getDescriptor().getEnumTypes().get(0);
+        }
+
+        private static final Format[] VALUES = values();
+
+        public static Format valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          if (desc.getIndex() == -1) {
+            return UNRECOGNIZED;
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private Format(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination.Format)
+      }
+
+      public static final int BUCKET_FIELD_NUMBER = 1;
+      private volatile java.lang.Object bucket_;
+      /**
+       * <pre>
+       * Bucket where inventory results will be published.
+       * </pre>
+       *
+       * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bucket.
+       */
+      @java.lang.Override
+      public java.lang.String getBucket() {
+        java.lang.Object ref = bucket_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bucket_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Bucket where inventory results will be published.
+       * </pre>
+       *
+       * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for bucket.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBucketBytes() {
+        java.lang.Object ref = bucket_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bucket_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int FORMAT_FIELD_NUMBER = 2;
+      private int format_;
+      /**
+       * <pre>
+       * Specifies the output format of the inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination.Format format = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The enum numeric value on the wire for format.
+       */
+      @java.lang.Override public int getFormatValue() {
+        return format_;
+      }
+      /**
+       * <pre>
+       * Specifies the output format of the inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination.Format format = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The format.
+       */
+      @java.lang.Override public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.Format getFormat() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.Format result = yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.Format.valueOf(format_);
+        return result == null ? yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.Format.UNRECOGNIZED : result;
+      }
+
+      public static final int PREFIX_FIELD_NUMBER = 3;
+      private com.google.protobuf.StringValue prefix_;
+      /**
+       * <pre>
+       * The prefix that is prepended to all inventory results.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue prefix = 3;</code>
+       * @return Whether the prefix field is set.
+       */
+      @java.lang.Override
+      public boolean hasPrefix() {
+        return prefix_ != null;
+      }
+      /**
+       * <pre>
+       * The prefix that is prepended to all inventory results.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue prefix = 3;</code>
+       * @return The prefix.
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getPrefix() {
+        return prefix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : prefix_;
+      }
+      /**
+       * <pre>
+       * The prefix that is prepended to all inventory results.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue prefix = 3;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValueOrBuilder getPrefixOrBuilder() {
+        return getPrefix();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucket_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bucket_);
+        }
+        if (format_ != yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.Format.FORMAT_UNSPECIFIED.getNumber()) {
+          output.writeEnum(2, format_);
+        }
+        if (prefix_ != null) {
+          output.writeMessage(3, getPrefix());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucket_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bucket_);
+        }
+        if (format_ != yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.Format.FORMAT_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(2, format_);
+        }
+        if (prefix_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getPrefix());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination other = (yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination) obj;
+
+        if (!getBucket()
+            .equals(other.getBucket())) return false;
+        if (format_ != other.format_) return false;
+        if (hasPrefix() != other.hasPrefix()) return false;
+        if (hasPrefix()) {
+          if (!getPrefix()
+              .equals(other.getPrefix())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + BUCKET_FIELD_NUMBER;
+        hash = (53 * hash) + getBucket().hashCode();
+        hash = (37 * hash) + FORMAT_FIELD_NUMBER;
+        hash = (53 * hash) + format_;
+        if (hasPrefix()) {
+          hash = (37 * hash) + PREFIX_FIELD_NUMBER;
+          hash = (53 * hash) + getPrefix().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination)
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestinationOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryBucketDestination_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryBucketDestination_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.class, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bucket_ = "";
+
+          format_ = 0;
+
+          if (prefixBuilder_ == null) {
+            prefix_ = null;
+          } else {
+            prefix_ = null;
+            prefixBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryBucketDestination_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination getDefaultInstanceForType() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination build() {
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination buildPartial() {
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination result = new yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination(this);
+          result.bucket_ = bucket_;
+          result.format_ = format_;
+          if (prefixBuilder_ == null) {
+            result.prefix_ = prefix_;
+          } else {
+            result.prefix_ = prefixBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination) {
+            return mergeFrom((yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination other) {
+          if (other == yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.getDefaultInstance()) return this;
+          if (!other.getBucket().isEmpty()) {
+            bucket_ = other.bucket_;
+            onChanged();
+          }
+          if (other.format_ != 0) {
+            setFormatValue(other.getFormatValue());
+          }
+          if (other.hasPrefix()) {
+            mergePrefix(other.getPrefix());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object bucket_ = "";
+        /**
+         * <pre>
+         * Bucket where inventory results will be published.
+         * </pre>
+         *
+         * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bucket.
+         */
+        public java.lang.String getBucket() {
+          java.lang.Object ref = bucket_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            bucket_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Bucket where inventory results will be published.
+         * </pre>
+         *
+         * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for bucket.
+         */
+        public com.google.protobuf.ByteString
+            getBucketBytes() {
+          java.lang.Object ref = bucket_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            bucket_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Bucket where inventory results will be published.
+         * </pre>
+         *
+         * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The bucket to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBucket(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          bucket_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Bucket where inventory results will be published.
+         * </pre>
+         *
+         * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearBucket() {
+          
+          bucket_ = getDefaultInstance().getBucket();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Bucket where inventory results will be published.
+         * </pre>
+         *
+         * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The bytes for bucket to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBucketBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          bucket_ = value;
+          onChanged();
+          return this;
+        }
+
+        private int format_ = 0;
+        /**
+         * <pre>
+         * Specifies the output format of the inventory results.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination.Format format = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The enum numeric value on the wire for format.
+         */
+        @java.lang.Override public int getFormatValue() {
+          return format_;
+        }
+        /**
+         * <pre>
+         * Specifies the output format of the inventory results.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination.Format format = 2 [(.yandex.cloud.required) = true];</code>
+         * @param value The enum numeric value on the wire for format to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFormatValue(int value) {
+          
+          format_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies the output format of the inventory results.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination.Format format = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The format.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.Format getFormat() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.Format result = yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.Format.valueOf(format_);
+          return result == null ? yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.Format.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * Specifies the output format of the inventory results.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination.Format format = 2 [(.yandex.cloud.required) = true];</code>
+         * @param value The format to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFormat(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.Format value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          format_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies the output format of the inventory results.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination.Format format = 2 [(.yandex.cloud.required) = true];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearFormat() {
+          
+          format_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.StringValue prefix_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> prefixBuilder_;
+        /**
+         * <pre>
+         * The prefix that is prepended to all inventory results.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue prefix = 3;</code>
+         * @return Whether the prefix field is set.
+         */
+        public boolean hasPrefix() {
+          return prefixBuilder_ != null || prefix_ != null;
+        }
+        /**
+         * <pre>
+         * The prefix that is prepended to all inventory results.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue prefix = 3;</code>
+         * @return The prefix.
+         */
+        public com.google.protobuf.StringValue getPrefix() {
+          if (prefixBuilder_ == null) {
+            return prefix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : prefix_;
+          } else {
+            return prefixBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * The prefix that is prepended to all inventory results.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue prefix = 3;</code>
+         */
+        public Builder setPrefix(com.google.protobuf.StringValue value) {
+          if (prefixBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            prefix_ = value;
+            onChanged();
+          } else {
+            prefixBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The prefix that is prepended to all inventory results.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue prefix = 3;</code>
+         */
+        public Builder setPrefix(
+            com.google.protobuf.StringValue.Builder builderForValue) {
+          if (prefixBuilder_ == null) {
+            prefix_ = builderForValue.build();
+            onChanged();
+          } else {
+            prefixBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The prefix that is prepended to all inventory results.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue prefix = 3;</code>
+         */
+        public Builder mergePrefix(com.google.protobuf.StringValue value) {
+          if (prefixBuilder_ == null) {
+            if (prefix_ != null) {
+              prefix_ =
+                com.google.protobuf.StringValue.newBuilder(prefix_).mergeFrom(value).buildPartial();
+            } else {
+              prefix_ = value;
+            }
+            onChanged();
+          } else {
+            prefixBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The prefix that is prepended to all inventory results.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue prefix = 3;</code>
+         */
+        public Builder clearPrefix() {
+          if (prefixBuilder_ == null) {
+            prefix_ = null;
+            onChanged();
+          } else {
+            prefix_ = null;
+            prefixBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The prefix that is prepended to all inventory results.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue prefix = 3;</code>
+         */
+        public com.google.protobuf.StringValue.Builder getPrefixBuilder() {
+          
+          onChanged();
+          return getPrefixFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The prefix that is prepended to all inventory results.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue prefix = 3;</code>
+         */
+        public com.google.protobuf.StringValueOrBuilder getPrefixOrBuilder() {
+          if (prefixBuilder_ != null) {
+            return prefixBuilder_.getMessageOrBuilder();
+          } else {
+            return prefix_ == null ?
+                com.google.protobuf.StringValue.getDefaultInstance() : prefix_;
+          }
+        }
+        /**
+         * <pre>
+         * The prefix that is prepended to all inventory results.
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue prefix = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+            getPrefixFieldBuilder() {
+          if (prefixBuilder_ == null) {
+            prefixBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                    getPrefix(),
+                    getParentForChildren(),
+                    isClean());
+            prefix_ = null;
+          }
+          return prefixBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination)
+      private static final yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination();
+      }
+
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<InventoryBucketDestination>
+          PARSER = new com.google.protobuf.AbstractParser<InventoryBucketDestination>() {
+        @java.lang.Override
+        public InventoryBucketDestination parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new InventoryBucketDestination(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<InventoryBucketDestination> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<InventoryBucketDestination> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface InventoryDestinationOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Destination bucket settings 
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination bucket_destination = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the bucketDestination field is set.
+       */
+      boolean hasBucketDestination();
+      /**
+       * <pre>
+       * Destination bucket settings 
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination bucket_destination = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bucketDestination.
+       */
+      yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination getBucketDestination();
+      /**
+       * <pre>
+       * Destination bucket settings 
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination bucket_destination = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestinationOrBuilder getBucketDestinationOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination}
+     */
+    public static final class InventoryDestination extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination)
+        InventoryDestinationOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use InventoryDestination.newBuilder() to construct.
+      private InventoryDestination(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private InventoryDestination() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new InventoryDestination();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private InventoryDestination(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.Builder subBuilder = null;
+                if (bucketDestination_ != null) {
+                  subBuilder = bucketDestination_.toBuilder();
+                }
+                bucketDestination_ = input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(bucketDestination_);
+                  bucketDestination_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryDestination_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryDestination_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination.class, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination.Builder.class);
+      }
+
+      public static final int BUCKET_DESTINATION_FIELD_NUMBER = 1;
+      private yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination bucketDestination_;
+      /**
+       * <pre>
+       * Destination bucket settings 
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination bucket_destination = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the bucketDestination field is set.
+       */
+      @java.lang.Override
+      public boolean hasBucketDestination() {
+        return bucketDestination_ != null;
+      }
+      /**
+       * <pre>
+       * Destination bucket settings 
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination bucket_destination = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bucketDestination.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination getBucketDestination() {
+        return bucketDestination_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.getDefaultInstance() : bucketDestination_;
+      }
+      /**
+       * <pre>
+       * Destination bucket settings 
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination bucket_destination = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestinationOrBuilder getBucketDestinationOrBuilder() {
+        return getBucketDestination();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (bucketDestination_ != null) {
+          output.writeMessage(1, getBucketDestination());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (bucketDestination_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getBucketDestination());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination other = (yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination) obj;
+
+        if (hasBucketDestination() != other.hasBucketDestination()) return false;
+        if (hasBucketDestination()) {
+          if (!getBucketDestination()
+              .equals(other.getBucketDestination())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasBucketDestination()) {
+          hash = (37 * hash) + BUCKET_DESTINATION_FIELD_NUMBER;
+          hash = (53 * hash) + getBucketDestination().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination)
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestinationOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryDestination_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryDestination_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination.class, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (bucketDestinationBuilder_ == null) {
+            bucketDestination_ = null;
+          } else {
+            bucketDestination_ = null;
+            bucketDestinationBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryDestination_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination getDefaultInstanceForType() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination build() {
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination buildPartial() {
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination result = new yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination(this);
+          if (bucketDestinationBuilder_ == null) {
+            result.bucketDestination_ = bucketDestination_;
+          } else {
+            result.bucketDestination_ = bucketDestinationBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination) {
+            return mergeFrom((yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination other) {
+          if (other == yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination.getDefaultInstance()) return this;
+          if (other.hasBucketDestination()) {
+            mergeBucketDestination(other.getBucketDestination());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination bucketDestination_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestinationOrBuilder> bucketDestinationBuilder_;
+        /**
+         * <pre>
+         * Destination bucket settings 
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination bucket_destination = 1 [(.yandex.cloud.required) = true];</code>
+         * @return Whether the bucketDestination field is set.
+         */
+        public boolean hasBucketDestination() {
+          return bucketDestinationBuilder_ != null || bucketDestination_ != null;
+        }
+        /**
+         * <pre>
+         * Destination bucket settings 
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination bucket_destination = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bucketDestination.
+         */
+        public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination getBucketDestination() {
+          if (bucketDestinationBuilder_ == null) {
+            return bucketDestination_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.getDefaultInstance() : bucketDestination_;
+          } else {
+            return bucketDestinationBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Destination bucket settings 
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination bucket_destination = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder setBucketDestination(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination value) {
+          if (bucketDestinationBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            bucketDestination_ = value;
+            onChanged();
+          } else {
+            bucketDestinationBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Destination bucket settings 
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination bucket_destination = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder setBucketDestination(
+            yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.Builder builderForValue) {
+          if (bucketDestinationBuilder_ == null) {
+            bucketDestination_ = builderForValue.build();
+            onChanged();
+          } else {
+            bucketDestinationBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Destination bucket settings 
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination bucket_destination = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder mergeBucketDestination(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination value) {
+          if (bucketDestinationBuilder_ == null) {
+            if (bucketDestination_ != null) {
+              bucketDestination_ =
+                yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.newBuilder(bucketDestination_).mergeFrom(value).buildPartial();
+            } else {
+              bucketDestination_ = value;
+            }
+            onChanged();
+          } else {
+            bucketDestinationBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Destination bucket settings 
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination bucket_destination = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder clearBucketDestination() {
+          if (bucketDestinationBuilder_ == null) {
+            bucketDestination_ = null;
+            onChanged();
+          } else {
+            bucketDestination_ = null;
+            bucketDestinationBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Destination bucket settings 
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination bucket_destination = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.Builder getBucketDestinationBuilder() {
+          
+          onChanged();
+          return getBucketDestinationFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Destination bucket settings 
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination bucket_destination = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestinationOrBuilder getBucketDestinationOrBuilder() {
+          if (bucketDestinationBuilder_ != null) {
+            return bucketDestinationBuilder_.getMessageOrBuilder();
+          } else {
+            return bucketDestination_ == null ?
+                yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.getDefaultInstance() : bucketDestination_;
+          }
+        }
+        /**
+         * <pre>
+         * Destination bucket settings 
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryBucketDestination bucket_destination = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestinationOrBuilder> 
+            getBucketDestinationFieldBuilder() {
+          if (bucketDestinationBuilder_ == null) {
+            bucketDestinationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestination.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryBucketDestinationOrBuilder>(
+                    getBucketDestination(),
+                    getParentForChildren(),
+                    isClean());
+            bucketDestination_ = null;
+          }
+          return bucketDestinationBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination)
+      private static final yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination();
+      }
+
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<InventoryDestination>
+          PARSER = new com.google.protobuf.AbstractParser<InventoryDestination>() {
+        @java.lang.Override
+        public InventoryDestination parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new InventoryDestination(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<InventoryDestination> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<InventoryDestination> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface InventoryScheduleOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Specifies how frequently inventory results are produced.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule.Frequency frequency = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The enum numeric value on the wire for frequency.
+       */
+      int getFrequencyValue();
+      /**
+       * <pre>
+       * Specifies how frequently inventory results are produced.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule.Frequency frequency = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The frequency.
+       */
+      yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.Frequency getFrequency();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule}
+     */
+    public static final class InventorySchedule extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule)
+        InventoryScheduleOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use InventorySchedule.newBuilder() to construct.
+      private InventorySchedule(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private InventorySchedule() {
+        frequency_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new InventorySchedule();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private InventorySchedule(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int rawValue = input.readEnum();
+
+                frequency_ = rawValue;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventorySchedule_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventorySchedule_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.class, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.Builder.class);
+      }
+
+      /**
+       * <pre>
+       * Types of generation frequency
+       * </pre>
+       *
+       * Protobuf enum {@code yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule.Frequency}
+       */
+      public enum Frequency
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <pre>
+         * UNSPECIFIED
+         * </pre>
+         *
+         * <code>FREQUENCY_UNSPECIFIED = 0;</code>
+         */
+        FREQUENCY_UNSPECIFIED(0),
+        /**
+         * <pre>
+         * Daily generation.
+         * </pre>
+         *
+         * <code>DAILY = 1;</code>
+         */
+        DAILY(1),
+        /**
+         * <pre>
+         * Weekly generation.
+         * </pre>
+         *
+         * <code>WEEKLY = 2;</code>
+         */
+        WEEKLY(2),
+        UNRECOGNIZED(-1),
+        ;
+
+        /**
+         * <pre>
+         * UNSPECIFIED
+         * </pre>
+         *
+         * <code>FREQUENCY_UNSPECIFIED = 0;</code>
+         */
+        public static final int FREQUENCY_UNSPECIFIED_VALUE = 0;
+        /**
+         * <pre>
+         * Daily generation.
+         * </pre>
+         *
+         * <code>DAILY = 1;</code>
+         */
+        public static final int DAILY_VALUE = 1;
+        /**
+         * <pre>
+         * Weekly generation.
+         * </pre>
+         *
+         * <code>WEEKLY = 2;</code>
+         */
+        public static final int WEEKLY_VALUE = 2;
+
+
+        public final int getNumber() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalArgumentException(
+                "Can't get the number of an unknown enum value.");
+          }
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static Frequency valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static Frequency forNumber(int value) {
+          switch (value) {
+            case 0: return FREQUENCY_UNSPECIFIED;
+            case 1: return DAILY;
+            case 2: return WEEKLY;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<Frequency>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            Frequency> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<Frequency>() {
+                public Frequency findValueByNumber(int number) {
+                  return Frequency.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalStateException(
+                "Can't get the descriptor of an unrecognized enum value.");
+          }
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.getDescriptor().getEnumTypes().get(0);
+        }
+
+        private static final Frequency[] VALUES = values();
+
+        public static Frequency valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          if (desc.getIndex() == -1) {
+            return UNRECOGNIZED;
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private Frequency(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule.Frequency)
+      }
+
+      public static final int FREQUENCY_FIELD_NUMBER = 1;
+      private int frequency_;
+      /**
+       * <pre>
+       * Specifies how frequently inventory results are produced.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule.Frequency frequency = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The enum numeric value on the wire for frequency.
+       */
+      @java.lang.Override public int getFrequencyValue() {
+        return frequency_;
+      }
+      /**
+       * <pre>
+       * Specifies how frequently inventory results are produced.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule.Frequency frequency = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The frequency.
+       */
+      @java.lang.Override public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.Frequency getFrequency() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.Frequency result = yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.Frequency.valueOf(frequency_);
+        return result == null ? yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.Frequency.UNRECOGNIZED : result;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (frequency_ != yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.Frequency.FREQUENCY_UNSPECIFIED.getNumber()) {
+          output.writeEnum(1, frequency_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (frequency_ != yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.Frequency.FREQUENCY_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(1, frequency_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule other = (yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule) obj;
+
+        if (frequency_ != other.frequency_) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + FREQUENCY_FIELD_NUMBER;
+        hash = (53 * hash) + frequency_;
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule)
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryScheduleOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventorySchedule_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventorySchedule_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.class, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          frequency_ = 0;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventorySchedule_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule getDefaultInstanceForType() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule build() {
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule buildPartial() {
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule result = new yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule(this);
+          result.frequency_ = frequency_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule) {
+            return mergeFrom((yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule other) {
+          if (other == yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.getDefaultInstance()) return this;
+          if (other.frequency_ != 0) {
+            setFrequencyValue(other.getFrequencyValue());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private int frequency_ = 0;
+        /**
+         * <pre>
+         * Specifies how frequently inventory results are produced.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule.Frequency frequency = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The enum numeric value on the wire for frequency.
+         */
+        @java.lang.Override public int getFrequencyValue() {
+          return frequency_;
+        }
+        /**
+         * <pre>
+         * Specifies how frequently inventory results are produced.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule.Frequency frequency = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The enum numeric value on the wire for frequency to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFrequencyValue(int value) {
+          
+          frequency_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies how frequently inventory results are produced.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule.Frequency frequency = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The frequency.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.Frequency getFrequency() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.Frequency result = yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.Frequency.valueOf(frequency_);
+          return result == null ? yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.Frequency.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * Specifies how frequently inventory results are produced.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule.Frequency frequency = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The frequency to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFrequency(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.Frequency value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          frequency_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Specifies how frequently inventory results are produced.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule.Frequency frequency = 1 [(.yandex.cloud.required) = true];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearFrequency() {
+          
+          frequency_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule)
+      private static final yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule();
+      }
+
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<InventorySchedule>
+          PARSER = new com.google.protobuf.AbstractParser<InventorySchedule>() {
+        @java.lang.Override
+        public InventorySchedule parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new InventorySchedule(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<InventorySchedule> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<InventorySchedule> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface InventoryFilterOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The prefix that an object must have to be included in the inventory results.
+       * </pre>
+       *
+       * <code>string prefix = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The prefix.
+       */
+      java.lang.String getPrefix();
+      /**
+       * <pre>
+       * The prefix that an object must have to be included in the inventory results.
+       * </pre>
+       *
+       * <code>string prefix = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for prefix.
+       */
+      com.google.protobuf.ByteString
+          getPrefixBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter}
+     */
+    public static final class InventoryFilter extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter)
+        InventoryFilterOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use InventoryFilter.newBuilder() to construct.
+      private InventoryFilter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private InventoryFilter() {
+        prefix_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new InventoryFilter();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private InventoryFilter(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                prefix_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryFilter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryFilter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter.class, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter.Builder.class);
+      }
+
+      public static final int PREFIX_FIELD_NUMBER = 1;
+      private volatile java.lang.Object prefix_;
+      /**
+       * <pre>
+       * The prefix that an object must have to be included in the inventory results.
+       * </pre>
+       *
+       * <code>string prefix = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The prefix.
+       */
+      @java.lang.Override
+      public java.lang.String getPrefix() {
+        java.lang.Object ref = prefix_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          prefix_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * The prefix that an object must have to be included in the inventory results.
+       * </pre>
+       *
+       * <code>string prefix = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for prefix.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPrefixBytes() {
+        java.lang.Object ref = prefix_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          prefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, prefix_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, prefix_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter other = (yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter) obj;
+
+        if (!getPrefix()
+            .equals(other.getPrefix())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + PREFIX_FIELD_NUMBER;
+        hash = (53 * hash) + getPrefix().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter)
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilterOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryFilter_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryFilter_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter.class, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          prefix_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryFilter_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter getDefaultInstanceForType() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter build() {
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter buildPartial() {
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter result = new yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter(this);
+          result.prefix_ = prefix_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter) {
+            return mergeFrom((yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter other) {
+          if (other == yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter.getDefaultInstance()) return this;
+          if (!other.getPrefix().isEmpty()) {
+            prefix_ = other.prefix_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object prefix_ = "";
+        /**
+         * <pre>
+         * The prefix that an object must have to be included in the inventory results.
+         * </pre>
+         *
+         * <code>string prefix = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The prefix.
+         */
+        public java.lang.String getPrefix() {
+          java.lang.Object ref = prefix_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            prefix_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The prefix that an object must have to be included in the inventory results.
+         * </pre>
+         *
+         * <code>string prefix = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for prefix.
+         */
+        public com.google.protobuf.ByteString
+            getPrefixBytes() {
+          java.lang.Object ref = prefix_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            prefix_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The prefix that an object must have to be included in the inventory results.
+         * </pre>
+         *
+         * <code>string prefix = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The prefix to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPrefix(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          prefix_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The prefix that an object must have to be included in the inventory results.
+         * </pre>
+         *
+         * <code>string prefix = 1 [(.yandex.cloud.required) = true];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPrefix() {
+          
+          prefix_ = getDefaultInstance().getPrefix();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The prefix that an object must have to be included in the inventory results.
+         * </pre>
+         *
+         * <code>string prefix = 1 [(.yandex.cloud.required) = true];</code>
+         * @param value The bytes for prefix to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPrefixBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          prefix_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter)
+      private static final yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter();
+      }
+
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<InventoryFilter>
+          PARSER = new com.google.protobuf.AbstractParser<InventoryFilter>() {
+        @java.lang.Override
+        public InventoryFilter parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new InventoryFilter(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<InventoryFilter> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<InventoryFilter> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * The ID used to identify the inventory configuration.
+     * </pre>
+     *
+     * <code>string id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The ID used to identify the inventory configuration.
+     * </pre>
+     *
+     * <code>string id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESTINATION_FIELD_NUMBER = 2;
+    private yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination destination_;
+    /**
+     * <pre>
+     * Contains information about where to publish the inventory results.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination destination = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the destination field is set.
+     */
+    @java.lang.Override
+    public boolean hasDestination() {
+      return destination_ != null;
+    }
+    /**
+     * <pre>
+     * Contains information about where to publish the inventory results.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination destination = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The destination.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination getDestination() {
+      return destination_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination.getDefaultInstance() : destination_;
+    }
+    /**
+     * <pre>
+     * Contains information about where to publish the inventory results.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination destination = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestinationOrBuilder getDestinationOrBuilder() {
+      return getDestination();
+    }
+
+    public static final int INCLUDED_OBJECT_VERSIONS_FIELD_NUMBER = 3;
+    private int includedObjectVersions_;
+    /**
+     * <pre>
+     * Object versions to include in the inventory list.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.IncludedObjectVersions included_object_versions = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The enum numeric value on the wire for includedObjectVersions.
+     */
+    @java.lang.Override public int getIncludedObjectVersionsValue() {
+      return includedObjectVersions_;
+    }
+    /**
+     * <pre>
+     * Object versions to include in the inventory list.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.IncludedObjectVersions included_object_versions = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The includedObjectVersions.
+     */
+    @java.lang.Override public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.IncludedObjectVersions getIncludedObjectVersions() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.IncludedObjectVersions result = yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.IncludedObjectVersions.valueOf(includedObjectVersions_);
+      return result == null ? yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.IncludedObjectVersions.UNRECOGNIZED : result;
+    }
+
+    public static final int IS_ENABLED_FIELD_NUMBER = 4;
+    private boolean isEnabled_;
+    /**
+     * <pre>
+     * Specifies whether the inventory is enabled.
+     * </pre>
+     *
+     * <code>bool is_enabled = 4;</code>
+     * @return The isEnabled.
+     */
+    @java.lang.Override
+    public boolean getIsEnabled() {
+      return isEnabled_;
+    }
+
+    public static final int SCHEDULE_FIELD_NUMBER = 5;
+    private yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule schedule_;
+    /**
+     * <pre>
+     * Specifies the schedule for generating inventory results.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule schedule = 5 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the schedule field is set.
+     */
+    @java.lang.Override
+    public boolean hasSchedule() {
+      return schedule_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies the schedule for generating inventory results.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule schedule = 5 [(.yandex.cloud.required) = true];</code>
+     * @return The schedule.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule getSchedule() {
+      return schedule_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.getDefaultInstance() : schedule_;
+    }
+    /**
+     * <pre>
+     * Specifies the schedule for generating inventory results.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule schedule = 5 [(.yandex.cloud.required) = true];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryScheduleOrBuilder getScheduleOrBuilder() {
+      return getSchedule();
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 6;
+    private yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter filter_;
+    /**
+     * <pre>
+     * Specifies the filter for objects to include in the inventory.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter filter = 6;</code>
+     * @return Whether the filter field is set.
+     */
+    @java.lang.Override
+    public boolean hasFilter() {
+      return filter_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies the filter for objects to include in the inventory.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter filter = 6;</code>
+     * @return The filter.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter getFilter() {
+      return filter_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter.getDefaultInstance() : filter_;
+    }
+    /**
+     * <pre>
+     * Specifies the filter for objects to include in the inventory.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter filter = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilterOrBuilder getFilterOrBuilder() {
+      return getFilter();
+    }
+
+    public static final int OPTIONAL_FIELDS_FIELD_NUMBER = 7;
+    private java.util.List<java.lang.Integer> optionalFields_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.OptionalField> optionalFields_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.OptionalField>() {
+              public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.OptionalField convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.OptionalField result = yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.OptionalField.valueOf(from);
+                return result == null ? yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.OptionalField.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * Contains the optional fields that are included in the inventory results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+     * @return A list containing the optionalFields.
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.OptionalField> getOptionalFieldsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.OptionalField>(optionalFields_, optionalFields_converter_);
+    }
+    /**
+     * <pre>
+     * Contains the optional fields that are included in the inventory results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+     * @return The count of optionalFields.
+     */
+    @java.lang.Override
+    public int getOptionalFieldsCount() {
+      return optionalFields_.size();
+    }
+    /**
+     * <pre>
+     * Contains the optional fields that are included in the inventory results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+     * @param index The index of the element to return.
+     * @return The optionalFields at the given index.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.OptionalField getOptionalFields(int index) {
+      return optionalFields_converter_.convert(optionalFields_.get(index));
+    }
+    /**
+     * <pre>
+     * Contains the optional fields that are included in the inventory results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+     * @return A list containing the enum numeric values on the wire for optionalFields.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getOptionalFieldsValueList() {
+      return optionalFields_;
+    }
+    /**
+     * <pre>
+     * Contains the optional fields that are included in the inventory results.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of optionalFields at the given index.
+     */
+    @java.lang.Override
+    public int getOptionalFieldsValue(int index) {
+      return optionalFields_.get(index);
+    }
+    private int optionalFieldsMemoizedSerializedSize;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (destination_ != null) {
+        output.writeMessage(2, getDestination());
+      }
+      if (includedObjectVersions_ != yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.IncludedObjectVersions.INCLUDED_OBJECT_VERSIONS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, includedObjectVersions_);
+      }
+      if (isEnabled_ != false) {
+        output.writeBool(4, isEnabled_);
+      }
+      if (schedule_ != null) {
+        output.writeMessage(5, getSchedule());
+      }
+      if (filter_ != null) {
+        output.writeMessage(6, getFilter());
+      }
+      if (getOptionalFieldsList().size() > 0) {
+        output.writeUInt32NoTag(58);
+        output.writeUInt32NoTag(optionalFieldsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < optionalFields_.size(); i++) {
+        output.writeEnumNoTag(optionalFields_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (destination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getDestination());
+      }
+      if (includedObjectVersions_ != yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.IncludedObjectVersions.INCLUDED_OBJECT_VERSIONS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, includedObjectVersions_);
+      }
+      if (isEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, isEnabled_);
+      }
+      if (schedule_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getSchedule());
+      }
+      if (filter_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getFilter());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < optionalFields_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(optionalFields_.get(i));
+        }
+        size += dataSize;
+        if (!getOptionalFieldsList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }optionalFieldsMemoizedSerializedSize = dataSize;
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration other = (yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (hasDestination() != other.hasDestination()) return false;
+      if (hasDestination()) {
+        if (!getDestination()
+            .equals(other.getDestination())) return false;
+      }
+      if (includedObjectVersions_ != other.includedObjectVersions_) return false;
+      if (getIsEnabled()
+          != other.getIsEnabled()) return false;
+      if (hasSchedule() != other.hasSchedule()) return false;
+      if (hasSchedule()) {
+        if (!getSchedule()
+            .equals(other.getSchedule())) return false;
+      }
+      if (hasFilter() != other.hasFilter()) return false;
+      if (hasFilter()) {
+        if (!getFilter()
+            .equals(other.getFilter())) return false;
+      }
+      if (!optionalFields_.equals(other.optionalFields_)) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      if (hasDestination()) {
+        hash = (37 * hash) + DESTINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDestination().hashCode();
+      }
+      hash = (37 * hash) + INCLUDED_OBJECT_VERSIONS_FIELD_NUMBER;
+      hash = (53 * hash) + includedObjectVersions_;
+      hash = (37 * hash) + IS_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsEnabled());
+      if (hasSchedule()) {
+        hash = (37 * hash) + SCHEDULE_FIELD_NUMBER;
+        hash = (53 * hash) + getSchedule().hashCode();
+      }
+      if (hasFilter()) {
+        hash = (37 * hash) + FILTER_FIELD_NUMBER;
+        hash = (53 * hash) + getFilter().hashCode();
+      }
+      if (getOptionalFieldsCount() > 0) {
+        hash = (37 * hash) + OPTIONAL_FIELDS_FIELD_NUMBER;
+        hash = (53 * hash) + optionalFields_.hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.storage.v1.InventoryConfiguration}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.storage.v1.InventoryConfiguration)
+        yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfigurationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.class, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        if (destinationBuilder_ == null) {
+          destination_ = null;
+        } else {
+          destination_ = null;
+          destinationBuilder_ = null;
+        }
+        includedObjectVersions_ = 0;
+
+        isEnabled_ = false;
+
+        if (scheduleBuilder_ == null) {
+          schedule_ = null;
+        } else {
+          schedule_ = null;
+          scheduleBuilder_ = null;
+        }
+        if (filterBuilder_ == null) {
+          filter_ = null;
+        } else {
+          filter_ = null;
+          filterBuilder_ = null;
+        }
+        optionalFields_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_InventoryConfiguration_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration getDefaultInstanceForType() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration build() {
+        yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration buildPartial() {
+        yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration result = new yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration(this);
+        int from_bitField0_ = bitField0_;
+        result.id_ = id_;
+        if (destinationBuilder_ == null) {
+          result.destination_ = destination_;
+        } else {
+          result.destination_ = destinationBuilder_.build();
+        }
+        result.includedObjectVersions_ = includedObjectVersions_;
+        result.isEnabled_ = isEnabled_;
+        if (scheduleBuilder_ == null) {
+          result.schedule_ = schedule_;
+        } else {
+          result.schedule_ = scheduleBuilder_.build();
+        }
+        if (filterBuilder_ == null) {
+          result.filter_ = filter_;
+        } else {
+          result.filter_ = filterBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000001) != 0)) {
+          optionalFields_ = java.util.Collections.unmodifiableList(optionalFields_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.optionalFields_ = optionalFields_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration) {
+          return mergeFrom((yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration other) {
+        if (other == yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (other.hasDestination()) {
+          mergeDestination(other.getDestination());
+        }
+        if (other.includedObjectVersions_ != 0) {
+          setIncludedObjectVersionsValue(other.getIncludedObjectVersionsValue());
+        }
+        if (other.getIsEnabled() != false) {
+          setIsEnabled(other.getIsEnabled());
+        }
+        if (other.hasSchedule()) {
+          mergeSchedule(other.getSchedule());
+        }
+        if (other.hasFilter()) {
+          mergeFilter(other.getFilter());
+        }
+        if (!other.optionalFields_.isEmpty()) {
+          if (optionalFields_.isEmpty()) {
+            optionalFields_ = other.optionalFields_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureOptionalFieldsIsMutable();
+            optionalFields_.addAll(other.optionalFields_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * The ID used to identify the inventory configuration.
+       * </pre>
+       *
+       * <code>string id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ID used to identify the inventory configuration.
+       * </pre>
+       *
+       * <code>string id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ID used to identify the inventory configuration.
+       * </pre>
+       *
+       * <code>string id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID used to identify the inventory configuration.
+       * </pre>
+       *
+       * <code>string id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID used to identify the inventory configuration.
+       * </pre>
+       *
+       * <code>string id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination destination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestinationOrBuilder> destinationBuilder_;
+      /**
+       * <pre>
+       * Contains information about where to publish the inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination destination = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the destination field is set.
+       */
+      public boolean hasDestination() {
+        return destinationBuilder_ != null || destination_ != null;
+      }
+      /**
+       * <pre>
+       * Contains information about where to publish the inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination destination = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The destination.
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination getDestination() {
+        if (destinationBuilder_ == null) {
+          return destination_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination.getDefaultInstance() : destination_;
+        } else {
+          return destinationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Contains information about where to publish the inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination destination = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setDestination(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination value) {
+        if (destinationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          destination_ = value;
+          onChanged();
+        } else {
+          destinationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Contains information about where to publish the inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination destination = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setDestination(
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination.Builder builderForValue) {
+        if (destinationBuilder_ == null) {
+          destination_ = builderForValue.build();
+          onChanged();
+        } else {
+          destinationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Contains information about where to publish the inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination destination = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergeDestination(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination value) {
+        if (destinationBuilder_ == null) {
+          if (destination_ != null) {
+            destination_ =
+              yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination.newBuilder(destination_).mergeFrom(value).buildPartial();
+          } else {
+            destination_ = value;
+          }
+          onChanged();
+        } else {
+          destinationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Contains information about where to publish the inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination destination = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearDestination() {
+        if (destinationBuilder_ == null) {
+          destination_ = null;
+          onChanged();
+        } else {
+          destination_ = null;
+          destinationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Contains information about where to publish the inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination destination = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination.Builder getDestinationBuilder() {
+        
+        onChanged();
+        return getDestinationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Contains information about where to publish the inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination destination = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestinationOrBuilder getDestinationOrBuilder() {
+        if (destinationBuilder_ != null) {
+          return destinationBuilder_.getMessageOrBuilder();
+        } else {
+          return destination_ == null ?
+              yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination.getDefaultInstance() : destination_;
+        }
+      }
+      /**
+       * <pre>
+       * Contains information about where to publish the inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryDestination destination = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestinationOrBuilder> 
+          getDestinationFieldBuilder() {
+        if (destinationBuilder_ == null) {
+          destinationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestination.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryDestinationOrBuilder>(
+                  getDestination(),
+                  getParentForChildren(),
+                  isClean());
+          destination_ = null;
+        }
+        return destinationBuilder_;
+      }
+
+      private int includedObjectVersions_ = 0;
+      /**
+       * <pre>
+       * Object versions to include in the inventory list.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.IncludedObjectVersions included_object_versions = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The enum numeric value on the wire for includedObjectVersions.
+       */
+      @java.lang.Override public int getIncludedObjectVersionsValue() {
+        return includedObjectVersions_;
+      }
+      /**
+       * <pre>
+       * Object versions to include in the inventory list.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.IncludedObjectVersions included_object_versions = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The enum numeric value on the wire for includedObjectVersions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncludedObjectVersionsValue(int value) {
+        
+        includedObjectVersions_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Object versions to include in the inventory list.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.IncludedObjectVersions included_object_versions = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The includedObjectVersions.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.IncludedObjectVersions getIncludedObjectVersions() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.IncludedObjectVersions result = yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.IncludedObjectVersions.valueOf(includedObjectVersions_);
+        return result == null ? yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.IncludedObjectVersions.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Object versions to include in the inventory list.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.IncludedObjectVersions included_object_versions = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The includedObjectVersions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncludedObjectVersions(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.IncludedObjectVersions value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        includedObjectVersions_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Object versions to include in the inventory list.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.IncludedObjectVersions included_object_versions = 3 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIncludedObjectVersions() {
+        
+        includedObjectVersions_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isEnabled_ ;
+      /**
+       * <pre>
+       * Specifies whether the inventory is enabled.
+       * </pre>
+       *
+       * <code>bool is_enabled = 4;</code>
+       * @return The isEnabled.
+       */
+      @java.lang.Override
+      public boolean getIsEnabled() {
+        return isEnabled_;
+      }
+      /**
+       * <pre>
+       * Specifies whether the inventory is enabled.
+       * </pre>
+       *
+       * <code>bool is_enabled = 4;</code>
+       * @param value The isEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsEnabled(boolean value) {
+        
+        isEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies whether the inventory is enabled.
+       * </pre>
+       *
+       * <code>bool is_enabled = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsEnabled() {
+        
+        isEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule schedule_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryScheduleOrBuilder> scheduleBuilder_;
+      /**
+       * <pre>
+       * Specifies the schedule for generating inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule schedule = 5 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the schedule field is set.
+       */
+      public boolean hasSchedule() {
+        return scheduleBuilder_ != null || schedule_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies the schedule for generating inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule schedule = 5 [(.yandex.cloud.required) = true];</code>
+       * @return The schedule.
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule getSchedule() {
+        if (scheduleBuilder_ == null) {
+          return schedule_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.getDefaultInstance() : schedule_;
+        } else {
+          return scheduleBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the schedule for generating inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule schedule = 5 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setSchedule(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule value) {
+        if (scheduleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          schedule_ = value;
+          onChanged();
+        } else {
+          scheduleBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the schedule for generating inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule schedule = 5 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setSchedule(
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.Builder builderForValue) {
+        if (scheduleBuilder_ == null) {
+          schedule_ = builderForValue.build();
+          onChanged();
+        } else {
+          scheduleBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the schedule for generating inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule schedule = 5 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergeSchedule(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule value) {
+        if (scheduleBuilder_ == null) {
+          if (schedule_ != null) {
+            schedule_ =
+              yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.newBuilder(schedule_).mergeFrom(value).buildPartial();
+          } else {
+            schedule_ = value;
+          }
+          onChanged();
+        } else {
+          scheduleBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the schedule for generating inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule schedule = 5 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearSchedule() {
+        if (scheduleBuilder_ == null) {
+          schedule_ = null;
+          onChanged();
+        } else {
+          schedule_ = null;
+          scheduleBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the schedule for generating inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule schedule = 5 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.Builder getScheduleBuilder() {
+        
+        onChanged();
+        return getScheduleFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies the schedule for generating inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule schedule = 5 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryScheduleOrBuilder getScheduleOrBuilder() {
+        if (scheduleBuilder_ != null) {
+          return scheduleBuilder_.getMessageOrBuilder();
+        } else {
+          return schedule_ == null ?
+              yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.getDefaultInstance() : schedule_;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the schedule for generating inventory results.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventorySchedule schedule = 5 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryScheduleOrBuilder> 
+          getScheduleFieldBuilder() {
+        if (scheduleBuilder_ == null) {
+          scheduleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventorySchedule.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryScheduleOrBuilder>(
+                  getSchedule(),
+                  getParentForChildren(),
+                  isClean());
+          schedule_ = null;
+        }
+        return scheduleBuilder_;
+      }
+
+      private yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter filter_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilterOrBuilder> filterBuilder_;
+      /**
+       * <pre>
+       * Specifies the filter for objects to include in the inventory.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter filter = 6;</code>
+       * @return Whether the filter field is set.
+       */
+      public boolean hasFilter() {
+        return filterBuilder_ != null || filter_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies the filter for objects to include in the inventory.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter filter = 6;</code>
+       * @return The filter.
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter getFilter() {
+        if (filterBuilder_ == null) {
+          return filter_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter.getDefaultInstance() : filter_;
+        } else {
+          return filterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the filter for objects to include in the inventory.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter filter = 6;</code>
+       */
+      public Builder setFilter(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter value) {
+        if (filterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          filter_ = value;
+          onChanged();
+        } else {
+          filterBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the filter for objects to include in the inventory.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter filter = 6;</code>
+       */
+      public Builder setFilter(
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter.Builder builderForValue) {
+        if (filterBuilder_ == null) {
+          filter_ = builderForValue.build();
+          onChanged();
+        } else {
+          filterBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the filter for objects to include in the inventory.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter filter = 6;</code>
+       */
+      public Builder mergeFilter(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter value) {
+        if (filterBuilder_ == null) {
+          if (filter_ != null) {
+            filter_ =
+              yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter.newBuilder(filter_).mergeFrom(value).buildPartial();
+          } else {
+            filter_ = value;
+          }
+          onChanged();
+        } else {
+          filterBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the filter for objects to include in the inventory.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter filter = 6;</code>
+       */
+      public Builder clearFilter() {
+        if (filterBuilder_ == null) {
+          filter_ = null;
+          onChanged();
+        } else {
+          filter_ = null;
+          filterBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the filter for objects to include in the inventory.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter filter = 6;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter.Builder getFilterBuilder() {
+        
+        onChanged();
+        return getFilterFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies the filter for objects to include in the inventory.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter filter = 6;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilterOrBuilder getFilterOrBuilder() {
+        if (filterBuilder_ != null) {
+          return filterBuilder_.getMessageOrBuilder();
+        } else {
+          return filter_ == null ?
+              yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter.getDefaultInstance() : filter_;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the filter for objects to include in the inventory.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.InventoryConfiguration.InventoryFilter filter = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilterOrBuilder> 
+          getFilterFieldBuilder() {
+        if (filterBuilder_ == null) {
+          filterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilter.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.InventoryFilterOrBuilder>(
+                  getFilter(),
+                  getParentForChildren(),
+                  isClean());
+          filter_ = null;
+        }
+        return filterBuilder_;
+      }
+
+      private java.util.List<java.lang.Integer> optionalFields_ =
+        java.util.Collections.emptyList();
+      private void ensureOptionalFieldsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          optionalFields_ = new java.util.ArrayList<java.lang.Integer>(optionalFields_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+      /**
+       * <pre>
+       * Contains the optional fields that are included in the inventory results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+       * @return A list containing the optionalFields.
+       */
+      public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.OptionalField> getOptionalFieldsList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.OptionalField>(optionalFields_, optionalFields_converter_);
+      }
+      /**
+       * <pre>
+       * Contains the optional fields that are included in the inventory results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+       * @return The count of optionalFields.
+       */
+      public int getOptionalFieldsCount() {
+        return optionalFields_.size();
+      }
+      /**
+       * <pre>
+       * Contains the optional fields that are included in the inventory results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+       * @param index The index of the element to return.
+       * @return The optionalFields at the given index.
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.OptionalField getOptionalFields(int index) {
+        return optionalFields_converter_.convert(optionalFields_.get(index));
+      }
+      /**
+       * <pre>
+       * Contains the optional fields that are included in the inventory results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+       * @param index The index to set the value at.
+       * @param value The optionalFields to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOptionalFields(
+          int index, yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.OptionalField value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureOptionalFieldsIsMutable();
+        optionalFields_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Contains the optional fields that are included in the inventory results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+       * @param value The optionalFields to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOptionalFields(yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.OptionalField value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureOptionalFieldsIsMutable();
+        optionalFields_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Contains the optional fields that are included in the inventory results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+       * @param values The optionalFields to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOptionalFields(
+          java.lang.Iterable<? extends yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.OptionalField> values) {
+        ensureOptionalFieldsIsMutable();
+        for (yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration.OptionalField value : values) {
+          optionalFields_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Contains the optional fields that are included in the inventory results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOptionalFields() {
+        optionalFields_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Contains the optional fields that are included in the inventory results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+       * @return A list containing the enum numeric values on the wire for optionalFields.
+       */
+      public java.util.List<java.lang.Integer>
+      getOptionalFieldsValueList() {
+        return java.util.Collections.unmodifiableList(optionalFields_);
+      }
+      /**
+       * <pre>
+       * Contains the optional fields that are included in the inventory results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of optionalFields at the given index.
+       */
+      public int getOptionalFieldsValue(int index) {
+        return optionalFields_.get(index);
+      }
+      /**
+       * <pre>
+       * Contains the optional fields that are included in the inventory results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of optionalFields at the given index.
+       * @return This builder for chaining.
+       */
+      public Builder setOptionalFieldsValue(
+          int index, int value) {
+        ensureOptionalFieldsIsMutable();
+        optionalFields_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Contains the optional fields that are included in the inventory results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+       * @param value The enum numeric value on the wire for optionalFields to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOptionalFieldsValue(int value) {
+        ensureOptionalFieldsIsMutable();
+        optionalFields_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Contains the optional fields that are included in the inventory results.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.InventoryConfiguration.OptionalField optional_fields = 7;</code>
+       * @param values The enum numeric values on the wire for optionalFields to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOptionalFieldsValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureOptionalFieldsIsMutable();
+        for (int value : values) {
+          optionalFields_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.storage.v1.InventoryConfiguration)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.storage.v1.InventoryConfiguration)
+    private static final yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration();
+    }
+
+    public static yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<InventoryConfiguration>
+        PARSER = new com.google.protobuf.AbstractParser<InventoryConfiguration>() {
+      @java.lang.Override
+      public InventoryConfiguration parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new InventoryConfiguration(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<InventoryConfiguration> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InventoryConfiguration> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.InventoryConfiguration getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -43743,6 +50205,31 @@ public final class BucketOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_storage_v1_BucketAllowedPrivateEndpoints_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_storage_v1_InventoryConfiguration_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_storage_v1_InventoryConfiguration_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryBucketDestination_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryBucketDestination_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryDestination_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryDestination_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventorySchedule_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventorySchedule_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryFilter_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryFilter_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -43756,7 +50243,7 @@ public final class BucketOuterClass {
       "yandex.cloud.storage.v1\032\034google/protobuf" +
       "/struct.proto\032\037google/protobuf/timestamp" +
       ".proto\032\036google/protobuf/wrappers.proto\032\035" +
-      "yandex/cloud/validation.proto\"\267\006\n\006Bucket" +
+      "yandex/cloud/validation.proto\"\330\006\n\006Bucket" +
       "\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\021\n\tfolder_id\030" +
       "\003 \001(\t\022M\n\026anonymous_access_flags\030\004 \001(\0132-." +
       "yandex.cloud.storage.v1.AnonymousAccessF" +
@@ -43777,160 +50264,201 @@ public final class BucketOuterClass {
       "d.storage.v1.Encryption\022Y\n\031allowed_priva" +
       "te_endpoints\030\021 \001(\01326.yandex.cloud.storag" +
       "e.v1.BucketAllowedPrivateEndpoints\022\023\n\013re" +
-      "source_id\030\022 \001(\t\"!\n\003Tag\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t\"\234\004\n\003ACL\0222\n\006grants\030\001 \003(\0132\".yan" +
-      "dex.cloud.storage.v1.ACL.Grant\032\340\003\n\005Grant" +
-      "\022G\n\npermission\030\001 \001(\0162-.yandex.cloud.stor" +
-      "age.v1.ACL.Grant.PermissionB\004\350\3071\001\022F\n\ngra" +
-      "nt_type\030\002 \001(\0162,.yandex.cloud.storage.v1." +
-      "ACL.Grant.GrantTypeB\004\350\3071\001\022\034\n\ngrantee_id\030" +
-      "\003 \001(\tB\010\212\3101\004<=50\"\243\001\n\nPermission\022\032\n\026PERMIS" +
-      "SION_UNSPECIFIED\020\000\022\033\n\027PERMISSION_FULL_CO" +
-      "NTROL\020\001\022\024\n\020PERMISSION_WRITE\020\002\022\030\n\024PERMISS" +
-      "ION_WRITE_ACP\020\003\022\023\n\017PERMISSION_READ\020\004\022\027\n\023" +
-      "PERMISSION_READ_ACP\020\005\"\201\001\n\tGrantType\022\032\n\026G" +
-      "RANT_TYPE_UNSPECIFIED\020\000\022\026\n\022GRANT_TYPE_AC" +
-      "COUNT\020\001\022&\n\"GRANT_TYPE_ALL_AUTHENTICATED_" +
-      "USERS\020\002\022\030\n\024GRANT_TYPE_ALL_USERS\020\003\"\233\001\n\024An" +
-      "onymousAccessFlags\022(\n\004read\030\001 \001(\0132\032.googl" +
-      "e.protobuf.BoolValue\022(\n\004list\030\002 \001(\0132\032.goo" +
-      "gle.protobuf.BoolValue\022/\n\013config_read\030\003 " +
-      "\001(\0132\032.google.protobuf.BoolValue\"\344\002\n\010Cors" +
-      "Rule\022\n\n\002id\030\001 \001(\t\022M\n\017allowed_methods\030\002 \003(" +
-      "\0162(.yandex.cloud.storage.v1.CorsRule.Met" +
-      "hodB\n\202\3101\002>0\220\3101\001\022\027\n\017allowed_headers\030\003 \003(\t" +
-      "\022\037\n\017allowed_origins\030\004 \003(\tB\006\202\3101\002>0\022\026\n\016exp" +
-      "ose_headers\030\005 \003(\t\0224\n\017max_age_seconds\030\006 \001" +
-      "(\0132\033.google.protobuf.Int64Value\"u\n\006Metho" +
-      "d\022\026\n\022METHOD_UNSPECIFIED\020\000\022\016\n\nMETHOD_GET\020" +
-      "\001\022\017\n\013METHOD_HEAD\020\002\022\017\n\013METHOD_POST\020\003\022\016\n\nM" +
-      "ETHOD_PUT\020\004\022\021\n\rMETHOD_DELETE\020\005\"\274\006\n\017Websi" +
-      "teSettings\022\r\n\005index\030\001 \001(\t\022\r\n\005error\030\002 \001(\t" +
-      "\022N\n\025redirect_all_requests\030\003 \001(\0132/.yandex" +
-      ".cloud.storage.v1.WebsiteSettings.Scheme" +
-      "\022K\n\rrouting_rules\030\004 \003(\01324.yandex.cloud.s" +
-      "torage.v1.WebsiteSettings.RoutingRule\032_\n" +
-      "\006Scheme\022C\n\010protocol\030\001 \001(\01621.yandex.cloud" +
-      ".storage.v1.WebsiteSettings.Protocol\022\020\n\010" +
-      "hostname\030\002 \001(\t\032O\n\tCondition\022\'\n\037http_erro" +
-      "r_code_returned_equals\030\001 \001(\t\022\031\n\021key_pref" +
-      "ix_equals\030\002 \001(\t\032\322\001\n\010Redirect\022\020\n\010hostname" +
-      "\030\001 \001(\t\0224\n\022http_redirect_code\030\002 \001(\tB\030\362\3071\024" +
-      "3(0[1-9]|[1-9][0-9])\022C\n\010protocol\030\003 \001(\01621" +
-      ".yandex.cloud.storage.v1.WebsiteSettings" +
-      ".Protocol\022\037\n\027replace_key_prefix_with\030\004 \001" +
-      "(\t\022\030\n\020replace_key_with\030\005 \001(\t\032\231\001\n\013Routing" +
-      "Rule\022E\n\tcondition\030\001 \001(\01322.yandex.cloud.s" +
-      "torage.v1.WebsiteSettings.Condition\022C\n\010r" +
-      "edirect\030\002 \001(\01321.yandex.cloud.storage.v1." +
-      "WebsiteSettings.Redirect\"K\n\010Protocol\022\030\n\024" +
-      "PROTOCOL_UNSPECIFIED\020\000\022\021\n\rPROTOCOL_HTTP\020" +
-      "\001\022\022\n\016PROTOCOL_HTTPS\020\002\"\345\r\n\rLifecycleRule\022" +
-      "(\n\002id\030\001 \001(\0132\034.google.protobuf.StringValu" +
-      "e\022\017\n\007enabled\030\002 \001(\010\022A\n\006filter\030\003 \001(\01321.yan" +
-      "dex.cloud.storage.v1.LifecycleRule.RuleF" +
-      "ilter\022E\n\nexpiration\030\004 \001(\01321.yandex.cloud" +
-      ".storage.v1.LifecycleRule.Expiration\022F\n\013" +
-      "transitions\030\005 \003(\01321.yandex.cloud.storage" +
-      ".v1.LifecycleRule.Transition\022[\n!abort_in" +
-      "complete_multipart_upload\030\006 \001(\01320.yandex" +
-      ".cloud.storage.v1.LifecycleRule.AfterDay" +
-      "s\022Z\n\025noncurrent_expiration\030\007 \001(\0132;.yande" +
-      "x.cloud.storage.v1.LifecycleRule.Noncurr" +
-      "entExpiration\022[\n\026noncurrent_transitions\030" +
-      "\010 \003(\0132;.yandex.cloud.storage.v1.Lifecycl" +
-      "eRule.NoncurrentTransition\022a\n\031noncurrent" +
-      "_delete_markers\030\t \001(\0132>.yandex.cloud.sto" +
-      "rage.v1.LifecycleRule.NoncurrentDeleteMa" +
-      "rkers\032G\n\tAfterDays\022:\n\025days_after_expirat" +
-      "ion\030\001 \001(\0132\033.google.protobuf.Int64Value\032O" +
-      "\n\027NoncurrentDeleteMarkers\0224\n\017noncurrent_" +
-      "days\030\001 \001(\0132\033.google.protobuf.Int64Value\032" +
-      "L\n\024NoncurrentExpiration\0224\n\017noncurrent_da" +
-      "ys\030\001 \001(\0132\033.google.protobuf.Int64Value\032i\n" +
-      "\024NoncurrentTransition\0224\n\017noncurrent_days" +
-      "\030\001 \001(\0132\033.google.protobuf.Int64Value\022\033\n\rs" +
-      "torage_class\030\002 \001(\tB\004\350\3071\001\032\204\001\n\nTransition\022" +
-      "(\n\004date\030\001 \001(\0132\032.google.protobuf.Timestam" +
-      "p\022)\n\004days\030\002 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\022\033\n\rstorage_class\030\004 \001(\tB\004\350\3071\001J\004\010\003\020\004\032" +
-      "\243\001\n\nExpiration\022(\n\004date\030\001 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\022)\n\004days\030\002 \001(\0132\033.google." +
-      "protobuf.Int64Value\022@\n\034expired_object_de" +
-      "lete_marker\030\003 \001(\0132\032.google.protobuf.Bool" +
-      "Value\032\315\003\n\nRuleFilter\022\016\n\006prefix\030\001 \001(\t\022=\n\030" +
-      "object_size_greater_than\030\002 \001(\0132\033.google." +
-      "protobuf.Int64Value\022:\n\025object_size_less_" +
-      "than\030\003 \001(\0132\033.google.protobuf.Int64Value\022" +
-      ")\n\003tag\030\004 \001(\0132\034.yandex.cloud.storage.v1.T" +
-      "ag\022K\n\014and_operator\030\005 \001(\01325.yandex.cloud." +
-      "storage.v1.LifecycleRule.RuleFilter.And\032" +
-      "\273\001\n\003And\022\016\n\006prefix\030\001 \001(\t\022=\n\030object_size_g" +
-      "reater_than\030\002 \001(\0132\033.google.protobuf.Int6" +
-      "4Value\022:\n\025object_size_less_than\030\003 \001(\0132\033." +
-      "google.protobuf.Int64Value\022)\n\003tag\030\004 \003(\0132" +
-      "\034.yandex.cloud.storage.v1.Tag\"\335\001\n\010Counte" +
-      "rs\022\032\n\022simple_object_size\030\001 \001(\003\022\033\n\023simple" +
-      "_object_count\030\002 \001(\003\022\032\n\022objects_parts_siz" +
-      "e\030\003 \001(\003\022\033\n\023objects_parts_count\030\004 \001(\003\022\036\n\026" +
-      "multipart_objects_size\030\005 \001(\003\022\037\n\027multipar" +
-      "t_objects_count\030\006 \001(\003\022\036\n\026active_multipar" +
-      "t_count\030\007 \001(\003\"]\n\023OptionalSizeByClass\022\025\n\r" +
-      "storage_class\030\001 \001(\t\022/\n\nclass_size\030\002 \001(\0132" +
-      "\033.google.protobuf.Int64Value\"8\n\013SizeByCl" +
-      "ass\022\025\n\rstorage_class\030\001 \001(\t\022\022\n\nclass_size" +
-      "\030\002 \001(\003\"]\n\017CountersByClass\022\025\n\rstorage_cla" +
-      "ss\030\001 \001(\t\0223\n\010counters\030\002 \001(\0132!.yandex.clou" +
-      "d.storage.v1.Counters\"\252\004\n\013BucketStats\022\014\n" +
-      "\004name\030\001 \001(\t\022-\n\010max_size\030\002 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\022\021\n\tused_size\030\003 \001(\003\022M\n" +
-      "\027storage_class_max_sizes\030\004 \003(\0132,.yandex." +
-      "cloud.storage.v1.OptionalSizeByClass\022F\n\030" +
-      "storage_class_used_sizes\030\005 \003(\0132$.yandex." +
-      "cloud.storage.v1.SizeByClass\022H\n\026storage_" +
-      "class_counters\030\006 \003(\0132(.yandex.cloud.stor" +
-      "age.v1.CountersByClass\022;\n\025default_storag" +
-      "e_class\030\007 \001(\0132\034.google.protobuf.StringVa" +
-      "lue\022M\n\026anonymous_access_flags\030\010 \001(\0132-.ya" +
-      "ndex.cloud.storage.v1.AnonymousAccessFla" +
-      "gs\022.\n\ncreated_at\030\t \001(\0132\032.google.protobuf" +
-      ".Timestamp\022.\n\nupdated_at\030\n \001(\0132\032.google." +
-      "protobuf.Timestamp\"\301\003\n\013HTTPSConfig\022\014\n\004na" +
-      "me\030\001 \001(\t\022D\n\013source_type\030\002 \001(\0162/.yandex.c" +
-      "loud.storage.v1.HTTPSConfig.SourceType\022," +
-      "\n\006issuer\030\003 \001(\0132\034.google.protobuf.StringV" +
-      "alue\022-\n\007subject\030\004 \001(\0132\034.google.protobuf." +
-      "StringValue\022\021\n\tdns_names\030\005 \003(\t\022.\n\nnot_be" +
-      "fore\030\006 \001(\0132\032.google.protobuf.Timestamp\022-" +
-      "\n\tnot_after\030\007 \001(\0132\032.google.protobuf.Time" +
-      "stamp\022\026\n\016certificate_id\030\010 \001(\t\"w\n\nSourceT" +
-      "ype\022\033\n\027SOURCE_TYPE_UNSPECIFIED\020\000\022\034\n\030SOUR" +
-      "CE_TYPE_SELF_MANAGED\020\001\022.\n*SOURCE_TYPE_MA" +
-      "NAGED_BY_CERTIFICATE_MANAGER\020\002\"\363\003\n\nObjec" +
-      "tLock\022D\n\006status\030\002 \001(\01624.yandex.cloud.sto" +
-      "rage.v1.ObjectLock.ObjectLockStatus\022O\n\021d" +
-      "efault_retention\030\003 \001(\01324.yandex.cloud.st" +
-      "orage.v1.ObjectLock.DefaultRetention\032\324\001\n" +
-      "\020DefaultRetention\022G\n\004mode\030\001 \001(\01629.yandex" +
-      ".cloud.storage.v1.ObjectLock.DefaultRete" +
-      "ntion.Mode\022\016\n\004days\030\002 \001(\003H\000\022\017\n\005years\030\003 \001(" +
-      "\003H\000\"F\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\023\n\017MOD" +
-      "E_GOVERNANCE\020\001\022\023\n\017MODE_COMPLIANCE\020\002B\016\n\006p" +
-      "eriod\022\004\300\3011\001\"w\n\020ObjectLockStatus\022\"\n\036OBJEC" +
-      "T_LOCK_STATUS_UNSPECIFIED\020\000\022\037\n\033OBJECT_LO" +
-      "CK_STATUS_DISABLED\020\001\022\036\n\032OBJECT_LOCK_STAT" +
-      "US_ENABLED\020\002\"\223\001\n\nEncryption\022A\n\005rules\030\001 \003" +
-      "(\01322.yandex.cloud.storage.v1.Encryption." +
-      "EncryptionRule\032B\n\016EncryptionRule\022\031\n\021kms_" +
-      "master_key_id\030\001 \001(\t\022\025\n\rsse_algorithm\030\002 \001" +
-      "(\t\"K\n\035BucketAllowedPrivateEndpoints\022\017\n\007e" +
-      "nabled\030\001 \001(\010\022\031\n\021private_endpoints\030\002 \003(\t*" +
-      "s\n\nVersioning\022\032\n\026VERSIONING_UNSPECIFIED\020" +
-      "\000\022\027\n\023VERSIONING_DISABLED\020\001\022\026\n\022VERSIONING" +
-      "_ENABLED\020\002\022\030\n\024VERSIONING_SUSPENDED\020\003Bb\n\033" +
-      "yandex.cloud.api.storage.v1ZCgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/st" +
-      "orage/v1;storageb\006proto3"
+      "source_id\030\022 \001(\t\022\037\n\027disabled_statickey_au" +
+      "th\030\023 \001(\010\"!\n\003Tag\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t\"\234\004\n\003ACL\0222\n\006grants\030\001 \003(\0132\".yandex.clo" +
+      "ud.storage.v1.ACL.Grant\032\340\003\n\005Grant\022G\n\nper" +
+      "mission\030\001 \001(\0162-.yandex.cloud.storage.v1." +
+      "ACL.Grant.PermissionB\004\350\3071\001\022F\n\ngrant_type" +
+      "\030\002 \001(\0162,.yandex.cloud.storage.v1.ACL.Gra" +
+      "nt.GrantTypeB\004\350\3071\001\022\034\n\ngrantee_id\030\003 \001(\tB\010" +
+      "\212\3101\004<=50\"\243\001\n\nPermission\022\032\n\026PERMISSION_UN" +
+      "SPECIFIED\020\000\022\033\n\027PERMISSION_FULL_CONTROL\020\001" +
+      "\022\024\n\020PERMISSION_WRITE\020\002\022\030\n\024PERMISSION_WRI" +
+      "TE_ACP\020\003\022\023\n\017PERMISSION_READ\020\004\022\027\n\023PERMISS" +
+      "ION_READ_ACP\020\005\"\201\001\n\tGrantType\022\032\n\026GRANT_TY" +
+      "PE_UNSPECIFIED\020\000\022\026\n\022GRANT_TYPE_ACCOUNT\020\001" +
+      "\022&\n\"GRANT_TYPE_ALL_AUTHENTICATED_USERS\020\002" +
+      "\022\030\n\024GRANT_TYPE_ALL_USERS\020\003\"\233\001\n\024Anonymous" +
+      "AccessFlags\022(\n\004read\030\001 \001(\0132\032.google.proto" +
+      "buf.BoolValue\022(\n\004list\030\002 \001(\0132\032.google.pro" +
+      "tobuf.BoolValue\022/\n\013config_read\030\003 \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\"\344\002\n\010CorsRule\022\n\n" +
+      "\002id\030\001 \001(\t\022M\n\017allowed_methods\030\002 \003(\0162(.yan" +
+      "dex.cloud.storage.v1.CorsRule.MethodB\n\202\310" +
+      "1\002>0\220\3101\001\022\027\n\017allowed_headers\030\003 \003(\t\022\037\n\017all" +
+      "owed_origins\030\004 \003(\tB\006\202\3101\002>0\022\026\n\016expose_hea" +
+      "ders\030\005 \003(\t\0224\n\017max_age_seconds\030\006 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\"u\n\006Method\022\026\n\022ME" +
+      "THOD_UNSPECIFIED\020\000\022\016\n\nMETHOD_GET\020\001\022\017\n\013ME" +
+      "THOD_HEAD\020\002\022\017\n\013METHOD_POST\020\003\022\016\n\nMETHOD_P" +
+      "UT\020\004\022\021\n\rMETHOD_DELETE\020\005\"\274\006\n\017WebsiteSetti" +
+      "ngs\022\r\n\005index\030\001 \001(\t\022\r\n\005error\030\002 \001(\t\022N\n\025red" +
+      "irect_all_requests\030\003 \001(\0132/.yandex.cloud." +
+      "storage.v1.WebsiteSettings.Scheme\022K\n\rrou" +
+      "ting_rules\030\004 \003(\01324.yandex.cloud.storage." +
+      "v1.WebsiteSettings.RoutingRule\032_\n\006Scheme" +
+      "\022C\n\010protocol\030\001 \001(\01621.yandex.cloud.storag" +
+      "e.v1.WebsiteSettings.Protocol\022\020\n\010hostnam" +
+      "e\030\002 \001(\t\032O\n\tCondition\022\'\n\037http_error_code_" +
+      "returned_equals\030\001 \001(\t\022\031\n\021key_prefix_equa" +
+      "ls\030\002 \001(\t\032\322\001\n\010Redirect\022\020\n\010hostname\030\001 \001(\t\022" +
+      "4\n\022http_redirect_code\030\002 \001(\tB\030\362\3071\0243(0[1-9" +
+      "]|[1-9][0-9])\022C\n\010protocol\030\003 \001(\01621.yandex" +
+      ".cloud.storage.v1.WebsiteSettings.Protoc" +
+      "ol\022\037\n\027replace_key_prefix_with\030\004 \001(\t\022\030\n\020r" +
+      "eplace_key_with\030\005 \001(\t\032\231\001\n\013RoutingRule\022E\n" +
+      "\tcondition\030\001 \001(\01322.yandex.cloud.storage." +
+      "v1.WebsiteSettings.Condition\022C\n\010redirect" +
+      "\030\002 \001(\01321.yandex.cloud.storage.v1.Website" +
+      "Settings.Redirect\"K\n\010Protocol\022\030\n\024PROTOCO" +
+      "L_UNSPECIFIED\020\000\022\021\n\rPROTOCOL_HTTP\020\001\022\022\n\016PR" +
+      "OTOCOL_HTTPS\020\002\"\345\r\n\rLifecycleRule\022(\n\002id\030\001" +
+      " \001(\0132\034.google.protobuf.StringValue\022\017\n\007en" +
+      "abled\030\002 \001(\010\022A\n\006filter\030\003 \001(\01321.yandex.clo" +
+      "ud.storage.v1.LifecycleRule.RuleFilter\022E" +
+      "\n\nexpiration\030\004 \001(\01321.yandex.cloud.storag" +
+      "e.v1.LifecycleRule.Expiration\022F\n\013transit" +
+      "ions\030\005 \003(\01321.yandex.cloud.storage.v1.Lif" +
+      "ecycleRule.Transition\022[\n!abort_incomplet" +
+      "e_multipart_upload\030\006 \001(\01320.yandex.cloud." +
+      "storage.v1.LifecycleRule.AfterDays\022Z\n\025no" +
+      "ncurrent_expiration\030\007 \001(\0132;.yandex.cloud" +
+      ".storage.v1.LifecycleRule.NoncurrentExpi" +
+      "ration\022[\n\026noncurrent_transitions\030\010 \003(\0132;" +
+      ".yandex.cloud.storage.v1.LifecycleRule.N" +
+      "oncurrentTransition\022a\n\031noncurrent_delete" +
+      "_markers\030\t \001(\0132>.yandex.cloud.storage.v1" +
+      ".LifecycleRule.NoncurrentDeleteMarkers\032G" +
+      "\n\tAfterDays\022:\n\025days_after_expiration\030\001 \001" +
+      "(\0132\033.google.protobuf.Int64Value\032O\n\027Noncu" +
+      "rrentDeleteMarkers\0224\n\017noncurrent_days\030\001 " +
+      "\001(\0132\033.google.protobuf.Int64Value\032L\n\024Nonc" +
+      "urrentExpiration\0224\n\017noncurrent_days\030\001 \001(" +
+      "\0132\033.google.protobuf.Int64Value\032i\n\024Noncur" +
+      "rentTransition\0224\n\017noncurrent_days\030\001 \001(\0132" +
+      "\033.google.protobuf.Int64Value\022\033\n\rstorage_" +
+      "class\030\002 \001(\tB\004\350\3071\001\032\204\001\n\nTransition\022(\n\004date" +
+      "\030\001 \001(\0132\032.google.protobuf.Timestamp\022)\n\004da" +
+      "ys\030\002 \001(\0132\033.google.protobuf.Int64Value\022\033\n" +
+      "\rstorage_class\030\004 \001(\tB\004\350\3071\001J\004\010\003\020\004\032\243\001\n\nExp" +
+      "iration\022(\n\004date\030\001 \001(\0132\032.google.protobuf." +
+      "Timestamp\022)\n\004days\030\002 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022@\n\034expired_object_delete_ma" +
+      "rker\030\003 \001(\0132\032.google.protobuf.BoolValue\032\315" +
+      "\003\n\nRuleFilter\022\016\n\006prefix\030\001 \001(\t\022=\n\030object_" +
+      "size_greater_than\030\002 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022:\n\025object_size_less_than\030\003 " +
+      "\001(\0132\033.google.protobuf.Int64Value\022)\n\003tag\030" +
+      "\004 \001(\0132\034.yandex.cloud.storage.v1.Tag\022K\n\014a" +
+      "nd_operator\030\005 \001(\01325.yandex.cloud.storage" +
+      ".v1.LifecycleRule.RuleFilter.And\032\273\001\n\003And" +
+      "\022\016\n\006prefix\030\001 \001(\t\022=\n\030object_size_greater_" +
+      "than\030\002 \001(\0132\033.google.protobuf.Int64Value\022" +
+      ":\n\025object_size_less_than\030\003 \001(\0132\033.google." +
+      "protobuf.Int64Value\022)\n\003tag\030\004 \003(\0132\034.yande" +
+      "x.cloud.storage.v1.Tag\"\335\001\n\010Counters\022\032\n\022s" +
+      "imple_object_size\030\001 \001(\003\022\033\n\023simple_object" +
+      "_count\030\002 \001(\003\022\032\n\022objects_parts_size\030\003 \001(\003" +
+      "\022\033\n\023objects_parts_count\030\004 \001(\003\022\036\n\026multipa" +
+      "rt_objects_size\030\005 \001(\003\022\037\n\027multipart_objec" +
+      "ts_count\030\006 \001(\003\022\036\n\026active_multipart_count" +
+      "\030\007 \001(\003\"]\n\023OptionalSizeByClass\022\025\n\rstorage" +
+      "_class\030\001 \001(\t\022/\n\nclass_size\030\002 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\"8\n\013SizeByClass\022\025\n\r" +
+      "storage_class\030\001 \001(\t\022\022\n\nclass_size\030\002 \001(\003\"" +
+      "]\n\017CountersByClass\022\025\n\rstorage_class\030\001 \001(" +
+      "\t\0223\n\010counters\030\002 \001(\0132!.yandex.cloud.stora" +
+      "ge.v1.Counters\"\252\004\n\013BucketStats\022\014\n\004name\030\001" +
+      " \001(\t\022-\n\010max_size\030\002 \001(\0132\033.google.protobuf" +
+      ".Int64Value\022\021\n\tused_size\030\003 \001(\003\022M\n\027storag" +
+      "e_class_max_sizes\030\004 \003(\0132,.yandex.cloud.s" +
+      "torage.v1.OptionalSizeByClass\022F\n\030storage" +
+      "_class_used_sizes\030\005 \003(\0132$.yandex.cloud.s" +
+      "torage.v1.SizeByClass\022H\n\026storage_class_c" +
+      "ounters\030\006 \003(\0132(.yandex.cloud.storage.v1." +
+      "CountersByClass\022;\n\025default_storage_class" +
+      "\030\007 \001(\0132\034.google.protobuf.StringValue\022M\n\026" +
+      "anonymous_access_flags\030\010 \001(\0132-.yandex.cl" +
+      "oud.storage.v1.AnonymousAccessFlags\022.\n\nc" +
+      "reated_at\030\t \001(\0132\032.google.protobuf.Timest" +
+      "amp\022.\n\nupdated_at\030\n \001(\0132\032.google.protobu" +
+      "f.Timestamp\"\301\003\n\013HTTPSConfig\022\014\n\004name\030\001 \001(" +
+      "\t\022D\n\013source_type\030\002 \001(\0162/.yandex.cloud.st" +
+      "orage.v1.HTTPSConfig.SourceType\022,\n\006issue" +
+      "r\030\003 \001(\0132\034.google.protobuf.StringValue\022-\n" +
+      "\007subject\030\004 \001(\0132\034.google.protobuf.StringV" +
+      "alue\022\021\n\tdns_names\030\005 \003(\t\022.\n\nnot_before\030\006 " +
+      "\001(\0132\032.google.protobuf.Timestamp\022-\n\tnot_a" +
+      "fter\030\007 \001(\0132\032.google.protobuf.Timestamp\022\026" +
+      "\n\016certificate_id\030\010 \001(\t\"w\n\nSourceType\022\033\n\027" +
+      "SOURCE_TYPE_UNSPECIFIED\020\000\022\034\n\030SOURCE_TYPE" +
+      "_SELF_MANAGED\020\001\022.\n*SOURCE_TYPE_MANAGED_B" +
+      "Y_CERTIFICATE_MANAGER\020\002\"\363\003\n\nObjectLock\022D" +
+      "\n\006status\030\002 \001(\01624.yandex.cloud.storage.v1" +
+      ".ObjectLock.ObjectLockStatus\022O\n\021default_" +
+      "retention\030\003 \001(\01324.yandex.cloud.storage.v" +
+      "1.ObjectLock.DefaultRetention\032\324\001\n\020Defaul" +
+      "tRetention\022G\n\004mode\030\001 \001(\01629.yandex.cloud." +
+      "storage.v1.ObjectLock.DefaultRetention.M" +
+      "ode\022\016\n\004days\030\002 \001(\003H\000\022\017\n\005years\030\003 \001(\003H\000\"F\n\004" +
+      "Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\023\n\017MODE_GOVER" +
+      "NANCE\020\001\022\023\n\017MODE_COMPLIANCE\020\002B\016\n\006period\022\004" +
+      "\300\3011\001\"w\n\020ObjectLockStatus\022\"\n\036OBJECT_LOCK_" +
+      "STATUS_UNSPECIFIED\020\000\022\037\n\033OBJECT_LOCK_STAT" +
+      "US_DISABLED\020\001\022\036\n\032OBJECT_LOCK_STATUS_ENAB" +
+      "LED\020\002\"\223\001\n\nEncryption\022A\n\005rules\030\001 \003(\01322.ya" +
+      "ndex.cloud.storage.v1.Encryption.Encrypt" +
+      "ionRule\032B\n\016EncryptionRule\022\031\n\021kms_master_" +
+      "key_id\030\001 \001(\t\022\025\n\rsse_algorithm\030\002 \001(\t\"o\n\035B" +
+      "ucketAllowedPrivateEndpoints\022\017\n\007enabled\030" +
+      "\001 \001(\010\022\031\n\021private_endpoints\030\002 \003(\t\022\"\n\032forc" +
+      "e_cloud_console_access\030\003 \001(\010\"\230\014\n\026Invento" +
+      "ryConfiguration\022\020\n\002id\030\001 \001(\tB\004\350\3071\001\022_\n\013des" +
+      "tination\030\002 \001(\0132D.yandex.cloud.storage.v1" +
+      ".InventoryConfiguration.InventoryDestina" +
+      "tionB\004\350\3071\001\022n\n\030included_object_versions\030\003" +
+      " \001(\0162F.yandex.cloud.storage.v1.Inventory" +
+      "Configuration.IncludedObjectVersionsB\004\350\307" +
+      "1\001\022\022\n\nis_enabled\030\004 \001(\010\022Y\n\010schedule\030\005 \001(\013" +
+      "2A.yandex.cloud.storage.v1.InventoryConf" +
+      "iguration.InventoryScheduleB\004\350\3071\001\022O\n\006fil" +
+      "ter\030\006 \001(\0132?.yandex.cloud.storage.v1.Inve" +
+      "ntoryConfiguration.InventoryFilter\022V\n\017op" +
+      "tional_fields\030\007 \003(\0162=.yandex.cloud.stora" +
+      "ge.v1.InventoryConfiguration.OptionalFie" +
+      "ld\032\364\001\n\032InventoryBucketDestination\022\024\n\006buc" +
+      "ket\030\001 \001(\tB\004\350\3071\001\022g\n\006format\030\002 \001(\0162Q.yandex" +
+      ".cloud.storage.v1.InventoryConfiguration" +
+      ".InventoryBucketDestination.FormatB\004\350\3071\001" +
+      "\022,\n\006prefix\030\003 \001(\0132\034.google.protobuf.Strin" +
+      "gValue\")\n\006Format\022\026\n\022FORMAT_UNSPECIFIED\020\000" +
+      "\022\007\n\003CSV\020\001\032\204\001\n\024InventoryDestination\022l\n\022bu" +
+      "cket_destination\030\001 \001(\0132J.yandex.cloud.st" +
+      "orage.v1.InventoryConfiguration.Inventor" +
+      "yBucketDestinationB\004\350\3071\001\032\270\001\n\021InventorySc" +
+      "hedule\022d\n\tfrequency\030\001 \001(\0162K.yandex.cloud" +
+      ".storage.v1.InventoryConfiguration.Inven" +
+      "torySchedule.FrequencyB\004\350\3071\001\"=\n\tFrequenc" +
+      "y\022\031\n\025FREQUENCY_UNSPECIFIED\020\000\022\t\n\005DAILY\020\001\022" +
+      "\n\n\006WEEKLY\020\002\032\'\n\017InventoryFilter\022\024\n\006prefix" +
+      "\030\001 \001(\tB\004\350\3071\001\"X\n\026IncludedObjectVersions\022(" +
+      "\n$INCLUDED_OBJECT_VERSIONS_UNSPECIFIED\020\000" +
+      "\022\007\n\003ALL\020\001\022\013\n\007CURRENT\020\002\"\306\002\n\rOptionalField" +
+      "\022\036\n\032OPTIONAL_FIELD_UNSPECIFIED\020\000\022\010\n\004SIZE" +
+      "\020\001\022\026\n\022LAST_MODIFIED_DATE\020\002\022\021\n\rSTORAGE_CL" +
+      "ASS\020\003\022\010\n\004ETAG\020\004\022\031\n\025IS_MULTIPART_UPLOADED" +
+      "\020\005\022\025\n\021ENCRYPTION_STATUS\020\006\022!\n\035OBJECT_LOCK" +
+      "_RETAIN_UNTIL_DATE\020\007\022\024\n\020OBJECT_LOCK_MODE" +
+      "\020\010\022!\n\035OBJECT_LOCK_LEGAL_HOLD_STATUS\020\t\022\026\n" +
+      "\022CHECKSUM_ALGORITHM\020\n\022\036\n\032OBJECT_ACCESS_C" +
+      "ONTROL_LIST\020\013\022\020\n\014OBJECT_OWNER\020\014*s\n\nVersi" +
+      "oning\022\032\n\026VERSIONING_UNSPECIFIED\020\000\022\027\n\023VER" +
+      "SIONING_DISABLED\020\001\022\026\n\022VERSIONING_ENABLED" +
+      "\020\002\022\030\n\024VERSIONING_SUSPENDED\020\003Bb\n\033yandex.c" +
+      "loud.api.storage.v1ZCgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/storage/v1" +
+      ";storageb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -43945,7 +50473,7 @@ public final class BucketOuterClass {
     internal_static_yandex_cloud_storage_v1_Bucket_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_Bucket_descriptor,
-        new java.lang.String[] { "Id", "Name", "FolderId", "AnonymousAccessFlags", "DefaultStorageClass", "Versioning", "MaxSize", "Policy", "Acl", "CreatedAt", "Cors", "WebsiteSettings", "LifecycleRules", "Tags", "ObjectLock", "Encryption", "AllowedPrivateEndpoints", "ResourceId", });
+        new java.lang.String[] { "Id", "Name", "FolderId", "AnonymousAccessFlags", "DefaultStorageClass", "Versioning", "MaxSize", "Policy", "Acl", "CreatedAt", "Cors", "WebsiteSettings", "LifecycleRules", "Tags", "ObjectLock", "Encryption", "AllowedPrivateEndpoints", "ResourceId", "DisabledStatickeyAuth", });
     internal_static_yandex_cloud_storage_v1_Tag_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_storage_v1_Tag_fieldAccessorTable = new
@@ -44125,7 +50653,37 @@ public final class BucketOuterClass {
     internal_static_yandex_cloud_storage_v1_BucketAllowedPrivateEndpoints_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_BucketAllowedPrivateEndpoints_descriptor,
-        new java.lang.String[] { "Enabled", "PrivateEndpoints", });
+        new java.lang.String[] { "Enabled", "PrivateEndpoints", "ForceCloudConsoleAccess", });
+    internal_static_yandex_cloud_storage_v1_InventoryConfiguration_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_yandex_cloud_storage_v1_InventoryConfiguration_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_storage_v1_InventoryConfiguration_descriptor,
+        new java.lang.String[] { "Id", "Destination", "IncludedObjectVersions", "IsEnabled", "Schedule", "Filter", "OptionalFields", });
+    internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryBucketDestination_descriptor =
+      internal_static_yandex_cloud_storage_v1_InventoryConfiguration_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryBucketDestination_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryBucketDestination_descriptor,
+        new java.lang.String[] { "Bucket", "Format", "Prefix", });
+    internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryDestination_descriptor =
+      internal_static_yandex_cloud_storage_v1_InventoryConfiguration_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryDestination_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryDestination_descriptor,
+        new java.lang.String[] { "BucketDestination", });
+    internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventorySchedule_descriptor =
+      internal_static_yandex_cloud_storage_v1_InventoryConfiguration_descriptor.getNestedTypes().get(2);
+    internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventorySchedule_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventorySchedule_descriptor,
+        new java.lang.String[] { "Frequency", });
+    internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryFilter_descriptor =
+      internal_static_yandex_cloud_storage_v1_InventoryConfiguration_descriptor.getNestedTypes().get(3);
+    internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryFilter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_storage_v1_InventoryConfiguration_InventoryFilter_descriptor,
+        new java.lang.String[] { "Prefix", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);

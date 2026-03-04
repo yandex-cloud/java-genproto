@@ -39,26 +39,46 @@ public final class DesktopServiceOuterClass {
         getDesktopIdBytes();
 
     /**
+     * <pre>
+     * Mask of fields that need to be update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Mask of fields that need to be update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Mask of fields that need to be update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * New desktop name.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * New desktop name.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
      * @return The bytes for name.
      */
@@ -66,10 +86,18 @@ public final class DesktopServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * New desktop labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * New desktop labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -81,11 +109,19 @@ public final class DesktopServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * New desktop labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * New desktop labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -93,11 +129,35 @@ public final class DesktopServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * New desktop labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * New desktop description.
+     * </pre>
+     *
+     * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * New desktop description.
+     * </pre>
+     *
+     * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.clouddesktop.v1.api.UpdatePropertiesRequest}
@@ -114,6 +174,7 @@ public final class DesktopServiceOuterClass {
     private UpdatePropertiesRequest() {
       desktopId_ = "";
       name_ = "";
+      description_ = "";
     }
 
     @java.lang.Override
@@ -183,6 +244,12 @@ public final class DesktopServiceOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
             default: {
@@ -278,6 +345,10 @@ public final class DesktopServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Mask of fields that need to be update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return Whether the updateMask field is set.
      */
@@ -286,6 +357,10 @@ public final class DesktopServiceOuterClass {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Mask of fields that need to be update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return The updateMask.
      */
@@ -294,6 +369,10 @@ public final class DesktopServiceOuterClass {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Mask of fields that need to be update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     @java.lang.Override
@@ -304,6 +383,10 @@ public final class DesktopServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * New desktop name.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
      * @return The name.
      */
@@ -321,6 +404,10 @@ public final class DesktopServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New desktop name.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
      * @return The bytes for name.
      */
@@ -366,6 +453,10 @@ public final class DesktopServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * New desktop labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -384,6 +475,10 @@ public final class DesktopServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * New desktop labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -392,6 +487,10 @@ public final class DesktopServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * New desktop labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -405,6 +504,10 @@ public final class DesktopServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * New desktop labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -418,6 +521,52 @@ public final class DesktopServiceOuterClass {
         throw new java.lang.IllegalArgumentException();
       }
       return map.get(key);
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 5;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * New desktop description.
+     * </pre>
+     *
+     * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * New desktop description.
+     * </pre>
+     *
+     * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -449,6 +598,9 @@ public final class DesktopServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           4);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -478,6 +630,9 @@ public final class DesktopServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(4, labels__);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -504,6 +659,8 @@ public final class DesktopServiceOuterClass {
           .equals(other.getName())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -527,6 +684,8 @@ public final class DesktopServiceOuterClass {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
       }
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -693,6 +852,8 @@ public final class DesktopServiceOuterClass {
         name_ = "";
 
         internalGetMutableLabels().clear();
+        description_ = "";
+
         return this;
       }
 
@@ -729,6 +890,7 @@ public final class DesktopServiceOuterClass {
         result.name_ = name_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -790,6 +952,10 @@ public final class DesktopServiceOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -920,6 +1086,10 @@ public final class DesktopServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Mask of fields that need to be update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        * @return Whether the updateMask field is set.
        */
@@ -927,6 +1097,10 @@ public final class DesktopServiceOuterClass {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Mask of fields that need to be update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        * @return The updateMask.
        */
@@ -938,6 +1112,10 @@ public final class DesktopServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Mask of fields that need to be update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -954,6 +1132,10 @@ public final class DesktopServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Mask of fields that need to be update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(
@@ -968,6 +1150,10 @@ public final class DesktopServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Mask of fields that need to be update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -986,6 +1172,10 @@ public final class DesktopServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Mask of fields that need to be update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder clearUpdateMask() {
@@ -1000,6 +1190,10 @@ public final class DesktopServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Mask of fields that need to be update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -1008,6 +1202,10 @@ public final class DesktopServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Mask of fields that need to be update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -1019,6 +1217,10 @@ public final class DesktopServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Mask of fields that need to be update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1037,6 +1239,10 @@ public final class DesktopServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * New desktop name.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
        * @return The name.
        */
@@ -1053,6 +1259,10 @@ public final class DesktopServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New desktop name.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
        * @return The bytes for name.
        */
@@ -1070,6 +1280,10 @@ public final class DesktopServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New desktop name.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -1085,6 +1299,10 @@ public final class DesktopServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New desktop name.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
        * @return This builder for chaining.
        */
@@ -1095,6 +1313,10 @@ public final class DesktopServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New desktop name.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -1138,6 +1360,10 @@ public final class DesktopServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * New desktop labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -1156,6 +1382,10 @@ public final class DesktopServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * New desktop labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -1164,6 +1394,10 @@ public final class DesktopServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * New desktop labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -1177,6 +1411,10 @@ public final class DesktopServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * New desktop labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -1198,6 +1436,10 @@ public final class DesktopServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New desktop labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -1217,6 +1459,10 @@ public final class DesktopServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * New desktop labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -1232,6 +1478,10 @@ public final class DesktopServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New desktop labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -1239,6 +1489,102 @@ public final class DesktopServiceOuterClass {
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableLabels().getMutableMap()
             .putAll(values);
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * New desktop description.
+       * </pre>
+       *
+       * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New desktop description.
+       * </pre>
+       *
+       * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New desktop description.
+       * </pre>
+       *
+       * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New desktop description.
+       * </pre>
+       *
+       * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New desktop description.
+       * </pre>
+       *
+       * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -10413,6 +10759,100 @@ public final class DesktopServiceOuterClass {
      */
     yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.UserOrBuilder getUsersOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Name of the desktop.
+     * </pre>
+     *
+     * <code>string name = 24 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the desktop.
+     * </pre>
+     *
+     * <code>string name = 24 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Desktop labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 25 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Desktop labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 25 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Desktop labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 25 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Desktop labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 25 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Desktop labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 25 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * Desktop description.
+     * </pre>
+     *
+     * <code>string description = 26 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Desktop description.
+     * </pre>
+     *
+     * <code>string description = 26 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.clouddesktop.v1.api.CreateDesktopRequest}
@@ -10430,6 +10870,8 @@ public final class DesktopServiceOuterClass {
       desktopGroupId_ = "";
       subnetId_ = "";
       users_ = java.util.Collections.emptyList();
+      name_ = "";
+      description_ = "";
     }
 
     @java.lang.Override
@@ -10484,6 +10926,31 @@ public final class DesktopServiceOuterClass {
                   input.readMessage(yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.User.parser(), extensionRegistry));
               break;
             }
+            case 194: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 202: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 210: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -10511,6 +10978,18 @@ public final class DesktopServiceOuterClass {
       return yandex.cloud.api.clouddesktop.v1.DesktopServiceOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 25:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -10671,6 +11150,195 @@ public final class DesktopServiceOuterClass {
       return users_.get(index);
     }
 
+    public static final int NAME_FIELD_NUMBER = 24;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the desktop.
+     * </pre>
+     *
+     * <code>string name = 24 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the desktop.
+     * </pre>
+     *
+     * <code>string name = 24 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 25;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.clouddesktop.v1.DesktopServiceOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Desktop labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 25 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Desktop labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 25 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Desktop labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 25 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Desktop labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 25 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 26;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Desktop description.
+     * </pre>
+     *
+     * <code>string description = 26 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Desktop description.
+     * </pre>
+     *
+     * <code>string description = 26 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10694,6 +11362,18 @@ public final class DesktopServiceOuterClass {
       for (int i = 0; i < users_.size(); i++) {
         output.writeMessage(23, users_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 24, name_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          25);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 26, description_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10712,6 +11392,22 @@ public final class DesktopServiceOuterClass {
       for (int i = 0; i < users_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(23, users_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, name_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(25, labels__);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, description_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10734,6 +11430,12 @@ public final class DesktopServiceOuterClass {
           .equals(other.getSubnetId())) return false;
       if (!getUsersList()
           .equals(other.getUsersList())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10753,6 +11455,14 @@ public final class DesktopServiceOuterClass {
         hash = (37 * hash) + USERS_FIELD_NUMBER;
         hash = (53 * hash) + getUsersList().hashCode();
       }
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10860,6 +11570,28 @@ public final class DesktopServiceOuterClass {
         return yandex.cloud.api.clouddesktop.v1.DesktopServiceOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 25:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 25:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -10897,6 +11629,11 @@ public final class DesktopServiceOuterClass {
         } else {
           usersBuilder_.clear();
         }
+        name_ = "";
+
+        internalGetMutableLabels().clear();
+        description_ = "";
+
         return this;
       }
 
@@ -10935,6 +11672,10 @@ public final class DesktopServiceOuterClass {
         } else {
           result.users_ = usersBuilder_.build();
         }
+        result.name_ = name_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -11016,6 +11757,16 @@ public final class DesktopServiceOuterClass {
               usersBuilder_.addAllMessages(other.users_);
             }
           }
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11549,6 +12300,357 @@ public final class DesktopServiceOuterClass {
           users_ = null;
         }
         return usersBuilder_;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the desktop.
+       * </pre>
+       *
+       * <code>string name = 24 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the desktop.
+       * </pre>
+       *
+       * <code>string name = 24 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the desktop.
+       * </pre>
+       *
+       * <code>string name = 24 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the desktop.
+       * </pre>
+       *
+       * <code>string name = 24 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the desktop.
+       * </pre>
+       *
+       * <code>string name = 24 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Desktop labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 25 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Desktop labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 25 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Desktop labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 25 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Desktop labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 25 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Desktop labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 25 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Desktop labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 25 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Desktop labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 25 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Desktop description.
+       * </pre>
+       *
+       * <code>string description = 26 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Desktop description.
+       * </pre>
+       *
+       * <code>string description = 26 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Desktop description.
+       * </pre>
+       *
+       * <code>string description = 26 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Desktop description.
+       * </pre>
+       *
+       * <code>string description = 26 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Desktop description.
+       * </pre>
+       *
+       * <code>string description = 26 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -16099,11 +17201,19 @@ public final class DesktopServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the desktop.
+     * </pre>
+     *
      * <code>string desktop_id = 1;</code>
      * @return The desktopId.
      */
     java.lang.String getDesktopId();
     /**
+     * <pre>
+     * ID of the desktop.
+     * </pre>
+     *
      * <code>string desktop_id = 1;</code>
      * @return The bytes for desktopId.
      */
@@ -16197,6 +17307,10 @@ public final class DesktopServiceOuterClass {
     public static final int DESKTOP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object desktopId_;
     /**
+     * <pre>
+     * ID of the desktop.
+     * </pre>
+     *
      * <code>string desktop_id = 1;</code>
      * @return The desktopId.
      */
@@ -16214,6 +17328,10 @@ public final class DesktopServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the desktop.
+     * </pre>
+     *
      * <code>string desktop_id = 1;</code>
      * @return The bytes for desktopId.
      */
@@ -16536,6 +17654,10 @@ public final class DesktopServiceOuterClass {
 
       private java.lang.Object desktopId_ = "";
       /**
+       * <pre>
+       * ID of the desktop.
+       * </pre>
+       *
        * <code>string desktop_id = 1;</code>
        * @return The desktopId.
        */
@@ -16552,6 +17674,10 @@ public final class DesktopServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the desktop.
+       * </pre>
+       *
        * <code>string desktop_id = 1;</code>
        * @return The bytes for desktopId.
        */
@@ -16569,6 +17695,10 @@ public final class DesktopServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the desktop.
+       * </pre>
+       *
        * <code>string desktop_id = 1;</code>
        * @param value The desktopId to set.
        * @return This builder for chaining.
@@ -16584,6 +17714,10 @@ public final class DesktopServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the desktop.
+       * </pre>
+       *
        * <code>string desktop_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -16594,6 +17728,10 @@ public final class DesktopServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the desktop.
+       * </pre>
+       *
        * <code>string desktop_id = 1;</code>
        * @param value The bytes for desktopId to set.
        * @return This builder for chaining.
@@ -16667,11 +17805,19 @@ public final class DesktopServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the desktop.
+     * </pre>
+     *
      * <code>string desktop_id = 1;</code>
      * @return The desktopId.
      */
     java.lang.String getDesktopId();
     /**
+     * <pre>
+     * ID of the desktop.
+     * </pre>
+     *
      * <code>string desktop_id = 1;</code>
      * @return The bytes for desktopId.
      */
@@ -16765,6 +17911,10 @@ public final class DesktopServiceOuterClass {
     public static final int DESKTOP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object desktopId_;
     /**
+     * <pre>
+     * ID of the desktop.
+     * </pre>
+     *
      * <code>string desktop_id = 1;</code>
      * @return The desktopId.
      */
@@ -16782,6 +17932,10 @@ public final class DesktopServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the desktop.
+     * </pre>
+     *
      * <code>string desktop_id = 1;</code>
      * @return The bytes for desktopId.
      */
@@ -17104,6 +18258,10 @@ public final class DesktopServiceOuterClass {
 
       private java.lang.Object desktopId_ = "";
       /**
+       * <pre>
+       * ID of the desktop.
+       * </pre>
+       *
        * <code>string desktop_id = 1;</code>
        * @return The desktopId.
        */
@@ -17120,6 +18278,10 @@ public final class DesktopServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the desktop.
+       * </pre>
+       *
        * <code>string desktop_id = 1;</code>
        * @return The bytes for desktopId.
        */
@@ -17137,6 +18299,10 @@ public final class DesktopServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the desktop.
+       * </pre>
+       *
        * <code>string desktop_id = 1;</code>
        * @param value The desktopId to set.
        * @return This builder for chaining.
@@ -17152,6 +18318,10 @@ public final class DesktopServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the desktop.
+       * </pre>
+       *
        * <code>string desktop_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -17162,6 +18332,10 @@ public final class DesktopServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the desktop.
+       * </pre>
+       *
        * <code>string desktop_id = 1;</code>
        * @param value The bytes for desktopId to set.
        * @return This builder for chaining.
@@ -17235,11 +18409,19 @@ public final class DesktopServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the desktop.
+     * </pre>
+     *
      * <code>string desktop_id = 1;</code>
      * @return The desktopId.
      */
     java.lang.String getDesktopId();
     /**
+     * <pre>
+     * ID of the desktop.
+     * </pre>
+     *
      * <code>string desktop_id = 1;</code>
      * @return The bytes for desktopId.
      */
@@ -17333,6 +18515,10 @@ public final class DesktopServiceOuterClass {
     public static final int DESKTOP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object desktopId_;
     /**
+     * <pre>
+     * ID of the desktop.
+     * </pre>
+     *
      * <code>string desktop_id = 1;</code>
      * @return The desktopId.
      */
@@ -17350,6 +18536,10 @@ public final class DesktopServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the desktop.
+     * </pre>
+     *
      * <code>string desktop_id = 1;</code>
      * @return The bytes for desktopId.
      */
@@ -17672,6 +18862,10 @@ public final class DesktopServiceOuterClass {
 
       private java.lang.Object desktopId_ = "";
       /**
+       * <pre>
+       * ID of the desktop.
+       * </pre>
+       *
        * <code>string desktop_id = 1;</code>
        * @return The desktopId.
        */
@@ -17688,6 +18882,10 @@ public final class DesktopServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the desktop.
+       * </pre>
+       *
        * <code>string desktop_id = 1;</code>
        * @return The bytes for desktopId.
        */
@@ -17705,6 +18903,10 @@ public final class DesktopServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the desktop.
+       * </pre>
+       *
        * <code>string desktop_id = 1;</code>
        * @param value The desktopId to set.
        * @return This builder for chaining.
@@ -17720,6 +18922,10 @@ public final class DesktopServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the desktop.
+       * </pre>
+       *
        * <code>string desktop_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -17730,6 +18936,10 @@ public final class DesktopServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the desktop.
+       * </pre>
+       *
        * <code>string desktop_id = 1;</code>
        * @param value The bytes for desktopId to set.
        * @return This builder for chaining.
@@ -17803,11 +19013,19 @@ public final class DesktopServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the desktop.
+     * </pre>
+     *
      * <code>string desktop_id = 1;</code>
      * @return The desktopId.
      */
     java.lang.String getDesktopId();
     /**
+     * <pre>
+     * ID of the desktop.
+     * </pre>
+     *
      * <code>string desktop_id = 1;</code>
      * @return The bytes for desktopId.
      */
@@ -17901,6 +19119,10 @@ public final class DesktopServiceOuterClass {
     public static final int DESKTOP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object desktopId_;
     /**
+     * <pre>
+     * ID of the desktop.
+     * </pre>
+     *
      * <code>string desktop_id = 1;</code>
      * @return The desktopId.
      */
@@ -17918,6 +19140,10 @@ public final class DesktopServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the desktop.
+     * </pre>
+     *
      * <code>string desktop_id = 1;</code>
      * @return The bytes for desktopId.
      */
@@ -18240,6 +19466,10 @@ public final class DesktopServiceOuterClass {
 
       private java.lang.Object desktopId_ = "";
       /**
+       * <pre>
+       * ID of the desktop.
+       * </pre>
+       *
        * <code>string desktop_id = 1;</code>
        * @return The desktopId.
        */
@@ -18256,6 +19486,10 @@ public final class DesktopServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the desktop.
+       * </pre>
+       *
        * <code>string desktop_id = 1;</code>
        * @return The bytes for desktopId.
        */
@@ -18273,6 +19507,10 @@ public final class DesktopServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the desktop.
+       * </pre>
+       *
        * <code>string desktop_id = 1;</code>
        * @param value The desktopId to set.
        * @return This builder for chaining.
@@ -18288,6 +19526,10 @@ public final class DesktopServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the desktop.
+       * </pre>
+       *
        * <code>string desktop_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -18298,6 +19540,10 @@ public final class DesktopServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the desktop.
+       * </pre>
+       *
        * <code>string desktop_id = 1;</code>
        * @param value The bytes for desktopId to set.
        * @return This builder for chaining.
@@ -18437,6 +19683,11 @@ public final class DesktopServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -18507,7 +19758,7 @@ public final class DesktopServiceOuterClass {
       "loud/clouddesktop/v1/desktop.proto\032&yand" +
       "ex/cloud/operation/operation.proto\032\035yand" +
       "ex/cloud/validation.proto\032 google/protob" +
-      "uf/field_mask.proto\"\347\002\n\027UpdateProperties" +
+      "uf/field_mask.proto\"\210\003\n\027UpdateProperties" +
       "Request\022 \n\ndesktop_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
       "0\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf" +
       ".FieldMask\0221\n\004name\030\003 \001(\tB#\362\3071\037|[a-z]([-a" +
@@ -18515,113 +19766,121 @@ public final class DesktopServiceOuterClass {
       ".yandex.cloud.clouddesktop.v1.api.Update" +
       "PropertiesRequest.LabelsEntryB?\202\3101\004<=64\212" +
       "\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a" +
-      "-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"0\n\014StartRequest\022 \n" +
-      "\ndesktop_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"/\n\013StopR" +
-      "equest\022 \n\ndesktop_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\"1\n\rUpdateRequest\022 \n\ndesktop_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\"5\n\021GetDesktopRequest\022 \n\ndesk" +
-      "top_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"q\n\021GetRdpFile" +
-      "Request\022 \n\ndesktop_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022:\n\004user\030\002 \001(\0132&.yandex.cloud.clouddesk" +
-      "top.v1.api.UserB\004\350\3071\000\"\243\001\n\017RdpFileRespons" +
-      "e\022O\n\007headers\030\001 \003(\0132>.yandex.cloud.cloudd" +
-      "esktop.v1.api.RdpFileResponse.HeadersEnt" +
-      "ry\022\017\n\007content\030\002 \001(\t\032.\n\014HeadersEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\263\001\n\023ListDesk" +
-      "topsRequest\022\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022\035\n\tpage_size\030\025 \001(\003B\n\372\3071\0060-1000\022\035\n\np" +
-      "age_token\030\026 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\027 \001" +
-      "(\tB\n\212\3101\006<=1000\022\033\n\010order_by\030\030 \001(\tB\t\212\3101\005<=" +
-      "100J\004\010\003\020\025\"r\n\024ListDesktopsResponse\022;\n\010des" +
-      "ktops\030\001 \003(\0132).yandex.cloud.clouddesktop." +
-      "v1.api.Desktop\022\027\n\017next_page_token\030\026 \001(\tJ" +
-      "\004\010\002\020\026\"\240\001\n\034ListDesktopOperationsRequest\022 " +
-      "\n\ndesktop_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
-      "_size\030\025 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\026 " +
-      "\001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\027 \001(\tB\n\212\3101\006<=10" +
-      "00J\004\010\002\020\025\"u\n\035ListDesktopOperationsRespons" +
-      "e\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.ope" +
-      "ration.Operation\022\027\n\017next_page_token\030\026 \001(" +
-      "\tJ\004\010\002\020\026\"\244\001\n\024CreateDesktopRequest\022&\n\020desk" +
-      "top_group_id\030\003 \001(\tB\014\350\3071\001\212\3101\004<=50\022\037\n\tsubn" +
-      "et_id\030\004 \001(\tB\014\350\3071\000\212\3101\004<=50\022=\n\005users\030\027 \003(\013" +
-      "2&.yandex.cloud.clouddesktop.v1.api.User" +
-      "B\006\202\3101\002>0J\004\010\005\020\027\"+\n\025CreateDesktopMetadata\022" +
-      "\022\n\ndesktop_id\030\001 \001(\t\"8\n\024DeleteDesktopRequ" +
-      "est\022 \n\ndesktop_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n" +
-      "\025DeleteDesktopMetadata\022\022\n\ndesktop_id\030\001 \001" +
-      "(\t\"t\n\024ResetPasswordRequest\022 \n\ndesktop_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022:\n\004user\030\002 \001(\0132&.yan" +
-      "dex.cloud.clouddesktop.v1.api.UserB\004\350\3071\001" +
-      "\")\n\025ResetPasswordResponse\022\020\n\010password\030\001 " +
-      "\001(\t\"2\n\016RestartRequest\022 \n\ndesktop_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\",\n\026RestartDesktopMetadat" +
-      "a\022\022\n\ndesktop_id\030\001 \001(\t\"5\n\037UpdateDesktopPr" +
-      "opertiesMetadata\022\022\n\ndesktop_id\030\001 \001(\t\"*\n\024" +
-      "StartDesktopMetadata\022\022\n\ndesktop_id\030\001 \001(\t" +
-      "\")\n\023StopDesktopMetadata\022\022\n\ndesktop_id\030\001 " +
-      "\001(\t\"+\n\025UpdateDesktopMetadata\022\022\n\ndesktop_" +
-      "id\030\001 \001(\t2\311\021\n\016DesktopService\022\226\001\n\003Get\0223.ya" +
-      "ndex.cloud.clouddesktop.v1.api.GetDeskto" +
-      "pRequest\032).yandex.cloud.clouddesktop.v1." +
-      "api.Desktop\"/\202\323\344\223\002)\022\'/cloud-desktop/v1/d" +
-      "esktops/{desktop_id}\022\260\001\n\nGetRdpFile\0223.ya" +
-      "ndex.cloud.clouddesktop.v1.api.GetRdpFil" +
-      "eRequest\0321.yandex.cloud.clouddesktop.v1." +
-      "api.RdpFileResponse\":\202\323\344\223\0024\0222/cloud-desk" +
-      "top/v1/desktops/{desktop_id}:getRdpFile\022" +
-      "\231\001\n\004List\0225.yandex.cloud.clouddesktop.v1." +
-      "api.ListDesktopsRequest\0326.yandex.cloud.c" +
-      "louddesktop.v1.api.ListDesktopsResponse\"" +
-      "\"\202\323\344\223\002\034\022\032/cloud-desktop/v1/desktops\022\315\001\n\016" +
-      "ListOperations\022>.yandex.cloud.clouddeskt" +
-      "op.v1.api.ListDesktopOperationsRequest\032?" +
-      ".yandex.cloud.clouddesktop.v1.api.ListDe" +
-      "sktopOperationsResponse\":\202\323\344\223\0024\0222/cloud-" +
-      "desktop/v1/desktops/{desktop_id}/operati" +
-      "ons\022\256\001\n\006Create\0226.yandex.cloud.clouddeskt" +
-      "op.v1.api.CreateDesktopRequest\032!.yandex." +
-      "cloud.operation.Operation\"I\202\323\344\223\002\037\"\032/clou" +
-      "d-desktop/v1/desktops:\001*\262\322* \n\025CreateDesk" +
-      "topMetadata\022\007Desktop\022\322\001\n\020UpdatePropertie" +
-      "s\0229.yandex.cloud.clouddesktop.v1.api.Upd" +
-      "atePropertiesRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"`\202\323\344\223\002,2\'/cloud-desktop/" +
-      "v1/desktops/{desktop_id}:\001*\262\322**\n\037UpdateD" +
-      "esktopPropertiesMetadata\022\007Desktop\022\306\001\n\006De" +
-      "lete\0226.yandex.cloud.clouddesktop.v1.api." +
-      "DeleteDesktopRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"a\202\323\344\223\002)*\'/cloud-desktop/" +
-      "v1/desktops/{desktop_id}\262\322*.\n\025DeleteDesk" +
-      "topMetadata\022\025google.protobuf.Empty\022\302\001\n\rR" +
-      "esetPassword\0226.yandex.cloud.clouddesktop" +
-      ".v1.api.ResetPasswordRequest\0327.yandex.cl" +
-      "oud.clouddesktop.v1.api.ResetPasswordRes" +
-      "ponse\"@\202\323\344\223\002:\"5/cloud-desktop/v1/desktop" +
-      "s/{desktop_id}:resetPassword:\001*\022\277\001\n\007Rest" +
-      "art\0220.yandex.cloud.clouddesktop.v1.api.R" +
-      "estartRequest\032!.yandex.cloud.operation.O" +
-      "peration\"_\202\323\344\223\0024\"//cloud-desktop/v1/desk" +
-      "tops/{desktop_id}:restart:\001*\262\322*!\n\026Restar" +
-      "tDesktopMetadata\022\007Desktop\022\270\001\n\006Update\022/.y" +
-      "andex.cloud.clouddesktop.v1.api.UpdateRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"Z\202\323\344\223\00202./cloud-desktop/v1/desktops/{de" +
-      "sktop_id}:update\262\322* \n\025UpdateDesktopMetad" +
-      "ata\022\007Desktop\022\267\001\n\005Start\022..yandex.cloud.cl" +
-      "ouddesktop.v1.api.StartRequest\032!.yandex." +
-      "cloud.operation.Operation\"[\202\323\344\223\0022\"-/clou" +
-      "d-desktop/v1/desktops/{desktop_id}:start" +
-      ":\001*\262\322*\037\n\024StartDesktopMetadata\022\007Desktop\022\263" +
-      "\001\n\004Stop\022-.yandex.cloud.clouddesktop.v1.a" +
-      "pi.StopRequest\032!.yandex.cloud.operation." +
-      "Operation\"Y\202\323\344\223\0021\",/cloud-desktop/v1/des" +
-      "ktops/{desktop_id}:stop:\001*\262\322*\036\n\023StopDesk" +
-      "topMetadata\022\007DesktopBq\n yandex.cloud.api" +
-      ".clouddesktop.v1ZMgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/clouddesktop/" +
-      "v1;clouddesktopb\006proto3"
+      "-z][-_0-9a-z]*\022\037\n\013description\030\005 \001(\tB\n\212\3101" +
+      "\006<=1024\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\"0\n\014StartRequest\022 \n\ndeskto" +
+      "p_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"/\n\013StopRequest\022" +
+      " \n\ndesktop_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"1\n\rUpd" +
+      "ateRequest\022 \n\ndesktop_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\"5\n\021GetDesktopRequest\022 \n\ndesktop_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"q\n\021GetRdpFileRequest" +
+      "\022 \n\ndesktop_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022:\n\004us" +
+      "er\030\002 \001(\0132&.yandex.cloud.clouddesktop.v1." +
+      "api.UserB\004\350\3071\000\"\243\001\n\017RdpFileResponse\022O\n\007he" +
+      "aders\030\001 \003(\0132>.yandex.cloud.clouddesktop." +
+      "v1.api.RdpFileResponse.HeadersEntry\022\017\n\007c" +
+      "ontent\030\002 \001(\t\032.\n\014HeadersEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\263\001\n\023ListDesktopsReq" +
+      "uest\022\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n" +
+      "\tpage_size\030\025 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_tok" +
+      "en\030\026 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\027 \001(\tB\n\212\3101" +
+      "\006<=1000\022\033\n\010order_by\030\030 \001(\tB\t\212\3101\005<=100J\004\010\003" +
+      "\020\025\"r\n\024ListDesktopsResponse\022;\n\010desktops\030\001" +
+      " \003(\0132).yandex.cloud.clouddesktop.v1.api." +
+      "Desktop\022\027\n\017next_page_token\030\026 \001(\tJ\004\010\002\020\026\"\240" +
+      "\001\n\034ListDesktopOperationsRequest\022 \n\ndeskt" +
+      "op_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\025" +
+      " \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\026 \001(\tB\t\212\310" +
+      "1\005<=100\022\032\n\006filter\030\027 \001(\tB\n\212\3101\006<=1000J\004\010\002\020" +
+      "\025\"u\n\035ListDesktopOperationsResponse\0225\n\nop" +
+      "erations\030\001 \003(\0132!.yandex.cloud.operation." +
+      "Operation\022\027\n\017next_page_token\030\026 \001(\tJ\004\010\002\020\026" +
+      "\"\275\003\n\024CreateDesktopRequest\022&\n\020desktop_gro" +
+      "up_id\030\003 \001(\tB\014\350\3071\001\212\3101\004<=50\022\037\n\tsubnet_id\030\004" +
+      " \001(\tB\014\350\3071\000\212\3101\004<=50\022=\n\005users\030\027 \003(\0132&.yand" +
+      "ex.cloud.clouddesktop.v1.api.UserB\006\202\3101\002>" +
+      "0\0221\n\004name\030\030 \001(\tB#\362\3071\037|[a-z]([-a-z0-9]{0," +
+      "61}[a-z0-9])\022\223\001\n\006labels\030\031 \003(\0132B.yandex.c" +
+      "loud.clouddesktop.v1.api.CreateDesktopRe" +
+      "quest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[" +
+      "-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z" +
+      "]*\022\037\n\013description\030\032 \001(\tB\n\212\3101\006<=1024\032-\n\013L" +
+      "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
+      "8\001J\004\010\005\020\027\"+\n\025CreateDesktopMetadata\022\022\n\ndes" +
+      "ktop_id\030\001 \001(\t\"8\n\024DeleteDesktopRequest\022 \n" +
+      "\ndesktop_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025Delet" +
+      "eDesktopMetadata\022\022\n\ndesktop_id\030\001 \001(\t\"t\n\024" +
+      "ResetPasswordRequest\022 \n\ndesktop_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022:\n\004user\030\002 \001(\0132&.yandex.cl" +
+      "oud.clouddesktop.v1.api.UserB\004\350\3071\001\")\n\025Re" +
+      "setPasswordResponse\022\020\n\010password\030\001 \001(\t\"2\n" +
+      "\016RestartRequest\022 \n\ndesktop_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\",\n\026RestartDesktopMetadata\022\022\n\nd" +
+      "esktop_id\030\001 \001(\t\"5\n\037UpdateDesktopProperti" +
+      "esMetadata\022\022\n\ndesktop_id\030\001 \001(\t\"*\n\024StartD" +
+      "esktopMetadata\022\022\n\ndesktop_id\030\001 \001(\t\")\n\023St" +
+      "opDesktopMetadata\022\022\n\ndesktop_id\030\001 \001(\t\"+\n" +
+      "\025UpdateDesktopMetadata\022\022\n\ndesktop_id\030\001 \001" +
+      "(\t2\314\021\n\016DesktopService\022\226\001\n\003Get\0223.yandex.c" +
+      "loud.clouddesktop.v1.api.GetDesktopReque" +
+      "st\032).yandex.cloud.clouddesktop.v1.api.De" +
+      "sktop\"/\202\323\344\223\002)\022\'/cloud-desktop/v1/desktop" +
+      "s/{desktop_id}\022\260\001\n\nGetRdpFile\0223.yandex.c" +
+      "loud.clouddesktop.v1.api.GetRdpFileReque" +
+      "st\0321.yandex.cloud.clouddesktop.v1.api.Rd" +
+      "pFileResponse\":\202\323\344\223\0024\0222/cloud-desktop/v1" +
+      "/desktops/{desktop_id}:getRdpFile\022\231\001\n\004Li" +
+      "st\0225.yandex.cloud.clouddesktop.v1.api.Li" +
+      "stDesktopsRequest\0326.yandex.cloud.cloudde" +
+      "sktop.v1.api.ListDesktopsResponse\"\"\202\323\344\223\002" +
+      "\034\022\032/cloud-desktop/v1/desktops\022\315\001\n\016ListOp" +
+      "erations\022>.yandex.cloud.clouddesktop.v1." +
+      "api.ListDesktopOperationsRequest\032?.yande" +
+      "x.cloud.clouddesktop.v1.api.ListDesktopO" +
+      "perationsResponse\":\202\323\344\223\0024\0222/cloud-deskto" +
+      "p/v1/desktops/{desktop_id}/operations\022\256\001" +
+      "\n\006Create\0226.yandex.cloud.clouddesktop.v1." +
+      "api.CreateDesktopRequest\032!.yandex.cloud." +
+      "operation.Operation\"I\202\323\344\223\002\037\"\032/cloud-desk" +
+      "top/v1/desktops:\001*\262\322* \n\025CreateDesktopMet" +
+      "adata\022\007Desktop\022\322\001\n\020UpdateProperties\0229.ya" +
+      "ndex.cloud.clouddesktop.v1.api.UpdatePro" +
+      "pertiesRequest\032!.yandex.cloud.operation." +
+      "Operation\"`\202\323\344\223\002,2\'/cloud-desktop/v1/des" +
+      "ktops/{desktop_id}:\001*\262\322**\n\037UpdateDesktop" +
+      "PropertiesMetadata\022\007Desktop\022\306\001\n\006Delete\0226" +
+      ".yandex.cloud.clouddesktop.v1.api.Delete" +
+      "DesktopRequest\032!.yandex.cloud.operation." +
+      "Operation\"a\202\323\344\223\002)*\'/cloud-desktop/v1/des" +
+      "ktops/{desktop_id}\262\322*.\n\025DeleteDesktopMet" +
+      "adata\022\025google.protobuf.Empty\022\302\001\n\rResetPa" +
+      "ssword\0226.yandex.cloud.clouddesktop.v1.ap" +
+      "i.ResetPasswordRequest\0327.yandex.cloud.cl" +
+      "ouddesktop.v1.api.ResetPasswordResponse\"" +
+      "@\202\323\344\223\002:\"5/cloud-desktop/v1/desktops/{des" +
+      "ktop_id}:resetPassword:\001*\022\277\001\n\007Restart\0220." +
+      "yandex.cloud.clouddesktop.v1.api.Restart" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"_\202\323\344\223\0024\"//cloud-desktop/v1/desktops/{" +
+      "desktop_id}:restart:\001*\262\322*!\n\026RestartDeskt" +
+      "opMetadata\022\007Desktop\022\273\001\n\006Update\022/.yandex." +
+      "cloud.clouddesktop.v1.api.UpdateRequest\032" +
+      "!.yandex.cloud.operation.Operation\"]\202\323\344\223" +
+      "\00232./cloud-desktop/v1/desktops/{desktop_" +
+      "id}:update:\001*\262\322* \n\025UpdateDesktopMetadata" +
+      "\022\007Desktop\022\267\001\n\005Start\022..yandex.cloud.cloud" +
+      "desktop.v1.api.StartRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"[\202\323\344\223\0022\"-/cloud-d" +
+      "esktop/v1/desktops/{desktop_id}:start:\001*" +
+      "\262\322*\037\n\024StartDesktopMetadata\022\007Desktop\022\263\001\n\004" +
+      "Stop\022-.yandex.cloud.clouddesktop.v1.api." +
+      "StopRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"Y\202\323\344\223\0021\",/cloud-desktop/v1/deskto" +
+      "ps/{desktop_id}:stop:\001*\262\322*\036\n\023StopDesktop" +
+      "Metadata\022\007DesktopBq\n yandex.cloud.api.cl" +
+      "ouddesktop.v1ZMgithub.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/clouddesktop/v1;" +
+      "clouddesktopb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18638,7 +19897,7 @@ public final class DesktopServiceOuterClass {
     internal_static_yandex_cloud_clouddesktop_v1_api_UpdatePropertiesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_clouddesktop_v1_api_UpdatePropertiesRequest_descriptor,
-        new java.lang.String[] { "DesktopId", "UpdateMask", "Name", "Labels", });
+        new java.lang.String[] { "DesktopId", "UpdateMask", "Name", "Labels", "Description", });
     internal_static_yandex_cloud_clouddesktop_v1_api_UpdatePropertiesRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_clouddesktop_v1_api_UpdatePropertiesRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_clouddesktop_v1_api_UpdatePropertiesRequest_LabelsEntry_fieldAccessorTable = new
@@ -18716,7 +19975,13 @@ public final class DesktopServiceOuterClass {
     internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopRequest_descriptor,
-        new java.lang.String[] { "DesktopGroupId", "SubnetId", "Users", });
+        new java.lang.String[] { "DesktopGroupId", "SubnetId", "Users", "Name", "Labels", "Description", });
+    internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopMetadata_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_clouddesktop_v1_api_CreateDesktopMetadata_fieldAccessorTable = new

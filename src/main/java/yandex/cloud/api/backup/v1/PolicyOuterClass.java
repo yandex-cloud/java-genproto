@@ -3210,6 +3210,22 @@ public final class PolicyOuterClass {
        * <code>POST_COMMAND = 2;</code>
        */
       POST_COMMAND(2),
+      /**
+       * <pre>
+       * Launch command before data capture (snapshot execution)
+       * </pre>
+       *
+       * <code>PRE_DATA_COMMAND = 3;</code>
+       */
+      PRE_DATA_COMMAND(3),
+      /**
+       * <pre>
+       * Launch command after data capture (snapshot execution)
+       * </pre>
+       *
+       * <code>POST_DATA_COMMAND = 4;</code>
+       */
+      POST_DATA_COMMAND(4),
       UNRECOGNIZED(-1),
       ;
 
@@ -3233,6 +3249,22 @@ public final class PolicyOuterClass {
        * <code>POST_COMMAND = 2;</code>
        */
       public static final int POST_COMMAND_VALUE = 2;
+      /**
+       * <pre>
+       * Launch command before data capture (snapshot execution)
+       * </pre>
+       *
+       * <code>PRE_DATA_COMMAND = 3;</code>
+       */
+      public static final int PRE_DATA_COMMAND_VALUE = 3;
+      /**
+       * <pre>
+       * Launch command after data capture (snapshot execution)
+       * </pre>
+       *
+       * <code>POST_DATA_COMMAND = 4;</code>
+       */
+      public static final int POST_DATA_COMMAND_VALUE = 4;
 
 
       public final int getNumber() {
@@ -3262,6 +3294,8 @@ public final class PolicyOuterClass {
           case 0: return COMMAND_TYPE_UNSPECIFIED;
           case 1: return PRE_COMMAND;
           case 2: return POST_COMMAND;
+          case 3: return PRE_DATA_COMMAND;
+          case 4: return POST_DATA_COMMAND;
           default: return null;
         }
       }
@@ -24797,7 +24831,7 @@ public final class PolicyOuterClass {
       "\n\nupdated_at\030\004 \001(\0132\032.google.protobuf.Tim" +
       "estamp\022\017\n\007enabled\030\005 \001(\010\0228\n\010settings\030\006 \001(" +
       "\0132&.yandex.cloud.backup.v1.PolicySetting" +
-      "s\022\021\n\tfolder_id\030\007 \001(\t\"\331%\n\016PolicySettings\022" +
+      "s\022\021\n\tfolder_id\030\007 \001(\t\"\206&\n\016PolicySettings\022" +
       "M\n\013compression\030\001 \001(\01622.yandex.cloud.back" +
       "up.v1.PolicySettings.CompressionB\004\350\3071\001\0224" +
       "\n\006format\030\002 \001(\0162\036.yandex.cloud.backup.v1." +
@@ -24915,22 +24949,23 @@ public final class PolicyOuterClass {
       "\n\006FRIDAY\020\005\022\014\n\010SATURDAY\020\006\022\n\n\006SUNDAY\020\007\"v\n\024" +
       "ChangedBlockTracking\022&\n\"CHANGED_BLOCK_TR" +
       "ACKING_UNSPECIFIED\020\000\022\022\n\016USE_IF_ENABLED\020\001" +
-      "\022\022\n\016ENABLE_AND_USE\020\002\022\016\n\nDO_NOT_USE\020\003\"N\n\013" +
+      "\022\022\n\016ENABLE_AND_USE\020\002\022\016\n\nDO_NOT_USE\020\003\"{\n\013" +
       "CommandType\022\034\n\030COMMAND_TYPE_UNSPECIFIED\020" +
-      "\000\022\017\n\013PRE_COMMAND\020\001\022\020\n\014POST_COMMAND\020\002J\004\010\r" +
-      "\020\016J\004\010\016\020\017\"\242\002\n\021PolicyApplication\022\021\n\tpolicy" +
-      "_id\030\001 \001(\t\022\033\n\023compute_instance_id\030\002 \001(\t\022\017" +
-      "\n\007enabled\030\003 \001(\010\022@\n\006status\030\004 \001(\01620.yandex" +
-      ".cloud.backup.v1.PolicyApplication.Statu" +
-      "s\022.\n\ncreated_at\030\005 \001(\0132\032.google.protobuf." +
-      "Timestamp\022\025\n\ris_processing\030\006 \001(\010\"C\n\006Stat" +
-      "us\022\026\n\022STATUS_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\013\n\007RU" +
-      "NNING\020\002\022\014\n\010DISABLED\020\003*J\n\006Format\022\026\n\022FORMA" +
-      "T_UNSPECIFIED\020\000\022\016\n\nVERSION_11\020\001\022\016\n\nVERSI" +
-      "ON_12\020\002\022\010\n\004AUTO\020\003B_\n\032yandex.cloud.api.ba" +
-      "ckup.v1ZAgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/backup/v1;backupb\006prot" +
-      "o3"
+      "\000\022\017\n\013PRE_COMMAND\020\001\022\020\n\014POST_COMMAND\020\002\022\024\n\020" +
+      "PRE_DATA_COMMAND\020\003\022\025\n\021POST_DATA_COMMAND\020" +
+      "\004J\004\010\r\020\016J\004\010\016\020\017\"\242\002\n\021PolicyApplication\022\021\n\tp" +
+      "olicy_id\030\001 \001(\t\022\033\n\023compute_instance_id\030\002 " +
+      "\001(\t\022\017\n\007enabled\030\003 \001(\010\022@\n\006status\030\004 \001(\01620.y" +
+      "andex.cloud.backup.v1.PolicyApplication." +
+      "Status\022.\n\ncreated_at\030\005 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022\025\n\ris_processing\030\006 \001(\010\"C\n" +
+      "\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022" +
+      "\013\n\007RUNNING\020\002\022\014\n\010DISABLED\020\003*J\n\006Format\022\026\n\022" +
+      "FORMAT_UNSPECIFIED\020\000\022\016\n\nVERSION_11\020\001\022\016\n\n" +
+      "VERSION_12\020\002\022\010\n\004AUTO\020\003B_\n\032yandex.cloud.a" +
+      "pi.backup.v1ZAgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/backup/v1;backupb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

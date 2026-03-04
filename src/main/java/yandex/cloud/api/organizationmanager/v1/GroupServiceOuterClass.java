@@ -24521,6 +24521,3327 @@ public final class GroupServiceOuterClass {
 
   }
 
+  public interface ListEffectiveRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.ListEffectiveRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the subject to list groups for.
+     * </pre>
+     *
+     * <code>string subject_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subjectId.
+     */
+    java.lang.String getSubjectId();
+    /**
+     * <pre>
+     * ID of the subject to list groups for.
+     * </pre>
+     *
+     * <code>string subject_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subjectId.
+     */
+    com.google.protobuf.ByteString
+        getSubjectIdBytes();
+
+    /**
+     * <pre>
+     * The ID of the organization to scope the group search to.
+     * If omitted and the subject belongs to a single organization,
+     * that organization's ID will be used automatically.
+     * </pre>
+     *
+     * <code>string organization_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <pre>
+     * The ID of the organization to scope the group search to.
+     * If omitted and the subject belongs to a single organization,
+     * that organization's ID will be used automatically.
+     * </pre>
+     *
+     * <code>string organization_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListEffectiveResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. Set [page_token]
+     * to the [ListEffectiveResponse.next_page_token]
+     * returned by a previous list request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. Set [page_token]
+     * to the [ListEffectiveResponse.next_page_token]
+     * returned by a previous list request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression supports the following operations:
+     * - `=` for exact match: `name = 'example-name'`
+     * - `IN` for multiple values: `id IN ('id1', 'id2')`
+     * - `contains` for domain substring search: `name contains 'example'`
+     * - `AND` for combining conditions: `name contains 'my-group' AND name contains 'name'`
+     * Available fields for filtering:
+     * - `id` - group ID
+     * - `name` - group name
+     * Must be 1-1000 characters long.
+     * </pre>
+     *
+     * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
+     */
+    java.lang.String getFilter();
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression supports the following operations:
+     * - `=` for exact match: `name = 'example-name'`
+     * - `IN` for multiple values: `id IN ('id1', 'id2')`
+     * - `contains` for domain substring search: `name contains 'example'`
+     * - `AND` for combining conditions: `name contains 'my-group' AND name contains 'name'`
+     * Available fields for filtering:
+     * - `id` - group ID
+     * - `name` - group name
+     * Must be 1-1000 characters long.
+     * </pre>
+     *
+     * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
+     */
+    com.google.protobuf.ByteString
+        getFilterBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.ListEffectiveRequest}
+   */
+  public static final class ListEffectiveRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.ListEffectiveRequest)
+      ListEffectiveRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListEffectiveRequest.newBuilder() to construct.
+    private ListEffectiveRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListEffectiveRequest() {
+      subjectId_ = "";
+      organizationId_ = "";
+      pageToken_ = "";
+      filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListEffectiveRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListEffectiveRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subjectId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              organizationId_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filter_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListEffectiveRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListEffectiveRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest.Builder.class);
+    }
+
+    public static final int SUBJECT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object subjectId_;
+    /**
+     * <pre>
+     * ID of the subject to list groups for.
+     * </pre>
+     *
+     * <code>string subject_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subjectId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubjectId() {
+      java.lang.Object ref = subjectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subjectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the subject to list groups for.
+     * </pre>
+     *
+     * <code>string subject_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subjectId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubjectIdBytes() {
+      java.lang.Object ref = subjectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subjectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object organizationId_;
+    /**
+     * <pre>
+     * The ID of the organization to scope the group search to.
+     * If omitted and the subject belongs to a single organization,
+     * that organization's ID will be used automatically.
+     * </pre>
+     *
+     * <code>string organization_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      java.lang.Object ref = organizationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        organizationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The ID of the organization to scope the group search to.
+     * If omitted and the subject belongs to a single organization,
+     * that organization's ID will be used automatically.
+     * </pre>
+     *
+     * <code>string organization_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      java.lang.Object ref = organizationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        organizationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListEffectiveResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. Set [page_token]
+     * to the [ListEffectiveResponse.next_page_token]
+     * returned by a previous list request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. Set [page_token]
+     * to the [ListEffectiveResponse.next_page_token]
+     * returned by a previous list request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 5;
+    private volatile java.lang.Object filter_;
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression supports the following operations:
+     * - `=` for exact match: `name = 'example-name'`
+     * - `IN` for multiple values: `id IN ('id1', 'id2')`
+     * - `contains` for domain substring search: `name contains 'example'`
+     * - `AND` for combining conditions: `name contains 'my-group' AND name contains 'name'`
+     * Available fields for filtering:
+     * - `id` - group ID
+     * - `name` - group name
+     * Must be 1-1000 characters long.
+     * </pre>
+     *
+     * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
+     */
+    @java.lang.Override
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression supports the following operations:
+     * - `=` for exact match: `name = 'example-name'`
+     * - `IN` for multiple values: `id IN ('id1', 'id2')`
+     * - `contains` for domain substring search: `name contains 'example'`
+     * - `AND` for combining conditions: `name contains 'my-group' AND name contains 'name'`
+     * Available fields for filtering:
+     * - `id` - group ID
+     * - `name` - group name
+     * Must be 1-1000 characters long.
+     * </pre>
+     *
+     * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subjectId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, organizationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, filter_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subjectId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, organizationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, filter_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest other = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest) obj;
+
+      if (!getSubjectId()
+          .equals(other.getSubjectId())) return false;
+      if (!getOrganizationId()
+          .equals(other.getOrganizationId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubjectId().hashCode();
+      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOrganizationId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (37 * hash) + FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getFilter().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.ListEffectiveRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.ListEffectiveRequest)
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListEffectiveRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListEffectiveRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        subjectId_ = "";
+
+        organizationId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        filter_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListEffectiveRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest build() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest result = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest(this);
+        result.subjectId_ = subjectId_;
+        result.organizationId_ = organizationId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        result.filter_ = filter_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest.getDefaultInstance()) return this;
+        if (!other.getSubjectId().isEmpty()) {
+          subjectId_ = other.subjectId_;
+          onChanged();
+        }
+        if (!other.getOrganizationId().isEmpty()) {
+          organizationId_ = other.organizationId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        if (!other.getFilter().isEmpty()) {
+          filter_ = other.filter_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object subjectId_ = "";
+      /**
+       * <pre>
+       * ID of the subject to list groups for.
+       * </pre>
+       *
+       * <code>string subject_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subjectId.
+       */
+      public java.lang.String getSubjectId() {
+        java.lang.Object ref = subjectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subjectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the subject to list groups for.
+       * </pre>
+       *
+       * <code>string subject_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subjectId.
+       */
+      public com.google.protobuf.ByteString
+          getSubjectIdBytes() {
+        java.lang.Object ref = subjectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subjectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the subject to list groups for.
+       * </pre>
+       *
+       * <code>string subject_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subjectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subjectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the subject to list groups for.
+       * </pre>
+       *
+       * <code>string subject_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubjectId() {
+        
+        subjectId_ = getDefaultInstance().getSubjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the subject to list groups for.
+       * </pre>
+       *
+       * <code>string subject_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subjectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subjectId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object organizationId_ = "";
+      /**
+       * <pre>
+       * The ID of the organization to scope the group search to.
+       * If omitted and the subject belongs to a single organization,
+       * that organization's ID will be used automatically.
+       * </pre>
+       *
+       * <code>string organization_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The organizationId.
+       */
+      public java.lang.String getOrganizationId() {
+        java.lang.Object ref = organizationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          organizationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ID of the organization to scope the group search to.
+       * If omitted and the subject belongs to a single organization,
+       * that organization's ID will be used automatically.
+       * </pre>
+       *
+       * <code>string organization_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for organizationId.
+       */
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        java.lang.Object ref = organizationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          organizationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ID of the organization to scope the group search to.
+       * If omitted and the subject belongs to a single organization,
+       * that organization's ID will be used automatically.
+       * </pre>
+       *
+       * <code>string organization_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        organizationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the organization to scope the group search to.
+       * If omitted and the subject belongs to a single organization,
+       * that organization's ID will be used automatically.
+       * </pre>
+       *
+       * <code>string organization_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        
+        organizationId_ = getDefaultInstance().getOrganizationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the organization to scope the group search to.
+       * If omitted and the subject belongs to a single organization,
+       * that organization's ID will be used automatically.
+       * </pre>
+       *
+       * <code>string organization_id = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        organizationId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListEffectiveResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListEffectiveResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListEffectiveResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. Set [page_token]
+       * to the [ListEffectiveResponse.next_page_token]
+       * returned by a previous list request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @return The pageToken.
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. Set [page_token]
+       * to the [ListEffectiveResponse.next_page_token]
+       * returned by a previous list request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @return The bytes for pageToken.
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. Set [page_token]
+       * to the [ListEffectiveResponse.next_page_token]
+       * returned by a previous list request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. Set [page_token]
+       * to the [ListEffectiveResponse.next_page_token]
+       * returned by a previous list request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. Set [page_token]
+       * to the [ListEffectiveResponse.next_page_token]
+       * returned by a previous list request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object filter_ = "";
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression supports the following operations:
+       * - `=` for exact match: `name = 'example-name'`
+       * - `IN` for multiple values: `id IN ('id1', 'id2')`
+       * - `contains` for domain substring search: `name contains 'example'`
+       * - `AND` for combining conditions: `name contains 'my-group' AND name contains 'name'`
+       * Available fields for filtering:
+       * - `id` - group ID
+       * - `name` - group name
+       * Must be 1-1000 characters long.
+       * </pre>
+       *
+       * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
+       */
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression supports the following operations:
+       * - `=` for exact match: `name = 'example-name'`
+       * - `IN` for multiple values: `id IN ('id1', 'id2')`
+       * - `contains` for domain substring search: `name contains 'example'`
+       * - `AND` for combining conditions: `name contains 'my-group' AND name contains 'name'`
+       * Available fields for filtering:
+       * - `id` - group ID
+       * - `name` - group name
+       * Must be 1-1000 characters long.
+       * </pre>
+       *
+       * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
+       */
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression supports the following operations:
+       * - `=` for exact match: `name = 'example-name'`
+       * - `IN` for multiple values: `id IN ('id1', 'id2')`
+       * - `contains` for domain substring search: `name contains 'example'`
+       * - `AND` for combining conditions: `name contains 'my-group' AND name contains 'name'`
+       * Available fields for filtering:
+       * - `id` - group ID
+       * - `name` - group name
+       * Must be 1-1000 characters long.
+       * </pre>
+       *
+       * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression supports the following operations:
+       * - `=` for exact match: `name = 'example-name'`
+       * - `IN` for multiple values: `id IN ('id1', 'id2')`
+       * - `contains` for domain substring search: `name contains 'example'`
+       * - `AND` for combining conditions: `name contains 'my-group' AND name contains 'name'`
+       * Available fields for filtering:
+       * - `id` - group ID
+       * - `name` - group name
+       * Must be 1-1000 characters long.
+       * </pre>
+       *
+       * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilter() {
+        
+        filter_ = getDefaultInstance().getFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression supports the following operations:
+       * - `=` for exact match: `name = 'example-name'`
+       * - `IN` for multiple values: `id IN ('id1', 'id2')`
+       * - `contains` for domain substring search: `name contains 'example'`
+       * - `AND` for combining conditions: `name contains 'my-group' AND name contains 'name'`
+       * Available fields for filtering:
+       * - `id` - group ID
+       * - `name` - group name
+       * Must be 1-1000 characters long.
+       * </pre>
+       *
+       * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.ListEffectiveRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.ListEffectiveRequest)
+    private static final yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListEffectiveRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListEffectiveRequest>() {
+      @java.lang.Override
+      public ListEffectiveRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListEffectiveRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListEffectiveRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListEffectiveRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GroupMembershipInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.GroupMembershipInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the group the subject is a member of.
+     * </pre>
+     *
+     * <code>string group_id = 1;</code>
+     * @return The groupId.
+     */
+    java.lang.String getGroupId();
+    /**
+     * <pre>
+     * ID of the group the subject is a member of.
+     * </pre>
+     *
+     * <code>string group_id = 1;</code>
+     * @return The bytes for groupId.
+     */
+    com.google.protobuf.ByteString
+        getGroupIdBytes();
+
+    /**
+     * <pre>
+     * Name of the group the subject is a member of.
+     * </pre>
+     *
+     * <code>string group_name = 2;</code>
+     * @return The groupName.
+     */
+    java.lang.String getGroupName();
+    /**
+     * <pre>
+     * Name of the group the subject is a member of.
+     * </pre>
+     *
+     * <code>string group_name = 2;</code>
+     * @return The bytes for groupName.
+     */
+    com.google.protobuf.ByteString
+        getGroupNameBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.GroupMembershipInfo}
+   */
+  public static final class GroupMembershipInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.GroupMembershipInfo)
+      GroupMembershipInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GroupMembershipInfo.newBuilder() to construct.
+    private GroupMembershipInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GroupMembershipInfo() {
+      groupId_ = "";
+      groupName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GroupMembershipInfo();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GroupMembershipInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              groupId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              groupName_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_GroupMembershipInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_GroupMembershipInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo.Builder.class);
+    }
+
+    public static final int GROUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object groupId_;
+    /**
+     * <pre>
+     * ID of the group the subject is a member of.
+     * </pre>
+     *
+     * <code>string group_id = 1;</code>
+     * @return The groupId.
+     */
+    @java.lang.Override
+    public java.lang.String getGroupId() {
+      java.lang.Object ref = groupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        groupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the group the subject is a member of.
+     * </pre>
+     *
+     * <code>string group_id = 1;</code>
+     * @return The bytes for groupId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGroupIdBytes() {
+      java.lang.Object ref = groupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        groupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GROUP_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object groupName_;
+    /**
+     * <pre>
+     * Name of the group the subject is a member of.
+     * </pre>
+     *
+     * <code>string group_name = 2;</code>
+     * @return The groupName.
+     */
+    @java.lang.Override
+    public java.lang.String getGroupName() {
+      java.lang.Object ref = groupName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        groupName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the group the subject is a member of.
+     * </pre>
+     *
+     * <code>string group_name = 2;</code>
+     * @return The bytes for groupName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGroupNameBytes() {
+      java.lang.Object ref = groupName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        groupName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, groupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, groupName_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, groupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, groupName_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo other = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo) obj;
+
+      if (!getGroupId()
+          .equals(other.getGroupId())) return false;
+      if (!getGroupName()
+          .equals(other.getGroupName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getGroupId().hashCode();
+      hash = (37 * hash) + GROUP_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getGroupName().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.GroupMembershipInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.GroupMembershipInfo)
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_GroupMembershipInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_GroupMembershipInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        groupId_ = "";
+
+        groupName_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_GroupMembershipInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo build() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo result = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo(this);
+        result.groupId_ = groupId_;
+        result.groupName_ = groupName_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo.getDefaultInstance()) return this;
+        if (!other.getGroupId().isEmpty()) {
+          groupId_ = other.groupId_;
+          onChanged();
+        }
+        if (!other.getGroupName().isEmpty()) {
+          groupName_ = other.groupName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object groupId_ = "";
+      /**
+       * <pre>
+       * ID of the group the subject is a member of.
+       * </pre>
+       *
+       * <code>string group_id = 1;</code>
+       * @return The groupId.
+       */
+      public java.lang.String getGroupId() {
+        java.lang.Object ref = groupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          groupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the group the subject is a member of.
+       * </pre>
+       *
+       * <code>string group_id = 1;</code>
+       * @return The bytes for groupId.
+       */
+      public com.google.protobuf.ByteString
+          getGroupIdBytes() {
+        java.lang.Object ref = groupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          groupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the group the subject is a member of.
+       * </pre>
+       *
+       * <code>string group_id = 1;</code>
+       * @param value The groupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        groupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the group the subject is a member of.
+       * </pre>
+       *
+       * <code>string group_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupId() {
+        
+        groupId_ = getDefaultInstance().getGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the group the subject is a member of.
+       * </pre>
+       *
+       * <code>string group_id = 1;</code>
+       * @param value The bytes for groupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        groupId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object groupName_ = "";
+      /**
+       * <pre>
+       * Name of the group the subject is a member of.
+       * </pre>
+       *
+       * <code>string group_name = 2;</code>
+       * @return The groupName.
+       */
+      public java.lang.String getGroupName() {
+        java.lang.Object ref = groupName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          groupName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the group the subject is a member of.
+       * </pre>
+       *
+       * <code>string group_name = 2;</code>
+       * @return The bytes for groupName.
+       */
+      public com.google.protobuf.ByteString
+          getGroupNameBytes() {
+        java.lang.Object ref = groupName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          groupName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the group the subject is a member of.
+       * </pre>
+       *
+       * <code>string group_name = 2;</code>
+       * @param value The groupName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        groupName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the group the subject is a member of.
+       * </pre>
+       *
+       * <code>string group_name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupName() {
+        
+        groupName_ = getDefaultInstance().getGroupName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the group the subject is a member of.
+       * </pre>
+       *
+       * <code>string group_name = 2;</code>
+       * @param value The bytes for groupName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        groupName_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.GroupMembershipInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.GroupMembershipInfo)
+    private static final yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GroupMembershipInfo>
+        PARSER = new com.google.protobuf.AbstractParser<GroupMembershipInfo>() {
+      @java.lang.Override
+      public GroupMembershipInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GroupMembershipInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GroupMembershipInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GroupMembershipInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListEffectiveResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.ListEffectiveResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of group membership information.
+     * Contains groups where the specified subject is a member.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo> 
+        getGroupMembershipInfoList();
+    /**
+     * <pre>
+     * List of group membership information.
+     * Contains groups where the specified subject is a member.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+     */
+    yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo getGroupMembershipInfo(int index);
+    /**
+     * <pre>
+     * List of group membership information.
+     * Contains groups where the specified subject is a member.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+     */
+    int getGroupMembershipInfoCount();
+    /**
+     * <pre>
+     * List of group membership information.
+     * Contains groups where the specified subject is a member.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfoOrBuilder> 
+        getGroupMembershipInfoOrBuilderList();
+    /**
+     * <pre>
+     * List of group membership information.
+     * Contains groups where the specified subject is a member.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+     */
+    yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfoOrBuilder getGroupMembershipInfoOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListEffectiveRequest.page_size], use the [next_page_token] as the value
+     * for the [ListEffectiveRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListEffectiveRequest.page_size], use the [next_page_token] as the value
+     * for the [ListEffectiveRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.ListEffectiveResponse}
+   */
+  public static final class ListEffectiveResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.ListEffectiveResponse)
+      ListEffectiveResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListEffectiveResponse.newBuilder() to construct.
+    private ListEffectiveResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListEffectiveResponse() {
+      groupMembershipInfo_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListEffectiveResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListEffectiveResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                groupMembershipInfo_ = new java.util.ArrayList<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              groupMembershipInfo_.add(
+                  input.readMessage(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          groupMembershipInfo_ = java.util.Collections.unmodifiableList(groupMembershipInfo_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListEffectiveResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListEffectiveResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse.Builder.class);
+    }
+
+    public static final int GROUP_MEMBERSHIP_INFO_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo> groupMembershipInfo_;
+    /**
+     * <pre>
+     * List of group membership information.
+     * Contains groups where the specified subject is a member.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo> getGroupMembershipInfoList() {
+      return groupMembershipInfo_;
+    }
+    /**
+     * <pre>
+     * List of group membership information.
+     * Contains groups where the specified subject is a member.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfoOrBuilder> 
+        getGroupMembershipInfoOrBuilderList() {
+      return groupMembershipInfo_;
+    }
+    /**
+     * <pre>
+     * List of group membership information.
+     * Contains groups where the specified subject is a member.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+     */
+    @java.lang.Override
+    public int getGroupMembershipInfoCount() {
+      return groupMembershipInfo_.size();
+    }
+    /**
+     * <pre>
+     * List of group membership information.
+     * Contains groups where the specified subject is a member.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo getGroupMembershipInfo(int index) {
+      return groupMembershipInfo_.get(index);
+    }
+    /**
+     * <pre>
+     * List of group membership information.
+     * Contains groups where the specified subject is a member.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfoOrBuilder getGroupMembershipInfoOrBuilder(
+        int index) {
+      return groupMembershipInfo_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListEffectiveRequest.page_size], use the [next_page_token] as the value
+     * for the [ListEffectiveRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListEffectiveRequest.page_size], use the [next_page_token] as the value
+     * for the [ListEffectiveRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < groupMembershipInfo_.size(); i++) {
+        output.writeMessage(1, groupMembershipInfo_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < groupMembershipInfo_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, groupMembershipInfo_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse other = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse) obj;
+
+      if (!getGroupMembershipInfoList()
+          .equals(other.getGroupMembershipInfoList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getGroupMembershipInfoCount() > 0) {
+        hash = (37 * hash) + GROUP_MEMBERSHIP_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getGroupMembershipInfoList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.ListEffectiveResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.ListEffectiveResponse)
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListEffectiveResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListEffectiveResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse.class, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getGroupMembershipInfoFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (groupMembershipInfoBuilder_ == null) {
+          groupMembershipInfo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          groupMembershipInfoBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_ListEffectiveResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse build() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse result = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (groupMembershipInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            groupMembershipInfo_ = java.util.Collections.unmodifiableList(groupMembershipInfo_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.groupMembershipInfo_ = groupMembershipInfo_;
+        } else {
+          result.groupMembershipInfo_ = groupMembershipInfoBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse.getDefaultInstance()) return this;
+        if (groupMembershipInfoBuilder_ == null) {
+          if (!other.groupMembershipInfo_.isEmpty()) {
+            if (groupMembershipInfo_.isEmpty()) {
+              groupMembershipInfo_ = other.groupMembershipInfo_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureGroupMembershipInfoIsMutable();
+              groupMembershipInfo_.addAll(other.groupMembershipInfo_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.groupMembershipInfo_.isEmpty()) {
+            if (groupMembershipInfoBuilder_.isEmpty()) {
+              groupMembershipInfoBuilder_.dispose();
+              groupMembershipInfoBuilder_ = null;
+              groupMembershipInfo_ = other.groupMembershipInfo_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              groupMembershipInfoBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGroupMembershipInfoFieldBuilder() : null;
+            } else {
+              groupMembershipInfoBuilder_.addAllMessages(other.groupMembershipInfo_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo> groupMembershipInfo_ =
+        java.util.Collections.emptyList();
+      private void ensureGroupMembershipInfoIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          groupMembershipInfo_ = new java.util.ArrayList<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo>(groupMembershipInfo_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo.Builder, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfoOrBuilder> groupMembershipInfoBuilder_;
+
+      /**
+       * <pre>
+       * List of group membership information.
+       * Contains groups where the specified subject is a member.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo> getGroupMembershipInfoList() {
+        if (groupMembershipInfoBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(groupMembershipInfo_);
+        } else {
+          return groupMembershipInfoBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of group membership information.
+       * Contains groups where the specified subject is a member.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+       */
+      public int getGroupMembershipInfoCount() {
+        if (groupMembershipInfoBuilder_ == null) {
+          return groupMembershipInfo_.size();
+        } else {
+          return groupMembershipInfoBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of group membership information.
+       * Contains groups where the specified subject is a member.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo getGroupMembershipInfo(int index) {
+        if (groupMembershipInfoBuilder_ == null) {
+          return groupMembershipInfo_.get(index);
+        } else {
+          return groupMembershipInfoBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of group membership information.
+       * Contains groups where the specified subject is a member.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+       */
+      public Builder setGroupMembershipInfo(
+          int index, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo value) {
+        if (groupMembershipInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupMembershipInfoIsMutable();
+          groupMembershipInfo_.set(index, value);
+          onChanged();
+        } else {
+          groupMembershipInfoBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of group membership information.
+       * Contains groups where the specified subject is a member.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+       */
+      public Builder setGroupMembershipInfo(
+          int index, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo.Builder builderForValue) {
+        if (groupMembershipInfoBuilder_ == null) {
+          ensureGroupMembershipInfoIsMutable();
+          groupMembershipInfo_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          groupMembershipInfoBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of group membership information.
+       * Contains groups where the specified subject is a member.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+       */
+      public Builder addGroupMembershipInfo(yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo value) {
+        if (groupMembershipInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupMembershipInfoIsMutable();
+          groupMembershipInfo_.add(value);
+          onChanged();
+        } else {
+          groupMembershipInfoBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of group membership information.
+       * Contains groups where the specified subject is a member.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+       */
+      public Builder addGroupMembershipInfo(
+          int index, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo value) {
+        if (groupMembershipInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupMembershipInfoIsMutable();
+          groupMembershipInfo_.add(index, value);
+          onChanged();
+        } else {
+          groupMembershipInfoBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of group membership information.
+       * Contains groups where the specified subject is a member.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+       */
+      public Builder addGroupMembershipInfo(
+          yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo.Builder builderForValue) {
+        if (groupMembershipInfoBuilder_ == null) {
+          ensureGroupMembershipInfoIsMutable();
+          groupMembershipInfo_.add(builderForValue.build());
+          onChanged();
+        } else {
+          groupMembershipInfoBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of group membership information.
+       * Contains groups where the specified subject is a member.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+       */
+      public Builder addGroupMembershipInfo(
+          int index, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo.Builder builderForValue) {
+        if (groupMembershipInfoBuilder_ == null) {
+          ensureGroupMembershipInfoIsMutable();
+          groupMembershipInfo_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          groupMembershipInfoBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of group membership information.
+       * Contains groups where the specified subject is a member.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+       */
+      public Builder addAllGroupMembershipInfo(
+          java.lang.Iterable<? extends yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo> values) {
+        if (groupMembershipInfoBuilder_ == null) {
+          ensureGroupMembershipInfoIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, groupMembershipInfo_);
+          onChanged();
+        } else {
+          groupMembershipInfoBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of group membership information.
+       * Contains groups where the specified subject is a member.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+       */
+      public Builder clearGroupMembershipInfo() {
+        if (groupMembershipInfoBuilder_ == null) {
+          groupMembershipInfo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          groupMembershipInfoBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of group membership information.
+       * Contains groups where the specified subject is a member.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+       */
+      public Builder removeGroupMembershipInfo(int index) {
+        if (groupMembershipInfoBuilder_ == null) {
+          ensureGroupMembershipInfoIsMutable();
+          groupMembershipInfo_.remove(index);
+          onChanged();
+        } else {
+          groupMembershipInfoBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of group membership information.
+       * Contains groups where the specified subject is a member.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo.Builder getGroupMembershipInfoBuilder(
+          int index) {
+        return getGroupMembershipInfoFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of group membership information.
+       * Contains groups where the specified subject is a member.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfoOrBuilder getGroupMembershipInfoOrBuilder(
+          int index) {
+        if (groupMembershipInfoBuilder_ == null) {
+          return groupMembershipInfo_.get(index);  } else {
+          return groupMembershipInfoBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of group membership information.
+       * Contains groups where the specified subject is a member.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfoOrBuilder> 
+           getGroupMembershipInfoOrBuilderList() {
+        if (groupMembershipInfoBuilder_ != null) {
+          return groupMembershipInfoBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(groupMembershipInfo_);
+        }
+      }
+      /**
+       * <pre>
+       * List of group membership information.
+       * Contains groups where the specified subject is a member.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo.Builder addGroupMembershipInfoBuilder() {
+        return getGroupMembershipInfoFieldBuilder().addBuilder(
+            yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of group membership information.
+       * Contains groups where the specified subject is a member.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo.Builder addGroupMembershipInfoBuilder(
+          int index) {
+        return getGroupMembershipInfoFieldBuilder().addBuilder(
+            index, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of group membership information.
+       * Contains groups where the specified subject is a member.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.organizationmanager.v1.GroupMembershipInfo group_membership_info = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo.Builder> 
+           getGroupMembershipInfoBuilderList() {
+        return getGroupMembershipInfoFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo.Builder, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfoOrBuilder> 
+          getGroupMembershipInfoFieldBuilder() {
+        if (groupMembershipInfoBuilder_ == null) {
+          groupMembershipInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfo.Builder, yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.GroupMembershipInfoOrBuilder>(
+                  groupMembershipInfo_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          groupMembershipInfo_ = null;
+        }
+        return groupMembershipInfoBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListEffectiveRequest.page_size], use the [next_page_token] as the value
+       * for the [ListEffectiveRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListEffectiveRequest.page_size], use the [next_page_token] as the value
+       * for the [ListEffectiveRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListEffectiveRequest.page_size], use the [next_page_token] as the value
+       * for the [ListEffectiveRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListEffectiveRequest.page_size], use the [next_page_token] as the value
+       * for the [ListEffectiveRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListEffectiveRequest.page_size], use the [next_page_token] as the value
+       * for the [ListEffectiveRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.ListEffectiveResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.ListEffectiveResponse)
+    private static final yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListEffectiveResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListEffectiveResponse>() {
+      @java.lang.Override
+      public ListEffectiveResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListEffectiveResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListEffectiveResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListEffectiveResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.GroupServiceOuterClass.ListEffectiveResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_organizationmanager_v1_GetGroupRequest_descriptor;
   private static final 
@@ -24651,6 +27972,21 @@ public final class GroupServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_organizationmanager_v1_MemberDelta_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_ListEffectiveRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_ListEffectiveRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_GroupMembershipInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_GroupMembershipInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_ListEffectiveResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_ListEffectiveResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -24744,95 +28080,110 @@ public final class GroupServiceOuterClass {
       "a.MemberActionB\004\350\3071\001\022 \n\nsubject_id\030\002 \001(\t" +
       "B\014\350\3071\001\212\3101\004<=50\"B\n\014MemberAction\022\035\n\031MEMBER" +
       "_ACTION_UNSPECIFIED\020\000\022\007\n\003ADD\020\001\022\n\n\006REMOVE" +
-      "\020\0022\322\032\n\014GroupService\022\233\001\n\003Get\0224.yandex.clo" +
-      "ud.organizationmanager.v1.GetGroupReques" +
-      "t\032*.yandex.cloud.organizationmanager.v1." +
-      "Group\"2\202\323\344\223\002,\022*/organization-manager/v1/" +
-      "groups/{group_id}\022\326\001\n\017ResolveExternal\022@." +
-      "yandex.cloud.organizationmanager.v1.Reso" +
-      "lveExternalGroupRequest\032*.yandex.cloud.o" +
-      "rganizationmanager.v1.Group\"U\202\323\344\223\002O\022M/or" +
-      "ganization-manager/v1/external_groups/{s" +
-      "ubject_container_id}/{external_id}\022\240\001\n\004L" +
-      "ist\0226.yandex.cloud.organizationmanager.v" +
-      "1.ListGroupsRequest\0327.yandex.cloud.organ" +
-      "izationmanager.v1.ListGroupsResponse\"\'\202\323" +
-      "\344\223\002!\022\037/organization-manager/v1/groups\022\301\001" +
-      "\n\014ListExternal\022>.yandex.cloud.organizati" +
-      "onmanager.v1.ListExternalGroupsRequest\032?" +
+      "\020\002\"\266\001\n\024ListEffectiveRequest\022 \n\nsubject_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\017organization_id" +
+      "\030\004 \001(\tB\010\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
+      "\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=2000\022" +
+      "\032\n\006filter\030\005 \001(\tB\n\212\3101\006<=1000\";\n\023GroupMemb" +
+      "ershipInfo\022\020\n\010group_id\030\001 \001(\t\022\022\n\ngroup_na" +
+      "me\030\002 \001(\t\"\211\001\n\025ListEffectiveResponse\022W\n\025gr" +
+      "oup_membership_info\030\001 \003(\01328.yandex.cloud" +
+      ".organizationmanager.v1.GroupMembershipI" +
+      "nfo\022\027\n\017next_page_token\030\002 \001(\t2\222\034\n\014GroupSe" +
+      "rvice\022\233\001\n\003Get\0224.yandex.cloud.organizatio" +
+      "nmanager.v1.GetGroupRequest\032*.yandex.clo" +
+      "ud.organizationmanager.v1.Group\"2\202\323\344\223\002,\022" +
+      "*/organization-manager/v1/groups/{group_" +
+      "id}\022\326\001\n\017ResolveExternal\022@.yandex.cloud.o" +
+      "rganizationmanager.v1.ResolveExternalGro" +
+      "upRequest\032*.yandex.cloud.organizationman" +
+      "ager.v1.Group\"U\202\323\344\223\002O\022M/organization-man" +
+      "ager/v1/external_groups/{subject_contain" +
+      "er_id}/{external_id}\022\240\001\n\004List\0226.yandex.c" +
+      "loud.organizationmanager.v1.ListGroupsRe" +
+      "quest\0327.yandex.cloud.organizationmanager" +
+      ".v1.ListGroupsResponse\"\'\202\323\344\223\002!\022\037/organiz" +
+      "ation-manager/v1/groups\022\301\001\n\014ListExternal" +
+      "\022>.yandex.cloud.organizationmanager.v1.L" +
+      "istExternalGroupsRequest\032?.yandex.cloud." +
+      "organizationmanager.v1.ListExternalGroup" +
+      "sResponse\"0\202\323\344\223\002*\022(/organization-manager" +
+      "/v1/external_groups\022\260\001\n\006Create\0227.yandex." +
+      "cloud.organizationmanager.v1.CreateGroup" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"J\202\323\344\223\002$\"\037/organization-manager/v1/gro" +
+      "ups:\001*\262\322*\034\n\023CreateGroupMetadata\022\005Group\022\321" +
+      "\001\n\016CreateExternal\022?.yandex.cloud.organiz" +
+      "ationmanager.v1.CreateExternalGroupReque" +
+      "st\032!.yandex.cloud.operation.Operation\"[\202" +
+      "\323\344\223\002-\"(/organization-manager/v1/external" +
+      "_groups:\001*\262\322*$\n\033CreateExternalGroupMetad" +
+      "ata\022\005Group\022\273\001\n\006Update\0227.yandex.cloud.org" +
+      "anizationmanager.v1.UpdateGroupRequest\032!" +
+      ".yandex.cloud.operation.Operation\"U\202\323\344\223\002" +
+      "/2*/organization-manager/v1/groups/{grou" +
+      "p_id}:\001*\262\322*\034\n\023UpdateGroupMetadata\022\005Group" +
+      "\022\356\001\n\021ConvertToExternal\022B.yandex.cloud.or" +
+      "ganizationmanager.v1.ConvertToExternalGr" +
+      "oupRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"r\202\323\344\223\002A\"</organization-manager/v1/" +
+      "groups/{group_id}:convertToExternal:\001*\262\322" +
+      "*\'\n\036ConvertToExternalGroupMetadata\022\005Grou" +
+      "p\022\377\001\n\021ConvertAllToBasic\022C.yandex.cloud.o" +
+      "rganizationmanager.v1.ConvertAllToBasicG" +
+      "roupsRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"\201\001\202\323\344\223\002?\":/organization-manager/" +
+      "v1/external_groups:convertAllToBasic:\001*\262" +
+      "\322*8\n\037ConvertAllToBasicGroupsMetadata\022\025go" +
+      "ogle.protobuf.Empty\022\310\001\n\006Delete\0227.yandex." +
+      "cloud.organizationmanager.v1.DeleteGroup" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"b\202\323\344\223\002,**/organization-manager/v1/gro" +
+      "ups/{group_id}\262\322*,\n\023DeleteGroupMetadata\022" +
+      "\025google.protobuf.Empty\022\322\001\n\016ListOperation" +
+      "s\022?.yandex.cloud.organizationmanager.v1." +
+      "ListGroupOperationsRequest\032@.yandex.clou" +
+      "d.organizationmanager.v1.ListGroupOperat" +
+      "ionsResponse\"=\202\323\344\223\0027\0225/organization-mana" +
+      "ger/v1/groups/{group_id}/operations\022\312\001\n\013" +
+      "ListMembers\022<.yandex.cloud.organizationm" +
+      "anager.v1.ListGroupMembersRequest\032=.yand" +
+      "ex.cloud.organizationmanager.v1.ListGrou" +
+      "pMembersResponse\">\202\323\344\223\0028\0226/organization-" +
+      "manager/v1/groups/{group_id}:listMembers" +
+      "\022\356\001\n\rUpdateMembers\022>.yandex.cloud.organi" +
+      "zationmanager.v1.UpdateGroupMembersReque" +
+      "st\032!.yandex.cloud.operation.Operation\"z\202" +
+      "\323\344\223\002=\"8/organization-manager/v1/groups/{" +
+      "group_id}:updateMembers:\001*\262\322*3\n\032UpdateGr" +
+      "oupMembersMetadata\022\025google.protobuf.Empt" +
+      "y\022\277\001\n\022ListAccessBindings\022..yandex.cloud." +
+      "access.ListAccessBindingsRequest\032/.yande" +
+      "x.cloud.access.ListAccessBindingsRespons" +
+      "e\"H\202\323\344\223\002B\022@/organization-manager/v1/grou" +
+      "ps/{resource_id}:listAccessBindings\022\376\001\n\021" +
+      "SetAccessBindings\022-.yandex.cloud.access." +
+      "SetAccessBindingsRequest\032!.yandex.cloud." +
+      "operation.Operation\"\226\001\202\323\344\223\002D\"?/organizat" +
+      "ion-manager/v1/groups/{resource_id}:setA" +
+      "ccessBindings:\001*\262\322*H\n access.SetAccessBi" +
+      "ndingsMetadata\022$access.AccessBindingsOpe" +
+      "rationResult\022\212\002\n\024UpdateAccessBindings\0220." +
+      "yandex.cloud.access.UpdateAccessBindings" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"\234\001\202\323\344\223\002G\"B/organization-manager/v1/gr" +
+      "oups/{resource_id}:updateAccessBindings:" +
+      "\001*\262\322*K\n#access.UpdateAccessBindingsMetad" +
+      "ata\022$access.AccessBindingsOperationResul" +
+      "t\022\275\001\n\rListEffective\0229.yandex.cloud.organ" +
+      "izationmanager.v1.ListEffectiveRequest\032:" +
       ".yandex.cloud.organizationmanager.v1.Lis" +
-      "tExternalGroupsResponse\"0\202\323\344\223\002*\022(/organi" +
-      "zation-manager/v1/external_groups\022\260\001\n\006Cr" +
-      "eate\0227.yandex.cloud.organizationmanager." +
-      "v1.CreateGroupRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"J\202\323\344\223\002$\"\037/organization-" +
-      "manager/v1/groups:\001*\262\322*\034\n\023CreateGroupMet" +
-      "adata\022\005Group\022\321\001\n\016CreateExternal\022?.yandex" +
-      ".cloud.organizationmanager.v1.CreateExte" +
-      "rnalGroupRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"[\202\323\344\223\002-\"(/organization-manag" +
-      "er/v1/external_groups:\001*\262\322*$\n\033CreateExte" +
-      "rnalGroupMetadata\022\005Group\022\273\001\n\006Update\0227.ya" +
-      "ndex.cloud.organizationmanager.v1.Update" +
-      "GroupRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"U\202\323\344\223\002/2*/organization-manager/v" +
-      "1/groups/{group_id}:\001*\262\322*\034\n\023UpdateGroupM" +
-      "etadata\022\005Group\022\356\001\n\021ConvertToExternal\022B.y" +
-      "andex.cloud.organizationmanager.v1.Conve" +
-      "rtToExternalGroupRequest\032!.yandex.cloud." +
-      "operation.Operation\"r\202\323\344\223\002A\"</organizati" +
-      "on-manager/v1/groups/{group_id}:convertT" +
-      "oExternal:\001*\262\322*\'\n\036ConvertToExternalGroup" +
-      "Metadata\022\005Group\022\377\001\n\021ConvertAllToBasic\022C." +
-      "yandex.cloud.organizationmanager.v1.Conv" +
-      "ertAllToBasicGroupsRequest\032!.yandex.clou" +
-      "d.operation.Operation\"\201\001\202\323\344\223\002?\":/organiz" +
-      "ation-manager/v1/external_groups:convert" +
-      "AllToBasic:\001*\262\322*8\n\037ConvertAllToBasicGrou" +
-      "psMetadata\022\025google.protobuf.Empty\022\310\001\n\006De" +
-      "lete\0227.yandex.cloud.organizationmanager." +
-      "v1.DeleteGroupRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"b\202\323\344\223\002,**/organization-" +
-      "manager/v1/groups/{group_id}\262\322*,\n\023Delete" +
-      "GroupMetadata\022\025google.protobuf.Empty\022\322\001\n" +
-      "\016ListOperations\022?.yandex.cloud.organizat" +
-      "ionmanager.v1.ListGroupOperationsRequest" +
-      "\032@.yandex.cloud.organizationmanager.v1.L" +
-      "istGroupOperationsResponse\"=\202\323\344\223\0027\0225/org" +
-      "anization-manager/v1/groups/{group_id}/o" +
-      "perations\022\312\001\n\013ListMembers\022<.yandex.cloud" +
-      ".organizationmanager.v1.ListGroupMembers" +
-      "Request\032=.yandex.cloud.organizationmanag" +
-      "er.v1.ListGroupMembersResponse\">\202\323\344\223\0028\0226" +
-      "/organization-manager/v1/groups/{group_i" +
-      "d}:listMembers\022\356\001\n\rUpdateMembers\022>.yande" +
-      "x.cloud.organizationmanager.v1.UpdateGro" +
-      "upMembersRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"z\202\323\344\223\002=\"8/organization-manag" +
-      "er/v1/groups/{group_id}:updateMembers:\001*" +
-      "\262\322*3\n\032UpdateGroupMembersMetadata\022\025google" +
-      ".protobuf.Empty\022\277\001\n\022ListAccessBindings\022." +
-      ".yandex.cloud.access.ListAccessBindingsR" +
-      "equest\032/.yandex.cloud.access.ListAccessB" +
-      "indingsResponse\"H\202\323\344\223\002B\022@/organization-m" +
-      "anager/v1/groups/{resource_id}:listAcces" +
-      "sBindings\022\376\001\n\021SetAccessBindings\022-.yandex" +
-      ".cloud.access.SetAccessBindingsRequest\032!" +
-      ".yandex.cloud.operation.Operation\"\226\001\202\323\344\223" +
-      "\002D\"?/organization-manager/v1/groups/{res" +
-      "ource_id}:setAccessBindings:\001*\262\322*H\n acce" +
-      "ss.SetAccessBindingsMetadata\022$access.Acc" +
-      "essBindingsOperationResult\022\212\002\n\024UpdateAcc" +
-      "essBindings\0220.yandex.cloud.access.Update" +
-      "AccessBindingsRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"\234\001\202\323\344\223\002G\"B/organization" +
-      "-manager/v1/groups/{resource_id}:updateA" +
-      "ccessBindings:\001*\262\322*K\n#access.UpdateAcces" +
-      "sBindingsMetadata\022$access.AccessBindings" +
-      "OperationResultB\206\001\n\'yandex.cloud.api.org" +
-      "anizationmanager.v1Z[github.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/organizati" +
-      "onmanager/v1;organizationmanagerb\006proto3"
+      "tEffectiveResponse\"5\202\323\344\223\002/\022-/organizatio" +
+      "n-manager/v1/groups:listEffectiveB\206\001\n\'ya" +
+      "ndex.cloud.api.organizationmanager.v1Z[g" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/organizationmanager/v1;organizat" +
+      "ionmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -25001,6 +28352,24 @@ public final class GroupServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_MemberDelta_descriptor,
         new java.lang.String[] { "Action", "SubjectId", });
+    internal_static_yandex_cloud_organizationmanager_v1_ListEffectiveRequest_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_yandex_cloud_organizationmanager_v1_ListEffectiveRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_ListEffectiveRequest_descriptor,
+        new java.lang.String[] { "SubjectId", "OrganizationId", "PageSize", "PageToken", "Filter", });
+    internal_static_yandex_cloud_organizationmanager_v1_GroupMembershipInfo_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_yandex_cloud_organizationmanager_v1_GroupMembershipInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_GroupMembershipInfo_descriptor,
+        new java.lang.String[] { "GroupId", "GroupName", });
+    internal_static_yandex_cloud_organizationmanager_v1_ListEffectiveResponse_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_yandex_cloud_organizationmanager_v1_ListEffectiveResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_ListEffectiveResponse_descriptor,
+        new java.lang.String[] { "GroupMembershipInfo", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

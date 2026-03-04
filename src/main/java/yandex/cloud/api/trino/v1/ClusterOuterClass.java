@@ -6990,6 +6990,515 @@ public final class ClusterOuterClass {
 
   }
 
+  public interface PrivateAccessConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.trino.v1.PrivateAccessConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Enables access to the cluster only via private endpoint.
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     * @return The enabled.
+     */
+    boolean getEnabled();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.trino.v1.PrivateAccessConfig}
+   */
+  public static final class PrivateAccessConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.trino.v1.PrivateAccessConfig)
+      PrivateAccessConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PrivateAccessConfig.newBuilder() to construct.
+    private PrivateAccessConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PrivateAccessConfig() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PrivateAccessConfig();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PrivateAccessConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              enabled_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.trino.v1.ClusterOuterClass.internal_static_yandex_cloud_trino_v1_PrivateAccessConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.trino.v1.ClusterOuterClass.internal_static_yandex_cloud_trino_v1_PrivateAccessConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig.class, yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig.Builder.class);
+    }
+
+    public static final int ENABLED_FIELD_NUMBER = 1;
+    private boolean enabled_;
+    /**
+     * <pre>
+     * Enables access to the cluster only via private endpoint.
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     * @return The enabled.
+     */
+    @java.lang.Override
+    public boolean getEnabled() {
+      return enabled_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enabled_ != false) {
+        output.writeBool(1, enabled_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enabled_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig other = (yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig) obj;
+
+      if (getEnabled()
+          != other.getEnabled()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnabled());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.trino.v1.PrivateAccessConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.trino.v1.PrivateAccessConfig)
+        yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.trino.v1.ClusterOuterClass.internal_static_yandex_cloud_trino_v1_PrivateAccessConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.trino.v1.ClusterOuterClass.internal_static_yandex_cloud_trino_v1_PrivateAccessConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig.class, yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        enabled_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.trino.v1.ClusterOuterClass.internal_static_yandex_cloud_trino_v1_PrivateAccessConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig getDefaultInstanceForType() {
+        return yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig build() {
+        yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig buildPartial() {
+        yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig result = new yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig(this);
+        result.enabled_ = enabled_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig) {
+          return mergeFrom((yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig other) {
+        if (other == yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig.getDefaultInstance()) return this;
+        if (other.getEnabled() != false) {
+          setEnabled(other.getEnabled());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean enabled_ ;
+      /**
+       * <pre>
+       * Enables access to the cluster only via private endpoint.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+      /**
+       * <pre>
+       * Enables access to the cluster only via private endpoint.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @param value The enabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnabled(boolean value) {
+        
+        enabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables access to the cluster only via private endpoint.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnabled() {
+        
+        enabled_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.trino.v1.PrivateAccessConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.trino.v1.PrivateAccessConfig)
+    private static final yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig();
+    }
+
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PrivateAccessConfig>
+        PARSER = new com.google.protobuf.AbstractParser<PrivateAccessConfig>() {
+      @java.lang.Override
+      public PrivateAccessConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PrivateAccessConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PrivateAccessConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PrivateAccessConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface NetworkConfigOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.trino.v1.NetworkConfig)
       com.google.protobuf.MessageOrBuilder {
@@ -7075,6 +7584,33 @@ public final class ClusterOuterClass {
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Private link configuration for secure connectivity to the cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.PrivateAccessConfig private_access = 3;</code>
+     * @return Whether the privateAccess field is set.
+     */
+    boolean hasPrivateAccess();
+    /**
+     * <pre>
+     * Private link configuration for secure connectivity to the cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.PrivateAccessConfig private_access = 3;</code>
+     * @return The privateAccess.
+     */
+    yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig getPrivateAccess();
+    /**
+     * <pre>
+     * Private link configuration for secure connectivity to the cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.PrivateAccessConfig private_access = 3;</code>
+     */
+    yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfigOrBuilder getPrivateAccessOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.trino.v1.NetworkConfig}
@@ -7140,6 +7676,19 @@ public final class ClusterOuterClass {
                 mutable_bitField0_ |= 0x00000002;
               }
               securityGroupIds_.add(s);
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig.Builder subBuilder = null;
+              if (privateAccess_ != null) {
+                subBuilder = privateAccess_.toBuilder();
+              }
+              privateAccess_ = input.readMessage(yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(privateAccess_);
+                privateAccess_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -7282,6 +7831,44 @@ public final class ClusterOuterClass {
       return securityGroupIds_.getByteString(index);
     }
 
+    public static final int PRIVATE_ACCESS_FIELD_NUMBER = 3;
+    private yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig privateAccess_;
+    /**
+     * <pre>
+     * Private link configuration for secure connectivity to the cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.PrivateAccessConfig private_access = 3;</code>
+     * @return Whether the privateAccess field is set.
+     */
+    @java.lang.Override
+    public boolean hasPrivateAccess() {
+      return privateAccess_ != null;
+    }
+    /**
+     * <pre>
+     * Private link configuration for secure connectivity to the cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.PrivateAccessConfig private_access = 3;</code>
+     * @return The privateAccess.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig getPrivateAccess() {
+      return privateAccess_ == null ? yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig.getDefaultInstance() : privateAccess_;
+    }
+    /**
+     * <pre>
+     * Private link configuration for secure connectivity to the cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.PrivateAccessConfig private_access = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfigOrBuilder getPrivateAccessOrBuilder() {
+      return getPrivateAccess();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7301,6 +7888,9 @@ public final class ClusterOuterClass {
       }
       for (int i = 0; i < securityGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, securityGroupIds_.getRaw(i));
+      }
+      if (privateAccess_ != null) {
+        output.writeMessage(3, getPrivateAccess());
       }
       unknownFields.writeTo(output);
     }
@@ -7327,6 +7917,10 @@ public final class ClusterOuterClass {
         size += dataSize;
         size += 1 * getSecurityGroupIdsList().size();
       }
+      if (privateAccess_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPrivateAccess());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7346,6 +7940,11 @@ public final class ClusterOuterClass {
           .equals(other.getSubnetIdsList())) return false;
       if (!getSecurityGroupIdsList()
           .equals(other.getSecurityGroupIdsList())) return false;
+      if (hasPrivateAccess() != other.hasPrivateAccess()) return false;
+      if (hasPrivateAccess()) {
+        if (!getPrivateAccess()
+            .equals(other.getPrivateAccess())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7364,6 +7963,10 @@ public final class ClusterOuterClass {
       if (getSecurityGroupIdsCount() > 0) {
         hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
+      }
+      if (hasPrivateAccess()) {
+        hash = (37 * hash) + PRIVATE_ACCESS_FIELD_NUMBER;
+        hash = (53 * hash) + getPrivateAccess().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7502,6 +8105,12 @@ public final class ClusterOuterClass {
         bitField0_ = (bitField0_ & ~0x00000001);
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
+        if (privateAccessBuilder_ == null) {
+          privateAccess_ = null;
+        } else {
+          privateAccess_ = null;
+          privateAccessBuilder_ = null;
+        }
         return this;
       }
 
@@ -7539,6 +8148,11 @@ public final class ClusterOuterClass {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.securityGroupIds_ = securityGroupIds_;
+        if (privateAccessBuilder_ == null) {
+          result.privateAccess_ = privateAccess_;
+        } else {
+          result.privateAccess_ = privateAccessBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -7606,6 +8220,9 @@ public final class ClusterOuterClass {
             securityGroupIds_.addAll(other.securityGroupIds_);
           }
           onChanged();
+        }
+        if (other.hasPrivateAccess()) {
+          mergePrivateAccess(other.getPrivateAccess());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7928,6 +8545,161 @@ public final class ClusterOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig privateAccess_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig, yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig.Builder, yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfigOrBuilder> privateAccessBuilder_;
+      /**
+       * <pre>
+       * Private link configuration for secure connectivity to the cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.PrivateAccessConfig private_access = 3;</code>
+       * @return Whether the privateAccess field is set.
+       */
+      public boolean hasPrivateAccess() {
+        return privateAccessBuilder_ != null || privateAccess_ != null;
+      }
+      /**
+       * <pre>
+       * Private link configuration for secure connectivity to the cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.PrivateAccessConfig private_access = 3;</code>
+       * @return The privateAccess.
+       */
+      public yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig getPrivateAccess() {
+        if (privateAccessBuilder_ == null) {
+          return privateAccess_ == null ? yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig.getDefaultInstance() : privateAccess_;
+        } else {
+          return privateAccessBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Private link configuration for secure connectivity to the cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.PrivateAccessConfig private_access = 3;</code>
+       */
+      public Builder setPrivateAccess(yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig value) {
+        if (privateAccessBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          privateAccess_ = value;
+          onChanged();
+        } else {
+          privateAccessBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Private link configuration for secure connectivity to the cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.PrivateAccessConfig private_access = 3;</code>
+       */
+      public Builder setPrivateAccess(
+          yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig.Builder builderForValue) {
+        if (privateAccessBuilder_ == null) {
+          privateAccess_ = builderForValue.build();
+          onChanged();
+        } else {
+          privateAccessBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Private link configuration for secure connectivity to the cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.PrivateAccessConfig private_access = 3;</code>
+       */
+      public Builder mergePrivateAccess(yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig value) {
+        if (privateAccessBuilder_ == null) {
+          if (privateAccess_ != null) {
+            privateAccess_ =
+              yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig.newBuilder(privateAccess_).mergeFrom(value).buildPartial();
+          } else {
+            privateAccess_ = value;
+          }
+          onChanged();
+        } else {
+          privateAccessBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Private link configuration for secure connectivity to the cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.PrivateAccessConfig private_access = 3;</code>
+       */
+      public Builder clearPrivateAccess() {
+        if (privateAccessBuilder_ == null) {
+          privateAccess_ = null;
+          onChanged();
+        } else {
+          privateAccess_ = null;
+          privateAccessBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Private link configuration for secure connectivity to the cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.PrivateAccessConfig private_access = 3;</code>
+       */
+      public yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig.Builder getPrivateAccessBuilder() {
+        
+        onChanged();
+        return getPrivateAccessFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Private link configuration for secure connectivity to the cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.PrivateAccessConfig private_access = 3;</code>
+       */
+      public yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfigOrBuilder getPrivateAccessOrBuilder() {
+        if (privateAccessBuilder_ != null) {
+          return privateAccessBuilder_.getMessageOrBuilder();
+        } else {
+          return privateAccess_ == null ?
+              yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig.getDefaultInstance() : privateAccess_;
+        }
+      }
+      /**
+       * <pre>
+       * Private link configuration for secure connectivity to the cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.PrivateAccessConfig private_access = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig, yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig.Builder, yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfigOrBuilder> 
+          getPrivateAccessFieldBuilder() {
+        if (privateAccessBuilder_ == null) {
+          privateAccessBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig, yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfig.Builder, yandex.cloud.api.trino.v1.ClusterOuterClass.PrivateAccessConfigOrBuilder>(
+                  getPrivateAccess(),
+                  getParentForChildren(),
+                  isClean());
+          privateAccess_ = null;
+        }
+        return privateAccessBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8112,6 +8884,60 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.trino.v1.AccessControlConfig access_control = 5;</code>
      */
     yandex.cloud.api.trino.v1.AccessControl.AccessControlConfigOrBuilder getAccessControlOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration for resource management, specifying the resource groups and other settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.ResourceManagementConfig resource_management = 6;</code>
+     * @return Whether the resourceManagement field is set.
+     */
+    boolean hasResourceManagement();
+    /**
+     * <pre>
+     * Configuration for resource management, specifying the resource groups and other settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.ResourceManagementConfig resource_management = 6;</code>
+     * @return The resourceManagement.
+     */
+    yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig getResourceManagement();
+    /**
+     * <pre>
+     * Configuration for resource management, specifying the resource groups and other settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.ResourceManagementConfig resource_management = 6;</code>
+     */
+    yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfigOrBuilder getResourceManagementOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration for TLS.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.TLSConfig tls = 7;</code>
+     * @return Whether the tls field is set.
+     */
+    boolean hasTls();
+    /**
+     * <pre>
+     * Configuration for TLS.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.TLSConfig tls = 7;</code>
+     * @return The tls.
+     */
+    yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig getTls();
+    /**
+     * <pre>
+     * Configuration for TLS.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.TLSConfig tls = 7;</code>
+     */
+    yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfigOrBuilder getTlsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.trino.v1.TrinoConfig}
@@ -8213,6 +9039,32 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(accessControl_);
                 accessControl_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig.Builder subBuilder = null;
+              if (resourceManagement_ != null) {
+                subBuilder = resourceManagement_.toBuilder();
+              }
+              resourceManagement_ = input.readMessage(yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(resourceManagement_);
+                resourceManagement_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig.Builder subBuilder = null;
+              if (tls_ != null) {
+                subBuilder = tls_.toBuilder();
+              }
+              tls_ = input.readMessage(yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tls_);
+                tls_ = subBuilder.buildPartial();
               }
 
               break;
@@ -8447,6 +9299,82 @@ public final class ClusterOuterClass {
       return getAccessControl();
     }
 
+    public static final int RESOURCE_MANAGEMENT_FIELD_NUMBER = 6;
+    private yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig resourceManagement_;
+    /**
+     * <pre>
+     * Configuration for resource management, specifying the resource groups and other settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.ResourceManagementConfig resource_management = 6;</code>
+     * @return Whether the resourceManagement field is set.
+     */
+    @java.lang.Override
+    public boolean hasResourceManagement() {
+      return resourceManagement_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for resource management, specifying the resource groups and other settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.ResourceManagementConfig resource_management = 6;</code>
+     * @return The resourceManagement.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig getResourceManagement() {
+      return resourceManagement_ == null ? yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig.getDefaultInstance() : resourceManagement_;
+    }
+    /**
+     * <pre>
+     * Configuration for resource management, specifying the resource groups and other settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.ResourceManagementConfig resource_management = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfigOrBuilder getResourceManagementOrBuilder() {
+      return getResourceManagement();
+    }
+
+    public static final int TLS_FIELD_NUMBER = 7;
+    private yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig tls_;
+    /**
+     * <pre>
+     * Configuration for TLS.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.TLSConfig tls = 7;</code>
+     * @return Whether the tls field is set.
+     */
+    @java.lang.Override
+    public boolean hasTls() {
+      return tls_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for TLS.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.TLSConfig tls = 7;</code>
+     * @return The tls.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig getTls() {
+      return tls_ == null ? yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig.getDefaultInstance() : tls_;
+    }
+    /**
+     * <pre>
+     * Configuration for TLS.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.TLSConfig tls = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfigOrBuilder getTlsOrBuilder() {
+      return getTls();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8476,6 +9404,12 @@ public final class ClusterOuterClass {
       if (accessControl_ != null) {
         output.writeMessage(5, getAccessControl());
       }
+      if (resourceManagement_ != null) {
+        output.writeMessage(6, getResourceManagement());
+      }
+      if (tls_ != null) {
+        output.writeMessage(7, getTls());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8503,6 +9437,14 @@ public final class ClusterOuterClass {
       if (accessControl_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getAccessControl());
+      }
+      if (resourceManagement_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getResourceManagement());
+      }
+      if (tls_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getTls());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8541,6 +9483,16 @@ public final class ClusterOuterClass {
         if (!getAccessControl()
             .equals(other.getAccessControl())) return false;
       }
+      if (hasResourceManagement() != other.hasResourceManagement()) return false;
+      if (hasResourceManagement()) {
+        if (!getResourceManagement()
+            .equals(other.getResourceManagement())) return false;
+      }
+      if (hasTls() != other.hasTls()) return false;
+      if (hasTls()) {
+        if (!getTls()
+            .equals(other.getTls())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8569,6 +9521,14 @@ public final class ClusterOuterClass {
       if (hasAccessControl()) {
         hash = (37 * hash) + ACCESS_CONTROL_FIELD_NUMBER;
         hash = (53 * hash) + getAccessControl().hashCode();
+      }
+      if (hasResourceManagement()) {
+        hash = (37 * hash) + RESOURCE_MANAGEMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getResourceManagement().hashCode();
+      }
+      if (hasTls()) {
+        hash = (37 * hash) + TLS_FIELD_NUMBER;
+        hash = (53 * hash) + getTls().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8729,6 +9689,18 @@ public final class ClusterOuterClass {
           accessControl_ = null;
           accessControlBuilder_ = null;
         }
+        if (resourceManagementBuilder_ == null) {
+          resourceManagement_ = null;
+        } else {
+          resourceManagement_ = null;
+          resourceManagementBuilder_ = null;
+        }
+        if (tlsBuilder_ == null) {
+          tls_ = null;
+        } else {
+          tls_ = null;
+          tlsBuilder_ = null;
+        }
         return this;
       }
 
@@ -8775,6 +9747,16 @@ public final class ClusterOuterClass {
           result.accessControl_ = accessControl_;
         } else {
           result.accessControl_ = accessControlBuilder_.build();
+        }
+        if (resourceManagementBuilder_ == null) {
+          result.resourceManagement_ = resourceManagement_;
+        } else {
+          result.resourceManagement_ = resourceManagementBuilder_.build();
+        }
+        if (tlsBuilder_ == null) {
+          result.tls_ = tls_;
+        } else {
+          result.tls_ = tlsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -8839,6 +9821,12 @@ public final class ClusterOuterClass {
         }
         if (other.hasAccessControl()) {
           mergeAccessControl(other.getAccessControl());
+        }
+        if (other.hasResourceManagement()) {
+          mergeResourceManagement(other.getResourceManagement());
+        }
+        if (other.hasTls()) {
+          mergeTls(other.getTls());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9583,6 +10571,316 @@ public final class ClusterOuterClass {
           accessControl_ = null;
         }
         return accessControlBuilder_;
+      }
+
+      private yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig resourceManagement_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig, yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig.Builder, yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfigOrBuilder> resourceManagementBuilder_;
+      /**
+       * <pre>
+       * Configuration for resource management, specifying the resource groups and other settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.ResourceManagementConfig resource_management = 6;</code>
+       * @return Whether the resourceManagement field is set.
+       */
+      public boolean hasResourceManagement() {
+        return resourceManagementBuilder_ != null || resourceManagement_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for resource management, specifying the resource groups and other settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.ResourceManagementConfig resource_management = 6;</code>
+       * @return The resourceManagement.
+       */
+      public yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig getResourceManagement() {
+        if (resourceManagementBuilder_ == null) {
+          return resourceManagement_ == null ? yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig.getDefaultInstance() : resourceManagement_;
+        } else {
+          return resourceManagementBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for resource management, specifying the resource groups and other settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.ResourceManagementConfig resource_management = 6;</code>
+       */
+      public Builder setResourceManagement(yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig value) {
+        if (resourceManagementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          resourceManagement_ = value;
+          onChanged();
+        } else {
+          resourceManagementBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for resource management, specifying the resource groups and other settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.ResourceManagementConfig resource_management = 6;</code>
+       */
+      public Builder setResourceManagement(
+          yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig.Builder builderForValue) {
+        if (resourceManagementBuilder_ == null) {
+          resourceManagement_ = builderForValue.build();
+          onChanged();
+        } else {
+          resourceManagementBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for resource management, specifying the resource groups and other settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.ResourceManagementConfig resource_management = 6;</code>
+       */
+      public Builder mergeResourceManagement(yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig value) {
+        if (resourceManagementBuilder_ == null) {
+          if (resourceManagement_ != null) {
+            resourceManagement_ =
+              yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig.newBuilder(resourceManagement_).mergeFrom(value).buildPartial();
+          } else {
+            resourceManagement_ = value;
+          }
+          onChanged();
+        } else {
+          resourceManagementBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for resource management, specifying the resource groups and other settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.ResourceManagementConfig resource_management = 6;</code>
+       */
+      public Builder clearResourceManagement() {
+        if (resourceManagementBuilder_ == null) {
+          resourceManagement_ = null;
+          onChanged();
+        } else {
+          resourceManagement_ = null;
+          resourceManagementBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for resource management, specifying the resource groups and other settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.ResourceManagementConfig resource_management = 6;</code>
+       */
+      public yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig.Builder getResourceManagementBuilder() {
+        
+        onChanged();
+        return getResourceManagementFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for resource management, specifying the resource groups and other settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.ResourceManagementConfig resource_management = 6;</code>
+       */
+      public yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfigOrBuilder getResourceManagementOrBuilder() {
+        if (resourceManagementBuilder_ != null) {
+          return resourceManagementBuilder_.getMessageOrBuilder();
+        } else {
+          return resourceManagement_ == null ?
+              yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig.getDefaultInstance() : resourceManagement_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for resource management, specifying the resource groups and other settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.ResourceManagementConfig resource_management = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig, yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig.Builder, yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfigOrBuilder> 
+          getResourceManagementFieldBuilder() {
+        if (resourceManagementBuilder_ == null) {
+          resourceManagementBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig, yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfig.Builder, yandex.cloud.api.trino.v1.ResourceManagement.ResourceManagementConfigOrBuilder>(
+                  getResourceManagement(),
+                  getParentForChildren(),
+                  isClean());
+          resourceManagement_ = null;
+        }
+        return resourceManagementBuilder_;
+      }
+
+      private yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig tls_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig, yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig.Builder, yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfigOrBuilder> tlsBuilder_;
+      /**
+       * <pre>
+       * Configuration for TLS.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.TLSConfig tls = 7;</code>
+       * @return Whether the tls field is set.
+       */
+      public boolean hasTls() {
+        return tlsBuilder_ != null || tls_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for TLS.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.TLSConfig tls = 7;</code>
+       * @return The tls.
+       */
+      public yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig getTls() {
+        if (tlsBuilder_ == null) {
+          return tls_ == null ? yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig.getDefaultInstance() : tls_;
+        } else {
+          return tlsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for TLS.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.TLSConfig tls = 7;</code>
+       */
+      public Builder setTls(yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig value) {
+        if (tlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tls_ = value;
+          onChanged();
+        } else {
+          tlsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for TLS.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.TLSConfig tls = 7;</code>
+       */
+      public Builder setTls(
+          yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig.Builder builderForValue) {
+        if (tlsBuilder_ == null) {
+          tls_ = builderForValue.build();
+          onChanged();
+        } else {
+          tlsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for TLS.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.TLSConfig tls = 7;</code>
+       */
+      public Builder mergeTls(yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig value) {
+        if (tlsBuilder_ == null) {
+          if (tls_ != null) {
+            tls_ =
+              yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig.newBuilder(tls_).mergeFrom(value).buildPartial();
+          } else {
+            tls_ = value;
+          }
+          onChanged();
+        } else {
+          tlsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for TLS.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.TLSConfig tls = 7;</code>
+       */
+      public Builder clearTls() {
+        if (tlsBuilder_ == null) {
+          tls_ = null;
+          onChanged();
+        } else {
+          tls_ = null;
+          tlsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for TLS.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.TLSConfig tls = 7;</code>
+       */
+      public yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig.Builder getTlsBuilder() {
+        
+        onChanged();
+        return getTlsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for TLS.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.TLSConfig tls = 7;</code>
+       */
+      public yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfigOrBuilder getTlsOrBuilder() {
+        if (tlsBuilder_ != null) {
+          return tlsBuilder_.getMessageOrBuilder();
+        } else {
+          return tls_ == null ?
+              yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig.getDefaultInstance() : tls_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for TLS.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.TLSConfig tls = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig, yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig.Builder, yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfigOrBuilder> 
+          getTlsFieldBuilder() {
+        if (tlsBuilder_ == null) {
+          tlsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig, yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig.Builder, yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfigOrBuilder>(
+                  getTls(),
+                  getParentForChildren(),
+                  isClean());
+          tls_ = null;
+        }
+        return tlsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12596,10 +13894,18 @@ public final class ClusterOuterClass {
        */
       RETRY_POLICY_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Retry policy for queries.
+       * </pre>
+       *
        * <code>QUERY = 1;</code>
        */
       QUERY(1),
       /**
+       * <pre>
+       * Retry policy for tasks.
+       * </pre>
+       *
        * <code>TASK = 2;</code>
        */
       TASK(2),
@@ -12611,10 +13917,18 @@ public final class ClusterOuterClass {
        */
       public static final int RETRY_POLICY_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Retry policy for queries.
+       * </pre>
+       *
        * <code>QUERY = 1;</code>
        */
       public static final int QUERY_VALUE = 1;
       /**
+       * <pre>
+       * Retry policy for tasks.
+       * </pre>
+       *
        * <code>TASK = 2;</code>
        */
       public static final int TASK_VALUE = 2;
@@ -13682,6 +14996,729 @@ public final class ClusterOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.trino.v1.ClusterOuterClass.RetryPolicyConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TLSConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.trino.v1.TLSConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Trusted CA-certificates. Each element should contain single self-signed CA-certificate or
+     * chain of CA-certificates where first certificate is the leaf and last certificate is the self-signed root.
+     * </pre>
+     *
+     * <code>repeated string trusted_certificates = 1 [(.yandex.cloud.size) = "&lt;=8", (.yandex.cloud.length) = "&lt;=8192", (.yandex.cloud.unique) = true];</code>
+     * @return A list containing the trustedCertificates.
+     */
+    java.util.List<java.lang.String>
+        getTrustedCertificatesList();
+    /**
+     * <pre>
+     * Trusted CA-certificates. Each element should contain single self-signed CA-certificate or
+     * chain of CA-certificates where first certificate is the leaf and last certificate is the self-signed root.
+     * </pre>
+     *
+     * <code>repeated string trusted_certificates = 1 [(.yandex.cloud.size) = "&lt;=8", (.yandex.cloud.length) = "&lt;=8192", (.yandex.cloud.unique) = true];</code>
+     * @return The count of trustedCertificates.
+     */
+    int getTrustedCertificatesCount();
+    /**
+     * <pre>
+     * Trusted CA-certificates. Each element should contain single self-signed CA-certificate or
+     * chain of CA-certificates where first certificate is the leaf and last certificate is the self-signed root.
+     * </pre>
+     *
+     * <code>repeated string trusted_certificates = 1 [(.yandex.cloud.size) = "&lt;=8", (.yandex.cloud.length) = "&lt;=8192", (.yandex.cloud.unique) = true];</code>
+     * @param index The index of the element to return.
+     * @return The trustedCertificates at the given index.
+     */
+    java.lang.String getTrustedCertificates(int index);
+    /**
+     * <pre>
+     * Trusted CA-certificates. Each element should contain single self-signed CA-certificate or
+     * chain of CA-certificates where first certificate is the leaf and last certificate is the self-signed root.
+     * </pre>
+     *
+     * <code>repeated string trusted_certificates = 1 [(.yandex.cloud.size) = "&lt;=8", (.yandex.cloud.length) = "&lt;=8192", (.yandex.cloud.unique) = true];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the trustedCertificates at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTrustedCertificatesBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.trino.v1.TLSConfig}
+   */
+  public static final class TLSConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.trino.v1.TLSConfig)
+      TLSConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TLSConfig.newBuilder() to construct.
+    private TLSConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TLSConfig() {
+      trustedCertificates_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TLSConfig();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TLSConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                trustedCertificates_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              trustedCertificates_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          trustedCertificates_ = trustedCertificates_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.trino.v1.ClusterOuterClass.internal_static_yandex_cloud_trino_v1_TLSConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.trino.v1.ClusterOuterClass.internal_static_yandex_cloud_trino_v1_TLSConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig.class, yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig.Builder.class);
+    }
+
+    public static final int TRUSTED_CERTIFICATES_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList trustedCertificates_;
+    /**
+     * <pre>
+     * Trusted CA-certificates. Each element should contain single self-signed CA-certificate or
+     * chain of CA-certificates where first certificate is the leaf and last certificate is the self-signed root.
+     * </pre>
+     *
+     * <code>repeated string trusted_certificates = 1 [(.yandex.cloud.size) = "&lt;=8", (.yandex.cloud.length) = "&lt;=8192", (.yandex.cloud.unique) = true];</code>
+     * @return A list containing the trustedCertificates.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTrustedCertificatesList() {
+      return trustedCertificates_;
+    }
+    /**
+     * <pre>
+     * Trusted CA-certificates. Each element should contain single self-signed CA-certificate or
+     * chain of CA-certificates where first certificate is the leaf and last certificate is the self-signed root.
+     * </pre>
+     *
+     * <code>repeated string trusted_certificates = 1 [(.yandex.cloud.size) = "&lt;=8", (.yandex.cloud.length) = "&lt;=8192", (.yandex.cloud.unique) = true];</code>
+     * @return The count of trustedCertificates.
+     */
+    public int getTrustedCertificatesCount() {
+      return trustedCertificates_.size();
+    }
+    /**
+     * <pre>
+     * Trusted CA-certificates. Each element should contain single self-signed CA-certificate or
+     * chain of CA-certificates where first certificate is the leaf and last certificate is the self-signed root.
+     * </pre>
+     *
+     * <code>repeated string trusted_certificates = 1 [(.yandex.cloud.size) = "&lt;=8", (.yandex.cloud.length) = "&lt;=8192", (.yandex.cloud.unique) = true];</code>
+     * @param index The index of the element to return.
+     * @return The trustedCertificates at the given index.
+     */
+    public java.lang.String getTrustedCertificates(int index) {
+      return trustedCertificates_.get(index);
+    }
+    /**
+     * <pre>
+     * Trusted CA-certificates. Each element should contain single self-signed CA-certificate or
+     * chain of CA-certificates where first certificate is the leaf and last certificate is the self-signed root.
+     * </pre>
+     *
+     * <code>repeated string trusted_certificates = 1 [(.yandex.cloud.size) = "&lt;=8", (.yandex.cloud.length) = "&lt;=8192", (.yandex.cloud.unique) = true];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the trustedCertificates at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTrustedCertificatesBytes(int index) {
+      return trustedCertificates_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < trustedCertificates_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, trustedCertificates_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < trustedCertificates_.size(); i++) {
+          dataSize += computeStringSizeNoTag(trustedCertificates_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTrustedCertificatesList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig other = (yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig) obj;
+
+      if (!getTrustedCertificatesList()
+          .equals(other.getTrustedCertificatesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTrustedCertificatesCount() > 0) {
+        hash = (37 * hash) + TRUSTED_CERTIFICATES_FIELD_NUMBER;
+        hash = (53 * hash) + getTrustedCertificatesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.trino.v1.TLSConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.trino.v1.TLSConfig)
+        yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.trino.v1.ClusterOuterClass.internal_static_yandex_cloud_trino_v1_TLSConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.trino.v1.ClusterOuterClass.internal_static_yandex_cloud_trino_v1_TLSConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig.class, yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        trustedCertificates_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.trino.v1.ClusterOuterClass.internal_static_yandex_cloud_trino_v1_TLSConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig getDefaultInstanceForType() {
+        return yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig build() {
+        yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig buildPartial() {
+        yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig result = new yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          trustedCertificates_ = trustedCertificates_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.trustedCertificates_ = trustedCertificates_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig) {
+          return mergeFrom((yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig other) {
+        if (other == yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig.getDefaultInstance()) return this;
+        if (!other.trustedCertificates_.isEmpty()) {
+          if (trustedCertificates_.isEmpty()) {
+            trustedCertificates_ = other.trustedCertificates_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureTrustedCertificatesIsMutable();
+            trustedCertificates_.addAll(other.trustedCertificates_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList trustedCertificates_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTrustedCertificatesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          trustedCertificates_ = new com.google.protobuf.LazyStringArrayList(trustedCertificates_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Trusted CA-certificates. Each element should contain single self-signed CA-certificate or
+       * chain of CA-certificates where first certificate is the leaf and last certificate is the self-signed root.
+       * </pre>
+       *
+       * <code>repeated string trusted_certificates = 1 [(.yandex.cloud.size) = "&lt;=8", (.yandex.cloud.length) = "&lt;=8192", (.yandex.cloud.unique) = true];</code>
+       * @return A list containing the trustedCertificates.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTrustedCertificatesList() {
+        return trustedCertificates_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Trusted CA-certificates. Each element should contain single self-signed CA-certificate or
+       * chain of CA-certificates where first certificate is the leaf and last certificate is the self-signed root.
+       * </pre>
+       *
+       * <code>repeated string trusted_certificates = 1 [(.yandex.cloud.size) = "&lt;=8", (.yandex.cloud.length) = "&lt;=8192", (.yandex.cloud.unique) = true];</code>
+       * @return The count of trustedCertificates.
+       */
+      public int getTrustedCertificatesCount() {
+        return trustedCertificates_.size();
+      }
+      /**
+       * <pre>
+       * Trusted CA-certificates. Each element should contain single self-signed CA-certificate or
+       * chain of CA-certificates where first certificate is the leaf and last certificate is the self-signed root.
+       * </pre>
+       *
+       * <code>repeated string trusted_certificates = 1 [(.yandex.cloud.size) = "&lt;=8", (.yandex.cloud.length) = "&lt;=8192", (.yandex.cloud.unique) = true];</code>
+       * @param index The index of the element to return.
+       * @return The trustedCertificates at the given index.
+       */
+      public java.lang.String getTrustedCertificates(int index) {
+        return trustedCertificates_.get(index);
+      }
+      /**
+       * <pre>
+       * Trusted CA-certificates. Each element should contain single self-signed CA-certificate or
+       * chain of CA-certificates where first certificate is the leaf and last certificate is the self-signed root.
+       * </pre>
+       *
+       * <code>repeated string trusted_certificates = 1 [(.yandex.cloud.size) = "&lt;=8", (.yandex.cloud.length) = "&lt;=8192", (.yandex.cloud.unique) = true];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the trustedCertificates at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTrustedCertificatesBytes(int index) {
+        return trustedCertificates_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Trusted CA-certificates. Each element should contain single self-signed CA-certificate or
+       * chain of CA-certificates where first certificate is the leaf and last certificate is the self-signed root.
+       * </pre>
+       *
+       * <code>repeated string trusted_certificates = 1 [(.yandex.cloud.size) = "&lt;=8", (.yandex.cloud.length) = "&lt;=8192", (.yandex.cloud.unique) = true];</code>
+       * @param index The index to set the value at.
+       * @param value The trustedCertificates to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrustedCertificates(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTrustedCertificatesIsMutable();
+        trustedCertificates_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Trusted CA-certificates. Each element should contain single self-signed CA-certificate or
+       * chain of CA-certificates where first certificate is the leaf and last certificate is the self-signed root.
+       * </pre>
+       *
+       * <code>repeated string trusted_certificates = 1 [(.yandex.cloud.size) = "&lt;=8", (.yandex.cloud.length) = "&lt;=8192", (.yandex.cloud.unique) = true];</code>
+       * @param value The trustedCertificates to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTrustedCertificates(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTrustedCertificatesIsMutable();
+        trustedCertificates_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Trusted CA-certificates. Each element should contain single self-signed CA-certificate or
+       * chain of CA-certificates where first certificate is the leaf and last certificate is the self-signed root.
+       * </pre>
+       *
+       * <code>repeated string trusted_certificates = 1 [(.yandex.cloud.size) = "&lt;=8", (.yandex.cloud.length) = "&lt;=8192", (.yandex.cloud.unique) = true];</code>
+       * @param values The trustedCertificates to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTrustedCertificates(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTrustedCertificatesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, trustedCertificates_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Trusted CA-certificates. Each element should contain single self-signed CA-certificate or
+       * chain of CA-certificates where first certificate is the leaf and last certificate is the self-signed root.
+       * </pre>
+       *
+       * <code>repeated string trusted_certificates = 1 [(.yandex.cloud.size) = "&lt;=8", (.yandex.cloud.length) = "&lt;=8192", (.yandex.cloud.unique) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTrustedCertificates() {
+        trustedCertificates_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Trusted CA-certificates. Each element should contain single self-signed CA-certificate or
+       * chain of CA-certificates where first certificate is the leaf and last certificate is the self-signed root.
+       * </pre>
+       *
+       * <code>repeated string trusted_certificates = 1 [(.yandex.cloud.size) = "&lt;=8", (.yandex.cloud.length) = "&lt;=8192", (.yandex.cloud.unique) = true];</code>
+       * @param value The bytes of the trustedCertificates to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTrustedCertificatesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTrustedCertificatesIsMutable();
+        trustedCertificates_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.trino.v1.TLSConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.trino.v1.TLSConfig)
+    private static final yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig();
+    }
+
+    public static yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TLSConfig>
+        PARSER = new com.google.protobuf.AbstractParser<TLSConfig>() {
+      @java.lang.Override
+      public TLSConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TLSConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TLSConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TLSConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.ClusterOuterClass.TLSConfig getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -14942,16 +16979,28 @@ public final class ClusterOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Storage for spooled data by exchange manager.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.ExchangeManagerStorage storage = 2;</code>
      * @return Whether the storage field is set.
      */
     boolean hasStorage();
     /**
+     * <pre>
+     * Storage for spooled data by exchange manager.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.ExchangeManagerStorage storage = 2;</code>
      * @return The storage.
      */
     yandex.cloud.api.trino.v1.ClusterOuterClass.ExchangeManagerStorage getStorage();
     /**
+     * <pre>
+     * Storage for spooled data by exchange manager.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.ExchangeManagerStorage storage = 2;</code>
      */
     yandex.cloud.api.trino.v1.ClusterOuterClass.ExchangeManagerStorageOrBuilder getStorageOrBuilder();
@@ -15172,6 +17221,10 @@ public final class ClusterOuterClass {
     public static final int STORAGE_FIELD_NUMBER = 2;
     private yandex.cloud.api.trino.v1.ClusterOuterClass.ExchangeManagerStorage storage_;
     /**
+     * <pre>
+     * Storage for spooled data by exchange manager.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.ExchangeManagerStorage storage = 2;</code>
      * @return Whether the storage field is set.
      */
@@ -15180,6 +17233,10 @@ public final class ClusterOuterClass {
       return storage_ != null;
     }
     /**
+     * <pre>
+     * Storage for spooled data by exchange manager.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.ExchangeManagerStorage storage = 2;</code>
      * @return The storage.
      */
@@ -15188,6 +17245,10 @@ public final class ClusterOuterClass {
       return storage_ == null ? yandex.cloud.api.trino.v1.ClusterOuterClass.ExchangeManagerStorage.getDefaultInstance() : storage_;
     }
     /**
+     * <pre>
+     * Storage for spooled data by exchange manager.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.ExchangeManagerStorage storage = 2;</code>
      */
     @java.lang.Override
@@ -15724,6 +17785,10 @@ public final class ClusterOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.trino.v1.ClusterOuterClass.ExchangeManagerStorage, yandex.cloud.api.trino.v1.ClusterOuterClass.ExchangeManagerStorage.Builder, yandex.cloud.api.trino.v1.ClusterOuterClass.ExchangeManagerStorageOrBuilder> storageBuilder_;
       /**
+       * <pre>
+       * Storage for spooled data by exchange manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ExchangeManagerStorage storage = 2;</code>
        * @return Whether the storage field is set.
        */
@@ -15731,6 +17796,10 @@ public final class ClusterOuterClass {
         return storageBuilder_ != null || storage_ != null;
       }
       /**
+       * <pre>
+       * Storage for spooled data by exchange manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ExchangeManagerStorage storage = 2;</code>
        * @return The storage.
        */
@@ -15742,6 +17811,10 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * Storage for spooled data by exchange manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ExchangeManagerStorage storage = 2;</code>
        */
       public Builder setStorage(yandex.cloud.api.trino.v1.ClusterOuterClass.ExchangeManagerStorage value) {
@@ -15758,6 +17831,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Storage for spooled data by exchange manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ExchangeManagerStorage storage = 2;</code>
        */
       public Builder setStorage(
@@ -15772,6 +17849,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Storage for spooled data by exchange manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ExchangeManagerStorage storage = 2;</code>
        */
       public Builder mergeStorage(yandex.cloud.api.trino.v1.ClusterOuterClass.ExchangeManagerStorage value) {
@@ -15790,6 +17871,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Storage for spooled data by exchange manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ExchangeManagerStorage storage = 2;</code>
        */
       public Builder clearStorage() {
@@ -15804,6 +17889,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Storage for spooled data by exchange manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ExchangeManagerStorage storage = 2;</code>
        */
       public yandex.cloud.api.trino.v1.ClusterOuterClass.ExchangeManagerStorage.Builder getStorageBuilder() {
@@ -15812,6 +17901,10 @@ public final class ClusterOuterClass {
         return getStorageFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Storage for spooled data by exchange manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ExchangeManagerStorage storage = 2;</code>
        */
       public yandex.cloud.api.trino.v1.ClusterOuterClass.ExchangeManagerStorageOrBuilder getStorageOrBuilder() {
@@ -15823,6 +17916,10 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * Storage for spooled data by exchange manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ExchangeManagerStorage storage = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -17009,12 +19106,20 @@ public final class ClusterOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Minimum number of worker instances.
+     * </pre>
+     *
      * <code>int64 min_count = 1 [(.yandex.cloud.value) = "0-512"];</code>
      * @return The minCount.
      */
     long getMinCount();
 
     /**
+     * <pre>
+     * Maximum number of worker instances.
+     * </pre>
+     *
      * <code>int64 max_count = 2 [(.yandex.cloud.value) = "1-512"];</code>
      * @return The maxCount.
      */
@@ -17110,6 +19215,10 @@ public final class ClusterOuterClass {
     public static final int MIN_COUNT_FIELD_NUMBER = 1;
     private long minCount_;
     /**
+     * <pre>
+     * Minimum number of worker instances.
+     * </pre>
+     *
      * <code>int64 min_count = 1 [(.yandex.cloud.value) = "0-512"];</code>
      * @return The minCount.
      */
@@ -17121,6 +19230,10 @@ public final class ClusterOuterClass {
     public static final int MAX_COUNT_FIELD_NUMBER = 2;
     private long maxCount_;
     /**
+     * <pre>
+     * Maximum number of worker instances.
+     * </pre>
+     *
      * <code>int64 max_count = 2 [(.yandex.cloud.value) = "1-512"];</code>
      * @return The maxCount.
      */
@@ -17452,6 +19565,10 @@ public final class ClusterOuterClass {
 
       private long minCount_ ;
       /**
+       * <pre>
+       * Minimum number of worker instances.
+       * </pre>
+       *
        * <code>int64 min_count = 1 [(.yandex.cloud.value) = "0-512"];</code>
        * @return The minCount.
        */
@@ -17460,6 +19577,10 @@ public final class ClusterOuterClass {
         return minCount_;
       }
       /**
+       * <pre>
+       * Minimum number of worker instances.
+       * </pre>
+       *
        * <code>int64 min_count = 1 [(.yandex.cloud.value) = "0-512"];</code>
        * @param value The minCount to set.
        * @return This builder for chaining.
@@ -17471,6 +19592,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Minimum number of worker instances.
+       * </pre>
+       *
        * <code>int64 min_count = 1 [(.yandex.cloud.value) = "0-512"];</code>
        * @return This builder for chaining.
        */
@@ -17483,6 +19608,10 @@ public final class ClusterOuterClass {
 
       private long maxCount_ ;
       /**
+       * <pre>
+       * Maximum number of worker instances.
+       * </pre>
+       *
        * <code>int64 max_count = 2 [(.yandex.cloud.value) = "1-512"];</code>
        * @return The maxCount.
        */
@@ -17491,6 +19620,10 @@ public final class ClusterOuterClass {
         return maxCount_;
       }
       /**
+       * <pre>
+       * Maximum number of worker instances.
+       * </pre>
+       *
        * <code>int64 max_count = 2 [(.yandex.cloud.value) = "1-512"];</code>
        * @param value The maxCount to set.
        * @return This builder for chaining.
@@ -17502,6 +19635,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of worker instances.
+       * </pre>
+       *
        * <code>int64 max_count = 2 [(.yandex.cloud.value) = "1-512"];</code>
        * @return This builder for chaining.
        */
@@ -17585,6 +19722,11 @@ public final class ClusterOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_trino_v1_LoggingConfig_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_trino_v1_PrivateAccessConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_trino_v1_PrivateAccessConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_trino_v1_NetworkConfig_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -17619,6 +19761,11 @@ public final class ClusterOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_trino_v1_RetryPolicyConfig_AdditionalPropertiesEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_trino_v1_TLSConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_trino_v1_TLSConfig_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_trino_v1_ExchangeManagerStorage_descriptor;
   private static final 
@@ -17668,89 +19815,98 @@ public final class ClusterOuterClass {
       "mestamp.proto\032\'yandex/cloud/logging/v1/l" +
       "og_entry.proto\032*yandex/cloud/trino/v1/ac" +
       "cess_control.proto\032\'yandex/cloud/trino/v" +
-      "1/maintenance.proto\032\035yandex/cloud/valida" +
-      "tion.proto\"\211\007\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfo" +
-      "lder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013d" +
-      "escription\030\005 \001(\t\022:\n\006labels\030\006 \003(\0132*.yande" +
-      "x.cloud.trino.v1.Cluster.LabelsEntry\0225\n\n" +
-      "monitoring\030\007 \003(\0132!.yandex.cloud.trino.v1" +
-      ".Monitoring\0221\n\005trino\030\010 \001(\0132\".yandex.clou" +
-      "d.trino.v1.TrinoConfig\022-\n\006health\030\t \001(\0162\035" +
-      ".yandex.cloud.trino.v1.Health\0225\n\006status\030" +
-      "\n \001(\0162%.yandex.cloud.trino.v1.Cluster.St" +
-      "atus\0225\n\007network\030\013 \001(\0132$.yandex.cloud.tri" +
-      "no.v1.NetworkConfig\022\033\n\023deletion_protecti" +
-      "on\030\014 \001(\010\022$\n\022service_account_id\030\r \001(\tB\010\212\310" +
-      "1\004<=50\0225\n\007logging\030\016 \001(\0132$.yandex.cloud.t" +
-      "rino.v1.LoggingConfig\022\027\n\017coordinator_url" +
-      "\030\017 \001(\t\022D\n\022maintenance_window\030\020 \001(\0132(.yan" +
-      "dex.cloud.trino.v1.MaintenanceWindow\022F\n\021" +
-      "planned_operation\030\021 \001(\0132+.yandex.cloud.t" +
-      "rino.v1.MaintenanceOperation\032-\n\013LabelsEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"y\n\006S" +
-      "tatus\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022" +
-      "\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010STOPPING\020\004\022\013\n" +
-      "\007STOPPED\020\005\022\014\n\010STARTING\020\006\022\014\n\010UPDATING\020\007\"=" +
-      "\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013descriptio" +
-      "n\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\342\001\n\rLoggingConfig\022" +
-      "\017\n\007enabled\030\001 \001(\010\0228\n\tfolder_id\030\002 \001(\tB#\362\3071" +
-      "\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\022;\n\014lo" +
-      "g_group_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0" +
-      "-9_.]{0,63})?H\000\022:\n\tmin_level\030\004 \001(\0162\'.yan" +
-      "dex.cloud.logging.v1.LogLevel.LevelB\r\n\013d" +
-      "estination\"?\n\rNetworkConfig\022\022\n\nsubnet_id" +
-      "s\030\001 \003(\t\022\032\n\022security_group_ids\030\002 \003(\t\"\260\002\n\013" +
-      "TrinoConfig\022J\n\022coordinator_config\030\001 \001(\0132" +
-      "(.yandex.cloud.trino.v1.CoordinatorConfi" +
-      "gB\004\350\3071\001\022@\n\rworker_config\030\002 \001(\0132#.yandex." +
-      "cloud.trino.v1.WorkerConfigB\004\350\3071\001\022\017\n\007ver" +
-      "sion\030\003 \001(\t\022>\n\014retry_policy\030\004 \001(\0132(.yande" +
-      "x.cloud.trino.v1.RetryPolicyConfig\022B\n\016ac" +
-      "cess_control\030\005 \001(\0132*.yandex.cloud.trino." +
-      "v1.AccessControlConfig\"N\n\021CoordinatorCon" +
-      "fig\0229\n\tresources\030\001 \001(\0132 .yandex.cloud.tr" +
-      "ino.v1.ResourcesB\004\350\3071\001\"\304\002\n\014WorkerConfig\022" +
-      "9\n\tresources\030\001 \001(\0132 .yandex.cloud.trino." +
-      "v1.ResourcesB\004\350\3071\001\022Q\n\014scale_policy\030\002 \001(\013" +
-      "25.yandex.cloud.trino.v1.WorkerConfig.Wo" +
-      "rkerScalePolicyB\004\350\3071\001\032\245\001\n\021WorkerScalePol" +
-      "icy\022>\n\013fixed_scale\030\001 \001(\0132\'.yandex.cloud." +
-      "trino.v1.FixedScalePolicyH\000\022<\n\nauto_scal" +
-      "e\030\002 \001(\0132&.yandex.cloud.trino.v1.AutoScal" +
-      "ePolicyH\000B\022\n\nscale_type\022\004\300\3011\001\"\323\003\n\021RetryP" +
-      "olicyConfig\022D\n\006policy\030\001 \001(\01624.yandex.clo" +
-      "ud.trino.v1.RetryPolicyConfig.RetryPolic" +
-      "y\022F\n\020exchange_manager\030\002 \001(\0132,.yandex.clo" +
-      "ud.trino.v1.ExchangeManagerConfig\022\260\001\n\025ad" +
-      "ditional_properties\030\003 \003(\0132B.yandex.cloud" +
-      ".trino.v1.RetryPolicyConfig.AdditionalPr" +
-      "opertiesEntryBM\202\3101\005<=256\212\3101\005<=128\362\3071\025[-_" +
-      "0-9a-zA-Z.,:\\/_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z]" +
-      "[-_0-9a-z.]*\032;\n\031AdditionalPropertiesEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"@\n\013Ret" +
-      "ryPolicy\022\034\n\030RETRY_POLICY_UNSPECIFIED\020\000\022\t" +
-      "\n\005QUERY\020\001\022\010\n\004TASK\020\002\"\202\001\n\026ExchangeManagerS" +
-      "torage\022M\n\nservice_s3\030\001 \001(\01327.yandex.clou" +
-      "d.trino.v1.ExchangeManagerStorage.Servic" +
-      "eS3H\000\032\013\n\tServiceS3B\014\n\004type\022\004\300\3011\001\"\313\002\n\025Exc" +
-      "hangeManagerConfig\022\264\001\n\025additional_proper" +
-      "ties\030\001 \003(\0132F.yandex.cloud.trino.v1.Excha" +
-      "ngeManagerConfig.AdditionalPropertiesEnt" +
-      "ryBM\202\3101\005<=256\212\3101\005<=128\362\3071\025[-_0-9a-zA-Z.," +
-      ":\\/_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]" +
-      "*\022>\n\007storage\030\002 \001(\0132-.yandex.cloud.trino." +
-      "v1.ExchangeManagerStorage\032;\n\031AdditionalP" +
-      "ropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"5\n\tResources\022(\n\022resource_preset_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\",\n\020FixedScalePolic" +
-      "y\022\030\n\005count\030\001 \001(\003B\t\372\3071\0051-512\"M\n\017AutoScale" +
-      "Policy\022\034\n\tmin_count\030\001 \001(\003B\t\372\3071\0050-512\022\034\n\t" +
-      "max_count\030\002 \001(\003B\t\372\3071\0051-512*?\n\006Health\022\022\n\016" +
-      "HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n" +
-      "\010DEGRADED\020\003B\\\n\031yandex.cloud.api.trino.v1" +
-      "Z?github.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/trino/v1;trinob\006proto3"
+      "1/maintenance.proto\032/yandex/cloud/trino/" +
+      "v1/resource_management.proto\032\035yandex/clo" +
+      "ud/validation.proto\"\211\007\n\007Cluster\022\n\n\002id\030\001 " +
+      "\001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001" +
+      "(\0132\032.google.protobuf.Timestamp\022\014\n\004name\030\004" +
+      " \001(\t\022\023\n\013description\030\005 \001(\t\022:\n\006labels\030\006 \003(" +
+      "\0132*.yandex.cloud.trino.v1.Cluster.Labels" +
+      "Entry\0225\n\nmonitoring\030\007 \003(\0132!.yandex.cloud" +
+      ".trino.v1.Monitoring\0221\n\005trino\030\010 \001(\0132\".ya" +
+      "ndex.cloud.trino.v1.TrinoConfig\022-\n\006healt" +
+      "h\030\t \001(\0162\035.yandex.cloud.trino.v1.Health\0225" +
+      "\n\006status\030\n \001(\0162%.yandex.cloud.trino.v1.C" +
+      "luster.Status\0225\n\007network\030\013 \001(\0132$.yandex." +
+      "cloud.trino.v1.NetworkConfig\022\033\n\023deletion" +
+      "_protection\030\014 \001(\010\022$\n\022service_account_id\030" +
+      "\r \001(\tB\010\212\3101\004<=50\0225\n\007logging\030\016 \001(\0132$.yande" +
+      "x.cloud.trino.v1.LoggingConfig\022\027\n\017coordi" +
+      "nator_url\030\017 \001(\t\022D\n\022maintenance_window\030\020 " +
+      "\001(\0132(.yandex.cloud.trino.v1.MaintenanceW" +
+      "indow\022F\n\021planned_operation\030\021 \001(\0132+.yande" +
+      "x.cloud.trino.v1.MaintenanceOperation\032-\n" +
+      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\"y\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CR" +
+      "EATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010STOP" +
+      "PING\020\004\022\013\n\007STOPPED\020\005\022\014\n\010STARTING\020\006\022\014\n\010UPD" +
+      "ATING\020\007\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013d" +
+      "escription\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\342\001\n\rLoggi" +
+      "ngConfig\022\017\n\007enabled\030\001 \001(\010\0228\n\tfolder_id\030\002" +
+      " \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})" +
+      "?H\000\022;\n\014log_group_id\030\003 \001(\tB#\362\3071\037([a-zA-Z]" +
+      "[-a-zA-Z0-9_.]{0,63})?H\000\022:\n\tmin_level\030\004 " +
+      "\001(\0162\'.yandex.cloud.logging.v1.LogLevel.L" +
+      "evelB\r\n\013destination\"&\n\023PrivateAccessConf" +
+      "ig\022\017\n\007enabled\030\001 \001(\010\"\203\001\n\rNetworkConfig\022\022\n" +
+      "\nsubnet_ids\030\001 \003(\t\022\032\n\022security_group_ids\030" +
+      "\002 \003(\t\022B\n\016private_access\030\003 \001(\0132*.yandex.c" +
+      "loud.trino.v1.PrivateAccessConfig\"\255\003\n\013Tr" +
+      "inoConfig\022J\n\022coordinator_config\030\001 \001(\0132(." +
+      "yandex.cloud.trino.v1.CoordinatorConfigB" +
+      "\004\350\3071\001\022@\n\rworker_config\030\002 \001(\0132#.yandex.cl" +
+      "oud.trino.v1.WorkerConfigB\004\350\3071\001\022\017\n\007versi" +
+      "on\030\003 \001(\t\022>\n\014retry_policy\030\004 \001(\0132(.yandex." +
+      "cloud.trino.v1.RetryPolicyConfig\022B\n\016acce" +
+      "ss_control\030\005 \001(\0132*.yandex.cloud.trino.v1" +
+      ".AccessControlConfig\022L\n\023resource_managem" +
+      "ent\030\006 \001(\0132/.yandex.cloud.trino.v1.Resour" +
+      "ceManagementConfig\022-\n\003tls\030\007 \001(\0132 .yandex" +
+      ".cloud.trino.v1.TLSConfig\"N\n\021Coordinator" +
+      "Config\0229\n\tresources\030\001 \001(\0132 .yandex.cloud" +
+      ".trino.v1.ResourcesB\004\350\3071\001\"\304\002\n\014WorkerConf" +
+      "ig\0229\n\tresources\030\001 \001(\0132 .yandex.cloud.tri" +
+      "no.v1.ResourcesB\004\350\3071\001\022Q\n\014scale_policy\030\002 " +
+      "\001(\01325.yandex.cloud.trino.v1.WorkerConfig" +
+      ".WorkerScalePolicyB\004\350\3071\001\032\245\001\n\021WorkerScale" +
+      "Policy\022>\n\013fixed_scale\030\001 \001(\0132\'.yandex.clo" +
+      "ud.trino.v1.FixedScalePolicyH\000\022<\n\nauto_s" +
+      "cale\030\002 \001(\0132&.yandex.cloud.trino.v1.AutoS" +
+      "calePolicyH\000B\022\n\nscale_type\022\004\300\3011\001\"\323\003\n\021Ret" +
+      "ryPolicyConfig\022D\n\006policy\030\001 \001(\01624.yandex." +
+      "cloud.trino.v1.RetryPolicyConfig.RetryPo" +
+      "licy\022F\n\020exchange_manager\030\002 \001(\0132,.yandex." +
+      "cloud.trino.v1.ExchangeManagerConfig\022\260\001\n" +
+      "\025additional_properties\030\003 \003(\0132B.yandex.cl" +
+      "oud.trino.v1.RetryPolicyConfig.Additiona" +
+      "lPropertiesEntryBM\202\3101\005<=256\212\3101\005<=128\362\3071\025" +
+      "[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021[a" +
+      "-z][-_0-9a-z.]*\032;\n\031AdditionalPropertiesE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"@\n\013" +
+      "RetryPolicy\022\034\n\030RETRY_POLICY_UNSPECIFIED\020" +
+      "\000\022\t\n\005QUERY\020\001\022\010\n\004TASK\020\002\"@\n\tTLSConfig\0223\n\024t" +
+      "rusted_certificates\030\001 \003(\tB\025\202\3101\003<=8\212\3101\006<=" +
+      "8192\220\3101\001\"\202\001\n\026ExchangeManagerStorage\022M\n\ns" +
+      "ervice_s3\030\001 \001(\01327.yandex.cloud.trino.v1." +
+      "ExchangeManagerStorage.ServiceS3H\000\032\013\n\tSe" +
+      "rviceS3B\014\n\004type\022\004\300\3011\001\"\313\002\n\025ExchangeManage" +
+      "rConfig\022\264\001\n\025additional_properties\030\001 \003(\0132" +
+      "F.yandex.cloud.trino.v1.ExchangeManagerC" +
+      "onfig.AdditionalPropertiesEntryBM\202\3101\005<=2" +
+      "56\212\3101\005<=128\362\3071\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007" +
+      "\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]*\022>\n\007storag" +
+      "e\030\002 \001(\0132-.yandex.cloud.trino.v1.Exchange" +
+      "ManagerStorage\032;\n\031AdditionalPropertiesEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"5\n\tR" +
+      "esources\022(\n\022resource_preset_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\",\n\020FixedScalePolicy\022\030\n\005count\030" +
+      "\001 \001(\003B\t\372\3071\0051-512\"M\n\017AutoScalePolicy\022\034\n\tm" +
+      "in_count\030\001 \001(\003B\t\372\3071\0050-512\022\034\n\tmax_count\030\002" +
+      " \001(\003B\t\372\3071\0051-512*?\n\006Health\022\022\n\016HEALTH_UNKN" +
+      "OWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003" +
+      "B\\\n\031yandex.cloud.api.trino.v1Z?github.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "trino/v1;trinob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17759,6 +19915,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.logging.v1.LogEntryOuterClass.getDescriptor(),
           yandex.cloud.api.trino.v1.AccessControl.getDescriptor(),
           yandex.cloud.api.trino.v1.Maintenance.getDescriptor(),
+          yandex.cloud.api.trino.v1.ResourceManagement.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_trino_v1_Cluster_descriptor =
@@ -17785,26 +19942,32 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_LoggingConfig_descriptor,
         new java.lang.String[] { "Enabled", "FolderId", "LogGroupId", "MinLevel", "Destination", });
-    internal_static_yandex_cloud_trino_v1_NetworkConfig_descriptor =
+    internal_static_yandex_cloud_trino_v1_PrivateAccessConfig_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_trino_v1_PrivateAccessConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_trino_v1_PrivateAccessConfig_descriptor,
+        new java.lang.String[] { "Enabled", });
+    internal_static_yandex_cloud_trino_v1_NetworkConfig_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_trino_v1_NetworkConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_NetworkConfig_descriptor,
-        new java.lang.String[] { "SubnetIds", "SecurityGroupIds", });
+        new java.lang.String[] { "SubnetIds", "SecurityGroupIds", "PrivateAccess", });
     internal_static_yandex_cloud_trino_v1_TrinoConfig_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_trino_v1_TrinoConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_TrinoConfig_descriptor,
-        new java.lang.String[] { "CoordinatorConfig", "WorkerConfig", "Version", "RetryPolicy", "AccessControl", });
+        new java.lang.String[] { "CoordinatorConfig", "WorkerConfig", "Version", "RetryPolicy", "AccessControl", "ResourceManagement", "Tls", });
     internal_static_yandex_cloud_trino_v1_CoordinatorConfig_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_trino_v1_CoordinatorConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_CoordinatorConfig_descriptor,
         new java.lang.String[] { "Resources", });
     internal_static_yandex_cloud_trino_v1_WorkerConfig_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_trino_v1_WorkerConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_WorkerConfig_descriptor,
@@ -17816,7 +19979,7 @@ public final class ClusterOuterClass {
         internal_static_yandex_cloud_trino_v1_WorkerConfig_WorkerScalePolicy_descriptor,
         new java.lang.String[] { "FixedScale", "AutoScale", "ScaleType", });
     internal_static_yandex_cloud_trino_v1_RetryPolicyConfig_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_trino_v1_RetryPolicyConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_RetryPolicyConfig_descriptor,
@@ -17827,8 +19990,14 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_RetryPolicyConfig_AdditionalPropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_trino_v1_TLSConfig_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_trino_v1_TLSConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_trino_v1_TLSConfig_descriptor,
+        new java.lang.String[] { "TrustedCertificates", });
     internal_static_yandex_cloud_trino_v1_ExchangeManagerStorage_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_trino_v1_ExchangeManagerStorage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_ExchangeManagerStorage_descriptor,
@@ -17840,7 +20009,7 @@ public final class ClusterOuterClass {
         internal_static_yandex_cloud_trino_v1_ExchangeManagerStorage_ServiceS3_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_trino_v1_ExchangeManagerConfig_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_trino_v1_ExchangeManagerConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_ExchangeManagerConfig_descriptor,
@@ -17852,19 +20021,19 @@ public final class ClusterOuterClass {
         internal_static_yandex_cloud_trino_v1_ExchangeManagerConfig_AdditionalPropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_trino_v1_Resources_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_trino_v1_Resources_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_Resources_descriptor,
         new java.lang.String[] { "ResourcePresetId", });
     internal_static_yandex_cloud_trino_v1_FixedScalePolicy_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_trino_v1_FixedScalePolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_FixedScalePolicy_descriptor,
         new java.lang.String[] { "Count", });
     internal_static_yandex_cloud_trino_v1_AutoScalePolicy_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_trino_v1_AutoScalePolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_AutoScalePolicy_descriptor,
@@ -17877,6 +20046,7 @@ public final class ClusterOuterClass {
     registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.size);
+    registry.add(yandex.cloud.api.Validation.unique);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
@@ -17884,6 +20054,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.logging.v1.LogEntryOuterClass.getDescriptor();
     yandex.cloud.api.trino.v1.AccessControl.getDescriptor();
     yandex.cloud.api.trino.v1.Maintenance.getDescriptor();
+    yandex.cloud.api.trino.v1.ResourceManagement.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

@@ -145,34 +145,60 @@ public final class Metrika {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Stream type, one of: METRIKA_STREAM_TYPE_HITS, METRIKA_STREAM_TYPE_VISITS,
+     * METRIKA_STREAM_TYPE_HITS_V2
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MetrikaStreamType type = 1;</code>
      * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
+     * <pre>
+     * Stream type, one of: METRIKA_STREAM_TYPE_HITS, METRIKA_STREAM_TYPE_VISITS,
+     * METRIKA_STREAM_TYPE_HITS_V2
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MetrikaStreamType type = 1;</code>
      * @return The type.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStreamType getType();
 
     /**
+     * <pre>
+     * Column names
+     * </pre>
+     *
      * <code>repeated string columns = 2;</code>
      * @return A list containing the columns.
      */
     java.util.List<java.lang.String>
         getColumnsList();
     /**
+     * <pre>
+     * Column names
+     * </pre>
+     *
      * <code>repeated string columns = 2;</code>
      * @return The count of columns.
      */
     int getColumnsCount();
     /**
+     * <pre>
+     * Column names
+     * </pre>
+     *
      * <code>repeated string columns = 2;</code>
      * @param index The index of the element to return.
      * @return The columns at the given index.
      */
     java.lang.String getColumns(int index);
     /**
+     * <pre>
+     * Column names
+     * </pre>
+     *
      * <code>repeated string columns = 2;</code>
      * @param index The index of the value to return.
      * @return The bytes of the columns at the given index.
@@ -281,6 +307,11 @@ public final class Metrika {
     public static final int TYPE_FIELD_NUMBER = 1;
     private int type_;
     /**
+     * <pre>
+     * Stream type, one of: METRIKA_STREAM_TYPE_HITS, METRIKA_STREAM_TYPE_VISITS,
+     * METRIKA_STREAM_TYPE_HITS_V2
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MetrikaStreamType type = 1;</code>
      * @return The enum numeric value on the wire for type.
      */
@@ -288,6 +319,11 @@ public final class Metrika {
       return type_;
     }
     /**
+     * <pre>
+     * Stream type, one of: METRIKA_STREAM_TYPE_HITS, METRIKA_STREAM_TYPE_VISITS,
+     * METRIKA_STREAM_TYPE_HITS_V2
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MetrikaStreamType type = 1;</code>
      * @return The type.
      */
@@ -300,6 +336,10 @@ public final class Metrika {
     public static final int COLUMNS_FIELD_NUMBER = 2;
     private com.google.protobuf.LazyStringList columns_;
     /**
+     * <pre>
+     * Column names
+     * </pre>
+     *
      * <code>repeated string columns = 2;</code>
      * @return A list containing the columns.
      */
@@ -308,6 +348,10 @@ public final class Metrika {
       return columns_;
     }
     /**
+     * <pre>
+     * Column names
+     * </pre>
+     *
      * <code>repeated string columns = 2;</code>
      * @return The count of columns.
      */
@@ -315,6 +359,10 @@ public final class Metrika {
       return columns_.size();
     }
     /**
+     * <pre>
+     * Column names
+     * </pre>
+     *
      * <code>repeated string columns = 2;</code>
      * @param index The index of the element to return.
      * @return The columns at the given index.
@@ -323,6 +371,10 @@ public final class Metrika {
       return columns_.get(index);
     }
     /**
+     * <pre>
+     * Column names
+     * </pre>
+     *
      * <code>repeated string columns = 2;</code>
      * @param index The index of the value to return.
      * @return The bytes of the columns at the given index.
@@ -671,6 +723,11 @@ public final class Metrika {
 
       private int type_ = 0;
       /**
+       * <pre>
+       * Stream type, one of: METRIKA_STREAM_TYPE_HITS, METRIKA_STREAM_TYPE_VISITS,
+       * METRIKA_STREAM_TYPE_HITS_V2
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MetrikaStreamType type = 1;</code>
        * @return The enum numeric value on the wire for type.
        */
@@ -678,6 +735,11 @@ public final class Metrika {
         return type_;
       }
       /**
+       * <pre>
+       * Stream type, one of: METRIKA_STREAM_TYPE_HITS, METRIKA_STREAM_TYPE_VISITS,
+       * METRIKA_STREAM_TYPE_HITS_V2
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MetrikaStreamType type = 1;</code>
        * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
@@ -689,6 +751,11 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Stream type, one of: METRIKA_STREAM_TYPE_HITS, METRIKA_STREAM_TYPE_VISITS,
+       * METRIKA_STREAM_TYPE_HITS_V2
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MetrikaStreamType type = 1;</code>
        * @return The type.
        */
@@ -699,6 +766,11 @@ public final class Metrika {
         return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStreamType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Stream type, one of: METRIKA_STREAM_TYPE_HITS, METRIKA_STREAM_TYPE_VISITS,
+       * METRIKA_STREAM_TYPE_HITS_V2
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MetrikaStreamType type = 1;</code>
        * @param value The type to set.
        * @return This builder for chaining.
@@ -713,6 +785,11 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Stream type, one of: METRIKA_STREAM_TYPE_HITS, METRIKA_STREAM_TYPE_VISITS,
+       * METRIKA_STREAM_TYPE_HITS_V2
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MetrikaStreamType type = 1;</code>
        * @return This builder for chaining.
        */
@@ -731,6 +808,10 @@ public final class Metrika {
          }
       }
       /**
+       * <pre>
+       * Column names
+       * </pre>
+       *
        * <code>repeated string columns = 2;</code>
        * @return A list containing the columns.
        */
@@ -739,6 +820,10 @@ public final class Metrika {
         return columns_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * Column names
+       * </pre>
+       *
        * <code>repeated string columns = 2;</code>
        * @return The count of columns.
        */
@@ -746,6 +831,10 @@ public final class Metrika {
         return columns_.size();
       }
       /**
+       * <pre>
+       * Column names
+       * </pre>
+       *
        * <code>repeated string columns = 2;</code>
        * @param index The index of the element to return.
        * @return The columns at the given index.
@@ -754,6 +843,10 @@ public final class Metrika {
         return columns_.get(index);
       }
       /**
+       * <pre>
+       * Column names
+       * </pre>
+       *
        * <code>repeated string columns = 2;</code>
        * @param index The index of the value to return.
        * @return The bytes of the columns at the given index.
@@ -763,6 +856,10 @@ public final class Metrika {
         return columns_.getByteString(index);
       }
       /**
+       * <pre>
+       * Column names
+       * </pre>
+       *
        * <code>repeated string columns = 2;</code>
        * @param index The index to set the value at.
        * @param value The columns to set.
@@ -779,6 +876,10 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Column names
+       * </pre>
+       *
        * <code>repeated string columns = 2;</code>
        * @param value The columns to add.
        * @return This builder for chaining.
@@ -794,6 +895,10 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Column names
+       * </pre>
+       *
        * <code>repeated string columns = 2;</code>
        * @param values The columns to add.
        * @return This builder for chaining.
@@ -807,6 +912,10 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Column names
+       * </pre>
+       *
        * <code>repeated string columns = 2;</code>
        * @return This builder for chaining.
        */
@@ -817,6 +926,10 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Column names
+       * </pre>
+       *
        * <code>repeated string columns = 2;</code>
        * @param value The bytes of the columns to add.
        * @return This builder for chaining.
@@ -890,16 +1003,28 @@ public final class Metrika {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Counter IDs
+     * </pre>
+     *
      * <code>repeated int64 counter_ids = 1;</code>
      * @return A list containing the counterIds.
      */
     java.util.List<java.lang.Long> getCounterIdsList();
     /**
+     * <pre>
+     * Counter IDs
+     * </pre>
+     *
      * <code>repeated int64 counter_ids = 1;</code>
      * @return The count of counterIds.
      */
     int getCounterIdsCount();
     /**
+     * <pre>
+     * Counter IDs
+     * </pre>
+     *
      * <code>repeated int64 counter_ids = 1;</code>
      * @param index The index of the element to return.
      * @return The counterIds at the given index.
@@ -907,45 +1032,81 @@ public final class Metrika {
     long getCounterIds(int index);
 
     /**
+     * <pre>
+     * Authentication token
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret token = 2;</code>
      * @return Whether the token field is set.
      */
     boolean hasToken();
     /**
+     * <pre>
+     * Authentication token
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret token = 2;</code>
      * @return The token.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret getToken();
     /**
+     * <pre>
+     * Authentication token
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret token = 2;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder getTokenOrBuilder();
 
     /**
+     * <pre>
+     * Streams
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
      */
     java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStream> 
         getStreamsList();
     /**
+     * <pre>
+     * Streams
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStream getStreams(int index);
     /**
+     * <pre>
+     * Streams
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
      */
     int getStreamsCount();
     /**
+     * <pre>
+     * Streams
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
      */
     java.util.List<? extends yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStreamOrBuilder> 
         getStreamsOrBuilderList();
     /**
+     * <pre>
+     * Streams
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStreamOrBuilder getStreamsOrBuilder(
         int index);
   }
   /**
+   * <pre>
+   * Settings specific to the Yandex Metrika source endpoint
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MetrikaSource}
    */
   public static final class MetrikaSource extends
@@ -1077,6 +1238,10 @@ public final class Metrika {
     public static final int COUNTER_IDS_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.LongList counterIds_;
     /**
+     * <pre>
+     * Counter IDs
+     * </pre>
+     *
      * <code>repeated int64 counter_ids = 1;</code>
      * @return A list containing the counterIds.
      */
@@ -1086,6 +1251,10 @@ public final class Metrika {
       return counterIds_;
     }
     /**
+     * <pre>
+     * Counter IDs
+     * </pre>
+     *
      * <code>repeated int64 counter_ids = 1;</code>
      * @return The count of counterIds.
      */
@@ -1093,6 +1262,10 @@ public final class Metrika {
       return counterIds_.size();
     }
     /**
+     * <pre>
+     * Counter IDs
+     * </pre>
+     *
      * <code>repeated int64 counter_ids = 1;</code>
      * @param index The index of the element to return.
      * @return The counterIds at the given index.
@@ -1105,6 +1278,10 @@ public final class Metrika {
     public static final int TOKEN_FIELD_NUMBER = 2;
     private yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret token_;
     /**
+     * <pre>
+     * Authentication token
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret token = 2;</code>
      * @return Whether the token field is set.
      */
@@ -1113,6 +1290,10 @@ public final class Metrika {
       return token_ != null;
     }
     /**
+     * <pre>
+     * Authentication token
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret token = 2;</code>
      * @return The token.
      */
@@ -1121,6 +1302,10 @@ public final class Metrika {
       return token_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret.getDefaultInstance() : token_;
     }
     /**
+     * <pre>
+     * Authentication token
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret token = 2;</code>
      */
     @java.lang.Override
@@ -1131,6 +1316,10 @@ public final class Metrika {
     public static final int STREAMS_FIELD_NUMBER = 3;
     private java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStream> streams_;
     /**
+     * <pre>
+     * Streams
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
      */
     @java.lang.Override
@@ -1138,6 +1327,10 @@ public final class Metrika {
       return streams_;
     }
     /**
+     * <pre>
+     * Streams
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
      */
     @java.lang.Override
@@ -1146,6 +1339,10 @@ public final class Metrika {
       return streams_;
     }
     /**
+     * <pre>
+     * Streams
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
      */
     @java.lang.Override
@@ -1153,6 +1350,10 @@ public final class Metrika {
       return streams_.size();
     }
     /**
+     * <pre>
+     * Streams
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
      */
     @java.lang.Override
@@ -1160,6 +1361,10 @@ public final class Metrika {
       return streams_.get(index);
     }
     /**
+     * <pre>
+     * Streams
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
      */
     @java.lang.Override
@@ -1370,6 +1575,10 @@ public final class Metrika {
       return builder;
     }
     /**
+     * <pre>
+     * Settings specific to the Yandex Metrika source endpoint
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MetrikaSource}
      */
     public static final class Builder extends
@@ -1593,6 +1802,10 @@ public final class Metrika {
          }
       }
       /**
+       * <pre>
+       * Counter IDs
+       * </pre>
+       *
        * <code>repeated int64 counter_ids = 1;</code>
        * @return A list containing the counterIds.
        */
@@ -1602,6 +1815,10 @@ public final class Metrika {
                  java.util.Collections.unmodifiableList(counterIds_) : counterIds_;
       }
       /**
+       * <pre>
+       * Counter IDs
+       * </pre>
+       *
        * <code>repeated int64 counter_ids = 1;</code>
        * @return The count of counterIds.
        */
@@ -1609,6 +1826,10 @@ public final class Metrika {
         return counterIds_.size();
       }
       /**
+       * <pre>
+       * Counter IDs
+       * </pre>
+       *
        * <code>repeated int64 counter_ids = 1;</code>
        * @param index The index of the element to return.
        * @return The counterIds at the given index.
@@ -1617,6 +1838,10 @@ public final class Metrika {
         return counterIds_.getLong(index);
       }
       /**
+       * <pre>
+       * Counter IDs
+       * </pre>
+       *
        * <code>repeated int64 counter_ids = 1;</code>
        * @param index The index to set the value at.
        * @param value The counterIds to set.
@@ -1630,6 +1855,10 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Counter IDs
+       * </pre>
+       *
        * <code>repeated int64 counter_ids = 1;</code>
        * @param value The counterIds to add.
        * @return This builder for chaining.
@@ -1641,6 +1870,10 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Counter IDs
+       * </pre>
+       *
        * <code>repeated int64 counter_ids = 1;</code>
        * @param values The counterIds to add.
        * @return This builder for chaining.
@@ -1654,6 +1887,10 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Counter IDs
+       * </pre>
+       *
        * <code>repeated int64 counter_ids = 1;</code>
        * @return This builder for chaining.
        */
@@ -1668,6 +1905,10 @@ public final class Metrika {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret, yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder> tokenBuilder_;
       /**
+       * <pre>
+       * Authentication token
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret token = 2;</code>
        * @return Whether the token field is set.
        */
@@ -1675,6 +1916,10 @@ public final class Metrika {
         return tokenBuilder_ != null || token_ != null;
       }
       /**
+       * <pre>
+       * Authentication token
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret token = 2;</code>
        * @return The token.
        */
@@ -1686,6 +1931,10 @@ public final class Metrika {
         }
       }
       /**
+       * <pre>
+       * Authentication token
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret token = 2;</code>
        */
       public Builder setToken(yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret value) {
@@ -1702,6 +1951,10 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Authentication token
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret token = 2;</code>
        */
       public Builder setToken(
@@ -1716,6 +1969,10 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Authentication token
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret token = 2;</code>
        */
       public Builder mergeToken(yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret value) {
@@ -1734,6 +1991,10 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Authentication token
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret token = 2;</code>
        */
       public Builder clearToken() {
@@ -1748,6 +2009,10 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Authentication token
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret token = 2;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret.Builder getTokenBuilder() {
@@ -1756,6 +2021,10 @@ public final class Metrika {
         return getTokenFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Authentication token
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret token = 2;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder getTokenOrBuilder() {
@@ -1767,6 +2036,10 @@ public final class Metrika {
         }
       }
       /**
+       * <pre>
+       * Authentication token
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret token = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1796,6 +2069,10 @@ public final class Metrika {
           yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStream, yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStream.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStreamOrBuilder> streamsBuilder_;
 
       /**
+       * <pre>
+       * Streams
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
        */
       public java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStream> getStreamsList() {
@@ -1806,6 +2083,10 @@ public final class Metrika {
         }
       }
       /**
+       * <pre>
+       * Streams
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
        */
       public int getStreamsCount() {
@@ -1816,6 +2097,10 @@ public final class Metrika {
         }
       }
       /**
+       * <pre>
+       * Streams
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStream getStreams(int index) {
@@ -1826,6 +2111,10 @@ public final class Metrika {
         }
       }
       /**
+       * <pre>
+       * Streams
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
        */
       public Builder setStreams(
@@ -1843,6 +2132,10 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Streams
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
        */
       public Builder setStreams(
@@ -1857,6 +2150,10 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Streams
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
        */
       public Builder addStreams(yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStream value) {
@@ -1873,6 +2170,10 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Streams
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
        */
       public Builder addStreams(
@@ -1890,6 +2191,10 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Streams
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
        */
       public Builder addStreams(
@@ -1904,6 +2209,10 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Streams
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
        */
       public Builder addStreams(
@@ -1918,6 +2227,10 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Streams
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
        */
       public Builder addAllStreams(
@@ -1933,6 +2246,10 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Streams
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
        */
       public Builder clearStreams() {
@@ -1946,6 +2263,10 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Streams
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
        */
       public Builder removeStreams(int index) {
@@ -1959,6 +2280,10 @@ public final class Metrika {
         return this;
       }
       /**
+       * <pre>
+       * Streams
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStream.Builder getStreamsBuilder(
@@ -1966,6 +2291,10 @@ public final class Metrika {
         return getStreamsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Streams
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStreamOrBuilder getStreamsOrBuilder(
@@ -1976,6 +2305,10 @@ public final class Metrika {
         }
       }
       /**
+       * <pre>
+       * Streams
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
        */
       public java.util.List<? extends yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStreamOrBuilder> 
@@ -1987,6 +2320,10 @@ public final class Metrika {
         }
       }
       /**
+       * <pre>
+       * Streams
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStream.Builder addStreamsBuilder() {
@@ -1994,6 +2331,10 @@ public final class Metrika {
             yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStream.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Streams
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStream.Builder addStreamsBuilder(
@@ -2002,6 +2343,10 @@ public final class Metrika {
             index, yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStream.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Streams
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.datatransfer.v1.endpoint.MetrikaStream streams = 3;</code>
        */
       public java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Metrika.MetrikaStream.Builder> 

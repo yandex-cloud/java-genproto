@@ -9313,38 +9313,40 @@ public final class ExecutionServiceOuterClass {
       "\030\004 \001(\t\"}\n\026ListExecutionsResponse\022J\n\nexec" +
       "utions\030\001 \003(\01326.yandex.cloud.serverless.w" +
       "orkflows.v1.ExecutionPreview\022\027\n\017next_pag" +
-      "e_token\030\002 \001(\t2\343\010\n\020ExecutionService\022\254\001\n\005S" +
+      "e_token\030\002 \001(\t2\245\t\n\020ExecutionService\022\356\001\n\005S" +
       "tart\022;.yandex.cloud.serverless.workflows" +
       ".v1.StartExecutionRequest\032<.yandex.cloud" +
       ".serverless.workflows.v1.StartExecutionR" +
-      "esponse\"(\202\323\344\223\002\"\"\035/workflows/v1/execution" +
-      "/start:\001*\022\264\001\n\004Stop\022:.yandex.cloud.server" +
-      "less.workflows.v1.StopExecutionRequest\032;" +
-      ".yandex.cloud.serverless.workflows.v1.St" +
-      "opExecutionResponse\"3\202\323\344\223\002-\"+/workflows/" +
-      "v1/execution/{execution_id}/stop\022\310\001\n\tTer" +
-      "minate\022?.yandex.cloud.serverless.workflo" +
-      "ws.v1.TerminateExecutionRequest\032@.yandex" +
-      ".cloud.serverless.workflows.v1.Terminate" +
-      "ExecutionResponse\"8\202\323\344\223\0022\"0/workflows/v1" +
-      "/execution/{execution_id}/terminate\022\254\001\n\003" +
-      "Get\0229.yandex.cloud.serverless.workflows." +
-      "v1.GetExecutionRequest\032:.yandex.cloud.se" +
-      "rverless.workflows.v1.GetExecutionRespon" +
-      "se\".\202\323\344\223\002(\022&/workflows/v1/execution/{exe" +
-      "cution_id}\022\311\001\n\nGetHistory\022@.yandex.cloud" +
-      ".serverless.workflows.v1.GetExecutionHis" +
-      "toryRequest\032A.yandex.cloud.serverless.wo" +
-      "rkflows.v1.GetExecutionHistoryResponse\"6" +
-      "\202\323\344\223\0020\022./workflows/v1/execution/{executi" +
-      "on_id}/history\022\242\001\n\004List\022;.yandex.cloud.s" +
-      "erverless.workflows.v1.ListExecutionsReq" +
-      "uest\032<.yandex.cloud.serverless.workflows" +
-      ".v1.ListExecutionsResponse\"\037\202\323\344\223\002\031\022\027/wor" +
-      "kflows/v1/executionB~\n(yandex.cloud.api." +
-      "serverless.workflows.v1ZRgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/server" +
-      "less/workflows/v1;workflowsb\006proto3"
+      "esponse\"j\202\323\344\223\002d\"\035/workflows/v1/execution" +
+      "/start:\001*Z@\"+/workflows/v1/execution/{wo" +
+      "rkflow_id}/start:\021input.input_value\022\264\001\n\004" +
+      "Stop\022:.yandex.cloud.serverless.workflows" +
+      ".v1.StopExecutionRequest\032;.yandex.cloud." +
+      "serverless.workflows.v1.StopExecutionRes" +
+      "ponse\"3\202\323\344\223\002-\"+/workflows/v1/execution/{" +
+      "execution_id}/stop\022\310\001\n\tTerminate\022?.yande" +
+      "x.cloud.serverless.workflows.v1.Terminat" +
+      "eExecutionRequest\032@.yandex.cloud.serverl" +
+      "ess.workflows.v1.TerminateExecutionRespo" +
+      "nse\"8\202\323\344\223\0022\"0/workflows/v1/execution/{ex" +
+      "ecution_id}/terminate\022\254\001\n\003Get\0229.yandex.c" +
+      "loud.serverless.workflows.v1.GetExecutio" +
+      "nRequest\032:.yandex.cloud.serverless.workf" +
+      "lows.v1.GetExecutionResponse\".\202\323\344\223\002(\022&/w" +
+      "orkflows/v1/execution/{execution_id}\022\311\001\n" +
+      "\nGetHistory\022@.yandex.cloud.serverless.wo" +
+      "rkflows.v1.GetExecutionHistoryRequest\032A." +
+      "yandex.cloud.serverless.workflows.v1.Get" +
+      "ExecutionHistoryResponse\"6\202\323\344\223\0020\022./workf" +
+      "lows/v1/execution/{execution_id}/history" +
+      "\022\242\001\n\004List\022;.yandex.cloud.serverless.work" +
+      "flows.v1.ListExecutionsRequest\032<.yandex." +
+      "cloud.serverless.workflows.v1.ListExecut" +
+      "ionsResponse\"\037\202\323\344\223\002\031\022\027/workflows/v1/exec" +
+      "utionB~\n(yandex.cloud.api.serverless.wor" +
+      "kflows.v1ZRgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/serverless/workflows" +
+      "/v1;workflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

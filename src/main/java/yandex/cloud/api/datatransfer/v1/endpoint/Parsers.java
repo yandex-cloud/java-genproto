@@ -19,61 +19,109 @@ public final class Parsers {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Parse data in json format
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon json_parser = 1;</code>
      * @return Whether the jsonParser field is set.
      */
     boolean hasJsonParser();
     /**
+     * <pre>
+     * Parse data in json format
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon json_parser = 1;</code>
      * @return The jsonParser.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Parsers.GenericParserCommon getJsonParser();
     /**
+     * <pre>
+     * Parse data in json format
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon json_parser = 1;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Parsers.GenericParserCommonOrBuilder getJsonParserOrBuilder();
 
     /**
+     * <pre>
+     * Parse Audit Trails data. Empty struct
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.AuditTrailsV1Parser audit_trails_v1_parser = 2;</code>
      * @return Whether the auditTrailsV1Parser field is set.
      */
     boolean hasAuditTrailsV1Parser();
     /**
+     * <pre>
+     * Parse Audit Trails data. Empty struct
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.AuditTrailsV1Parser audit_trails_v1_parser = 2;</code>
      * @return The auditTrailsV1Parser.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Parsers.AuditTrailsV1Parser getAuditTrailsV1Parser();
     /**
+     * <pre>
+     * Parse Audit Trails data. Empty struct
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.AuditTrailsV1Parser audit_trails_v1_parser = 2;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Parsers.AuditTrailsV1ParserOrBuilder getAuditTrailsV1ParserOrBuilder();
 
     /**
+     * <pre>
+     * Parse Cloud Logging data. Empty struct
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CloudLoggingParser cloud_logging_parser = 4;</code>
      * @return Whether the cloudLoggingParser field is set.
      */
     boolean hasCloudLoggingParser();
     /**
+     * <pre>
+     * Parse Cloud Logging data. Empty struct
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CloudLoggingParser cloud_logging_parser = 4;</code>
      * @return The cloudLoggingParser.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Parsers.CloudLoggingParser getCloudLoggingParser();
     /**
+     * <pre>
+     * Parse Cloud Logging data. Empty struct
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CloudLoggingParser cloud_logging_parser = 4;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Parsers.CloudLoggingParserOrBuilder getCloudLoggingParserOrBuilder();
 
     /**
+     * <pre>
+     * Parse data in tskv format
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon tskv_parser = 6;</code>
      * @return Whether the tskvParser field is set.
      */
     boolean hasTskvParser();
     /**
+     * <pre>
+     * Parse data in tskv format
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon tskv_parser = 6;</code>
      * @return The tskvParser.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Parsers.GenericParserCommon getTskvParser();
     /**
+     * <pre>
+     * Parse data in tskv format
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon tskv_parser = 6;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Parsers.GenericParserCommonOrBuilder getTskvParserOrBuilder();
@@ -260,6 +308,10 @@ public final class Parsers {
 
     public static final int JSON_PARSER_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Parse data in json format
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon json_parser = 1;</code>
      * @return Whether the jsonParser field is set.
      */
@@ -268,6 +320,10 @@ public final class Parsers {
       return parserCase_ == 1;
     }
     /**
+     * <pre>
+     * Parse data in json format
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon json_parser = 1;</code>
      * @return The jsonParser.
      */
@@ -279,6 +335,10 @@ public final class Parsers {
       return yandex.cloud.api.datatransfer.v1.endpoint.Parsers.GenericParserCommon.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Parse data in json format
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon json_parser = 1;</code>
      */
     @java.lang.Override
@@ -291,6 +351,10 @@ public final class Parsers {
 
     public static final int AUDIT_TRAILS_V1_PARSER_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Parse Audit Trails data. Empty struct
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.AuditTrailsV1Parser audit_trails_v1_parser = 2;</code>
      * @return Whether the auditTrailsV1Parser field is set.
      */
@@ -299,6 +363,10 @@ public final class Parsers {
       return parserCase_ == 2;
     }
     /**
+     * <pre>
+     * Parse Audit Trails data. Empty struct
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.AuditTrailsV1Parser audit_trails_v1_parser = 2;</code>
      * @return The auditTrailsV1Parser.
      */
@@ -310,6 +378,10 @@ public final class Parsers {
       return yandex.cloud.api.datatransfer.v1.endpoint.Parsers.AuditTrailsV1Parser.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Parse Audit Trails data. Empty struct
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.AuditTrailsV1Parser audit_trails_v1_parser = 2;</code>
      */
     @java.lang.Override
@@ -322,6 +394,10 @@ public final class Parsers {
 
     public static final int CLOUD_LOGGING_PARSER_FIELD_NUMBER = 4;
     /**
+     * <pre>
+     * Parse Cloud Logging data. Empty struct
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CloudLoggingParser cloud_logging_parser = 4;</code>
      * @return Whether the cloudLoggingParser field is set.
      */
@@ -330,6 +406,10 @@ public final class Parsers {
       return parserCase_ == 4;
     }
     /**
+     * <pre>
+     * Parse Cloud Logging data. Empty struct
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CloudLoggingParser cloud_logging_parser = 4;</code>
      * @return The cloudLoggingParser.
      */
@@ -341,6 +421,10 @@ public final class Parsers {
       return yandex.cloud.api.datatransfer.v1.endpoint.Parsers.CloudLoggingParser.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Parse Cloud Logging data. Empty struct
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CloudLoggingParser cloud_logging_parser = 4;</code>
      */
     @java.lang.Override
@@ -353,6 +437,10 @@ public final class Parsers {
 
     public static final int TSKV_PARSER_FIELD_NUMBER = 6;
     /**
+     * <pre>
+     * Parse data in tskv format
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon tskv_parser = 6;</code>
      * @return Whether the tskvParser field is set.
      */
@@ -361,6 +449,10 @@ public final class Parsers {
       return parserCase_ == 6;
     }
     /**
+     * <pre>
+     * Parse data in tskv format
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon tskv_parser = 6;</code>
      * @return The tskvParser.
      */
@@ -372,6 +464,10 @@ public final class Parsers {
       return yandex.cloud.api.datatransfer.v1.endpoint.Parsers.GenericParserCommon.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Parse data in tskv format
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon tskv_parser = 6;</code>
      */
     @java.lang.Override
@@ -806,6 +902,10 @@ public final class Parsers {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Parsers.GenericParserCommon, yandex.cloud.api.datatransfer.v1.endpoint.Parsers.GenericParserCommon.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Parsers.GenericParserCommonOrBuilder> jsonParserBuilder_;
       /**
+       * <pre>
+       * Parse data in json format
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon json_parser = 1;</code>
        * @return Whether the jsonParser field is set.
        */
@@ -814,6 +914,10 @@ public final class Parsers {
         return parserCase_ == 1;
       }
       /**
+       * <pre>
+       * Parse data in json format
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon json_parser = 1;</code>
        * @return The jsonParser.
        */
@@ -832,6 +936,10 @@ public final class Parsers {
         }
       }
       /**
+       * <pre>
+       * Parse data in json format
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon json_parser = 1;</code>
        */
       public Builder setJsonParser(yandex.cloud.api.datatransfer.v1.endpoint.Parsers.GenericParserCommon value) {
@@ -848,6 +956,10 @@ public final class Parsers {
         return this;
       }
       /**
+       * <pre>
+       * Parse data in json format
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon json_parser = 1;</code>
        */
       public Builder setJsonParser(
@@ -862,6 +974,10 @@ public final class Parsers {
         return this;
       }
       /**
+       * <pre>
+       * Parse data in json format
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon json_parser = 1;</code>
        */
       public Builder mergeJsonParser(yandex.cloud.api.datatransfer.v1.endpoint.Parsers.GenericParserCommon value) {
@@ -884,6 +1000,10 @@ public final class Parsers {
         return this;
       }
       /**
+       * <pre>
+       * Parse data in json format
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon json_parser = 1;</code>
        */
       public Builder clearJsonParser() {
@@ -903,12 +1023,20 @@ public final class Parsers {
         return this;
       }
       /**
+       * <pre>
+       * Parse data in json format
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon json_parser = 1;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Parsers.GenericParserCommon.Builder getJsonParserBuilder() {
         return getJsonParserFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Parse data in json format
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon json_parser = 1;</code>
        */
       @java.lang.Override
@@ -923,6 +1051,10 @@ public final class Parsers {
         }
       }
       /**
+       * <pre>
+       * Parse data in json format
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon json_parser = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -947,6 +1079,10 @@ public final class Parsers {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Parsers.AuditTrailsV1Parser, yandex.cloud.api.datatransfer.v1.endpoint.Parsers.AuditTrailsV1Parser.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Parsers.AuditTrailsV1ParserOrBuilder> auditTrailsV1ParserBuilder_;
       /**
+       * <pre>
+       * Parse Audit Trails data. Empty struct
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.AuditTrailsV1Parser audit_trails_v1_parser = 2;</code>
        * @return Whether the auditTrailsV1Parser field is set.
        */
@@ -955,6 +1091,10 @@ public final class Parsers {
         return parserCase_ == 2;
       }
       /**
+       * <pre>
+       * Parse Audit Trails data. Empty struct
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.AuditTrailsV1Parser audit_trails_v1_parser = 2;</code>
        * @return The auditTrailsV1Parser.
        */
@@ -973,6 +1113,10 @@ public final class Parsers {
         }
       }
       /**
+       * <pre>
+       * Parse Audit Trails data. Empty struct
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.AuditTrailsV1Parser audit_trails_v1_parser = 2;</code>
        */
       public Builder setAuditTrailsV1Parser(yandex.cloud.api.datatransfer.v1.endpoint.Parsers.AuditTrailsV1Parser value) {
@@ -989,6 +1133,10 @@ public final class Parsers {
         return this;
       }
       /**
+       * <pre>
+       * Parse Audit Trails data. Empty struct
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.AuditTrailsV1Parser audit_trails_v1_parser = 2;</code>
        */
       public Builder setAuditTrailsV1Parser(
@@ -1003,6 +1151,10 @@ public final class Parsers {
         return this;
       }
       /**
+       * <pre>
+       * Parse Audit Trails data. Empty struct
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.AuditTrailsV1Parser audit_trails_v1_parser = 2;</code>
        */
       public Builder mergeAuditTrailsV1Parser(yandex.cloud.api.datatransfer.v1.endpoint.Parsers.AuditTrailsV1Parser value) {
@@ -1025,6 +1177,10 @@ public final class Parsers {
         return this;
       }
       /**
+       * <pre>
+       * Parse Audit Trails data. Empty struct
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.AuditTrailsV1Parser audit_trails_v1_parser = 2;</code>
        */
       public Builder clearAuditTrailsV1Parser() {
@@ -1044,12 +1200,20 @@ public final class Parsers {
         return this;
       }
       /**
+       * <pre>
+       * Parse Audit Trails data. Empty struct
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.AuditTrailsV1Parser audit_trails_v1_parser = 2;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Parsers.AuditTrailsV1Parser.Builder getAuditTrailsV1ParserBuilder() {
         return getAuditTrailsV1ParserFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Parse Audit Trails data. Empty struct
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.AuditTrailsV1Parser audit_trails_v1_parser = 2;</code>
        */
       @java.lang.Override
@@ -1064,6 +1228,10 @@ public final class Parsers {
         }
       }
       /**
+       * <pre>
+       * Parse Audit Trails data. Empty struct
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.AuditTrailsV1Parser audit_trails_v1_parser = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1088,6 +1256,10 @@ public final class Parsers {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Parsers.CloudLoggingParser, yandex.cloud.api.datatransfer.v1.endpoint.Parsers.CloudLoggingParser.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Parsers.CloudLoggingParserOrBuilder> cloudLoggingParserBuilder_;
       /**
+       * <pre>
+       * Parse Cloud Logging data. Empty struct
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CloudLoggingParser cloud_logging_parser = 4;</code>
        * @return Whether the cloudLoggingParser field is set.
        */
@@ -1096,6 +1268,10 @@ public final class Parsers {
         return parserCase_ == 4;
       }
       /**
+       * <pre>
+       * Parse Cloud Logging data. Empty struct
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CloudLoggingParser cloud_logging_parser = 4;</code>
        * @return The cloudLoggingParser.
        */
@@ -1114,6 +1290,10 @@ public final class Parsers {
         }
       }
       /**
+       * <pre>
+       * Parse Cloud Logging data. Empty struct
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CloudLoggingParser cloud_logging_parser = 4;</code>
        */
       public Builder setCloudLoggingParser(yandex.cloud.api.datatransfer.v1.endpoint.Parsers.CloudLoggingParser value) {
@@ -1130,6 +1310,10 @@ public final class Parsers {
         return this;
       }
       /**
+       * <pre>
+       * Parse Cloud Logging data. Empty struct
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CloudLoggingParser cloud_logging_parser = 4;</code>
        */
       public Builder setCloudLoggingParser(
@@ -1144,6 +1328,10 @@ public final class Parsers {
         return this;
       }
       /**
+       * <pre>
+       * Parse Cloud Logging data. Empty struct
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CloudLoggingParser cloud_logging_parser = 4;</code>
        */
       public Builder mergeCloudLoggingParser(yandex.cloud.api.datatransfer.v1.endpoint.Parsers.CloudLoggingParser value) {
@@ -1166,6 +1354,10 @@ public final class Parsers {
         return this;
       }
       /**
+       * <pre>
+       * Parse Cloud Logging data. Empty struct
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CloudLoggingParser cloud_logging_parser = 4;</code>
        */
       public Builder clearCloudLoggingParser() {
@@ -1185,12 +1377,20 @@ public final class Parsers {
         return this;
       }
       /**
+       * <pre>
+       * Parse Cloud Logging data. Empty struct
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CloudLoggingParser cloud_logging_parser = 4;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Parsers.CloudLoggingParser.Builder getCloudLoggingParserBuilder() {
         return getCloudLoggingParserFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Parse Cloud Logging data. Empty struct
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CloudLoggingParser cloud_logging_parser = 4;</code>
        */
       @java.lang.Override
@@ -1205,6 +1405,10 @@ public final class Parsers {
         }
       }
       /**
+       * <pre>
+       * Parse Cloud Logging data. Empty struct
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CloudLoggingParser cloud_logging_parser = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1229,6 +1433,10 @@ public final class Parsers {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Parsers.GenericParserCommon, yandex.cloud.api.datatransfer.v1.endpoint.Parsers.GenericParserCommon.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Parsers.GenericParserCommonOrBuilder> tskvParserBuilder_;
       /**
+       * <pre>
+       * Parse data in tskv format
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon tskv_parser = 6;</code>
        * @return Whether the tskvParser field is set.
        */
@@ -1237,6 +1445,10 @@ public final class Parsers {
         return parserCase_ == 6;
       }
       /**
+       * <pre>
+       * Parse data in tskv format
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon tskv_parser = 6;</code>
        * @return The tskvParser.
        */
@@ -1255,6 +1467,10 @@ public final class Parsers {
         }
       }
       /**
+       * <pre>
+       * Parse data in tskv format
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon tskv_parser = 6;</code>
        */
       public Builder setTskvParser(yandex.cloud.api.datatransfer.v1.endpoint.Parsers.GenericParserCommon value) {
@@ -1271,6 +1487,10 @@ public final class Parsers {
         return this;
       }
       /**
+       * <pre>
+       * Parse data in tskv format
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon tskv_parser = 6;</code>
        */
       public Builder setTskvParser(
@@ -1285,6 +1505,10 @@ public final class Parsers {
         return this;
       }
       /**
+       * <pre>
+       * Parse data in tskv format
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon tskv_parser = 6;</code>
        */
       public Builder mergeTskvParser(yandex.cloud.api.datatransfer.v1.endpoint.Parsers.GenericParserCommon value) {
@@ -1307,6 +1531,10 @@ public final class Parsers {
         return this;
       }
       /**
+       * <pre>
+       * Parse data in tskv format
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon tskv_parser = 6;</code>
        */
       public Builder clearTskvParser() {
@@ -1326,12 +1554,20 @@ public final class Parsers {
         return this;
       }
       /**
+       * <pre>
+       * Parse data in tskv format
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon tskv_parser = 6;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Parsers.GenericParserCommon.Builder getTskvParserBuilder() {
         return getTskvParserFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Parse data in tskv format
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon tskv_parser = 6;</code>
        */
       @java.lang.Override
@@ -1346,6 +1582,10 @@ public final class Parsers {
         }
       }
       /**
+       * <pre>
+       * Parse data in tskv format
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon tskv_parser = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1424,16 +1664,28 @@ public final class Parsers {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Data parsing scheme
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.DataSchema data_schema = 1;</code>
      * @return Whether the dataSchema field is set.
      */
     boolean hasDataSchema();
     /**
+     * <pre>
+     * Data parsing scheme
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.DataSchema data_schema = 1;</code>
      * @return The dataSchema.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema getDataSchema();
     /**
+     * <pre>
+     * Data parsing scheme
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.DataSchema data_schema = 1;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchemaOrBuilder getDataSchemaOrBuilder();
@@ -1576,6 +1828,10 @@ public final class Parsers {
     public static final int DATA_SCHEMA_FIELD_NUMBER = 1;
     private yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema dataSchema_;
     /**
+     * <pre>
+     * Data parsing scheme
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.DataSchema data_schema = 1;</code>
      * @return Whether the dataSchema field is set.
      */
@@ -1584,6 +1840,10 @@ public final class Parsers {
       return dataSchema_ != null;
     }
     /**
+     * <pre>
+     * Data parsing scheme
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.DataSchema data_schema = 1;</code>
      * @return The dataSchema.
      */
@@ -1592,6 +1852,10 @@ public final class Parsers {
       return dataSchema_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema.getDefaultInstance() : dataSchema_;
     }
     /**
+     * <pre>
+     * Data parsing scheme
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.DataSchema data_schema = 1;</code>
      */
     @java.lang.Override
@@ -2017,6 +2281,10 @@ public final class Parsers {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema, yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchemaOrBuilder> dataSchemaBuilder_;
       /**
+       * <pre>
+       * Data parsing scheme
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.DataSchema data_schema = 1;</code>
        * @return Whether the dataSchema field is set.
        */
@@ -2024,6 +2292,10 @@ public final class Parsers {
         return dataSchemaBuilder_ != null || dataSchema_ != null;
       }
       /**
+       * <pre>
+       * Data parsing scheme
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.DataSchema data_schema = 1;</code>
        * @return The dataSchema.
        */
@@ -2035,6 +2307,10 @@ public final class Parsers {
         }
       }
       /**
+       * <pre>
+       * Data parsing scheme
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.DataSchema data_schema = 1;</code>
        */
       public Builder setDataSchema(yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema value) {
@@ -2051,6 +2327,10 @@ public final class Parsers {
         return this;
       }
       /**
+       * <pre>
+       * Data parsing scheme
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.DataSchema data_schema = 1;</code>
        */
       public Builder setDataSchema(
@@ -2065,6 +2345,10 @@ public final class Parsers {
         return this;
       }
       /**
+       * <pre>
+       * Data parsing scheme
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.DataSchema data_schema = 1;</code>
        */
       public Builder mergeDataSchema(yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema value) {
@@ -2083,6 +2367,10 @@ public final class Parsers {
         return this;
       }
       /**
+       * <pre>
+       * Data parsing scheme
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.DataSchema data_schema = 1;</code>
        */
       public Builder clearDataSchema() {
@@ -2097,6 +2385,10 @@ public final class Parsers {
         return this;
       }
       /**
+       * <pre>
+       * Data parsing scheme
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.DataSchema data_schema = 1;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema.Builder getDataSchemaBuilder() {
@@ -2105,6 +2397,10 @@ public final class Parsers {
         return getDataSchemaFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Data parsing scheme
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.DataSchema data_schema = 1;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchemaOrBuilder getDataSchemaOrBuilder() {
@@ -2116,6 +2412,10 @@ public final class Parsers {
         }
       }
       /**
+       * <pre>
+       * Data parsing scheme
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.DataSchema data_schema = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

@@ -3318,7 +3318,7 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Will be used if the cluster ID is not specified.
+     * PG port. Will be used if the cluster ID is not specified.
      * </pre>
      *
      * <code>int64 port = 2;</code>
@@ -3328,7 +3328,9 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
@@ -3337,7 +3339,9 @@ public final class Postgres {
     java.lang.String getSubnetId();
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
@@ -3347,23 +3351,39 @@ public final class Postgres {
         getSubnetIdBytes();
 
     /**
+     * <pre>
+     * PG installation hosts
+     * </pre>
+     *
      * <code>repeated string hosts = 5;</code>
      * @return A list containing the hosts.
      */
     java.util.List<java.lang.String>
         getHostsList();
     /**
+     * <pre>
+     * PG installation hosts
+     * </pre>
+     *
      * <code>repeated string hosts = 5;</code>
      * @return The count of hosts.
      */
     int getHostsCount();
     /**
+     * <pre>
+     * PG installation hosts
+     * </pre>
+     *
      * <code>repeated string hosts = 5;</code>
      * @param index The index of the element to return.
      * @return The hosts at the given index.
      */
     java.lang.String getHosts(int index);
     /**
+     * <pre>
+     * PG installation hosts
+     * </pre>
+     *
      * <code>repeated string hosts = 5;</code>
      * @param index The index of the value to return.
      * @return The bytes of the hosts at the given index.
@@ -3518,7 +3538,7 @@ public final class Postgres {
     private long port_;
     /**
      * <pre>
-     * Will be used if the cluster ID is not specified.
+     * PG port. Will be used if the cluster ID is not specified.
      * </pre>
      *
      * <code>int64 port = 2;</code>
@@ -3533,7 +3553,9 @@ public final class Postgres {
     private volatile java.lang.Object subnetId_;
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
@@ -3554,7 +3576,9 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database. 
+     * If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
@@ -3578,6 +3602,10 @@ public final class Postgres {
     public static final int HOSTS_FIELD_NUMBER = 5;
     private com.google.protobuf.LazyStringList hosts_;
     /**
+     * <pre>
+     * PG installation hosts
+     * </pre>
+     *
      * <code>repeated string hosts = 5;</code>
      * @return A list containing the hosts.
      */
@@ -3586,6 +3614,10 @@ public final class Postgres {
       return hosts_;
     }
     /**
+     * <pre>
+     * PG installation hosts
+     * </pre>
+     *
      * <code>repeated string hosts = 5;</code>
      * @return The count of hosts.
      */
@@ -3593,6 +3625,10 @@ public final class Postgres {
       return hosts_.size();
     }
     /**
+     * <pre>
+     * PG installation hosts
+     * </pre>
+     *
      * <code>repeated string hosts = 5;</code>
      * @param index The index of the element to return.
      * @return The hosts at the given index.
@@ -3601,6 +3637,10 @@ public final class Postgres {
       return hosts_.get(index);
     }
     /**
+     * <pre>
+     * PG installation hosts
+     * </pre>
+     *
      * <code>repeated string hosts = 5;</code>
      * @param index The index of the value to return.
      * @return The bytes of the hosts at the given index.
@@ -4037,7 +4077,7 @@ public final class Postgres {
       private long port_ ;
       /**
        * <pre>
-       * Will be used if the cluster ID is not specified.
+       * PG port. Will be used if the cluster ID is not specified.
        * </pre>
        *
        * <code>int64 port = 2;</code>
@@ -4049,7 +4089,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Will be used if the cluster ID is not specified.
+       * PG port. Will be used if the cluster ID is not specified.
        * </pre>
        *
        * <code>int64 port = 2;</code>
@@ -4064,7 +4104,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Will be used if the cluster ID is not specified.
+       * PG port. Will be used if the cluster ID is not specified.
        * </pre>
        *
        * <code>int64 port = 2;</code>
@@ -4080,7 +4120,9 @@ public final class Postgres {
       private java.lang.Object subnetId_ = "";
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -4100,7 +4142,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -4121,7 +4165,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -4140,7 +4186,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -4154,7 +4202,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database. 
+       * If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -4181,6 +4231,10 @@ public final class Postgres {
          }
       }
       /**
+       * <pre>
+       * PG installation hosts
+       * </pre>
+       *
        * <code>repeated string hosts = 5;</code>
        * @return A list containing the hosts.
        */
@@ -4189,6 +4243,10 @@ public final class Postgres {
         return hosts_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * PG installation hosts
+       * </pre>
+       *
        * <code>repeated string hosts = 5;</code>
        * @return The count of hosts.
        */
@@ -4196,6 +4254,10 @@ public final class Postgres {
         return hosts_.size();
       }
       /**
+       * <pre>
+       * PG installation hosts
+       * </pre>
+       *
        * <code>repeated string hosts = 5;</code>
        * @param index The index of the element to return.
        * @return The hosts at the given index.
@@ -4204,6 +4266,10 @@ public final class Postgres {
         return hosts_.get(index);
       }
       /**
+       * <pre>
+       * PG installation hosts
+       * </pre>
+       *
        * <code>repeated string hosts = 5;</code>
        * @param index The index of the value to return.
        * @return The bytes of the hosts at the given index.
@@ -4213,6 +4279,10 @@ public final class Postgres {
         return hosts_.getByteString(index);
       }
       /**
+       * <pre>
+       * PG installation hosts
+       * </pre>
+       *
        * <code>repeated string hosts = 5;</code>
        * @param index The index to set the value at.
        * @param value The hosts to set.
@@ -4229,6 +4299,10 @@ public final class Postgres {
         return this;
       }
       /**
+       * <pre>
+       * PG installation hosts
+       * </pre>
+       *
        * <code>repeated string hosts = 5;</code>
        * @param value The hosts to add.
        * @return This builder for chaining.
@@ -4244,6 +4318,10 @@ public final class Postgres {
         return this;
       }
       /**
+       * <pre>
+       * PG installation hosts
+       * </pre>
+       *
        * <code>repeated string hosts = 5;</code>
        * @param values The hosts to add.
        * @return This builder for chaining.
@@ -4257,6 +4335,10 @@ public final class Postgres {
         return this;
       }
       /**
+       * <pre>
+       * PG installation hosts
+       * </pre>
+       *
        * <code>repeated string hosts = 5;</code>
        * @return This builder for chaining.
        */
@@ -4267,6 +4349,10 @@ public final class Postgres {
         return this;
       }
       /**
+       * <pre>
+       * PG installation hosts
+       * </pre>
+       *
        * <code>repeated string hosts = 5;</code>
        * @param value The bytes of the hosts to add.
        * @return This builder for chaining.
@@ -4551,16 +4637,28 @@ public final class Postgres {
     yandex.cloud.api.datatransfer.v1.endpoint.Postgres.OnPremisePostgresOrBuilder getOnPremiseOrBuilder();
 
     /**
+     * <pre>
+     * Get Postgres installation params and credentials from Connection Manager
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
      * @return Whether the connectionManagerConnection field is set.
      */
     boolean hasConnectionManagerConnection();
     /**
+     * <pre>
+     * Get Postgres installation params and credentials from Connection Manager
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
      * @return The connectionManagerConnection.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection getConnectionManagerConnection();
     /**
+     * <pre>
+     * Get Postgres installation params and credentials from Connection Manager
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder getConnectionManagerConnectionOrBuilder();
@@ -4830,6 +4928,10 @@ public final class Postgres {
 
     public static final int CONNECTION_MANAGER_CONNECTION_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * Get Postgres installation params and credentials from Connection Manager
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
      * @return Whether the connectionManagerConnection field is set.
      */
@@ -4838,6 +4940,10 @@ public final class Postgres {
       return connectionCase_ == 3;
     }
     /**
+     * <pre>
+     * Get Postgres installation params and credentials from Connection Manager
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
      * @return The connectionManagerConnection.
      */
@@ -4849,6 +4955,10 @@ public final class Postgres {
       return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Get Postgres installation params and credentials from Connection Manager
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
      */
     @java.lang.Override
@@ -5552,6 +5662,10 @@ public final class Postgres {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder> connectionManagerConnectionBuilder_;
       /**
+       * <pre>
+       * Get Postgres installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        * @return Whether the connectionManagerConnection field is set.
        */
@@ -5560,6 +5674,10 @@ public final class Postgres {
         return connectionCase_ == 3;
       }
       /**
+       * <pre>
+       * Get Postgres installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        * @return The connectionManagerConnection.
        */
@@ -5578,6 +5696,10 @@ public final class Postgres {
         }
       }
       /**
+       * <pre>
+       * Get Postgres installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       public Builder setConnectionManagerConnection(yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection value) {
@@ -5594,6 +5716,10 @@ public final class Postgres {
         return this;
       }
       /**
+       * <pre>
+       * Get Postgres installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       public Builder setConnectionManagerConnection(
@@ -5608,6 +5734,10 @@ public final class Postgres {
         return this;
       }
       /**
+       * <pre>
+       * Get Postgres installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       public Builder mergeConnectionManagerConnection(yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection value) {
@@ -5630,6 +5760,10 @@ public final class Postgres {
         return this;
       }
       /**
+       * <pre>
+       * Get Postgres installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       public Builder clearConnectionManagerConnection() {
@@ -5649,12 +5783,20 @@ public final class Postgres {
         return this;
       }
       /**
+       * <pre>
+       * Get Postgres installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder getConnectionManagerConnectionBuilder() {
         return getConnectionManagerConnectionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Get Postgres installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       @java.lang.Override
@@ -5669,6 +5811,10 @@ public final class Postgres {
         }
       }
       /**
+       * <pre>
+       * Get Postgres installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5775,7 +5921,7 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Database name
+     * Name of the database to transfer
      * </pre>
      *
      * <code>string database = 2;</code>
@@ -5784,7 +5930,7 @@ public final class Postgres {
     java.lang.String getDatabase();
     /**
      * <pre>
-     * Database name
+     * Name of the database to transfer
      * </pre>
      *
      * <code>string database = 2;</code>
@@ -5795,7 +5941,7 @@ public final class Postgres {
 
     /**
      * <pre>
-     * User for database access. not required as may be in connection
+     * User for database access. Required unless Connection Manager connection is used.
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -5804,7 +5950,7 @@ public final class Postgres {
     java.lang.String getUser();
     /**
      * <pre>
-     * User for database access. not required as may be in connection
+     * User for database access. Required unless Connection Manager connection is used.
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -5842,10 +5988,9 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Included tables
-     * 
-     * If none or empty list is presented, all tables are replicated. Full table name
-     * with schema. Can contain schema_name.* patterns.
+     * List of tables to transfer, formatted as `schemaname.tablename`. 
+     * If omitted or an empty list is specified, all tables will be transferred.
+     * Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string include_tables = 5;</code>
@@ -5855,10 +6000,9 @@ public final class Postgres {
         getIncludeTablesList();
     /**
      * <pre>
-     * Included tables
-     * 
-     * If none or empty list is presented, all tables are replicated. Full table name
-     * with schema. Can contain schema_name.* patterns.
+     * List of tables to transfer, formatted as `schemaname.tablename`. 
+     * If omitted or an empty list is specified, all tables will be transferred.
+     * Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string include_tables = 5;</code>
@@ -5867,10 +6011,9 @@ public final class Postgres {
     int getIncludeTablesCount();
     /**
      * <pre>
-     * Included tables
-     * 
-     * If none or empty list is presented, all tables are replicated. Full table name
-     * with schema. Can contain schema_name.* patterns.
+     * List of tables to transfer, formatted as `schemaname.tablename`. 
+     * If omitted or an empty list is specified, all tables will be transferred.
+     * Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string include_tables = 5;</code>
@@ -5880,10 +6023,9 @@ public final class Postgres {
     java.lang.String getIncludeTables(int index);
     /**
      * <pre>
-     * Included tables
-     * 
-     * If none or empty list is presented, all tables are replicated. Full table name
-     * with schema. Can contain schema_name.* patterns.
+     * List of tables to transfer, formatted as `schemaname.tablename`. 
+     * If omitted or an empty list is specified, all tables will be transferred.
+     * Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string include_tables = 5;</code>
@@ -5895,10 +6037,9 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Excluded tables
-     * 
-     * If none or empty list is presented, all tables are replicated. Full table name
-     * with schema. Can contain schema_name.* patterns.
+     * List of tables which will not be transfered, formatted as `schemaname.tablename`
+     * If omitted or empty list is specified, all tables are replicated. 
+     * Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string exclude_tables = 6;</code>
@@ -5908,10 +6049,9 @@ public final class Postgres {
         getExcludeTablesList();
     /**
      * <pre>
-     * Excluded tables
-     * 
-     * If none or empty list is presented, all tables are replicated. Full table name
-     * with schema. Can contain schema_name.* patterns.
+     * List of tables which will not be transfered, formatted as `schemaname.tablename`
+     * If omitted or empty list is specified, all tables are replicated. 
+     * Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string exclude_tables = 6;</code>
@@ -5920,10 +6060,9 @@ public final class Postgres {
     int getExcludeTablesCount();
     /**
      * <pre>
-     * Excluded tables
-     * 
-     * If none or empty list is presented, all tables are replicated. Full table name
-     * with schema. Can contain schema_name.* patterns.
+     * List of tables which will not be transfered, formatted as `schemaname.tablename`
+     * If omitted or empty list is specified, all tables are replicated. 
+     * Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string exclude_tables = 6;</code>
@@ -5933,10 +6072,9 @@ public final class Postgres {
     java.lang.String getExcludeTables(int index);
     /**
      * <pre>
-     * Excluded tables
-     * 
-     * If none or empty list is presented, all tables are replicated. Full table name
-     * with schema. Can contain schema_name.* patterns.
+     * List of tables which will not be transfered, formatted as `schemaname.tablename`
+     * If omitted or empty list is specified, all tables are replicated. 
+     * Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string exclude_tables = 6;</code>
@@ -5948,8 +6086,11 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Maximum lag of replication slot (in bytes); after exceeding this limit
-     * replication will be aborted.
+     * Maximum WAL size held by the replication slot (API - in bytes, terraform - in
+     * gigabytes); 
+     * Exceeding this limit will result in a replication failure and deletion of the
+     * replication slot.
+     * Default is 50 gigabytes
      * </pre>
      *
      * <code>int64 slot_byte_lag_limit = 8;</code>
@@ -5959,8 +6100,9 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Database schema for service tables (__consumer_keeper,
-     * __data_transfer_mole_finder). Default is public
+     * Name of the database schema in which auxiliary tables needed for the transfer
+     * will be created (__consumer_keeper, __data_transfer_mole_finder). 
+     * Empty `service_schema` implies schema `public`
      * </pre>
      *
      * <code>string service_schema = 9;</code>
@@ -5969,8 +6111,9 @@ public final class Postgres {
     java.lang.String getServiceSchema();
     /**
      * <pre>
-     * Database schema for service tables (__consumer_keeper,
-     * __data_transfer_mole_finder). Default is public
+     * Name of the database schema in which auxiliary tables needed for the transfer
+     * will be created (__consumer_keeper, __data_transfer_mole_finder). 
+     * Empty `service_schema` implies schema `public`
      * </pre>
      *
      * <code>string service_schema = 9;</code>
@@ -5981,7 +6124,10 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Select database objects to be transferred during activation or deactivation.
+     * Defines which database schema objects should be transferred, e.g. views,
+     * functions, etc. 
+     * All of the attributes in this block are optional and should be either
+     * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresObjectTransferSettings object_transfer_settings = 13;</code>
@@ -5990,7 +6136,10 @@ public final class Postgres {
     boolean hasObjectTransferSettings();
     /**
      * <pre>
-     * Select database objects to be transferred during activation or deactivation.
+     * Defines which database schema objects should be transferred, e.g. views,
+     * functions, etc. 
+     * All of the attributes in this block are optional and should be either
+     * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresObjectTransferSettings object_transfer_settings = 13;</code>
@@ -5999,7 +6148,10 @@ public final class Postgres {
     yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresObjectTransferSettings getObjectTransferSettings();
     /**
      * <pre>
-     * Select database objects to be transferred during activation or deactivation.
+     * Defines which database schema objects should be transferred, e.g. views,
+     * functions, etc. 
+     * All of the attributes in this block are optional and should be either
+     * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresObjectTransferSettings object_transfer_settings = 13;</code>
@@ -6008,7 +6160,8 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
@@ -6018,7 +6171,8 @@ public final class Postgres {
         getSecurityGroupsList();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
@@ -6027,7 +6181,8 @@ public final class Postgres {
     int getSecurityGroupsCount();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
@@ -6037,7 +6192,8 @@ public final class Postgres {
     java.lang.String getSecurityGroups(int index);
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
@@ -6048,6 +6204,10 @@ public final class Postgres {
         getSecurityGroupsBytes(int index);
   }
   /**
+   * <pre>
+   * Settings specific to the PostgreSQL source endpoint.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.PostgresSource}
    */
   public static final class PostgresSource extends
@@ -6271,7 +6431,7 @@ public final class Postgres {
     private volatile java.lang.Object database_;
     /**
      * <pre>
-     * Database name
+     * Name of the database to transfer
      * </pre>
      *
      * <code>string database = 2;</code>
@@ -6292,7 +6452,7 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Database name
+     * Name of the database to transfer
      * </pre>
      *
      * <code>string database = 2;</code>
@@ -6317,7 +6477,7 @@ public final class Postgres {
     private volatile java.lang.Object user_;
     /**
      * <pre>
-     * User for database access. not required as may be in connection
+     * User for database access. Required unless Connection Manager connection is used.
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -6338,7 +6498,7 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * User for database access. not required as may be in connection
+     * User for database access. Required unless Connection Manager connection is used.
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -6401,10 +6561,9 @@ public final class Postgres {
     private com.google.protobuf.LazyStringList includeTables_;
     /**
      * <pre>
-     * Included tables
-     * 
-     * If none or empty list is presented, all tables are replicated. Full table name
-     * with schema. Can contain schema_name.* patterns.
+     * List of tables to transfer, formatted as `schemaname.tablename`. 
+     * If omitted or an empty list is specified, all tables will be transferred.
+     * Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string include_tables = 5;</code>
@@ -6416,10 +6575,9 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Included tables
-     * 
-     * If none or empty list is presented, all tables are replicated. Full table name
-     * with schema. Can contain schema_name.* patterns.
+     * List of tables to transfer, formatted as `schemaname.tablename`. 
+     * If omitted or an empty list is specified, all tables will be transferred.
+     * Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string include_tables = 5;</code>
@@ -6430,10 +6588,9 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Included tables
-     * 
-     * If none or empty list is presented, all tables are replicated. Full table name
-     * with schema. Can contain schema_name.* patterns.
+     * List of tables to transfer, formatted as `schemaname.tablename`. 
+     * If omitted or an empty list is specified, all tables will be transferred.
+     * Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string include_tables = 5;</code>
@@ -6445,10 +6602,9 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Included tables
-     * 
-     * If none or empty list is presented, all tables are replicated. Full table name
-     * with schema. Can contain schema_name.* patterns.
+     * List of tables to transfer, formatted as `schemaname.tablename`. 
+     * If omitted or an empty list is specified, all tables will be transferred.
+     * Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string include_tables = 5;</code>
@@ -6464,10 +6620,9 @@ public final class Postgres {
     private com.google.protobuf.LazyStringList excludeTables_;
     /**
      * <pre>
-     * Excluded tables
-     * 
-     * If none or empty list is presented, all tables are replicated. Full table name
-     * with schema. Can contain schema_name.* patterns.
+     * List of tables which will not be transfered, formatted as `schemaname.tablename`
+     * If omitted or empty list is specified, all tables are replicated. 
+     * Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string exclude_tables = 6;</code>
@@ -6479,10 +6634,9 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Excluded tables
-     * 
-     * If none or empty list is presented, all tables are replicated. Full table name
-     * with schema. Can contain schema_name.* patterns.
+     * List of tables which will not be transfered, formatted as `schemaname.tablename`
+     * If omitted or empty list is specified, all tables are replicated. 
+     * Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string exclude_tables = 6;</code>
@@ -6493,10 +6647,9 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Excluded tables
-     * 
-     * If none or empty list is presented, all tables are replicated. Full table name
-     * with schema. Can contain schema_name.* patterns.
+     * List of tables which will not be transfered, formatted as `schemaname.tablename`
+     * If omitted or empty list is specified, all tables are replicated. 
+     * Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string exclude_tables = 6;</code>
@@ -6508,10 +6661,9 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Excluded tables
-     * 
-     * If none or empty list is presented, all tables are replicated. Full table name
-     * with schema. Can contain schema_name.* patterns.
+     * List of tables which will not be transfered, formatted as `schemaname.tablename`
+     * If omitted or empty list is specified, all tables are replicated. 
+     * Can contain schema_name.* patterns.
      * </pre>
      *
      * <code>repeated string exclude_tables = 6;</code>
@@ -6527,8 +6679,11 @@ public final class Postgres {
     private long slotByteLagLimit_;
     /**
      * <pre>
-     * Maximum lag of replication slot (in bytes); after exceeding this limit
-     * replication will be aborted.
+     * Maximum WAL size held by the replication slot (API - in bytes, terraform - in
+     * gigabytes); 
+     * Exceeding this limit will result in a replication failure and deletion of the
+     * replication slot.
+     * Default is 50 gigabytes
      * </pre>
      *
      * <code>int64 slot_byte_lag_limit = 8;</code>
@@ -6543,8 +6698,9 @@ public final class Postgres {
     private volatile java.lang.Object serviceSchema_;
     /**
      * <pre>
-     * Database schema for service tables (__consumer_keeper,
-     * __data_transfer_mole_finder). Default is public
+     * Name of the database schema in which auxiliary tables needed for the transfer
+     * will be created (__consumer_keeper, __data_transfer_mole_finder). 
+     * Empty `service_schema` implies schema `public`
      * </pre>
      *
      * <code>string service_schema = 9;</code>
@@ -6565,8 +6721,9 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Database schema for service tables (__consumer_keeper,
-     * __data_transfer_mole_finder). Default is public
+     * Name of the database schema in which auxiliary tables needed for the transfer
+     * will be created (__consumer_keeper, __data_transfer_mole_finder). 
+     * Empty `service_schema` implies schema `public`
      * </pre>
      *
      * <code>string service_schema = 9;</code>
@@ -6591,7 +6748,10 @@ public final class Postgres {
     private yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresObjectTransferSettings objectTransferSettings_;
     /**
      * <pre>
-     * Select database objects to be transferred during activation or deactivation.
+     * Defines which database schema objects should be transferred, e.g. views,
+     * functions, etc. 
+     * All of the attributes in this block are optional and should be either
+     * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresObjectTransferSettings object_transfer_settings = 13;</code>
@@ -6603,7 +6763,10 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Select database objects to be transferred during activation or deactivation.
+     * Defines which database schema objects should be transferred, e.g. views,
+     * functions, etc. 
+     * All of the attributes in this block are optional and should be either
+     * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresObjectTransferSettings object_transfer_settings = 13;</code>
@@ -6615,7 +6778,10 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Select database objects to be transferred during activation or deactivation.
+     * Defines which database schema objects should be transferred, e.g. views,
+     * functions, etc. 
+     * All of the attributes in this block are optional and should be either
+     * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresObjectTransferSettings object_transfer_settings = 13;</code>
@@ -6629,7 +6795,8 @@ public final class Postgres {
     private com.google.protobuf.LazyStringList securityGroups_;
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
@@ -6641,7 +6808,8 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
@@ -6652,7 +6820,8 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
@@ -6664,7 +6833,8 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
@@ -6962,6 +7132,10 @@ public final class Postgres {
       return builder;
     }
     /**
+     * <pre>
+     * Settings specific to the PostgreSQL source endpoint.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.PostgresSource}
      */
     public static final class Builder extends
@@ -7382,7 +7556,7 @@ public final class Postgres {
       private java.lang.Object database_ = "";
       /**
        * <pre>
-       * Database name
+       * Name of the database to transfer
        * </pre>
        *
        * <code>string database = 2;</code>
@@ -7402,7 +7576,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database name
+       * Name of the database to transfer
        * </pre>
        *
        * <code>string database = 2;</code>
@@ -7423,7 +7597,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database name
+       * Name of the database to transfer
        * </pre>
        *
        * <code>string database = 2;</code>
@@ -7442,7 +7616,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database name
+       * Name of the database to transfer
        * </pre>
        *
        * <code>string database = 2;</code>
@@ -7456,7 +7630,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database name
+       * Name of the database to transfer
        * </pre>
        *
        * <code>string database = 2;</code>
@@ -7478,7 +7652,7 @@ public final class Postgres {
       private java.lang.Object user_ = "";
       /**
        * <pre>
-       * User for database access. not required as may be in connection
+       * User for database access. Required unless Connection Manager connection is used.
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -7498,7 +7672,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * User for database access. not required as may be in connection
+       * User for database access. Required unless Connection Manager connection is used.
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -7519,7 +7693,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * User for database access. not required as may be in connection
+       * User for database access. Required unless Connection Manager connection is used.
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -7538,7 +7712,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * User for database access. not required as may be in connection
+       * User for database access. Required unless Connection Manager connection is used.
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -7552,7 +7726,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * User for database access. not required as may be in connection
+       * User for database access. Required unless Connection Manager connection is used.
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -7735,10 +7909,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Included tables
-       * 
-       * If none or empty list is presented, all tables are replicated. Full table name
-       * with schema. Can contain schema_name.* patterns.
+       * List of tables to transfer, formatted as `schemaname.tablename`. 
+       * If omitted or an empty list is specified, all tables will be transferred.
+       * Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string include_tables = 5;</code>
@@ -7750,10 +7923,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Included tables
-       * 
-       * If none or empty list is presented, all tables are replicated. Full table name
-       * with schema. Can contain schema_name.* patterns.
+       * List of tables to transfer, formatted as `schemaname.tablename`. 
+       * If omitted or an empty list is specified, all tables will be transferred.
+       * Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string include_tables = 5;</code>
@@ -7764,10 +7936,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Included tables
-       * 
-       * If none or empty list is presented, all tables are replicated. Full table name
-       * with schema. Can contain schema_name.* patterns.
+       * List of tables to transfer, formatted as `schemaname.tablename`. 
+       * If omitted or an empty list is specified, all tables will be transferred.
+       * Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string include_tables = 5;</code>
@@ -7779,10 +7950,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Included tables
-       * 
-       * If none or empty list is presented, all tables are replicated. Full table name
-       * with schema. Can contain schema_name.* patterns.
+       * List of tables to transfer, formatted as `schemaname.tablename`. 
+       * If omitted or an empty list is specified, all tables will be transferred.
+       * Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string include_tables = 5;</code>
@@ -7795,10 +7965,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Included tables
-       * 
-       * If none or empty list is presented, all tables are replicated. Full table name
-       * with schema. Can contain schema_name.* patterns.
+       * List of tables to transfer, formatted as `schemaname.tablename`. 
+       * If omitted or an empty list is specified, all tables will be transferred.
+       * Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string include_tables = 5;</code>
@@ -7818,10 +7987,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Included tables
-       * 
-       * If none or empty list is presented, all tables are replicated. Full table name
-       * with schema. Can contain schema_name.* patterns.
+       * List of tables to transfer, formatted as `schemaname.tablename`. 
+       * If omitted or an empty list is specified, all tables will be transferred.
+       * Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string include_tables = 5;</code>
@@ -7840,10 +8008,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Included tables
-       * 
-       * If none or empty list is presented, all tables are replicated. Full table name
-       * with schema. Can contain schema_name.* patterns.
+       * List of tables to transfer, formatted as `schemaname.tablename`. 
+       * If omitted or an empty list is specified, all tables will be transferred.
+       * Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string include_tables = 5;</code>
@@ -7860,10 +8027,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Included tables
-       * 
-       * If none or empty list is presented, all tables are replicated. Full table name
-       * with schema. Can contain schema_name.* patterns.
+       * List of tables to transfer, formatted as `schemaname.tablename`. 
+       * If omitted or an empty list is specified, all tables will be transferred.
+       * Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string include_tables = 5;</code>
@@ -7877,10 +8043,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Included tables
-       * 
-       * If none or empty list is presented, all tables are replicated. Full table name
-       * with schema. Can contain schema_name.* patterns.
+       * List of tables to transfer, formatted as `schemaname.tablename`. 
+       * If omitted or an empty list is specified, all tables will be transferred.
+       * Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string include_tables = 5;</code>
@@ -7908,10 +8073,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Excluded tables
-       * 
-       * If none or empty list is presented, all tables are replicated. Full table name
-       * with schema. Can contain schema_name.* patterns.
+       * List of tables which will not be transfered, formatted as `schemaname.tablename`
+       * If omitted or empty list is specified, all tables are replicated. 
+       * Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string exclude_tables = 6;</code>
@@ -7923,10 +8087,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Excluded tables
-       * 
-       * If none or empty list is presented, all tables are replicated. Full table name
-       * with schema. Can contain schema_name.* patterns.
+       * List of tables which will not be transfered, formatted as `schemaname.tablename`
+       * If omitted or empty list is specified, all tables are replicated. 
+       * Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string exclude_tables = 6;</code>
@@ -7937,10 +8100,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Excluded tables
-       * 
-       * If none or empty list is presented, all tables are replicated. Full table name
-       * with schema. Can contain schema_name.* patterns.
+       * List of tables which will not be transfered, formatted as `schemaname.tablename`
+       * If omitted or empty list is specified, all tables are replicated. 
+       * Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string exclude_tables = 6;</code>
@@ -7952,10 +8114,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Excluded tables
-       * 
-       * If none or empty list is presented, all tables are replicated. Full table name
-       * with schema. Can contain schema_name.* patterns.
+       * List of tables which will not be transfered, formatted as `schemaname.tablename`
+       * If omitted or empty list is specified, all tables are replicated. 
+       * Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string exclude_tables = 6;</code>
@@ -7968,10 +8129,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Excluded tables
-       * 
-       * If none or empty list is presented, all tables are replicated. Full table name
-       * with schema. Can contain schema_name.* patterns.
+       * List of tables which will not be transfered, formatted as `schemaname.tablename`
+       * If omitted or empty list is specified, all tables are replicated. 
+       * Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string exclude_tables = 6;</code>
@@ -7991,10 +8151,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Excluded tables
-       * 
-       * If none or empty list is presented, all tables are replicated. Full table name
-       * with schema. Can contain schema_name.* patterns.
+       * List of tables which will not be transfered, formatted as `schemaname.tablename`
+       * If omitted or empty list is specified, all tables are replicated. 
+       * Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string exclude_tables = 6;</code>
@@ -8013,10 +8172,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Excluded tables
-       * 
-       * If none or empty list is presented, all tables are replicated. Full table name
-       * with schema. Can contain schema_name.* patterns.
+       * List of tables which will not be transfered, formatted as `schemaname.tablename`
+       * If omitted or empty list is specified, all tables are replicated. 
+       * Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string exclude_tables = 6;</code>
@@ -8033,10 +8191,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Excluded tables
-       * 
-       * If none or empty list is presented, all tables are replicated. Full table name
-       * with schema. Can contain schema_name.* patterns.
+       * List of tables which will not be transfered, formatted as `schemaname.tablename`
+       * If omitted or empty list is specified, all tables are replicated. 
+       * Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string exclude_tables = 6;</code>
@@ -8050,10 +8207,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Excluded tables
-       * 
-       * If none or empty list is presented, all tables are replicated. Full table name
-       * with schema. Can contain schema_name.* patterns.
+       * List of tables which will not be transfered, formatted as `schemaname.tablename`
+       * If omitted or empty list is specified, all tables are replicated. 
+       * Can contain schema_name.* patterns.
        * </pre>
        *
        * <code>repeated string exclude_tables = 6;</code>
@@ -8075,8 +8231,11 @@ public final class Postgres {
       private long slotByteLagLimit_ ;
       /**
        * <pre>
-       * Maximum lag of replication slot (in bytes); after exceeding this limit
-       * replication will be aborted.
+       * Maximum WAL size held by the replication slot (API - in bytes, terraform - in
+       * gigabytes); 
+       * Exceeding this limit will result in a replication failure and deletion of the
+       * replication slot.
+       * Default is 50 gigabytes
        * </pre>
        *
        * <code>int64 slot_byte_lag_limit = 8;</code>
@@ -8088,8 +8247,11 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Maximum lag of replication slot (in bytes); after exceeding this limit
-       * replication will be aborted.
+       * Maximum WAL size held by the replication slot (API - in bytes, terraform - in
+       * gigabytes); 
+       * Exceeding this limit will result in a replication failure and deletion of the
+       * replication slot.
+       * Default is 50 gigabytes
        * </pre>
        *
        * <code>int64 slot_byte_lag_limit = 8;</code>
@@ -8104,8 +8266,11 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Maximum lag of replication slot (in bytes); after exceeding this limit
-       * replication will be aborted.
+       * Maximum WAL size held by the replication slot (API - in bytes, terraform - in
+       * gigabytes); 
+       * Exceeding this limit will result in a replication failure and deletion of the
+       * replication slot.
+       * Default is 50 gigabytes
        * </pre>
        *
        * <code>int64 slot_byte_lag_limit = 8;</code>
@@ -8121,8 +8286,9 @@ public final class Postgres {
       private java.lang.Object serviceSchema_ = "";
       /**
        * <pre>
-       * Database schema for service tables (__consumer_keeper,
-       * __data_transfer_mole_finder). Default is public
+       * Name of the database schema in which auxiliary tables needed for the transfer
+       * will be created (__consumer_keeper, __data_transfer_mole_finder). 
+       * Empty `service_schema` implies schema `public`
        * </pre>
        *
        * <code>string service_schema = 9;</code>
@@ -8142,8 +8308,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database schema for service tables (__consumer_keeper,
-       * __data_transfer_mole_finder). Default is public
+       * Name of the database schema in which auxiliary tables needed for the transfer
+       * will be created (__consumer_keeper, __data_transfer_mole_finder). 
+       * Empty `service_schema` implies schema `public`
        * </pre>
        *
        * <code>string service_schema = 9;</code>
@@ -8164,8 +8331,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database schema for service tables (__consumer_keeper,
-       * __data_transfer_mole_finder). Default is public
+       * Name of the database schema in which auxiliary tables needed for the transfer
+       * will be created (__consumer_keeper, __data_transfer_mole_finder). 
+       * Empty `service_schema` implies schema `public`
        * </pre>
        *
        * <code>string service_schema = 9;</code>
@@ -8184,8 +8352,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database schema for service tables (__consumer_keeper,
-       * __data_transfer_mole_finder). Default is public
+       * Name of the database schema in which auxiliary tables needed for the transfer
+       * will be created (__consumer_keeper, __data_transfer_mole_finder). 
+       * Empty `service_schema` implies schema `public`
        * </pre>
        *
        * <code>string service_schema = 9;</code>
@@ -8199,8 +8368,9 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database schema for service tables (__consumer_keeper,
-       * __data_transfer_mole_finder). Default is public
+       * Name of the database schema in which auxiliary tables needed for the transfer
+       * will be created (__consumer_keeper, __data_transfer_mole_finder). 
+       * Empty `service_schema` implies schema `public`
        * </pre>
        *
        * <code>string service_schema = 9;</code>
@@ -8224,7 +8394,10 @@ public final class Postgres {
           yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresObjectTransferSettings, yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresObjectTransferSettings.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresObjectTransferSettingsOrBuilder> objectTransferSettingsBuilder_;
       /**
        * <pre>
-       * Select database objects to be transferred during activation or deactivation.
+       * Defines which database schema objects should be transferred, e.g. views,
+       * functions, etc. 
+       * All of the attributes in this block are optional and should be either
+       * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresObjectTransferSettings object_transfer_settings = 13;</code>
@@ -8235,7 +8408,10 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Select database objects to be transferred during activation or deactivation.
+       * Defines which database schema objects should be transferred, e.g. views,
+       * functions, etc. 
+       * All of the attributes in this block are optional and should be either
+       * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresObjectTransferSettings object_transfer_settings = 13;</code>
@@ -8250,7 +8426,10 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Select database objects to be transferred during activation or deactivation.
+       * Defines which database schema objects should be transferred, e.g. views,
+       * functions, etc. 
+       * All of the attributes in this block are optional and should be either
+       * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresObjectTransferSettings object_transfer_settings = 13;</code>
@@ -8270,7 +8449,10 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Select database objects to be transferred during activation or deactivation.
+       * Defines which database schema objects should be transferred, e.g. views,
+       * functions, etc. 
+       * All of the attributes in this block are optional and should be either
+       * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresObjectTransferSettings object_transfer_settings = 13;</code>
@@ -8288,7 +8470,10 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Select database objects to be transferred during activation or deactivation.
+       * Defines which database schema objects should be transferred, e.g. views,
+       * functions, etc. 
+       * All of the attributes in this block are optional and should be either
+       * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresObjectTransferSettings object_transfer_settings = 13;</code>
@@ -8310,7 +8495,10 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Select database objects to be transferred during activation or deactivation.
+       * Defines which database schema objects should be transferred, e.g. views,
+       * functions, etc. 
+       * All of the attributes in this block are optional and should be either
+       * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresObjectTransferSettings object_transfer_settings = 13;</code>
@@ -8328,7 +8516,10 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Select database objects to be transferred during activation or deactivation.
+       * Defines which database schema objects should be transferred, e.g. views,
+       * functions, etc. 
+       * All of the attributes in this block are optional and should be either
+       * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresObjectTransferSettings object_transfer_settings = 13;</code>
@@ -8340,7 +8531,10 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Select database objects to be transferred during activation or deactivation.
+       * Defines which database schema objects should be transferred, e.g. views,
+       * functions, etc. 
+       * All of the attributes in this block are optional and should be either
+       * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresObjectTransferSettings object_transfer_settings = 13;</code>
@@ -8355,7 +8549,10 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Select database objects to be transferred during activation or deactivation.
+       * Defines which database schema objects should be transferred, e.g. views,
+       * functions, etc. 
+       * All of the attributes in this block are optional and should be either
+       * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresObjectTransferSettings object_transfer_settings = 13;</code>
@@ -8383,7 +8580,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
@@ -8395,7 +8593,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
@@ -8406,7 +8605,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
@@ -8418,7 +8618,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
@@ -8431,7 +8632,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
@@ -8451,7 +8653,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
@@ -8470,7 +8673,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
@@ -8487,7 +8691,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
@@ -8501,7 +8706,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
@@ -8605,7 +8811,7 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Database name
+     * Target database name
      * </pre>
      *
      * <code>string database = 2;</code>
@@ -8614,7 +8820,7 @@ public final class Postgres {
     java.lang.String getDatabase();
     /**
      * <pre>
-     * Database name
+     * Target database name
      * </pre>
      *
      * <code>string database = 2;</code>
@@ -8625,7 +8831,7 @@ public final class Postgres {
 
     /**
      * <pre>
-     * User for database access. not required as may be in connection
+     * User for database access. Required unless Connection Manager connection is used
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -8634,7 +8840,7 @@ public final class Postgres {
     java.lang.String getUser();
     /**
      * <pre>
-     * User for database access. not required as may be in connection
+     * User for database access. Required unless Connection Manager connection is used
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -8672,8 +8878,8 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Cleanup policy for activate, reactivate and reupload processes. Default is
-     * truncate.
+     * Cleanup policy for activate, reactivate and reupload processes. 
+     * One of: DISABLED, DROP, TRUNCATE. Default is TRUNCATE
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
@@ -8682,8 +8888,8 @@ public final class Postgres {
     int getCleanupPolicyValue();
     /**
      * <pre>
-     * Cleanup policy for activate, reactivate and reupload processes. Default is
-     * truncate.
+     * Cleanup policy for activate, reactivate and reupload processes. 
+     * One of: DISABLED, DROP, TRUNCATE. Default is TRUNCATE
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
@@ -8693,7 +8899,8 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 7;</code>
@@ -8703,7 +8910,8 @@ public final class Postgres {
         getSecurityGroupsList();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 7;</code>
@@ -8712,7 +8920,8 @@ public final class Postgres {
     int getSecurityGroupsCount();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 7;</code>
@@ -8722,7 +8931,8 @@ public final class Postgres {
     java.lang.String getSecurityGroups(int index);
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 7;</code>
@@ -8733,12 +8943,20 @@ public final class Postgres {
         getSecurityGroupsBytes(int index);
 
     /**
+     * <pre>
+     * Whether can change table schema if schema changed on source
+     * </pre>
+     *
      * <code>bool is_schema_migration_disabled = 8;</code>
      * @return The isSchemaMigrationDisabled.
      */
     boolean getIsSchemaMigrationDisabled();
   }
   /**
+   * <pre>
+   * Settings specific to the PostgreSQL target endpoint
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.PostgresTarget}
    */
   public static final class PostgresTarget extends
@@ -8923,7 +9141,7 @@ public final class Postgres {
     private volatile java.lang.Object database_;
     /**
      * <pre>
-     * Database name
+     * Target database name
      * </pre>
      *
      * <code>string database = 2;</code>
@@ -8944,7 +9162,7 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Database name
+     * Target database name
      * </pre>
      *
      * <code>string database = 2;</code>
@@ -8969,7 +9187,7 @@ public final class Postgres {
     private volatile java.lang.Object user_;
     /**
      * <pre>
-     * User for database access. not required as may be in connection
+     * User for database access. Required unless Connection Manager connection is used
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -8990,7 +9208,7 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * User for database access. not required as may be in connection
+     * User for database access. Required unless Connection Manager connection is used
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -9053,8 +9271,8 @@ public final class Postgres {
     private int cleanupPolicy_;
     /**
      * <pre>
-     * Cleanup policy for activate, reactivate and reupload processes. Default is
-     * truncate.
+     * Cleanup policy for activate, reactivate and reupload processes. 
+     * One of: DISABLED, DROP, TRUNCATE. Default is TRUNCATE
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
@@ -9065,8 +9283,8 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Cleanup policy for activate, reactivate and reupload processes. Default is
-     * truncate.
+     * Cleanup policy for activate, reactivate and reupload processes. 
+     * One of: DISABLED, DROP, TRUNCATE. Default is TRUNCATE
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
@@ -9082,7 +9300,8 @@ public final class Postgres {
     private com.google.protobuf.LazyStringList securityGroups_;
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 7;</code>
@@ -9094,7 +9313,8 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 7;</code>
@@ -9105,7 +9325,8 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 7;</code>
@@ -9117,7 +9338,8 @@ public final class Postgres {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 7;</code>
@@ -9132,6 +9354,10 @@ public final class Postgres {
     public static final int IS_SCHEMA_MIGRATION_DISABLED_FIELD_NUMBER = 8;
     private boolean isSchemaMigrationDisabled_;
     /**
+     * <pre>
+     * Whether can change table schema if schema changed on source
+     * </pre>
+     *
      * <code>bool is_schema_migration_disabled = 8;</code>
      * @return The isSchemaMigrationDisabled.
      */
@@ -9376,6 +9602,10 @@ public final class Postgres {
       return builder;
     }
     /**
+     * <pre>
+     * Settings specific to the PostgreSQL target endpoint
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.PostgresTarget}
      */
     public static final class Builder extends
@@ -9747,7 +9977,7 @@ public final class Postgres {
       private java.lang.Object database_ = "";
       /**
        * <pre>
-       * Database name
+       * Target database name
        * </pre>
        *
        * <code>string database = 2;</code>
@@ -9767,7 +9997,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database name
+       * Target database name
        * </pre>
        *
        * <code>string database = 2;</code>
@@ -9788,7 +10018,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database name
+       * Target database name
        * </pre>
        *
        * <code>string database = 2;</code>
@@ -9807,7 +10037,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database name
+       * Target database name
        * </pre>
        *
        * <code>string database = 2;</code>
@@ -9821,7 +10051,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Database name
+       * Target database name
        * </pre>
        *
        * <code>string database = 2;</code>
@@ -9843,7 +10073,7 @@ public final class Postgres {
       private java.lang.Object user_ = "";
       /**
        * <pre>
-       * User for database access. not required as may be in connection
+       * User for database access. Required unless Connection Manager connection is used
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -9863,7 +10093,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * User for database access. not required as may be in connection
+       * User for database access. Required unless Connection Manager connection is used
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -9884,7 +10114,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * User for database access. not required as may be in connection
+       * User for database access. Required unless Connection Manager connection is used
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -9903,7 +10133,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * User for database access. not required as may be in connection
+       * User for database access. Required unless Connection Manager connection is used
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -9917,7 +10147,7 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * User for database access. not required as may be in connection
+       * User for database access. Required unless Connection Manager connection is used
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -10094,8 +10324,8 @@ public final class Postgres {
       private int cleanupPolicy_ = 0;
       /**
        * <pre>
-       * Cleanup policy for activate, reactivate and reupload processes. Default is
-       * truncate.
+       * Cleanup policy for activate, reactivate and reupload processes. 
+       * One of: DISABLED, DROP, TRUNCATE. Default is TRUNCATE
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
@@ -10106,8 +10336,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Cleanup policy for activate, reactivate and reupload processes. Default is
-       * truncate.
+       * Cleanup policy for activate, reactivate and reupload processes. 
+       * One of: DISABLED, DROP, TRUNCATE. Default is TRUNCATE
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
@@ -10122,8 +10352,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Cleanup policy for activate, reactivate and reupload processes. Default is
-       * truncate.
+       * Cleanup policy for activate, reactivate and reupload processes. 
+       * One of: DISABLED, DROP, TRUNCATE. Default is TRUNCATE
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
@@ -10137,8 +10367,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Cleanup policy for activate, reactivate and reupload processes. Default is
-       * truncate.
+       * Cleanup policy for activate, reactivate and reupload processes. 
+       * One of: DISABLED, DROP, TRUNCATE. Default is TRUNCATE
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
@@ -10156,8 +10386,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Cleanup policy for activate, reactivate and reupload processes. Default is
-       * truncate.
+       * Cleanup policy for activate, reactivate and reupload processes. 
+       * One of: DISABLED, DROP, TRUNCATE. Default is TRUNCATE
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 5;</code>
@@ -10179,7 +10409,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 7;</code>
@@ -10191,7 +10422,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 7;</code>
@@ -10202,7 +10434,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 7;</code>
@@ -10214,7 +10447,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 7;</code>
@@ -10227,7 +10461,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 7;</code>
@@ -10247,7 +10482,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 7;</code>
@@ -10266,7 +10502,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 7;</code>
@@ -10283,7 +10520,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 7;</code>
@@ -10297,7 +10535,8 @@ public final class Postgres {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 7;</code>
@@ -10318,6 +10557,10 @@ public final class Postgres {
 
       private boolean isSchemaMigrationDisabled_ ;
       /**
+       * <pre>
+       * Whether can change table schema if schema changed on source
+       * </pre>
+       *
        * <code>bool is_schema_migration_disabled = 8;</code>
        * @return The isSchemaMigrationDisabled.
        */
@@ -10326,6 +10569,10 @@ public final class Postgres {
         return isSchemaMigrationDisabled_;
       }
       /**
+       * <pre>
+       * Whether can change table schema if schema changed on source
+       * </pre>
+       *
        * <code>bool is_schema_migration_disabled = 8;</code>
        * @param value The isSchemaMigrationDisabled to set.
        * @return This builder for chaining.
@@ -10337,6 +10584,10 @@ public final class Postgres {
         return this;
       }
       /**
+       * <pre>
+       * Whether can change table schema if schema changed on source
+       * </pre>
+       *
        * <code>bool is_schema_migration_disabled = 8;</code>
        * @return This builder for chaining.
        */

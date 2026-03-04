@@ -60,13 +60,34 @@ public final class ConfigurationOuterClass {
 
     /**
      * <pre>
-     * Number of cores.
+     * &#64;deprecated. Number of cores.
      * </pre>
      *
-     * <code>int64 cores = 3;</code>
+     * <code>int64 cores = 3 [deprecated = true];</code>
+     * @deprecated
      * @return The cores.
      */
-    long getCores();
+    @java.lang.Deprecated long getCores();
+
+    /**
+     * <pre>
+     * Number of physical cores per CPU (socket).
+     * </pre>
+     *
+     * <code>int64 physical_cores = 4;</code>
+     * @return The physicalCores.
+     */
+    long getPhysicalCores();
+
+    /**
+     * <pre>
+     * Frequency of the CPU in megahertz (MHz).
+     * </pre>
+     *
+     * <code>int64 frequency_mhz = 5;</code>
+     * @return The frequencyMhz.
+     */
+    long getFrequencyMhz();
   }
   /**
    * <pre>
@@ -134,6 +155,16 @@ public final class ConfigurationOuterClass {
             case 24: {
 
               cores_ = input.readInt64();
+              break;
+            }
+            case 32: {
+
+              physicalCores_ = input.readInt64();
+              break;
+            }
+            case 40: {
+
+              frequencyMhz_ = input.readInt64();
               break;
             }
             default: {
@@ -264,15 +295,46 @@ public final class ConfigurationOuterClass {
     private long cores_;
     /**
      * <pre>
-     * Number of cores.
+     * &#64;deprecated. Number of cores.
      * </pre>
      *
-     * <code>int64 cores = 3;</code>
+     * <code>int64 cores = 3 [deprecated = true];</code>
+     * @deprecated
      * @return The cores.
      */
     @java.lang.Override
-    public long getCores() {
+    @java.lang.Deprecated public long getCores() {
       return cores_;
+    }
+
+    public static final int PHYSICAL_CORES_FIELD_NUMBER = 4;
+    private long physicalCores_;
+    /**
+     * <pre>
+     * Number of physical cores per CPU (socket).
+     * </pre>
+     *
+     * <code>int64 physical_cores = 4;</code>
+     * @return The physicalCores.
+     */
+    @java.lang.Override
+    public long getPhysicalCores() {
+      return physicalCores_;
+    }
+
+    public static final int FREQUENCY_MHZ_FIELD_NUMBER = 5;
+    private long frequencyMhz_;
+    /**
+     * <pre>
+     * Frequency of the CPU in megahertz (MHz).
+     * </pre>
+     *
+     * <code>int64 frequency_mhz = 5;</code>
+     * @return The frequencyMhz.
+     */
+    @java.lang.Override
+    public long getFrequencyMhz() {
+      return frequencyMhz_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -298,6 +360,12 @@ public final class ConfigurationOuterClass {
       if (cores_ != 0L) {
         output.writeInt64(3, cores_);
       }
+      if (physicalCores_ != 0L) {
+        output.writeInt64(4, physicalCores_);
+      }
+      if (frequencyMhz_ != 0L) {
+        output.writeInt64(5, frequencyMhz_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -316,6 +384,14 @@ public final class ConfigurationOuterClass {
       if (cores_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, cores_);
+      }
+      if (physicalCores_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, physicalCores_);
+      }
+      if (frequencyMhz_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, frequencyMhz_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -338,6 +414,10 @@ public final class ConfigurationOuterClass {
           .equals(other.getVendor())) return false;
       if (getCores()
           != other.getCores()) return false;
+      if (getPhysicalCores()
+          != other.getPhysicalCores()) return false;
+      if (getFrequencyMhz()
+          != other.getFrequencyMhz()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -356,6 +436,12 @@ public final class ConfigurationOuterClass {
       hash = (37 * hash) + CORES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getCores());
+      hash = (37 * hash) + PHYSICAL_CORES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPhysicalCores());
+      hash = (37 * hash) + FREQUENCY_MHZ_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getFrequencyMhz());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -499,6 +585,10 @@ public final class ConfigurationOuterClass {
 
         cores_ = 0L;
 
+        physicalCores_ = 0L;
+
+        frequencyMhz_ = 0L;
+
         return this;
       }
 
@@ -528,6 +618,8 @@ public final class ConfigurationOuterClass {
         result.name_ = name_;
         result.vendor_ = vendor_;
         result.cores_ = cores_;
+        result.physicalCores_ = physicalCores_;
+        result.frequencyMhz_ = frequencyMhz_;
         onBuilt();
         return result;
       }
@@ -586,6 +678,12 @@ public final class ConfigurationOuterClass {
         }
         if (other.getCores() != 0L) {
           setCores(other.getCores());
+        }
+        if (other.getPhysicalCores() != 0L) {
+          setPhysicalCores(other.getPhysicalCores());
+        }
+        if (other.getFrequencyMhz() != 0L) {
+          setFrequencyMhz(other.getFrequencyMhz());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -811,26 +909,28 @@ public final class ConfigurationOuterClass {
       private long cores_ ;
       /**
        * <pre>
-       * Number of cores.
+       * &#64;deprecated. Number of cores.
        * </pre>
        *
-       * <code>int64 cores = 3;</code>
+       * <code>int64 cores = 3 [deprecated = true];</code>
+       * @deprecated
        * @return The cores.
        */
       @java.lang.Override
-      public long getCores() {
+      @java.lang.Deprecated public long getCores() {
         return cores_;
       }
       /**
        * <pre>
-       * Number of cores.
+       * &#64;deprecated. Number of cores.
        * </pre>
        *
-       * <code>int64 cores = 3;</code>
+       * <code>int64 cores = 3 [deprecated = true];</code>
+       * @deprecated
        * @param value The cores to set.
        * @return This builder for chaining.
        */
-      public Builder setCores(long value) {
+      @java.lang.Deprecated public Builder setCores(long value) {
         
         cores_ = value;
         onChanged();
@@ -838,15 +938,102 @@ public final class ConfigurationOuterClass {
       }
       /**
        * <pre>
-       * Number of cores.
+       * &#64;deprecated. Number of cores.
        * </pre>
        *
-       * <code>int64 cores = 3;</code>
+       * <code>int64 cores = 3 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearCores() {
+      @java.lang.Deprecated public Builder clearCores() {
         
         cores_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long physicalCores_ ;
+      /**
+       * <pre>
+       * Number of physical cores per CPU (socket).
+       * </pre>
+       *
+       * <code>int64 physical_cores = 4;</code>
+       * @return The physicalCores.
+       */
+      @java.lang.Override
+      public long getPhysicalCores() {
+        return physicalCores_;
+      }
+      /**
+       * <pre>
+       * Number of physical cores per CPU (socket).
+       * </pre>
+       *
+       * <code>int64 physical_cores = 4;</code>
+       * @param value The physicalCores to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPhysicalCores(long value) {
+        
+        physicalCores_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of physical cores per CPU (socket).
+       * </pre>
+       *
+       * <code>int64 physical_cores = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPhysicalCores() {
+        
+        physicalCores_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long frequencyMhz_ ;
+      /**
+       * <pre>
+       * Frequency of the CPU in megahertz (MHz).
+       * </pre>
+       *
+       * <code>int64 frequency_mhz = 5;</code>
+       * @return The frequencyMhz.
+       */
+      @java.lang.Override
+      public long getFrequencyMhz() {
+        return frequencyMhz_;
+      }
+      /**
+       * <pre>
+       * Frequency of the CPU in megahertz (MHz).
+       * </pre>
+       *
+       * <code>int64 frequency_mhz = 5;</code>
+       * @param value The frequencyMhz to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrequencyMhz(long value) {
+        
+        frequencyMhz_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Frequency of the CPU in megahertz (MHz).
+       * </pre>
+       *
+       * <code>int64 frequency_mhz = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFrequencyMhz() {
+        
+        frequencyMhz_ = 0L;
         onChanged();
         return this;
       }
@@ -1776,10 +1963,11 @@ public final class ConfigurationOuterClass {
      * Network capacity or bandwidth in gigabits per second.
      * </pre>
      *
-     * <code>int64 network_capacity_gbps = 6;</code>
+     * <code>int64 network_capacity_gbps = 6 [deprecated = true];</code>
+     * @deprecated
      * @return The networkCapacityGbps.
      */
-    long getNetworkCapacityGbps();
+    @java.lang.Deprecated long getNetworkCapacityGbps();
 
     /**
      * <pre>
@@ -2136,11 +2324,12 @@ public final class ConfigurationOuterClass {
      * Network capacity or bandwidth in gigabits per second.
      * </pre>
      *
-     * <code>int64 network_capacity_gbps = 6;</code>
+     * <code>int64 network_capacity_gbps = 6 [deprecated = true];</code>
+     * @deprecated
      * @return The networkCapacityGbps.
      */
     @java.lang.Override
-    public long getNetworkCapacityGbps() {
+    @java.lang.Deprecated public long getNetworkCapacityGbps() {
       return networkCapacityGbps_;
     }
 
@@ -3327,11 +3516,12 @@ public final class ConfigurationOuterClass {
        * Network capacity or bandwidth in gigabits per second.
        * </pre>
        *
-       * <code>int64 network_capacity_gbps = 6;</code>
+       * <code>int64 network_capacity_gbps = 6 [deprecated = true];</code>
+       * @deprecated
        * @return The networkCapacityGbps.
        */
       @java.lang.Override
-      public long getNetworkCapacityGbps() {
+      @java.lang.Deprecated public long getNetworkCapacityGbps() {
         return networkCapacityGbps_;
       }
       /**
@@ -3339,11 +3529,12 @@ public final class ConfigurationOuterClass {
        * Network capacity or bandwidth in gigabits per second.
        * </pre>
        *
-       * <code>int64 network_capacity_gbps = 6;</code>
+       * <code>int64 network_capacity_gbps = 6 [deprecated = true];</code>
+       * @deprecated
        * @param value The networkCapacityGbps to set.
        * @return This builder for chaining.
        */
-      public Builder setNetworkCapacityGbps(long value) {
+      @java.lang.Deprecated public Builder setNetworkCapacityGbps(long value) {
         
         networkCapacityGbps_ = value;
         onChanged();
@@ -3354,10 +3545,11 @@ public final class ConfigurationOuterClass {
        * Network capacity or bandwidth in gigabits per second.
        * </pre>
        *
-       * <code>int64 network_capacity_gbps = 6;</code>
+       * <code>int64 network_capacity_gbps = 6 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearNetworkCapacityGbps() {
+      @java.lang.Deprecated public Builder clearNetworkCapacityGbps() {
         
         networkCapacityGbps_ = 0L;
         onChanged();
@@ -3486,20 +3678,22 @@ public final class ConfigurationOuterClass {
       "\n2yandex/cloud/baremetal/v1alpha/configu" +
       "ration.proto\022\036yandex.cloud.baremetal.v1a" +
       "lpha\032)yandex/cloud/baremetal/v1alpha/dis" +
-      "k.proto\"2\n\003CPU\022\014\n\004name\030\001 \001(\t\022\016\n\006vendor\030\002" +
-      " \001(\t\022\r\n\005cores\030\003 \001(\003\"\200\001\n\026DiskDriveConfigu" +
-      "ration\022;\n\004type\030\001 \001(\0162-.yandex.cloud.bare" +
-      "metal.v1alpha.DiskDriveType\022\022\n\ndisk_coun" +
-      "t\030\002 \001(\003\022\025\n\rdisk_size_gib\030\003 \001(\003\"\362\001\n\rConfi" +
-      "guration\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\022\n\nme" +
-      "mory_gib\030\003 \001(\003\0220\n\003cpu\030\004 \001(\0132#.yandex.clo" +
-      "ud.baremetal.v1alpha.CPU\022K\n\013disk_drives\030" +
-      "\005 \003(\01326.yandex.cloud.baremetal.v1alpha.D" +
-      "iskDriveConfiguration\022\035\n\025network_capacit" +
-      "y_gbps\030\006 \001(\003\022\017\n\007cpu_num\030\010 \001(\003J\004\010\007\020\010Br\n\"y" +
-      "andex.cloud.api.baremetal.v1alphaZLgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/baremetal/v1alpha;baremetalb\006proto3"
+      "k.proto\"e\n\003CPU\022\014\n\004name\030\001 \001(\t\022\016\n\006vendor\030\002" +
+      " \001(\t\022\021\n\005cores\030\003 \001(\003B\002\030\001\022\026\n\016physical_core" +
+      "s\030\004 \001(\003\022\025\n\rfrequency_mhz\030\005 \001(\003\"\200\001\n\026DiskD" +
+      "riveConfiguration\022;\n\004type\030\001 \001(\0162-.yandex" +
+      ".cloud.baremetal.v1alpha.DiskDriveType\022\022" +
+      "\n\ndisk_count\030\002 \001(\003\022\025\n\rdisk_size_gib\030\003 \001(" +
+      "\003\"\366\001\n\rConfiguration\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030" +
+      "\002 \001(\t\022\022\n\nmemory_gib\030\003 \001(\003\0220\n\003cpu\030\004 \001(\0132#" +
+      ".yandex.cloud.baremetal.v1alpha.CPU\022K\n\013d" +
+      "isk_drives\030\005 \003(\01326.yandex.cloud.baremeta" +
+      "l.v1alpha.DiskDriveConfiguration\022!\n\025netw" +
+      "ork_capacity_gbps\030\006 \001(\003B\002\030\001\022\017\n\007cpu_num\030\010" +
+      " \001(\003J\004\010\007\020\010Br\n\"yandex.cloud.api.baremetal" +
+      ".v1alphaZLgithub.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/baremetal/v1alpha;bar" +
+      "emetalb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3511,7 +3705,7 @@ public final class ConfigurationOuterClass {
     internal_static_yandex_cloud_baremetal_v1alpha_CPU_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_baremetal_v1alpha_CPU_descriptor,
-        new java.lang.String[] { "Name", "Vendor", "Cores", });
+        new java.lang.String[] { "Name", "Vendor", "Cores", "PhysicalCores", "FrequencyMhz", });
     internal_static_yandex_cloud_baremetal_v1alpha_DiskDriveConfiguration_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_baremetal_v1alpha_DiskDriveConfiguration_fieldAccessorTable = new

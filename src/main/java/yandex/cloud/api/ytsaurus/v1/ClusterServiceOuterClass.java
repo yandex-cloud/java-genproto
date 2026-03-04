@@ -3154,6 +3154,33 @@ public final class ClusterServiceOuterClass {
      * <code>.yandex.cloud.ytsaurus.v1.ClusterSpec spec = 8;</code>
      */
     yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.ClusterSpecOrBuilder getSpecOrBuilder();
+
+    /**
+     * <pre>
+     * CIDRs whitelist.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+     * @return Whether the cidrBlocksWhitelist field is set.
+     */
+    boolean hasCidrBlocksWhitelist();
+    /**
+     * <pre>
+     * CIDRs whitelist.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+     * @return The cidrBlocksWhitelist.
+     */
+    yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks getCidrBlocksWhitelist();
+    /**
+     * <pre>
+     * CIDRs whitelist.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+     */
+    yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocksOrBuilder getCidrBlocksWhitelistOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.ytsaurus.v1.CreateClusterRequest}
@@ -3268,6 +3295,19 @@ public final class ClusterServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(spec_);
                 spec_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.Builder subBuilder = null;
+              if (cidrBlocksWhitelist_ != null) {
+                subBuilder = cidrBlocksWhitelist_.toBuilder();
+              }
+              cidrBlocksWhitelist_ = input.readMessage(yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cidrBlocksWhitelist_);
+                cidrBlocksWhitelist_ = subBuilder.buildPartial();
               }
 
               break;
@@ -3735,6 +3775,44 @@ public final class ClusterServiceOuterClass {
       return getSpec();
     }
 
+    public static final int CIDR_BLOCKS_WHITELIST_FIELD_NUMBER = 9;
+    private yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks cidrBlocksWhitelist_;
+    /**
+     * <pre>
+     * CIDRs whitelist.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+     * @return Whether the cidrBlocksWhitelist field is set.
+     */
+    @java.lang.Override
+    public boolean hasCidrBlocksWhitelist() {
+      return cidrBlocksWhitelist_ != null;
+    }
+    /**
+     * <pre>
+     * CIDRs whitelist.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+     * @return The cidrBlocksWhitelist.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks getCidrBlocksWhitelist() {
+      return cidrBlocksWhitelist_ == null ? yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.getDefaultInstance() : cidrBlocksWhitelist_;
+    }
+    /**
+     * <pre>
+     * CIDRs whitelist.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocksOrBuilder getCidrBlocksWhitelistOrBuilder() {
+      return getCidrBlocksWhitelist();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3775,6 +3853,9 @@ public final class ClusterServiceOuterClass {
       }
       if (spec_ != null) {
         output.writeMessage(8, getSpec());
+      }
+      if (cidrBlocksWhitelist_ != null) {
+        output.writeMessage(9, getCidrBlocksWhitelist());
       }
       unknownFields.writeTo(output);
     }
@@ -3822,6 +3903,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getSpec());
       }
+      if (cidrBlocksWhitelist_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getCidrBlocksWhitelist());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3856,6 +3941,11 @@ public final class ClusterServiceOuterClass {
         if (!getSpec()
             .equals(other.getSpec())) return false;
       }
+      if (hasCidrBlocksWhitelist() != other.hasCidrBlocksWhitelist()) return false;
+      if (hasCidrBlocksWhitelist()) {
+        if (!getCidrBlocksWhitelist()
+            .equals(other.getCidrBlocksWhitelist())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3888,6 +3978,10 @@ public final class ClusterServiceOuterClass {
       if (hasSpec()) {
         hash = (37 * hash) + SPEC_FIELD_NUMBER;
         hash = (53 * hash) + getSpec().hashCode();
+      }
+      if (hasCidrBlocksWhitelist()) {
+        hash = (37 * hash) + CIDR_BLOCKS_WHITELIST_FIELD_NUMBER;
+        hash = (53 * hash) + getCidrBlocksWhitelist().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4063,6 +4157,12 @@ public final class ClusterServiceOuterClass {
           spec_ = null;
           specBuilder_ = null;
         }
+        if (cidrBlocksWhitelistBuilder_ == null) {
+          cidrBlocksWhitelist_ = null;
+        } else {
+          cidrBlocksWhitelist_ = null;
+          cidrBlocksWhitelistBuilder_ = null;
+        }
         return this;
       }
 
@@ -4106,6 +4206,11 @@ public final class ClusterServiceOuterClass {
           result.spec_ = spec_;
         } else {
           result.spec_ = specBuilder_.build();
+        }
+        if (cidrBlocksWhitelistBuilder_ == null) {
+          result.cidrBlocksWhitelist_ = cidrBlocksWhitelist_;
+        } else {
+          result.cidrBlocksWhitelist_ = cidrBlocksWhitelistBuilder_.build();
         }
         onBuilt();
         return result;
@@ -4189,6 +4294,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasSpec()) {
           mergeSpec(other.getSpec());
+        }
+        if (other.hasCidrBlocksWhitelist()) {
+          mergeCidrBlocksWhitelist(other.getCidrBlocksWhitelist());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5159,6 +5267,161 @@ public final class ClusterServiceOuterClass {
         }
         return specBuilder_;
       }
+
+      private yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks cidrBlocksWhitelist_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks, yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.Builder, yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocksOrBuilder> cidrBlocksWhitelistBuilder_;
+      /**
+       * <pre>
+       * CIDRs whitelist.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+       * @return Whether the cidrBlocksWhitelist field is set.
+       */
+      public boolean hasCidrBlocksWhitelist() {
+        return cidrBlocksWhitelistBuilder_ != null || cidrBlocksWhitelist_ != null;
+      }
+      /**
+       * <pre>
+       * CIDRs whitelist.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+       * @return The cidrBlocksWhitelist.
+       */
+      public yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks getCidrBlocksWhitelist() {
+        if (cidrBlocksWhitelistBuilder_ == null) {
+          return cidrBlocksWhitelist_ == null ? yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.getDefaultInstance() : cidrBlocksWhitelist_;
+        } else {
+          return cidrBlocksWhitelistBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * CIDRs whitelist.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+       */
+      public Builder setCidrBlocksWhitelist(yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks value) {
+        if (cidrBlocksWhitelistBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cidrBlocksWhitelist_ = value;
+          onChanged();
+        } else {
+          cidrBlocksWhitelistBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * CIDRs whitelist.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+       */
+      public Builder setCidrBlocksWhitelist(
+          yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.Builder builderForValue) {
+        if (cidrBlocksWhitelistBuilder_ == null) {
+          cidrBlocksWhitelist_ = builderForValue.build();
+          onChanged();
+        } else {
+          cidrBlocksWhitelistBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * CIDRs whitelist.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+       */
+      public Builder mergeCidrBlocksWhitelist(yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks value) {
+        if (cidrBlocksWhitelistBuilder_ == null) {
+          if (cidrBlocksWhitelist_ != null) {
+            cidrBlocksWhitelist_ =
+              yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.newBuilder(cidrBlocksWhitelist_).mergeFrom(value).buildPartial();
+          } else {
+            cidrBlocksWhitelist_ = value;
+          }
+          onChanged();
+        } else {
+          cidrBlocksWhitelistBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * CIDRs whitelist.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+       */
+      public Builder clearCidrBlocksWhitelist() {
+        if (cidrBlocksWhitelistBuilder_ == null) {
+          cidrBlocksWhitelist_ = null;
+          onChanged();
+        } else {
+          cidrBlocksWhitelist_ = null;
+          cidrBlocksWhitelistBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * CIDRs whitelist.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+       */
+      public yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.Builder getCidrBlocksWhitelistBuilder() {
+        
+        onChanged();
+        return getCidrBlocksWhitelistFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * CIDRs whitelist.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+       */
+      public yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocksOrBuilder getCidrBlocksWhitelistOrBuilder() {
+        if (cidrBlocksWhitelistBuilder_ != null) {
+          return cidrBlocksWhitelistBuilder_.getMessageOrBuilder();
+        } else {
+          return cidrBlocksWhitelist_ == null ?
+              yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.getDefaultInstance() : cidrBlocksWhitelist_;
+        }
+      }
+      /**
+       * <pre>
+       * CIDRs whitelist.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks, yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.Builder, yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocksOrBuilder> 
+          getCidrBlocksWhitelistFieldBuilder() {
+        if (cidrBlocksWhitelistBuilder_ == null) {
+          cidrBlocksWhitelistBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks, yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.Builder, yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocksOrBuilder>(
+                  getCidrBlocksWhitelist(),
+                  getParentForChildren(),
+                  isClean());
+          cidrBlocksWhitelist_ = null;
+        }
+        return cidrBlocksWhitelistBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6075,6 +6338,33 @@ public final class ClusterServiceOuterClass {
      * <code>.yandex.cloud.ytsaurus.v1.ClusterSpec spec = 8;</code>
      */
     yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.ClusterSpecOrBuilder getSpecOrBuilder();
+
+    /**
+     * <pre>
+     * CIDRs whitelist.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+     * @return Whether the cidrBlocksWhitelist field is set.
+     */
+    boolean hasCidrBlocksWhitelist();
+    /**
+     * <pre>
+     * CIDRs whitelist.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+     * @return The cidrBlocksWhitelist.
+     */
+    yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks getCidrBlocksWhitelist();
+    /**
+     * <pre>
+     * CIDRs whitelist.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+     */
+    yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocksOrBuilder getCidrBlocksWhitelistOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.ytsaurus.v1.UpdateClusterRequest}
@@ -6195,6 +6485,19 @@ public final class ClusterServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(spec_);
                 spec_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.Builder subBuilder = null;
+              if (cidrBlocksWhitelist_ != null) {
+                subBuilder = cidrBlocksWhitelist_.toBuilder();
+              }
+              cidrBlocksWhitelist_ = input.readMessage(yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cidrBlocksWhitelist_);
+                cidrBlocksWhitelist_ = subBuilder.buildPartial();
               }
 
               break;
@@ -6676,6 +6979,44 @@ public final class ClusterServiceOuterClass {
       return getSpec();
     }
 
+    public static final int CIDR_BLOCKS_WHITELIST_FIELD_NUMBER = 9;
+    private yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks cidrBlocksWhitelist_;
+    /**
+     * <pre>
+     * CIDRs whitelist.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+     * @return Whether the cidrBlocksWhitelist field is set.
+     */
+    @java.lang.Override
+    public boolean hasCidrBlocksWhitelist() {
+      return cidrBlocksWhitelist_ != null;
+    }
+    /**
+     * <pre>
+     * CIDRs whitelist.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+     * @return The cidrBlocksWhitelist.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks getCidrBlocksWhitelist() {
+      return cidrBlocksWhitelist_ == null ? yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.getDefaultInstance() : cidrBlocksWhitelist_;
+    }
+    /**
+     * <pre>
+     * CIDRs whitelist.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocksOrBuilder getCidrBlocksWhitelistOrBuilder() {
+      return getCidrBlocksWhitelist();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6716,6 +7057,9 @@ public final class ClusterServiceOuterClass {
       }
       if (spec_ != null) {
         output.writeMessage(8, getSpec());
+      }
+      if (cidrBlocksWhitelist_ != null) {
+        output.writeMessage(9, getCidrBlocksWhitelist());
       }
       unknownFields.writeTo(output);
     }
@@ -6764,6 +7108,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getSpec());
       }
+      if (cidrBlocksWhitelist_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getCidrBlocksWhitelist());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6801,6 +7149,11 @@ public final class ClusterServiceOuterClass {
         if (!getSpec()
             .equals(other.getSpec())) return false;
       }
+      if (hasCidrBlocksWhitelist() != other.hasCidrBlocksWhitelist()) return false;
+      if (hasCidrBlocksWhitelist()) {
+        if (!getCidrBlocksWhitelist()
+            .equals(other.getCidrBlocksWhitelist())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6835,6 +7188,10 @@ public final class ClusterServiceOuterClass {
       if (hasSpec()) {
         hash = (37 * hash) + SPEC_FIELD_NUMBER;
         hash = (53 * hash) + getSpec().hashCode();
+      }
+      if (hasCidrBlocksWhitelist()) {
+        hash = (37 * hash) + CIDR_BLOCKS_WHITELIST_FIELD_NUMBER;
+        hash = (53 * hash) + getCidrBlocksWhitelist().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7014,6 +7371,12 @@ public final class ClusterServiceOuterClass {
           spec_ = null;
           specBuilder_ = null;
         }
+        if (cidrBlocksWhitelistBuilder_ == null) {
+          cidrBlocksWhitelist_ = null;
+        } else {
+          cidrBlocksWhitelist_ = null;
+          cidrBlocksWhitelistBuilder_ = null;
+        }
         return this;
       }
 
@@ -7061,6 +7424,11 @@ public final class ClusterServiceOuterClass {
           result.spec_ = spec_;
         } else {
           result.spec_ = specBuilder_.build();
+        }
+        if (cidrBlocksWhitelistBuilder_ == null) {
+          result.cidrBlocksWhitelist_ = cidrBlocksWhitelist_;
+        } else {
+          result.cidrBlocksWhitelist_ = cidrBlocksWhitelistBuilder_.build();
         }
         onBuilt();
         return result;
@@ -7143,6 +7511,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasSpec()) {
           mergeSpec(other.getSpec());
+        }
+        if (other.hasCidrBlocksWhitelist()) {
+          mergeCidrBlocksWhitelist(other.getCidrBlocksWhitelist());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8211,6 +8582,161 @@ public final class ClusterServiceOuterClass {
           spec_ = null;
         }
         return specBuilder_;
+      }
+
+      private yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks cidrBlocksWhitelist_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks, yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.Builder, yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocksOrBuilder> cidrBlocksWhitelistBuilder_;
+      /**
+       * <pre>
+       * CIDRs whitelist.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+       * @return Whether the cidrBlocksWhitelist field is set.
+       */
+      public boolean hasCidrBlocksWhitelist() {
+        return cidrBlocksWhitelistBuilder_ != null || cidrBlocksWhitelist_ != null;
+      }
+      /**
+       * <pre>
+       * CIDRs whitelist.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+       * @return The cidrBlocksWhitelist.
+       */
+      public yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks getCidrBlocksWhitelist() {
+        if (cidrBlocksWhitelistBuilder_ == null) {
+          return cidrBlocksWhitelist_ == null ? yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.getDefaultInstance() : cidrBlocksWhitelist_;
+        } else {
+          return cidrBlocksWhitelistBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * CIDRs whitelist.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+       */
+      public Builder setCidrBlocksWhitelist(yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks value) {
+        if (cidrBlocksWhitelistBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cidrBlocksWhitelist_ = value;
+          onChanged();
+        } else {
+          cidrBlocksWhitelistBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * CIDRs whitelist.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+       */
+      public Builder setCidrBlocksWhitelist(
+          yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.Builder builderForValue) {
+        if (cidrBlocksWhitelistBuilder_ == null) {
+          cidrBlocksWhitelist_ = builderForValue.build();
+          onChanged();
+        } else {
+          cidrBlocksWhitelistBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * CIDRs whitelist.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+       */
+      public Builder mergeCidrBlocksWhitelist(yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks value) {
+        if (cidrBlocksWhitelistBuilder_ == null) {
+          if (cidrBlocksWhitelist_ != null) {
+            cidrBlocksWhitelist_ =
+              yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.newBuilder(cidrBlocksWhitelist_).mergeFrom(value).buildPartial();
+          } else {
+            cidrBlocksWhitelist_ = value;
+          }
+          onChanged();
+        } else {
+          cidrBlocksWhitelistBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * CIDRs whitelist.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+       */
+      public Builder clearCidrBlocksWhitelist() {
+        if (cidrBlocksWhitelistBuilder_ == null) {
+          cidrBlocksWhitelist_ = null;
+          onChanged();
+        } else {
+          cidrBlocksWhitelist_ = null;
+          cidrBlocksWhitelistBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * CIDRs whitelist.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+       */
+      public yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.Builder getCidrBlocksWhitelistBuilder() {
+        
+        onChanged();
+        return getCidrBlocksWhitelistFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * CIDRs whitelist.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+       */
+      public yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocksOrBuilder getCidrBlocksWhitelistOrBuilder() {
+        if (cidrBlocksWhitelistBuilder_ != null) {
+          return cidrBlocksWhitelistBuilder_.getMessageOrBuilder();
+        } else {
+          return cidrBlocksWhitelist_ == null ?
+              yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.getDefaultInstance() : cidrBlocksWhitelist_;
+        }
+      }
+      /**
+       * <pre>
+       * CIDRs whitelist.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ytsaurus.v1.CidrBlocks cidr_blocks_whitelist = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks, yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.Builder, yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocksOrBuilder> 
+          getCidrBlocksWhitelistFieldBuilder() {
+        if (cidrBlocksWhitelistBuilder_ == null) {
+          cidrBlocksWhitelistBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks, yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocks.Builder, yandex.cloud.api.ytsaurus.v1.ClusterOuterClass.CidrBlocksOrBuilder>(
+                  getCidrBlocksWhitelist(),
+                  getParentForChildren(),
+                  isClean());
+          cidrBlocksWhitelist_ = null;
+        }
+        return cidrBlocksWhitelistBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12590,7 +13116,7 @@ public final class ClusterServiceOuterClass {
       "\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\022\016\n\006filter\030\004 \003(" +
       "\t\"d\n\024ListClustersResponse\0223\n\010clusters\030\001 " +
       "\003(\0132!.yandex.cloud.ytsaurus.v1.Cluster\022\027" +
-      "\n\017next_page_token\030\002 \001(\t\"\214\003\n\024CreateCluste" +
+      "\n\017next_page_token\030\002 \001(\t\"\321\003\n\024CreateCluste" +
       "rRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022\025\n\007zon" +
       "e_id\030\002 \001(\tB\004\350\3071\001\022J\n\004name\030\003 \001(\tB<\212\3101\004<=63" +
       "\362\30710[a-zA-Z0-9\320\201\321\221\320\220-\321\217]\\S{1,61}[a-zA-Z0" +
@@ -12599,59 +13125,62 @@ public final class ClusterServiceOuterClass {
       "ateClusterRequest.LabelsEntry\022\027\n\tsubnet_" +
       "id\030\006 \001(\tB\004\350\3071\001\022\032\n\022security_group_ids\030\007 \003" +
       "(\t\0223\n\004spec\030\010 \001(\0132%.yandex.cloud.ytsaurus" +
-      ".v1.ClusterSpec\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateClusterM" +
-      "etadata\022\022\n\ncluster_id\030\001 \001(\t\"\353\002\n\024UpdateCl" +
-      "usterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.pro" +
-      "tobuf.FieldMask\022\014\n\004name\030\003 \001(\t\022\023\n\013descrip" +
-      "tion\030\004 \001(\t\022J\n\006labels\030\005 \003(\0132:.yandex.clou" +
-      "d.ytsaurus.v1.UpdateClusterRequest.Label" +
-      "sEntry\022\021\n\tsubnet_id\030\006 \001(\t\022\032\n\022security_gr" +
-      "oup_ids\030\007 \003(\t\0223\n\004spec\030\010 \001(\0132%.yandex.clo" +
-      "ud.ytsaurus.v1.ClusterSpec\032-\n\013LabelsEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025Upd" +
-      "ateClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"8" +
-      "\n\024DeleteClusterRequest\022 \n\ncluster_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteClusterMetadat" +
-      "a\022\022\n\ncluster_id\030\001 \001(\t\"7\n\023StartClusterReq" +
-      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*" +
-      "\n\024StartClusterMetadata\022\022\n\ncluster_id\030\001 \001" +
-      "(\t\"6\n\022StopClusterRequest\022 \n\ncluster_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopClusterMetadat" +
-      "a\022\022\n\ncluster_id\030\001 \001(\t2\203\t\n\016ClusterService" +
-      "\022\201\001\n\003Get\022+.yandex.cloud.ytsaurus.v1.GetC" +
-      "lusterRequest\032!.yandex.cloud.ytsaurus.v1" +
-      ".Cluster\"*\202\323\344\223\002$\022\"/ytsaurus/v1/clusters/" +
-      "{cluster_id}\022\204\001\n\004List\022-.yandex.cloud.yts" +
-      "aurus.v1.ListClustersRequest\032..yandex.cl" +
-      "oud.ytsaurus.v1.ListClustersResponse\"\035\202\323" +
-      "\344\223\002\027\022\025/ytsaurus/v1/clusters\022\241\001\n\006Create\022." +
-      ".yandex.cloud.ytsaurus.v1.CreateClusterR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"D\202\323\344\223\002\032\"\025/ytsaurus/v1/clusters:\001*\262\322* \n" +
-      "\025CreateClusterMetadata\022\007Cluster\022\241\001\n\006Upda" +
-      "te\022..yandex.cloud.ytsaurus.v1.UpdateClus" +
-      "terRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"D\202\323\344\223\002\0322\025/ytsaurus/v1/clusters:\001*\262" +
-      "\322* \n\025UpdateClusterMetadata\022\007Cluster\022\271\001\n\006" +
-      "Delete\022..yandex.cloud.ytsaurus.v1.Delete" +
-      "ClusterRequest\032!.yandex.cloud.operation." +
-      "Operation\"\\\202\323\344\223\002$*\"/ytsaurus/v1/clusters" +
-      "/{cluster_id}\262\322*.\n\025DeleteClusterMetadata" +
-      "\022\025google.protobuf.Empty\022\261\001\n\005Start\022-.yand" +
-      "ex.cloud.ytsaurus.v1.StartClusterRequest" +
-      "\032!.yandex.cloud.operation.Operation\"V\202\323\344" +
-      "\223\002-\"(/ytsaurus/v1/clusters/{cluster_id}:" +
-      "start:\001*\262\322*\037\n\024StartClusterMetadata\022\007Clus" +
-      "ter\022\255\001\n\004Stop\022,.yandex.cloud.ytsaurus.v1." +
-      "StopClusterRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"T\202\323\344\223\002,\"\'/ytsaurus/v1/clus" +
-      "ters/{cluster_id}:stop:\001*\262\322*\036\n\023StopClust" +
-      "erMetadata\022\007ClusterBe\n\034yandex.cloud.api." +
-      "ytsaurus.v1ZEgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/ytsaurus/v1;ytsaur" +
-      "usb\006proto3"
+      ".v1.ClusterSpec\022C\n\025cidr_blocks_whitelist" +
+      "\030\t \001(\0132$.yandex.cloud.ytsaurus.v1.CidrBl" +
+      "ocks\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\"+\n\025CreateClusterMetadata\022\022\n\n" +
+      "cluster_id\030\001 \001(\t\"\260\003\n\024UpdateClusterReques" +
+      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013u" +
+      "pdate_mask\030\002 \001(\0132\032.google.protobuf.Field" +
+      "Mask\022\014\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022" +
+      "J\n\006labels\030\005 \003(\0132:.yandex.cloud.ytsaurus." +
+      "v1.UpdateClusterRequest.LabelsEntry\022\021\n\ts" +
+      "ubnet_id\030\006 \001(\t\022\032\n\022security_group_ids\030\007 \003" +
+      "(\t\0223\n\004spec\030\010 \001(\0132%.yandex.cloud.ytsaurus" +
+      ".v1.ClusterSpec\022C\n\025cidr_blocks_whitelist" +
+      "\030\t \001(\0132$.yandex.cloud.ytsaurus.v1.CidrBl" +
+      "ocks\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMetadata\022\022\n\n" +
+      "cluster_id\030\001 \001(\t\"8\n\024DeleteClusterRequest" +
+      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025De" +
+      "leteClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"" +
+      "7\n\023StartClusterRequest\022 \n\ncluster_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterMetadata" +
+      "\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopClusterReque" +
+      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023" +
+      "StopClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t2" +
+      "\203\t\n\016ClusterService\022\201\001\n\003Get\022+.yandex.clou" +
+      "d.ytsaurus.v1.GetClusterRequest\032!.yandex" +
+      ".cloud.ytsaurus.v1.Cluster\"*\202\323\344\223\002$\022\"/yts" +
+      "aurus/v1/clusters/{cluster_id}\022\204\001\n\004List\022" +
+      "-.yandex.cloud.ytsaurus.v1.ListClustersR" +
+      "equest\032..yandex.cloud.ytsaurus.v1.ListCl" +
+      "ustersResponse\"\035\202\323\344\223\002\027\022\025/ytsaurus/v1/clu" +
+      "sters\022\241\001\n\006Create\022..yandex.cloud.ytsaurus" +
+      ".v1.CreateClusterRequest\032!.yandex.cloud." +
+      "operation.Operation\"D\202\323\344\223\002\032\"\025/ytsaurus/v" +
+      "1/clusters:\001*\262\322* \n\025CreateClusterMetadata" +
+      "\022\007Cluster\022\241\001\n\006Update\022..yandex.cloud.ytsa" +
+      "urus.v1.UpdateClusterRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"D\202\323\344\223\002\0322\025/ytsaur" +
+      "us/v1/clusters:\001*\262\322* \n\025UpdateClusterMeta" +
+      "data\022\007Cluster\022\271\001\n\006Delete\022..yandex.cloud." +
+      "ytsaurus.v1.DeleteClusterRequest\032!.yande" +
+      "x.cloud.operation.Operation\"\\\202\323\344\223\002$*\"/yt" +
+      "saurus/v1/clusters/{cluster_id}\262\322*.\n\025Del" +
+      "eteClusterMetadata\022\025google.protobuf.Empt" +
+      "y\022\261\001\n\005Start\022-.yandex.cloud.ytsaurus.v1.S" +
+      "tartClusterRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"V\202\323\344\223\002-\"(/ytsaurus/v1/clus" +
+      "ters/{cluster_id}:start:\001*\262\322*\037\n\024StartClu" +
+      "sterMetadata\022\007Cluster\022\255\001\n\004Stop\022,.yandex." +
+      "cloud.ytsaurus.v1.StopClusterRequest\032!.y" +
+      "andex.cloud.operation.Operation\"T\202\323\344\223\002,\"" +
+      "\'/ytsaurus/v1/clusters/{cluster_id}:stop" +
+      ":\001*\262\322*\036\n\023StopClusterMetadata\022\007ClusterBe\n" +
+      "\034yandex.cloud.api.ytsaurus.v1ZEgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "ytsaurus/v1;ytsaurusb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12686,7 +13215,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_ytsaurus_v1_CreateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ytsaurus_v1_CreateClusterRequest_descriptor,
-        new java.lang.String[] { "FolderId", "ZoneId", "Name", "Description", "Labels", "SubnetId", "SecurityGroupIds", "Spec", });
+        new java.lang.String[] { "FolderId", "ZoneId", "Name", "Description", "Labels", "SubnetId", "SecurityGroupIds", "Spec", "CidrBlocksWhitelist", });
     internal_static_yandex_cloud_ytsaurus_v1_CreateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_ytsaurus_v1_CreateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ytsaurus_v1_CreateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -12704,7 +13233,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_ytsaurus_v1_UpdateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ytsaurus_v1_UpdateClusterRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UpdateMask", "Name", "Description", "Labels", "SubnetId", "SecurityGroupIds", "Spec", });
+        new java.lang.String[] { "ClusterId", "UpdateMask", "Name", "Description", "Labels", "SubnetId", "SecurityGroupIds", "Spec", "CidrBlocksWhitelist", });
     internal_static_yandex_cloud_ytsaurus_v1_UpdateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_ytsaurus_v1_UpdateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ytsaurus_v1_UpdateClusterRequest_LabelsEntry_fieldAccessorTable = new

@@ -101,21 +101,38 @@ public final class EndpointOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * DataTransfer Endpoint Settings block
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
      * @return Whether the settings field is set.
      */
     boolean hasSettings();
     /**
+     * <pre>
+     * DataTransfer Endpoint Settings block
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
      * @return The settings.
      */
     yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings getSettings();
     /**
+     * <pre>
+     * DataTransfer Endpoint Settings block
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
      */
     yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettingsOrBuilder getSettingsOrBuilder();
   }
   /**
+   * <pre>
+   * Data Transfer endpoint. For more information, see [the official
+   * documentation](https://yandex.cloud/docs/data-transfer/)
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.Endpoint}
    */
   public static final class Endpoint extends
@@ -495,6 +512,10 @@ public final class EndpointOuterClass {
     public static final int SETTINGS_FIELD_NUMBER = 52;
     private yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings settings_;
     /**
+     * <pre>
+     * DataTransfer Endpoint Settings block
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
      * @return Whether the settings field is set.
      */
@@ -503,6 +524,10 @@ public final class EndpointOuterClass {
       return settings_ != null;
     }
     /**
+     * <pre>
+     * DataTransfer Endpoint Settings block
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
      * @return The settings.
      */
@@ -511,6 +536,10 @@ public final class EndpointOuterClass {
       return settings_ == null ? yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings.getDefaultInstance() : settings_;
     }
     /**
+     * <pre>
+     * DataTransfer Endpoint Settings block
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
      */
     @java.lang.Override
@@ -741,6 +770,11 @@ public final class EndpointOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Data Transfer endpoint. For more information, see [the official
+     * documentation](https://yandex.cloud/docs/data-transfer/)
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.Endpoint}
      */
     public static final class Builder extends
@@ -1391,6 +1425,10 @@ public final class EndpointOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings, yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings.Builder, yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettingsOrBuilder> settingsBuilder_;
       /**
+       * <pre>
+       * DataTransfer Endpoint Settings block
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
        * @return Whether the settings field is set.
        */
@@ -1398,6 +1436,10 @@ public final class EndpointOuterClass {
         return settingsBuilder_ != null || settings_ != null;
       }
       /**
+       * <pre>
+       * DataTransfer Endpoint Settings block
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
        * @return The settings.
        */
@@ -1409,6 +1451,10 @@ public final class EndpointOuterClass {
         }
       }
       /**
+       * <pre>
+       * DataTransfer Endpoint Settings block
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
        */
       public Builder setSettings(yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings value) {
@@ -1425,6 +1471,10 @@ public final class EndpointOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * DataTransfer Endpoint Settings block
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
        */
       public Builder setSettings(
@@ -1439,6 +1489,10 @@ public final class EndpointOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * DataTransfer Endpoint Settings block
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
        */
       public Builder mergeSettings(yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings value) {
@@ -1457,6 +1511,10 @@ public final class EndpointOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * DataTransfer Endpoint Settings block
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
        */
       public Builder clearSettings() {
@@ -1471,6 +1529,10 @@ public final class EndpointOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * DataTransfer Endpoint Settings block
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
        */
       public yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettings.Builder getSettingsBuilder() {
@@ -1479,6 +1541,10 @@ public final class EndpointOuterClass {
         return getSettingsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * DataTransfer Endpoint Settings block
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
        */
       public yandex.cloud.api.datatransfer.v1.EndpointOuterClass.EndpointSettingsOrBuilder getSettingsOrBuilder() {
@@ -1490,6 +1556,10 @@ public final class EndpointOuterClass {
         }
       }
       /**
+       * <pre>
+       * DataTransfer Endpoint Settings block
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.EndpointSettings settings = 52;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

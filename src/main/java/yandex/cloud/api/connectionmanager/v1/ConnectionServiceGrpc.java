@@ -288,7 +288,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * Returns connection.
+     * Returns the specified connection.
      * </pre>
      */
     public void get(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.GetConnectionRequest request,
@@ -312,7 +312,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * List connections in specified folder.
+     * Retrieves the list of connections in the specified folder.
      * </pre>
      */
     public void list(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListConnectionRequest request,
@@ -322,7 +322,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * Creates connection.
+     * Creates a connection.
      * </pre>
      */
     public void create(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.CreateConnectionRequest request,
@@ -332,7 +332,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * Updates specified connection.
+     * Updates the specified connection.
      * </pre>
      */
     public void update(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.UpdateConnectionRequest request,
@@ -342,7 +342,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * Delete specified connection.
+     * Deletes the specified connection.
      * </pre>
      */
     public void delete(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.DeleteConnectionRequest request,
@@ -352,7 +352,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Operation resources for the specified connection.
+     * Lists operations for the specified connection.
      * </pre>
      */
     public void listOperations(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListOperationsRequest request,
@@ -434,7 +434,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * Returns connection.
+     * Returns the specified connection.
      * </pre>
      */
     public void get(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.GetConnectionRequest request,
@@ -460,7 +460,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * List connections in specified folder.
+     * Retrieves the list of connections in the specified folder.
      * </pre>
      */
     public void list(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListConnectionRequest request,
@@ -471,7 +471,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * Creates connection.
+     * Creates a connection.
      * </pre>
      */
     public void create(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.CreateConnectionRequest request,
@@ -482,7 +482,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * Updates specified connection.
+     * Updates the specified connection.
      * </pre>
      */
     public void update(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.UpdateConnectionRequest request,
@@ -493,7 +493,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * Delete specified connection.
+     * Deletes the specified connection.
      * </pre>
      */
     public void delete(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.DeleteConnectionRequest request,
@@ -504,7 +504,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Operation resources for the specified connection.
+     * Lists operations for the specified connection.
      * </pre>
      */
     public void listOperations(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListOperationsRequest request,
@@ -533,7 +533,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * Returns connection.
+     * Returns the specified connection.
      * </pre>
      */
     public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection get(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.GetConnectionRequest request) {
@@ -557,7 +557,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * List connections in specified folder.
+     * Retrieves the list of connections in the specified folder.
      * </pre>
      */
     public yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListConnectionResponse list(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListConnectionRequest request) {
@@ -567,7 +567,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * Creates connection.
+     * Creates a connection.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.CreateConnectionRequest request) {
@@ -577,7 +577,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * Updates specified connection.
+     * Updates the specified connection.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.UpdateConnectionRequest request) {
@@ -587,7 +587,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * Delete specified connection.
+     * Deletes the specified connection.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.DeleteConnectionRequest request) {
@@ -597,7 +597,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Operation resources for the specified connection.
+     * Lists operations for the specified connection.
      * </pre>
      */
     public yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListOperationsResponse listOperations(yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListOperationsRequest request) {
@@ -625,7 +625,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * Returns connection.
+     * Returns the specified connection.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection> get(
@@ -651,7 +651,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * List connections in specified folder.
+     * Retrieves the list of connections in the specified folder.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListConnectionResponse> list(
@@ -662,7 +662,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * Creates connection.
+     * Creates a connection.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
@@ -673,7 +673,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * Updates specified connection.
+     * Updates the specified connection.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
@@ -684,7 +684,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * Delete specified connection.
+     * Deletes the specified connection.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
@@ -695,7 +695,7 @@ public final class ConnectionServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Operation resources for the specified connection.
+     * Lists operations for the specified connection.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.ListOperationsResponse> listOperations(

@@ -10438,6 +10438,1418 @@ public final class DnsZoneServiceOuterClass {
 
   }
 
+  public interface MoveDnsZoneRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.dns.v1.MoveDnsZoneRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the DNS zone to move.
+     * To get the DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
+     * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "20"];</code>
+     * @return The dnsZoneId.
+     */
+    java.lang.String getDnsZoneId();
+    /**
+     * <pre>
+     * ID of the DNS zone to move.
+     * To get the DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
+     * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "20"];</code>
+     * @return The bytes for dnsZoneId.
+     */
+    com.google.protobuf.ByteString
+        getDnsZoneIdBytes();
+
+    /**
+     * <pre>
+     * ID of the folder to move the zone to.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The destinationFolderId.
+     */
+    java.lang.String getDestinationFolderId();
+    /**
+     * <pre>
+     * ID of the folder to move the zone to.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for destinationFolderId.
+     */
+    com.google.protobuf.ByteString
+        getDestinationFolderIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.dns.v1.MoveDnsZoneRequest}
+   */
+  public static final class MoveDnsZoneRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.MoveDnsZoneRequest)
+      MoveDnsZoneRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MoveDnsZoneRequest.newBuilder() to construct.
+    private MoveDnsZoneRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MoveDnsZoneRequest() {
+      dnsZoneId_ = "";
+      destinationFolderId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MoveDnsZoneRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MoveDnsZoneRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              dnsZoneId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              destinationFolderId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_MoveDnsZoneRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_MoveDnsZoneRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest.class, yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest.Builder.class);
+    }
+
+    public static final int DNS_ZONE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object dnsZoneId_;
+    /**
+     * <pre>
+     * ID of the DNS zone to move.
+     * To get the DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
+     * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "20"];</code>
+     * @return The dnsZoneId.
+     */
+    @java.lang.Override
+    public java.lang.String getDnsZoneId() {
+      java.lang.Object ref = dnsZoneId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dnsZoneId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the DNS zone to move.
+     * To get the DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
+     * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "20"];</code>
+     * @return The bytes for dnsZoneId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDnsZoneIdBytes() {
+      java.lang.Object ref = dnsZoneId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dnsZoneId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESTINATION_FOLDER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object destinationFolderId_;
+    /**
+     * <pre>
+     * ID of the folder to move the zone to.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The destinationFolderId.
+     */
+    @java.lang.Override
+    public java.lang.String getDestinationFolderId() {
+      java.lang.Object ref = destinationFolderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destinationFolderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the folder to move the zone to.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for destinationFolderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDestinationFolderIdBytes() {
+      java.lang.Object ref = destinationFolderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destinationFolderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dnsZoneId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationFolderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, destinationFolderId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dnsZoneId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationFolderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, destinationFolderId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest) obj;
+
+      if (!getDnsZoneId()
+          .equals(other.getDnsZoneId())) return false;
+      if (!getDestinationFolderId()
+          .equals(other.getDestinationFolderId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DNS_ZONE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDnsZoneId().hashCode();
+      hash = (37 * hash) + DESTINATION_FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDestinationFolderId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.dns.v1.MoveDnsZoneRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.dns.v1.MoveDnsZoneRequest)
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_MoveDnsZoneRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_MoveDnsZoneRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest.class, yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        dnsZoneId_ = "";
+
+        destinationFolderId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_MoveDnsZoneRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest build() {
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest buildPartial() {
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest result = new yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest(this);
+        result.dnsZoneId_ = dnsZoneId_;
+        result.destinationFolderId_ = destinationFolderId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest) {
+          return mergeFrom((yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest other) {
+        if (other == yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest.getDefaultInstance()) return this;
+        if (!other.getDnsZoneId().isEmpty()) {
+          dnsZoneId_ = other.dnsZoneId_;
+          onChanged();
+        }
+        if (!other.getDestinationFolderId().isEmpty()) {
+          destinationFolderId_ = other.destinationFolderId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object dnsZoneId_ = "";
+      /**
+       * <pre>
+       * ID of the DNS zone to move.
+       * To get the DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
+       * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "20"];</code>
+       * @return The dnsZoneId.
+       */
+      public java.lang.String getDnsZoneId() {
+        java.lang.Object ref = dnsZoneId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dnsZoneId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the DNS zone to move.
+       * To get the DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
+       * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "20"];</code>
+       * @return The bytes for dnsZoneId.
+       */
+      public com.google.protobuf.ByteString
+          getDnsZoneIdBytes() {
+        java.lang.Object ref = dnsZoneId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dnsZoneId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the DNS zone to move.
+       * To get the DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
+       * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "20"];</code>
+       * @param value The dnsZoneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDnsZoneId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        dnsZoneId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the DNS zone to move.
+       * To get the DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
+       * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "20"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDnsZoneId() {
+        
+        dnsZoneId_ = getDefaultInstance().getDnsZoneId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the DNS zone to move.
+       * To get the DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
+       * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "20"];</code>
+       * @param value The bytes for dnsZoneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDnsZoneIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        dnsZoneId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object destinationFolderId_ = "";
+      /**
+       * <pre>
+       * ID of the folder to move the zone to.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The destinationFolderId.
+       */
+      public java.lang.String getDestinationFolderId() {
+        java.lang.Object ref = destinationFolderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          destinationFolderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder to move the zone to.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for destinationFolderId.
+       */
+      public com.google.protobuf.ByteString
+          getDestinationFolderIdBytes() {
+        java.lang.Object ref = destinationFolderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          destinationFolderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder to move the zone to.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The destinationFolderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        destinationFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder to move the zone to.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDestinationFolderId() {
+        
+        destinationFolderId_ = getDefaultInstance().getDestinationFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder to move the zone to.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for destinationFolderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        destinationFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.dns.v1.MoveDnsZoneRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.dns.v1.MoveDnsZoneRequest)
+    private static final yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest();
+    }
+
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MoveDnsZoneRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MoveDnsZoneRequest>() {
+      @java.lang.Override
+      public MoveDnsZoneRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MoveDnsZoneRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MoveDnsZoneRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MoveDnsZoneRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MoveDnsZoneMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.dns.v1.MoveDnsZoneMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the DNS zone that is being moved.
+     * </pre>
+     *
+     * <code>string dns_zone_id = 1;</code>
+     * @return The dnsZoneId.
+     */
+    java.lang.String getDnsZoneId();
+    /**
+     * <pre>
+     * ID of the DNS zone that is being moved.
+     * </pre>
+     *
+     * <code>string dns_zone_id = 1;</code>
+     * @return The bytes for dnsZoneId.
+     */
+    com.google.protobuf.ByteString
+        getDnsZoneIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.dns.v1.MoveDnsZoneMetadata}
+   */
+  public static final class MoveDnsZoneMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.dns.v1.MoveDnsZoneMetadata)
+      MoveDnsZoneMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MoveDnsZoneMetadata.newBuilder() to construct.
+    private MoveDnsZoneMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MoveDnsZoneMetadata() {
+      dnsZoneId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MoveDnsZoneMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MoveDnsZoneMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              dnsZoneId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_MoveDnsZoneMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_MoveDnsZoneMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata.class, yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata.Builder.class);
+    }
+
+    public static final int DNS_ZONE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object dnsZoneId_;
+    /**
+     * <pre>
+     * ID of the DNS zone that is being moved.
+     * </pre>
+     *
+     * <code>string dns_zone_id = 1;</code>
+     * @return The dnsZoneId.
+     */
+    @java.lang.Override
+    public java.lang.String getDnsZoneId() {
+      java.lang.Object ref = dnsZoneId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dnsZoneId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the DNS zone that is being moved.
+     * </pre>
+     *
+     * <code>string dns_zone_id = 1;</code>
+     * @return The bytes for dnsZoneId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDnsZoneIdBytes() {
+      java.lang.Object ref = dnsZoneId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dnsZoneId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dnsZoneId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dnsZoneId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dnsZoneId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata other = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata) obj;
+
+      if (!getDnsZoneId()
+          .equals(other.getDnsZoneId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DNS_ZONE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDnsZoneId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.dns.v1.MoveDnsZoneMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.dns.v1.MoveDnsZoneMetadata)
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_MoveDnsZoneMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_MoveDnsZoneMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata.class, yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        dnsZoneId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.internal_static_yandex_cloud_dns_v1_MoveDnsZoneMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata build() {
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata buildPartial() {
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata result = new yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata(this);
+        result.dnsZoneId_ = dnsZoneId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata) {
+          return mergeFrom((yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata other) {
+        if (other == yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata.getDefaultInstance()) return this;
+        if (!other.getDnsZoneId().isEmpty()) {
+          dnsZoneId_ = other.dnsZoneId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object dnsZoneId_ = "";
+      /**
+       * <pre>
+       * ID of the DNS zone that is being moved.
+       * </pre>
+       *
+       * <code>string dns_zone_id = 1;</code>
+       * @return The dnsZoneId.
+       */
+      public java.lang.String getDnsZoneId() {
+        java.lang.Object ref = dnsZoneId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dnsZoneId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the DNS zone that is being moved.
+       * </pre>
+       *
+       * <code>string dns_zone_id = 1;</code>
+       * @return The bytes for dnsZoneId.
+       */
+      public com.google.protobuf.ByteString
+          getDnsZoneIdBytes() {
+        java.lang.Object ref = dnsZoneId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dnsZoneId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the DNS zone that is being moved.
+       * </pre>
+       *
+       * <code>string dns_zone_id = 1;</code>
+       * @param value The dnsZoneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDnsZoneId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        dnsZoneId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the DNS zone that is being moved.
+       * </pre>
+       *
+       * <code>string dns_zone_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDnsZoneId() {
+        
+        dnsZoneId_ = getDefaultInstance().getDnsZoneId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the DNS zone that is being moved.
+       * </pre>
+       *
+       * <code>string dns_zone_id = 1;</code>
+       * @param value The bytes for dnsZoneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDnsZoneIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        dnsZoneId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.dns.v1.MoveDnsZoneMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.dns.v1.MoveDnsZoneMetadata)
+    private static final yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata();
+    }
+
+    public static yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MoveDnsZoneMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<MoveDnsZoneMetadata>() {
+      @java.lang.Override
+      public MoveDnsZoneMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MoveDnsZoneMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MoveDnsZoneMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MoveDnsZoneMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.MoveDnsZoneMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface DeleteDnsZoneRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.dns.v1.DeleteDnsZoneRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -23125,6 +24537,16 @@ public final class DnsZoneServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_dns_v1_UpdateDnsZoneMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_dns_v1_MoveDnsZoneRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_dns_v1_MoveDnsZoneRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_dns_v1_MoveDnsZoneMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_dns_v1_MoveDnsZoneMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_dns_v1_DeleteDnsZoneRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -23242,106 +24664,113 @@ public final class DnsZoneServiceOuterClass {
       "ublicVisibility\022\033\n\023deletion_protection\030\010" +
       " \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
       "e\030\002 \001(\t:\0028\001\",\n\025UpdateDnsZoneMetadata\022\023\n\013" +
-      "dns_zone_id\030\001 \001(\t\"3\n\024DeleteDnsZoneReques" +
-      "t\022\033\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\",\n\025Delete" +
-      "DnsZoneMetadata\022\023\n\013dns_zone_id\030\001 \001(\t\"r\n\032" +
-      "GetDnsZoneRecordSetRequest\022\033\n\013dns_zone_i" +
-      "d\030\001 \001(\tB\006\212\3101\00220\022\033\n\004name\030\002 \001(\tB\r\350\3071\001\212\3101\005<" +
-      "=255\022\032\n\004type\030\003 \001(\tB\014\350\3071\001\212\3101\004<=10\"\226\001\n\034Lis" +
-      "tDnsZoneRecordSetsRequest\022\033\n\013dns_zone_id" +
-      "\030\001 \001(\tB\006\212\3101\00220\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<" +
-      "=1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=1000\022\032\n" +
-      "\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"m\n\035ListDnsZone" +
-      "RecordSetsResponse\0223\n\013record_sets\030\001 \003(\0132" +
-      "\036.yandex.cloud.dns.v1.RecordSet\022\027\n\017next_" +
-      "page_token\030\002 \001(\t\"\264\001\n\027UpdateRecordSetsReq" +
-      "uest\022\033\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022=\n\tdel" +
+      "dns_zone_id\030\001 \001(\t\"b\n\022MoveDnsZoneRequest\022" +
+      "\037\n\013dns_zone_id\030\001 \001(\tB\n\350\3071\001\212\3101\00220\022+\n\025dest" +
+      "ination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n" +
+      "\023MoveDnsZoneMetadata\022\023\n\013dns_zone_id\030\001 \001(" +
+      "\t\"3\n\024DeleteDnsZoneRequest\022\033\n\013dns_zone_id" +
+      "\030\001 \001(\tB\006\212\3101\00220\",\n\025DeleteDnsZoneMetadata\022" +
+      "\023\n\013dns_zone_id\030\001 \001(\t\"r\n\032GetDnsZoneRecord" +
+      "SetRequest\022\033\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022" +
+      "\033\n\004name\030\002 \001(\tB\r\350\3071\001\212\3101\005<=255\022\032\n\004type\030\003 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=10\"\226\001\n\034ListDnsZoneRecordSe" +
+      "tsRequest\022\033\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022\035" +
+      "\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\036\n\npage_to" +
+      "ken\030\003 \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212" +
+      "\3101\006<=1000\"m\n\035ListDnsZoneRecordSetsRespon" +
+      "se\0223\n\013record_sets\030\001 \003(\0132\036.yandex.cloud.d" +
+      "ns.v1.RecordSet\022\027\n\017next_page_token\030\002 \001(\t" +
+      "\"\264\001\n\027UpdateRecordSetsRequest\022\033\n\013dns_zone" +
+      "_id\030\001 \001(\tB\006\212\3101\00220\022=\n\tdeletions\030\002 \003(\0132\036.y" +
+      "andex.cloud.dns.v1.RecordSetB\n\202\3101\006<=1000" +
+      "\022=\n\tadditions\030\003 \003(\0132\036.yandex.cloud.dns.v" +
+      "1.RecordSetB\n\202\3101\006<=1000\"\032\n\030UpdateRecordS" +
+      "etsMetadata\"\363\001\n\027UpsertRecordSetsRequest\022" +
+      "\033\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022=\n\tdeletion" +
+      "s\030\002 \003(\0132\036.yandex.cloud.dns.v1.RecordSetB" +
+      "\n\202\3101\006<=1000\022@\n\014replacements\030\003 \003(\0132\036.yand" +
+      "ex.cloud.dns.v1.RecordSetB\n\202\3101\006<=1000\022:\n" +
+      "\006merges\030\004 \003(\0132\036.yandex.cloud.dns.v1.Reco" +
+      "rdSetB\n\202\3101\006<=1000\"\032\n\030UpsertRecordSetsMet" +
+      "adata\"u\n\rRecordSetDiff\0221\n\tadditions\030\001 \003(" +
+      "\0132\036.yandex.cloud.dns.v1.RecordSet\0221\n\tdel" +
       "etions\030\002 \003(\0132\036.yandex.cloud.dns.v1.Recor" +
-      "dSetB\n\202\3101\006<=1000\022=\n\tadditions\030\003 \003(\0132\036.ya" +
-      "ndex.cloud.dns.v1.RecordSetB\n\202\3101\006<=1000\"" +
-      "\032\n\030UpdateRecordSetsMetadata\"\363\001\n\027UpsertRe" +
-      "cordSetsRequest\022\033\n\013dns_zone_id\030\001 \001(\tB\006\212\310" +
-      "1\00220\022=\n\tdeletions\030\002 \003(\0132\036.yandex.cloud.d" +
-      "ns.v1.RecordSetB\n\202\3101\006<=1000\022@\n\014replaceme" +
-      "nts\030\003 \003(\0132\036.yandex.cloud.dns.v1.RecordSe" +
-      "tB\n\202\3101\006<=1000\022:\n\006merges\030\004 \003(\0132\036.yandex.c" +
-      "loud.dns.v1.RecordSetB\n\202\3101\006<=1000\"\032\n\030Ups" +
-      "ertRecordSetsMetadata\"u\n\rRecordSetDiff\0221" +
-      "\n\tadditions\030\001 \003(\0132\036.yandex.cloud.dns.v1." +
-      "RecordSet\0221\n\tdeletions\030\002 \003(\0132\036.yandex.cl" +
-      "oud.dns.v1.RecordSet\"\226\001\n\034ListDnsZoneOper" +
-      "ationsRequest\022\033\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\002" +
-      "20\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npag" +
-      "e_token\030\003 \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\004 \001(" +
-      "\tB\n\212\3101\006<=1000\"o\n\035ListDnsZoneOperationsRe" +
-      "sponse\0225\n\noperations\030\001 \003(\0132!.yandex.clou" +
-      "d.operation.Operation\022\027\n\017next_page_token" +
-      "\030\002 \001(\t2\310\023\n\016DnsZoneService\022p\n\003Get\022&.yande" +
-      "x.cloud.dns.v1.GetDnsZoneRequest\032\034.yande" +
-      "x.cloud.dns.v1.DnsZone\"#\202\323\344\223\002\035\022\033/dns/v1/" +
-      "zones/{dns_zone_id}\022r\n\004List\022(.yandex.clo" +
-      "ud.dns.v1.ListDnsZonesRequest\032).yandex.c" +
-      "loud.dns.v1.ListDnsZonesResponse\"\025\202\323\344\223\002\017" +
-      "\022\r/dns/v1/zones\022\224\001\n\006Create\022).yandex.clou" +
-      "d.dns.v1.CreateDnsZoneRequest\032!.yandex.c" +
-      "loud.operation.Operation\"<\202\323\344\223\002\022\"\r/dns/v" +
-      "1/zones:\001*\262\322* \n\025CreateDnsZoneMetadata\022\007D" +
-      "nsZone\022\242\001\n\006Update\022).yandex.cloud.dns.v1." +
-      "UpdateDnsZoneRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"J\202\323\344\223\002 2\033/dns/v1/zones/{" +
-      "dns_zone_id}:\001*\262\322* \n\025UpdateDnsZoneMetada" +
-      "ta\022\007DnsZone\022\255\001\n\006Delete\022).yandex.cloud.dn" +
-      "s.v1.DeleteDnsZoneRequest\032!.yandex.cloud" +
-      ".operation.Operation\"U\202\323\344\223\002\035*\033/dns/v1/zo" +
-      "nes/{dns_zone_id}\262\322*.\n\025DeleteDnsZoneMeta" +
-      "data\022\025google.protobuf.Empty\022\221\001\n\014GetRecor" +
-      "dSet\022/.yandex.cloud.dns.v1.GetDnsZoneRec" +
-      "ordSetRequest\032\036.yandex.cloud.dns.v1.Reco" +
-      "rdSet\"0\202\323\344\223\002*\022(/dns/v1/zones/{dns_zone_i" +
-      "d}:getRecordSet\022\253\001\n\016ListRecordSets\0221.yan" +
-      "dex.cloud.dns.v1.ListDnsZoneRecordSetsRe" +
-      "quest\0322.yandex.cloud.dns.v1.ListDnsZoneR" +
-      "ecordSetsResponse\"2\202\323\344\223\002,\022*/dns/v1/zones" +
-      "/{dns_zone_id}:listRecordSets\022\311\001\n\020Update" +
-      "RecordSets\022,.yandex.cloud.dns.v1.UpdateR" +
-      "ecordSetsRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"d\202\323\344\223\0021\",/dns/v1/zones/{dns_" +
-      "zone_id}:updateRecordSets:\001*\262\322*)\n\030Update" +
-      "RecordSetsMetadata\022\rRecordSetDiff\022\311\001\n\020Up" +
-      "sertRecordSets\022,.yandex.cloud.dns.v1.Ups" +
-      "ertRecordSetsRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"d\202\323\344\223\0021\",/dns/v1/zones/{" +
-      "dns_zone_id}:upsertRecordSets:\001*\262\322*)\n\030Up" +
-      "sertRecordSetsMetadata\022\rRecordSetDiff\022\247\001" +
-      "\n\016ListOperations\0221.yandex.cloud.dns.v1.L" +
-      "istDnsZoneOperationsRequest\0322.yandex.clo" +
-      "ud.dns.v1.ListDnsZoneOperationsResponse\"" +
-      ".\202\323\344\223\002(\022&/dns/v1/zones/{dns_zone_id}/ope" +
-      "rations\022\255\001\n\022ListAccessBindings\022..yandex." +
-      "cloud.access.ListAccessBindingsRequest\032/" +
-      ".yandex.cloud.access.ListAccessBindingsR" +
-      "esponse\"6\202\323\344\223\0020\022./dns/v1/zones/{resource" +
-      "_id}:listAccessBindings\022\334\001\n\021SetAccessBin" +
-      "dings\022-.yandex.cloud.access.SetAccessBin" +
-      "dingsRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"u\202\323\344\223\0022\"-/dns/v1/zones/{resource" +
-      "_id}:setAccessBindings:\001*\262\322*9\n access.Se" +
-      "tAccessBindingsMetadata\022\025google.protobuf" +
-      ".Empty\022\350\001\n\024UpdateAccessBindings\0220.yandex" +
-      ".cloud.access.UpdateAccessBindingsReques" +
-      "t\032!.yandex.cloud.operation.Operation\"{\202\323" +
-      "\344\223\0025\"0/dns/v1/zones/{resource_id}:update" +
-      "AccessBindings:\001*\262\322*<\n#access.UpdateAcce" +
-      "ssBindingsMetadata\022\025google.protobuf.Empt" +
-      "y\022\345\001\n\025UpdatePrivateNetworks\0228.yandex.clo" +
-      "ud.dns.v1.UpdateDnsZonePrivateNetworksRe" +
+      "dSet\"\226\001\n\034ListDnsZoneOperationsRequest\022\033\n" +
+      "\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022\035\n\tpage_size\030" +
+      "\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212" +
+      "\3101\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"o\n" +
+      "\035ListDnsZoneOperationsResponse\0225\n\noperat" +
+      "ions\030\001 \003(\0132!.yandex.cloud.operation.Oper" +
+      "ation\022\027\n\017next_page_token\030\002 \001(\t2\354\024\n\016DnsZo" +
+      "neService\022p\n\003Get\022&.yandex.cloud.dns.v1.G" +
+      "etDnsZoneRequest\032\034.yandex.cloud.dns.v1.D" +
+      "nsZone\"#\202\323\344\223\002\035\022\033/dns/v1/zones/{dns_zone_" +
+      "id}\022r\n\004List\022(.yandex.cloud.dns.v1.ListDn" +
+      "sZonesRequest\032).yandex.cloud.dns.v1.List" +
+      "DnsZonesResponse\"\025\202\323\344\223\002\017\022\r/dns/v1/zones\022" +
+      "\224\001\n\006Create\022).yandex.cloud.dns.v1.CreateD" +
+      "nsZoneRequest\032!.yandex.cloud.operation.O" +
+      "peration\"<\202\323\344\223\002\022\"\r/dns/v1/zones:\001*\262\322* \n\025" +
+      "CreateDnsZoneMetadata\022\007DnsZone\022\242\001\n\006Updat" +
+      "e\022).yandex.cloud.dns.v1.UpdateDnsZoneReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "J\202\323\344\223\002 2\033/dns/v1/zones/{dns_zone_id}:\001*\262" +
+      "\322* \n\025UpdateDnsZoneMetadata\022\007DnsZone\022\241\001\n\004" +
+      "Move\022\'.yandex.cloud.dns.v1.MoveDnsZoneRe" +
       "quest\032!.yandex.cloud.operation.Operation" +
-      "\"o\202\323\344\223\002621/dns/v1/zones/{dns_zone_id}:up" +
-      "datePrivateNetworks:\001*\262\322*/\n$UpdateDnsZon" +
-      "ePrivateNetworksMetadata\022\007DnsZoneBV\n\027yan" +
-      "dex.cloud.api.dns.v1Z;github.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/dns/v1;dn" +
-      "sb\006proto3"
+      "\"M\202\323\344\223\002%\" /dns/v1/zones/{dns_zone_id}:mo" +
+      "ve:\001*\262\322*\036\n\023MoveDnsZoneMetadata\022\007DnsZone\022" +
+      "\255\001\n\006Delete\022).yandex.cloud.dns.v1.DeleteD" +
+      "nsZoneRequest\032!.yandex.cloud.operation.O" +
+      "peration\"U\202\323\344\223\002\035*\033/dns/v1/zones/{dns_zon" +
+      "e_id}\262\322*.\n\025DeleteDnsZoneMetadata\022\025google" +
+      ".protobuf.Empty\022\221\001\n\014GetRecordSet\022/.yande" +
+      "x.cloud.dns.v1.GetDnsZoneRecordSetReques" +
+      "t\032\036.yandex.cloud.dns.v1.RecordSet\"0\202\323\344\223\002" +
+      "*\022(/dns/v1/zones/{dns_zone_id}:getRecord" +
+      "Set\022\253\001\n\016ListRecordSets\0221.yandex.cloud.dn" +
+      "s.v1.ListDnsZoneRecordSetsRequest\0322.yand" +
+      "ex.cloud.dns.v1.ListDnsZoneRecordSetsRes" +
+      "ponse\"2\202\323\344\223\002,\022*/dns/v1/zones/{dns_zone_i" +
+      "d}:listRecordSets\022\311\001\n\020UpdateRecordSets\022," +
+      ".yandex.cloud.dns.v1.UpdateRecordSetsReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "d\202\323\344\223\0021\",/dns/v1/zones/{dns_zone_id}:upd" +
+      "ateRecordSets:\001*\262\322*)\n\030UpdateRecordSetsMe" +
+      "tadata\022\rRecordSetDiff\022\311\001\n\020UpsertRecordSe" +
+      "ts\022,.yandex.cloud.dns.v1.UpsertRecordSet" +
+      "sRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"d\202\323\344\223\0021\",/dns/v1/zones/{dns_zone_id}" +
+      ":upsertRecordSets:\001*\262\322*)\n\030UpsertRecordSe" +
+      "tsMetadata\022\rRecordSetDiff\022\247\001\n\016ListOperat" +
+      "ions\0221.yandex.cloud.dns.v1.ListDnsZoneOp" +
+      "erationsRequest\0322.yandex.cloud.dns.v1.Li" +
+      "stDnsZoneOperationsResponse\".\202\323\344\223\002(\022&/dn" +
+      "s/v1/zones/{dns_zone_id}/operations\022\255\001\n\022" +
+      "ListAccessBindings\022..yandex.cloud.access" +
+      ".ListAccessBindingsRequest\032/.yandex.clou" +
+      "d.access.ListAccessBindingsResponse\"6\202\323\344" +
+      "\223\0020\022./dns/v1/zones/{resource_id}:listAcc" +
+      "essBindings\022\334\001\n\021SetAccessBindings\022-.yand" +
+      "ex.cloud.access.SetAccessBindingsRequest" +
+      "\032!.yandex.cloud.operation.Operation\"u\202\323\344" +
+      "\223\0022\"-/dns/v1/zones/{resource_id}:setAcce" +
+      "ssBindings:\001*\262\322*9\n access.SetAccessBindi" +
+      "ngsMetadata\022\025google.protobuf.Empty\022\350\001\n\024U" +
+      "pdateAccessBindings\0220.yandex.cloud.acces" +
+      "s.UpdateAccessBindingsRequest\032!.yandex.c" +
+      "loud.operation.Operation\"{\202\323\344\223\0025\"0/dns/v" +
+      "1/zones/{resource_id}:updateAccessBindin" +
+      "gs:\001*\262\322*<\n#access.UpdateAccessBindingsMe" +
+      "tadata\022\025google.protobuf.Empty\022\345\001\n\025Update" +
+      "PrivateNetworks\0228.yandex.cloud.dns.v1.Up" +
+      "dateDnsZonePrivateNetworksRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"o\202\323\344\223\002621/d" +
+      "ns/v1/zones/{dns_zone_id}:updatePrivateN" +
+      "etworks:\001*\262\322*/\n$UpdateDnsZonePrivateNetw" +
+      "orksMetadata\022\007DnsZoneBV\n\027yandex.cloud.ap" +
+      "i.dns.v1Z;github.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/dns/v1;dnsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -23420,74 +24849,86 @@ public final class DnsZoneServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_UpdateDnsZoneMetadata_descriptor,
         new java.lang.String[] { "DnsZoneId", });
-    internal_static_yandex_cloud_dns_v1_DeleteDnsZoneRequest_descriptor =
+    internal_static_yandex_cloud_dns_v1_MoveDnsZoneRequest_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_dns_v1_MoveDnsZoneRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_dns_v1_MoveDnsZoneRequest_descriptor,
+        new java.lang.String[] { "DnsZoneId", "DestinationFolderId", });
+    internal_static_yandex_cloud_dns_v1_MoveDnsZoneMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_dns_v1_MoveDnsZoneMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_dns_v1_MoveDnsZoneMetadata_descriptor,
+        new java.lang.String[] { "DnsZoneId", });
+    internal_static_yandex_cloud_dns_v1_DeleteDnsZoneRequest_descriptor =
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_dns_v1_DeleteDnsZoneRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_DeleteDnsZoneRequest_descriptor,
         new java.lang.String[] { "DnsZoneId", });
     internal_static_yandex_cloud_dns_v1_DeleteDnsZoneMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_dns_v1_DeleteDnsZoneMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_DeleteDnsZoneMetadata_descriptor,
         new java.lang.String[] { "DnsZoneId", });
     internal_static_yandex_cloud_dns_v1_GetDnsZoneRecordSetRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_dns_v1_GetDnsZoneRecordSetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_GetDnsZoneRecordSetRequest_descriptor,
         new java.lang.String[] { "DnsZoneId", "Name", "Type", });
     internal_static_yandex_cloud_dns_v1_ListDnsZoneRecordSetsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_dns_v1_ListDnsZoneRecordSetsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_ListDnsZoneRecordSetsRequest_descriptor,
         new java.lang.String[] { "DnsZoneId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_dns_v1_ListDnsZoneRecordSetsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_dns_v1_ListDnsZoneRecordSetsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_ListDnsZoneRecordSetsResponse_descriptor,
         new java.lang.String[] { "RecordSets", "NextPageToken", });
     internal_static_yandex_cloud_dns_v1_UpdateRecordSetsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_dns_v1_UpdateRecordSetsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_UpdateRecordSetsRequest_descriptor,
         new java.lang.String[] { "DnsZoneId", "Deletions", "Additions", });
     internal_static_yandex_cloud_dns_v1_UpdateRecordSetsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_dns_v1_UpdateRecordSetsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_UpdateRecordSetsMetadata_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_dns_v1_UpsertRecordSetsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_dns_v1_UpsertRecordSetsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_UpsertRecordSetsRequest_descriptor,
         new java.lang.String[] { "DnsZoneId", "Deletions", "Replacements", "Merges", });
     internal_static_yandex_cloud_dns_v1_UpsertRecordSetsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_dns_v1_UpsertRecordSetsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_UpsertRecordSetsMetadata_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_dns_v1_RecordSetDiff_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_dns_v1_RecordSetDiff_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_RecordSetDiff_descriptor,
         new java.lang.String[] { "Additions", "Deletions", });
     internal_static_yandex_cloud_dns_v1_ListDnsZoneOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_dns_v1_ListDnsZoneOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_ListDnsZoneOperationsRequest_descriptor,
         new java.lang.String[] { "DnsZoneId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_dns_v1_ListDnsZoneOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_dns_v1_ListDnsZoneOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_ListDnsZoneOperationsResponse_descriptor,

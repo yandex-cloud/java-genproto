@@ -393,6 +393,37 @@ public final class VideoServiceGrpc {
     return getGetManifestsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLRequest,
+      yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLResponse> getGenerateDownloadURLMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GenerateDownloadURL",
+      requestType = yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLRequest.class,
+      responseType = yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLRequest,
+      yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLResponse> getGenerateDownloadURLMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLRequest, yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLResponse> getGenerateDownloadURLMethod;
+    if ((getGenerateDownloadURLMethod = VideoServiceGrpc.getGenerateDownloadURLMethod) == null) {
+      synchronized (VideoServiceGrpc.class) {
+        if ((getGenerateDownloadURLMethod = VideoServiceGrpc.getGenerateDownloadURLMethod) == null) {
+          VideoServiceGrpc.getGenerateDownloadURLMethod = getGenerateDownloadURLMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLRequest, yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GenerateDownloadURL"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VideoServiceMethodDescriptorSupplier("GenerateDownloadURL"))
+              .build();
+        }
+      }
+    }
+    return getGenerateDownloadURLMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -574,11 +605,24 @@ public final class VideoServiceGrpc {
      * Retrieves the manifest URLs for a specific video.
      * Manifests are used by video players to access the video content with adaptive bitrate streaming.
      * Supports different manifest types (HLS, DASH) and configuration parameters.
+     * Manifests and its url MUST not be cached.
+     * The player MUST request a fresh manifest every time playback starts.
      * </pre>
      */
     public void getManifests(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetManifestsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Generates a URL for downloading the original video file.
+     * This URL is time-limited and provides direct access to the source video.
+     * </pre>
+     */
+    public void generateDownloadURL(yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateDownloadURLMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -667,6 +711,13 @@ public final class VideoServiceGrpc {
                 yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsRequest,
                 yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsResponse>(
                   this, METHODID_GET_MANIFESTS)))
+          .addMethod(
+            getGenerateDownloadURLMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLRequest,
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLResponse>(
+                  this, METHODID_GENERATE_DOWNLOAD_URL)))
           .build();
     }
   }
@@ -829,12 +880,26 @@ public final class VideoServiceGrpc {
      * Retrieves the manifest URLs for a specific video.
      * Manifests are used by video players to access the video content with adaptive bitrate streaming.
      * Supports different manifest types (HLS, DASH) and configuration parameters.
+     * Manifests and its url MUST not be cached.
+     * The player MUST request a fresh manifest every time playback starts.
      * </pre>
      */
     public void getManifests(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetManifestsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Generates a URL for downloading the original video file.
+     * This URL is time-limited and provides direct access to the source video.
+     * </pre>
+     */
+    public void generateDownloadURL(yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGenerateDownloadURLMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -985,11 +1050,24 @@ public final class VideoServiceGrpc {
      * Retrieves the manifest URLs for a specific video.
      * Manifests are used by video players to access the video content with adaptive bitrate streaming.
      * Supports different manifest types (HLS, DASH) and configuration parameters.
+     * Manifests and its url MUST not be cached.
+     * The player MUST request a fresh manifest every time playback starts.
      * </pre>
      */
     public yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsResponse getManifests(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetManifestsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Generates a URL for downloading the original video file.
+     * This URL is time-limited and provides direct access to the source video.
+     * </pre>
+     */
+    public yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLResponse generateDownloadURL(yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateDownloadURLMethod(), getCallOptions(), request);
     }
   }
 
@@ -1151,12 +1229,26 @@ public final class VideoServiceGrpc {
      * Retrieves the manifest URLs for a specific video.
      * Manifests are used by video players to access the video content with adaptive bitrate streaming.
      * Supports different manifest types (HLS, DASH) and configuration parameters.
+     * Manifests and its url MUST not be cached.
+     * The player MUST request a fresh manifest every time playback starts.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsResponse> getManifests(
         yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetManifestsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Generates a URL for downloading the original video file.
+     * This URL is time-limited and provides direct access to the source video.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLResponse> generateDownloadURL(
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGenerateDownloadURLMethod(), getCallOptions()), request);
     }
   }
 
@@ -1172,6 +1264,7 @@ public final class VideoServiceGrpc {
   private static final int METHODID_GET_PLAYER_URL = 9;
   private static final int METHODID_BATCH_GET_PLAYER_URLS = 10;
   private static final int METHODID_GET_MANIFESTS = 11;
+  private static final int METHODID_GENERATE_DOWNLOAD_URL = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1237,6 +1330,10 @@ public final class VideoServiceGrpc {
         case METHODID_GET_MANIFESTS:
           serviceImpl.getManifests((yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsResponse>) responseObserver);
+          break;
+        case METHODID_GENERATE_DOWNLOAD_URL:
+          serviceImpl.generateDownloadURL((yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.VideoServiceOuterClass.GenerateVideoDownloadURLResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1311,6 +1408,7 @@ public final class VideoServiceGrpc {
               .addMethod(getGetPlayerURLMethod())
               .addMethod(getBatchGetPlayerURLsMethod())
               .addMethod(getGetManifestsMethod())
+              .addMethod(getGenerateDownloadURLMethod())
               .build();
         }
       }

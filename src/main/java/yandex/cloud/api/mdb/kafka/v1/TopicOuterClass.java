@@ -115,34 +115,85 @@ public final class TopicOuterClass {
     com.google.protobuf.Int64ValueOrBuilder getReplicationFactorOrBuilder();
 
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 2.8 topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
      * @return Whether the topicConfig28 field is set.
      */
     boolean hasTopicConfig28();
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 2.8 topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
      * @return The topicConfig28.
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8 getTopicConfig28();
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 2.8 topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8OrBuilder getTopicConfig28OrBuilder();
 
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 3.x topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 8 [json_name = "topicConfig_3"];</code>
      * @return Whether the topicConfig3 field is set.
      */
     boolean hasTopicConfig3();
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 3.x topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 8 [json_name = "topicConfig_3"];</code>
      * @return The topicConfig3.
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3 getTopicConfig3();
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 3.x topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 8 [json_name = "topicConfig_3"];</code>
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3OrBuilder getTopicConfig3OrBuilder();
+
+    /**
+     * <pre>
+     * Configuration of the Apache Kafka® 4.x topic.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 9 [json_name = "topicConfig_4"];</code>
+     * @return Whether the topicConfig4 field is set.
+     */
+    boolean hasTopicConfig4();
+    /**
+     * <pre>
+     * Configuration of the Apache Kafka® 4.x topic.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 9 [json_name = "topicConfig_4"];</code>
+     * @return The topicConfig4.
+     */
+    yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 getTopicConfig4();
+    /**
+     * <pre>
+     * Configuration of the Apache Kafka® 4.x topic.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 9 [json_name = "topicConfig_4"];</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4OrBuilder getTopicConfig4OrBuilder();
 
     public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.Topic.TopicConfigCase getTopicConfigCase();
   }
@@ -264,6 +315,20 @@ public final class TopicOuterClass {
               topicConfigCase_ = 8;
               break;
             }
+            case 74: {
+              yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.Builder subBuilder = null;
+              if (topicConfigCase_ == 9) {
+                subBuilder = ((yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) topicConfig_).toBuilder();
+              }
+              topicConfig_ =
+                  input.readMessage(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) topicConfig_);
+                topicConfig_ = subBuilder.buildPartial();
+              }
+              topicConfigCase_ = 9;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -303,6 +368,7 @@ public final class TopicOuterClass {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       TOPIC_CONFIG_2_8(7),
       TOPIC_CONFIG_3(8),
+      TOPIC_CONFIG_4(9),
       TOPICCONFIG_NOT_SET(0);
       private final int value;
       private TopicConfigCase(int value) {
@@ -322,6 +388,7 @@ public final class TopicOuterClass {
         switch (value) {
           case 7: return TOPIC_CONFIG_2_8;
           case 8: return TOPIC_CONFIG_3;
+          case 9: return TOPIC_CONFIG_4;
           case 0: return TOPICCONFIG_NOT_SET;
           default: return null;
         }
@@ -509,6 +576,10 @@ public final class TopicOuterClass {
 
     public static final int TOPIC_CONFIG_2_8_FIELD_NUMBER = 7;
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 2.8 topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
      * @return Whether the topicConfig28 field is set.
      */
@@ -517,6 +588,10 @@ public final class TopicOuterClass {
       return topicConfigCase_ == 7;
     }
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 2.8 topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
      * @return The topicConfig28.
      */
@@ -528,6 +603,10 @@ public final class TopicOuterClass {
       return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 2.8 topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
      */
     @java.lang.Override
@@ -540,6 +619,10 @@ public final class TopicOuterClass {
 
     public static final int TOPIC_CONFIG_3_FIELD_NUMBER = 8;
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 3.x topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 8 [json_name = "topicConfig_3"];</code>
      * @return Whether the topicConfig3 field is set.
      */
@@ -548,6 +631,10 @@ public final class TopicOuterClass {
       return topicConfigCase_ == 8;
     }
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 3.x topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 8 [json_name = "topicConfig_3"];</code>
      * @return The topicConfig3.
      */
@@ -559,6 +646,10 @@ public final class TopicOuterClass {
       return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 3.x topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 8 [json_name = "topicConfig_3"];</code>
      */
     @java.lang.Override
@@ -567,6 +658,49 @@ public final class TopicOuterClass {
          return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3) topicConfig_;
       }
       return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3.getDefaultInstance();
+    }
+
+    public static final int TOPIC_CONFIG_4_FIELD_NUMBER = 9;
+    /**
+     * <pre>
+     * Configuration of the Apache Kafka® 4.x topic.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 9 [json_name = "topicConfig_4"];</code>
+     * @return Whether the topicConfig4 field is set.
+     */
+    @java.lang.Override
+    public boolean hasTopicConfig4() {
+      return topicConfigCase_ == 9;
+    }
+    /**
+     * <pre>
+     * Configuration of the Apache Kafka® 4.x topic.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 9 [json_name = "topicConfig_4"];</code>
+     * @return The topicConfig4.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 getTopicConfig4() {
+      if (topicConfigCase_ == 9) {
+         return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) topicConfig_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration of the Apache Kafka® 4.x topic.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 9 [json_name = "topicConfig_4"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4OrBuilder getTopicConfig4OrBuilder() {
+      if (topicConfigCase_ == 9) {
+         return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) topicConfig_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -601,6 +735,9 @@ public final class TopicOuterClass {
       if (topicConfigCase_ == 8) {
         output.writeMessage(8, (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3) topicConfig_);
       }
+      if (topicConfigCase_ == 9) {
+        output.writeMessage(9, (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) topicConfig_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -631,6 +768,10 @@ public final class TopicOuterClass {
       if (topicConfigCase_ == 8) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3) topicConfig_);
+      }
+      if (topicConfigCase_ == 9) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) topicConfig_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -671,6 +812,10 @@ public final class TopicOuterClass {
           if (!getTopicConfig3()
               .equals(other.getTopicConfig3())) return false;
           break;
+        case 9:
+          if (!getTopicConfig4()
+              .equals(other.getTopicConfig4())) return false;
+          break;
         case 0:
         default:
       }
@@ -705,6 +850,10 @@ public final class TopicOuterClass {
         case 8:
           hash = (37 * hash) + TOPIC_CONFIG_3_FIELD_NUMBER;
           hash = (53 * hash) + getTopicConfig3().hashCode();
+          break;
+        case 9:
+          hash = (37 * hash) + TOPIC_CONFIG_4_FIELD_NUMBER;
+          hash = (53 * hash) + getTopicConfig4().hashCode();
           break;
         case 0:
         default:
@@ -917,6 +1066,13 @@ public final class TopicOuterClass {
             result.topicConfig_ = topicConfig3Builder_.build();
           }
         }
+        if (topicConfigCase_ == 9) {
+          if (topicConfig4Builder_ == null) {
+            result.topicConfig_ = topicConfig_;
+          } else {
+            result.topicConfig_ = topicConfig4Builder_.build();
+          }
+        }
         result.topicConfigCase_ = topicConfigCase_;
         onBuilt();
         return result;
@@ -987,6 +1143,10 @@ public final class TopicOuterClass {
           }
           case TOPIC_CONFIG_3: {
             mergeTopicConfig3(other.getTopicConfig3());
+            break;
+          }
+          case TOPIC_CONFIG_4: {
+            mergeTopicConfig4(other.getTopicConfig4());
             break;
           }
           case TOPICCONFIG_NOT_SET: {
@@ -1547,6 +1707,10 @@ public final class TopicOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8OrBuilder> topicConfig28Builder_;
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 2.8 topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
        * @return Whether the topicConfig28 field is set.
        */
@@ -1555,6 +1719,10 @@ public final class TopicOuterClass {
         return topicConfigCase_ == 7;
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 2.8 topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
        * @return The topicConfig28.
        */
@@ -1573,6 +1741,10 @@ public final class TopicOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 2.8 topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
        */
       public Builder setTopicConfig28(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8 value) {
@@ -1589,6 +1761,10 @@ public final class TopicOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 2.8 topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
        */
       public Builder setTopicConfig28(
@@ -1603,6 +1779,10 @@ public final class TopicOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 2.8 topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
        */
       public Builder mergeTopicConfig28(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8 value) {
@@ -1625,6 +1805,10 @@ public final class TopicOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 2.8 topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
        */
       public Builder clearTopicConfig28() {
@@ -1644,12 +1828,20 @@ public final class TopicOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 2.8 topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
        */
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.Builder getTopicConfig28Builder() {
         return getTopicConfig28FieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 2.8 topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
        */
       @java.lang.Override
@@ -1664,6 +1856,10 @@ public final class TopicOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 2.8 topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 7 [json_name = "topicConfig_2_8"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1688,6 +1884,10 @@ public final class TopicOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3OrBuilder> topicConfig3Builder_;
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 3.x topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 8 [json_name = "topicConfig_3"];</code>
        * @return Whether the topicConfig3 field is set.
        */
@@ -1696,6 +1896,10 @@ public final class TopicOuterClass {
         return topicConfigCase_ == 8;
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 3.x topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 8 [json_name = "topicConfig_3"];</code>
        * @return The topicConfig3.
        */
@@ -1714,6 +1918,10 @@ public final class TopicOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 3.x topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 8 [json_name = "topicConfig_3"];</code>
        */
       public Builder setTopicConfig3(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3 value) {
@@ -1730,6 +1938,10 @@ public final class TopicOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 3.x topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 8 [json_name = "topicConfig_3"];</code>
        */
       public Builder setTopicConfig3(
@@ -1744,6 +1956,10 @@ public final class TopicOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 3.x topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 8 [json_name = "topicConfig_3"];</code>
        */
       public Builder mergeTopicConfig3(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3 value) {
@@ -1766,6 +1982,10 @@ public final class TopicOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 3.x topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 8 [json_name = "topicConfig_3"];</code>
        */
       public Builder clearTopicConfig3() {
@@ -1785,12 +2005,20 @@ public final class TopicOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 3.x topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 8 [json_name = "topicConfig_3"];</code>
        */
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3.Builder getTopicConfig3Builder() {
         return getTopicConfig3FieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 3.x topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 8 [json_name = "topicConfig_3"];</code>
        */
       @java.lang.Override
@@ -1805,6 +2033,10 @@ public final class TopicOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 3.x topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 8 [json_name = "topicConfig_3"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1824,6 +2056,183 @@ public final class TopicOuterClass {
         topicConfigCase_ = 8;
         onChanged();;
         return topicConfig3Builder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4OrBuilder> topicConfig4Builder_;
+      /**
+       * <pre>
+       * Configuration of the Apache Kafka® 4.x topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 9 [json_name = "topicConfig_4"];</code>
+       * @return Whether the topicConfig4 field is set.
+       */
+      @java.lang.Override
+      public boolean hasTopicConfig4() {
+        return topicConfigCase_ == 9;
+      }
+      /**
+       * <pre>
+       * Configuration of the Apache Kafka® 4.x topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 9 [json_name = "topicConfig_4"];</code>
+       * @return The topicConfig4.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 getTopicConfig4() {
+        if (topicConfig4Builder_ == null) {
+          if (topicConfigCase_ == 9) {
+            return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) topicConfig_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.getDefaultInstance();
+        } else {
+          if (topicConfigCase_ == 9) {
+            return topicConfig4Builder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of the Apache Kafka® 4.x topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 9 [json_name = "topicConfig_4"];</code>
+       */
+      public Builder setTopicConfig4(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 value) {
+        if (topicConfig4Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          topicConfig_ = value;
+          onChanged();
+        } else {
+          topicConfig4Builder_.setMessage(value);
+        }
+        topicConfigCase_ = 9;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the Apache Kafka® 4.x topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 9 [json_name = "topicConfig_4"];</code>
+       */
+      public Builder setTopicConfig4(
+          yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.Builder builderForValue) {
+        if (topicConfig4Builder_ == null) {
+          topicConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          topicConfig4Builder_.setMessage(builderForValue.build());
+        }
+        topicConfigCase_ = 9;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the Apache Kafka® 4.x topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 9 [json_name = "topicConfig_4"];</code>
+       */
+      public Builder mergeTopicConfig4(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 value) {
+        if (topicConfig4Builder_ == null) {
+          if (topicConfigCase_ == 9 &&
+              topicConfig_ != yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.getDefaultInstance()) {
+            topicConfig_ = yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.newBuilder((yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) topicConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            topicConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (topicConfigCase_ == 9) {
+            topicConfig4Builder_.mergeFrom(value);
+          }
+          topicConfig4Builder_.setMessage(value);
+        }
+        topicConfigCase_ = 9;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the Apache Kafka® 4.x topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 9 [json_name = "topicConfig_4"];</code>
+       */
+      public Builder clearTopicConfig4() {
+        if (topicConfig4Builder_ == null) {
+          if (topicConfigCase_ == 9) {
+            topicConfigCase_ = 0;
+            topicConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (topicConfigCase_ == 9) {
+            topicConfigCase_ = 0;
+            topicConfig_ = null;
+          }
+          topicConfig4Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the Apache Kafka® 4.x topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 9 [json_name = "topicConfig_4"];</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.Builder getTopicConfig4Builder() {
+        return getTopicConfig4FieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of the Apache Kafka® 4.x topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 9 [json_name = "topicConfig_4"];</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4OrBuilder getTopicConfig4OrBuilder() {
+        if ((topicConfigCase_ == 9) && (topicConfig4Builder_ != null)) {
+          return topicConfig4Builder_.getMessageOrBuilder();
+        } else {
+          if (topicConfigCase_ == 9) {
+            return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) topicConfig_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of the Apache Kafka® 4.x topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 9 [json_name = "topicConfig_4"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4OrBuilder> 
+          getTopicConfig4FieldBuilder() {
+        if (topicConfig4Builder_ == null) {
+          if (!(topicConfigCase_ == 9)) {
+            topicConfig_ = yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.getDefaultInstance();
+          }
+          topicConfig4Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4OrBuilder>(
+                  (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) topicConfig_,
+                  getParentForChildren(),
+                  isClean());
+          topicConfig_ = null;
+        }
+        topicConfigCase_ = 9;
+        onChanged();;
+        return topicConfig4Builder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1957,34 +2366,85 @@ public final class TopicOuterClass {
     com.google.protobuf.Int64ValueOrBuilder getReplicationFactorOrBuilder();
 
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 2.8 topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
      * @return Whether the topicConfig28 field is set.
      */
     boolean hasTopicConfig28();
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 2.8 topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
      * @return The topicConfig28.
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8 getTopicConfig28();
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 2.8 topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8OrBuilder getTopicConfig28OrBuilder();
 
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 3.x topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 7 [json_name = "topicConfig_3"];</code>
      * @return Whether the topicConfig3 field is set.
      */
     boolean hasTopicConfig3();
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 3.x topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 7 [json_name = "topicConfig_3"];</code>
      * @return The topicConfig3.
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3 getTopicConfig3();
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 3.x topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 7 [json_name = "topicConfig_3"];</code>
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3OrBuilder getTopicConfig3OrBuilder();
+
+    /**
+     * <pre>
+     * Configuration of the Apache Kafka® 4.x topic.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 8 [json_name = "topicConfig_4"];</code>
+     * @return Whether the topicConfig4 field is set.
+     */
+    boolean hasTopicConfig4();
+    /**
+     * <pre>
+     * Configuration of the Apache Kafka® 4.x topic.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 8 [json_name = "topicConfig_4"];</code>
+     * @return The topicConfig4.
+     */
+    yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 getTopicConfig4();
+    /**
+     * <pre>
+     * Configuration of the Apache Kafka® 4.x topic.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 8 [json_name = "topicConfig_4"];</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4OrBuilder getTopicConfig4OrBuilder();
 
     public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicSpec.TopicConfigCase getTopicConfigCase();
   }
@@ -2094,6 +2554,20 @@ public final class TopicOuterClass {
               topicConfigCase_ = 7;
               break;
             }
+            case 66: {
+              yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.Builder subBuilder = null;
+              if (topicConfigCase_ == 8) {
+                subBuilder = ((yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) topicConfig_).toBuilder();
+              }
+              topicConfig_ =
+                  input.readMessage(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) topicConfig_);
+                topicConfig_ = subBuilder.buildPartial();
+              }
+              topicConfigCase_ = 8;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2133,6 +2607,7 @@ public final class TopicOuterClass {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       TOPIC_CONFIG_2_8(6),
       TOPIC_CONFIG_3(7),
+      TOPIC_CONFIG_4(8),
       TOPICCONFIG_NOT_SET(0);
       private final int value;
       private TopicConfigCase(int value) {
@@ -2152,6 +2627,7 @@ public final class TopicOuterClass {
         switch (value) {
           case 6: return TOPIC_CONFIG_2_8;
           case 7: return TOPIC_CONFIG_3;
+          case 8: return TOPIC_CONFIG_4;
           case 0: return TOPICCONFIG_NOT_SET;
           default: return null;
         }
@@ -2291,6 +2767,10 @@ public final class TopicOuterClass {
 
     public static final int TOPIC_CONFIG_2_8_FIELD_NUMBER = 6;
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 2.8 topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
      * @return Whether the topicConfig28 field is set.
      */
@@ -2299,6 +2779,10 @@ public final class TopicOuterClass {
       return topicConfigCase_ == 6;
     }
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 2.8 topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
      * @return The topicConfig28.
      */
@@ -2310,6 +2794,10 @@ public final class TopicOuterClass {
       return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 2.8 topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
      */
     @java.lang.Override
@@ -2322,6 +2810,10 @@ public final class TopicOuterClass {
 
     public static final int TOPIC_CONFIG_3_FIELD_NUMBER = 7;
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 3.x topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 7 [json_name = "topicConfig_3"];</code>
      * @return Whether the topicConfig3 field is set.
      */
@@ -2330,6 +2822,10 @@ public final class TopicOuterClass {
       return topicConfigCase_ == 7;
     }
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 3.x topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 7 [json_name = "topicConfig_3"];</code>
      * @return The topicConfig3.
      */
@@ -2341,6 +2837,10 @@ public final class TopicOuterClass {
       return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Configuration of the Apache Kafka® 3.x topic.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 7 [json_name = "topicConfig_3"];</code>
      */
     @java.lang.Override
@@ -2349,6 +2849,49 @@ public final class TopicOuterClass {
          return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3) topicConfig_;
       }
       return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3.getDefaultInstance();
+    }
+
+    public static final int TOPIC_CONFIG_4_FIELD_NUMBER = 8;
+    /**
+     * <pre>
+     * Configuration of the Apache Kafka® 4.x topic.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 8 [json_name = "topicConfig_4"];</code>
+     * @return Whether the topicConfig4 field is set.
+     */
+    @java.lang.Override
+    public boolean hasTopicConfig4() {
+      return topicConfigCase_ == 8;
+    }
+    /**
+     * <pre>
+     * Configuration of the Apache Kafka® 4.x topic.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 8 [json_name = "topicConfig_4"];</code>
+     * @return The topicConfig4.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 getTopicConfig4() {
+      if (topicConfigCase_ == 8) {
+         return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) topicConfig_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration of the Apache Kafka® 4.x topic.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 8 [json_name = "topicConfig_4"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4OrBuilder getTopicConfig4OrBuilder() {
+      if (topicConfigCase_ == 8) {
+         return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) topicConfig_;
+      }
+      return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2380,6 +2923,9 @@ public final class TopicOuterClass {
       if (topicConfigCase_ == 7) {
         output.writeMessage(7, (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3) topicConfig_);
       }
+      if (topicConfigCase_ == 8) {
+        output.writeMessage(8, (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) topicConfig_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2407,6 +2953,10 @@ public final class TopicOuterClass {
       if (topicConfigCase_ == 7) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3) topicConfig_);
+      }
+      if (topicConfigCase_ == 8) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) topicConfig_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2445,6 +2995,10 @@ public final class TopicOuterClass {
           if (!getTopicConfig3()
               .equals(other.getTopicConfig3())) return false;
           break;
+        case 8:
+          if (!getTopicConfig4()
+              .equals(other.getTopicConfig4())) return false;
+          break;
         case 0:
         default:
       }
@@ -2477,6 +3031,10 @@ public final class TopicOuterClass {
         case 7:
           hash = (37 * hash) + TOPIC_CONFIG_3_FIELD_NUMBER;
           hash = (53 * hash) + getTopicConfig3().hashCode();
+          break;
+        case 8:
+          hash = (37 * hash) + TOPIC_CONFIG_4_FIELD_NUMBER;
+          hash = (53 * hash) + getTopicConfig4().hashCode();
           break;
         case 0:
         default:
@@ -2681,6 +3239,13 @@ public final class TopicOuterClass {
             result.topicConfig_ = topicConfig3Builder_.build();
           }
         }
+        if (topicConfigCase_ == 8) {
+          if (topicConfig4Builder_ == null) {
+            result.topicConfig_ = topicConfig_;
+          } else {
+            result.topicConfig_ = topicConfig4Builder_.build();
+          }
+        }
         result.topicConfigCase_ = topicConfigCase_;
         onBuilt();
         return result;
@@ -2747,6 +3312,10 @@ public final class TopicOuterClass {
           }
           case TOPIC_CONFIG_3: {
             mergeTopicConfig3(other.getTopicConfig3());
+            break;
+          }
+          case TOPIC_CONFIG_4: {
+            mergeTopicConfig4(other.getTopicConfig4());
             break;
           }
           case TOPICCONFIG_NOT_SET: {
@@ -3206,6 +3775,10 @@ public final class TopicOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8OrBuilder> topicConfig28Builder_;
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 2.8 topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
        * @return Whether the topicConfig28 field is set.
        */
@@ -3214,6 +3787,10 @@ public final class TopicOuterClass {
         return topicConfigCase_ == 6;
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 2.8 topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
        * @return The topicConfig28.
        */
@@ -3232,6 +3809,10 @@ public final class TopicOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 2.8 topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
        */
       public Builder setTopicConfig28(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8 value) {
@@ -3248,6 +3829,10 @@ public final class TopicOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 2.8 topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
        */
       public Builder setTopicConfig28(
@@ -3262,6 +3847,10 @@ public final class TopicOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 2.8 topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
        */
       public Builder mergeTopicConfig28(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8 value) {
@@ -3284,6 +3873,10 @@ public final class TopicOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 2.8 topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
        */
       public Builder clearTopicConfig28() {
@@ -3303,12 +3896,20 @@ public final class TopicOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 2.8 topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
        */
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_8.Builder getTopicConfig28Builder() {
         return getTopicConfig28FieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 2.8 topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
        */
       @java.lang.Override
@@ -3323,6 +3924,10 @@ public final class TopicOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 2.8 topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_8 topic_config_2_8 = 6 [json_name = "topicConfig_2_8"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3347,6 +3952,10 @@ public final class TopicOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3OrBuilder> topicConfig3Builder_;
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 3.x topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 7 [json_name = "topicConfig_3"];</code>
        * @return Whether the topicConfig3 field is set.
        */
@@ -3355,6 +3964,10 @@ public final class TopicOuterClass {
         return topicConfigCase_ == 7;
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 3.x topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 7 [json_name = "topicConfig_3"];</code>
        * @return The topicConfig3.
        */
@@ -3373,6 +3986,10 @@ public final class TopicOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 3.x topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 7 [json_name = "topicConfig_3"];</code>
        */
       public Builder setTopicConfig3(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3 value) {
@@ -3389,6 +4006,10 @@ public final class TopicOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 3.x topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 7 [json_name = "topicConfig_3"];</code>
        */
       public Builder setTopicConfig3(
@@ -3403,6 +4024,10 @@ public final class TopicOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 3.x topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 7 [json_name = "topicConfig_3"];</code>
        */
       public Builder mergeTopicConfig3(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3 value) {
@@ -3425,6 +4050,10 @@ public final class TopicOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 3.x topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 7 [json_name = "topicConfig_3"];</code>
        */
       public Builder clearTopicConfig3() {
@@ -3444,12 +4073,20 @@ public final class TopicOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 3.x topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 7 [json_name = "topicConfig_3"];</code>
        */
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig3.Builder getTopicConfig3Builder() {
         return getTopicConfig3FieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 3.x topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 7 [json_name = "topicConfig_3"];</code>
        */
       @java.lang.Override
@@ -3464,6 +4101,10 @@ public final class TopicOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration of the Apache Kafka® 3.x topic.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig3 topic_config_3 = 7 [json_name = "topicConfig_3"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3483,6 +4124,183 @@ public final class TopicOuterClass {
         topicConfigCase_ = 7;
         onChanged();;
         return topicConfig3Builder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4OrBuilder> topicConfig4Builder_;
+      /**
+       * <pre>
+       * Configuration of the Apache Kafka® 4.x topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 8 [json_name = "topicConfig_4"];</code>
+       * @return Whether the topicConfig4 field is set.
+       */
+      @java.lang.Override
+      public boolean hasTopicConfig4() {
+        return topicConfigCase_ == 8;
+      }
+      /**
+       * <pre>
+       * Configuration of the Apache Kafka® 4.x topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 8 [json_name = "topicConfig_4"];</code>
+       * @return The topicConfig4.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 getTopicConfig4() {
+        if (topicConfig4Builder_ == null) {
+          if (topicConfigCase_ == 8) {
+            return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) topicConfig_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.getDefaultInstance();
+        } else {
+          if (topicConfigCase_ == 8) {
+            return topicConfig4Builder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of the Apache Kafka® 4.x topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 8 [json_name = "topicConfig_4"];</code>
+       */
+      public Builder setTopicConfig4(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 value) {
+        if (topicConfig4Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          topicConfig_ = value;
+          onChanged();
+        } else {
+          topicConfig4Builder_.setMessage(value);
+        }
+        topicConfigCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the Apache Kafka® 4.x topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 8 [json_name = "topicConfig_4"];</code>
+       */
+      public Builder setTopicConfig4(
+          yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.Builder builderForValue) {
+        if (topicConfig4Builder_ == null) {
+          topicConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          topicConfig4Builder_.setMessage(builderForValue.build());
+        }
+        topicConfigCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the Apache Kafka® 4.x topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 8 [json_name = "topicConfig_4"];</code>
+       */
+      public Builder mergeTopicConfig4(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 value) {
+        if (topicConfig4Builder_ == null) {
+          if (topicConfigCase_ == 8 &&
+              topicConfig_ != yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.getDefaultInstance()) {
+            topicConfig_ = yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.newBuilder((yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) topicConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            topicConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (topicConfigCase_ == 8) {
+            topicConfig4Builder_.mergeFrom(value);
+          }
+          topicConfig4Builder_.setMessage(value);
+        }
+        topicConfigCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the Apache Kafka® 4.x topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 8 [json_name = "topicConfig_4"];</code>
+       */
+      public Builder clearTopicConfig4() {
+        if (topicConfig4Builder_ == null) {
+          if (topicConfigCase_ == 8) {
+            topicConfigCase_ = 0;
+            topicConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (topicConfigCase_ == 8) {
+            topicConfigCase_ = 0;
+            topicConfig_ = null;
+          }
+          topicConfig4Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the Apache Kafka® 4.x topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 8 [json_name = "topicConfig_4"];</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.Builder getTopicConfig4Builder() {
+        return getTopicConfig4FieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of the Apache Kafka® 4.x topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 8 [json_name = "topicConfig_4"];</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4OrBuilder getTopicConfig4OrBuilder() {
+        if ((topicConfigCase_ == 8) && (topicConfig4Builder_ != null)) {
+          return topicConfig4Builder_.getMessageOrBuilder();
+        } else {
+          if (topicConfigCase_ == 8) {
+            return (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) topicConfig_;
+          }
+          return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of the Apache Kafka® 4.x topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4 topic_config_4 = 8 [json_name = "topicConfig_4"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4OrBuilder> 
+          getTopicConfig4FieldBuilder() {
+        if (topicConfig4Builder_ == null) {
+          if (!(topicConfigCase_ == 8)) {
+            topicConfig_ = yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.getDefaultInstance();
+          }
+          topicConfig4Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4OrBuilder>(
+                  (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) topicConfig_,
+                  getParentForChildren(),
+                  isClean());
+          topicConfig_ = null;
+        }
+        topicConfigCase_ = 8;
+        onChanged();;
+        return topicConfig4Builder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3877,40 +4695,54 @@ public final class TopicOuterClass {
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
-     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
-     * @deprecated
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
      * @return Whether the preallocate field is set.
      */
-    @java.lang.Deprecated boolean hasPreallocate();
+    boolean hasPreallocate();
     /**
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
-     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
-     * @deprecated
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
      * @return The preallocate.
      */
-    @java.lang.Deprecated com.google.protobuf.BoolValue getPreallocate();
+    com.google.protobuf.BoolValue getPreallocate();
     /**
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
-     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
      */
-    @java.lang.Deprecated com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder();
+    com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder();
+
+    /**
+     * <pre>
+     * Define whether the timestamp in the message is message create time or log append time.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+     * @return The enum numeric value on the wire for messageTimestampType.
+     */
+    int getMessageTimestampTypeValue();
+    /**
+     * <pre>
+     * Define whether the timestamp in the message is message create time or log append time.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+     * @return The messageTimestampType.
+     */
+    yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType getMessageTimestampType();
   }
   /**
    * <pre>
-   * A topic settings for 2.8
+   * Topic settings for 2.8
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.TopicConfig2_8}
@@ -3927,6 +4759,7 @@ public final class TopicOuterClass {
     private TopicConfig2_8() {
       cleanupPolicy_ = 0;
       compressionType_ = 0;
+      messageTimestampType_ = 0;
     }
 
     @java.lang.Override
@@ -4114,6 +4947,12 @@ public final class TopicOuterClass {
 
               break;
             }
+            case 112: {
+              int rawValue = input.readEnum();
+
+              messageTimestampType_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4152,6 +4991,10 @@ public final class TopicOuterClass {
     public enum CleanupPolicy
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Cleanup policy is unspecified.
+       * </pre>
+       *
        * <code>CLEANUP_POLICY_UNSPECIFIED = 0;</code>
        */
       CLEANUP_POLICY_UNSPECIFIED(0),
@@ -4183,6 +5026,10 @@ public final class TopicOuterClass {
       ;
 
       /**
+       * <pre>
+       * Cleanup policy is unspecified.
+       * </pre>
+       *
        * <code>CLEANUP_POLICY_UNSPECIFIED = 0;</code>
        */
       public static final int CLEANUP_POLICY_UNSPECIFIED_VALUE = 0;
@@ -4760,44 +5607,66 @@ public final class TopicOuterClass {
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
-     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
-     * @deprecated
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
      * @return Whether the preallocate field is set.
      */
     @java.lang.Override
-    @java.lang.Deprecated public boolean hasPreallocate() {
+    public boolean hasPreallocate() {
       return preallocate_ != null;
     }
     /**
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
-     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
-     * @deprecated
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
      * @return The preallocate.
      */
     @java.lang.Override
-    @java.lang.Deprecated public com.google.protobuf.BoolValue getPreallocate() {
+    public com.google.protobuf.BoolValue getPreallocate() {
       return preallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preallocate_;
     }
     /**
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
-     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
+    public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
       return getPreallocate();
+    }
+
+    public static final int MESSAGE_TIMESTAMP_TYPE_FIELD_NUMBER = 14;
+    private int messageTimestampType_;
+    /**
+     * <pre>
+     * Define whether the timestamp in the message is message create time or log append time.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+     * @return The enum numeric value on the wire for messageTimestampType.
+     */
+    @java.lang.Override public int getMessageTimestampTypeValue() {
+      return messageTimestampType_;
+    }
+    /**
+     * <pre>
+     * Define whether the timestamp in the message is message create time or log append time.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+     * @return The messageTimestampType.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType getMessageTimestampType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType result = yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType.valueOf(messageTimestampType_);
+      return result == null ? yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4852,6 +5721,9 @@ public final class TopicOuterClass {
       }
       if (preallocate_ != null) {
         output.writeMessage(13, getPreallocate());
+      }
+      if (messageTimestampType_ != yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType.MESSAGE_TIMESTAMP_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(14, messageTimestampType_);
       }
       unknownFields.writeTo(output);
     }
@@ -4913,6 +5785,10 @@ public final class TopicOuterClass {
       if (preallocate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getPreallocate());
+      }
+      if (messageTimestampType_ != yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType.MESSAGE_TIMESTAMP_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(14, messageTimestampType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4986,6 +5862,7 @@ public final class TopicOuterClass {
         if (!getPreallocate()
             .equals(other.getPreallocate())) return false;
       }
+      if (messageTimestampType_ != other.messageTimestampType_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5045,6 +5922,8 @@ public final class TopicOuterClass {
         hash = (37 * hash) + PREALLOCATE_FIELD_NUMBER;
         hash = (53 * hash) + getPreallocate().hashCode();
       }
+      hash = (37 * hash) + MESSAGE_TIMESTAMP_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + messageTimestampType_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5142,7 +6021,7 @@ public final class TopicOuterClass {
     }
     /**
      * <pre>
-     * A topic settings for 2.8
+     * Topic settings for 2.8
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.mdb.kafka.v1.TopicConfig2_8}
@@ -5252,6 +6131,8 @@ public final class TopicOuterClass {
           preallocate_ = null;
           preallocateBuilder_ = null;
         }
+        messageTimestampType_ = 0;
+
         return this;
       }
 
@@ -5335,6 +6216,7 @@ public final class TopicOuterClass {
         } else {
           result.preallocate_ = preallocateBuilder_.build();
         }
+        result.messageTimestampType_ = messageTimestampType_;
         onBuilt();
         return result;
       }
@@ -5421,6 +6303,9 @@ public final class TopicOuterClass {
         }
         if (other.hasPreallocate()) {
           mergePreallocate(other.getPreallocate());
+        }
+        if (other.messageTimestampType_ != 0) {
+          setMessageTimestampTypeValue(other.getMessageTimestampTypeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7228,28 +8113,24 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
-       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
-       * @deprecated
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
        * @return Whether the preallocate field is set.
        */
-      @java.lang.Deprecated public boolean hasPreallocate() {
+      public boolean hasPreallocate() {
         return preallocateBuilder_ != null || preallocate_ != null;
       }
       /**
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
-       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
-       * @deprecated
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
        * @return The preallocate.
        */
-      @java.lang.Deprecated public com.google.protobuf.BoolValue getPreallocate() {
+      public com.google.protobuf.BoolValue getPreallocate() {
         if (preallocateBuilder_ == null) {
           return preallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preallocate_;
         } else {
@@ -7260,12 +8141,11 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
-       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
        */
-      @java.lang.Deprecated public Builder setPreallocate(com.google.protobuf.BoolValue value) {
+      public Builder setPreallocate(com.google.protobuf.BoolValue value) {
         if (preallocateBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7282,12 +8162,11 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
-       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
        */
-      @java.lang.Deprecated public Builder setPreallocate(
+      public Builder setPreallocate(
           com.google.protobuf.BoolValue.Builder builderForValue) {
         if (preallocateBuilder_ == null) {
           preallocate_ = builderForValue.build();
@@ -7302,12 +8181,11 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
-       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
        */
-      @java.lang.Deprecated public Builder mergePreallocate(com.google.protobuf.BoolValue value) {
+      public Builder mergePreallocate(com.google.protobuf.BoolValue value) {
         if (preallocateBuilder_ == null) {
           if (preallocate_ != null) {
             preallocate_ =
@@ -7326,12 +8204,11 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
-       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
        */
-      @java.lang.Deprecated public Builder clearPreallocate() {
+      public Builder clearPreallocate() {
         if (preallocateBuilder_ == null) {
           preallocate_ = null;
           onChanged();
@@ -7346,12 +8223,11 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
-       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
        */
-      @java.lang.Deprecated public com.google.protobuf.BoolValue.Builder getPreallocateBuilder() {
+      public com.google.protobuf.BoolValue.Builder getPreallocateBuilder() {
         
         onChanged();
         return getPreallocateFieldBuilder().getBuilder();
@@ -7360,12 +8236,11 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
-       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
        */
-      @java.lang.Deprecated public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
+      public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
         if (preallocateBuilder_ != null) {
           return preallocateBuilder_.getMessageOrBuilder();
         } else {
@@ -7377,10 +8252,9 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
-       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -7394,6 +8268,80 @@ public final class TopicOuterClass {
           preallocate_ = null;
         }
         return preallocateBuilder_;
+      }
+
+      private int messageTimestampType_ = 0;
+      /**
+       * <pre>
+       * Define whether the timestamp in the message is message create time or log append time.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+       * @return The enum numeric value on the wire for messageTimestampType.
+       */
+      @java.lang.Override public int getMessageTimestampTypeValue() {
+        return messageTimestampType_;
+      }
+      /**
+       * <pre>
+       * Define whether the timestamp in the message is message create time or log append time.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+       * @param value The enum numeric value on the wire for messageTimestampType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageTimestampTypeValue(int value) {
+        
+        messageTimestampType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Define whether the timestamp in the message is message create time or log append time.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+       * @return The messageTimestampType.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType getMessageTimestampType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType result = yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType.valueOf(messageTimestampType_);
+        return result == null ? yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Define whether the timestamp in the message is message create time or log append time.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+       * @param value The messageTimestampType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageTimestampType(yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        messageTimestampType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Define whether the timestamp in the message is message create time or log append time.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessageTimestampType() {
+        
+        messageTimestampType_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7788,40 +8736,54 @@ public final class TopicOuterClass {
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
-     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
-     * @deprecated
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
      * @return Whether the preallocate field is set.
      */
-    @java.lang.Deprecated boolean hasPreallocate();
+    boolean hasPreallocate();
     /**
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
-     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
-     * @deprecated
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
      * @return The preallocate.
      */
-    @java.lang.Deprecated com.google.protobuf.BoolValue getPreallocate();
+    com.google.protobuf.BoolValue getPreallocate();
     /**
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
-     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
      */
-    @java.lang.Deprecated com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder();
+    com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder();
+
+    /**
+     * <pre>
+     * Define whether the timestamp in the message is message create time or log append time.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+     * @return The enum numeric value on the wire for messageTimestampType.
+     */
+    int getMessageTimestampTypeValue();
+    /**
+     * <pre>
+     * Define whether the timestamp in the message is message create time or log append time.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+     * @return The messageTimestampType.
+     */
+    yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType getMessageTimestampType();
   }
   /**
    * <pre>
-   * A topic settings for 3.x
+   * Topic settings for 3.x
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.TopicConfig3}
@@ -7838,6 +8800,7 @@ public final class TopicOuterClass {
     private TopicConfig3() {
       cleanupPolicy_ = 0;
       compressionType_ = 0;
+      messageTimestampType_ = 0;
     }
 
     @java.lang.Override
@@ -8025,6 +8988,12 @@ public final class TopicOuterClass {
 
               break;
             }
+            case 112: {
+              int rawValue = input.readEnum();
+
+              messageTimestampType_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -8063,6 +9032,10 @@ public final class TopicOuterClass {
     public enum CleanupPolicy
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Cleanup policy is unspecified.
+       * </pre>
+       *
        * <code>CLEANUP_POLICY_UNSPECIFIED = 0;</code>
        */
       CLEANUP_POLICY_UNSPECIFIED(0),
@@ -8094,6 +9067,10 @@ public final class TopicOuterClass {
       ;
 
       /**
+       * <pre>
+       * Cleanup policy is unspecified.
+       * </pre>
+       *
        * <code>CLEANUP_POLICY_UNSPECIFIED = 0;</code>
        */
       public static final int CLEANUP_POLICY_UNSPECIFIED_VALUE = 0;
@@ -8671,44 +9648,66 @@ public final class TopicOuterClass {
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
-     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
-     * @deprecated
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
      * @return Whether the preallocate field is set.
      */
     @java.lang.Override
-    @java.lang.Deprecated public boolean hasPreallocate() {
+    public boolean hasPreallocate() {
       return preallocate_ != null;
     }
     /**
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
-     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
-     * @deprecated
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
      * @return The preallocate.
      */
     @java.lang.Override
-    @java.lang.Deprecated public com.google.protobuf.BoolValue getPreallocate() {
+    public com.google.protobuf.BoolValue getPreallocate() {
       return preallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preallocate_;
     }
     /**
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
-     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
      */
     @java.lang.Override
-    @java.lang.Deprecated public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
+    public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
       return getPreallocate();
+    }
+
+    public static final int MESSAGE_TIMESTAMP_TYPE_FIELD_NUMBER = 14;
+    private int messageTimestampType_;
+    /**
+     * <pre>
+     * Define whether the timestamp in the message is message create time or log append time.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+     * @return The enum numeric value on the wire for messageTimestampType.
+     */
+    @java.lang.Override public int getMessageTimestampTypeValue() {
+      return messageTimestampType_;
+    }
+    /**
+     * <pre>
+     * Define whether the timestamp in the message is message create time or log append time.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+     * @return The messageTimestampType.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType getMessageTimestampType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType result = yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType.valueOf(messageTimestampType_);
+      return result == null ? yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -8763,6 +9762,9 @@ public final class TopicOuterClass {
       }
       if (preallocate_ != null) {
         output.writeMessage(13, getPreallocate());
+      }
+      if (messageTimestampType_ != yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType.MESSAGE_TIMESTAMP_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(14, messageTimestampType_);
       }
       unknownFields.writeTo(output);
     }
@@ -8824,6 +9826,10 @@ public final class TopicOuterClass {
       if (preallocate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getPreallocate());
+      }
+      if (messageTimestampType_ != yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType.MESSAGE_TIMESTAMP_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(14, messageTimestampType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8897,6 +9903,7 @@ public final class TopicOuterClass {
         if (!getPreallocate()
             .equals(other.getPreallocate())) return false;
       }
+      if (messageTimestampType_ != other.messageTimestampType_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8956,6 +9963,8 @@ public final class TopicOuterClass {
         hash = (37 * hash) + PREALLOCATE_FIELD_NUMBER;
         hash = (53 * hash) + getPreallocate().hashCode();
       }
+      hash = (37 * hash) + MESSAGE_TIMESTAMP_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + messageTimestampType_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9053,7 +10062,7 @@ public final class TopicOuterClass {
     }
     /**
      * <pre>
-     * A topic settings for 3.x
+     * Topic settings for 3.x
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.mdb.kafka.v1.TopicConfig3}
@@ -9163,6 +10172,8 @@ public final class TopicOuterClass {
           preallocate_ = null;
           preallocateBuilder_ = null;
         }
+        messageTimestampType_ = 0;
+
         return this;
       }
 
@@ -9246,6 +10257,7 @@ public final class TopicOuterClass {
         } else {
           result.preallocate_ = preallocateBuilder_.build();
         }
+        result.messageTimestampType_ = messageTimestampType_;
         onBuilt();
         return result;
       }
@@ -9332,6 +10344,9 @@ public final class TopicOuterClass {
         }
         if (other.hasPreallocate()) {
           mergePreallocate(other.getPreallocate());
+        }
+        if (other.messageTimestampType_ != 0) {
+          setMessageTimestampTypeValue(other.getMessageTimestampTypeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11139,28 +12154,24 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
-       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
-       * @deprecated
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
        * @return Whether the preallocate field is set.
        */
-      @java.lang.Deprecated public boolean hasPreallocate() {
+      public boolean hasPreallocate() {
         return preallocateBuilder_ != null || preallocate_ != null;
       }
       /**
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
-       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
-       * @deprecated
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
        * @return The preallocate.
        */
-      @java.lang.Deprecated public com.google.protobuf.BoolValue getPreallocate() {
+      public com.google.protobuf.BoolValue getPreallocate() {
         if (preallocateBuilder_ == null) {
           return preallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preallocate_;
         } else {
@@ -11171,12 +12182,11 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
-       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
        */
-      @java.lang.Deprecated public Builder setPreallocate(com.google.protobuf.BoolValue value) {
+      public Builder setPreallocate(com.google.protobuf.BoolValue value) {
         if (preallocateBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11193,12 +12203,11 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
-       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
        */
-      @java.lang.Deprecated public Builder setPreallocate(
+      public Builder setPreallocate(
           com.google.protobuf.BoolValue.Builder builderForValue) {
         if (preallocateBuilder_ == null) {
           preallocate_ = builderForValue.build();
@@ -11213,12 +12222,11 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
-       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
        */
-      @java.lang.Deprecated public Builder mergePreallocate(com.google.protobuf.BoolValue value) {
+      public Builder mergePreallocate(com.google.protobuf.BoolValue value) {
         if (preallocateBuilder_ == null) {
           if (preallocate_ != null) {
             preallocate_ =
@@ -11237,12 +12245,11 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
-       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
        */
-      @java.lang.Deprecated public Builder clearPreallocate() {
+      public Builder clearPreallocate() {
         if (preallocateBuilder_ == null) {
           preallocate_ = null;
           onChanged();
@@ -11257,12 +12264,11 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
-       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
        */
-      @java.lang.Deprecated public com.google.protobuf.BoolValue.Builder getPreallocateBuilder() {
+      public com.google.protobuf.BoolValue.Builder getPreallocateBuilder() {
         
         onChanged();
         return getPreallocateFieldBuilder().getBuilder();
@@ -11271,12 +12277,11 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
-       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
        */
-      @java.lang.Deprecated public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
+      public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
         if (preallocateBuilder_ != null) {
           return preallocateBuilder_.getMessageOrBuilder();
         } else {
@@ -11288,10 +12293,9 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
-       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -11305,6 +12309,80 @@ public final class TopicOuterClass {
           preallocate_ = null;
         }
         return preallocateBuilder_;
+      }
+
+      private int messageTimestampType_ = 0;
+      /**
+       * <pre>
+       * Define whether the timestamp in the message is message create time or log append time.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+       * @return The enum numeric value on the wire for messageTimestampType.
+       */
+      @java.lang.Override public int getMessageTimestampTypeValue() {
+        return messageTimestampType_;
+      }
+      /**
+       * <pre>
+       * Define whether the timestamp in the message is message create time or log append time.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+       * @param value The enum numeric value on the wire for messageTimestampType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageTimestampTypeValue(int value) {
+        
+        messageTimestampType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Define whether the timestamp in the message is message create time or log append time.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+       * @return The messageTimestampType.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType getMessageTimestampType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType result = yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType.valueOf(messageTimestampType_);
+        return result == null ? yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Define whether the timestamp in the message is message create time or log append time.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+       * @param value The messageTimestampType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageTimestampType(yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        messageTimestampType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Define whether the timestamp in the message is message create time or log append time.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessageTimestampType() {
+        
+        messageTimestampType_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11359,6 +12437,4047 @@ public final class TopicOuterClass {
 
   }
 
+  public interface TopicConfig4OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.TopicConfig4)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Retention policy to use on old log messages.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4.CleanupPolicy cleanup_policy = 1;</code>
+     * @return The enum numeric value on the wire for cleanupPolicy.
+     */
+    int getCleanupPolicyValue();
+    /**
+     * <pre>
+     * Retention policy to use on old log messages.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4.CleanupPolicy cleanup_policy = 1;</code>
+     * @return The cleanupPolicy.
+     */
+    yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.CleanupPolicy getCleanupPolicy();
+
+    /**
+     * <pre>
+     * The compression type for a given topic.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+     * @return The enum numeric value on the wire for compressionType.
+     */
+    int getCompressionTypeValue();
+    /**
+     * <pre>
+     * The compression type for a given topic.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+     * @return The compressionType.
+     */
+    yandex.cloud.api.mdb.kafka.v1.Common.CompressionType getCompressionType();
+
+    /**
+     * <pre>
+     * The amount of time in milliseconds to retain delete tombstone markers for log compacted topics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+     * @return Whether the deleteRetentionMs field is set.
+     */
+    boolean hasDeleteRetentionMs();
+    /**
+     * <pre>
+     * The amount of time in milliseconds to retain delete tombstone markers for log compacted topics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+     * @return The deleteRetentionMs.
+     */
+    com.google.protobuf.Int64Value getDeleteRetentionMs();
+    /**
+     * <pre>
+     * The amount of time in milliseconds to retain delete tombstone markers for log compacted topics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getDeleteRetentionMsOrBuilder();
+
+    /**
+     * <pre>
+     * The time to wait before deleting a file from the filesystem.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+     * @return Whether the fileDeleteDelayMs field is set.
+     */
+    boolean hasFileDeleteDelayMs();
+    /**
+     * <pre>
+     * The time to wait before deleting a file from the filesystem.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+     * @return The fileDeleteDelayMs.
+     */
+    com.google.protobuf.Int64Value getFileDeleteDelayMs();
+    /**
+     * <pre>
+     * The time to wait before deleting a file from the filesystem.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getFileDeleteDelayMsOrBuilder();
+
+    /**
+     * <pre>
+     * The number of messages accumulated on a log partition before messages are flushed to disk.
+     * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_messages] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+     * @return Whether the flushMessages field is set.
+     */
+    boolean hasFlushMessages();
+    /**
+     * <pre>
+     * The number of messages accumulated on a log partition before messages are flushed to disk.
+     * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_messages] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+     * @return The flushMessages.
+     */
+    com.google.protobuf.Int64Value getFlushMessages();
+    /**
+     * <pre>
+     * The number of messages accumulated on a log partition before messages are flushed to disk.
+     * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_messages] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getFlushMessagesOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
+     * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_ms] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+     * @return Whether the flushMs field is set.
+     */
+    boolean hasFlushMs();
+    /**
+     * <pre>
+     * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
+     * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_ms] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+     * @return The flushMs.
+     */
+    com.google.protobuf.Int64Value getFlushMs();
+    /**
+     * <pre>
+     * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
+     * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_ms] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getFlushMsOrBuilder();
+
+    /**
+     * <pre>
+     * The minimum time in milliseconds a message will remain uncompacted in the log.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+     * @return Whether the minCompactionLagMs field is set.
+     */
+    boolean hasMinCompactionLagMs();
+    /**
+     * <pre>
+     * The minimum time in milliseconds a message will remain uncompacted in the log.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+     * @return The minCompactionLagMs.
+     */
+    com.google.protobuf.Int64Value getMinCompactionLagMs();
+    /**
+     * <pre>
+     * The minimum time in milliseconds a message will remain uncompacted in the log.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMinCompactionLagMsOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
+     * It is helpful if you need to control the size of log due to limited disk space.
+     * This setting overrides the cluster-level [KafkaConfig4.log_retention_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+     * @return Whether the retentionBytes field is set.
+     */
+    boolean hasRetentionBytes();
+    /**
+     * <pre>
+     * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
+     * It is helpful if you need to control the size of log due to limited disk space.
+     * This setting overrides the cluster-level [KafkaConfig4.log_retention_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+     * @return The retentionBytes.
+     */
+    com.google.protobuf.Int64Value getRetentionBytes();
+    /**
+     * <pre>
+     * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
+     * It is helpful if you need to control the size of log due to limited disk space.
+     * This setting overrides the cluster-level [KafkaConfig4.log_retention_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getRetentionBytesOrBuilder();
+
+    /**
+     * <pre>
+     * The number of milliseconds to keep a log segment's file before deleting it.
+     * This setting overrides the cluster-level [KafkaConfig4.log_retention_ms] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+     * @return Whether the retentionMs field is set.
+     */
+    boolean hasRetentionMs();
+    /**
+     * <pre>
+     * The number of milliseconds to keep a log segment's file before deleting it.
+     * This setting overrides the cluster-level [KafkaConfig4.log_retention_ms] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+     * @return The retentionMs.
+     */
+    com.google.protobuf.Int64Value getRetentionMs();
+    /**
+     * <pre>
+     * The number of milliseconds to keep a log segment's file before deleting it.
+     * This setting overrides the cluster-level [KafkaConfig4.log_retention_ms] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getRetentionMsOrBuilder();
+
+    /**
+     * <pre>
+     * The largest record batch size allowed in topic.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     * @return Whether the maxMessageBytes field is set.
+     */
+    boolean hasMaxMessageBytes();
+    /**
+     * <pre>
+     * The largest record batch size allowed in topic.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     * @return The maxMessageBytes.
+     */
+    com.google.protobuf.Int64Value getMaxMessageBytes();
+    /**
+     * <pre>
+     * The largest record batch size allowed in topic.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxMessageBytesOrBuilder();
+
+    /**
+     * <pre>
+     * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+     * to be considered successful (when a producer sets acks to "all").
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     * @return Whether the minInsyncReplicas field is set.
+     */
+    boolean hasMinInsyncReplicas();
+    /**
+     * <pre>
+     * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+     * to be considered successful (when a producer sets acks to "all").
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     * @return The minInsyncReplicas.
+     */
+    com.google.protobuf.Int64Value getMinInsyncReplicas();
+    /**
+     * <pre>
+     * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+     * to be considered successful (when a producer sets acks to "all").
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMinInsyncReplicasOrBuilder();
+
+    /**
+     * <pre>
+     * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+     * at a time so a larger segment size means fewer files but less granular control over retention.
+     * This setting overrides the cluster-level [KafkaConfig4.log_segment_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     * @return Whether the segmentBytes field is set.
+     */
+    boolean hasSegmentBytes();
+    /**
+     * <pre>
+     * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+     * at a time so a larger segment size means fewer files but less granular control over retention.
+     * This setting overrides the cluster-level [KafkaConfig4.log_segment_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     * @return The segmentBytes.
+     */
+    com.google.protobuf.Int64Value getSegmentBytes();
+    /**
+     * <pre>
+     * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+     * at a time so a larger segment size means fewer files but less granular control over retention.
+     * This setting overrides the cluster-level [KafkaConfig4.log_segment_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSegmentBytesOrBuilder();
+
+    /**
+     * <pre>
+     * True if we should preallocate the file on disk when creating a new log segment.
+     * This setting overrides the cluster-level [KafkaConfig4.log_preallocate] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * @return Whether the preallocate field is set.
+     */
+    boolean hasPreallocate();
+    /**
+     * <pre>
+     * True if we should preallocate the file on disk when creating a new log segment.
+     * This setting overrides the cluster-level [KafkaConfig4.log_preallocate] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * @return The preallocate.
+     */
+    com.google.protobuf.BoolValue getPreallocate();
+    /**
+     * <pre>
+     * True if we should preallocate the file on disk when creating a new log segment.
+     * This setting overrides the cluster-level [KafkaConfig4.log_preallocate] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder();
+
+    /**
+     * <pre>
+     * Define whether the timestamp in the message is message create time or log append time.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+     * @return The enum numeric value on the wire for messageTimestampType.
+     */
+    int getMessageTimestampTypeValue();
+    /**
+     * <pre>
+     * Define whether the timestamp in the message is message create time or log append time.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+     * @return The messageTimestampType.
+     */
+    yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType getMessageTimestampType();
+  }
+  /**
+   * <pre>
+   * Topic settings for 4.x
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.TopicConfig4}
+   */
+  public static final class TopicConfig4 extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.TopicConfig4)
+      TopicConfig4OrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TopicConfig4.newBuilder() to construct.
+    private TopicConfig4(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TopicConfig4() {
+      cleanupPolicy_ = 0;
+      compressionType_ = 0;
+      messageTimestampType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TopicConfig4();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TopicConfig4(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              cleanupPolicy_ = rawValue;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              compressionType_ = rawValue;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (deleteRetentionMs_ != null) {
+                subBuilder = deleteRetentionMs_.toBuilder();
+              }
+              deleteRetentionMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deleteRetentionMs_);
+                deleteRetentionMs_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (fileDeleteDelayMs_ != null) {
+                subBuilder = fileDeleteDelayMs_.toBuilder();
+              }
+              fileDeleteDelayMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(fileDeleteDelayMs_);
+                fileDeleteDelayMs_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (flushMessages_ != null) {
+                subBuilder = flushMessages_.toBuilder();
+              }
+              flushMessages_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(flushMessages_);
+                flushMessages_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (flushMs_ != null) {
+                subBuilder = flushMs_.toBuilder();
+              }
+              flushMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(flushMs_);
+                flushMs_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (minCompactionLagMs_ != null) {
+                subBuilder = minCompactionLagMs_.toBuilder();
+              }
+              minCompactionLagMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(minCompactionLagMs_);
+                minCompactionLagMs_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (retentionBytes_ != null) {
+                subBuilder = retentionBytes_.toBuilder();
+              }
+              retentionBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(retentionBytes_);
+                retentionBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (retentionMs_ != null) {
+                subBuilder = retentionMs_.toBuilder();
+              }
+              retentionMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(retentionMs_);
+                retentionMs_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxMessageBytes_ != null) {
+                subBuilder = maxMessageBytes_.toBuilder();
+              }
+              maxMessageBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxMessageBytes_);
+                maxMessageBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (minInsyncReplicas_ != null) {
+                subBuilder = minInsyncReplicas_.toBuilder();
+              }
+              minInsyncReplicas_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(minInsyncReplicas_);
+                minInsyncReplicas_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (segmentBytes_ != null) {
+                subBuilder = segmentBytes_.toBuilder();
+              }
+              segmentBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(segmentBytes_);
+                segmentBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (preallocate_ != null) {
+                subBuilder = preallocate_.toBuilder();
+              }
+              preallocate_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(preallocate_);
+                preallocate_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 112: {
+              int rawValue = input.readEnum();
+
+              messageTimestampType_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig4_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig4_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.class, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.kafka.v1.TopicConfig4.CleanupPolicy}
+     */
+    public enum CleanupPolicy
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * Cleanup policy is unspecified.
+       * </pre>
+       *
+       * <code>CLEANUP_POLICY_UNSPECIFIED = 0;</code>
+       */
+      CLEANUP_POLICY_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * This policy discards log segments when either their retention time or log size limit is reached. See also: [KafkaConfig4.log_retention_ms] and other similar parameters.
+       * </pre>
+       *
+       * <code>CLEANUP_POLICY_DELETE = 1;</code>
+       */
+      CLEANUP_POLICY_DELETE(1),
+      /**
+       * <pre>
+       * This policy compacts messages in log.
+       * </pre>
+       *
+       * <code>CLEANUP_POLICY_COMPACT = 2;</code>
+       */
+      CLEANUP_POLICY_COMPACT(2),
+      /**
+       * <pre>
+       * This policy use both compaction and deletion for messages and log segments.
+       * </pre>
+       *
+       * <code>CLEANUP_POLICY_COMPACT_AND_DELETE = 3;</code>
+       */
+      CLEANUP_POLICY_COMPACT_AND_DELETE(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * Cleanup policy is unspecified.
+       * </pre>
+       *
+       * <code>CLEANUP_POLICY_UNSPECIFIED = 0;</code>
+       */
+      public static final int CLEANUP_POLICY_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * This policy discards log segments when either their retention time or log size limit is reached. See also: [KafkaConfig4.log_retention_ms] and other similar parameters.
+       * </pre>
+       *
+       * <code>CLEANUP_POLICY_DELETE = 1;</code>
+       */
+      public static final int CLEANUP_POLICY_DELETE_VALUE = 1;
+      /**
+       * <pre>
+       * This policy compacts messages in log.
+       * </pre>
+       *
+       * <code>CLEANUP_POLICY_COMPACT = 2;</code>
+       */
+      public static final int CLEANUP_POLICY_COMPACT_VALUE = 2;
+      /**
+       * <pre>
+       * This policy use both compaction and deletion for messages and log segments.
+       * </pre>
+       *
+       * <code>CLEANUP_POLICY_COMPACT_AND_DELETE = 3;</code>
+       */
+      public static final int CLEANUP_POLICY_COMPACT_AND_DELETE_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static CleanupPolicy valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static CleanupPolicy forNumber(int value) {
+        switch (value) {
+          case 0: return CLEANUP_POLICY_UNSPECIFIED;
+          case 1: return CLEANUP_POLICY_DELETE;
+          case 2: return CLEANUP_POLICY_COMPACT;
+          case 3: return CLEANUP_POLICY_COMPACT_AND_DELETE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<CleanupPolicy>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          CleanupPolicy> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<CleanupPolicy>() {
+              public CleanupPolicy findValueByNumber(int number) {
+                return CleanupPolicy.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final CleanupPolicy[] VALUES = values();
+
+      public static CleanupPolicy valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private CleanupPolicy(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.kafka.v1.TopicConfig4.CleanupPolicy)
+    }
+
+    public static final int CLEANUP_POLICY_FIELD_NUMBER = 1;
+    private int cleanupPolicy_;
+    /**
+     * <pre>
+     * Retention policy to use on old log messages.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4.CleanupPolicy cleanup_policy = 1;</code>
+     * @return The enum numeric value on the wire for cleanupPolicy.
+     */
+    @java.lang.Override public int getCleanupPolicyValue() {
+      return cleanupPolicy_;
+    }
+    /**
+     * <pre>
+     * Retention policy to use on old log messages.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4.CleanupPolicy cleanup_policy = 1;</code>
+     * @return The cleanupPolicy.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.CleanupPolicy getCleanupPolicy() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.CleanupPolicy result = yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.CleanupPolicy.valueOf(cleanupPolicy_);
+      return result == null ? yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.CleanupPolicy.UNRECOGNIZED : result;
+    }
+
+    public static final int COMPRESSION_TYPE_FIELD_NUMBER = 2;
+    private int compressionType_;
+    /**
+     * <pre>
+     * The compression type for a given topic.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+     * @return The enum numeric value on the wire for compressionType.
+     */
+    @java.lang.Override public int getCompressionTypeValue() {
+      return compressionType_;
+    }
+    /**
+     * <pre>
+     * The compression type for a given topic.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+     * @return The compressionType.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.kafka.v1.Common.CompressionType getCompressionType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.kafka.v1.Common.CompressionType result = yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.valueOf(compressionType_);
+      return result == null ? yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.UNRECOGNIZED : result;
+    }
+
+    public static final int DELETE_RETENTION_MS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Int64Value deleteRetentionMs_;
+    /**
+     * <pre>
+     * The amount of time in milliseconds to retain delete tombstone markers for log compacted topics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+     * @return Whether the deleteRetentionMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeleteRetentionMs() {
+      return deleteRetentionMs_ != null;
+    }
+    /**
+     * <pre>
+     * The amount of time in milliseconds to retain delete tombstone markers for log compacted topics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+     * @return The deleteRetentionMs.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getDeleteRetentionMs() {
+      return deleteRetentionMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : deleteRetentionMs_;
+    }
+    /**
+     * <pre>
+     * The amount of time in milliseconds to retain delete tombstone markers for log compacted topics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getDeleteRetentionMsOrBuilder() {
+      return getDeleteRetentionMs();
+    }
+
+    public static final int FILE_DELETE_DELAY_MS_FIELD_NUMBER = 4;
+    private com.google.protobuf.Int64Value fileDeleteDelayMs_;
+    /**
+     * <pre>
+     * The time to wait before deleting a file from the filesystem.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+     * @return Whether the fileDeleteDelayMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasFileDeleteDelayMs() {
+      return fileDeleteDelayMs_ != null;
+    }
+    /**
+     * <pre>
+     * The time to wait before deleting a file from the filesystem.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+     * @return The fileDeleteDelayMs.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getFileDeleteDelayMs() {
+      return fileDeleteDelayMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : fileDeleteDelayMs_;
+    }
+    /**
+     * <pre>
+     * The time to wait before deleting a file from the filesystem.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getFileDeleteDelayMsOrBuilder() {
+      return getFileDeleteDelayMs();
+    }
+
+    public static final int FLUSH_MESSAGES_FIELD_NUMBER = 5;
+    private com.google.protobuf.Int64Value flushMessages_;
+    /**
+     * <pre>
+     * The number of messages accumulated on a log partition before messages are flushed to disk.
+     * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_messages] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+     * @return Whether the flushMessages field is set.
+     */
+    @java.lang.Override
+    public boolean hasFlushMessages() {
+      return flushMessages_ != null;
+    }
+    /**
+     * <pre>
+     * The number of messages accumulated on a log partition before messages are flushed to disk.
+     * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_messages] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+     * @return The flushMessages.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getFlushMessages() {
+      return flushMessages_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : flushMessages_;
+    }
+    /**
+     * <pre>
+     * The number of messages accumulated on a log partition before messages are flushed to disk.
+     * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_messages] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getFlushMessagesOrBuilder() {
+      return getFlushMessages();
+    }
+
+    public static final int FLUSH_MS_FIELD_NUMBER = 6;
+    private com.google.protobuf.Int64Value flushMs_;
+    /**
+     * <pre>
+     * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
+     * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_ms] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+     * @return Whether the flushMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasFlushMs() {
+      return flushMs_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
+     * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_ms] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+     * @return The flushMs.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getFlushMs() {
+      return flushMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : flushMs_;
+    }
+    /**
+     * <pre>
+     * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
+     * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_ms] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getFlushMsOrBuilder() {
+      return getFlushMs();
+    }
+
+    public static final int MIN_COMPACTION_LAG_MS_FIELD_NUMBER = 7;
+    private com.google.protobuf.Int64Value minCompactionLagMs_;
+    /**
+     * <pre>
+     * The minimum time in milliseconds a message will remain uncompacted in the log.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+     * @return Whether the minCompactionLagMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasMinCompactionLagMs() {
+      return minCompactionLagMs_ != null;
+    }
+    /**
+     * <pre>
+     * The minimum time in milliseconds a message will remain uncompacted in the log.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+     * @return The minCompactionLagMs.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMinCompactionLagMs() {
+      return minCompactionLagMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minCompactionLagMs_;
+    }
+    /**
+     * <pre>
+     * The minimum time in milliseconds a message will remain uncompacted in the log.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMinCompactionLagMsOrBuilder() {
+      return getMinCompactionLagMs();
+    }
+
+    public static final int RETENTION_BYTES_FIELD_NUMBER = 8;
+    private com.google.protobuf.Int64Value retentionBytes_;
+    /**
+     * <pre>
+     * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
+     * It is helpful if you need to control the size of log due to limited disk space.
+     * This setting overrides the cluster-level [KafkaConfig4.log_retention_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+     * @return Whether the retentionBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasRetentionBytes() {
+      return retentionBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
+     * It is helpful if you need to control the size of log due to limited disk space.
+     * This setting overrides the cluster-level [KafkaConfig4.log_retention_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+     * @return The retentionBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getRetentionBytes() {
+      return retentionBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : retentionBytes_;
+    }
+    /**
+     * <pre>
+     * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
+     * It is helpful if you need to control the size of log due to limited disk space.
+     * This setting overrides the cluster-level [KafkaConfig4.log_retention_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getRetentionBytesOrBuilder() {
+      return getRetentionBytes();
+    }
+
+    public static final int RETENTION_MS_FIELD_NUMBER = 9;
+    private com.google.protobuf.Int64Value retentionMs_;
+    /**
+     * <pre>
+     * The number of milliseconds to keep a log segment's file before deleting it.
+     * This setting overrides the cluster-level [KafkaConfig4.log_retention_ms] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+     * @return Whether the retentionMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasRetentionMs() {
+      return retentionMs_ != null;
+    }
+    /**
+     * <pre>
+     * The number of milliseconds to keep a log segment's file before deleting it.
+     * This setting overrides the cluster-level [KafkaConfig4.log_retention_ms] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+     * @return The retentionMs.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getRetentionMs() {
+      return retentionMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : retentionMs_;
+    }
+    /**
+     * <pre>
+     * The number of milliseconds to keep a log segment's file before deleting it.
+     * This setting overrides the cluster-level [KafkaConfig4.log_retention_ms] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getRetentionMsOrBuilder() {
+      return getRetentionMs();
+    }
+
+    public static final int MAX_MESSAGE_BYTES_FIELD_NUMBER = 10;
+    private com.google.protobuf.Int64Value maxMessageBytes_;
+    /**
+     * <pre>
+     * The largest record batch size allowed in topic.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     * @return Whether the maxMessageBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxMessageBytes() {
+      return maxMessageBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The largest record batch size allowed in topic.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     * @return The maxMessageBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxMessageBytes() {
+      return maxMessageBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxMessageBytes_;
+    }
+    /**
+     * <pre>
+     * The largest record batch size allowed in topic.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxMessageBytesOrBuilder() {
+      return getMaxMessageBytes();
+    }
+
+    public static final int MIN_INSYNC_REPLICAS_FIELD_NUMBER = 11;
+    private com.google.protobuf.Int64Value minInsyncReplicas_;
+    /**
+     * <pre>
+     * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+     * to be considered successful (when a producer sets acks to "all").
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     * @return Whether the minInsyncReplicas field is set.
+     */
+    @java.lang.Override
+    public boolean hasMinInsyncReplicas() {
+      return minInsyncReplicas_ != null;
+    }
+    /**
+     * <pre>
+     * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+     * to be considered successful (when a producer sets acks to "all").
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     * @return The minInsyncReplicas.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMinInsyncReplicas() {
+      return minInsyncReplicas_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minInsyncReplicas_;
+    }
+    /**
+     * <pre>
+     * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+     * to be considered successful (when a producer sets acks to "all").
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMinInsyncReplicasOrBuilder() {
+      return getMinInsyncReplicas();
+    }
+
+    public static final int SEGMENT_BYTES_FIELD_NUMBER = 12;
+    private com.google.protobuf.Int64Value segmentBytes_;
+    /**
+     * <pre>
+     * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+     * at a time so a larger segment size means fewer files but less granular control over retention.
+     * This setting overrides the cluster-level [KafkaConfig4.log_segment_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     * @return Whether the segmentBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasSegmentBytes() {
+      return segmentBytes_ != null;
+    }
+    /**
+     * <pre>
+     * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+     * at a time so a larger segment size means fewer files but less granular control over retention.
+     * This setting overrides the cluster-level [KafkaConfig4.log_segment_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     * @return The segmentBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getSegmentBytes() {
+      return segmentBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : segmentBytes_;
+    }
+    /**
+     * <pre>
+     * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+     * at a time so a larger segment size means fewer files but less granular control over retention.
+     * This setting overrides the cluster-level [KafkaConfig4.log_segment_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getSegmentBytesOrBuilder() {
+      return getSegmentBytes();
+    }
+
+    public static final int PREALLOCATE_FIELD_NUMBER = 13;
+    private com.google.protobuf.BoolValue preallocate_;
+    /**
+     * <pre>
+     * True if we should preallocate the file on disk when creating a new log segment.
+     * This setting overrides the cluster-level [KafkaConfig4.log_preallocate] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * @return Whether the preallocate field is set.
+     */
+    @java.lang.Override
+    public boolean hasPreallocate() {
+      return preallocate_ != null;
+    }
+    /**
+     * <pre>
+     * True if we should preallocate the file on disk when creating a new log segment.
+     * This setting overrides the cluster-level [KafkaConfig4.log_preallocate] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * @return The preallocate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getPreallocate() {
+      return preallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preallocate_;
+    }
+    /**
+     * <pre>
+     * True if we should preallocate the file on disk when creating a new log segment.
+     * This setting overrides the cluster-level [KafkaConfig4.log_preallocate] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
+      return getPreallocate();
+    }
+
+    public static final int MESSAGE_TIMESTAMP_TYPE_FIELD_NUMBER = 14;
+    private int messageTimestampType_;
+    /**
+     * <pre>
+     * Define whether the timestamp in the message is message create time or log append time.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+     * @return The enum numeric value on the wire for messageTimestampType.
+     */
+    @java.lang.Override public int getMessageTimestampTypeValue() {
+      return messageTimestampType_;
+    }
+    /**
+     * <pre>
+     * Define whether the timestamp in the message is message create time or log append time.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+     * @return The messageTimestampType.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType getMessageTimestampType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType result = yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType.valueOf(messageTimestampType_);
+      return result == null ? yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (cleanupPolicy_ != yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.CleanupPolicy.CLEANUP_POLICY_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, cleanupPolicy_);
+      }
+      if (compressionType_ != yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.COMPRESSION_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, compressionType_);
+      }
+      if (deleteRetentionMs_ != null) {
+        output.writeMessage(3, getDeleteRetentionMs());
+      }
+      if (fileDeleteDelayMs_ != null) {
+        output.writeMessage(4, getFileDeleteDelayMs());
+      }
+      if (flushMessages_ != null) {
+        output.writeMessage(5, getFlushMessages());
+      }
+      if (flushMs_ != null) {
+        output.writeMessage(6, getFlushMs());
+      }
+      if (minCompactionLagMs_ != null) {
+        output.writeMessage(7, getMinCompactionLagMs());
+      }
+      if (retentionBytes_ != null) {
+        output.writeMessage(8, getRetentionBytes());
+      }
+      if (retentionMs_ != null) {
+        output.writeMessage(9, getRetentionMs());
+      }
+      if (maxMessageBytes_ != null) {
+        output.writeMessage(10, getMaxMessageBytes());
+      }
+      if (minInsyncReplicas_ != null) {
+        output.writeMessage(11, getMinInsyncReplicas());
+      }
+      if (segmentBytes_ != null) {
+        output.writeMessage(12, getSegmentBytes());
+      }
+      if (preallocate_ != null) {
+        output.writeMessage(13, getPreallocate());
+      }
+      if (messageTimestampType_ != yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType.MESSAGE_TIMESTAMP_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(14, messageTimestampType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (cleanupPolicy_ != yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.CleanupPolicy.CLEANUP_POLICY_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, cleanupPolicy_);
+      }
+      if (compressionType_ != yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.COMPRESSION_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, compressionType_);
+      }
+      if (deleteRetentionMs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDeleteRetentionMs());
+      }
+      if (fileDeleteDelayMs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getFileDeleteDelayMs());
+      }
+      if (flushMessages_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getFlushMessages());
+      }
+      if (flushMs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getFlushMs());
+      }
+      if (minCompactionLagMs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getMinCompactionLagMs());
+      }
+      if (retentionBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getRetentionBytes());
+      }
+      if (retentionMs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getRetentionMs());
+      }
+      if (maxMessageBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getMaxMessageBytes());
+      }
+      if (minInsyncReplicas_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getMinInsyncReplicas());
+      }
+      if (segmentBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getSegmentBytes());
+      }
+      if (preallocate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getPreallocate());
+      }
+      if (messageTimestampType_ != yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType.MESSAGE_TIMESTAMP_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(14, messageTimestampType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 other = (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) obj;
+
+      if (cleanupPolicy_ != other.cleanupPolicy_) return false;
+      if (compressionType_ != other.compressionType_) return false;
+      if (hasDeleteRetentionMs() != other.hasDeleteRetentionMs()) return false;
+      if (hasDeleteRetentionMs()) {
+        if (!getDeleteRetentionMs()
+            .equals(other.getDeleteRetentionMs())) return false;
+      }
+      if (hasFileDeleteDelayMs() != other.hasFileDeleteDelayMs()) return false;
+      if (hasFileDeleteDelayMs()) {
+        if (!getFileDeleteDelayMs()
+            .equals(other.getFileDeleteDelayMs())) return false;
+      }
+      if (hasFlushMessages() != other.hasFlushMessages()) return false;
+      if (hasFlushMessages()) {
+        if (!getFlushMessages()
+            .equals(other.getFlushMessages())) return false;
+      }
+      if (hasFlushMs() != other.hasFlushMs()) return false;
+      if (hasFlushMs()) {
+        if (!getFlushMs()
+            .equals(other.getFlushMs())) return false;
+      }
+      if (hasMinCompactionLagMs() != other.hasMinCompactionLagMs()) return false;
+      if (hasMinCompactionLagMs()) {
+        if (!getMinCompactionLagMs()
+            .equals(other.getMinCompactionLagMs())) return false;
+      }
+      if (hasRetentionBytes() != other.hasRetentionBytes()) return false;
+      if (hasRetentionBytes()) {
+        if (!getRetentionBytes()
+            .equals(other.getRetentionBytes())) return false;
+      }
+      if (hasRetentionMs() != other.hasRetentionMs()) return false;
+      if (hasRetentionMs()) {
+        if (!getRetentionMs()
+            .equals(other.getRetentionMs())) return false;
+      }
+      if (hasMaxMessageBytes() != other.hasMaxMessageBytes()) return false;
+      if (hasMaxMessageBytes()) {
+        if (!getMaxMessageBytes()
+            .equals(other.getMaxMessageBytes())) return false;
+      }
+      if (hasMinInsyncReplicas() != other.hasMinInsyncReplicas()) return false;
+      if (hasMinInsyncReplicas()) {
+        if (!getMinInsyncReplicas()
+            .equals(other.getMinInsyncReplicas())) return false;
+      }
+      if (hasSegmentBytes() != other.hasSegmentBytes()) return false;
+      if (hasSegmentBytes()) {
+        if (!getSegmentBytes()
+            .equals(other.getSegmentBytes())) return false;
+      }
+      if (hasPreallocate() != other.hasPreallocate()) return false;
+      if (hasPreallocate()) {
+        if (!getPreallocate()
+            .equals(other.getPreallocate())) return false;
+      }
+      if (messageTimestampType_ != other.messageTimestampType_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLEANUP_POLICY_FIELD_NUMBER;
+      hash = (53 * hash) + cleanupPolicy_;
+      hash = (37 * hash) + COMPRESSION_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + compressionType_;
+      if (hasDeleteRetentionMs()) {
+        hash = (37 * hash) + DELETE_RETENTION_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getDeleteRetentionMs().hashCode();
+      }
+      if (hasFileDeleteDelayMs()) {
+        hash = (37 * hash) + FILE_DELETE_DELAY_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getFileDeleteDelayMs().hashCode();
+      }
+      if (hasFlushMessages()) {
+        hash = (37 * hash) + FLUSH_MESSAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getFlushMessages().hashCode();
+      }
+      if (hasFlushMs()) {
+        hash = (37 * hash) + FLUSH_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getFlushMs().hashCode();
+      }
+      if (hasMinCompactionLagMs()) {
+        hash = (37 * hash) + MIN_COMPACTION_LAG_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getMinCompactionLagMs().hashCode();
+      }
+      if (hasRetentionBytes()) {
+        hash = (37 * hash) + RETENTION_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getRetentionBytes().hashCode();
+      }
+      if (hasRetentionMs()) {
+        hash = (37 * hash) + RETENTION_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getRetentionMs().hashCode();
+      }
+      if (hasMaxMessageBytes()) {
+        hash = (37 * hash) + MAX_MESSAGE_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxMessageBytes().hashCode();
+      }
+      if (hasMinInsyncReplicas()) {
+        hash = (37 * hash) + MIN_INSYNC_REPLICAS_FIELD_NUMBER;
+        hash = (53 * hash) + getMinInsyncReplicas().hashCode();
+      }
+      if (hasSegmentBytes()) {
+        hash = (37 * hash) + SEGMENT_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getSegmentBytes().hashCode();
+      }
+      if (hasPreallocate()) {
+        hash = (37 * hash) + PREALLOCATE_FIELD_NUMBER;
+        hash = (53 * hash) + getPreallocate().hashCode();
+      }
+      hash = (37 * hash) + MESSAGE_TIMESTAMP_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + messageTimestampType_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Topic settings for 4.x
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.TopicConfig4}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.TopicConfig4)
+        yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig4_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig4_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.class, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        cleanupPolicy_ = 0;
+
+        compressionType_ = 0;
+
+        if (deleteRetentionMsBuilder_ == null) {
+          deleteRetentionMs_ = null;
+        } else {
+          deleteRetentionMs_ = null;
+          deleteRetentionMsBuilder_ = null;
+        }
+        if (fileDeleteDelayMsBuilder_ == null) {
+          fileDeleteDelayMs_ = null;
+        } else {
+          fileDeleteDelayMs_ = null;
+          fileDeleteDelayMsBuilder_ = null;
+        }
+        if (flushMessagesBuilder_ == null) {
+          flushMessages_ = null;
+        } else {
+          flushMessages_ = null;
+          flushMessagesBuilder_ = null;
+        }
+        if (flushMsBuilder_ == null) {
+          flushMs_ = null;
+        } else {
+          flushMs_ = null;
+          flushMsBuilder_ = null;
+        }
+        if (minCompactionLagMsBuilder_ == null) {
+          minCompactionLagMs_ = null;
+        } else {
+          minCompactionLagMs_ = null;
+          minCompactionLagMsBuilder_ = null;
+        }
+        if (retentionBytesBuilder_ == null) {
+          retentionBytes_ = null;
+        } else {
+          retentionBytes_ = null;
+          retentionBytesBuilder_ = null;
+        }
+        if (retentionMsBuilder_ == null) {
+          retentionMs_ = null;
+        } else {
+          retentionMs_ = null;
+          retentionMsBuilder_ = null;
+        }
+        if (maxMessageBytesBuilder_ == null) {
+          maxMessageBytes_ = null;
+        } else {
+          maxMessageBytes_ = null;
+          maxMessageBytesBuilder_ = null;
+        }
+        if (minInsyncReplicasBuilder_ == null) {
+          minInsyncReplicas_ = null;
+        } else {
+          minInsyncReplicas_ = null;
+          minInsyncReplicasBuilder_ = null;
+        }
+        if (segmentBytesBuilder_ == null) {
+          segmentBytes_ = null;
+        } else {
+          segmentBytes_ = null;
+          segmentBytesBuilder_ = null;
+        }
+        if (preallocateBuilder_ == null) {
+          preallocate_ = null;
+        } else {
+          preallocate_ = null;
+          preallocateBuilder_ = null;
+        }
+        messageTimestampType_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig4_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 build() {
+        yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 result = new yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4(this);
+        result.cleanupPolicy_ = cleanupPolicy_;
+        result.compressionType_ = compressionType_;
+        if (deleteRetentionMsBuilder_ == null) {
+          result.deleteRetentionMs_ = deleteRetentionMs_;
+        } else {
+          result.deleteRetentionMs_ = deleteRetentionMsBuilder_.build();
+        }
+        if (fileDeleteDelayMsBuilder_ == null) {
+          result.fileDeleteDelayMs_ = fileDeleteDelayMs_;
+        } else {
+          result.fileDeleteDelayMs_ = fileDeleteDelayMsBuilder_.build();
+        }
+        if (flushMessagesBuilder_ == null) {
+          result.flushMessages_ = flushMessages_;
+        } else {
+          result.flushMessages_ = flushMessagesBuilder_.build();
+        }
+        if (flushMsBuilder_ == null) {
+          result.flushMs_ = flushMs_;
+        } else {
+          result.flushMs_ = flushMsBuilder_.build();
+        }
+        if (minCompactionLagMsBuilder_ == null) {
+          result.minCompactionLagMs_ = minCompactionLagMs_;
+        } else {
+          result.minCompactionLagMs_ = minCompactionLagMsBuilder_.build();
+        }
+        if (retentionBytesBuilder_ == null) {
+          result.retentionBytes_ = retentionBytes_;
+        } else {
+          result.retentionBytes_ = retentionBytesBuilder_.build();
+        }
+        if (retentionMsBuilder_ == null) {
+          result.retentionMs_ = retentionMs_;
+        } else {
+          result.retentionMs_ = retentionMsBuilder_.build();
+        }
+        if (maxMessageBytesBuilder_ == null) {
+          result.maxMessageBytes_ = maxMessageBytes_;
+        } else {
+          result.maxMessageBytes_ = maxMessageBytesBuilder_.build();
+        }
+        if (minInsyncReplicasBuilder_ == null) {
+          result.minInsyncReplicas_ = minInsyncReplicas_;
+        } else {
+          result.minInsyncReplicas_ = minInsyncReplicasBuilder_.build();
+        }
+        if (segmentBytesBuilder_ == null) {
+          result.segmentBytes_ = segmentBytes_;
+        } else {
+          result.segmentBytes_ = segmentBytesBuilder_.build();
+        }
+        if (preallocateBuilder_ == null) {
+          result.preallocate_ = preallocate_;
+        } else {
+          result.preallocate_ = preallocateBuilder_.build();
+        }
+        result.messageTimestampType_ = messageTimestampType_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.getDefaultInstance()) return this;
+        if (other.cleanupPolicy_ != 0) {
+          setCleanupPolicyValue(other.getCleanupPolicyValue());
+        }
+        if (other.compressionType_ != 0) {
+          setCompressionTypeValue(other.getCompressionTypeValue());
+        }
+        if (other.hasDeleteRetentionMs()) {
+          mergeDeleteRetentionMs(other.getDeleteRetentionMs());
+        }
+        if (other.hasFileDeleteDelayMs()) {
+          mergeFileDeleteDelayMs(other.getFileDeleteDelayMs());
+        }
+        if (other.hasFlushMessages()) {
+          mergeFlushMessages(other.getFlushMessages());
+        }
+        if (other.hasFlushMs()) {
+          mergeFlushMs(other.getFlushMs());
+        }
+        if (other.hasMinCompactionLagMs()) {
+          mergeMinCompactionLagMs(other.getMinCompactionLagMs());
+        }
+        if (other.hasRetentionBytes()) {
+          mergeRetentionBytes(other.getRetentionBytes());
+        }
+        if (other.hasRetentionMs()) {
+          mergeRetentionMs(other.getRetentionMs());
+        }
+        if (other.hasMaxMessageBytes()) {
+          mergeMaxMessageBytes(other.getMaxMessageBytes());
+        }
+        if (other.hasMinInsyncReplicas()) {
+          mergeMinInsyncReplicas(other.getMinInsyncReplicas());
+        }
+        if (other.hasSegmentBytes()) {
+          mergeSegmentBytes(other.getSegmentBytes());
+        }
+        if (other.hasPreallocate()) {
+          mergePreallocate(other.getPreallocate());
+        }
+        if (other.messageTimestampType_ != 0) {
+          setMessageTimestampTypeValue(other.getMessageTimestampTypeValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int cleanupPolicy_ = 0;
+      /**
+       * <pre>
+       * Retention policy to use on old log messages.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4.CleanupPolicy cleanup_policy = 1;</code>
+       * @return The enum numeric value on the wire for cleanupPolicy.
+       */
+      @java.lang.Override public int getCleanupPolicyValue() {
+        return cleanupPolicy_;
+      }
+      /**
+       * <pre>
+       * Retention policy to use on old log messages.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4.CleanupPolicy cleanup_policy = 1;</code>
+       * @param value The enum numeric value on the wire for cleanupPolicy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCleanupPolicyValue(int value) {
+        
+        cleanupPolicy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Retention policy to use on old log messages.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4.CleanupPolicy cleanup_policy = 1;</code>
+       * @return The cleanupPolicy.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.CleanupPolicy getCleanupPolicy() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.CleanupPolicy result = yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.CleanupPolicy.valueOf(cleanupPolicy_);
+        return result == null ? yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.CleanupPolicy.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Retention policy to use on old log messages.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4.CleanupPolicy cleanup_policy = 1;</code>
+       * @param value The cleanupPolicy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCleanupPolicy(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4.CleanupPolicy value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        cleanupPolicy_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Retention policy to use on old log messages.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig4.CleanupPolicy cleanup_policy = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCleanupPolicy() {
+        
+        cleanupPolicy_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int compressionType_ = 0;
+      /**
+       * <pre>
+       * The compression type for a given topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+       * @return The enum numeric value on the wire for compressionType.
+       */
+      @java.lang.Override public int getCompressionTypeValue() {
+        return compressionType_;
+      }
+      /**
+       * <pre>
+       * The compression type for a given topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+       * @param value The enum numeric value on the wire for compressionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompressionTypeValue(int value) {
+        
+        compressionType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The compression type for a given topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+       * @return The compressionType.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.Common.CompressionType getCompressionType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.kafka.v1.Common.CompressionType result = yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.valueOf(compressionType_);
+        return result == null ? yandex.cloud.api.mdb.kafka.v1.Common.CompressionType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * The compression type for a given topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+       * @param value The compressionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompressionType(yandex.cloud.api.mdb.kafka.v1.Common.CompressionType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        compressionType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The compression type for a given topic.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCompressionType() {
+        
+        compressionType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value deleteRetentionMs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> deleteRetentionMsBuilder_;
+      /**
+       * <pre>
+       * The amount of time in milliseconds to retain delete tombstone markers for log compacted topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+       * @return Whether the deleteRetentionMs field is set.
+       */
+      public boolean hasDeleteRetentionMs() {
+        return deleteRetentionMsBuilder_ != null || deleteRetentionMs_ != null;
+      }
+      /**
+       * <pre>
+       * The amount of time in milliseconds to retain delete tombstone markers for log compacted topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+       * @return The deleteRetentionMs.
+       */
+      public com.google.protobuf.Int64Value getDeleteRetentionMs() {
+        if (deleteRetentionMsBuilder_ == null) {
+          return deleteRetentionMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : deleteRetentionMs_;
+        } else {
+          return deleteRetentionMsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The amount of time in milliseconds to retain delete tombstone markers for log compacted topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+       */
+      public Builder setDeleteRetentionMs(com.google.protobuf.Int64Value value) {
+        if (deleteRetentionMsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deleteRetentionMs_ = value;
+          onChanged();
+        } else {
+          deleteRetentionMsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The amount of time in milliseconds to retain delete tombstone markers for log compacted topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+       */
+      public Builder setDeleteRetentionMs(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (deleteRetentionMsBuilder_ == null) {
+          deleteRetentionMs_ = builderForValue.build();
+          onChanged();
+        } else {
+          deleteRetentionMsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The amount of time in milliseconds to retain delete tombstone markers for log compacted topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+       */
+      public Builder mergeDeleteRetentionMs(com.google.protobuf.Int64Value value) {
+        if (deleteRetentionMsBuilder_ == null) {
+          if (deleteRetentionMs_ != null) {
+            deleteRetentionMs_ =
+              com.google.protobuf.Int64Value.newBuilder(deleteRetentionMs_).mergeFrom(value).buildPartial();
+          } else {
+            deleteRetentionMs_ = value;
+          }
+          onChanged();
+        } else {
+          deleteRetentionMsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The amount of time in milliseconds to retain delete tombstone markers for log compacted topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+       */
+      public Builder clearDeleteRetentionMs() {
+        if (deleteRetentionMsBuilder_ == null) {
+          deleteRetentionMs_ = null;
+          onChanged();
+        } else {
+          deleteRetentionMs_ = null;
+          deleteRetentionMsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The amount of time in milliseconds to retain delete tombstone markers for log compacted topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getDeleteRetentionMsBuilder() {
+        
+        onChanged();
+        return getDeleteRetentionMsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The amount of time in milliseconds to retain delete tombstone markers for log compacted topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getDeleteRetentionMsOrBuilder() {
+        if (deleteRetentionMsBuilder_ != null) {
+          return deleteRetentionMsBuilder_.getMessageOrBuilder();
+        } else {
+          return deleteRetentionMs_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : deleteRetentionMs_;
+        }
+      }
+      /**
+       * <pre>
+       * The amount of time in milliseconds to retain delete tombstone markers for log compacted topics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value delete_retention_ms = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getDeleteRetentionMsFieldBuilder() {
+        if (deleteRetentionMsBuilder_ == null) {
+          deleteRetentionMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getDeleteRetentionMs(),
+                  getParentForChildren(),
+                  isClean());
+          deleteRetentionMs_ = null;
+        }
+        return deleteRetentionMsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value fileDeleteDelayMs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> fileDeleteDelayMsBuilder_;
+      /**
+       * <pre>
+       * The time to wait before deleting a file from the filesystem.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+       * @return Whether the fileDeleteDelayMs field is set.
+       */
+      public boolean hasFileDeleteDelayMs() {
+        return fileDeleteDelayMsBuilder_ != null || fileDeleteDelayMs_ != null;
+      }
+      /**
+       * <pre>
+       * The time to wait before deleting a file from the filesystem.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+       * @return The fileDeleteDelayMs.
+       */
+      public com.google.protobuf.Int64Value getFileDeleteDelayMs() {
+        if (fileDeleteDelayMsBuilder_ == null) {
+          return fileDeleteDelayMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : fileDeleteDelayMs_;
+        } else {
+          return fileDeleteDelayMsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The time to wait before deleting a file from the filesystem.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+       */
+      public Builder setFileDeleteDelayMs(com.google.protobuf.Int64Value value) {
+        if (fileDeleteDelayMsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fileDeleteDelayMs_ = value;
+          onChanged();
+        } else {
+          fileDeleteDelayMsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time to wait before deleting a file from the filesystem.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+       */
+      public Builder setFileDeleteDelayMs(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (fileDeleteDelayMsBuilder_ == null) {
+          fileDeleteDelayMs_ = builderForValue.build();
+          onChanged();
+        } else {
+          fileDeleteDelayMsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time to wait before deleting a file from the filesystem.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+       */
+      public Builder mergeFileDeleteDelayMs(com.google.protobuf.Int64Value value) {
+        if (fileDeleteDelayMsBuilder_ == null) {
+          if (fileDeleteDelayMs_ != null) {
+            fileDeleteDelayMs_ =
+              com.google.protobuf.Int64Value.newBuilder(fileDeleteDelayMs_).mergeFrom(value).buildPartial();
+          } else {
+            fileDeleteDelayMs_ = value;
+          }
+          onChanged();
+        } else {
+          fileDeleteDelayMsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time to wait before deleting a file from the filesystem.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+       */
+      public Builder clearFileDeleteDelayMs() {
+        if (fileDeleteDelayMsBuilder_ == null) {
+          fileDeleteDelayMs_ = null;
+          onChanged();
+        } else {
+          fileDeleteDelayMs_ = null;
+          fileDeleteDelayMsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time to wait before deleting a file from the filesystem.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getFileDeleteDelayMsBuilder() {
+        
+        onChanged();
+        return getFileDeleteDelayMsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The time to wait before deleting a file from the filesystem.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getFileDeleteDelayMsOrBuilder() {
+        if (fileDeleteDelayMsBuilder_ != null) {
+          return fileDeleteDelayMsBuilder_.getMessageOrBuilder();
+        } else {
+          return fileDeleteDelayMs_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : fileDeleteDelayMs_;
+        }
+      }
+      /**
+       * <pre>
+       * The time to wait before deleting a file from the filesystem.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value file_delete_delay_ms = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getFileDeleteDelayMsFieldBuilder() {
+        if (fileDeleteDelayMsBuilder_ == null) {
+          fileDeleteDelayMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getFileDeleteDelayMs(),
+                  getParentForChildren(),
+                  isClean());
+          fileDeleteDelayMs_ = null;
+        }
+        return fileDeleteDelayMsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value flushMessages_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> flushMessagesBuilder_;
+      /**
+       * <pre>
+       * The number of messages accumulated on a log partition before messages are flushed to disk.
+       * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_messages] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+       * @return Whether the flushMessages field is set.
+       */
+      public boolean hasFlushMessages() {
+        return flushMessagesBuilder_ != null || flushMessages_ != null;
+      }
+      /**
+       * <pre>
+       * The number of messages accumulated on a log partition before messages are flushed to disk.
+       * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_messages] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+       * @return The flushMessages.
+       */
+      public com.google.protobuf.Int64Value getFlushMessages() {
+        if (flushMessagesBuilder_ == null) {
+          return flushMessages_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : flushMessages_;
+        } else {
+          return flushMessagesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of messages accumulated on a log partition before messages are flushed to disk.
+       * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_messages] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+       */
+      public Builder setFlushMessages(com.google.protobuf.Int64Value value) {
+        if (flushMessagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          flushMessages_ = value;
+          onChanged();
+        } else {
+          flushMessagesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of messages accumulated on a log partition before messages are flushed to disk.
+       * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_messages] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+       */
+      public Builder setFlushMessages(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (flushMessagesBuilder_ == null) {
+          flushMessages_ = builderForValue.build();
+          onChanged();
+        } else {
+          flushMessagesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of messages accumulated on a log partition before messages are flushed to disk.
+       * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_messages] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+       */
+      public Builder mergeFlushMessages(com.google.protobuf.Int64Value value) {
+        if (flushMessagesBuilder_ == null) {
+          if (flushMessages_ != null) {
+            flushMessages_ =
+              com.google.protobuf.Int64Value.newBuilder(flushMessages_).mergeFrom(value).buildPartial();
+          } else {
+            flushMessages_ = value;
+          }
+          onChanged();
+        } else {
+          flushMessagesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of messages accumulated on a log partition before messages are flushed to disk.
+       * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_messages] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+       */
+      public Builder clearFlushMessages() {
+        if (flushMessagesBuilder_ == null) {
+          flushMessages_ = null;
+          onChanged();
+        } else {
+          flushMessages_ = null;
+          flushMessagesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of messages accumulated on a log partition before messages are flushed to disk.
+       * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_messages] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getFlushMessagesBuilder() {
+        
+        onChanged();
+        return getFlushMessagesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of messages accumulated on a log partition before messages are flushed to disk.
+       * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_messages] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getFlushMessagesOrBuilder() {
+        if (flushMessagesBuilder_ != null) {
+          return flushMessagesBuilder_.getMessageOrBuilder();
+        } else {
+          return flushMessages_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : flushMessages_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of messages accumulated on a log partition before messages are flushed to disk.
+       * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_messages] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getFlushMessagesFieldBuilder() {
+        if (flushMessagesBuilder_ == null) {
+          flushMessagesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getFlushMessages(),
+                  getParentForChildren(),
+                  isClean());
+          flushMessages_ = null;
+        }
+        return flushMessagesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value flushMs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> flushMsBuilder_;
+      /**
+       * <pre>
+       * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
+       * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_ms] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+       * @return Whether the flushMs field is set.
+       */
+      public boolean hasFlushMs() {
+        return flushMsBuilder_ != null || flushMs_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
+       * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_ms] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+       * @return The flushMs.
+       */
+      public com.google.protobuf.Int64Value getFlushMs() {
+        if (flushMsBuilder_ == null) {
+          return flushMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : flushMs_;
+        } else {
+          return flushMsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
+       * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_ms] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+       */
+      public Builder setFlushMs(com.google.protobuf.Int64Value value) {
+        if (flushMsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          flushMs_ = value;
+          onChanged();
+        } else {
+          flushMsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
+       * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_ms] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+       */
+      public Builder setFlushMs(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (flushMsBuilder_ == null) {
+          flushMs_ = builderForValue.build();
+          onChanged();
+        } else {
+          flushMsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
+       * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_ms] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+       */
+      public Builder mergeFlushMs(com.google.protobuf.Int64Value value) {
+        if (flushMsBuilder_ == null) {
+          if (flushMs_ != null) {
+            flushMs_ =
+              com.google.protobuf.Int64Value.newBuilder(flushMs_).mergeFrom(value).buildPartial();
+          } else {
+            flushMs_ = value;
+          }
+          onChanged();
+        } else {
+          flushMsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
+       * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_ms] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+       */
+      public Builder clearFlushMs() {
+        if (flushMsBuilder_ == null) {
+          flushMs_ = null;
+          onChanged();
+        } else {
+          flushMs_ = null;
+          flushMsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
+       * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_ms] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getFlushMsBuilder() {
+        
+        onChanged();
+        return getFlushMsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
+       * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_ms] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getFlushMsOrBuilder() {
+        if (flushMsBuilder_ != null) {
+          return flushMsBuilder_.getMessageOrBuilder();
+        } else {
+          return flushMs_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : flushMs_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
+       * This setting overrides the cluster-level [KafkaConfig4.log_flush_interval_ms] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getFlushMsFieldBuilder() {
+        if (flushMsBuilder_ == null) {
+          flushMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getFlushMs(),
+                  getParentForChildren(),
+                  isClean());
+          flushMs_ = null;
+        }
+        return flushMsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value minCompactionLagMs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minCompactionLagMsBuilder_;
+      /**
+       * <pre>
+       * The minimum time in milliseconds a message will remain uncompacted in the log.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+       * @return Whether the minCompactionLagMs field is set.
+       */
+      public boolean hasMinCompactionLagMs() {
+        return minCompactionLagMsBuilder_ != null || minCompactionLagMs_ != null;
+      }
+      /**
+       * <pre>
+       * The minimum time in milliseconds a message will remain uncompacted in the log.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+       * @return The minCompactionLagMs.
+       */
+      public com.google.protobuf.Int64Value getMinCompactionLagMs() {
+        if (minCompactionLagMsBuilder_ == null) {
+          return minCompactionLagMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minCompactionLagMs_;
+        } else {
+          return minCompactionLagMsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The minimum time in milliseconds a message will remain uncompacted in the log.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+       */
+      public Builder setMinCompactionLagMs(com.google.protobuf.Int64Value value) {
+        if (minCompactionLagMsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minCompactionLagMs_ = value;
+          onChanged();
+        } else {
+          minCompactionLagMsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The minimum time in milliseconds a message will remain uncompacted in the log.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+       */
+      public Builder setMinCompactionLagMs(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (minCompactionLagMsBuilder_ == null) {
+          minCompactionLagMs_ = builderForValue.build();
+          onChanged();
+        } else {
+          minCompactionLagMsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The minimum time in milliseconds a message will remain uncompacted in the log.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+       */
+      public Builder mergeMinCompactionLagMs(com.google.protobuf.Int64Value value) {
+        if (minCompactionLagMsBuilder_ == null) {
+          if (minCompactionLagMs_ != null) {
+            minCompactionLagMs_ =
+              com.google.protobuf.Int64Value.newBuilder(minCompactionLagMs_).mergeFrom(value).buildPartial();
+          } else {
+            minCompactionLagMs_ = value;
+          }
+          onChanged();
+        } else {
+          minCompactionLagMsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The minimum time in milliseconds a message will remain uncompacted in the log.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+       */
+      public Builder clearMinCompactionLagMs() {
+        if (minCompactionLagMsBuilder_ == null) {
+          minCompactionLagMs_ = null;
+          onChanged();
+        } else {
+          minCompactionLagMs_ = null;
+          minCompactionLagMsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The minimum time in milliseconds a message will remain uncompacted in the log.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMinCompactionLagMsBuilder() {
+        
+        onChanged();
+        return getMinCompactionLagMsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The minimum time in milliseconds a message will remain uncompacted in the log.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMinCompactionLagMsOrBuilder() {
+        if (minCompactionLagMsBuilder_ != null) {
+          return minCompactionLagMsBuilder_.getMessageOrBuilder();
+        } else {
+          return minCompactionLagMs_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : minCompactionLagMs_;
+        }
+      }
+      /**
+       * <pre>
+       * The minimum time in milliseconds a message will remain uncompacted in the log.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_compaction_lag_ms = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMinCompactionLagMsFieldBuilder() {
+        if (minCompactionLagMsBuilder_ == null) {
+          minCompactionLagMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMinCompactionLagMs(),
+                  getParentForChildren(),
+                  isClean());
+          minCompactionLagMs_ = null;
+        }
+        return minCompactionLagMsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value retentionBytes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> retentionBytesBuilder_;
+      /**
+       * <pre>
+       * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
+       * It is helpful if you need to control the size of log due to limited disk space.
+       * This setting overrides the cluster-level [KafkaConfig4.log_retention_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+       * @return Whether the retentionBytes field is set.
+       */
+      public boolean hasRetentionBytes() {
+        return retentionBytesBuilder_ != null || retentionBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
+       * It is helpful if you need to control the size of log due to limited disk space.
+       * This setting overrides the cluster-level [KafkaConfig4.log_retention_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+       * @return The retentionBytes.
+       */
+      public com.google.protobuf.Int64Value getRetentionBytes() {
+        if (retentionBytesBuilder_ == null) {
+          return retentionBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : retentionBytes_;
+        } else {
+          return retentionBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
+       * It is helpful if you need to control the size of log due to limited disk space.
+       * This setting overrides the cluster-level [KafkaConfig4.log_retention_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+       */
+      public Builder setRetentionBytes(com.google.protobuf.Int64Value value) {
+        if (retentionBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          retentionBytes_ = value;
+          onChanged();
+        } else {
+          retentionBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
+       * It is helpful if you need to control the size of log due to limited disk space.
+       * This setting overrides the cluster-level [KafkaConfig4.log_retention_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+       */
+      public Builder setRetentionBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (retentionBytesBuilder_ == null) {
+          retentionBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          retentionBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
+       * It is helpful if you need to control the size of log due to limited disk space.
+       * This setting overrides the cluster-level [KafkaConfig4.log_retention_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+       */
+      public Builder mergeRetentionBytes(com.google.protobuf.Int64Value value) {
+        if (retentionBytesBuilder_ == null) {
+          if (retentionBytes_ != null) {
+            retentionBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(retentionBytes_).mergeFrom(value).buildPartial();
+          } else {
+            retentionBytes_ = value;
+          }
+          onChanged();
+        } else {
+          retentionBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
+       * It is helpful if you need to control the size of log due to limited disk space.
+       * This setting overrides the cluster-level [KafkaConfig4.log_retention_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+       */
+      public Builder clearRetentionBytes() {
+        if (retentionBytesBuilder_ == null) {
+          retentionBytes_ = null;
+          onChanged();
+        } else {
+          retentionBytes_ = null;
+          retentionBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
+       * It is helpful if you need to control the size of log due to limited disk space.
+       * This setting overrides the cluster-level [KafkaConfig4.log_retention_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getRetentionBytesBuilder() {
+        
+        onChanged();
+        return getRetentionBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
+       * It is helpful if you need to control the size of log due to limited disk space.
+       * This setting overrides the cluster-level [KafkaConfig4.log_retention_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getRetentionBytesOrBuilder() {
+        if (retentionBytesBuilder_ != null) {
+          return retentionBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return retentionBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : retentionBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
+       * It is helpful if you need to control the size of log due to limited disk space.
+       * This setting overrides the cluster-level [KafkaConfig4.log_retention_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getRetentionBytesFieldBuilder() {
+        if (retentionBytesBuilder_ == null) {
+          retentionBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getRetentionBytes(),
+                  getParentForChildren(),
+                  isClean());
+          retentionBytes_ = null;
+        }
+        return retentionBytesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value retentionMs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> retentionMsBuilder_;
+      /**
+       * <pre>
+       * The number of milliseconds to keep a log segment's file before deleting it.
+       * This setting overrides the cluster-level [KafkaConfig4.log_retention_ms] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+       * @return Whether the retentionMs field is set.
+       */
+      public boolean hasRetentionMs() {
+        return retentionMsBuilder_ != null || retentionMs_ != null;
+      }
+      /**
+       * <pre>
+       * The number of milliseconds to keep a log segment's file before deleting it.
+       * This setting overrides the cluster-level [KafkaConfig4.log_retention_ms] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+       * @return The retentionMs.
+       */
+      public com.google.protobuf.Int64Value getRetentionMs() {
+        if (retentionMsBuilder_ == null) {
+          return retentionMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : retentionMs_;
+        } else {
+          return retentionMsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of milliseconds to keep a log segment's file before deleting it.
+       * This setting overrides the cluster-level [KafkaConfig4.log_retention_ms] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+       */
+      public Builder setRetentionMs(com.google.protobuf.Int64Value value) {
+        if (retentionMsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          retentionMs_ = value;
+          onChanged();
+        } else {
+          retentionMsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of milliseconds to keep a log segment's file before deleting it.
+       * This setting overrides the cluster-level [KafkaConfig4.log_retention_ms] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+       */
+      public Builder setRetentionMs(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (retentionMsBuilder_ == null) {
+          retentionMs_ = builderForValue.build();
+          onChanged();
+        } else {
+          retentionMsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of milliseconds to keep a log segment's file before deleting it.
+       * This setting overrides the cluster-level [KafkaConfig4.log_retention_ms] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+       */
+      public Builder mergeRetentionMs(com.google.protobuf.Int64Value value) {
+        if (retentionMsBuilder_ == null) {
+          if (retentionMs_ != null) {
+            retentionMs_ =
+              com.google.protobuf.Int64Value.newBuilder(retentionMs_).mergeFrom(value).buildPartial();
+          } else {
+            retentionMs_ = value;
+          }
+          onChanged();
+        } else {
+          retentionMsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of milliseconds to keep a log segment's file before deleting it.
+       * This setting overrides the cluster-level [KafkaConfig4.log_retention_ms] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+       */
+      public Builder clearRetentionMs() {
+        if (retentionMsBuilder_ == null) {
+          retentionMs_ = null;
+          onChanged();
+        } else {
+          retentionMs_ = null;
+          retentionMsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of milliseconds to keep a log segment's file before deleting it.
+       * This setting overrides the cluster-level [KafkaConfig4.log_retention_ms] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getRetentionMsBuilder() {
+        
+        onChanged();
+        return getRetentionMsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of milliseconds to keep a log segment's file before deleting it.
+       * This setting overrides the cluster-level [KafkaConfig4.log_retention_ms] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getRetentionMsOrBuilder() {
+        if (retentionMsBuilder_ != null) {
+          return retentionMsBuilder_.getMessageOrBuilder();
+        } else {
+          return retentionMs_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : retentionMs_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of milliseconds to keep a log segment's file before deleting it.
+       * This setting overrides the cluster-level [KafkaConfig4.log_retention_ms] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getRetentionMsFieldBuilder() {
+        if (retentionMsBuilder_ == null) {
+          retentionMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getRetentionMs(),
+                  getParentForChildren(),
+                  isClean());
+          retentionMs_ = null;
+        }
+        return retentionMsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxMessageBytes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxMessageBytesBuilder_;
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       * @return Whether the maxMessageBytes field is set.
+       */
+      public boolean hasMaxMessageBytes() {
+        return maxMessageBytesBuilder_ != null || maxMessageBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       * @return The maxMessageBytes.
+       */
+      public com.google.protobuf.Int64Value getMaxMessageBytes() {
+        if (maxMessageBytesBuilder_ == null) {
+          return maxMessageBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxMessageBytes_;
+        } else {
+          return maxMessageBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public Builder setMaxMessageBytes(com.google.protobuf.Int64Value value) {
+        if (maxMessageBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxMessageBytes_ = value;
+          onChanged();
+        } else {
+          maxMessageBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public Builder setMaxMessageBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxMessageBytesBuilder_ == null) {
+          maxMessageBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxMessageBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public Builder mergeMaxMessageBytes(com.google.protobuf.Int64Value value) {
+        if (maxMessageBytesBuilder_ == null) {
+          if (maxMessageBytes_ != null) {
+            maxMessageBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(maxMessageBytes_).mergeFrom(value).buildPartial();
+          } else {
+            maxMessageBytes_ = value;
+          }
+          onChanged();
+        } else {
+          maxMessageBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public Builder clearMaxMessageBytes() {
+        if (maxMessageBytesBuilder_ == null) {
+          maxMessageBytes_ = null;
+          onChanged();
+        } else {
+          maxMessageBytes_ = null;
+          maxMessageBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxMessageBytesBuilder() {
+        
+        onChanged();
+        return getMaxMessageBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxMessageBytesOrBuilder() {
+        if (maxMessageBytesBuilder_ != null) {
+          return maxMessageBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return maxMessageBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxMessageBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxMessageBytesFieldBuilder() {
+        if (maxMessageBytesBuilder_ == null) {
+          maxMessageBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxMessageBytes(),
+                  getParentForChildren(),
+                  isClean());
+          maxMessageBytes_ = null;
+        }
+        return maxMessageBytesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value minInsyncReplicas_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minInsyncReplicasBuilder_;
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       * @return Whether the minInsyncReplicas field is set.
+       */
+      public boolean hasMinInsyncReplicas() {
+        return minInsyncReplicasBuilder_ != null || minInsyncReplicas_ != null;
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       * @return The minInsyncReplicas.
+       */
+      public com.google.protobuf.Int64Value getMinInsyncReplicas() {
+        if (minInsyncReplicasBuilder_ == null) {
+          return minInsyncReplicas_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minInsyncReplicas_;
+        } else {
+          return minInsyncReplicasBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public Builder setMinInsyncReplicas(com.google.protobuf.Int64Value value) {
+        if (minInsyncReplicasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minInsyncReplicas_ = value;
+          onChanged();
+        } else {
+          minInsyncReplicasBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public Builder setMinInsyncReplicas(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (minInsyncReplicasBuilder_ == null) {
+          minInsyncReplicas_ = builderForValue.build();
+          onChanged();
+        } else {
+          minInsyncReplicasBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public Builder mergeMinInsyncReplicas(com.google.protobuf.Int64Value value) {
+        if (minInsyncReplicasBuilder_ == null) {
+          if (minInsyncReplicas_ != null) {
+            minInsyncReplicas_ =
+              com.google.protobuf.Int64Value.newBuilder(minInsyncReplicas_).mergeFrom(value).buildPartial();
+          } else {
+            minInsyncReplicas_ = value;
+          }
+          onChanged();
+        } else {
+          minInsyncReplicasBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public Builder clearMinInsyncReplicas() {
+        if (minInsyncReplicasBuilder_ == null) {
+          minInsyncReplicas_ = null;
+          onChanged();
+        } else {
+          minInsyncReplicas_ = null;
+          minInsyncReplicasBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMinInsyncReplicasBuilder() {
+        
+        onChanged();
+        return getMinInsyncReplicasFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMinInsyncReplicasOrBuilder() {
+        if (minInsyncReplicasBuilder_ != null) {
+          return minInsyncReplicasBuilder_.getMessageOrBuilder();
+        } else {
+          return minInsyncReplicas_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : minInsyncReplicas_;
+        }
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMinInsyncReplicasFieldBuilder() {
+        if (minInsyncReplicasBuilder_ == null) {
+          minInsyncReplicasBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMinInsyncReplicas(),
+                  getParentForChildren(),
+                  isClean());
+          minInsyncReplicas_ = null;
+        }
+        return minInsyncReplicasBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value segmentBytes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> segmentBytesBuilder_;
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig4.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       * @return Whether the segmentBytes field is set.
+       */
+      public boolean hasSegmentBytes() {
+        return segmentBytesBuilder_ != null || segmentBytes_ != null;
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig4.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       * @return The segmentBytes.
+       */
+      public com.google.protobuf.Int64Value getSegmentBytes() {
+        if (segmentBytesBuilder_ == null) {
+          return segmentBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : segmentBytes_;
+        } else {
+          return segmentBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig4.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public Builder setSegmentBytes(com.google.protobuf.Int64Value value) {
+        if (segmentBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          segmentBytes_ = value;
+          onChanged();
+        } else {
+          segmentBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig4.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public Builder setSegmentBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (segmentBytesBuilder_ == null) {
+          segmentBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          segmentBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig4.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public Builder mergeSegmentBytes(com.google.protobuf.Int64Value value) {
+        if (segmentBytesBuilder_ == null) {
+          if (segmentBytes_ != null) {
+            segmentBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(segmentBytes_).mergeFrom(value).buildPartial();
+          } else {
+            segmentBytes_ = value;
+          }
+          onChanged();
+        } else {
+          segmentBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig4.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public Builder clearSegmentBytes() {
+        if (segmentBytesBuilder_ == null) {
+          segmentBytes_ = null;
+          onChanged();
+        } else {
+          segmentBytes_ = null;
+          segmentBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig4.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSegmentBytesBuilder() {
+        
+        onChanged();
+        return getSegmentBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig4.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSegmentBytesOrBuilder() {
+        if (segmentBytesBuilder_ != null) {
+          return segmentBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return segmentBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : segmentBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig4.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSegmentBytesFieldBuilder() {
+        if (segmentBytesBuilder_ == null) {
+          segmentBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSegmentBytes(),
+                  getParentForChildren(),
+                  isClean());
+          segmentBytes_ = null;
+        }
+        return segmentBytesBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue preallocate_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> preallocateBuilder_;
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig4.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * @return Whether the preallocate field is set.
+       */
+      public boolean hasPreallocate() {
+        return preallocateBuilder_ != null || preallocate_ != null;
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig4.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * @return The preallocate.
+       */
+      public com.google.protobuf.BoolValue getPreallocate() {
+        if (preallocateBuilder_ == null) {
+          return preallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preallocate_;
+        } else {
+          return preallocateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig4.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public Builder setPreallocate(com.google.protobuf.BoolValue value) {
+        if (preallocateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          preallocate_ = value;
+          onChanged();
+        } else {
+          preallocateBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig4.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public Builder setPreallocate(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (preallocateBuilder_ == null) {
+          preallocate_ = builderForValue.build();
+          onChanged();
+        } else {
+          preallocateBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig4.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public Builder mergePreallocate(com.google.protobuf.BoolValue value) {
+        if (preallocateBuilder_ == null) {
+          if (preallocate_ != null) {
+            preallocate_ =
+              com.google.protobuf.BoolValue.newBuilder(preallocate_).mergeFrom(value).buildPartial();
+          } else {
+            preallocate_ = value;
+          }
+          onChanged();
+        } else {
+          preallocateBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig4.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public Builder clearPreallocate() {
+        if (preallocateBuilder_ == null) {
+          preallocate_ = null;
+          onChanged();
+        } else {
+          preallocate_ = null;
+          preallocateBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig4.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getPreallocateBuilder() {
+        
+        onChanged();
+        return getPreallocateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig4.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
+        if (preallocateBuilder_ != null) {
+          return preallocateBuilder_.getMessageOrBuilder();
+        } else {
+          return preallocate_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : preallocate_;
+        }
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig4.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getPreallocateFieldBuilder() {
+        if (preallocateBuilder_ == null) {
+          preallocateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getPreallocate(),
+                  getParentForChildren(),
+                  isClean());
+          preallocate_ = null;
+        }
+        return preallocateBuilder_;
+      }
+
+      private int messageTimestampType_ = 0;
+      /**
+       * <pre>
+       * Define whether the timestamp in the message is message create time or log append time.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+       * @return The enum numeric value on the wire for messageTimestampType.
+       */
+      @java.lang.Override public int getMessageTimestampTypeValue() {
+        return messageTimestampType_;
+      }
+      /**
+       * <pre>
+       * Define whether the timestamp in the message is message create time or log append time.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+       * @param value The enum numeric value on the wire for messageTimestampType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageTimestampTypeValue(int value) {
+        
+        messageTimestampType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Define whether the timestamp in the message is message create time or log append time.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+       * @return The messageTimestampType.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType getMessageTimestampType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType result = yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType.valueOf(messageTimestampType_);
+        return result == null ? yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Define whether the timestamp in the message is message create time or log append time.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+       * @param value The messageTimestampType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageTimestampType(yandex.cloud.api.mdb.kafka.v1.Common.MessageTimestampType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        messageTimestampType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Define whether the timestamp in the message is message create time or log append time.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.MessageTimestampType message_timestamp_type = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessageTimestampType() {
+        
+        messageTimestampType_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.TopicConfig4)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.TopicConfig4)
+    private static final yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TopicConfig4>
+        PARSER = new com.google.protobuf.AbstractParser<TopicConfig4>() {
+      @java.lang.Override
+      public TopicConfig4 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TopicConfig4(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TopicConfig4> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TopicConfig4> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig4 getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_kafka_v1_Topic_descriptor;
   private static final 
@@ -11379,6 +16498,11 @@ public final class TopicOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig3_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig4_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig4_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -11392,7 +16516,7 @@ public final class TopicOuterClass {
       "\031yandex.cloud.mdb.kafka.v1\032 google/proto" +
       "buf/descriptor.proto\032\036google/protobuf/wr" +
       "appers.proto\032&yandex/cloud/mdb/kafka/v1/" +
-      "common.proto\"\323\002\n\005Topic\022\014\n\004name\030\001 \001(\t\022\022\n\n" +
+      "common.proto\"\245\003\n\005Topic\022\014\n\004name\030\001 \001(\t\022\022\n\n" +
       "cluster_id\030\002 \001(\t\022/\n\npartitions\030\003 \001(\0132\033.g" +
       "oogle.protobuf.Int64Value\0227\n\022replication" +
       "_factor\030\004 \001(\0132\033.google.protobuf.Int64Val" +
@@ -11400,64 +16524,97 @@ public final class TopicOuterClass {
       "oud.mdb.kafka.v1.TopicConfig2_8H\000R\017topic" +
       "Config_2_8\022P\n\016topic_config_3\030\010 \001(\0132\'.yan" +
       "dex.cloud.mdb.kafka.v1.TopicConfig3H\000R\rt" +
-      "opicConfig_3B\016\n\014topic_configJ\004\010\005\020\007\"\303\002\n\tT" +
-      "opicSpec\022\014\n\004name\030\001 \001(\t\022/\n\npartitions\030\002 \001" +
-      "(\0132\033.google.protobuf.Int64Value\0227\n\022repli" +
-      "cation_factor\030\003 \001(\0132\033.google.protobuf.In" +
-      "t64Value\022V\n\020topic_config_2_8\030\006 \001(\0132).yan" +
-      "dex.cloud.mdb.kafka.v1.TopicConfig2_8H\000R" +
-      "\017topicConfig_2_8\022P\n\016topic_config_3\030\007 \001(\013" +
-      "2\'.yandex.cloud.mdb.kafka.v1.TopicConfig" +
-      "3H\000R\rtopicConfig_3B\016\n\014topic_configJ\004\010\004\020\006" +
-      "\"\220\007\n\016TopicConfig2_8\022O\n\016cleanup_policy\030\001 " +
-      "\001(\01627.yandex.cloud.mdb.kafka.v1.TopicCon" +
-      "fig2_8.CleanupPolicy\022D\n\020compression_type" +
-      "\030\002 \001(\0162*.yandex.cloud.mdb.kafka.v1.Compr" +
-      "essionType\0228\n\023delete_retention_ms\030\003 \001(\0132" +
-      "\033.google.protobuf.Int64Value\0229\n\024file_del" +
-      "ete_delay_ms\030\004 \001(\0132\033.google.protobuf.Int" +
-      "64Value\0223\n\016flush_messages\030\005 \001(\0132\033.google" +
-      ".protobuf.Int64Value\022-\n\010flush_ms\030\006 \001(\0132\033" +
-      ".google.protobuf.Int64Value\022:\n\025min_compa" +
-      "ction_lag_ms\030\007 \001(\0132\033.google.protobuf.Int" +
-      "64Value\0224\n\017retention_bytes\030\010 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\0221\n\014retention_ms\030\t " +
-      "\001(\0132\033.google.protobuf.Int64Value\0226\n\021max_" +
-      "message_bytes\030\n \001(\0132\033.google.protobuf.In" +
-      "t64Value\0228\n\023min_insync_replicas\030\013 \001(\0132\033." +
-      "google.protobuf.Int64Value\0222\n\rsegment_by" +
-      "tes\030\014 \001(\0132\033.google.protobuf.Int64Value\0223" +
-      "\n\013preallocate\030\r \001(\0132\032.google.protobuf.Bo" +
-      "olValueB\002\030\001\"\215\001\n\rCleanupPolicy\022\036\n\032CLEANUP" +
-      "_POLICY_UNSPECIFIED\020\000\022\031\n\025CLEANUP_POLICY_" +
-      "DELETE\020\001\022\032\n\026CLEANUP_POLICY_COMPACT\020\002\022%\n!" +
-      "CLEANUP_POLICY_COMPACT_AND_DELETE\020\003\"\214\007\n\014" +
-      "TopicConfig3\022M\n\016cleanup_policy\030\001 \001(\01625.y" +
-      "andex.cloud.mdb.kafka.v1.TopicConfig3.Cl" +
-      "eanupPolicy\022D\n\020compression_type\030\002 \001(\0162*." +
-      "yandex.cloud.mdb.kafka.v1.CompressionTyp" +
-      "e\0228\n\023delete_retention_ms\030\003 \001(\0132\033.google." +
-      "protobuf.Int64Value\0229\n\024file_delete_delay" +
-      "_ms\030\004 \001(\0132\033.google.protobuf.Int64Value\0223" +
-      "\n\016flush_messages\030\005 \001(\0132\033.google.protobuf" +
-      ".Int64Value\022-\n\010flush_ms\030\006 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\022:\n\025min_compaction_lag" +
-      "_ms\030\007 \001(\0132\033.google.protobuf.Int64Value\0224" +
-      "\n\017retention_bytes\030\010 \001(\0132\033.google.protobu" +
-      "f.Int64Value\0221\n\014retention_ms\030\t \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\0226\n\021max_message_b" +
-      "ytes\030\n \001(\0132\033.google.protobuf.Int64Value\022" +
-      "8\n\023min_insync_replicas\030\013 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\0222\n\rsegment_bytes\030\014 \001(\013" +
-      "2\033.google.protobuf.Int64Value\0223\n\013preallo" +
-      "cate\030\r \001(\0132\032.google.protobuf.BoolValueB\002" +
-      "\030\001\"\215\001\n\rCleanupPolicy\022\036\n\032CLEANUP_POLICY_U" +
-      "NSPECIFIED\020\000\022\031\n\025CLEANUP_POLICY_DELETE\020\001\022" +
-      "\032\n\026CLEANUP_POLICY_COMPACT\020\002\022%\n!CLEANUP_P" +
-      "OLICY_COMPACT_AND_DELETE\020\003Bd\n\035yandex.clo" +
-      "ud.api.mdb.kafka.v1ZCgithub.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/mdb/kafka/" +
-      "v1;kafkab\006proto3"
+      "opicConfig_3\022P\n\016topic_config_4\030\t \001(\0132\'.y" +
+      "andex.cloud.mdb.kafka.v1.TopicConfig4H\000R" +
+      "\rtopicConfig_4B\016\n\014topic_configJ\004\010\005\020\007\"\225\003\n" +
+      "\tTopicSpec\022\014\n\004name\030\001 \001(\t\022/\n\npartitions\030\002" +
+      " \001(\0132\033.google.protobuf.Int64Value\0227\n\022rep" +
+      "lication_factor\030\003 \001(\0132\033.google.protobuf." +
+      "Int64Value\022V\n\020topic_config_2_8\030\006 \001(\0132).y" +
+      "andex.cloud.mdb.kafka.v1.TopicConfig2_8H" +
+      "\000R\017topicConfig_2_8\022P\n\016topic_config_3\030\007 \001" +
+      "(\0132\'.yandex.cloud.mdb.kafka.v1.TopicConf" +
+      "ig3H\000R\rtopicConfig_3\022P\n\016topic_config_4\030\010" +
+      " \001(\0132\'.yandex.cloud.mdb.kafka.v1.TopicCo" +
+      "nfig4H\000R\rtopicConfig_4B\016\n\014topic_configJ\004" +
+      "\010\004\020\006\"\335\007\n\016TopicConfig2_8\022O\n\016cleanup_polic" +
+      "y\030\001 \001(\01627.yandex.cloud.mdb.kafka.v1.Topi" +
+      "cConfig2_8.CleanupPolicy\022D\n\020compression_" +
+      "type\030\002 \001(\0162*.yandex.cloud.mdb.kafka.v1.C" +
+      "ompressionType\0228\n\023delete_retention_ms\030\003 " +
+      "\001(\0132\033.google.protobuf.Int64Value\0229\n\024file" +
+      "_delete_delay_ms\030\004 \001(\0132\033.google.protobuf" +
+      ".Int64Value\0223\n\016flush_messages\030\005 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\022-\n\010flush_ms\030\006 \001" +
+      "(\0132\033.google.protobuf.Int64Value\022:\n\025min_c" +
+      "ompaction_lag_ms\030\007 \001(\0132\033.google.protobuf" +
+      ".Int64Value\0224\n\017retention_bytes\030\010 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\0221\n\014retention_m" +
+      "s\030\t \001(\0132\033.google.protobuf.Int64Value\0226\n\021" +
+      "max_message_bytes\030\n \001(\0132\033.google.protobu" +
+      "f.Int64Value\0228\n\023min_insync_replicas\030\013 \001(" +
+      "\0132\033.google.protobuf.Int64Value\0222\n\rsegmen" +
+      "t_bytes\030\014 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022/\n\013preallocate\030\r \001(\0132\032.google.protobu" +
+      "f.BoolValue\022O\n\026message_timestamp_type\030\016 " +
+      "\001(\0162/.yandex.cloud.mdb.kafka.v1.MessageT" +
+      "imestampType\"\215\001\n\rCleanupPolicy\022\036\n\032CLEANU" +
+      "P_POLICY_UNSPECIFIED\020\000\022\031\n\025CLEANUP_POLICY" +
+      "_DELETE\020\001\022\032\n\026CLEANUP_POLICY_COMPACT\020\002\022%\n" +
+      "!CLEANUP_POLICY_COMPACT_AND_DELETE\020\003\"\331\007\n" +
+      "\014TopicConfig3\022M\n\016cleanup_policy\030\001 \001(\01625." +
+      "yandex.cloud.mdb.kafka.v1.TopicConfig3.C" +
+      "leanupPolicy\022D\n\020compression_type\030\002 \001(\0162*" +
+      ".yandex.cloud.mdb.kafka.v1.CompressionTy" +
+      "pe\0228\n\023delete_retention_ms\030\003 \001(\0132\033.google" +
+      ".protobuf.Int64Value\0229\n\024file_delete_dela" +
+      "y_ms\030\004 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "3\n\016flush_messages\030\005 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022-\n\010flush_ms\030\006 \001(\0132\033.google." +
+      "protobuf.Int64Value\022:\n\025min_compaction_la" +
+      "g_ms\030\007 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "4\n\017retention_bytes\030\010 \001(\0132\033.google.protob" +
+      "uf.Int64Value\0221\n\014retention_ms\030\t \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\0226\n\021max_message_" +
+      "bytes\030\n \001(\0132\033.google.protobuf.Int64Value" +
+      "\0228\n\023min_insync_replicas\030\013 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\0222\n\rsegment_bytes\030\014 \001(" +
+      "\0132\033.google.protobuf.Int64Value\022/\n\013preall" +
+      "ocate\030\r \001(\0132\032.google.protobuf.BoolValue\022" +
+      "O\n\026message_timestamp_type\030\016 \001(\0162/.yandex" +
+      ".cloud.mdb.kafka.v1.MessageTimestampType" +
+      "\"\215\001\n\rCleanupPolicy\022\036\n\032CLEANUP_POLICY_UNS" +
+      "PECIFIED\020\000\022\031\n\025CLEANUP_POLICY_DELETE\020\001\022\032\n" +
+      "\026CLEANUP_POLICY_COMPACT\020\002\022%\n!CLEANUP_POL" +
+      "ICY_COMPACT_AND_DELETE\020\003\"\331\007\n\014TopicConfig" +
+      "4\022M\n\016cleanup_policy\030\001 \001(\01625.yandex.cloud" +
+      ".mdb.kafka.v1.TopicConfig4.CleanupPolicy" +
+      "\022D\n\020compression_type\030\002 \001(\0162*.yandex.clou" +
+      "d.mdb.kafka.v1.CompressionType\0228\n\023delete" +
+      "_retention_ms\030\003 \001(\0132\033.google.protobuf.In" +
+      "t64Value\0229\n\024file_delete_delay_ms\030\004 \001(\0132\033" +
+      ".google.protobuf.Int64Value\0223\n\016flush_mes" +
+      "sages\030\005 \001(\0132\033.google.protobuf.Int64Value" +
+      "\022-\n\010flush_ms\030\006 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022:\n\025min_compaction_lag_ms\030\007 \001(\0132\033" +
+      ".google.protobuf.Int64Value\0224\n\017retention" +
+      "_bytes\030\010 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\0221\n\014retention_ms\030\t \001(\0132\033.google.protobu" +
+      "f.Int64Value\0226\n\021max_message_bytes\030\n \001(\0132" +
+      "\033.google.protobuf.Int64Value\0228\n\023min_insy" +
+      "nc_replicas\030\013 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\0222\n\rsegment_bytes\030\014 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022/\n\013preallocate\030\r \001(\0132" +
+      "\032.google.protobuf.BoolValue\022O\n\026message_t" +
+      "imestamp_type\030\016 \001(\0162/.yandex.cloud.mdb.k" +
+      "afka.v1.MessageTimestampType\"\215\001\n\rCleanup" +
+      "Policy\022\036\n\032CLEANUP_POLICY_UNSPECIFIED\020\000\022\031" +
+      "\n\025CLEANUP_POLICY_DELETE\020\001\022\032\n\026CLEANUP_POL" +
+      "ICY_COMPACT\020\002\022%\n!CLEANUP_POLICY_COMPACT_" +
+      "AND_DELETE\020\003Bd\n\035yandex.cloud.api.mdb.kaf" +
+      "ka.v1ZCgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/mdb/kafka/v1;kafkab\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11471,25 +16628,31 @@ public final class TopicOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_Topic_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_Topic_descriptor,
-        new java.lang.String[] { "Name", "ClusterId", "Partitions", "ReplicationFactor", "TopicConfig28", "TopicConfig3", "TopicConfig", });
+        new java.lang.String[] { "Name", "ClusterId", "Partitions", "ReplicationFactor", "TopicConfig28", "TopicConfig3", "TopicConfig4", "TopicConfig", });
     internal_static_yandex_cloud_mdb_kafka_v1_TopicSpec_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_kafka_v1_TopicSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_TopicSpec_descriptor,
-        new java.lang.String[] { "Name", "Partitions", "ReplicationFactor", "TopicConfig28", "TopicConfig3", "TopicConfig", });
+        new java.lang.String[] { "Name", "Partitions", "ReplicationFactor", "TopicConfig28", "TopicConfig3", "TopicConfig4", "TopicConfig", });
     internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig2_8_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig2_8_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig2_8_descriptor,
-        new java.lang.String[] { "CleanupPolicy", "CompressionType", "DeleteRetentionMs", "FileDeleteDelayMs", "FlushMessages", "FlushMs", "MinCompactionLagMs", "RetentionBytes", "RetentionMs", "MaxMessageBytes", "MinInsyncReplicas", "SegmentBytes", "Preallocate", });
+        new java.lang.String[] { "CleanupPolicy", "CompressionType", "DeleteRetentionMs", "FileDeleteDelayMs", "FlushMessages", "FlushMs", "MinCompactionLagMs", "RetentionBytes", "RetentionMs", "MaxMessageBytes", "MinInsyncReplicas", "SegmentBytes", "Preallocate", "MessageTimestampType", });
     internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig3_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig3_descriptor,
-        new java.lang.String[] { "CleanupPolicy", "CompressionType", "DeleteRetentionMs", "FileDeleteDelayMs", "FlushMessages", "FlushMs", "MinCompactionLagMs", "RetentionBytes", "RetentionMs", "MaxMessageBytes", "MinInsyncReplicas", "SegmentBytes", "Preallocate", });
+        new java.lang.String[] { "CleanupPolicy", "CompressionType", "DeleteRetentionMs", "FileDeleteDelayMs", "FlushMessages", "FlushMs", "MinCompactionLagMs", "RetentionBytes", "RetentionMs", "MaxMessageBytes", "MinInsyncReplicas", "SegmentBytes", "Preallocate", "MessageTimestampType", });
+    internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig4_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig4_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig4_descriptor,
+        new java.lang.String[] { "CleanupPolicy", "CompressionType", "DeleteRetentionMs", "FileDeleteDelayMs", "FlushMessages", "FlushMs", "MinCompactionLagMs", "RetentionBytes", "RetentionMs", "MaxMessageBytes", "MinInsyncReplicas", "SegmentBytes", "Preallocate", "MessageTimestampType", });
     com.google.protobuf.DescriptorProtos.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.mdb.kafka.v1.Common.getDescriptor();

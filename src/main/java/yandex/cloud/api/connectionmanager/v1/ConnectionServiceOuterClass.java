@@ -19,11 +19,19 @@ public final class ConnectionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to create the connection in.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to create the connection in.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The bytes for folderId.
      */
@@ -31,11 +39,19 @@ public final class ConnectionServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Name of the connection.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the connection.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -43,11 +59,19 @@ public final class ConnectionServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the connection.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the connection.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -55,10 +79,18 @@ public final class ConnectionServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     boolean containsLabels(
@@ -70,11 +102,19 @@ public final class ConnectionServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
 
@@ -82,6 +122,10 @@ public final class ConnectionServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
 
@@ -89,21 +133,66 @@ public final class ConnectionServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Connection parameters specific to the database or service type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 5;</code>
      * @return Whether the params field is set.
      */
     boolean hasParams();
     /**
+     * <pre>
+     * Connection parameters specific to the database or service type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 5;</code>
      * @return The params.
      */
     yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams getParams();
     /**
+     * <pre>
+     * Connection parameters specific to the database or service type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 5;</code>
      */
     yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * Specification for creating a new Lockbox secret.
+     * </pre>
+     *
+     * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 11;</code>
+     * @return Whether the lockboxSecretSpec field is set.
+     */
+    boolean hasLockboxSecretSpec();
+    /**
+     * <pre>
+     * Specification for creating a new Lockbox secret.
+     * </pre>
+     *
+     * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 11;</code>
+     * @return The lockboxSecretSpec.
+     */
+    yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec getLockboxSecretSpec();
+    /**
+     * <pre>
+     * Specification for creating a new Lockbox secret.
+     * </pre>
+     *
+     * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 11;</code>
+     */
+    yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpecOrBuilder getLockboxSecretSpecOrBuilder();
+
+    public yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.CreateConnectionRequest.SecretSpecCase getSecretSpecCase();
   }
   /**
+   * <pre>
+   * Request message for creating a new connection.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.connectionmanager.v1.CreateConnectionRequest}
    */
   public static final class CreateConnectionRequest extends
@@ -196,6 +285,20 @@ public final class ConnectionServiceOuterClass {
 
               break;
             }
+            case 90: {
+              yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.Builder subBuilder = null;
+              if (secretSpecCase_ == 11) {
+                subBuilder = ((yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) secretSpec_).toBuilder();
+              }
+              secretSpec_ =
+                  input.readMessage(yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) secretSpec_);
+                secretSpec_ = subBuilder.buildPartial();
+              }
+              secretSpecCase_ = 11;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -240,9 +343,52 @@ public final class ConnectionServiceOuterClass {
               yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.CreateConnectionRequest.class, yandex.cloud.api.connectionmanager.v1.ConnectionServiceOuterClass.CreateConnectionRequest.Builder.class);
     }
 
+    private int secretSpecCase_ = 0;
+    private java.lang.Object secretSpec_;
+    public enum SecretSpecCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      LOCKBOX_SECRET_SPEC(11),
+      SECRETSPEC_NOT_SET(0);
+      private final int value;
+      private SecretSpecCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SecretSpecCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static SecretSpecCase forNumber(int value) {
+        switch (value) {
+          case 11: return LOCKBOX_SECRET_SPEC;
+          case 0: return SECRETSPEC_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public SecretSpecCase
+    getSecretSpecCase() {
+      return SecretSpecCase.forNumber(
+          secretSpecCase_);
+    }
+
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to create the connection in.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The folderId.
      */
@@ -260,6 +406,10 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to create the connection in.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The bytes for folderId.
      */
@@ -281,6 +431,10 @@ public final class ConnectionServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the connection.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
@@ -298,6 +452,10 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the connection.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -319,6 +477,10 @@ public final class ConnectionServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the connection.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
@@ -336,6 +498,10 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the connection.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -381,6 +547,10 @@ public final class ConnectionServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
 
@@ -399,6 +569,10 @@ public final class ConnectionServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     @java.lang.Override
@@ -407,6 +581,10 @@ public final class ConnectionServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     @java.lang.Override
@@ -420,6 +598,10 @@ public final class ConnectionServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4;</code>
      */
     @java.lang.Override
@@ -438,6 +620,10 @@ public final class ConnectionServiceOuterClass {
     public static final int PARAMS_FIELD_NUMBER = 5;
     private yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams params_;
     /**
+     * <pre>
+     * Connection parameters specific to the database or service type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 5;</code>
      * @return Whether the params field is set.
      */
@@ -446,6 +632,10 @@ public final class ConnectionServiceOuterClass {
       return params_ != null;
     }
     /**
+     * <pre>
+     * Connection parameters specific to the database or service type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 5;</code>
      * @return The params.
      */
@@ -454,11 +644,58 @@ public final class ConnectionServiceOuterClass {
       return params_ == null ? yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams.getDefaultInstance() : params_;
     }
     /**
+     * <pre>
+     * Connection parameters specific to the database or service type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 5;</code>
      */
     @java.lang.Override
     public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParamsOrBuilder getParamsOrBuilder() {
       return getParams();
+    }
+
+    public static final int LOCKBOX_SECRET_SPEC_FIELD_NUMBER = 11;
+    /**
+     * <pre>
+     * Specification for creating a new Lockbox secret.
+     * </pre>
+     *
+     * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 11;</code>
+     * @return Whether the lockboxSecretSpec field is set.
+     */
+    @java.lang.Override
+    public boolean hasLockboxSecretSpec() {
+      return secretSpecCase_ == 11;
+    }
+    /**
+     * <pre>
+     * Specification for creating a new Lockbox secret.
+     * </pre>
+     *
+     * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 11;</code>
+     * @return The lockboxSecretSpec.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec getLockboxSecretSpec() {
+      if (secretSpecCase_ == 11) {
+         return (yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) secretSpec_;
+      }
+      return yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Specification for creating a new Lockbox secret.
+     * </pre>
+     *
+     * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 11;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpecOrBuilder getLockboxSecretSpecOrBuilder() {
+      if (secretSpecCase_ == 11) {
+         return (yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) secretSpec_;
+      }
+      return yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -493,6 +730,9 @@ public final class ConnectionServiceOuterClass {
       if (params_ != null) {
         output.writeMessage(5, getParams());
       }
+      if (secretSpecCase_ == 11) {
+        output.writeMessage(11, (yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) secretSpec_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -525,6 +765,10 @@ public final class ConnectionServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getParams());
       }
+      if (secretSpecCase_ == 11) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, (yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) secretSpec_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -553,6 +797,15 @@ public final class ConnectionServiceOuterClass {
         if (!getParams()
             .equals(other.getParams())) return false;
       }
+      if (!getSecretSpecCase().equals(other.getSecretSpecCase())) return false;
+      switch (secretSpecCase_) {
+        case 11:
+          if (!getLockboxSecretSpec()
+              .equals(other.getLockboxSecretSpec())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -577,6 +830,14 @@ public final class ConnectionServiceOuterClass {
       if (hasParams()) {
         hash = (37 * hash) + PARAMS_FIELD_NUMBER;
         hash = (53 * hash) + getParams().hashCode();
+      }
+      switch (secretSpecCase_) {
+        case 11:
+          hash = (37 * hash) + LOCKBOX_SECRET_SPEC_FIELD_NUMBER;
+          hash = (53 * hash) + getLockboxSecretSpec().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -674,6 +935,10 @@ public final class ConnectionServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for creating a new connection.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.connectionmanager.v1.CreateConnectionRequest}
      */
     public static final class Builder extends
@@ -746,6 +1011,8 @@ public final class ConnectionServiceOuterClass {
           params_ = null;
           paramsBuilder_ = null;
         }
+        secretSpecCase_ = 0;
+        secretSpec_ = null;
         return this;
       }
 
@@ -783,6 +1050,14 @@ public final class ConnectionServiceOuterClass {
         } else {
           result.params_ = paramsBuilder_.build();
         }
+        if (secretSpecCase_ == 11) {
+          if (lockboxSecretSpecBuilder_ == null) {
+            result.secretSpec_ = secretSpec_;
+          } else {
+            result.secretSpec_ = lockboxSecretSpecBuilder_.build();
+          }
+        }
+        result.secretSpecCase_ = secretSpecCase_;
         onBuilt();
         return result;
       }
@@ -848,6 +1123,15 @@ public final class ConnectionServiceOuterClass {
         if (other.hasParams()) {
           mergeParams(other.getParams());
         }
+        switch (other.getSecretSpecCase()) {
+          case LOCKBOX_SECRET_SPEC: {
+            mergeLockboxSecretSpec(other.getLockboxSecretSpec());
+            break;
+          }
+          case SECRETSPEC_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -876,10 +1160,29 @@ public final class ConnectionServiceOuterClass {
         }
         return this;
       }
+      private int secretSpecCase_ = 0;
+      private java.lang.Object secretSpec_;
+      public SecretSpecCase
+          getSecretSpecCase() {
+        return SecretSpecCase.forNumber(
+            secretSpecCase_);
+      }
+
+      public Builder clearSecretSpec() {
+        secretSpecCase_ = 0;
+        secretSpec_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to create the connection in.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @return The folderId.
        */
@@ -896,6 +1199,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create the connection in.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @return The bytes for folderId.
        */
@@ -913,6 +1220,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create the connection in.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -928,6 +1239,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create the connection in.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -938,6 +1253,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create the connection in.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -956,6 +1275,10 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the connection.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The name.
        */
@@ -972,6 +1295,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the connection.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The bytes for name.
        */
@@ -989,6 +1316,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the connection.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -1004,6 +1335,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the connection.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return This builder for chaining.
        */
@@ -1014,6 +1349,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the connection.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -1032,6 +1371,10 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the connection.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return The description.
        */
@@ -1048,6 +1391,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the connection.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return The bytes for description.
        */
@@ -1065,6 +1412,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the connection.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -1080,6 +1431,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the connection.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return This builder for chaining.
        */
@@ -1090,6 +1445,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the connection.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -1133,6 +1492,10 @@ public final class ConnectionServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
 
@@ -1151,6 +1514,10 @@ public final class ConnectionServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
       @java.lang.Override
@@ -1159,6 +1526,10 @@ public final class ConnectionServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
       @java.lang.Override
@@ -1172,6 +1543,10 @@ public final class ConnectionServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
       @java.lang.Override
@@ -1193,6 +1568,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
 
@@ -1212,6 +1591,10 @@ public final class ConnectionServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
       public Builder putLabels(
@@ -1227,6 +1610,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4;</code>
        */
 
@@ -1241,6 +1628,10 @@ public final class ConnectionServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams.Builder, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParamsOrBuilder> paramsBuilder_;
       /**
+       * <pre>
+       * Connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 5;</code>
        * @return Whether the params field is set.
        */
@@ -1248,6 +1639,10 @@ public final class ConnectionServiceOuterClass {
         return paramsBuilder_ != null || params_ != null;
       }
       /**
+       * <pre>
+       * Connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 5;</code>
        * @return The params.
        */
@@ -1259,6 +1654,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 5;</code>
        */
       public Builder setParams(yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams value) {
@@ -1275,6 +1674,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 5;</code>
        */
       public Builder setParams(
@@ -1289,6 +1692,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 5;</code>
        */
       public Builder mergeParams(yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams value) {
@@ -1307,6 +1714,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 5;</code>
        */
       public Builder clearParams() {
@@ -1321,6 +1732,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 5;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams.Builder getParamsBuilder() {
@@ -1329,6 +1744,10 @@ public final class ConnectionServiceOuterClass {
         return getParamsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 5;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParamsOrBuilder getParamsOrBuilder() {
@@ -1340,6 +1759,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1354,6 +1777,183 @@ public final class ConnectionServiceOuterClass {
           params_ = null;
         }
         return paramsBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.Builder, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpecOrBuilder> lockboxSecretSpecBuilder_;
+      /**
+       * <pre>
+       * Specification for creating a new Lockbox secret.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 11;</code>
+       * @return Whether the lockboxSecretSpec field is set.
+       */
+      @java.lang.Override
+      public boolean hasLockboxSecretSpec() {
+        return secretSpecCase_ == 11;
+      }
+      /**
+       * <pre>
+       * Specification for creating a new Lockbox secret.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 11;</code>
+       * @return The lockboxSecretSpec.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec getLockboxSecretSpec() {
+        if (lockboxSecretSpecBuilder_ == null) {
+          if (secretSpecCase_ == 11) {
+            return (yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) secretSpec_;
+          }
+          return yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.getDefaultInstance();
+        } else {
+          if (secretSpecCase_ == 11) {
+            return lockboxSecretSpecBuilder_.getMessage();
+          }
+          return yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Specification for creating a new Lockbox secret.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 11;</code>
+       */
+      public Builder setLockboxSecretSpec(yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec value) {
+        if (lockboxSecretSpecBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          secretSpec_ = value;
+          onChanged();
+        } else {
+          lockboxSecretSpecBuilder_.setMessage(value);
+        }
+        secretSpecCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification for creating a new Lockbox secret.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 11;</code>
+       */
+      public Builder setLockboxSecretSpec(
+          yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.Builder builderForValue) {
+        if (lockboxSecretSpecBuilder_ == null) {
+          secretSpec_ = builderForValue.build();
+          onChanged();
+        } else {
+          lockboxSecretSpecBuilder_.setMessage(builderForValue.build());
+        }
+        secretSpecCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification for creating a new Lockbox secret.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 11;</code>
+       */
+      public Builder mergeLockboxSecretSpec(yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec value) {
+        if (lockboxSecretSpecBuilder_ == null) {
+          if (secretSpecCase_ == 11 &&
+              secretSpec_ != yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.getDefaultInstance()) {
+            secretSpec_ = yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.newBuilder((yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) secretSpec_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            secretSpec_ = value;
+          }
+          onChanged();
+        } else {
+          if (secretSpecCase_ == 11) {
+            lockboxSecretSpecBuilder_.mergeFrom(value);
+          }
+          lockboxSecretSpecBuilder_.setMessage(value);
+        }
+        secretSpecCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification for creating a new Lockbox secret.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 11;</code>
+       */
+      public Builder clearLockboxSecretSpec() {
+        if (lockboxSecretSpecBuilder_ == null) {
+          if (secretSpecCase_ == 11) {
+            secretSpecCase_ = 0;
+            secretSpec_ = null;
+            onChanged();
+          }
+        } else {
+          if (secretSpecCase_ == 11) {
+            secretSpecCase_ = 0;
+            secretSpec_ = null;
+          }
+          lockboxSecretSpecBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification for creating a new Lockbox secret.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 11;</code>
+       */
+      public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.Builder getLockboxSecretSpecBuilder() {
+        return getLockboxSecretSpecFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specification for creating a new Lockbox secret.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 11;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpecOrBuilder getLockboxSecretSpecOrBuilder() {
+        if ((secretSpecCase_ == 11) && (lockboxSecretSpecBuilder_ != null)) {
+          return lockboxSecretSpecBuilder_.getMessageOrBuilder();
+        } else {
+          if (secretSpecCase_ == 11) {
+            return (yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) secretSpec_;
+          }
+          return yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Specification for creating a new Lockbox secret.
+       * </pre>
+       *
+       * <code>.yandex.cloud.connectionmanager.v1.LockboxSecretSpec lockbox_secret_spec = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.Builder, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpecOrBuilder> 
+          getLockboxSecretSpecFieldBuilder() {
+        if (lockboxSecretSpecBuilder_ == null) {
+          if (!(secretSpecCase_ == 11)) {
+            secretSpec_ = yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.getDefaultInstance();
+          }
+          lockboxSecretSpecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec.Builder, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpecOrBuilder>(
+                  (yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.LockboxSecretSpec) secretSpec_,
+                  getParentForChildren(),
+                  isClean());
+          secretSpec_ = null;
+        }
+        secretSpecCase_ = 11;
+        onChanged();;
+        return lockboxSecretSpecBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1413,11 +2013,19 @@ public final class ConnectionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the connection being created.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The connectionId.
      */
     java.lang.String getConnectionId();
     /**
+     * <pre>
+     * ID of the connection being created.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The bytes for connectionId.
      */
@@ -1425,6 +2033,10 @@ public final class ConnectionServiceOuterClass {
         getConnectionIdBytes();
   }
   /**
+   * <pre>
+   * Metadata for the connection creation operation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.connectionmanager.v1.CreateConnectionMetadata}
    */
   public static final class CreateConnectionMetadata extends
@@ -1511,6 +2123,10 @@ public final class ConnectionServiceOuterClass {
     public static final int CONNECTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object connectionId_;
     /**
+     * <pre>
+     * ID of the connection being created.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The connectionId.
      */
@@ -1528,6 +2144,10 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the connection being created.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The bytes for connectionId.
      */
@@ -1701,6 +2321,10 @@ public final class ConnectionServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Metadata for the connection creation operation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.connectionmanager.v1.CreateConnectionMetadata}
      */
     public static final class Builder extends
@@ -1850,6 +2474,10 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object connectionId_ = "";
       /**
+       * <pre>
+       * ID of the connection being created.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return The connectionId.
        */
@@ -1866,6 +2494,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the connection being created.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return The bytes for connectionId.
        */
@@ -1883,6 +2515,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the connection being created.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @param value The connectionId to set.
        * @return This builder for chaining.
@@ -1898,6 +2534,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the connection being created.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1908,6 +2548,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the connection being created.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @param value The bytes for connectionId to set.
        * @return This builder for chaining.
@@ -1981,11 +2625,19 @@ public final class ConnectionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the connection to update.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The connectionId.
      */
     java.lang.String getConnectionId();
     /**
+     * <pre>
+     * ID of the connection to update.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The bytes for connectionId.
      */
@@ -1993,26 +2645,46 @@ public final class ConnectionServiceOuterClass {
         getConnectionIdBytes();
 
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * New name for the connection.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * New name for the connection.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -2020,11 +2692,19 @@ public final class ConnectionServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * New description for the connection.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * New description for the connection.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -2032,10 +2712,18 @@ public final class ConnectionServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * New connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * New connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     boolean containsLabels(
@@ -2047,11 +2735,19 @@ public final class ConnectionServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * New connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * New connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
 
@@ -2059,6 +2755,10 @@ public final class ConnectionServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * New connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
 
@@ -2066,21 +2766,37 @@ public final class ConnectionServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * New connection parameters specific to the database or service type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 6;</code>
      * @return Whether the params field is set.
      */
     boolean hasParams();
     /**
+     * <pre>
+     * New connection parameters specific to the database or service type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 6;</code>
      * @return The params.
      */
     yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams getParams();
     /**
+     * <pre>
+     * New connection parameters specific to the database or service type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 6;</code>
      */
     yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParamsOrBuilder getParamsOrBuilder();
   }
   /**
+   * <pre>
+   * Request message for updating an existing connection.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.connectionmanager.v1.UpdateConnectionRequest}
    */
   public static final class UpdateConnectionRequest extends
@@ -2233,6 +2949,10 @@ public final class ConnectionServiceOuterClass {
     public static final int CONNECTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object connectionId_;
     /**
+     * <pre>
+     * ID of the connection to update.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The connectionId.
      */
@@ -2250,6 +2970,10 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the connection to update.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The bytes for connectionId.
      */
@@ -2271,6 +2995,10 @@ public final class ConnectionServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return Whether the updateMask field is set.
      */
@@ -2279,6 +3007,10 @@ public final class ConnectionServiceOuterClass {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return The updateMask.
      */
@@ -2287,6 +3019,10 @@ public final class ConnectionServiceOuterClass {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask specifying which fields to update.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     @java.lang.Override
@@ -2297,6 +3033,10 @@ public final class ConnectionServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * New name for the connection.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
@@ -2314,6 +3054,10 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New name for the connection.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -2335,6 +3079,10 @@ public final class ConnectionServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * New description for the connection.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
@@ -2352,6 +3100,10 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New description for the connection.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -2397,6 +3149,10 @@ public final class ConnectionServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * New connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
 
@@ -2415,6 +3171,10 @@ public final class ConnectionServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * New connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     @java.lang.Override
@@ -2423,6 +3183,10 @@ public final class ConnectionServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * New connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     @java.lang.Override
@@ -2436,6 +3200,10 @@ public final class ConnectionServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * New connection labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     @java.lang.Override
@@ -2454,6 +3222,10 @@ public final class ConnectionServiceOuterClass {
     public static final int PARAMS_FIELD_NUMBER = 6;
     private yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams params_;
     /**
+     * <pre>
+     * New connection parameters specific to the database or service type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 6;</code>
      * @return Whether the params field is set.
      */
@@ -2462,6 +3234,10 @@ public final class ConnectionServiceOuterClass {
       return params_ != null;
     }
     /**
+     * <pre>
+     * New connection parameters specific to the database or service type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 6;</code>
      * @return The params.
      */
@@ -2470,6 +3246,10 @@ public final class ConnectionServiceOuterClass {
       return params_ == null ? yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams.getDefaultInstance() : params_;
     }
     /**
+     * <pre>
+     * New connection parameters specific to the database or service type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 6;</code>
      */
     @java.lang.Override
@@ -2706,6 +3486,10 @@ public final class ConnectionServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for updating an existing connection.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.connectionmanager.v1.UpdateConnectionRequest}
      */
     public static final class Builder extends
@@ -2926,6 +3710,10 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object connectionId_ = "";
       /**
+       * <pre>
+       * ID of the connection to update.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return The connectionId.
        */
@@ -2942,6 +3730,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the connection to update.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return The bytes for connectionId.
        */
@@ -2959,6 +3751,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the connection to update.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @param value The connectionId to set.
        * @return This builder for chaining.
@@ -2974,6 +3770,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the connection to update.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -2984,6 +3784,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the connection to update.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @param value The bytes for connectionId to set.
        * @return This builder for chaining.
@@ -3004,6 +3808,10 @@ public final class ConnectionServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        * @return Whether the updateMask field is set.
        */
@@ -3011,6 +3819,10 @@ public final class ConnectionServiceOuterClass {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        * @return The updateMask.
        */
@@ -3022,6 +3834,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -3038,6 +3854,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(
@@ -3052,6 +3872,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -3070,6 +3894,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder clearUpdateMask() {
@@ -3084,6 +3912,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -3092,6 +3924,10 @@ public final class ConnectionServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -3103,6 +3939,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask specifying which fields to update.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3121,6 +3961,10 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * New name for the connection.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The name.
        */
@@ -3137,6 +3981,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the connection.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The bytes for name.
        */
@@ -3154,6 +4002,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the connection.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -3169,6 +4021,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the connection.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return This builder for chaining.
        */
@@ -3179,6 +4035,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the connection.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -3197,6 +4057,10 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * New description for the connection.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The description.
        */
@@ -3213,6 +4077,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description for the connection.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The bytes for description.
        */
@@ -3230,6 +4098,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description for the connection.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -3245,6 +4117,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description for the connection.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return This builder for chaining.
        */
@@ -3255,6 +4131,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description for the connection.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -3298,6 +4178,10 @@ public final class ConnectionServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * New connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
 
@@ -3316,6 +4200,10 @@ public final class ConnectionServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * New connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
       @java.lang.Override
@@ -3324,6 +4212,10 @@ public final class ConnectionServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * New connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
       @java.lang.Override
@@ -3337,6 +4229,10 @@ public final class ConnectionServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * New connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
       @java.lang.Override
@@ -3358,6 +4254,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
 
@@ -3377,6 +4277,10 @@ public final class ConnectionServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * New connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
       public Builder putLabels(
@@ -3392,6 +4296,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New connection labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
 
@@ -3406,6 +4314,10 @@ public final class ConnectionServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams.Builder, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParamsOrBuilder> paramsBuilder_;
       /**
+       * <pre>
+       * New connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 6;</code>
        * @return Whether the params field is set.
        */
@@ -3413,6 +4325,10 @@ public final class ConnectionServiceOuterClass {
         return paramsBuilder_ != null || params_ != null;
       }
       /**
+       * <pre>
+       * New connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 6;</code>
        * @return The params.
        */
@@ -3424,6 +4340,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 6;</code>
        */
       public Builder setParams(yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams value) {
@@ -3440,6 +4360,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 6;</code>
        */
       public Builder setParams(
@@ -3454,6 +4378,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 6;</code>
        */
       public Builder mergeParams(yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams value) {
@@ -3472,6 +4400,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 6;</code>
        */
       public Builder clearParams() {
@@ -3486,6 +4418,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 6;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParams.Builder getParamsBuilder() {
@@ -3494,6 +4430,10 @@ public final class ConnectionServiceOuterClass {
         return getParamsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * New connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 6;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionParamsOrBuilder getParamsOrBuilder() {
@@ -3505,6 +4445,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New connection parameters specific to the database or service type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.ConnectionParams params = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3578,11 +4522,19 @@ public final class ConnectionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the connection being updated.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The connectionId.
      */
     java.lang.String getConnectionId();
     /**
+     * <pre>
+     * ID of the connection being updated.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The bytes for connectionId.
      */
@@ -3590,6 +4542,10 @@ public final class ConnectionServiceOuterClass {
         getConnectionIdBytes();
   }
   /**
+   * <pre>
+   * Metadata for the connection update operation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.connectionmanager.v1.UpdateConnectionMetadata}
    */
   public static final class UpdateConnectionMetadata extends
@@ -3676,6 +4632,10 @@ public final class ConnectionServiceOuterClass {
     public static final int CONNECTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object connectionId_;
     /**
+     * <pre>
+     * ID of the connection being updated.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The connectionId.
      */
@@ -3693,6 +4653,10 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the connection being updated.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The bytes for connectionId.
      */
@@ -3866,6 +4830,10 @@ public final class ConnectionServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Metadata for the connection update operation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.connectionmanager.v1.UpdateConnectionMetadata}
      */
     public static final class Builder extends
@@ -4015,6 +4983,10 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object connectionId_ = "";
       /**
+       * <pre>
+       * ID of the connection being updated.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return The connectionId.
        */
@@ -4031,6 +5003,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the connection being updated.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return The bytes for connectionId.
        */
@@ -4048,6 +5024,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the connection being updated.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @param value The connectionId to set.
        * @return This builder for chaining.
@@ -4063,6 +5043,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the connection being updated.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -4073,6 +5057,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the connection being updated.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @param value The bytes for connectionId to set.
        * @return This builder for chaining.
@@ -4146,11 +5134,19 @@ public final class ConnectionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the connection to delete.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The connectionId.
      */
     java.lang.String getConnectionId();
     /**
+     * <pre>
+     * ID of the connection to delete.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The bytes for connectionId.
      */
@@ -4158,6 +5154,10 @@ public final class ConnectionServiceOuterClass {
         getConnectionIdBytes();
   }
   /**
+   * <pre>
+   * Request message for deleting a connection.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.connectionmanager.v1.DeleteConnectionRequest}
    */
   public static final class DeleteConnectionRequest extends
@@ -4244,6 +5244,10 @@ public final class ConnectionServiceOuterClass {
     public static final int CONNECTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object connectionId_;
     /**
+     * <pre>
+     * ID of the connection to delete.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The connectionId.
      */
@@ -4261,6 +5265,10 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the connection to delete.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The bytes for connectionId.
      */
@@ -4434,6 +5442,10 @@ public final class ConnectionServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for deleting a connection.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.connectionmanager.v1.DeleteConnectionRequest}
      */
     public static final class Builder extends
@@ -4583,6 +5595,10 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object connectionId_ = "";
       /**
+       * <pre>
+       * ID of the connection to delete.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return The connectionId.
        */
@@ -4599,6 +5615,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the connection to delete.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return The bytes for connectionId.
        */
@@ -4616,6 +5636,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the connection to delete.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @param value The connectionId to set.
        * @return This builder for chaining.
@@ -4631,6 +5655,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the connection to delete.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -4641,6 +5669,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the connection to delete.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @param value The bytes for connectionId to set.
        * @return This builder for chaining.
@@ -4714,6 +5746,10 @@ public final class ConnectionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * Metadata for the connection deletion operation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.connectionmanager.v1.DeleteConnectionMetadata}
    */
   public static final class DeleteConnectionMetadata extends
@@ -4935,6 +5971,10 @@ public final class ConnectionServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Metadata for the connection deletion operation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.connectionmanager.v1.DeleteConnectionMetadata}
      */
     public static final class Builder extends
@@ -5132,11 +6172,19 @@ public final class ConnectionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to list connections in.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to list connections in.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The bytes for folderId.
      */
@@ -5144,11 +6192,19 @@ public final class ConnectionServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * ID of the managed database cluster to filter connections.
+     * </pre>
+     *
      * <code>string mdb_cluster_id = 2;</code>
      * @return The mdbClusterId.
      */
     java.lang.String getMdbClusterId();
     /**
+     * <pre>
+     * ID of the managed database cluster to filter connections.
+     * </pre>
+     *
      * <code>string mdb_cluster_id = 2;</code>
      * @return The bytes for mdbClusterId.
      */
@@ -5156,17 +6212,31 @@ public final class ConnectionServiceOuterClass {
         getMdbClusterIdBytes();
 
     /**
+     * <pre>
+     * Maximum number of results per page.
+     * </pre>
+     *
      * <code>int64 page_size = 4;</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListConnectionResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 5;</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListConnectionResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 5;</code>
      * @return The bytes for pageToken.
      */
@@ -5174,11 +6244,19 @@ public final class ConnectionServiceOuterClass {
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * Filter by connection name pattern or exact ID.
+     * </pre>
+     *
      * <code>string name_pattern_or_id = 6;</code>
      * @return The namePatternOrId.
      */
     java.lang.String getNamePatternOrId();
     /**
+     * <pre>
+     * Filter by connection name pattern or exact ID.
+     * </pre>
+     *
      * <code>string name_pattern_or_id = 6;</code>
      * @return The bytes for namePatternOrId.
      */
@@ -5186,11 +6264,19 @@ public final class ConnectionServiceOuterClass {
         getNamePatternOrIdBytes();
 
     /**
+     * <pre>
+     * ID of the connection author to filter by.
+     * </pre>
+     *
      * <code>string author_id = 7;</code>
      * @return The authorId.
      */
     java.lang.String getAuthorId();
     /**
+     * <pre>
+     * ID of the connection author to filter by.
+     * </pre>
+     *
      * <code>string author_id = 7;</code>
      * @return The bytes for authorId.
      */
@@ -5198,53 +6284,93 @@ public final class ConnectionServiceOuterClass {
         getAuthorIdBytes();
 
     /**
+     * <pre>
+     * Include only connections that the current user can use.
+     * </pre>
+     *
      * <code>bool with_can_use = 8;</code>
      * @return The withCanUse.
      */
     boolean getWithCanUse();
 
     /**
+     * <pre>
+     * Filter by whether connections are on-premise.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue is_onpremise = 9;</code>
      * @return Whether the isOnpremise field is set.
      */
     boolean hasIsOnpremise();
     /**
+     * <pre>
+     * Filter by whether connections are on-premise.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue is_onpremise = 9;</code>
      * @return The isOnpremise.
      */
     com.google.protobuf.BoolValue getIsOnpremise();
     /**
+     * <pre>
+     * Filter by whether connections are on-premise.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue is_onpremise = 9;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getIsOnpremiseOrBuilder();
 
     /**
+     * <pre>
+     * Filter by whether connections are manually configured.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue is_manual = 10;</code>
      * @return Whether the isManual field is set.
      */
     boolean hasIsManual();
     /**
+     * <pre>
+     * Filter by whether connections are manually configured.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue is_manual = 10;</code>
      * @return The isManual.
      */
     com.google.protobuf.BoolValue getIsManual();
     /**
+     * <pre>
+     * Filter by whether connections are manually configured.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue is_manual = 10;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getIsManualOrBuilder();
 
     /**
+     * <pre>
+     * Filter connections by database type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.DBType db_type = 11;</code>
      * @return The enum numeric value on the wire for dbType.
      */
     int getDbTypeValue();
     /**
+     * <pre>
+     * Filter connections by database type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.DBType db_type = 11;</code>
      * @return The dbType.
      */
     yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.DBType getDbType();
   }
   /**
+   * <pre>
+   * Request message for listing connections.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.connectionmanager.v1.ListConnectionRequest}
    */
   public static final class ListConnectionRequest extends
@@ -5402,6 +6528,10 @@ public final class ConnectionServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to list connections in.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The folderId.
      */
@@ -5419,6 +6549,10 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to list connections in.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The bytes for folderId.
      */
@@ -5440,6 +6574,10 @@ public final class ConnectionServiceOuterClass {
     public static final int MDB_CLUSTER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object mdbClusterId_;
     /**
+     * <pre>
+     * ID of the managed database cluster to filter connections.
+     * </pre>
+     *
      * <code>string mdb_cluster_id = 2;</code>
      * @return The mdbClusterId.
      */
@@ -5457,6 +6595,10 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the managed database cluster to filter connections.
+     * </pre>
+     *
      * <code>string mdb_cluster_id = 2;</code>
      * @return The bytes for mdbClusterId.
      */
@@ -5478,6 +6620,10 @@ public final class ConnectionServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 4;
     private long pageSize_;
     /**
+     * <pre>
+     * Maximum number of results per page.
+     * </pre>
+     *
      * <code>int64 page_size = 4;</code>
      * @return The pageSize.
      */
@@ -5489,6 +6635,11 @@ public final class ConnectionServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 5;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListConnectionResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 5;</code>
      * @return The pageToken.
      */
@@ -5506,6 +6657,11 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListConnectionResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 5;</code>
      * @return The bytes for pageToken.
      */
@@ -5527,6 +6683,10 @@ public final class ConnectionServiceOuterClass {
     public static final int NAME_PATTERN_OR_ID_FIELD_NUMBER = 6;
     private volatile java.lang.Object namePatternOrId_;
     /**
+     * <pre>
+     * Filter by connection name pattern or exact ID.
+     * </pre>
+     *
      * <code>string name_pattern_or_id = 6;</code>
      * @return The namePatternOrId.
      */
@@ -5544,6 +6704,10 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Filter by connection name pattern or exact ID.
+     * </pre>
+     *
      * <code>string name_pattern_or_id = 6;</code>
      * @return The bytes for namePatternOrId.
      */
@@ -5565,6 +6729,10 @@ public final class ConnectionServiceOuterClass {
     public static final int AUTHOR_ID_FIELD_NUMBER = 7;
     private volatile java.lang.Object authorId_;
     /**
+     * <pre>
+     * ID of the connection author to filter by.
+     * </pre>
+     *
      * <code>string author_id = 7;</code>
      * @return The authorId.
      */
@@ -5582,6 +6750,10 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the connection author to filter by.
+     * </pre>
+     *
      * <code>string author_id = 7;</code>
      * @return The bytes for authorId.
      */
@@ -5603,6 +6775,10 @@ public final class ConnectionServiceOuterClass {
     public static final int WITH_CAN_USE_FIELD_NUMBER = 8;
     private boolean withCanUse_;
     /**
+     * <pre>
+     * Include only connections that the current user can use.
+     * </pre>
+     *
      * <code>bool with_can_use = 8;</code>
      * @return The withCanUse.
      */
@@ -5614,6 +6790,10 @@ public final class ConnectionServiceOuterClass {
     public static final int IS_ONPREMISE_FIELD_NUMBER = 9;
     private com.google.protobuf.BoolValue isOnpremise_;
     /**
+     * <pre>
+     * Filter by whether connections are on-premise.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue is_onpremise = 9;</code>
      * @return Whether the isOnpremise field is set.
      */
@@ -5622,6 +6802,10 @@ public final class ConnectionServiceOuterClass {
       return isOnpremise_ != null;
     }
     /**
+     * <pre>
+     * Filter by whether connections are on-premise.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue is_onpremise = 9;</code>
      * @return The isOnpremise.
      */
@@ -5630,6 +6814,10 @@ public final class ConnectionServiceOuterClass {
       return isOnpremise_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : isOnpremise_;
     }
     /**
+     * <pre>
+     * Filter by whether connections are on-premise.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue is_onpremise = 9;</code>
      */
     @java.lang.Override
@@ -5640,6 +6828,10 @@ public final class ConnectionServiceOuterClass {
     public static final int IS_MANUAL_FIELD_NUMBER = 10;
     private com.google.protobuf.BoolValue isManual_;
     /**
+     * <pre>
+     * Filter by whether connections are manually configured.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue is_manual = 10;</code>
      * @return Whether the isManual field is set.
      */
@@ -5648,6 +6840,10 @@ public final class ConnectionServiceOuterClass {
       return isManual_ != null;
     }
     /**
+     * <pre>
+     * Filter by whether connections are manually configured.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue is_manual = 10;</code>
      * @return The isManual.
      */
@@ -5656,6 +6852,10 @@ public final class ConnectionServiceOuterClass {
       return isManual_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : isManual_;
     }
     /**
+     * <pre>
+     * Filter by whether connections are manually configured.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue is_manual = 10;</code>
      */
     @java.lang.Override
@@ -5666,6 +6866,10 @@ public final class ConnectionServiceOuterClass {
     public static final int DB_TYPE_FIELD_NUMBER = 11;
     private int dbType_;
     /**
+     * <pre>
+     * Filter connections by database type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.DBType db_type = 11;</code>
      * @return The enum numeric value on the wire for dbType.
      */
@@ -5673,6 +6877,10 @@ public final class ConnectionServiceOuterClass {
       return dbType_;
     }
     /**
+     * <pre>
+     * Filter connections by database type.
+     * </pre>
+     *
      * <code>.yandex.cloud.connectionmanager.v1.DBType db_type = 11;</code>
      * @return The dbType.
      */
@@ -5943,6 +7151,10 @@ public final class ConnectionServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for listing connections.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.connectionmanager.v1.ListConnectionRequest}
      */
     public static final class Builder extends
@@ -6166,6 +7378,10 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to list connections in.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @return The folderId.
        */
@@ -6182,6 +7398,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list connections in.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @return The bytes for folderId.
        */
@@ -6199,6 +7419,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list connections in.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -6214,6 +7438,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list connections in.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -6224,6 +7452,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list connections in.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -6242,6 +7474,10 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object mdbClusterId_ = "";
       /**
+       * <pre>
+       * ID of the managed database cluster to filter connections.
+       * </pre>
+       *
        * <code>string mdb_cluster_id = 2;</code>
        * @return The mdbClusterId.
        */
@@ -6258,6 +7494,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the managed database cluster to filter connections.
+       * </pre>
+       *
        * <code>string mdb_cluster_id = 2;</code>
        * @return The bytes for mdbClusterId.
        */
@@ -6275,6 +7515,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the managed database cluster to filter connections.
+       * </pre>
+       *
        * <code>string mdb_cluster_id = 2;</code>
        * @param value The mdbClusterId to set.
        * @return This builder for chaining.
@@ -6290,6 +7534,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the managed database cluster to filter connections.
+       * </pre>
+       *
        * <code>string mdb_cluster_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -6300,6 +7548,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the managed database cluster to filter connections.
+       * </pre>
+       *
        * <code>string mdb_cluster_id = 2;</code>
        * @param value The bytes for mdbClusterId to set.
        * @return This builder for chaining.
@@ -6318,6 +7570,10 @@ public final class ConnectionServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * Maximum number of results per page.
+       * </pre>
+       *
        * <code>int64 page_size = 4;</code>
        * @return The pageSize.
        */
@@ -6326,6 +7582,10 @@ public final class ConnectionServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * Maximum number of results per page.
+       * </pre>
+       *
        * <code>int64 page_size = 4;</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -6337,6 +7597,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of results per page.
+       * </pre>
+       *
        * <code>int64 page_size = 4;</code>
        * @return This builder for chaining.
        */
@@ -6349,6 +7613,11 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListConnectionResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 5;</code>
        * @return The pageToken.
        */
@@ -6365,6 +7634,11 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListConnectionResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 5;</code>
        * @return The bytes for pageToken.
        */
@@ -6382,6 +7656,11 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListConnectionResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 5;</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -6397,6 +7676,11 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListConnectionResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 5;</code>
        * @return This builder for chaining.
        */
@@ -6407,6 +7691,11 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListConnectionResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 5;</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -6425,6 +7714,10 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object namePatternOrId_ = "";
       /**
+       * <pre>
+       * Filter by connection name pattern or exact ID.
+       * </pre>
+       *
        * <code>string name_pattern_or_id = 6;</code>
        * @return The namePatternOrId.
        */
@@ -6441,6 +7734,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Filter by connection name pattern or exact ID.
+       * </pre>
+       *
        * <code>string name_pattern_or_id = 6;</code>
        * @return The bytes for namePatternOrId.
        */
@@ -6458,6 +7755,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Filter by connection name pattern or exact ID.
+       * </pre>
+       *
        * <code>string name_pattern_or_id = 6;</code>
        * @param value The namePatternOrId to set.
        * @return This builder for chaining.
@@ -6473,6 +7774,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Filter by connection name pattern or exact ID.
+       * </pre>
+       *
        * <code>string name_pattern_or_id = 6;</code>
        * @return This builder for chaining.
        */
@@ -6483,6 +7788,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Filter by connection name pattern or exact ID.
+       * </pre>
+       *
        * <code>string name_pattern_or_id = 6;</code>
        * @param value The bytes for namePatternOrId to set.
        * @return This builder for chaining.
@@ -6501,6 +7810,10 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object authorId_ = "";
       /**
+       * <pre>
+       * ID of the connection author to filter by.
+       * </pre>
+       *
        * <code>string author_id = 7;</code>
        * @return The authorId.
        */
@@ -6517,6 +7830,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the connection author to filter by.
+       * </pre>
+       *
        * <code>string author_id = 7;</code>
        * @return The bytes for authorId.
        */
@@ -6534,6 +7851,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the connection author to filter by.
+       * </pre>
+       *
        * <code>string author_id = 7;</code>
        * @param value The authorId to set.
        * @return This builder for chaining.
@@ -6549,6 +7870,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the connection author to filter by.
+       * </pre>
+       *
        * <code>string author_id = 7;</code>
        * @return This builder for chaining.
        */
@@ -6559,6 +7884,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the connection author to filter by.
+       * </pre>
+       *
        * <code>string author_id = 7;</code>
        * @param value The bytes for authorId to set.
        * @return This builder for chaining.
@@ -6577,6 +7906,10 @@ public final class ConnectionServiceOuterClass {
 
       private boolean withCanUse_ ;
       /**
+       * <pre>
+       * Include only connections that the current user can use.
+       * </pre>
+       *
        * <code>bool with_can_use = 8;</code>
        * @return The withCanUse.
        */
@@ -6585,6 +7918,10 @@ public final class ConnectionServiceOuterClass {
         return withCanUse_;
       }
       /**
+       * <pre>
+       * Include only connections that the current user can use.
+       * </pre>
+       *
        * <code>bool with_can_use = 8;</code>
        * @param value The withCanUse to set.
        * @return This builder for chaining.
@@ -6596,6 +7933,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Include only connections that the current user can use.
+       * </pre>
+       *
        * <code>bool with_can_use = 8;</code>
        * @return This builder for chaining.
        */
@@ -6610,6 +7951,10 @@ public final class ConnectionServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> isOnpremiseBuilder_;
       /**
+       * <pre>
+       * Filter by whether connections are on-premise.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue is_onpremise = 9;</code>
        * @return Whether the isOnpremise field is set.
        */
@@ -6617,6 +7962,10 @@ public final class ConnectionServiceOuterClass {
         return isOnpremiseBuilder_ != null || isOnpremise_ != null;
       }
       /**
+       * <pre>
+       * Filter by whether connections are on-premise.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue is_onpremise = 9;</code>
        * @return The isOnpremise.
        */
@@ -6628,6 +7977,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Filter by whether connections are on-premise.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue is_onpremise = 9;</code>
        */
       public Builder setIsOnpremise(com.google.protobuf.BoolValue value) {
@@ -6644,6 +7997,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Filter by whether connections are on-premise.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue is_onpremise = 9;</code>
        */
       public Builder setIsOnpremise(
@@ -6658,6 +8015,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Filter by whether connections are on-premise.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue is_onpremise = 9;</code>
        */
       public Builder mergeIsOnpremise(com.google.protobuf.BoolValue value) {
@@ -6676,6 +8037,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Filter by whether connections are on-premise.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue is_onpremise = 9;</code>
        */
       public Builder clearIsOnpremise() {
@@ -6690,6 +8055,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Filter by whether connections are on-premise.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue is_onpremise = 9;</code>
        */
       public com.google.protobuf.BoolValue.Builder getIsOnpremiseBuilder() {
@@ -6698,6 +8067,10 @@ public final class ConnectionServiceOuterClass {
         return getIsOnpremiseFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Filter by whether connections are on-premise.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue is_onpremise = 9;</code>
        */
       public com.google.protobuf.BoolValueOrBuilder getIsOnpremiseOrBuilder() {
@@ -6709,6 +8082,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Filter by whether connections are on-premise.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue is_onpremise = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6729,6 +8106,10 @@ public final class ConnectionServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> isManualBuilder_;
       /**
+       * <pre>
+       * Filter by whether connections are manually configured.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue is_manual = 10;</code>
        * @return Whether the isManual field is set.
        */
@@ -6736,6 +8117,10 @@ public final class ConnectionServiceOuterClass {
         return isManualBuilder_ != null || isManual_ != null;
       }
       /**
+       * <pre>
+       * Filter by whether connections are manually configured.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue is_manual = 10;</code>
        * @return The isManual.
        */
@@ -6747,6 +8132,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Filter by whether connections are manually configured.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue is_manual = 10;</code>
        */
       public Builder setIsManual(com.google.protobuf.BoolValue value) {
@@ -6763,6 +8152,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Filter by whether connections are manually configured.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue is_manual = 10;</code>
        */
       public Builder setIsManual(
@@ -6777,6 +8170,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Filter by whether connections are manually configured.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue is_manual = 10;</code>
        */
       public Builder mergeIsManual(com.google.protobuf.BoolValue value) {
@@ -6795,6 +8192,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Filter by whether connections are manually configured.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue is_manual = 10;</code>
        */
       public Builder clearIsManual() {
@@ -6809,6 +8210,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Filter by whether connections are manually configured.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue is_manual = 10;</code>
        */
       public com.google.protobuf.BoolValue.Builder getIsManualBuilder() {
@@ -6817,6 +8222,10 @@ public final class ConnectionServiceOuterClass {
         return getIsManualFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Filter by whether connections are manually configured.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue is_manual = 10;</code>
        */
       public com.google.protobuf.BoolValueOrBuilder getIsManualOrBuilder() {
@@ -6828,6 +8237,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Filter by whether connections are manually configured.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue is_manual = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6846,6 +8259,10 @@ public final class ConnectionServiceOuterClass {
 
       private int dbType_ = 0;
       /**
+       * <pre>
+       * Filter connections by database type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.DBType db_type = 11;</code>
        * @return The enum numeric value on the wire for dbType.
        */
@@ -6853,6 +8270,10 @@ public final class ConnectionServiceOuterClass {
         return dbType_;
       }
       /**
+       * <pre>
+       * Filter connections by database type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.DBType db_type = 11;</code>
        * @param value The enum numeric value on the wire for dbType to set.
        * @return This builder for chaining.
@@ -6864,6 +8285,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Filter connections by database type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.DBType db_type = 11;</code>
        * @return The dbType.
        */
@@ -6874,6 +8299,10 @@ public final class ConnectionServiceOuterClass {
         return result == null ? yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.DBType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Filter connections by database type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.DBType db_type = 11;</code>
        * @param value The dbType to set.
        * @return This builder for chaining.
@@ -6888,6 +8317,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Filter connections by database type.
+       * </pre>
+       *
        * <code>.yandex.cloud.connectionmanager.v1.DBType db_type = 11;</code>
        * @return This builder for chaining.
        */
@@ -6955,35 +8388,69 @@ public final class ConnectionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of connections in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
      */
     java.util.List<yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection> 
         getConnectionList();
     /**
+     * <pre>
+     * List of connections in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
      */
     yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection getConnection(int index);
     /**
+     * <pre>
+     * List of connections in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
      */
     int getConnectionCount();
     /**
+     * <pre>
+     * List of connections in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionOrBuilder> 
         getConnectionOrBuilderList();
     /**
+     * <pre>
+     * List of connections in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
      */
     yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionOrBuilder getConnectionOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListConnectionRequest.page_size], use `next_page_token` as the value
+     * for the [ListConnectionRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListConnectionRequest.page_size], use `next_page_token` as the value
+     * for the [ListConnectionRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -6991,6 +8458,10 @@ public final class ConnectionServiceOuterClass {
         getNextPageTokenBytes();
   }
   /**
+   * <pre>
+   * Response message for listing connections.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.connectionmanager.v1.ListConnectionResponse}
    */
   public static final class ListConnectionResponse extends
@@ -7091,6 +8562,10 @@ public final class ConnectionServiceOuterClass {
     public static final int CONNECTION_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection> connection_;
     /**
+     * <pre>
+     * List of connections in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
      */
     @java.lang.Override
@@ -7098,6 +8573,10 @@ public final class ConnectionServiceOuterClass {
       return connection_;
     }
     /**
+     * <pre>
+     * List of connections in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
      */
     @java.lang.Override
@@ -7106,6 +8585,10 @@ public final class ConnectionServiceOuterClass {
       return connection_;
     }
     /**
+     * <pre>
+     * List of connections in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
      */
     @java.lang.Override
@@ -7113,6 +8596,10 @@ public final class ConnectionServiceOuterClass {
       return connection_.size();
     }
     /**
+     * <pre>
+     * List of connections in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
      */
     @java.lang.Override
@@ -7120,6 +8607,10 @@ public final class ConnectionServiceOuterClass {
       return connection_.get(index);
     }
     /**
+     * <pre>
+     * List of connections in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
      */
     @java.lang.Override
@@ -7131,6 +8622,13 @@ public final class ConnectionServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListConnectionRequest.page_size], use `next_page_token` as the value
+     * for the [ListConnectionRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
@@ -7148,6 +8646,13 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListConnectionRequest.page_size], use `next_page_token` as the value
+     * for the [ListConnectionRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -7334,6 +8839,10 @@ public final class ConnectionServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Response message for listing connections.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.connectionmanager.v1.ListConnectionResponse}
      */
     public static final class Builder extends
@@ -7538,6 +9047,10 @@ public final class ConnectionServiceOuterClass {
           yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection.Builder, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionOrBuilder> connectionBuilder_;
 
       /**
+       * <pre>
+       * List of connections in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
        */
       public java.util.List<yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection> getConnectionList() {
@@ -7548,6 +9061,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of connections in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
        */
       public int getConnectionCount() {
@@ -7558,6 +9075,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of connections in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection getConnection(int index) {
@@ -7568,6 +9089,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of connections in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
        */
       public Builder setConnection(
@@ -7585,6 +9110,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of connections in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
        */
       public Builder setConnection(
@@ -7599,6 +9128,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of connections in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
        */
       public Builder addConnection(yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection value) {
@@ -7615,6 +9148,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of connections in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
        */
       public Builder addConnection(
@@ -7632,6 +9169,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of connections in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
        */
       public Builder addConnection(
@@ -7646,6 +9187,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of connections in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
        */
       public Builder addConnection(
@@ -7660,6 +9205,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of connections in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
        */
       public Builder addAllConnection(
@@ -7675,6 +9224,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of connections in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
        */
       public Builder clearConnection() {
@@ -7688,6 +9241,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of connections in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
        */
       public Builder removeConnection(int index) {
@@ -7701,6 +9258,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of connections in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection.Builder getConnectionBuilder(
@@ -7708,6 +9269,10 @@ public final class ConnectionServiceOuterClass {
         return getConnectionFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of connections in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionOrBuilder getConnectionOrBuilder(
@@ -7718,6 +9283,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of connections in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.ConnectionOrBuilder> 
@@ -7729,6 +9298,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of connections in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection.Builder addConnectionBuilder() {
@@ -7736,6 +9309,10 @@ public final class ConnectionServiceOuterClass {
             yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of connections in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
        */
       public yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection.Builder addConnectionBuilder(
@@ -7744,6 +9321,10 @@ public final class ConnectionServiceOuterClass {
             index, yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of connections in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.connectionmanager.v1.Connection connection = 1;</code>
        */
       public java.util.List<yandex.cloud.api.connectionmanager.v1.ConnectionOuterClass.Connection.Builder> 
@@ -7767,6 +9348,13 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListConnectionRequest.page_size], use `next_page_token` as the value
+       * for the [ListConnectionRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The nextPageToken.
        */
@@ -7783,6 +9371,13 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListConnectionRequest.page_size], use `next_page_token` as the value
+       * for the [ListConnectionRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The bytes for nextPageToken.
        */
@@ -7800,6 +9395,13 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListConnectionRequest.page_size], use `next_page_token` as the value
+       * for the [ListConnectionRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -7815,6 +9417,13 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListConnectionRequest.page_size], use `next_page_token` as the value
+       * for the [ListConnectionRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return This builder for chaining.
        */
@@ -7825,6 +9434,13 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListConnectionRequest.page_size], use `next_page_token` as the value
+       * for the [ListConnectionRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.
@@ -7898,11 +9514,19 @@ public final class ConnectionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the connection to retrieve.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The connectionId.
      */
     java.lang.String getConnectionId();
     /**
+     * <pre>
+     * ID of the connection to retrieve.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The bytes for connectionId.
      */
@@ -7910,6 +9534,10 @@ public final class ConnectionServiceOuterClass {
         getConnectionIdBytes();
   }
   /**
+   * <pre>
+   * Request message for getting a connection.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.connectionmanager.v1.GetConnectionRequest}
    */
   public static final class GetConnectionRequest extends
@@ -7996,6 +9624,10 @@ public final class ConnectionServiceOuterClass {
     public static final int CONNECTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object connectionId_;
     /**
+     * <pre>
+     * ID of the connection to retrieve.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The connectionId.
      */
@@ -8013,6 +9645,10 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the connection to retrieve.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The bytes for connectionId.
      */
@@ -8186,6 +9822,10 @@ public final class ConnectionServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for getting a connection.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.connectionmanager.v1.GetConnectionRequest}
      */
     public static final class Builder extends
@@ -8335,6 +9975,10 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object connectionId_ = "";
       /**
+       * <pre>
+       * ID of the connection to retrieve.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return The connectionId.
        */
@@ -8351,6 +9995,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the connection to retrieve.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return The bytes for connectionId.
        */
@@ -8368,6 +10016,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the connection to retrieve.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @param value The connectionId to set.
        * @return This builder for chaining.
@@ -8383,6 +10035,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the connection to retrieve.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -8393,6 +10049,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the connection to retrieve.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @param value The bytes for connectionId to set.
        * @return This builder for chaining.
@@ -8466,11 +10126,19 @@ public final class ConnectionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the connection to resolve cluster topology for.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The connectionId.
      */
     java.lang.String getConnectionId();
     /**
+     * <pre>
+     * ID of the connection to resolve cluster topology for.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The bytes for connectionId.
      */
@@ -8478,6 +10146,10 @@ public final class ConnectionServiceOuterClass {
         getConnectionIdBytes();
   }
   /**
+   * <pre>
+   * Request message for resolving cluster topology for a connection.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.connectionmanager.v1.ResolveClusterRequest}
    */
   public static final class ResolveClusterRequest extends
@@ -8564,6 +10236,10 @@ public final class ConnectionServiceOuterClass {
     public static final int CONNECTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object connectionId_;
     /**
+     * <pre>
+     * ID of the connection to resolve cluster topology for.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The connectionId.
      */
@@ -8581,6 +10257,10 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the connection to resolve cluster topology for.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The bytes for connectionId.
      */
@@ -8754,6 +10434,10 @@ public final class ConnectionServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for resolving cluster topology for a connection.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.connectionmanager.v1.ResolveClusterRequest}
      */
     public static final class Builder extends
@@ -8903,6 +10587,10 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object connectionId_ = "";
       /**
+       * <pre>
+       * ID of the connection to resolve cluster topology for.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return The connectionId.
        */
@@ -8919,6 +10607,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the connection to resolve cluster topology for.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return The bytes for connectionId.
        */
@@ -8936,6 +10628,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the connection to resolve cluster topology for.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @param value The connectionId to set.
        * @return This builder for chaining.
@@ -8951,6 +10647,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the connection to resolve cluster topology for.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -8961,6 +10661,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the connection to resolve cluster topology for.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @param value The bytes for connectionId to set.
        * @return This builder for chaining.
@@ -9034,11 +10738,19 @@ public final class ConnectionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the connection.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The connectionId.
      */
     java.lang.String getConnectionId();
     /**
+     * <pre>
+     * ID of the connection.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The bytes for connectionId.
      */
@@ -9046,11 +10758,19 @@ public final class ConnectionServiceOuterClass {
         getConnectionIdBytes();
 
     /**
+     * <pre>
+     * ID of the version being deleted.
+     * </pre>
+     *
      * <code>string version_id = 2;</code>
      * @return The versionId.
      */
     java.lang.String getVersionId();
     /**
+     * <pre>
+     * ID of the version being deleted.
+     * </pre>
+     *
      * <code>string version_id = 2;</code>
      * @return The bytes for versionId.
      */
@@ -9058,6 +10778,10 @@ public final class ConnectionServiceOuterClass {
         getVersionIdBytes();
   }
   /**
+   * <pre>
+   * Metadata for the version deletion operation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.connectionmanager.v1.DeleteVersionMetadata}
    */
   public static final class DeleteVersionMetadata extends
@@ -9151,6 +10875,10 @@ public final class ConnectionServiceOuterClass {
     public static final int CONNECTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object connectionId_;
     /**
+     * <pre>
+     * ID of the connection.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The connectionId.
      */
@@ -9168,6 +10896,10 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the connection.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The bytes for connectionId.
      */
@@ -9189,6 +10921,10 @@ public final class ConnectionServiceOuterClass {
     public static final int VERSION_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object versionId_;
     /**
+     * <pre>
+     * ID of the version being deleted.
+     * </pre>
+     *
      * <code>string version_id = 2;</code>
      * @return The versionId.
      */
@@ -9206,6 +10942,10 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the version being deleted.
+     * </pre>
+     *
      * <code>string version_id = 2;</code>
      * @return The bytes for versionId.
      */
@@ -9389,6 +11129,10 @@ public final class ConnectionServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Metadata for the version deletion operation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.connectionmanager.v1.DeleteVersionMetadata}
      */
     public static final class Builder extends
@@ -9545,6 +11289,10 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object connectionId_ = "";
       /**
+       * <pre>
+       * ID of the connection.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return The connectionId.
        */
@@ -9561,6 +11309,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the connection.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return The bytes for connectionId.
        */
@@ -9578,6 +11330,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the connection.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @param value The connectionId to set.
        * @return This builder for chaining.
@@ -9593,6 +11349,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the connection.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -9603,6 +11363,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the connection.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @param value The bytes for connectionId to set.
        * @return This builder for chaining.
@@ -9621,6 +11385,10 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object versionId_ = "";
       /**
+       * <pre>
+       * ID of the version being deleted.
+       * </pre>
+       *
        * <code>string version_id = 2;</code>
        * @return The versionId.
        */
@@ -9637,6 +11405,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the version being deleted.
+       * </pre>
+       *
        * <code>string version_id = 2;</code>
        * @return The bytes for versionId.
        */
@@ -9654,6 +11426,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the version being deleted.
+       * </pre>
+       *
        * <code>string version_id = 2;</code>
        * @param value The versionId to set.
        * @return This builder for chaining.
@@ -9669,6 +11445,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the version being deleted.
+       * </pre>
+       *
        * <code>string version_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -9679,6 +11459,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the version being deleted.
+       * </pre>
+       *
        * <code>string version_id = 2;</code>
        * @param value The bytes for versionId to set.
        * @return This builder for chaining.
@@ -9752,11 +11536,19 @@ public final class ConnectionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the connection to list operations for.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The connectionId.
      */
     java.lang.String getConnectionId();
     /**
+     * <pre>
+     * ID of the connection to list operations for.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The bytes for connectionId.
      */
@@ -9764,17 +11556,29 @@ public final class ConnectionServiceOuterClass {
         getConnectionIdBytes();
 
     /**
+     * <pre>
+     * Maximum number of results per page.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Token for getting the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -9782,6 +11586,10 @@ public final class ConnectionServiceOuterClass {
         getPageTokenBytes();
   }
   /**
+   * <pre>
+   * Request message for listing operations of a connection.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.connectionmanager.v1.ListOperationsRequest}
    */
   public static final class ListOperationsRequest extends
@@ -9880,6 +11688,10 @@ public final class ConnectionServiceOuterClass {
     public static final int CONNECTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object connectionId_;
     /**
+     * <pre>
+     * ID of the connection to list operations for.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The connectionId.
      */
@@ -9897,6 +11709,10 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the connection to list operations for.
+     * </pre>
+     *
      * <code>string connection_id = 1;</code>
      * @return The bytes for connectionId.
      */
@@ -9918,6 +11734,10 @@ public final class ConnectionServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * Maximum number of results per page.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
@@ -9929,6 +11749,10 @@ public final class ConnectionServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
@@ -9946,6 +11770,10 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of results.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -10141,6 +11969,10 @@ public final class ConnectionServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for listing operations of a connection.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.connectionmanager.v1.ListOperationsRequest}
      */
     public static final class Builder extends
@@ -10303,6 +12135,10 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object connectionId_ = "";
       /**
+       * <pre>
+       * ID of the connection to list operations for.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return The connectionId.
        */
@@ -10319,6 +12155,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the connection to list operations for.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return The bytes for connectionId.
        */
@@ -10336,6 +12176,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the connection to list operations for.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @param value The connectionId to set.
        * @return This builder for chaining.
@@ -10351,6 +12195,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the connection to list operations for.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -10361,6 +12209,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the connection to list operations for.
+       * </pre>
+       *
        * <code>string connection_id = 1;</code>
        * @param value The bytes for connectionId to set.
        * @return This builder for chaining.
@@ -10379,6 +12231,10 @@ public final class ConnectionServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * Maximum number of results per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return The pageSize.
        */
@@ -10387,6 +12243,10 @@ public final class ConnectionServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * Maximum number of results per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -10398,6 +12258,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of results per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return This builder for chaining.
        */
@@ -10410,6 +12274,10 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The pageToken.
        */
@@ -10426,6 +12294,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The bytes for pageToken.
        */
@@ -10443,6 +12315,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -10458,6 +12334,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return This builder for chaining.
        */
@@ -10468,6 +12348,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of results.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -10541,35 +12425,63 @@ public final class ConnectionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of operations for the specified connection.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> 
         getOperationsList();
     /**
+     * <pre>
+     * List of operations for the specified connection.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index);
     /**
+     * <pre>
+     * List of operations for the specified connection.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     int getOperationsCount();
     /**
+     * <pre>
+     * List of operations for the specified connection.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList();
     /**
+     * <pre>
+     * List of operations for the specified connection.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -10577,6 +12489,10 @@ public final class ConnectionServiceOuterClass {
         getNextPageTokenBytes();
   }
   /**
+   * <pre>
+   * Response message for listing operations of a connection.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.connectionmanager.v1.ListOperationsResponse}
    */
   public static final class ListOperationsResponse extends
@@ -10677,6 +12593,10 @@ public final class ConnectionServiceOuterClass {
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
+     * <pre>
+     * List of operations for the specified connection.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     @java.lang.Override
@@ -10684,6 +12604,10 @@ public final class ConnectionServiceOuterClass {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified connection.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     @java.lang.Override
@@ -10692,6 +12616,10 @@ public final class ConnectionServiceOuterClass {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified connection.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     @java.lang.Override
@@ -10699,6 +12627,10 @@ public final class ConnectionServiceOuterClass {
       return operations_.size();
     }
     /**
+     * <pre>
+     * List of operations for the specified connection.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     @java.lang.Override
@@ -10706,6 +12638,10 @@ public final class ConnectionServiceOuterClass {
       return operations_.get(index);
     }
     /**
+     * <pre>
+     * List of operations for the specified connection.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     @java.lang.Override
@@ -10717,6 +12653,10 @@ public final class ConnectionServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
@@ -10734,6 +12674,10 @@ public final class ConnectionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -10920,6 +12864,10 @@ public final class ConnectionServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Response message for listing operations of a connection.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.connectionmanager.v1.ListOperationsResponse}
      */
     public static final class Builder extends
@@ -11124,6 +13072,10 @@ public final class ConnectionServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> operationsBuilder_;
 
       /**
+       * <pre>
+       * List of operations for the specified connection.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
@@ -11134,6 +13086,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified connection.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public int getOperationsCount() {
@@ -11144,6 +13100,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified connection.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
@@ -11154,6 +13114,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified connection.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -11171,6 +13135,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified connection.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -11185,6 +13153,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified connection.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(yandex.cloud.api.operation.OperationOuterClass.Operation value) {
@@ -11201,6 +13173,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified connection.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -11218,6 +13194,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified connection.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -11232,6 +13212,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified connection.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -11246,6 +13230,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified connection.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addAllOperations(
@@ -11261,6 +13249,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified connection.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder clearOperations() {
@@ -11274,6 +13266,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified connection.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder removeOperations(int index) {
@@ -11287,6 +13283,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified connection.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder getOperationsBuilder(
@@ -11294,6 +13294,10 @@ public final class ConnectionServiceOuterClass {
         return getOperationsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of operations for the specified connection.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
@@ -11304,6 +13308,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified connection.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
@@ -11315,6 +13323,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified connection.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder() {
@@ -11322,6 +13334,10 @@ public final class ConnectionServiceOuterClass {
             yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified connection.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder(
@@ -11330,6 +13346,10 @@ public final class ConnectionServiceOuterClass {
             index, yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified connection.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation.Builder> 
@@ -11353,6 +13373,10 @@ public final class ConnectionServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The nextPageToken.
        */
@@ -11369,6 +13393,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The bytes for nextPageToken.
        */
@@ -11386,6 +13414,10 @@ public final class ConnectionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -11401,6 +13433,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return This builder for chaining.
        */
@@ -11411,6 +13447,10 @@ public final class ConnectionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.
@@ -11570,83 +13610,85 @@ public final class ConnectionServiceOuterClass {
       "\036google/protobuf/wrappers.proto\032 yandex/" +
       "cloud/api/operation.proto\032&yandex/cloud/" +
       "operation/operation.proto\0322yandex/cloud/" +
-      "connectionmanager/v1/connection.proto\"\241\002" +
+      "connectionmanager/v1/connection.proto\"\205\003" +
       "\n\027CreateConnectionRequest\022\021\n\tfolder_id\030\001" +
       " \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022" +
       "V\n\006labels\030\004 \003(\0132F.yandex.cloud.connectio" +
       "nmanager.v1.CreateConnectionRequest.Labe" +
       "lsEntry\022C\n\006params\030\005 \001(\01323.yandex.cloud.c" +
-      "onnectionmanager.v1.ConnectionParams\032-\n\013" +
-      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001J\004\010\006\020\013\"1\n\030CreateConnectionMetadata\022\025\n" +
-      "\rconnection_id\030\001 \001(\t\"\326\002\n\027UpdateConnectio" +
-      "nRequest\022\025\n\rconnection_id\030\001 \001(\t\022/\n\013updat" +
-      "e_mask\030\002 \001(\0132\032.google.protobuf.FieldMask" +
-      "\022\014\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022V\n\006l" +
-      "abels\030\005 \003(\0132F.yandex.cloud.connectionman" +
-      "ager.v1.UpdateConnectionRequest.LabelsEn" +
-      "try\022C\n\006params\030\006 \001(\01323.yandex.cloud.conne" +
-      "ctionmanager.v1.ConnectionParams\032-\n\013Labe" +
-      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J" +
-      "\004\010\007\020\n\"1\n\030UpdateConnectionMetadata\022\025\n\rcon" +
-      "nection_id\030\001 \001(\t\"0\n\027DeleteConnectionRequ" +
-      "est\022\025\n\rconnection_id\030\001 \001(\t\"\032\n\030DeleteConn" +
-      "ectionMetadata\"\321\002\n\025ListConnectionRequest" +
-      "\022\021\n\tfolder_id\030\001 \001(\t\022\026\n\016mdb_cluster_id\030\002 " +
-      "\001(\t\022\021\n\tpage_size\030\004 \001(\003\022\022\n\npage_token\030\005 \001" +
-      "(\t\022\032\n\022name_pattern_or_id\030\006 \001(\t\022\021\n\tauthor" +
-      "_id\030\007 \001(\t\022\024\n\014with_can_use\030\010 \001(\010\0220\n\014is_on" +
-      "premise\030\t \001(\0132\032.google.protobuf.BoolValu" +
-      "e\022-\n\tis_manual\030\n \001(\0132\032.google.protobuf.B" +
-      "oolValue\022:\n\007db_type\030\013 \001(\0162).yandex.cloud" +
-      ".connectionmanager.v1.DBTypeJ\004\010\003\020\004\"t\n\026Li" +
-      "stConnectionResponse\022A\n\nconnection\030\001 \003(\013" +
-      "2-.yandex.cloud.connectionmanager.v1.Con" +
-      "nection\022\027\n\017next_page_token\030\002 \001(\t\"9\n\024GetC" +
-      "onnectionRequest\022\025\n\rconnection_id\030\001 \001(\tJ" +
-      "\004\010\002\020\003J\004\010\003\020\004\"4\n\025ResolveClusterRequest\022\025\n\r" +
-      "connection_id\030\001 \001(\tJ\004\010\002\020\003\"B\n\025DeleteVersi" +
-      "onMetadata\022\025\n\rconnection_id\030\001 \001(\t\022\022\n\nver" +
-      "sion_id\030\002 \001(\t\"U\n\025ListOperationsRequest\022\025" +
-      "\n\rconnection_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003" +
-      "\022\022\n\npage_token\030\003 \001(\t\"h\n\026ListOperationsRe" +
-      "sponse\0225\n\noperations\030\001 \003(\0132!.yandex.clou" +
-      "d.operation.Operation\022\027\n\017next_page_token" +
-      "\030\002 \001(\t2\312\t\n\021ConnectionService\022\225\001\n\003Get\0227.y" +
-      "andex.cloud.connectionmanager.v1.GetConn" +
-      "ectionRequest\032-.yandex.cloud.connectionm" +
-      "anager.v1.Connection\"&\202\323\344\223\002 \022\036/v1/connec" +
-      "tion/{connection_id}\022\260\001\n\016ResolveCluster\022" +
-      "8.yandex.cloud.connectionmanager.v1.Reso" +
-      "lveClusterRequest\032-.yandex.cloud.connect" +
-      "ionmanager.v1.Connection\"5\202\323\344\223\002/\022-/v1/co" +
-      "nnection/resolveCluster/{connection_id}\022" +
-      "\224\001\n\004List\0228.yandex.cloud.connectionmanage" +
-      "r.v1.ListConnectionRequest\0329.yandex.clou" +
-      "d.connectionmanager.v1.ListConnectionRes" +
-      "ponse\"\027\202\323\344\223\002\021\022\017/v1/connections\022\254\001\n\006Creat" +
-      "e\022:.yandex.cloud.connectionmanager.v1.Cr" +
-      "eateConnectionRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"C\202\323\344\223\002\023\"\016/v1/connection" +
-      ":\001*\262\322*&\n\030CreateConnectionMetadata\022\nConne" +
-      "ction\022\274\001\n\006Update\022:.yandex.cloud.connecti" +
-      "onmanager.v1.UpdateConnectionRequest\032!.y" +
-      "andex.cloud.operation.Operation\"S\202\323\344\223\002#2" +
-      "\036/v1/connection/{connection_id}:\001*\262\322*&\n\030" +
-      "UpdateConnectionMetadata\022\nConnection\022\304\001\n" +
-      "\006Delete\022:.yandex.cloud.connectionmanager" +
-      ".v1.DeleteConnectionRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"[\202\323\344\223\002 *\036/v1/conn" +
-      "ection/{connection_id}\262\322*1\n\030DeleteConnec" +
-      "tionMetadata\022\025google.protobuf.Empty\022\235\001\n\016" +
-      "ListOperations\0228.yandex.cloud.connection" +
-      "manager.v1.ListOperationsRequest\0329.yande" +
-      "x.cloud.connectionmanager.v1.ListOperati" +
-      "onsResponse\"\026\202\323\344\223\002\020\022\016/v1/operationsB\200\001\n%" +
-      "yandex.cloud.api.connectionmanager.v1ZWg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/connectionmanager/v1;connectionm" +
-      "anagerb\006proto3"
+      "onnectionmanager.v1.ConnectionParams\022S\n\023" +
+      "lockbox_secret_spec\030\013 \001(\01324.yandex.cloud" +
+      ".connectionmanager.v1.LockboxSecretSpecH" +
+      "\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001B\r\n\013secret_specJ\004\010\006\020\013\"1\n\030CreateC" +
+      "onnectionMetadata\022\025\n\rconnection_id\030\001 \001(\t" +
+      "\"\326\002\n\027UpdateConnectionRequest\022\025\n\rconnecti" +
+      "on_id\030\001 \001(\t\022/\n\013update_mask\030\002 \001(\0132\032.googl" +
+      "e.protobuf.FieldMask\022\014\n\004name\030\003 \001(\t\022\023\n\013de" +
+      "scription\030\004 \001(\t\022V\n\006labels\030\005 \003(\0132F.yandex" +
+      ".cloud.connectionmanager.v1.UpdateConnec" +
+      "tionRequest.LabelsEntry\022C\n\006params\030\006 \001(\0132" +
+      "3.yandex.cloud.connectionmanager.v1.Conn" +
+      "ectionParams\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\007\020\n\"1\n\030UpdateConne" +
+      "ctionMetadata\022\025\n\rconnection_id\030\001 \001(\t\"0\n\027" +
+      "DeleteConnectionRequest\022\025\n\rconnection_id" +
+      "\030\001 \001(\t\"\032\n\030DeleteConnectionMetadata\"\321\002\n\025L" +
+      "istConnectionRequest\022\021\n\tfolder_id\030\001 \001(\t\022" +
+      "\026\n\016mdb_cluster_id\030\002 \001(\t\022\021\n\tpage_size\030\004 \001" +
+      "(\003\022\022\n\npage_token\030\005 \001(\t\022\032\n\022name_pattern_o" +
+      "r_id\030\006 \001(\t\022\021\n\tauthor_id\030\007 \001(\t\022\024\n\014with_ca" +
+      "n_use\030\010 \001(\010\0220\n\014is_onpremise\030\t \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\022-\n\tis_manual\030\n \001(\013" +
+      "2\032.google.protobuf.BoolValue\022:\n\007db_type\030" +
+      "\013 \001(\0162).yandex.cloud.connectionmanager.v" +
+      "1.DBTypeJ\004\010\003\020\004\"t\n\026ListConnectionResponse" +
+      "\022A\n\nconnection\030\001 \003(\0132-.yandex.cloud.conn" +
+      "ectionmanager.v1.Connection\022\027\n\017next_page" +
+      "_token\030\002 \001(\t\"9\n\024GetConnectionRequest\022\025\n\r" +
+      "connection_id\030\001 \001(\tJ\004\010\002\020\003J\004\010\003\020\004\"4\n\025Resol" +
+      "veClusterRequest\022\025\n\rconnection_id\030\001 \001(\tJ" +
+      "\004\010\002\020\003\"B\n\025DeleteVersionMetadata\022\025\n\rconnec" +
+      "tion_id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\"U\n\025Lis" +
+      "tOperationsRequest\022\025\n\rconnection_id\030\001 \001(" +
+      "\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t" +
+      "\"h\n\026ListOperationsResponse\0225\n\noperations" +
+      "\030\001 \003(\0132!.yandex.cloud.operation.Operatio" +
+      "n\022\027\n\017next_page_token\030\002 \001(\t2\303\t\n\021Connectio" +
+      "nService\022\225\001\n\003Get\0227.yandex.cloud.connecti" +
+      "onmanager.v1.GetConnectionRequest\032-.yand" +
+      "ex.cloud.connectionmanager.v1.Connection" +
+      "\"&\202\323\344\223\002 \022\036/v1/connection/{connection_id}" +
+      "\022\251\001\n\016ResolveCluster\0228.yandex.cloud.conne" +
+      "ctionmanager.v1.ResolveClusterRequest\032-." +
+      "yandex.cloud.connectionmanager.v1.Connec" +
+      "tion\".\202\323\344\223\002(\022&/v1/connection/{connection" +
+      "_id}:resolve\022\224\001\n\004List\0228.yandex.cloud.con" +
+      "nectionmanager.v1.ListConnectionRequest\032" +
+      "9.yandex.cloud.connectionmanager.v1.List" +
+      "ConnectionResponse\"\027\202\323\344\223\002\021\022\017/v1/connecti" +
+      "ons\022\254\001\n\006Create\022:.yandex.cloud.connection" +
+      "manager.v1.CreateConnectionRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"C\202\323\344\223\002\023\"\016/" +
+      "v1/connection:\001*\262\322*&\n\030CreateConnectionMe" +
+      "tadata\022\nConnection\022\274\001\n\006Update\022:.yandex.c" +
+      "loud.connectionmanager.v1.UpdateConnecti" +
+      "onRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"S\202\323\344\223\002#2\036/v1/connection/{connection" +
+      "_id}:\001*\262\322*&\n\030UpdateConnectionMetadata\022\nC" +
+      "onnection\022\304\001\n\006Delete\022:.yandex.cloud.conn" +
+      "ectionmanager.v1.DeleteConnectionRequest" +
+      "\032!.yandex.cloud.operation.Operation\"[\202\323\344" +
+      "\223\002 *\036/v1/connection/{connection_id}\262\322*1\n" +
+      "\030DeleteConnectionMetadata\022\025google.protob" +
+      "uf.Empty\022\235\001\n\016ListOperations\0228.yandex.clo" +
+      "ud.connectionmanager.v1.ListOperationsRe" +
+      "quest\0329.yandex.cloud.connectionmanager.v" +
+      "1.ListOperationsResponse\"\026\202\323\344\223\002\020\022\016/v1/op" +
+      "erationsB\200\001\n%yandex.cloud.api.connection" +
+      "manager.v1ZWgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/connectionmanager/v" +
+      "1;connectionmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11663,7 +13705,7 @@ public final class ConnectionServiceOuterClass {
     internal_static_yandex_cloud_connectionmanager_v1_CreateConnectionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_connectionmanager_v1_CreateConnectionRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Params", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Params", "LockboxSecretSpec", "SecretSpec", });
     internal_static_yandex_cloud_connectionmanager_v1_CreateConnectionRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_connectionmanager_v1_CreateConnectionRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_connectionmanager_v1_CreateConnectionRequest_LabelsEntry_fieldAccessorTable = new

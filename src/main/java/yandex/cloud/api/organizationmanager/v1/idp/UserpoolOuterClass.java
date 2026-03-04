@@ -9763,87 +9763,145 @@ public final class UserpoolOuterClass {
      * Maximum password length. Zero means no maximum length is enforced.
      * </pre>
      *
-     * <code>int64 max_length = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>int64 max_length = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      * @return The maxLength.
      */
     long getMaxLength();
 
     /**
      * <pre>
-     * Minimum password length.
+     * Deprecated. Use Fixed instead.
      * </pre>
      *
-     * <code>int64 min_length = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>int64 min_length = 3 [deprecated = true];</code>
+     * @deprecated
      * @return The minLength.
      */
-    long getMinLength();
+    @java.lang.Deprecated long getMinLength();
 
     /**
      * <pre>
      * Minimum length of substrings to check for similarity to vulnerable sequences.
      * </pre>
      *
-     * <code>int64 match_length = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>int64 match_length = 4 [(.yandex.cloud.value) = "0-1000"];</code>
      * @return The matchLength.
      */
     long getMatchLength();
 
     /**
      * <pre>
-     * Character classes required in passwords.
+     * Deprecated. Use Fixed instead.
      * </pre>
      *
-     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5;</code>
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the requiredClasses field is set.
      */
-    boolean hasRequiredClasses();
+    @java.lang.Deprecated boolean hasRequiredClasses();
     /**
      * <pre>
-     * Character classes required in passwords.
+     * Deprecated. Use Fixed instead.
      * </pre>
      *
-     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5;</code>
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5 [deprecated = true];</code>
+     * @deprecated
      * @return The requiredClasses.
      */
-    yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClasses getRequiredClasses();
+    @java.lang.Deprecated yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClasses getRequiredClasses();
     /**
      * <pre>
-     * Character classes required in passwords.
+     * Deprecated. Use Fixed instead.
      * </pre>
      *
-     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5;</code>
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5 [deprecated = true];</code>
      */
-    yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClassesOrBuilder getRequiredClassesOrBuilder();
+    @java.lang.Deprecated yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClassesOrBuilder getRequiredClassesOrBuilder();
 
     /**
      * <pre>
-     * Minimum length requirements based on character class diversity.
-     * If not specified, these checks are disabled.
+     * Deprecated. Use Smart instead.
      * </pre>
      *
-     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6;</code>
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the minLengthByClassSettings field is set.
      */
-    boolean hasMinLengthByClassSettings();
+    @java.lang.Deprecated boolean hasMinLengthByClassSettings();
     /**
      * <pre>
-     * Minimum length requirements based on character class diversity.
-     * If not specified, these checks are disabled.
+     * Deprecated. Use Smart instead.
      * </pre>
      *
-     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6;</code>
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6 [deprecated = true];</code>
+     * @deprecated
      * @return The minLengthByClassSettings.
      */
-    yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettings getMinLengthByClassSettings();
+    @java.lang.Deprecated yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettings getMinLengthByClassSettings();
     /**
      * <pre>
-     * Minimum length requirements based on character class diversity.
-     * If not specified, these checks are disabled.
+     * Deprecated. Use Smart instead.
      * </pre>
      *
-     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6;</code>
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6 [deprecated = true];</code>
      */
-    yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettingsOrBuilder getMinLengthByClassSettingsOrBuilder();
+    @java.lang.Deprecated yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettingsOrBuilder getMinLengthByClassSettingsOrBuilder();
+
+    /**
+     * <pre>
+     * Fixed complexity requirements. Exactly one of complexity requirements must be specified.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed fixed = 7;</code>
+     * @return Whether the fixed field is set.
+     */
+    boolean hasFixed();
+    /**
+     * <pre>
+     * Fixed complexity requirements. Exactly one of complexity requirements must be specified.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed fixed = 7;</code>
+     * @return The fixed.
+     */
+    yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed getFixed();
+    /**
+     * <pre>
+     * Fixed complexity requirements. Exactly one of complexity requirements must be specified.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed fixed = 7;</code>
+     */
+    yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.FixedOrBuilder getFixedOrBuilder();
+
+    /**
+     * <pre>
+     * Smart complexity requirements. Exactly one of complexity requirements must be specified.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart smart = 8;</code>
+     * @return Whether the smart field is set.
+     */
+    boolean hasSmart();
+    /**
+     * <pre>
+     * Smart complexity requirements. Exactly one of complexity requirements must be specified.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart smart = 8;</code>
+     * @return The smart.
+     */
+    yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart getSmart();
+    /**
+     * <pre>
+     * Smart complexity requirements. Exactly one of complexity requirements must be specified.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart smart = 8;</code>
+     */
+    yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.SmartOrBuilder getSmartOrBuilder();
+
+    public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.ComplexityPolicyCase getComplexityPolicyCase();
   }
   /**
    * <pre>
@@ -9940,6 +9998,34 @@ public final class UserpoolOuterClass {
 
               break;
             }
+            case 58: {
+              yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.Builder subBuilder = null;
+              if (complexityPolicyCase_ == 7) {
+                subBuilder = ((yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed) complexityPolicy_).toBuilder();
+              }
+              complexityPolicy_ =
+                  input.readMessage(yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed) complexityPolicy_);
+                complexityPolicy_ = subBuilder.buildPartial();
+              }
+              complexityPolicyCase_ = 7;
+              break;
+            }
+            case 66: {
+              yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.Builder subBuilder = null;
+              if (complexityPolicyCase_ == 8) {
+                subBuilder = ((yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart) complexityPolicy_).toBuilder();
+              }
+              complexityPolicy_ =
+                  input.readMessage(yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart) complexityPolicy_);
+                complexityPolicy_ = subBuilder.buildPartial();
+              }
+              complexityPolicyCase_ = 8;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -10018,7 +10104,7 @@ public final class UserpoolOuterClass {
     }
     /**
      * <pre>
-     * Character classes that can be required in passwords.
+     * Deprecated. Use Fixed instead.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses}
@@ -10371,7 +10457,7 @@ public final class UserpoolOuterClass {
       }
       /**
        * <pre>
-       * Character classes that can be required in passwords.
+       * Deprecated. Use Fixed instead.
        * </pre>
        *
        * Protobuf type {@code yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses}
@@ -10771,7 +10857,7 @@ public final class UserpoolOuterClass {
        * Minimum length for passwords with one character class.
        * </pre>
        *
-       * <code>int64 one = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 one = 1;</code>
        * @return The one.
        */
       long getOne();
@@ -10781,7 +10867,7 @@ public final class UserpoolOuterClass {
        * Minimum length for passwords with two character classes.
        * </pre>
        *
-       * <code>int64 two = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 two = 2;</code>
        * @return The two.
        */
       long getTwo();
@@ -10791,14 +10877,14 @@ public final class UserpoolOuterClass {
        * Minimum length for passwords with three character classes.
        * </pre>
        *
-       * <code>int64 three = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 three = 3;</code>
        * @return The three.
        */
       long getThree();
     }
     /**
      * <pre>
-     * Minimum password length requirements based on character class diversity.
+     * Deprecated. Use Smart instead.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings}
@@ -10899,7 +10985,7 @@ public final class UserpoolOuterClass {
        * Minimum length for passwords with one character class.
        * </pre>
        *
-       * <code>int64 one = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 one = 1;</code>
        * @return The one.
        */
       @java.lang.Override
@@ -10914,7 +11000,7 @@ public final class UserpoolOuterClass {
        * Minimum length for passwords with two character classes.
        * </pre>
        *
-       * <code>int64 two = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 two = 2;</code>
        * @return The two.
        */
       @java.lang.Override
@@ -10929,7 +11015,7 @@ public final class UserpoolOuterClass {
        * Minimum length for passwords with three character classes.
        * </pre>
        *
-       * <code>int64 three = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 three = 3;</code>
        * @return The three.
        */
       @java.lang.Override
@@ -11119,7 +11205,7 @@ public final class UserpoolOuterClass {
       }
       /**
        * <pre>
-       * Minimum password length requirements based on character class diversity.
+       * Deprecated. Use Smart instead.
        * </pre>
        *
        * Protobuf type {@code yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings}
@@ -11286,7 +11372,7 @@ public final class UserpoolOuterClass {
          * Minimum length for passwords with one character class.
          * </pre>
          *
-         * <code>int64 one = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * <code>int64 one = 1;</code>
          * @return The one.
          */
         @java.lang.Override
@@ -11298,7 +11384,7 @@ public final class UserpoolOuterClass {
          * Minimum length for passwords with one character class.
          * </pre>
          *
-         * <code>int64 one = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * <code>int64 one = 1;</code>
          * @param value The one to set.
          * @return This builder for chaining.
          */
@@ -11313,7 +11399,7 @@ public final class UserpoolOuterClass {
          * Minimum length for passwords with one character class.
          * </pre>
          *
-         * <code>int64 one = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * <code>int64 one = 1;</code>
          * @return This builder for chaining.
          */
         public Builder clearOne() {
@@ -11329,7 +11415,7 @@ public final class UserpoolOuterClass {
          * Minimum length for passwords with two character classes.
          * </pre>
          *
-         * <code>int64 two = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * <code>int64 two = 2;</code>
          * @return The two.
          */
         @java.lang.Override
@@ -11341,7 +11427,7 @@ public final class UserpoolOuterClass {
          * Minimum length for passwords with two character classes.
          * </pre>
          *
-         * <code>int64 two = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * <code>int64 two = 2;</code>
          * @param value The two to set.
          * @return This builder for chaining.
          */
@@ -11356,7 +11442,7 @@ public final class UserpoolOuterClass {
          * Minimum length for passwords with two character classes.
          * </pre>
          *
-         * <code>int64 two = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * <code>int64 two = 2;</code>
          * @return This builder for chaining.
          */
         public Builder clearTwo() {
@@ -11372,7 +11458,7 @@ public final class UserpoolOuterClass {
          * Minimum length for passwords with three character classes.
          * </pre>
          *
-         * <code>int64 three = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * <code>int64 three = 3;</code>
          * @return The three.
          */
         @java.lang.Override
@@ -11384,7 +11470,7 @@ public final class UserpoolOuterClass {
          * Minimum length for passwords with three character classes.
          * </pre>
          *
-         * <code>int64 three = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * <code>int64 three = 3;</code>
          * @param value The three to set.
          * @return This builder for chaining.
          */
@@ -11399,7 +11485,7 @@ public final class UserpoolOuterClass {
          * Minimum length for passwords with three character classes.
          * </pre>
          *
-         * <code>int64 three = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * <code>int64 three = 3;</code>
          * @return This builder for chaining.
          */
         public Builder clearThree() {
@@ -11461,6 +11547,1720 @@ public final class UserpoolOuterClass {
 
     }
 
+    public interface FixedOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Whether lowercase letters are required in the password.
+       * </pre>
+       *
+       * <code>bool lowers_required = 1;</code>
+       * @return The lowersRequired.
+       */
+      boolean getLowersRequired();
+
+      /**
+       * <pre>
+       * Whether uppercase letters are required in the password.
+       * </pre>
+       *
+       * <code>bool uppers_required = 2;</code>
+       * @return The uppersRequired.
+       */
+      boolean getUppersRequired();
+
+      /**
+       * <pre>
+       * Whether digits are required in the password.
+       * </pre>
+       *
+       * <code>bool digits_required = 3;</code>
+       * @return The digitsRequired.
+       */
+      boolean getDigitsRequired();
+
+      /**
+       * <pre>
+       * Whether special characters are required in the password.
+       * </pre>
+       *
+       * <code>bool specials_required = 4;</code>
+       * @return The specialsRequired.
+       */
+      boolean getSpecialsRequired();
+
+      /**
+       * <pre>
+       * Minimum length required for all passwords.
+       * </pre>
+       *
+       * <code>int64 min_length = 5 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The minLength.
+       */
+      long getMinLength();
+    }
+    /**
+     * <pre>
+     * Fixed complexity policy enforces uniform password rules with required character classes and minimum length.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed}
+     */
+    public static final class Fixed extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed)
+        FixedOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Fixed.newBuilder() to construct.
+      private Fixed(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Fixed() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Fixed();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Fixed(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                lowersRequired_ = input.readBool();
+                break;
+              }
+              case 16: {
+
+                uppersRequired_ = input.readBool();
+                break;
+              }
+              case 24: {
+
+                digitsRequired_ = input.readBool();
+                break;
+              }
+              case 32: {
+
+                specialsRequired_ = input.readBool();
+                break;
+              }
+              case 40: {
+
+                minLength_ = input.readInt64();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_Fixed_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_Fixed_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.class, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.Builder.class);
+      }
+
+      public static final int LOWERS_REQUIRED_FIELD_NUMBER = 1;
+      private boolean lowersRequired_;
+      /**
+       * <pre>
+       * Whether lowercase letters are required in the password.
+       * </pre>
+       *
+       * <code>bool lowers_required = 1;</code>
+       * @return The lowersRequired.
+       */
+      @java.lang.Override
+      public boolean getLowersRequired() {
+        return lowersRequired_;
+      }
+
+      public static final int UPPERS_REQUIRED_FIELD_NUMBER = 2;
+      private boolean uppersRequired_;
+      /**
+       * <pre>
+       * Whether uppercase letters are required in the password.
+       * </pre>
+       *
+       * <code>bool uppers_required = 2;</code>
+       * @return The uppersRequired.
+       */
+      @java.lang.Override
+      public boolean getUppersRequired() {
+        return uppersRequired_;
+      }
+
+      public static final int DIGITS_REQUIRED_FIELD_NUMBER = 3;
+      private boolean digitsRequired_;
+      /**
+       * <pre>
+       * Whether digits are required in the password.
+       * </pre>
+       *
+       * <code>bool digits_required = 3;</code>
+       * @return The digitsRequired.
+       */
+      @java.lang.Override
+      public boolean getDigitsRequired() {
+        return digitsRequired_;
+      }
+
+      public static final int SPECIALS_REQUIRED_FIELD_NUMBER = 4;
+      private boolean specialsRequired_;
+      /**
+       * <pre>
+       * Whether special characters are required in the password.
+       * </pre>
+       *
+       * <code>bool specials_required = 4;</code>
+       * @return The specialsRequired.
+       */
+      @java.lang.Override
+      public boolean getSpecialsRequired() {
+        return specialsRequired_;
+      }
+
+      public static final int MIN_LENGTH_FIELD_NUMBER = 5;
+      private long minLength_;
+      /**
+       * <pre>
+       * Minimum length required for all passwords.
+       * </pre>
+       *
+       * <code>int64 min_length = 5 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The minLength.
+       */
+      @java.lang.Override
+      public long getMinLength() {
+        return minLength_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (lowersRequired_ != false) {
+          output.writeBool(1, lowersRequired_);
+        }
+        if (uppersRequired_ != false) {
+          output.writeBool(2, uppersRequired_);
+        }
+        if (digitsRequired_ != false) {
+          output.writeBool(3, digitsRequired_);
+        }
+        if (specialsRequired_ != false) {
+          output.writeBool(4, specialsRequired_);
+        }
+        if (minLength_ != 0L) {
+          output.writeInt64(5, minLength_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (lowersRequired_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, lowersRequired_);
+        }
+        if (uppersRequired_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(2, uppersRequired_);
+        }
+        if (digitsRequired_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(3, digitsRequired_);
+        }
+        if (specialsRequired_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(4, specialsRequired_);
+        }
+        if (minLength_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(5, minLength_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed other = (yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed) obj;
+
+        if (getLowersRequired()
+            != other.getLowersRequired()) return false;
+        if (getUppersRequired()
+            != other.getUppersRequired()) return false;
+        if (getDigitsRequired()
+            != other.getDigitsRequired()) return false;
+        if (getSpecialsRequired()
+            != other.getSpecialsRequired()) return false;
+        if (getMinLength()
+            != other.getMinLength()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + LOWERS_REQUIRED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getLowersRequired());
+        hash = (37 * hash) + UPPERS_REQUIRED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getUppersRequired());
+        hash = (37 * hash) + DIGITS_REQUIRED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getDigitsRequired());
+        hash = (37 * hash) + SPECIALS_REQUIRED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getSpecialsRequired());
+        hash = (37 * hash) + MIN_LENGTH_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getMinLength());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Fixed complexity policy enforces uniform password rules with required character classes and minimum length.
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed)
+          yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.FixedOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_Fixed_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_Fixed_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.class, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          lowersRequired_ = false;
+
+          uppersRequired_ = false;
+
+          digitsRequired_ = false;
+
+          specialsRequired_ = false;
+
+          minLength_ = 0L;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_Fixed_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed getDefaultInstanceForType() {
+          return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed build() {
+          yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed buildPartial() {
+          yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed result = new yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed(this);
+          result.lowersRequired_ = lowersRequired_;
+          result.uppersRequired_ = uppersRequired_;
+          result.digitsRequired_ = digitsRequired_;
+          result.specialsRequired_ = specialsRequired_;
+          result.minLength_ = minLength_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed) {
+            return mergeFrom((yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed other) {
+          if (other == yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.getDefaultInstance()) return this;
+          if (other.getLowersRequired() != false) {
+            setLowersRequired(other.getLowersRequired());
+          }
+          if (other.getUppersRequired() != false) {
+            setUppersRequired(other.getUppersRequired());
+          }
+          if (other.getDigitsRequired() != false) {
+            setDigitsRequired(other.getDigitsRequired());
+          }
+          if (other.getSpecialsRequired() != false) {
+            setSpecialsRequired(other.getSpecialsRequired());
+          }
+          if (other.getMinLength() != 0L) {
+            setMinLength(other.getMinLength());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private boolean lowersRequired_ ;
+        /**
+         * <pre>
+         * Whether lowercase letters are required in the password.
+         * </pre>
+         *
+         * <code>bool lowers_required = 1;</code>
+         * @return The lowersRequired.
+         */
+        @java.lang.Override
+        public boolean getLowersRequired() {
+          return lowersRequired_;
+        }
+        /**
+         * <pre>
+         * Whether lowercase letters are required in the password.
+         * </pre>
+         *
+         * <code>bool lowers_required = 1;</code>
+         * @param value The lowersRequired to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLowersRequired(boolean value) {
+          
+          lowersRequired_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Whether lowercase letters are required in the password.
+         * </pre>
+         *
+         * <code>bool lowers_required = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearLowersRequired() {
+          
+          lowersRequired_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean uppersRequired_ ;
+        /**
+         * <pre>
+         * Whether uppercase letters are required in the password.
+         * </pre>
+         *
+         * <code>bool uppers_required = 2;</code>
+         * @return The uppersRequired.
+         */
+        @java.lang.Override
+        public boolean getUppersRequired() {
+          return uppersRequired_;
+        }
+        /**
+         * <pre>
+         * Whether uppercase letters are required in the password.
+         * </pre>
+         *
+         * <code>bool uppers_required = 2;</code>
+         * @param value The uppersRequired to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUppersRequired(boolean value) {
+          
+          uppersRequired_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Whether uppercase letters are required in the password.
+         * </pre>
+         *
+         * <code>bool uppers_required = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUppersRequired() {
+          
+          uppersRequired_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean digitsRequired_ ;
+        /**
+         * <pre>
+         * Whether digits are required in the password.
+         * </pre>
+         *
+         * <code>bool digits_required = 3;</code>
+         * @return The digitsRequired.
+         */
+        @java.lang.Override
+        public boolean getDigitsRequired() {
+          return digitsRequired_;
+        }
+        /**
+         * <pre>
+         * Whether digits are required in the password.
+         * </pre>
+         *
+         * <code>bool digits_required = 3;</code>
+         * @param value The digitsRequired to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDigitsRequired(boolean value) {
+          
+          digitsRequired_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Whether digits are required in the password.
+         * </pre>
+         *
+         * <code>bool digits_required = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDigitsRequired() {
+          
+          digitsRequired_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean specialsRequired_ ;
+        /**
+         * <pre>
+         * Whether special characters are required in the password.
+         * </pre>
+         *
+         * <code>bool specials_required = 4;</code>
+         * @return The specialsRequired.
+         */
+        @java.lang.Override
+        public boolean getSpecialsRequired() {
+          return specialsRequired_;
+        }
+        /**
+         * <pre>
+         * Whether special characters are required in the password.
+         * </pre>
+         *
+         * <code>bool specials_required = 4;</code>
+         * @param value The specialsRequired to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSpecialsRequired(boolean value) {
+          
+          specialsRequired_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Whether special characters are required in the password.
+         * </pre>
+         *
+         * <code>bool specials_required = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSpecialsRequired() {
+          
+          specialsRequired_ = false;
+          onChanged();
+          return this;
+        }
+
+        private long minLength_ ;
+        /**
+         * <pre>
+         * Minimum length required for all passwords.
+         * </pre>
+         *
+         * <code>int64 min_length = 5 [(.yandex.cloud.value) = "0-1000"];</code>
+         * @return The minLength.
+         */
+        @java.lang.Override
+        public long getMinLength() {
+          return minLength_;
+        }
+        /**
+         * <pre>
+         * Minimum length required for all passwords.
+         * </pre>
+         *
+         * <code>int64 min_length = 5 [(.yandex.cloud.value) = "0-1000"];</code>
+         * @param value The minLength to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMinLength(long value) {
+          
+          minLength_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Minimum length required for all passwords.
+         * </pre>
+         *
+         * <code>int64 min_length = 5 [(.yandex.cloud.value) = "0-1000"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMinLength() {
+          
+          minLength_ = 0L;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed)
+      private static final yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed();
+      }
+
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Fixed>
+          PARSER = new com.google.protobuf.AbstractParser<Fixed>() {
+        @java.lang.Override
+        public Fixed parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Fixed(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Fixed> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Fixed> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface SmartOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * For passwords with one class of characters
+       * </pre>
+       *
+       * <code>int64 one_class = 1 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The oneClass.
+       */
+      long getOneClass();
+
+      /**
+       * <pre>
+       * For passwords with two classes of characters
+       * </pre>
+       *
+       * <code>int64 two_classes = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The twoClasses.
+       */
+      long getTwoClasses();
+
+      /**
+       * <pre>
+       * For passwords with three classes of characters
+       * </pre>
+       *
+       * <code>int64 three_classes = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The threeClasses.
+       */
+      long getThreeClasses();
+
+      /**
+       * <pre>
+       * For passwords with all four classes of characters
+       * </pre>
+       *
+       * <code>int64 four_classes = 4 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The fourClasses.
+       */
+      long getFourClasses();
+    }
+    /**
+     * <pre>
+     * Smart complexity policy applies adaptive requirements based on character class diversity.
+     * Zero value means passwords with this number of classes are forbidden.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart}
+     */
+    public static final class Smart extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart)
+        SmartOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Smart.newBuilder() to construct.
+      private Smart(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Smart() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Smart();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Smart(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                oneClass_ = input.readInt64();
+                break;
+              }
+              case 16: {
+
+                twoClasses_ = input.readInt64();
+                break;
+              }
+              case 24: {
+
+                threeClasses_ = input.readInt64();
+                break;
+              }
+              case 32: {
+
+                fourClasses_ = input.readInt64();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_Smart_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_Smart_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.class, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.Builder.class);
+      }
+
+      public static final int ONE_CLASS_FIELD_NUMBER = 1;
+      private long oneClass_;
+      /**
+       * <pre>
+       * For passwords with one class of characters
+       * </pre>
+       *
+       * <code>int64 one_class = 1 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The oneClass.
+       */
+      @java.lang.Override
+      public long getOneClass() {
+        return oneClass_;
+      }
+
+      public static final int TWO_CLASSES_FIELD_NUMBER = 2;
+      private long twoClasses_;
+      /**
+       * <pre>
+       * For passwords with two classes of characters
+       * </pre>
+       *
+       * <code>int64 two_classes = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The twoClasses.
+       */
+      @java.lang.Override
+      public long getTwoClasses() {
+        return twoClasses_;
+      }
+
+      public static final int THREE_CLASSES_FIELD_NUMBER = 3;
+      private long threeClasses_;
+      /**
+       * <pre>
+       * For passwords with three classes of characters
+       * </pre>
+       *
+       * <code>int64 three_classes = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The threeClasses.
+       */
+      @java.lang.Override
+      public long getThreeClasses() {
+        return threeClasses_;
+      }
+
+      public static final int FOUR_CLASSES_FIELD_NUMBER = 4;
+      private long fourClasses_;
+      /**
+       * <pre>
+       * For passwords with all four classes of characters
+       * </pre>
+       *
+       * <code>int64 four_classes = 4 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The fourClasses.
+       */
+      @java.lang.Override
+      public long getFourClasses() {
+        return fourClasses_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (oneClass_ != 0L) {
+          output.writeInt64(1, oneClass_);
+        }
+        if (twoClasses_ != 0L) {
+          output.writeInt64(2, twoClasses_);
+        }
+        if (threeClasses_ != 0L) {
+          output.writeInt64(3, threeClasses_);
+        }
+        if (fourClasses_ != 0L) {
+          output.writeInt64(4, fourClasses_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (oneClass_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(1, oneClass_);
+        }
+        if (twoClasses_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(2, twoClasses_);
+        }
+        if (threeClasses_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(3, threeClasses_);
+        }
+        if (fourClasses_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(4, fourClasses_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart other = (yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart) obj;
+
+        if (getOneClass()
+            != other.getOneClass()) return false;
+        if (getTwoClasses()
+            != other.getTwoClasses()) return false;
+        if (getThreeClasses()
+            != other.getThreeClasses()) return false;
+        if (getFourClasses()
+            != other.getFourClasses()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ONE_CLASS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getOneClass());
+        hash = (37 * hash) + TWO_CLASSES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getTwoClasses());
+        hash = (37 * hash) + THREE_CLASSES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getThreeClasses());
+        hash = (37 * hash) + FOUR_CLASSES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getFourClasses());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Smart complexity policy applies adaptive requirements based on character class diversity.
+       * Zero value means passwords with this number of classes are forbidden.
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart)
+          yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.SmartOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_Smart_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_Smart_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.class, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          oneClass_ = 0L;
+
+          twoClasses_ = 0L;
+
+          threeClasses_ = 0L;
+
+          fourClasses_ = 0L;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_Smart_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart getDefaultInstanceForType() {
+          return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart build() {
+          yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart buildPartial() {
+          yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart result = new yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart(this);
+          result.oneClass_ = oneClass_;
+          result.twoClasses_ = twoClasses_;
+          result.threeClasses_ = threeClasses_;
+          result.fourClasses_ = fourClasses_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart) {
+            return mergeFrom((yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart other) {
+          if (other == yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.getDefaultInstance()) return this;
+          if (other.getOneClass() != 0L) {
+            setOneClass(other.getOneClass());
+          }
+          if (other.getTwoClasses() != 0L) {
+            setTwoClasses(other.getTwoClasses());
+          }
+          if (other.getThreeClasses() != 0L) {
+            setThreeClasses(other.getThreeClasses());
+          }
+          if (other.getFourClasses() != 0L) {
+            setFourClasses(other.getFourClasses());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private long oneClass_ ;
+        /**
+         * <pre>
+         * For passwords with one class of characters
+         * </pre>
+         *
+         * <code>int64 one_class = 1 [(.yandex.cloud.value) = "0-1000"];</code>
+         * @return The oneClass.
+         */
+        @java.lang.Override
+        public long getOneClass() {
+          return oneClass_;
+        }
+        /**
+         * <pre>
+         * For passwords with one class of characters
+         * </pre>
+         *
+         * <code>int64 one_class = 1 [(.yandex.cloud.value) = "0-1000"];</code>
+         * @param value The oneClass to set.
+         * @return This builder for chaining.
+         */
+        public Builder setOneClass(long value) {
+          
+          oneClass_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * For passwords with one class of characters
+         * </pre>
+         *
+         * <code>int64 one_class = 1 [(.yandex.cloud.value) = "0-1000"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearOneClass() {
+          
+          oneClass_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long twoClasses_ ;
+        /**
+         * <pre>
+         * For passwords with two classes of characters
+         * </pre>
+         *
+         * <code>int64 two_classes = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+         * @return The twoClasses.
+         */
+        @java.lang.Override
+        public long getTwoClasses() {
+          return twoClasses_;
+        }
+        /**
+         * <pre>
+         * For passwords with two classes of characters
+         * </pre>
+         *
+         * <code>int64 two_classes = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+         * @param value The twoClasses to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTwoClasses(long value) {
+          
+          twoClasses_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * For passwords with two classes of characters
+         * </pre>
+         *
+         * <code>int64 two_classes = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTwoClasses() {
+          
+          twoClasses_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long threeClasses_ ;
+        /**
+         * <pre>
+         * For passwords with three classes of characters
+         * </pre>
+         *
+         * <code>int64 three_classes = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+         * @return The threeClasses.
+         */
+        @java.lang.Override
+        public long getThreeClasses() {
+          return threeClasses_;
+        }
+        /**
+         * <pre>
+         * For passwords with three classes of characters
+         * </pre>
+         *
+         * <code>int64 three_classes = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+         * @param value The threeClasses to set.
+         * @return This builder for chaining.
+         */
+        public Builder setThreeClasses(long value) {
+          
+          threeClasses_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * For passwords with three classes of characters
+         * </pre>
+         *
+         * <code>int64 three_classes = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearThreeClasses() {
+          
+          threeClasses_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long fourClasses_ ;
+        /**
+         * <pre>
+         * For passwords with all four classes of characters
+         * </pre>
+         *
+         * <code>int64 four_classes = 4 [(.yandex.cloud.value) = "0-1000"];</code>
+         * @return The fourClasses.
+         */
+        @java.lang.Override
+        public long getFourClasses() {
+          return fourClasses_;
+        }
+        /**
+         * <pre>
+         * For passwords with all four classes of characters
+         * </pre>
+         *
+         * <code>int64 four_classes = 4 [(.yandex.cloud.value) = "0-1000"];</code>
+         * @param value The fourClasses to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFourClasses(long value) {
+          
+          fourClasses_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * For passwords with all four classes of characters
+         * </pre>
+         *
+         * <code>int64 four_classes = 4 [(.yandex.cloud.value) = "0-1000"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearFourClasses() {
+          
+          fourClasses_ = 0L;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart)
+      private static final yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart();
+      }
+
+      public static yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Smart>
+          PARSER = new com.google.protobuf.AbstractParser<Smart>() {
+        @java.lang.Override
+        public Smart parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Smart(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Smart> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Smart> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int complexityPolicyCase_ = 0;
+    private java.lang.Object complexityPolicy_;
+    public enum ComplexityPolicyCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      FIXED(7),
+      SMART(8),
+      COMPLEXITYPOLICY_NOT_SET(0);
+      private final int value;
+      private ComplexityPolicyCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ComplexityPolicyCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ComplexityPolicyCase forNumber(int value) {
+        switch (value) {
+          case 7: return FIXED;
+          case 8: return SMART;
+          case 0: return COMPLEXITYPOLICY_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ComplexityPolicyCase
+    getComplexityPolicyCase() {
+      return ComplexityPolicyCase.forNumber(
+          complexityPolicyCase_);
+    }
+
     public static final int ALLOW_SIMILAR_FIELD_NUMBER = 1;
     private boolean allowSimilar_;
     /**
@@ -11483,7 +13283,7 @@ public final class UserpoolOuterClass {
      * Maximum password length. Zero means no maximum length is enforced.
      * </pre>
      *
-     * <code>int64 max_length = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>int64 max_length = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      * @return The maxLength.
      */
     @java.lang.Override
@@ -11495,14 +13295,15 @@ public final class UserpoolOuterClass {
     private long minLength_;
     /**
      * <pre>
-     * Minimum password length.
+     * Deprecated. Use Fixed instead.
      * </pre>
      *
-     * <code>int64 min_length = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>int64 min_length = 3 [deprecated = true];</code>
+     * @deprecated
      * @return The minLength.
      */
     @java.lang.Override
-    public long getMinLength() {
+    @java.lang.Deprecated public long getMinLength() {
       return minLength_;
     }
 
@@ -11513,7 +13314,7 @@ public final class UserpoolOuterClass {
      * Minimum length of substrings to check for similarity to vulnerable sequences.
      * </pre>
      *
-     * <code>int64 match_length = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>int64 match_length = 4 [(.yandex.cloud.value) = "0-1000"];</code>
      * @return The matchLength.
      */
     @java.lang.Override
@@ -11525,37 +13326,39 @@ public final class UserpoolOuterClass {
     private yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClasses requiredClasses_;
     /**
      * <pre>
-     * Character classes required in passwords.
+     * Deprecated. Use Fixed instead.
      * </pre>
      *
-     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5;</code>
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the requiredClasses field is set.
      */
     @java.lang.Override
-    public boolean hasRequiredClasses() {
+    @java.lang.Deprecated public boolean hasRequiredClasses() {
       return requiredClasses_ != null;
     }
     /**
      * <pre>
-     * Character classes required in passwords.
+     * Deprecated. Use Fixed instead.
      * </pre>
      *
-     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5;</code>
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5 [deprecated = true];</code>
+     * @deprecated
      * @return The requiredClasses.
      */
     @java.lang.Override
-    public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClasses getRequiredClasses() {
+    @java.lang.Deprecated public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClasses getRequiredClasses() {
       return requiredClasses_ == null ? yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClasses.getDefaultInstance() : requiredClasses_;
     }
     /**
      * <pre>
-     * Character classes required in passwords.
+     * Deprecated. Use Fixed instead.
      * </pre>
      *
-     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5;</code>
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5 [deprecated = true];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClassesOrBuilder getRequiredClassesOrBuilder() {
+    @java.lang.Deprecated public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClassesOrBuilder getRequiredClassesOrBuilder() {
       return getRequiredClasses();
     }
 
@@ -11563,41 +13366,126 @@ public final class UserpoolOuterClass {
     private yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettings minLengthByClassSettings_;
     /**
      * <pre>
-     * Minimum length requirements based on character class diversity.
-     * If not specified, these checks are disabled.
+     * Deprecated. Use Smart instead.
      * </pre>
      *
-     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6;</code>
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the minLengthByClassSettings field is set.
      */
     @java.lang.Override
-    public boolean hasMinLengthByClassSettings() {
+    @java.lang.Deprecated public boolean hasMinLengthByClassSettings() {
       return minLengthByClassSettings_ != null;
     }
     /**
      * <pre>
-     * Minimum length requirements based on character class diversity.
-     * If not specified, these checks are disabled.
+     * Deprecated. Use Smart instead.
      * </pre>
      *
-     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6;</code>
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6 [deprecated = true];</code>
+     * @deprecated
      * @return The minLengthByClassSettings.
      */
     @java.lang.Override
-    public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettings getMinLengthByClassSettings() {
+    @java.lang.Deprecated public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettings getMinLengthByClassSettings() {
       return minLengthByClassSettings_ == null ? yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettings.getDefaultInstance() : minLengthByClassSettings_;
     }
     /**
      * <pre>
-     * Minimum length requirements based on character class diversity.
-     * If not specified, these checks are disabled.
+     * Deprecated. Use Smart instead.
      * </pre>
      *
-     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6;</code>
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6 [deprecated = true];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettingsOrBuilder getMinLengthByClassSettingsOrBuilder() {
+    @java.lang.Deprecated public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettingsOrBuilder getMinLengthByClassSettingsOrBuilder() {
       return getMinLengthByClassSettings();
+    }
+
+    public static final int FIXED_FIELD_NUMBER = 7;
+    /**
+     * <pre>
+     * Fixed complexity requirements. Exactly one of complexity requirements must be specified.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed fixed = 7;</code>
+     * @return Whether the fixed field is set.
+     */
+    @java.lang.Override
+    public boolean hasFixed() {
+      return complexityPolicyCase_ == 7;
+    }
+    /**
+     * <pre>
+     * Fixed complexity requirements. Exactly one of complexity requirements must be specified.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed fixed = 7;</code>
+     * @return The fixed.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed getFixed() {
+      if (complexityPolicyCase_ == 7) {
+         return (yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed) complexityPolicy_;
+      }
+      return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Fixed complexity requirements. Exactly one of complexity requirements must be specified.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed fixed = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.FixedOrBuilder getFixedOrBuilder() {
+      if (complexityPolicyCase_ == 7) {
+         return (yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed) complexityPolicy_;
+      }
+      return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.getDefaultInstance();
+    }
+
+    public static final int SMART_FIELD_NUMBER = 8;
+    /**
+     * <pre>
+     * Smart complexity requirements. Exactly one of complexity requirements must be specified.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart smart = 8;</code>
+     * @return Whether the smart field is set.
+     */
+    @java.lang.Override
+    public boolean hasSmart() {
+      return complexityPolicyCase_ == 8;
+    }
+    /**
+     * <pre>
+     * Smart complexity requirements. Exactly one of complexity requirements must be specified.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart smart = 8;</code>
+     * @return The smart.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart getSmart() {
+      if (complexityPolicyCase_ == 8) {
+         return (yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart) complexityPolicy_;
+      }
+      return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Smart complexity requirements. Exactly one of complexity requirements must be specified.
+     * </pre>
+     *
+     * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart smart = 8;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.SmartOrBuilder getSmartOrBuilder() {
+      if (complexityPolicyCase_ == 8) {
+         return (yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart) complexityPolicy_;
+      }
+      return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -11632,6 +13520,12 @@ public final class UserpoolOuterClass {
       if (minLengthByClassSettings_ != null) {
         output.writeMessage(6, getMinLengthByClassSettings());
       }
+      if (complexityPolicyCase_ == 7) {
+        output.writeMessage(7, (yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed) complexityPolicy_);
+      }
+      if (complexityPolicyCase_ == 8) {
+        output.writeMessage(8, (yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart) complexityPolicy_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11664,6 +13558,14 @@ public final class UserpoolOuterClass {
       if (minLengthByClassSettings_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getMinLengthByClassSettings());
+      }
+      if (complexityPolicyCase_ == 7) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, (yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed) complexityPolicy_);
+      }
+      if (complexityPolicyCase_ == 8) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, (yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart) complexityPolicy_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11698,6 +13600,19 @@ public final class UserpoolOuterClass {
         if (!getMinLengthByClassSettings()
             .equals(other.getMinLengthByClassSettings())) return false;
       }
+      if (!getComplexityPolicyCase().equals(other.getComplexityPolicyCase())) return false;
+      switch (complexityPolicyCase_) {
+        case 7:
+          if (!getFixed()
+              .equals(other.getFixed())) return false;
+          break;
+        case 8:
+          if (!getSmart()
+              .equals(other.getSmart())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11728,6 +13643,18 @@ public final class UserpoolOuterClass {
       if (hasMinLengthByClassSettings()) {
         hash = (37 * hash) + MIN_LENGTH_BY_CLASS_SETTINGS_FIELD_NUMBER;
         hash = (53 * hash) + getMinLengthByClassSettings().hashCode();
+      }
+      switch (complexityPolicyCase_) {
+        case 7:
+          hash = (37 * hash) + FIXED_FIELD_NUMBER;
+          hash = (53 * hash) + getFixed().hashCode();
+          break;
+        case 8:
+          hash = (37 * hash) + SMART_FIELD_NUMBER;
+          hash = (53 * hash) + getSmart().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -11886,6 +13813,8 @@ public final class UserpoolOuterClass {
           minLengthByClassSettings_ = null;
           minLengthByClassSettingsBuilder_ = null;
         }
+        complexityPolicyCase_ = 0;
+        complexityPolicy_ = null;
         return this;
       }
 
@@ -11926,6 +13855,21 @@ public final class UserpoolOuterClass {
         } else {
           result.minLengthByClassSettings_ = minLengthByClassSettingsBuilder_.build();
         }
+        if (complexityPolicyCase_ == 7) {
+          if (fixedBuilder_ == null) {
+            result.complexityPolicy_ = complexityPolicy_;
+          } else {
+            result.complexityPolicy_ = fixedBuilder_.build();
+          }
+        }
+        if (complexityPolicyCase_ == 8) {
+          if (smartBuilder_ == null) {
+            result.complexityPolicy_ = complexityPolicy_;
+          } else {
+            result.complexityPolicy_ = smartBuilder_.build();
+          }
+        }
+        result.complexityPolicyCase_ = complexityPolicyCase_;
         onBuilt();
         return result;
       }
@@ -11992,6 +13936,19 @@ public final class UserpoolOuterClass {
         if (other.hasMinLengthByClassSettings()) {
           mergeMinLengthByClassSettings(other.getMinLengthByClassSettings());
         }
+        switch (other.getComplexityPolicyCase()) {
+          case FIXED: {
+            mergeFixed(other.getFixed());
+            break;
+          }
+          case SMART: {
+            mergeSmart(other.getSmart());
+            break;
+          }
+          case COMPLEXITYPOLICY_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -12020,6 +13977,21 @@ public final class UserpoolOuterClass {
         }
         return this;
       }
+      private int complexityPolicyCase_ = 0;
+      private java.lang.Object complexityPolicy_;
+      public ComplexityPolicyCase
+          getComplexityPolicyCase() {
+        return ComplexityPolicyCase.forNumber(
+            complexityPolicyCase_);
+      }
+
+      public Builder clearComplexityPolicy() {
+        complexityPolicyCase_ = 0;
+        complexityPolicy_ = null;
+        onChanged();
+        return this;
+      }
+
 
       private boolean allowSimilar_ ;
       /**
@@ -12070,7 +14042,7 @@ public final class UserpoolOuterClass {
        * Maximum password length. Zero means no maximum length is enforced.
        * </pre>
        *
-       * <code>int64 max_length = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 max_length = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        * @return The maxLength.
        */
       @java.lang.Override
@@ -12082,7 +14054,7 @@ public final class UserpoolOuterClass {
        * Maximum password length. Zero means no maximum length is enforced.
        * </pre>
        *
-       * <code>int64 max_length = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 max_length = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        * @param value The maxLength to set.
        * @return This builder for chaining.
        */
@@ -12097,7 +14069,7 @@ public final class UserpoolOuterClass {
        * Maximum password length. Zero means no maximum length is enforced.
        * </pre>
        *
-       * <code>int64 max_length = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 max_length = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearMaxLength() {
@@ -12110,26 +14082,28 @@ public final class UserpoolOuterClass {
       private long minLength_ ;
       /**
        * <pre>
-       * Minimum password length.
+       * Deprecated. Use Fixed instead.
        * </pre>
        *
-       * <code>int64 min_length = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 min_length = 3 [deprecated = true];</code>
+       * @deprecated
        * @return The minLength.
        */
       @java.lang.Override
-      public long getMinLength() {
+      @java.lang.Deprecated public long getMinLength() {
         return minLength_;
       }
       /**
        * <pre>
-       * Minimum password length.
+       * Deprecated. Use Fixed instead.
        * </pre>
        *
-       * <code>int64 min_length = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 min_length = 3 [deprecated = true];</code>
+       * @deprecated
        * @param value The minLength to set.
        * @return This builder for chaining.
        */
-      public Builder setMinLength(long value) {
+      @java.lang.Deprecated public Builder setMinLength(long value) {
         
         minLength_ = value;
         onChanged();
@@ -12137,13 +14111,14 @@ public final class UserpoolOuterClass {
       }
       /**
        * <pre>
-       * Minimum password length.
+       * Deprecated. Use Fixed instead.
        * </pre>
        *
-       * <code>int64 min_length = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 min_length = 3 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearMinLength() {
+      @java.lang.Deprecated public Builder clearMinLength() {
         
         minLength_ = 0L;
         onChanged();
@@ -12156,7 +14131,7 @@ public final class UserpoolOuterClass {
        * Minimum length of substrings to check for similarity to vulnerable sequences.
        * </pre>
        *
-       * <code>int64 match_length = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 match_length = 4 [(.yandex.cloud.value) = "0-1000"];</code>
        * @return The matchLength.
        */
       @java.lang.Override
@@ -12168,7 +14143,7 @@ public final class UserpoolOuterClass {
        * Minimum length of substrings to check for similarity to vulnerable sequences.
        * </pre>
        *
-       * <code>int64 match_length = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 match_length = 4 [(.yandex.cloud.value) = "0-1000"];</code>
        * @param value The matchLength to set.
        * @return This builder for chaining.
        */
@@ -12183,7 +14158,7 @@ public final class UserpoolOuterClass {
        * Minimum length of substrings to check for similarity to vulnerable sequences.
        * </pre>
        *
-       * <code>int64 match_length = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 match_length = 4 [(.yandex.cloud.value) = "0-1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearMatchLength() {
@@ -12198,24 +14173,26 @@ public final class UserpoolOuterClass {
           yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClasses, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClasses.Builder, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClassesOrBuilder> requiredClassesBuilder_;
       /**
        * <pre>
-       * Character classes required in passwords.
+       * Deprecated. Use Fixed instead.
        * </pre>
        *
-       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5;</code>
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the requiredClasses field is set.
        */
-      public boolean hasRequiredClasses() {
+      @java.lang.Deprecated public boolean hasRequiredClasses() {
         return requiredClassesBuilder_ != null || requiredClasses_ != null;
       }
       /**
        * <pre>
-       * Character classes required in passwords.
+       * Deprecated. Use Fixed instead.
        * </pre>
        *
-       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5;</code>
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5 [deprecated = true];</code>
+       * @deprecated
        * @return The requiredClasses.
        */
-      public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClasses getRequiredClasses() {
+      @java.lang.Deprecated public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClasses getRequiredClasses() {
         if (requiredClassesBuilder_ == null) {
           return requiredClasses_ == null ? yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClasses.getDefaultInstance() : requiredClasses_;
         } else {
@@ -12224,12 +14201,12 @@ public final class UserpoolOuterClass {
       }
       /**
        * <pre>
-       * Character classes required in passwords.
+       * Deprecated. Use Fixed instead.
        * </pre>
        *
-       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5;</code>
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5 [deprecated = true];</code>
        */
-      public Builder setRequiredClasses(yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClasses value) {
+      @java.lang.Deprecated public Builder setRequiredClasses(yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClasses value) {
         if (requiredClassesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -12244,12 +14221,12 @@ public final class UserpoolOuterClass {
       }
       /**
        * <pre>
-       * Character classes required in passwords.
+       * Deprecated. Use Fixed instead.
        * </pre>
        *
-       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5;</code>
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5 [deprecated = true];</code>
        */
-      public Builder setRequiredClasses(
+      @java.lang.Deprecated public Builder setRequiredClasses(
           yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClasses.Builder builderForValue) {
         if (requiredClassesBuilder_ == null) {
           requiredClasses_ = builderForValue.build();
@@ -12262,12 +14239,12 @@ public final class UserpoolOuterClass {
       }
       /**
        * <pre>
-       * Character classes required in passwords.
+       * Deprecated. Use Fixed instead.
        * </pre>
        *
-       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5;</code>
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5 [deprecated = true];</code>
        */
-      public Builder mergeRequiredClasses(yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClasses value) {
+      @java.lang.Deprecated public Builder mergeRequiredClasses(yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClasses value) {
         if (requiredClassesBuilder_ == null) {
           if (requiredClasses_ != null) {
             requiredClasses_ =
@@ -12284,12 +14261,12 @@ public final class UserpoolOuterClass {
       }
       /**
        * <pre>
-       * Character classes required in passwords.
+       * Deprecated. Use Fixed instead.
        * </pre>
        *
-       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5;</code>
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5 [deprecated = true];</code>
        */
-      public Builder clearRequiredClasses() {
+      @java.lang.Deprecated public Builder clearRequiredClasses() {
         if (requiredClassesBuilder_ == null) {
           requiredClasses_ = null;
           onChanged();
@@ -12302,24 +14279,24 @@ public final class UserpoolOuterClass {
       }
       /**
        * <pre>
-       * Character classes required in passwords.
+       * Deprecated. Use Fixed instead.
        * </pre>
        *
-       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5;</code>
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5 [deprecated = true];</code>
        */
-      public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClasses.Builder getRequiredClassesBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClasses.Builder getRequiredClassesBuilder() {
         
         onChanged();
         return getRequiredClassesFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Character classes required in passwords.
+       * Deprecated. Use Fixed instead.
        * </pre>
        *
-       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5;</code>
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5 [deprecated = true];</code>
        */
-      public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClassesOrBuilder getRequiredClassesOrBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClassesOrBuilder getRequiredClassesOrBuilder() {
         if (requiredClassesBuilder_ != null) {
           return requiredClassesBuilder_.getMessageOrBuilder();
         } else {
@@ -12329,10 +14306,10 @@ public final class UserpoolOuterClass {
       }
       /**
        * <pre>
-       * Character classes required in passwords.
+       * Deprecated. Use Fixed instead.
        * </pre>
        *
-       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5;</code>
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.RequiredClasses required_classes = 5 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClasses, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClasses.Builder, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.RequiredClassesOrBuilder> 
@@ -12353,26 +14330,26 @@ public final class UserpoolOuterClass {
           yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettings, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettings.Builder, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettingsOrBuilder> minLengthByClassSettingsBuilder_;
       /**
        * <pre>
-       * Minimum length requirements based on character class diversity.
-       * If not specified, these checks are disabled.
+       * Deprecated. Use Smart instead.
        * </pre>
        *
-       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6;</code>
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the minLengthByClassSettings field is set.
        */
-      public boolean hasMinLengthByClassSettings() {
+      @java.lang.Deprecated public boolean hasMinLengthByClassSettings() {
         return minLengthByClassSettingsBuilder_ != null || minLengthByClassSettings_ != null;
       }
       /**
        * <pre>
-       * Minimum length requirements based on character class diversity.
-       * If not specified, these checks are disabled.
+       * Deprecated. Use Smart instead.
        * </pre>
        *
-       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6;</code>
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6 [deprecated = true];</code>
+       * @deprecated
        * @return The minLengthByClassSettings.
        */
-      public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettings getMinLengthByClassSettings() {
+      @java.lang.Deprecated public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettings getMinLengthByClassSettings() {
         if (minLengthByClassSettingsBuilder_ == null) {
           return minLengthByClassSettings_ == null ? yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettings.getDefaultInstance() : minLengthByClassSettings_;
         } else {
@@ -12381,13 +14358,12 @@ public final class UserpoolOuterClass {
       }
       /**
        * <pre>
-       * Minimum length requirements based on character class diversity.
-       * If not specified, these checks are disabled.
+       * Deprecated. Use Smart instead.
        * </pre>
        *
-       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6;</code>
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6 [deprecated = true];</code>
        */
-      public Builder setMinLengthByClassSettings(yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettings value) {
+      @java.lang.Deprecated public Builder setMinLengthByClassSettings(yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettings value) {
         if (minLengthByClassSettingsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -12402,13 +14378,12 @@ public final class UserpoolOuterClass {
       }
       /**
        * <pre>
-       * Minimum length requirements based on character class diversity.
-       * If not specified, these checks are disabled.
+       * Deprecated. Use Smart instead.
        * </pre>
        *
-       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6;</code>
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6 [deprecated = true];</code>
        */
-      public Builder setMinLengthByClassSettings(
+      @java.lang.Deprecated public Builder setMinLengthByClassSettings(
           yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettings.Builder builderForValue) {
         if (minLengthByClassSettingsBuilder_ == null) {
           minLengthByClassSettings_ = builderForValue.build();
@@ -12421,13 +14396,12 @@ public final class UserpoolOuterClass {
       }
       /**
        * <pre>
-       * Minimum length requirements based on character class diversity.
-       * If not specified, these checks are disabled.
+       * Deprecated. Use Smart instead.
        * </pre>
        *
-       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6;</code>
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6 [deprecated = true];</code>
        */
-      public Builder mergeMinLengthByClassSettings(yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettings value) {
+      @java.lang.Deprecated public Builder mergeMinLengthByClassSettings(yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettings value) {
         if (minLengthByClassSettingsBuilder_ == null) {
           if (minLengthByClassSettings_ != null) {
             minLengthByClassSettings_ =
@@ -12444,13 +14418,12 @@ public final class UserpoolOuterClass {
       }
       /**
        * <pre>
-       * Minimum length requirements based on character class diversity.
-       * If not specified, these checks are disabled.
+       * Deprecated. Use Smart instead.
        * </pre>
        *
-       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6;</code>
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6 [deprecated = true];</code>
        */
-      public Builder clearMinLengthByClassSettings() {
+      @java.lang.Deprecated public Builder clearMinLengthByClassSettings() {
         if (minLengthByClassSettingsBuilder_ == null) {
           minLengthByClassSettings_ = null;
           onChanged();
@@ -12463,26 +14436,24 @@ public final class UserpoolOuterClass {
       }
       /**
        * <pre>
-       * Minimum length requirements based on character class diversity.
-       * If not specified, these checks are disabled.
+       * Deprecated. Use Smart instead.
        * </pre>
        *
-       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6;</code>
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6 [deprecated = true];</code>
        */
-      public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettings.Builder getMinLengthByClassSettingsBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettings.Builder getMinLengthByClassSettingsBuilder() {
         
         onChanged();
         return getMinLengthByClassSettingsFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Minimum length requirements based on character class diversity.
-       * If not specified, these checks are disabled.
+       * Deprecated. Use Smart instead.
        * </pre>
        *
-       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6;</code>
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6 [deprecated = true];</code>
        */
-      public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettingsOrBuilder getMinLengthByClassSettingsOrBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettingsOrBuilder getMinLengthByClassSettingsOrBuilder() {
         if (minLengthByClassSettingsBuilder_ != null) {
           return minLengthByClassSettingsBuilder_.getMessageOrBuilder();
         } else {
@@ -12492,11 +14463,10 @@ public final class UserpoolOuterClass {
       }
       /**
        * <pre>
-       * Minimum length requirements based on character class diversity.
-       * If not specified, these checks are disabled.
+       * Deprecated. Use Smart instead.
        * </pre>
        *
-       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6;</code>
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.MinLengthByClassSettings min_length_by_class_settings = 6 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettings, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettings.Builder, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.MinLengthByClassSettingsOrBuilder> 
@@ -12510,6 +14480,360 @@ public final class UserpoolOuterClass {
           minLengthByClassSettings_ = null;
         }
         return minLengthByClassSettingsBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.Builder, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.FixedOrBuilder> fixedBuilder_;
+      /**
+       * <pre>
+       * Fixed complexity requirements. Exactly one of complexity requirements must be specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed fixed = 7;</code>
+       * @return Whether the fixed field is set.
+       */
+      @java.lang.Override
+      public boolean hasFixed() {
+        return complexityPolicyCase_ == 7;
+      }
+      /**
+       * <pre>
+       * Fixed complexity requirements. Exactly one of complexity requirements must be specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed fixed = 7;</code>
+       * @return The fixed.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed getFixed() {
+        if (fixedBuilder_ == null) {
+          if (complexityPolicyCase_ == 7) {
+            return (yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed) complexityPolicy_;
+          }
+          return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.getDefaultInstance();
+        } else {
+          if (complexityPolicyCase_ == 7) {
+            return fixedBuilder_.getMessage();
+          }
+          return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Fixed complexity requirements. Exactly one of complexity requirements must be specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed fixed = 7;</code>
+       */
+      public Builder setFixed(yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed value) {
+        if (fixedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          complexityPolicy_ = value;
+          onChanged();
+        } else {
+          fixedBuilder_.setMessage(value);
+        }
+        complexityPolicyCase_ = 7;
+        return this;
+      }
+      /**
+       * <pre>
+       * Fixed complexity requirements. Exactly one of complexity requirements must be specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed fixed = 7;</code>
+       */
+      public Builder setFixed(
+          yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.Builder builderForValue) {
+        if (fixedBuilder_ == null) {
+          complexityPolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          fixedBuilder_.setMessage(builderForValue.build());
+        }
+        complexityPolicyCase_ = 7;
+        return this;
+      }
+      /**
+       * <pre>
+       * Fixed complexity requirements. Exactly one of complexity requirements must be specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed fixed = 7;</code>
+       */
+      public Builder mergeFixed(yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed value) {
+        if (fixedBuilder_ == null) {
+          if (complexityPolicyCase_ == 7 &&
+              complexityPolicy_ != yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.getDefaultInstance()) {
+            complexityPolicy_ = yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.newBuilder((yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed) complexityPolicy_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            complexityPolicy_ = value;
+          }
+          onChanged();
+        } else {
+          if (complexityPolicyCase_ == 7) {
+            fixedBuilder_.mergeFrom(value);
+          }
+          fixedBuilder_.setMessage(value);
+        }
+        complexityPolicyCase_ = 7;
+        return this;
+      }
+      /**
+       * <pre>
+       * Fixed complexity requirements. Exactly one of complexity requirements must be specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed fixed = 7;</code>
+       */
+      public Builder clearFixed() {
+        if (fixedBuilder_ == null) {
+          if (complexityPolicyCase_ == 7) {
+            complexityPolicyCase_ = 0;
+            complexityPolicy_ = null;
+            onChanged();
+          }
+        } else {
+          if (complexityPolicyCase_ == 7) {
+            complexityPolicyCase_ = 0;
+            complexityPolicy_ = null;
+          }
+          fixedBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Fixed complexity requirements. Exactly one of complexity requirements must be specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed fixed = 7;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.Builder getFixedBuilder() {
+        return getFixedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Fixed complexity requirements. Exactly one of complexity requirements must be specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed fixed = 7;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.FixedOrBuilder getFixedOrBuilder() {
+        if ((complexityPolicyCase_ == 7) && (fixedBuilder_ != null)) {
+          return fixedBuilder_.getMessageOrBuilder();
+        } else {
+          if (complexityPolicyCase_ == 7) {
+            return (yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed) complexityPolicy_;
+          }
+          return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Fixed complexity requirements. Exactly one of complexity requirements must be specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Fixed fixed = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.Builder, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.FixedOrBuilder> 
+          getFixedFieldBuilder() {
+        if (fixedBuilder_ == null) {
+          if (!(complexityPolicyCase_ == 7)) {
+            complexityPolicy_ = yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.getDefaultInstance();
+          }
+          fixedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed.Builder, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.FixedOrBuilder>(
+                  (yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Fixed) complexityPolicy_,
+                  getParentForChildren(),
+                  isClean());
+          complexityPolicy_ = null;
+        }
+        complexityPolicyCase_ = 7;
+        onChanged();;
+        return fixedBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.Builder, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.SmartOrBuilder> smartBuilder_;
+      /**
+       * <pre>
+       * Smart complexity requirements. Exactly one of complexity requirements must be specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart smart = 8;</code>
+       * @return Whether the smart field is set.
+       */
+      @java.lang.Override
+      public boolean hasSmart() {
+        return complexityPolicyCase_ == 8;
+      }
+      /**
+       * <pre>
+       * Smart complexity requirements. Exactly one of complexity requirements must be specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart smart = 8;</code>
+       * @return The smart.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart getSmart() {
+        if (smartBuilder_ == null) {
+          if (complexityPolicyCase_ == 8) {
+            return (yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart) complexityPolicy_;
+          }
+          return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.getDefaultInstance();
+        } else {
+          if (complexityPolicyCase_ == 8) {
+            return smartBuilder_.getMessage();
+          }
+          return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Smart complexity requirements. Exactly one of complexity requirements must be specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart smart = 8;</code>
+       */
+      public Builder setSmart(yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart value) {
+        if (smartBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          complexityPolicy_ = value;
+          onChanged();
+        } else {
+          smartBuilder_.setMessage(value);
+        }
+        complexityPolicyCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Smart complexity requirements. Exactly one of complexity requirements must be specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart smart = 8;</code>
+       */
+      public Builder setSmart(
+          yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.Builder builderForValue) {
+        if (smartBuilder_ == null) {
+          complexityPolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          smartBuilder_.setMessage(builderForValue.build());
+        }
+        complexityPolicyCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Smart complexity requirements. Exactly one of complexity requirements must be specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart smart = 8;</code>
+       */
+      public Builder mergeSmart(yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart value) {
+        if (smartBuilder_ == null) {
+          if (complexityPolicyCase_ == 8 &&
+              complexityPolicy_ != yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.getDefaultInstance()) {
+            complexityPolicy_ = yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.newBuilder((yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart) complexityPolicy_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            complexityPolicy_ = value;
+          }
+          onChanged();
+        } else {
+          if (complexityPolicyCase_ == 8) {
+            smartBuilder_.mergeFrom(value);
+          }
+          smartBuilder_.setMessage(value);
+        }
+        complexityPolicyCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Smart complexity requirements. Exactly one of complexity requirements must be specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart smart = 8;</code>
+       */
+      public Builder clearSmart() {
+        if (smartBuilder_ == null) {
+          if (complexityPolicyCase_ == 8) {
+            complexityPolicyCase_ = 0;
+            complexityPolicy_ = null;
+            onChanged();
+          }
+        } else {
+          if (complexityPolicyCase_ == 8) {
+            complexityPolicyCase_ = 0;
+            complexityPolicy_ = null;
+          }
+          smartBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Smart complexity requirements. Exactly one of complexity requirements must be specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart smart = 8;</code>
+       */
+      public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.Builder getSmartBuilder() {
+        return getSmartFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Smart complexity requirements. Exactly one of complexity requirements must be specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart smart = 8;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.SmartOrBuilder getSmartOrBuilder() {
+        if ((complexityPolicyCase_ == 8) && (smartBuilder_ != null)) {
+          return smartBuilder_.getMessageOrBuilder();
+        } else {
+          if (complexityPolicyCase_ == 8) {
+            return (yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart) complexityPolicy_;
+          }
+          return yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Smart complexity requirements. Exactly one of complexity requirements must be specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordQualityPolicy.Smart smart = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.Builder, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.SmartOrBuilder> 
+          getSmartFieldBuilder() {
+        if (smartBuilder_ == null) {
+          if (!(complexityPolicyCase_ == 8)) {
+            complexityPolicy_ = yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.getDefaultInstance();
+          }
+          smartBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart.Builder, yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.SmartOrBuilder>(
+                  (yandex.cloud.api.organizationmanager.v1.idp.UserpoolOuterClass.PasswordQualityPolicy.Smart) complexityPolicy_,
+                  getParentForChildren(),
+                  isClean());
+          complexityPolicy_ = null;
+        }
+        complexityPolicyCase_ = 8;
+        onChanged();;
+        return smartBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12573,7 +14897,7 @@ public final class UserpoolOuterClass {
      * Minimum number of days before a password can be changed.
      * </pre>
      *
-     * <code>int64 min_days_count = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>int64 min_days_count = 1 [(.yandex.cloud.value) = "0-730"];</code>
      * @return The minDaysCount.
      */
     long getMinDaysCount();
@@ -12584,7 +14908,7 @@ public final class UserpoolOuterClass {
      * Zero means passwords never expire.
      * </pre>
      *
-     * <code>int64 max_days_count = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>int64 max_days_count = 2 [(.yandex.cloud.value) = "0-730"];</code>
      * @return The maxDaysCount.
      */
     long getMaxDaysCount();
@@ -12687,7 +15011,7 @@ public final class UserpoolOuterClass {
      * Minimum number of days before a password can be changed.
      * </pre>
      *
-     * <code>int64 min_days_count = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>int64 min_days_count = 1 [(.yandex.cloud.value) = "0-730"];</code>
      * @return The minDaysCount.
      */
     @java.lang.Override
@@ -12703,7 +15027,7 @@ public final class UserpoolOuterClass {
      * Zero means passwords never expire.
      * </pre>
      *
-     * <code>int64 max_days_count = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>int64 max_days_count = 2 [(.yandex.cloud.value) = "0-730"];</code>
      * @return The maxDaysCount.
      */
     @java.lang.Override
@@ -13042,7 +15366,7 @@ public final class UserpoolOuterClass {
        * Minimum number of days before a password can be changed.
        * </pre>
        *
-       * <code>int64 min_days_count = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 min_days_count = 1 [(.yandex.cloud.value) = "0-730"];</code>
        * @return The minDaysCount.
        */
       @java.lang.Override
@@ -13054,7 +15378,7 @@ public final class UserpoolOuterClass {
        * Minimum number of days before a password can be changed.
        * </pre>
        *
-       * <code>int64 min_days_count = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 min_days_count = 1 [(.yandex.cloud.value) = "0-730"];</code>
        * @param value The minDaysCount to set.
        * @return This builder for chaining.
        */
@@ -13069,7 +15393,7 @@ public final class UserpoolOuterClass {
        * Minimum number of days before a password can be changed.
        * </pre>
        *
-       * <code>int64 min_days_count = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 min_days_count = 1 [(.yandex.cloud.value) = "0-730"];</code>
        * @return This builder for chaining.
        */
       public Builder clearMinDaysCount() {
@@ -13086,7 +15410,7 @@ public final class UserpoolOuterClass {
        * Zero means passwords never expire.
        * </pre>
        *
-       * <code>int64 max_days_count = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 max_days_count = 2 [(.yandex.cloud.value) = "0-730"];</code>
        * @return The maxDaysCount.
        */
       @java.lang.Override
@@ -13099,7 +15423,7 @@ public final class UserpoolOuterClass {
        * Zero means passwords never expire.
        * </pre>
        *
-       * <code>int64 max_days_count = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 max_days_count = 2 [(.yandex.cloud.value) = "0-730"];</code>
        * @param value The maxDaysCount to set.
        * @return This builder for chaining.
        */
@@ -13115,7 +15439,7 @@ public final class UserpoolOuterClass {
        * Zero means passwords never expire.
        * </pre>
        *
-       * <code>int64 max_days_count = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>int64 max_days_count = 2 [(.yandex.cloud.value) = "0-730"];</code>
        * @return This builder for chaining.
        */
       public Builder clearMaxDaysCount() {
@@ -13186,7 +15510,7 @@ public final class UserpoolOuterClass {
      * Time window for counting failed authentication attempts.
      * </pre>
      *
-     * <code>.google.protobuf.Duration window = 1;</code>
+     * <code>.google.protobuf.Duration window = 1 [(.yandex.cloud.value) = "0h-8760h"];</code>
      * @return Whether the window field is set.
      */
     boolean hasWindow();
@@ -13195,7 +15519,7 @@ public final class UserpoolOuterClass {
      * Time window for counting failed authentication attempts.
      * </pre>
      *
-     * <code>.google.protobuf.Duration window = 1;</code>
+     * <code>.google.protobuf.Duration window = 1 [(.yandex.cloud.value) = "0h-8760h"];</code>
      * @return The window.
      */
     com.google.protobuf.Duration getWindow();
@@ -13204,7 +15528,7 @@ public final class UserpoolOuterClass {
      * Time window for counting failed authentication attempts.
      * </pre>
      *
-     * <code>.google.protobuf.Duration window = 1;</code>
+     * <code>.google.protobuf.Duration window = 1 [(.yandex.cloud.value) = "0h-8760h"];</code>
      */
     com.google.protobuf.DurationOrBuilder getWindowOrBuilder();
 
@@ -13213,7 +15537,7 @@ public final class UserpoolOuterClass {
      * Duration of the block after too many failed attempts.
      * </pre>
      *
-     * <code>.google.protobuf.Duration block = 2;</code>
+     * <code>.google.protobuf.Duration block = 2 [(.yandex.cloud.value) = "0h-8760h"];</code>
      * @return Whether the block field is set.
      */
     boolean hasBlock();
@@ -13222,7 +15546,7 @@ public final class UserpoolOuterClass {
      * Duration of the block after too many failed attempts.
      * </pre>
      *
-     * <code>.google.protobuf.Duration block = 2;</code>
+     * <code>.google.protobuf.Duration block = 2 [(.yandex.cloud.value) = "0h-8760h"];</code>
      * @return The block.
      */
     com.google.protobuf.Duration getBlock();
@@ -13231,7 +15555,7 @@ public final class UserpoolOuterClass {
      * Duration of the block after too many failed attempts.
      * </pre>
      *
-     * <code>.google.protobuf.Duration block = 2;</code>
+     * <code>.google.protobuf.Duration block = 2 [(.yandex.cloud.value) = "0h-8760h"];</code>
      */
     com.google.protobuf.DurationOrBuilder getBlockOrBuilder();
 
@@ -13240,7 +15564,7 @@ public final class UserpoolOuterClass {
      * Number of failed attempts allowed within the window before blocking.
      * </pre>
      *
-     * <code>int64 attempts = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * <code>int64 attempts = 3 [(.yandex.cloud.value) = "1-100"];</code>
      * @return The attempts.
      */
     long getAttempts();
@@ -13248,6 +15572,7 @@ public final class UserpoolOuterClass {
   /**
    * <pre>
    * Policy that defines protection against brute force attacks.
+   * Zero or empty values disable bruteforce protection.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.organizationmanager.v1.idp.BruteforceProtectionPolicy}
@@ -13364,7 +15689,7 @@ public final class UserpoolOuterClass {
      * Time window for counting failed authentication attempts.
      * </pre>
      *
-     * <code>.google.protobuf.Duration window = 1;</code>
+     * <code>.google.protobuf.Duration window = 1 [(.yandex.cloud.value) = "0h-8760h"];</code>
      * @return Whether the window field is set.
      */
     @java.lang.Override
@@ -13376,7 +15701,7 @@ public final class UserpoolOuterClass {
      * Time window for counting failed authentication attempts.
      * </pre>
      *
-     * <code>.google.protobuf.Duration window = 1;</code>
+     * <code>.google.protobuf.Duration window = 1 [(.yandex.cloud.value) = "0h-8760h"];</code>
      * @return The window.
      */
     @java.lang.Override
@@ -13388,7 +15713,7 @@ public final class UserpoolOuterClass {
      * Time window for counting failed authentication attempts.
      * </pre>
      *
-     * <code>.google.protobuf.Duration window = 1;</code>
+     * <code>.google.protobuf.Duration window = 1 [(.yandex.cloud.value) = "0h-8760h"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getWindowOrBuilder() {
@@ -13402,7 +15727,7 @@ public final class UserpoolOuterClass {
      * Duration of the block after too many failed attempts.
      * </pre>
      *
-     * <code>.google.protobuf.Duration block = 2;</code>
+     * <code>.google.protobuf.Duration block = 2 [(.yandex.cloud.value) = "0h-8760h"];</code>
      * @return Whether the block field is set.
      */
     @java.lang.Override
@@ -13414,7 +15739,7 @@ public final class UserpoolOuterClass {
      * Duration of the block after too many failed attempts.
      * </pre>
      *
-     * <code>.google.protobuf.Duration block = 2;</code>
+     * <code>.google.protobuf.Duration block = 2 [(.yandex.cloud.value) = "0h-8760h"];</code>
      * @return The block.
      */
     @java.lang.Override
@@ -13426,7 +15751,7 @@ public final class UserpoolOuterClass {
      * Duration of the block after too many failed attempts.
      * </pre>
      *
-     * <code>.google.protobuf.Duration block = 2;</code>
+     * <code>.google.protobuf.Duration block = 2 [(.yandex.cloud.value) = "0h-8760h"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getBlockOrBuilder() {
@@ -13440,7 +15765,7 @@ public final class UserpoolOuterClass {
      * Number of failed attempts allowed within the window before blocking.
      * </pre>
      *
-     * <code>int64 attempts = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * <code>int64 attempts = 3 [(.yandex.cloud.value) = "1-100"];</code>
      * @return The attempts.
      */
     @java.lang.Override
@@ -13639,6 +15964,7 @@ public final class UserpoolOuterClass {
     /**
      * <pre>
      * Policy that defines protection against brute force attacks.
+     * Zero or empty values disable bruteforce protection.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.organizationmanager.v1.idp.BruteforceProtectionPolicy}
@@ -13823,7 +16149,7 @@ public final class UserpoolOuterClass {
        * Time window for counting failed authentication attempts.
        * </pre>
        *
-       * <code>.google.protobuf.Duration window = 1;</code>
+       * <code>.google.protobuf.Duration window = 1 [(.yandex.cloud.value) = "0h-8760h"];</code>
        * @return Whether the window field is set.
        */
       public boolean hasWindow() {
@@ -13834,7 +16160,7 @@ public final class UserpoolOuterClass {
        * Time window for counting failed authentication attempts.
        * </pre>
        *
-       * <code>.google.protobuf.Duration window = 1;</code>
+       * <code>.google.protobuf.Duration window = 1 [(.yandex.cloud.value) = "0h-8760h"];</code>
        * @return The window.
        */
       public com.google.protobuf.Duration getWindow() {
@@ -13849,7 +16175,7 @@ public final class UserpoolOuterClass {
        * Time window for counting failed authentication attempts.
        * </pre>
        *
-       * <code>.google.protobuf.Duration window = 1;</code>
+       * <code>.google.protobuf.Duration window = 1 [(.yandex.cloud.value) = "0h-8760h"];</code>
        */
       public Builder setWindow(com.google.protobuf.Duration value) {
         if (windowBuilder_ == null) {
@@ -13869,7 +16195,7 @@ public final class UserpoolOuterClass {
        * Time window for counting failed authentication attempts.
        * </pre>
        *
-       * <code>.google.protobuf.Duration window = 1;</code>
+       * <code>.google.protobuf.Duration window = 1 [(.yandex.cloud.value) = "0h-8760h"];</code>
        */
       public Builder setWindow(
           com.google.protobuf.Duration.Builder builderForValue) {
@@ -13887,7 +16213,7 @@ public final class UserpoolOuterClass {
        * Time window for counting failed authentication attempts.
        * </pre>
        *
-       * <code>.google.protobuf.Duration window = 1;</code>
+       * <code>.google.protobuf.Duration window = 1 [(.yandex.cloud.value) = "0h-8760h"];</code>
        */
       public Builder mergeWindow(com.google.protobuf.Duration value) {
         if (windowBuilder_ == null) {
@@ -13909,7 +16235,7 @@ public final class UserpoolOuterClass {
        * Time window for counting failed authentication attempts.
        * </pre>
        *
-       * <code>.google.protobuf.Duration window = 1;</code>
+       * <code>.google.protobuf.Duration window = 1 [(.yandex.cloud.value) = "0h-8760h"];</code>
        */
       public Builder clearWindow() {
         if (windowBuilder_ == null) {
@@ -13927,7 +16253,7 @@ public final class UserpoolOuterClass {
        * Time window for counting failed authentication attempts.
        * </pre>
        *
-       * <code>.google.protobuf.Duration window = 1;</code>
+       * <code>.google.protobuf.Duration window = 1 [(.yandex.cloud.value) = "0h-8760h"];</code>
        */
       public com.google.protobuf.Duration.Builder getWindowBuilder() {
         
@@ -13939,7 +16265,7 @@ public final class UserpoolOuterClass {
        * Time window for counting failed authentication attempts.
        * </pre>
        *
-       * <code>.google.protobuf.Duration window = 1;</code>
+       * <code>.google.protobuf.Duration window = 1 [(.yandex.cloud.value) = "0h-8760h"];</code>
        */
       public com.google.protobuf.DurationOrBuilder getWindowOrBuilder() {
         if (windowBuilder_ != null) {
@@ -13954,7 +16280,7 @@ public final class UserpoolOuterClass {
        * Time window for counting failed authentication attempts.
        * </pre>
        *
-       * <code>.google.protobuf.Duration window = 1;</code>
+       * <code>.google.protobuf.Duration window = 1 [(.yandex.cloud.value) = "0h-8760h"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
@@ -13978,7 +16304,7 @@ public final class UserpoolOuterClass {
        * Duration of the block after too many failed attempts.
        * </pre>
        *
-       * <code>.google.protobuf.Duration block = 2;</code>
+       * <code>.google.protobuf.Duration block = 2 [(.yandex.cloud.value) = "0h-8760h"];</code>
        * @return Whether the block field is set.
        */
       public boolean hasBlock() {
@@ -13989,7 +16315,7 @@ public final class UserpoolOuterClass {
        * Duration of the block after too many failed attempts.
        * </pre>
        *
-       * <code>.google.protobuf.Duration block = 2;</code>
+       * <code>.google.protobuf.Duration block = 2 [(.yandex.cloud.value) = "0h-8760h"];</code>
        * @return The block.
        */
       public com.google.protobuf.Duration getBlock() {
@@ -14004,7 +16330,7 @@ public final class UserpoolOuterClass {
        * Duration of the block after too many failed attempts.
        * </pre>
        *
-       * <code>.google.protobuf.Duration block = 2;</code>
+       * <code>.google.protobuf.Duration block = 2 [(.yandex.cloud.value) = "0h-8760h"];</code>
        */
       public Builder setBlock(com.google.protobuf.Duration value) {
         if (blockBuilder_ == null) {
@@ -14024,7 +16350,7 @@ public final class UserpoolOuterClass {
        * Duration of the block after too many failed attempts.
        * </pre>
        *
-       * <code>.google.protobuf.Duration block = 2;</code>
+       * <code>.google.protobuf.Duration block = 2 [(.yandex.cloud.value) = "0h-8760h"];</code>
        */
       public Builder setBlock(
           com.google.protobuf.Duration.Builder builderForValue) {
@@ -14042,7 +16368,7 @@ public final class UserpoolOuterClass {
        * Duration of the block after too many failed attempts.
        * </pre>
        *
-       * <code>.google.protobuf.Duration block = 2;</code>
+       * <code>.google.protobuf.Duration block = 2 [(.yandex.cloud.value) = "0h-8760h"];</code>
        */
       public Builder mergeBlock(com.google.protobuf.Duration value) {
         if (blockBuilder_ == null) {
@@ -14064,7 +16390,7 @@ public final class UserpoolOuterClass {
        * Duration of the block after too many failed attempts.
        * </pre>
        *
-       * <code>.google.protobuf.Duration block = 2;</code>
+       * <code>.google.protobuf.Duration block = 2 [(.yandex.cloud.value) = "0h-8760h"];</code>
        */
       public Builder clearBlock() {
         if (blockBuilder_ == null) {
@@ -14082,7 +16408,7 @@ public final class UserpoolOuterClass {
        * Duration of the block after too many failed attempts.
        * </pre>
        *
-       * <code>.google.protobuf.Duration block = 2;</code>
+       * <code>.google.protobuf.Duration block = 2 [(.yandex.cloud.value) = "0h-8760h"];</code>
        */
       public com.google.protobuf.Duration.Builder getBlockBuilder() {
         
@@ -14094,7 +16420,7 @@ public final class UserpoolOuterClass {
        * Duration of the block after too many failed attempts.
        * </pre>
        *
-       * <code>.google.protobuf.Duration block = 2;</code>
+       * <code>.google.protobuf.Duration block = 2 [(.yandex.cloud.value) = "0h-8760h"];</code>
        */
       public com.google.protobuf.DurationOrBuilder getBlockOrBuilder() {
         if (blockBuilder_ != null) {
@@ -14109,7 +16435,7 @@ public final class UserpoolOuterClass {
        * Duration of the block after too many failed attempts.
        * </pre>
        *
-       * <code>.google.protobuf.Duration block = 2;</code>
+       * <code>.google.protobuf.Duration block = 2 [(.yandex.cloud.value) = "0h-8760h"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
@@ -14131,7 +16457,7 @@ public final class UserpoolOuterClass {
        * Number of failed attempts allowed within the window before blocking.
        * </pre>
        *
-       * <code>int64 attempts = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * <code>int64 attempts = 3 [(.yandex.cloud.value) = "1-100"];</code>
        * @return The attempts.
        */
       @java.lang.Override
@@ -14143,7 +16469,7 @@ public final class UserpoolOuterClass {
        * Number of failed attempts allowed within the window before blocking.
        * </pre>
        *
-       * <code>int64 attempts = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * <code>int64 attempts = 3 [(.yandex.cloud.value) = "1-100"];</code>
        * @param value The attempts to set.
        * @return This builder for chaining.
        */
@@ -14158,7 +16484,7 @@ public final class UserpoolOuterClass {
        * Number of failed attempts allowed within the window before blocking.
        * </pre>
        *
-       * <code>int64 attempts = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * <code>int64 attempts = 3 [(.yandex.cloud.value) = "1-100"];</code>
        * @return This builder for chaining.
        */
       public Builder clearAttempts() {
@@ -14266,6 +16592,16 @@ public final class UserpoolOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_MinLengthByClassSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_Fixed_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_Fixed_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_Smart_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_Smart_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordLifetimePolicy_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14341,30 +16677,43 @@ public final class UserpoolOuterClass {
       "\022\007\n\003TXT\020\001\")\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022" +
       "\013\n\007DNS_TXT\020\001\"U\n\006Status\022\026\n\022STATUS_UNSPECI" +
       "FIED\020\000\022\013\n\007PENDING\020\001\022\016\n\nPROCESSING\020\002\022\t\n\005V" +
-      "ALID\020\003\022\013\n\007INVALID\020\004B\013\n\tchallengeJ\004\010\003\020\004\"\245" +
-      "\004\n\025PasswordQualityPolicy\022\025\n\rallow_simila" +
-      "r\030\001 \001(\010\022\033\n\nmax_length\030\002 \001(\003B\007\372\3071\003>=0\022\033\n\n" +
-      "min_length\030\003 \001(\003B\007\372\3071\003>=0\022\035\n\014match_lengt" +
-      "h\030\004 \001(\003B\007\372\3071\003>=0\022h\n\020required_classes\030\005 \001" +
-      "(\0132N.yandex.cloud.organizationmanager.v1" +
-      ".idp.PasswordQualityPolicy.RequiredClass" +
-      "es\022}\n\034min_length_by_class_settings\030\006 \001(\013" +
-      "2W.yandex.cloud.organizationmanager.v1.i" +
-      "dp.PasswordQualityPolicy.MinLengthByClas" +
-      "sSettings\032S\n\017RequiredClasses\022\016\n\006lowers\030\001" +
-      " \001(\010\022\016\n\006uppers\030\002 \001(\010\022\016\n\006digits\030\003 \001(\010\022\020\n\010" +
-      "specials\030\004 \001(\010\032^\n\030MinLengthByClassSettin" +
-      "gs\022\024\n\003one\030\001 \001(\003B\007\372\3071\003>=0\022\024\n\003two\030\002 \001(\003B\007\372" +
-      "\3071\003>=0\022\026\n\005three\030\003 \001(\003B\007\372\3071\003>=0\"Z\n\026Passwo" +
-      "rdLifetimePolicy\022\037\n\016min_days_count\030\001 \001(\003" +
-      "B\007\372\3071\003>=0\022\037\n\016max_days_count\030\002 \001(\003B\007\372\3071\003>" +
-      "=0\"\213\001\n\032BruteforceProtectionPolicy\022)\n\006win" +
-      "dow\030\001 \001(\0132\031.google.protobuf.Duration\022(\n\005" +
-      "block\030\002 \001(\0132\031.google.protobuf.Duration\022\030" +
-      "\n\010attempts\030\003 \001(\003B\006\372\3071\002>0B~\n+yandex.cloud" +
-      ".api.organizationmanager.v1.idpZOgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/organizationmanager/v1/idp;idpb\006proto3"
+      "ALID\020\003\022\013\n\007INVALID\020\004B\013\n\tchallengeJ\004\010\003\020\004\"\366" +
+      "\007\n\025PasswordQualityPolicy\022\025\n\rallow_simila" +
+      "r\030\001 \001(\010\022\036\n\nmax_length\030\002 \001(\003B\n\372\3071\0060-1000\022" +
+      "\026\n\nmin_length\030\003 \001(\003B\002\030\001\022 \n\014match_length\030" +
+      "\004 \001(\003B\n\372\3071\0060-1000\022l\n\020required_classes\030\005 " +
+      "\001(\0132N.yandex.cloud.organizationmanager.v" +
+      "1.idp.PasswordQualityPolicy.RequiredClas" +
+      "sesB\002\030\001\022\201\001\n\034min_length_by_class_settings" +
+      "\030\006 \001(\0132W.yandex.cloud.organizationmanage" +
+      "r.v1.idp.PasswordQualityPolicy.MinLength" +
+      "ByClassSettingsB\002\030\001\022U\n\005fixed\030\007 \001(\0132D.yan" +
+      "dex.cloud.organizationmanager.v1.idp.Pas" +
+      "swordQualityPolicy.FixedH\000\022U\n\005smart\030\010 \001(" +
+      "\0132D.yandex.cloud.organizationmanager.v1." +
+      "idp.PasswordQualityPolicy.SmartH\000\032S\n\017Req" +
+      "uiredClasses\022\016\n\006lowers\030\001 \001(\010\022\016\n\006uppers\030\002" +
+      " \001(\010\022\016\n\006digits\030\003 \001(\010\022\020\n\010specials\030\004 \001(\010\032C" +
+      "\n\030MinLengthByClassSettings\022\013\n\003one\030\001 \001(\003\022" +
+      "\013\n\003two\030\002 \001(\003\022\r\n\005three\030\003 \001(\003\032\215\001\n\005Fixed\022\027\n" +
+      "\017lowers_required\030\001 \001(\010\022\027\n\017uppers_require" +
+      "d\030\002 \001(\010\022\027\n\017digits_required\030\003 \001(\010\022\031\n\021spec" +
+      "ials_required\030\004 \001(\010\022\036\n\nmin_length\030\005 \001(\003B" +
+      "\n\372\3071\0060-1000\032\214\001\n\005Smart\022\035\n\tone_class\030\001 \001(\003" +
+      "B\n\372\3071\0060-1000\022\037\n\013two_classes\030\002 \001(\003B\n\372\3071\0060" +
+      "-1000\022!\n\rthree_classes\030\003 \001(\003B\n\372\3071\0060-1000" +
+      "\022 \n\014four_classes\030\004 \001(\003B\n\372\3071\0060-1000B\023\n\021co" +
+      "mplexity_policy\"^\n\026PasswordLifetimePolic" +
+      "y\022!\n\016min_days_count\030\001 \001(\003B\t\372\3071\0050-730\022!\n\016" +
+      "max_days_count\030\002 \001(\003B\t\372\3071\0050-730\"\252\001\n\032Brut" +
+      "eforceProtectionPolicy\0227\n\006window\030\001 \001(\0132\031" +
+      ".google.protobuf.DurationB\014\372\3071\0100h-8760h\022" +
+      "6\n\005block\030\002 \001(\0132\031.google.protobuf.Duratio" +
+      "nB\014\372\3071\0100h-8760h\022\033\n\010attempts\030\003 \001(\003B\t\372\3071\0051" +
+      "-100B~\n+yandex.cloud.api.organizationman" +
+      "ager.v1.idpZOgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/organizationmanage" +
+      "r/v1/idp;idpb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14414,7 +16763,7 @@ public final class UserpoolOuterClass {
     internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_descriptor,
-        new java.lang.String[] { "AllowSimilar", "MaxLength", "MinLength", "MatchLength", "RequiredClasses", "MinLengthByClassSettings", });
+        new java.lang.String[] { "AllowSimilar", "MaxLength", "MinLength", "MatchLength", "RequiredClasses", "MinLengthByClassSettings", "Fixed", "Smart", "ComplexityPolicy", });
     internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_RequiredClasses_descriptor =
       internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_RequiredClasses_fieldAccessorTable = new
@@ -14427,6 +16776,18 @@ public final class UserpoolOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_MinLengthByClassSettings_descriptor,
         new java.lang.String[] { "One", "Two", "Three", });
+    internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_Fixed_descriptor =
+      internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_descriptor.getNestedTypes().get(2);
+    internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_Fixed_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_Fixed_descriptor,
+        new java.lang.String[] { "LowersRequired", "UppersRequired", "DigitsRequired", "SpecialsRequired", "MinLength", });
+    internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_Smart_descriptor =
+      internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_descriptor.getNestedTypes().get(3);
+    internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_Smart_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordQualityPolicy_Smart_descriptor,
+        new java.lang.String[] { "OneClass", "TwoClasses", "ThreeClasses", "FourClasses", });
     internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordLifetimePolicy_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_organizationmanager_v1_idp_PasswordLifetimePolicy_fieldAccessorTable = new

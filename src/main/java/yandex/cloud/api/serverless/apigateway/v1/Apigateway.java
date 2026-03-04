@@ -738,6 +738,14 @@ public final class Apigateway {
        * <code>UPDATING = 5;</code>
        */
       UPDATING(5),
+      /**
+       * <pre>
+       * API gateway stopped.
+       * </pre>
+       *
+       * <code>STOPPED = 6;</code>
+       */
+      STOPPED(6),
       UNRECOGNIZED(-1),
       ;
 
@@ -785,6 +793,14 @@ public final class Apigateway {
        * <code>UPDATING = 5;</code>
        */
       public static final int UPDATING_VALUE = 5;
+      /**
+       * <pre>
+       * API gateway stopped.
+       * </pre>
+       *
+       * <code>STOPPED = 6;</code>
+       */
+      public static final int STOPPED_VALUE = 6;
 
 
       public final int getNumber() {
@@ -817,6 +833,7 @@ public final class Apigateway {
           case 3: return DELETING;
           case 4: return ERROR;
           case 5: return UPDATING;
+          case 6: return STOPPED;
           default: return null;
         }
       }
@@ -9589,7 +9606,7 @@ public final class Apigateway {
       "s.apigateway.v1\032\036google/protobuf/duratio" +
       "n.proto\032\037google/protobuf/timestamp.proto" +
       "\032\'yandex/cloud/logging/v1/log_entry.prot" +
-      "o\032\035yandex/cloud/validation.proto\"\367\007\n\nApi" +
+      "o\032\035yandex/cloud/validation.proto\"\204\010\n\nApi" +
       "Gateway\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022." +
       "\n\ncreated_at\030\003 \001(\0132\032.google.protobuf.Tim" +
       "estamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(" +
@@ -9612,30 +9629,30 @@ public final class Apigateway {
       "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
       "\001\032f\n\016VariablesEntry\022\013\n\003key\030\001 \001(\t\022C\n\005valu" +
       "e\030\002 \001(\01324.yandex.cloud.serverless.apigat" +
-      "eway.v1.VariableInput:\0028\001\"a\n\006Status\022\026\n\022S" +
+      "eway.v1.VariableInput:\0028\001\"n\n\006Status\022\026\n\022S" +
       "TATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACT" +
       "IVE\020\002\022\014\n\010DELETING\020\003\022\t\n\005ERROR\020\004\022\014\n\010UPDATI" +
-      "NG\020\005J\004\010\006\020\007\"b\n\016AttachedDomain\022\021\n\tdomain_i" +
-      "d\030\001 \001(\t\022\026\n\016certificate_id\030\002 \001(\t\022\017\n\007enabl" +
-      "ed\030\003 \001(\010\022\016\n\006domain\030\005 \001(\tJ\004\010\004\020\005\"5\n\014Connec" +
-      "tivity\022\022\n\nnetwork_id\030\001 \001(\t\022\021\n\tsubnet_id\030" +
-      "\002 \003(\t\"\226\001\n\nLogOptions\022\020\n\010disabled\030\001 \001(\010\022\026" +
-      "\n\014log_group_id\030\002 \001(\tH\000\022\023\n\tfolder_id\030\003 \001(" +
-      "\tH\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex.cloud.lo" +
-      "gging.v1.LogLevel.LevelB\r\n\013destination\"\343" +
-      "\001\n\006Canary\022\030\n\006weight\030\001 \001(\003B\010\372\3071\0040-99\022W\n\tv" +
-      "ariables\030\002 \003(\0132<.yandex.cloud.serverless" +
-      ".apigateway.v1.Canary.VariablesEntryB\006\202\310" +
-      "1\002>0\032f\n\016VariablesEntry\022\013\n\003key\030\001 \001(\t\022C\n\005v" +
-      "alue\030\002 \001(\01324.yandex.cloud.serverless.api" +
-      "gateway.v1.VariableInput:\0028\001\"|\n\rVariable" +
-      "Input\022\026\n\014string_value\030\001 \001(\tH\000\022\023\n\tint_val" +
-      "ue\030\002 \001(\003H\000\022\026\n\014double_value\030\003 \001(\001H\000\022\024\n\nbo" +
-      "ol_value\030\004 \001(\010H\000B\020\n\016variable_valueB\201\001\n)y" +
-      "andex.cloud.api.serverless.apigateway.v1" +
-      "ZTgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/serverless/apigateway/v1;apig" +
-      "atewayb\006proto3"
+      "NG\020\005\022\013\n\007STOPPED\020\006J\004\010\006\020\007\"b\n\016AttachedDomai" +
+      "n\022\021\n\tdomain_id\030\001 \001(\t\022\026\n\016certificate_id\030\002" +
+      " \001(\t\022\017\n\007enabled\030\003 \001(\010\022\016\n\006domain\030\005 \001(\tJ\004\010" +
+      "\004\020\005\"5\n\014Connectivity\022\022\n\nnetwork_id\030\001 \001(\t\022" +
+      "\021\n\tsubnet_id\030\002 \003(\t\"\226\001\n\nLogOptions\022\020\n\010dis" +
+      "abled\030\001 \001(\010\022\026\n\014log_group_id\030\002 \001(\tH\000\022\023\n\tf" +
+      "older_id\030\003 \001(\tH\000\022:\n\tmin_level\030\004 \001(\0162\'.ya" +
+      "ndex.cloud.logging.v1.LogLevel.LevelB\r\n\013" +
+      "destination\"\343\001\n\006Canary\022\030\n\006weight\030\001 \001(\003B\010" +
+      "\372\3071\0040-99\022W\n\tvariables\030\002 \003(\0132<.yandex.clo" +
+      "ud.serverless.apigateway.v1.Canary.Varia" +
+      "blesEntryB\006\202\3101\002>0\032f\n\016VariablesEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022C\n\005value\030\002 \001(\01324.yandex.cloud.s" +
+      "erverless.apigateway.v1.VariableInput:\0028" +
+      "\001\"|\n\rVariableInput\022\026\n\014string_value\030\001 \001(\t" +
+      "H\000\022\023\n\tint_value\030\002 \001(\003H\000\022\026\n\014double_value\030" +
+      "\003 \001(\001H\000\022\024\n\nbool_value\030\004 \001(\010H\000B\020\n\016variabl" +
+      "e_valueB\201\001\n)yandex.cloud.api.serverless." +
+      "apigateway.v1ZTgithub.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/serverless/apiga" +
+      "teway/v1;apigatewayb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -172,48 +172,88 @@ public final class DesktopOuterClass {
     yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
 
     /**
+     * <pre>
+     * Network interfaces of the desktop.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
      */
     java.util.List<yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.NetworkInterface> 
         getNetworkInterfacesList();
     /**
+     * <pre>
+     * Network interfaces of the desktop.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
      */
     yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.NetworkInterface getNetworkInterfaces(int index);
     /**
+     * <pre>
+     * Network interfaces of the desktop.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
      */
     int getNetworkInterfacesCount();
     /**
+     * <pre>
+     * Network interfaces of the desktop.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
      */
     java.util.List<? extends yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.NetworkInterfaceOrBuilder> 
         getNetworkInterfacesOrBuilderList();
     /**
+     * <pre>
+     * Network interfaces of the desktop.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
      */
     yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.NetworkInterfaceOrBuilder getNetworkInterfacesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Users of the desktop.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
      */
     java.util.List<yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.User> 
         getUsersList();
     /**
+     * <pre>
+     * Users of the desktop.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
      */
     yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.User getUsers(int index);
     /**
+     * <pre>
+     * Users of the desktop.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
      */
     int getUsersCount();
     /**
+     * <pre>
+     * Users of the desktop.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
      */
     java.util.List<? extends yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.UserOrBuilder> 
         getUsersOrBuilderList();
     /**
+     * <pre>
+     * Users of the desktop.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
      */
     yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.UserOrBuilder getUsersOrBuilder(
@@ -272,6 +312,26 @@ public final class DesktopOuterClass {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * Description of the desktop.
+     * </pre>
+     *
+     * <code>string description = 25;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description of the desktop.
+     * </pre>
+     *
+     * <code>string description = 25;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * <pre>
@@ -297,6 +357,7 @@ public final class DesktopOuterClass {
       name_ = "";
       networkInterfaces_ = java.util.Collections.emptyList();
       users_ = java.util.Collections.emptyList();
+      description_ = "";
     }
 
     @java.lang.Override
@@ -415,6 +476,12 @@ public final class DesktopOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 202: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
             default: {
@@ -556,6 +623,14 @@ public final class DesktopOuterClass {
        * <code>CREATION_FAILED = 10;</code>
        */
       CREATION_FAILED(10),
+      /**
+       * <pre>
+       * Desktop in the process of health check.
+       * </pre>
+       *
+       * <code>HEALTH_CHECK = 11;</code>
+       */
+      HEALTH_CHECK(11),
       UNRECOGNIZED(-1),
       ;
 
@@ -643,6 +718,14 @@ public final class DesktopOuterClass {
        * <code>CREATION_FAILED = 10;</code>
        */
       public static final int CREATION_FAILED_VALUE = 10;
+      /**
+       * <pre>
+       * Desktop in the process of health check.
+       * </pre>
+       *
+       * <code>HEALTH_CHECK = 11;</code>
+       */
+      public static final int HEALTH_CHECK_VALUE = 11;
 
 
       public final int getNumber() {
@@ -680,6 +763,7 @@ public final class DesktopOuterClass {
           case 8: return STOPPED;
           case 9: return ERROR;
           case 10: return CREATION_FAILED;
+          case 11: return HEALTH_CHECK;
           default: return null;
         }
       }
@@ -1026,6 +1110,10 @@ public final class DesktopOuterClass {
     public static final int NETWORK_INTERFACES_FIELD_NUMBER = 22;
     private java.util.List<yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.NetworkInterface> networkInterfaces_;
     /**
+     * <pre>
+     * Network interfaces of the desktop.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
      */
     @java.lang.Override
@@ -1033,6 +1121,10 @@ public final class DesktopOuterClass {
       return networkInterfaces_;
     }
     /**
+     * <pre>
+     * Network interfaces of the desktop.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
      */
     @java.lang.Override
@@ -1041,6 +1133,10 @@ public final class DesktopOuterClass {
       return networkInterfaces_;
     }
     /**
+     * <pre>
+     * Network interfaces of the desktop.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
      */
     @java.lang.Override
@@ -1048,6 +1144,10 @@ public final class DesktopOuterClass {
       return networkInterfaces_.size();
     }
     /**
+     * <pre>
+     * Network interfaces of the desktop.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
      */
     @java.lang.Override
@@ -1055,6 +1155,10 @@ public final class DesktopOuterClass {
       return networkInterfaces_.get(index);
     }
     /**
+     * <pre>
+     * Network interfaces of the desktop.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
      */
     @java.lang.Override
@@ -1066,6 +1170,10 @@ public final class DesktopOuterClass {
     public static final int USERS_FIELD_NUMBER = 23;
     private java.util.List<yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.User> users_;
     /**
+     * <pre>
+     * Users of the desktop.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
      */
     @java.lang.Override
@@ -1073,6 +1181,10 @@ public final class DesktopOuterClass {
       return users_;
     }
     /**
+     * <pre>
+     * Users of the desktop.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
      */
     @java.lang.Override
@@ -1081,6 +1193,10 @@ public final class DesktopOuterClass {
       return users_;
     }
     /**
+     * <pre>
+     * Users of the desktop.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
      */
     @java.lang.Override
@@ -1088,6 +1204,10 @@ public final class DesktopOuterClass {
       return users_.size();
     }
     /**
+     * <pre>
+     * Users of the desktop.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
      */
     @java.lang.Override
@@ -1095,6 +1215,10 @@ public final class DesktopOuterClass {
       return users_.get(index);
     }
     /**
+     * <pre>
+     * Users of the desktop.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
      */
     @java.lang.Override
@@ -1200,6 +1324,52 @@ public final class DesktopOuterClass {
       return map.get(key);
     }
 
+    public static final int DESCRIPTION_FIELD_NUMBER = 25;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Description of the desktop.
+     * </pre>
+     *
+     * <code>string description = 25;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description of the desktop.
+     * </pre>
+     *
+     * <code>string description = 25;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1247,6 +1417,9 @@ public final class DesktopOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           24);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 25, description_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1298,6 +1471,9 @@ public final class DesktopOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(24, labels__);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, description_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1338,6 +1514,8 @@ public final class DesktopOuterClass {
           .equals(other.getUsersList())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1379,6 +1557,8 @@ public final class DesktopOuterClass {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
       }
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1575,6 +1755,8 @@ public final class DesktopOuterClass {
           usersBuilder_.clear();
         }
         internalGetMutableLabels().clear();
+        description_ = "";
+
         return this;
       }
 
@@ -1637,6 +1819,7 @@ public final class DesktopOuterClass {
         }
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -1764,6 +1947,10 @@ public final class DesktopOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2575,6 +2762,10 @@ public final class DesktopOuterClass {
           yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.NetworkInterface, yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.NetworkInterface.Builder, yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.NetworkInterfaceOrBuilder> networkInterfacesBuilder_;
 
       /**
+       * <pre>
+       * Network interfaces of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
        */
       public java.util.List<yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.NetworkInterface> getNetworkInterfacesList() {
@@ -2585,6 +2776,10 @@ public final class DesktopOuterClass {
         }
       }
       /**
+       * <pre>
+       * Network interfaces of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
        */
       public int getNetworkInterfacesCount() {
@@ -2595,6 +2790,10 @@ public final class DesktopOuterClass {
         }
       }
       /**
+       * <pre>
+       * Network interfaces of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
        */
       public yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.NetworkInterface getNetworkInterfaces(int index) {
@@ -2605,6 +2804,10 @@ public final class DesktopOuterClass {
         }
       }
       /**
+       * <pre>
+       * Network interfaces of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
        */
       public Builder setNetworkInterfaces(
@@ -2622,6 +2825,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network interfaces of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
        */
       public Builder setNetworkInterfaces(
@@ -2636,6 +2843,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network interfaces of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
        */
       public Builder addNetworkInterfaces(yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.NetworkInterface value) {
@@ -2652,6 +2863,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network interfaces of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
        */
       public Builder addNetworkInterfaces(
@@ -2669,6 +2884,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network interfaces of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
        */
       public Builder addNetworkInterfaces(
@@ -2683,6 +2902,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network interfaces of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
        */
       public Builder addNetworkInterfaces(
@@ -2697,6 +2920,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network interfaces of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
        */
       public Builder addAllNetworkInterfaces(
@@ -2712,6 +2939,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network interfaces of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
        */
       public Builder clearNetworkInterfaces() {
@@ -2725,6 +2956,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network interfaces of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
        */
       public Builder removeNetworkInterfaces(int index) {
@@ -2738,6 +2973,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network interfaces of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
        */
       public yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.NetworkInterface.Builder getNetworkInterfacesBuilder(
@@ -2745,6 +2984,10 @@ public final class DesktopOuterClass {
         return getNetworkInterfacesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Network interfaces of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
        */
       public yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.NetworkInterfaceOrBuilder getNetworkInterfacesOrBuilder(
@@ -2755,6 +2998,10 @@ public final class DesktopOuterClass {
         }
       }
       /**
+       * <pre>
+       * Network interfaces of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
        */
       public java.util.List<? extends yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.NetworkInterfaceOrBuilder> 
@@ -2766,6 +3013,10 @@ public final class DesktopOuterClass {
         }
       }
       /**
+       * <pre>
+       * Network interfaces of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
        */
       public yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.NetworkInterface.Builder addNetworkInterfacesBuilder() {
@@ -2773,6 +3024,10 @@ public final class DesktopOuterClass {
             yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.NetworkInterface.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Network interfaces of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
        */
       public yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.NetworkInterface.Builder addNetworkInterfacesBuilder(
@@ -2781,6 +3036,10 @@ public final class DesktopOuterClass {
             index, yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.NetworkInterface.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Network interfaces of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.NetworkInterface network_interfaces = 22;</code>
        */
       public java.util.List<yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.NetworkInterface.Builder> 
@@ -2815,6 +3074,10 @@ public final class DesktopOuterClass {
           yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.User, yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.User.Builder, yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.UserOrBuilder> usersBuilder_;
 
       /**
+       * <pre>
+       * Users of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
        */
       public java.util.List<yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.User> getUsersList() {
@@ -2825,6 +3088,10 @@ public final class DesktopOuterClass {
         }
       }
       /**
+       * <pre>
+       * Users of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
        */
       public int getUsersCount() {
@@ -2835,6 +3102,10 @@ public final class DesktopOuterClass {
         }
       }
       /**
+       * <pre>
+       * Users of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
        */
       public yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.User getUsers(int index) {
@@ -2845,6 +3116,10 @@ public final class DesktopOuterClass {
         }
       }
       /**
+       * <pre>
+       * Users of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
        */
       public Builder setUsers(
@@ -2862,6 +3137,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Users of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
        */
       public Builder setUsers(
@@ -2876,6 +3155,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Users of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
        */
       public Builder addUsers(yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.User value) {
@@ -2892,6 +3175,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Users of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
        */
       public Builder addUsers(
@@ -2909,6 +3196,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Users of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
        */
       public Builder addUsers(
@@ -2923,6 +3214,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Users of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
        */
       public Builder addUsers(
@@ -2937,6 +3232,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Users of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
        */
       public Builder addAllUsers(
@@ -2952,6 +3251,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Users of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
        */
       public Builder clearUsers() {
@@ -2965,6 +3268,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Users of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
        */
       public Builder removeUsers(int index) {
@@ -2978,6 +3285,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Users of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
        */
       public yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.User.Builder getUsersBuilder(
@@ -2985,6 +3296,10 @@ public final class DesktopOuterClass {
         return getUsersFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Users of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
        */
       public yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.UserOrBuilder getUsersOrBuilder(
@@ -2995,6 +3310,10 @@ public final class DesktopOuterClass {
         }
       }
       /**
+       * <pre>
+       * Users of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
        */
       public java.util.List<? extends yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.UserOrBuilder> 
@@ -3006,6 +3325,10 @@ public final class DesktopOuterClass {
         }
       }
       /**
+       * <pre>
+       * Users of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
        */
       public yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.User.Builder addUsersBuilder() {
@@ -3013,6 +3336,10 @@ public final class DesktopOuterClass {
             yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.User.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Users of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
        */
       public yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.User.Builder addUsersBuilder(
@@ -3021,6 +3348,10 @@ public final class DesktopOuterClass {
             index, yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.User.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Users of the desktop.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.clouddesktop.v1.api.User users = 23;</code>
        */
       public java.util.List<yandex.cloud.api.clouddesktop.v1.DesktopOuterClass.User.Builder> 
@@ -3200,6 +3531,102 @@ public final class DesktopOuterClass {
             .putAll(values);
         return this;
       }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description of the desktop.
+       * </pre>
+       *
+       * <code>string description = 25;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the desktop.
+       * </pre>
+       *
+       * <code>string description = 25;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the desktop.
+       * </pre>
+       *
+       * <code>string description = 25;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the desktop.
+       * </pre>
+       *
+       * <code>string description = 25;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the desktop.
+       * </pre>
+       *
+       * <code>string description = 25;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3258,18 +3685,32 @@ public final class DesktopOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The amount of memory available to the desktop, specified in bytes.
+     * </pre>
+     *
      * <code>int64 memory = 1 [(.yandex.cloud.value) = "&gt;=1"];</code>
      * @return The memory.
      */
     long getMemory();
 
     /**
+     * <pre>
+     * The number of cores available to the desktop.
+     * </pre>
+     *
      * <code>int64 cores = 2 [(.yandex.cloud.value) = "&gt;=1"];</code>
      * @return The cores.
      */
     long getCores();
 
     /**
+     * <pre>
+     * Baseline level of CPU performance with the ability to burst performance above that baseline level.
+     * This field sets baseline performance for each core.
+     * For example, if you need only 5% of the CPU performance, you can set core_fraction=5.
+     * </pre>
+     *
      * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0-100"];</code>
      * @return The coreFraction.
      */
@@ -3370,6 +3811,10 @@ public final class DesktopOuterClass {
     public static final int MEMORY_FIELD_NUMBER = 1;
     private long memory_;
     /**
+     * <pre>
+     * The amount of memory available to the desktop, specified in bytes.
+     * </pre>
+     *
      * <code>int64 memory = 1 [(.yandex.cloud.value) = "&gt;=1"];</code>
      * @return The memory.
      */
@@ -3381,6 +3826,10 @@ public final class DesktopOuterClass {
     public static final int CORES_FIELD_NUMBER = 2;
     private long cores_;
     /**
+     * <pre>
+     * The number of cores available to the desktop.
+     * </pre>
+     *
      * <code>int64 cores = 2 [(.yandex.cloud.value) = "&gt;=1"];</code>
      * @return The cores.
      */
@@ -3392,6 +3841,12 @@ public final class DesktopOuterClass {
     public static final int CORE_FRACTION_FIELD_NUMBER = 3;
     private long coreFraction_;
     /**
+     * <pre>
+     * Baseline level of CPU performance with the ability to burst performance above that baseline level.
+     * This field sets baseline performance for each core.
+     * For example, if you need only 5% of the CPU performance, you can set core_fraction=5.
+     * </pre>
+     *
      * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0-100"];</code>
      * @return The coreFraction.
      */
@@ -3741,6 +4196,10 @@ public final class DesktopOuterClass {
 
       private long memory_ ;
       /**
+       * <pre>
+       * The amount of memory available to the desktop, specified in bytes.
+       * </pre>
+       *
        * <code>int64 memory = 1 [(.yandex.cloud.value) = "&gt;=1"];</code>
        * @return The memory.
        */
@@ -3749,6 +4208,10 @@ public final class DesktopOuterClass {
         return memory_;
       }
       /**
+       * <pre>
+       * The amount of memory available to the desktop, specified in bytes.
+       * </pre>
+       *
        * <code>int64 memory = 1 [(.yandex.cloud.value) = "&gt;=1"];</code>
        * @param value The memory to set.
        * @return This builder for chaining.
@@ -3760,6 +4223,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The amount of memory available to the desktop, specified in bytes.
+       * </pre>
+       *
        * <code>int64 memory = 1 [(.yandex.cloud.value) = "&gt;=1"];</code>
        * @return This builder for chaining.
        */
@@ -3772,6 +4239,10 @@ public final class DesktopOuterClass {
 
       private long cores_ ;
       /**
+       * <pre>
+       * The number of cores available to the desktop.
+       * </pre>
+       *
        * <code>int64 cores = 2 [(.yandex.cloud.value) = "&gt;=1"];</code>
        * @return The cores.
        */
@@ -3780,6 +4251,10 @@ public final class DesktopOuterClass {
         return cores_;
       }
       /**
+       * <pre>
+       * The number of cores available to the desktop.
+       * </pre>
+       *
        * <code>int64 cores = 2 [(.yandex.cloud.value) = "&gt;=1"];</code>
        * @param value The cores to set.
        * @return This builder for chaining.
@@ -3791,6 +4266,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The number of cores available to the desktop.
+       * </pre>
+       *
        * <code>int64 cores = 2 [(.yandex.cloud.value) = "&gt;=1"];</code>
        * @return This builder for chaining.
        */
@@ -3803,6 +4282,12 @@ public final class DesktopOuterClass {
 
       private long coreFraction_ ;
       /**
+       * <pre>
+       * Baseline level of CPU performance with the ability to burst performance above that baseline level.
+       * This field sets baseline performance for each core.
+       * For example, if you need only 5% of the CPU performance, you can set core_fraction=5.
+       * </pre>
+       *
        * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0-100"];</code>
        * @return The coreFraction.
        */
@@ -3811,6 +4296,12 @@ public final class DesktopOuterClass {
         return coreFraction_;
       }
       /**
+       * <pre>
+       * Baseline level of CPU performance with the ability to burst performance above that baseline level.
+       * This field sets baseline performance for each core.
+       * For example, if you need only 5% of the CPU performance, you can set core_fraction=5.
+       * </pre>
+       *
        * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0-100"];</code>
        * @param value The coreFraction to set.
        * @return This builder for chaining.
@@ -3822,6 +4313,12 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Baseline level of CPU performance with the ability to burst performance above that baseline level.
+       * This field sets baseline performance for each core.
+       * For example, if you need only 5% of the CPU performance, you can set core_fraction=5.
+       * </pre>
+       *
        * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0-100"];</code>
        * @return This builder for chaining.
        */
@@ -4679,11 +5176,19 @@ public final class DesktopOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the network.
+     * </pre>
+     *
      * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The networkId.
      */
     java.lang.String getNetworkId();
     /**
+     * <pre>
+     * ID of the network.
+     * </pre>
+     *
      * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for networkId.
      */
@@ -4691,11 +5196,19 @@ public final class DesktopOuterClass {
         getNetworkIdBytes();
 
     /**
+     * <pre>
+     * ID of the subnet.
+     * </pre>
+     *
      * <code>string subnet_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The subnetId.
      */
     java.lang.String getSubnetId();
     /**
+     * <pre>
+     * ID of the subnet.
+     * </pre>
+     *
      * <code>string subnet_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for subnetId.
      */
@@ -4796,6 +5309,10 @@ public final class DesktopOuterClass {
     public static final int NETWORK_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object networkId_;
     /**
+     * <pre>
+     * ID of the network.
+     * </pre>
+     *
      * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The networkId.
      */
@@ -4813,6 +5330,10 @@ public final class DesktopOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the network.
+     * </pre>
+     *
      * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for networkId.
      */
@@ -4834,6 +5355,10 @@ public final class DesktopOuterClass {
     public static final int SUBNET_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object subnetId_;
     /**
+     * <pre>
+     * ID of the subnet.
+     * </pre>
+     *
      * <code>string subnet_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The subnetId.
      */
@@ -4851,6 +5376,10 @@ public final class DesktopOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the subnet.
+     * </pre>
+     *
      * <code>string subnet_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for subnetId.
      */
@@ -5190,6 +5719,10 @@ public final class DesktopOuterClass {
 
       private java.lang.Object networkId_ = "";
       /**
+       * <pre>
+       * ID of the network.
+       * </pre>
+       *
        * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The networkId.
        */
@@ -5206,6 +5739,10 @@ public final class DesktopOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the network.
+       * </pre>
+       *
        * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for networkId.
        */
@@ -5223,6 +5760,10 @@ public final class DesktopOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the network.
+       * </pre>
+       *
        * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The networkId to set.
        * @return This builder for chaining.
@@ -5238,6 +5779,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the network.
+       * </pre>
+       *
        * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -5248,6 +5793,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the network.
+       * </pre>
+       *
        * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for networkId to set.
        * @return This builder for chaining.
@@ -5266,6 +5815,10 @@ public final class DesktopOuterClass {
 
       private java.lang.Object subnetId_ = "";
       /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
        * <code>string subnet_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The subnetId.
        */
@@ -5282,6 +5835,10 @@ public final class DesktopOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
        * <code>string subnet_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for subnetId.
        */
@@ -5299,6 +5856,10 @@ public final class DesktopOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
        * <code>string subnet_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The subnetId to set.
        * @return This builder for chaining.
@@ -5314,6 +5875,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
        * <code>string subnet_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -5324,6 +5889,10 @@ public final class DesktopOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
        * <code>string subnet_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for subnetId to set.
        * @return This builder for chaining.
@@ -5429,7 +5998,7 @@ public final class DesktopOuterClass {
       "\n*yandex/cloud/clouddesktop/v1/desktop.p" +
       "roto\022 yandex.cloud.clouddesktop.v1.api\032\037" +
       "google/protobuf/timestamp.proto\032\035yandex/" +
-      "cloud/validation.proto\"\275\005\n\007Desktop\022\n\n\002id" +
+      "cloud/validation.proto\"\344\005\n\007Desktop\022\n\n\002id" +
       "\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022\030\n\020desktop_gro" +
       "up_id\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google" +
       ".protobuf.Timestamp\022@\n\006status\030\005 \001(\01620.ya" +
@@ -5441,22 +6010,23 @@ public final class DesktopOuterClass {
       "ace\0225\n\005users\030\027 \003(\0132&.yandex.cloud.cloudd" +
       "esktop.v1.api.User\022E\n\006labels\030\030 \003(\01325.yan" +
       "dex.cloud.clouddesktop.v1.api.Desktop.La" +
-      "belsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001\"\257\001\n\006Status\022\026\n\022STATUS_UN" +
-      "SPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n" +
-      "\010DELETING\020\003\022\016\n\nRESTARTING\020\004\022\014\n\010UPDATING\020" +
-      "\005\022\014\n\010STARTING\020\006\022\014\n\010STOPPING\020\007\022\013\n\007STOPPED" +
-      "\020\010\022\t\n\005ERROR\020\t\022\023\n\017CREATION_FAILED\020\nJ\004\010\014\020\025" +
-      "J\004\010\006\020\013\"^\n\tResources\022\027\n\006memory\030\001 \001(\003B\007\372\3071" +
-      "\003>=1\022\026\n\005cores\030\002 \001(\003B\007\372\3071\003>=1\022 \n\rcore_fra" +
-      "ction\030\003 \001(\003B\t\372\3071\0050-100\"N\n\004User\022!\n\nsubjec" +
-      "t_id\030\001 \001(\tB\r\350\3071\001\212\3101\005<=100\022#\n\014subject_typ" +
-      "e\030\002 \001(\tB\r\350\3071\001\212\3101\005<=100\"U\n\020NetworkInterfa" +
-      "ce\022 \n\nnetwork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\037\n\t" +
-      "subnet_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50Bq\n yandex." +
-      "cloud.api.clouddesktop.v1ZMgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/clou" +
-      "ddesktop/v1;clouddesktopb\006proto3"
+      "belsEntry\022\023\n\013description\030\031 \001(\t\032-\n\013Labels" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\301\001" +
+      "\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREA" +
+      "TING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020\003\022\016\n\nREST" +
+      "ARTING\020\004\022\014\n\010UPDATING\020\005\022\014\n\010STARTING\020\006\022\014\n\010" +
+      "STOPPING\020\007\022\013\n\007STOPPED\020\010\022\t\n\005ERROR\020\t\022\023\n\017CR" +
+      "EATION_FAILED\020\n\022\020\n\014HEALTH_CHECK\020\013J\004\010\014\020\025J" +
+      "\004\010\006\020\013\"^\n\tResources\022\027\n\006memory\030\001 \001(\003B\007\372\3071\003" +
+      ">=1\022\026\n\005cores\030\002 \001(\003B\007\372\3071\003>=1\022 \n\rcore_frac" +
+      "tion\030\003 \001(\003B\t\372\3071\0050-100\"N\n\004User\022!\n\nsubject" +
+      "_id\030\001 \001(\tB\r\350\3071\001\212\3101\005<=100\022#\n\014subject_type" +
+      "\030\002 \001(\tB\r\350\3071\001\212\3101\005<=100\"U\n\020NetworkInterfac" +
+      "e\022 \n\nnetwork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\037\n\ts" +
+      "ubnet_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50Bq\n yandex.c" +
+      "loud.api.clouddesktop.v1ZMgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/cloud" +
+      "desktop/v1;clouddesktopb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5469,7 +6039,7 @@ public final class DesktopOuterClass {
     internal_static_yandex_cloud_clouddesktop_v1_api_Desktop_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_clouddesktop_v1_api_Desktop_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "DesktopGroupId", "CreatedAt", "Status", "Name", "Resources", "NetworkInterfaces", "Users", "Labels", });
+        new java.lang.String[] { "Id", "FolderId", "DesktopGroupId", "CreatedAt", "Status", "Name", "Resources", "NetworkInterfaces", "Users", "Labels", "Description", });
     internal_static_yandex_cloud_clouddesktop_v1_api_Desktop_LabelsEntry_descriptor =
       internal_static_yandex_cloud_clouddesktop_v1_api_Desktop_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_clouddesktop_v1_api_Desktop_LabelsEntry_fieldAccessorTable = new

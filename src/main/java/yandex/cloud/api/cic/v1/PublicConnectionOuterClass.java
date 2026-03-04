@@ -64,7 +64,7 @@ public final class PublicConnectionOuterClass {
 
     /**
      * <pre>
-     * Optional description of the publicConnection. 0-256 characters long.
+     * Description of the publicConnection. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -73,7 +73,7 @@ public final class PublicConnectionOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Optional description of the publicConnection. 0-256 characters long.
+     * Description of the publicConnection. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -1090,7 +1090,7 @@ public final class PublicConnectionOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Optional description of the publicConnection. 0-256 characters long.
+     * Description of the publicConnection. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -1111,7 +1111,7 @@ public final class PublicConnectionOuterClass {
     }
     /**
      * <pre>
-     * Optional description of the publicConnection. 0-256 characters long.
+     * Description of the publicConnection. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -2496,7 +2496,7 @@ public final class PublicConnectionOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Optional description of the publicConnection. 0-256 characters long.
+       * Description of the publicConnection. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -2516,7 +2516,7 @@ public final class PublicConnectionOuterClass {
       }
       /**
        * <pre>
-       * Optional description of the publicConnection. 0-256 characters long.
+       * Description of the publicConnection. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -2537,7 +2537,7 @@ public final class PublicConnectionOuterClass {
       }
       /**
        * <pre>
-       * Optional description of the publicConnection. 0-256 characters long.
+       * Description of the publicConnection. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -2556,7 +2556,7 @@ public final class PublicConnectionOuterClass {
       }
       /**
        * <pre>
-       * Optional description of the publicConnection. 0-256 characters long.
+       * Description of the publicConnection. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -2570,7 +2570,7 @@ public final class PublicConnectionOuterClass {
       }
       /**
        * <pre>
-       * Optional description of the publicConnection. 0-256 characters long.
+       * Description of the publicConnection. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>

@@ -14866,103 +14866,124 @@ public final class ClusterServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n+yandex/cloud/spark/v1/cluster_service." +
-      "proto\022\025yandex.cloud.spark.v1\032 google/pro" +
-      "tobuf/field_mask.proto\032#yandex/cloud/spa" +
-      "rk/v1/cluster.proto\032\'yandex/cloud/spark/" +
-      "v1/maintenance.proto\032&yandex/cloud/opera" +
-      "tion/operation.proto\032\035yandex/cloud/valid" +
-      "ation.proto\032 yandex/cloud/api/operation." +
-      "proto\"5\n\021GetClusterRequest\022 \n\ncluster_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\220\001\n\023ListClustersReq" +
-      "uest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n" +
-      "\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
-      "en\030\003 \001(\tB\t\212\3101\005<=200\022\032\n\006filter\030\004 \001(\tB\n\212\3101" +
-      "\006<=1000\"l\n\024ListClustersResponse\0220\n\010clust" +
-      "ers\030\001 \003(\0132\036.yandex.cloud.spark.v1.Cluste" +
-      "r\022\"\n\017next_page_token\030\002 \001(\tB\t\212\3101\005<=200\"\214\005" +
-      "\n\024CreateClusterRequest\022\037\n\tfolder_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\022<\n\004name\030\002 \001(\tB.\350\3071\001\212\3101\004<" +
-      "=63\362\3071\036^[a-z][-a-z0-9]{1,61}[a-z0-9]$\022\036\n" +
-      "\013description\030\003 \001(\tB\t\212\3101\005<=256\022\210\001\n\006labels" +
-      "\030\004 \003(\01327.yandex.cloud.spark.v1.CreateClu" +
-      "sterRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=6" +
-      "3\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_" +
-      "0-9a-z]*\022:\n\006config\030\005 \001(\0132$.yandex.cloud." +
-      "spark.v1.ClusterConfigB\004\350\3071\001\022;\n\007network\030" +
-      "\006 \001(\0132$.yandex.cloud.spark.v1.NetworkCon" +
-      "figB\004\350\3071\001\022\033\n\023deletion_protection\030\007 \001(\010\022(" +
-      "\n\022service_account_id\030\010 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\0225\n\007logging\030\t \001(\0132$.yandex.cloud.spark.v" +
-      "1.LoggingConfig\022D\n\022maintenance_window\030\n " +
-      "\001(\0132(.yandex.cloud.spark.v1.MaintenanceW" +
-      "indow\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\"1\n\025CreateClusterMetadata\022\030\n" +
-      "\ncluster_id\030\001 \001(\tB\004\350\3071\001\"\277\005\n\024UpdateCluste" +
-      "rRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022/\n\013update_mask\030\002 \001(\0132\032.google.protobu" +
-      "f.FieldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a" +
-      "-z0-9]{1,61}[a-z0-9]\022\036\n\013description\030\004 \001(" +
-      "\tB\t\212\3101\005<=256\022\210\001\n\006labels\030\005 \003(\01327.yandex.c" +
-      "loud.spark.v1.UpdateClusterRequest.Label" +
-      "sEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262" +
-      "\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022C\n\013confi" +
-      "g_spec\030\006 \001(\0132..yandex.cloud.spark.v1.Upd" +
-      "ateClusterConfigSpec\022D\n\014network_spec\030\007 \001" +
-      "(\0132..yandex.cloud.spark.v1.UpdateNetwork" +
-      "ConfigSpec\022\033\n\023deletion_protection\030\010 \001(\010\022" +
-      "$\n\022service_account_id\030\t \001(\tB\010\212\3101\004<=50\0225\n" +
-      "\007logging\030\n \001(\0132$.yandex.cloud.spark.v1.L" +
-      "oggingConfig\022D\n\022maintenance_window\030\013 \001(\013" +
-      "2(.yandex.cloud.spark.v1.MaintenanceWind" +
-      "ow\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\"9\n\025UpdateClusterMetadata\022 \n\ncl" +
-      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"8\n\024DeleteCl" +
-      "usterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\"1\n\025DeleteClusterMetadata\022\030\n\nclust" +
-      "er_id\030\001 \001(\tB\004\350\3071\001\"7\n\023StartClusterRequest" +
-      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024St" +
-      "artClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6" +
-      "\n\022StopClusterRequest\022 \n\ncluster_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\")\n\023StopClusterMetadata\022\022\n" +
-      "\ncluster_id\030\001 \001(\t\"~\n\034ListClusterOperatio" +
-      "nsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npa" +
-      "ge_token\030\003 \001(\tB\t\212\3101\005<=200\"z\n\035ListCluster" +
-      "OperationsResponse\0225\n\noperations\030\001 \003(\0132!" +
-      ".yandex.cloud.operation.Operation\022\"\n\017nex" +
-      "t_page_token\030\002 \001(\tB\t\212\3101\005<=2002\313\007\n\016Cluste" +
-      "rService\022Q\n\003Get\022(.yandex.cloud.spark.v1." +
-      "GetClusterRequest\032\036.yandex.cloud.spark.v" +
-      "1.Cluster\"\000\022a\n\004List\022*.yandex.cloud.spark" +
-      ".v1.ListClustersRequest\032+.yandex.cloud.s" +
-      "park.v1.ListClustersResponse\"\000\022~\n\006Create" +
-      "\022+.yandex.cloud.spark.v1.CreateClusterRe" +
+      "proto\022\025yandex.cloud.spark.v1\032\034google/api" +
+      "/annotations.proto\032 google/protobuf/fiel" +
+      "d_mask.proto\032 yandex/cloud/access/access" +
+      ".proto\032#yandex/cloud/spark/v1/cluster.pr" +
+      "oto\032\'yandex/cloud/spark/v1/maintenance.p" +
+      "roto\032&yandex/cloud/operation/operation.p" +
+      "roto\032\035yandex/cloud/validation.proto\032 yan" +
+      "dex/cloud/api/operation.proto\"5\n\021GetClus" +
+      "terRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\"\220\001\n\023ListClustersRequest\022\037\n\tfolder_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003" +
+      "B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=" +
+      "200\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"l\n\024ListC" +
+      "lustersResponse\0220\n\010clusters\030\001 \003(\0132\036.yand" +
+      "ex.cloud.spark.v1.Cluster\022\"\n\017next_page_t" +
+      "oken\030\002 \001(\tB\t\212\3101\005<=200\"\214\005\n\024CreateClusterR" +
+      "equest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "<\n\004name\030\002 \001(\tB.\350\3071\001\212\3101\004<=63\362\3071\036^[a-z][-a" +
+      "-z0-9]{1,61}[a-z0-9]$\022\036\n\013description\030\003 \001" +
+      "(\tB\t\212\3101\005<=256\022\210\001\n\006labels\030\004 \003(\01327.yandex." +
+      "cloud.spark.v1.CreateClusterRequest.Labe" +
+      "lsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*" +
+      "\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022:\n\006conf" +
+      "ig\030\005 \001(\0132$.yandex.cloud.spark.v1.Cluster" +
+      "ConfigB\004\350\3071\001\022;\n\007network\030\006 \001(\0132$.yandex.c" +
+      "loud.spark.v1.NetworkConfigB\004\350\3071\001\022\033\n\023del" +
+      "etion_protection\030\007 \001(\010\022(\n\022service_accoun" +
+      "t_id\030\010 \001(\tB\014\350\3071\001\212\3101\004<=50\0225\n\007logging\030\t \001(" +
+      "\0132$.yandex.cloud.spark.v1.LoggingConfig\022" +
+      "D\n\022maintenance_window\030\n \001(\0132(.yandex.clo" +
+      "ud.spark.v1.MaintenanceWindow\032-\n\013LabelsE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"1\n\025" +
+      "CreateClusterMetadata\022\030\n\ncluster_id\030\001 \001(" +
+      "\tB\004\350\3071\001\"\277\005\n\024UpdateClusterRequest\022 \n\nclus" +
+      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mas" +
+      "k\030\002 \001(\0132\032.google.protobuf.FieldMask\022/\n\004n" +
+      "ame\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z" +
+      "0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\210\001\n" +
+      "\006labels\030\005 \003(\01327.yandex.cloud.spark.v1.Up" +
+      "dateClusterRequest.LabelsEntryB?\202\3101\004<=64" +
+      "\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[" +
+      "a-z][-_0-9a-z]*\022C\n\013config_spec\030\006 \001(\0132..y" +
+      "andex.cloud.spark.v1.UpdateClusterConfig" +
+      "Spec\022D\n\014network_spec\030\007 \001(\0132..yandex.clou" +
+      "d.spark.v1.UpdateNetworkConfigSpec\022\033\n\023de" +
+      "letion_protection\030\010 \001(\010\022$\n\022service_accou" +
+      "nt_id\030\t \001(\tB\010\212\3101\004<=50\0225\n\007logging\030\n \001(\0132$" +
+      ".yandex.cloud.spark.v1.LoggingConfig\022D\n\022" +
+      "maintenance_window\030\013 \001(\0132(.yandex.cloud." +
+      "spark.v1.MaintenanceWindow\032-\n\013LabelsEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"9\n\025Upd" +
+      "ateClusterMetadata\022 \n\ncluster_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\"8\n\024DeleteClusterRequest\022 \n\n" +
+      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"1\n\025Delete" +
+      "ClusterMetadata\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071" +
+      "\001\"7\n\023StartClusterRequest\022 \n\ncluster_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterMetada" +
+      "ta\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopClusterReq" +
+      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")" +
+      "\n\023StopClusterMetadata\022\022\n\ncluster_id\030\001 \001(" +
+      "\t\"~\n\034ListClusterOperationsRequest\022 \n\nclu" +
+      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size" +
+      "\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t" +
+      "\212\3101\005<=200\"z\n\035ListClusterOperationsRespon" +
+      "se\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.op" +
+      "eration.Operation\022\"\n\017next_page_token\030\002 \001" +
+      "(\tB\t\212\3101\005<=2002\214\r\n\016ClusterService\022Q\n\003Get\022" +
+      "(.yandex.cloud.spark.v1.GetClusterReques" +
+      "t\032\036.yandex.cloud.spark.v1.Cluster\"\000\022a\n\004L" +
+      "ist\022*.yandex.cloud.spark.v1.ListClusters" +
+      "Request\032+.yandex.cloud.spark.v1.ListClus" +
+      "tersResponse\"\000\022~\n\006Create\022+.yandex.cloud." +
+      "spark.v1.CreateClusterRequest\032!.yandex.c" +
+      "loud.operation.Operation\"$\262\322* \n\025CreateCl" +
+      "usterMetadata\022\007Cluster\022~\n\006Update\022+.yande" +
+      "x.cloud.spark.v1.UpdateClusterRequest\032!." +
+      "yandex.cloud.operation.Operation\"$\262\322* \n\025" +
+      "UpdateClusterMetadata\022\007Cluster\022\214\001\n\006Delet" +
+      "e\022+.yandex.cloud.spark.v1.DeleteClusterR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"2\262\322*.\n\025DeleteClusterMetadata\022\025google.p" +
+      "rotobuf.Empty\022{\n\005Start\022*.yandex.cloud.sp" +
+      "ark.v1.StartClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"#\262\322*\037\n\024StartCluste" +
+      "rMetadata\022\007Cluster\022x\n\004Stop\022).yandex.clou" +
+      "d.spark.v1.StopClusterRequest\032!.yandex.c" +
+      "loud.operation.Operation\"\"\262\322*\036\n\023StopClus" +
+      "terMetadata\022\007Cluster\022}\n\016ListOperations\0223" +
+      ".yandex.cloud.spark.v1.ListClusterOperat" +
+      "ionsRequest\0324.yandex.cloud.spark.v1.List" +
+      "ClusterOperationsResponse\"\000\022\272\001\n\022ListAcce" +
+      "ssBindings\022..yandex.cloud.access.ListAcc" +
+      "essBindingsRequest\032/.yandex.cloud.access" +
+      ".ListAccessBindingsResponse\"C\202\323\344\223\002=\022;/ma" +
+      "naged-spark/v1/clusters/{resource_id}:li" +
+      "stAccessBindings\022\371\001\n\021SetAccessBindings\022-" +
+      ".yandex.cloud.access.SetAccessBindingsRe" +
       "quest\032!.yandex.cloud.operation.Operation" +
-      "\"$\262\322* \n\025CreateClusterMetadata\022\007Cluster\022~" +
-      "\n\006Update\022+.yandex.cloud.spark.v1.UpdateC" +
-      "lusterRequest\032!.yandex.cloud.operation.O" +
-      "peration\"$\262\322* \n\025UpdateClusterMetadata\022\007C" +
-      "luster\022\214\001\n\006Delete\022+.yandex.cloud.spark.v" +
-      "1.DeleteClusterRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"2\262\322*.\n\025DeleteClusterMe" +
-      "tadata\022\025google.protobuf.Empty\022{\n\005Start\022*" +
-      ".yandex.cloud.spark.v1.StartClusterReque" +
-      "st\032!.yandex.cloud.operation.Operation\"#\262" +
-      "\322*\037\n\024StartClusterMetadata\022\007Cluster\022x\n\004St" +
-      "op\022).yandex.cloud.spark.v1.StopClusterRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"\"\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022}\n\016" +
-      "ListOperations\0223.yandex.cloud.spark.v1.L" +
-      "istClusterOperationsRequest\0324.yandex.clo" +
-      "ud.spark.v1.ListClusterOperationsRespons" +
-      "e\"\000B\\\n\031yandex.cloud.api.spark.v1Z?github" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/spark/v1;sparkb\006proto3"
+      "\"\221\001\202\323\344\223\002?\":/managed-spark/v1/clusters/{r" +
+      "esource_id}:setAccessBindings:\001*\262\322*H\n ac" +
+      "cess.SetAccessBindingsMetadata\022$access.A" +
+      "ccessBindingsOperationResult\022\205\002\n\024UpdateA" +
+      "ccessBindings\0220.yandex.cloud.access.Upda" +
+      "teAccessBindingsRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"\227\001\202\323\344\223\002B2=/managed-sp" +
+      "ark/v1/clusters/{resource_id}:updateAcce" +
+      "ssBindings:\001*\262\322*K\n#access.UpdateAccessBi" +
+      "ndingsMetadata\022$access.AccessBindingsOpe" +
+      "rationResultB\\\n\031yandex.cloud.api.spark.v" +
+      "1Z?github.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/spark/v1;sparkb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.spark.v1.ClusterOuterClass.getDescriptor(),
           yandex.cloud.api.spark.v1.Maintenance.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
@@ -15073,6 +15094,7 @@ public final class ClusterServiceOuterClass {
         new java.lang.String[] { "Operations", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.mapKey);
@@ -15082,7 +15104,9 @@ public final class ClusterServiceOuterClass {
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.spark.v1.ClusterOuterClass.getDescriptor();
     yandex.cloud.api.spark.v1.Maintenance.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();

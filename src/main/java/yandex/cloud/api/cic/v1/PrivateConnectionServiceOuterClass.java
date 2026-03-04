@@ -2910,7 +2910,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -2921,7 +2921,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -2932,7 +2932,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Optional description of the privateConnection. 0-256 characters long.
      * </pre>
      *
-     * <code>string description = 2;</code>
+     * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
@@ -2941,7 +2941,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Optional description of the privateConnection. 0-256 characters long.
      * </pre>
      *
-     * <code>string description = 2;</code>
+     * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
     com.google.protobuf.ByteString
@@ -2952,7 +2952,7 @@ public final class PrivateConnectionServiceOuterClass {
      * ID of the folder that the privateConnection belongs to.
      * </pre>
      *
-     * <code>string folder_id = 4;</code>
+     * <code>string folder_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
@@ -2961,7 +2961,7 @@ public final class PrivateConnectionServiceOuterClass {
      * ID of the folder that the privateConnection belongs to.
      * </pre>
      *
-     * <code>string folder_id = 4;</code>
+     * <code>string folder_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
@@ -2972,19 +2972,21 @@ public final class PrivateConnectionServiceOuterClass {
      * ID of the region that the privateConnection belongs to.
      * </pre>
      *
-     * <code>string region_id = 5;</code>
+     * <code>string region_id = 5 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @deprecated
      * @return The regionId.
      */
-    java.lang.String getRegionId();
+    @java.lang.Deprecated java.lang.String getRegionId();
     /**
      * <pre>
      * ID of the region that the privateConnection belongs to.
      * </pre>
      *
-     * <code>string region_id = 5;</code>
+     * <code>string region_id = 5 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @deprecated
      * @return The bytes for regionId.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getRegionIdBytes();
 
     /**
@@ -2992,7 +2994,7 @@ public final class PrivateConnectionServiceOuterClass {
      * ID of the trunk_connection that the privateConnection belongs to.
      * </pre>
      *
-     * <code>string trunk_connection_id = 6;</code>
+     * <code>string trunk_connection_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The trunkConnectionId.
      */
     java.lang.String getTrunkConnectionId();
@@ -3001,7 +3003,7 @@ public final class PrivateConnectionServiceOuterClass {
      * ID of the trunk_connection that the privateConnection belongs to.
      * </pre>
      *
-     * <code>string trunk_connection_id = 6;</code>
+     * <code>string trunk_connection_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for trunkConnectionId.
      */
     com.google.protobuf.ByteString
@@ -3014,7 +3016,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Value range: [1, 4095]
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+     * <code>.google.protobuf.Int64Value vlan_id = 7 [(.yandex.cloud.value) = "1-4095"];</code>
      * @return Whether the vlanId field is set.
      */
     boolean hasVlanId();
@@ -3025,7 +3027,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Value range: [1, 4095]
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+     * <code>.google.protobuf.Int64Value vlan_id = 7 [(.yandex.cloud.value) = "1-4095"];</code>
      * @return The vlanId.
      */
     com.google.protobuf.Int64Value getVlanId();
@@ -3036,7 +3038,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Value range: [1, 4095]
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+     * <code>.google.protobuf.Int64Value vlan_id = 7 [(.yandex.cloud.value) = "1-4095"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getVlanIdOrBuilder();
 
@@ -3376,7 +3378,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -3399,7 +3401,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -3424,7 +3426,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Optional description of the privateConnection. 0-256 characters long.
      * </pre>
      *
-     * <code>string description = 2;</code>
+     * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     @java.lang.Override
@@ -3445,7 +3447,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Optional description of the privateConnection. 0-256 characters long.
      * </pre>
      *
-     * <code>string description = 2;</code>
+     * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
     @java.lang.Override
@@ -3470,7 +3472,7 @@ public final class PrivateConnectionServiceOuterClass {
      * ID of the folder that the privateConnection belongs to.
      * </pre>
      *
-     * <code>string folder_id = 4;</code>
+     * <code>string folder_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     @java.lang.Override
@@ -3491,7 +3493,7 @@ public final class PrivateConnectionServiceOuterClass {
      * ID of the folder that the privateConnection belongs to.
      * </pre>
      *
-     * <code>string folder_id = 4;</code>
+     * <code>string folder_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
     @java.lang.Override
@@ -3516,11 +3518,12 @@ public final class PrivateConnectionServiceOuterClass {
      * ID of the region that the privateConnection belongs to.
      * </pre>
      *
-     * <code>string region_id = 5;</code>
+     * <code>string region_id = 5 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @deprecated
      * @return The regionId.
      */
     @java.lang.Override
-    public java.lang.String getRegionId() {
+    @java.lang.Deprecated public java.lang.String getRegionId() {
       java.lang.Object ref = regionId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -3537,11 +3540,12 @@ public final class PrivateConnectionServiceOuterClass {
      * ID of the region that the privateConnection belongs to.
      * </pre>
      *
-     * <code>string region_id = 5;</code>
+     * <code>string region_id = 5 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @deprecated
      * @return The bytes for regionId.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getRegionIdBytes() {
       java.lang.Object ref = regionId_;
       if (ref instanceof java.lang.String) {
@@ -3562,7 +3566,7 @@ public final class PrivateConnectionServiceOuterClass {
      * ID of the trunk_connection that the privateConnection belongs to.
      * </pre>
      *
-     * <code>string trunk_connection_id = 6;</code>
+     * <code>string trunk_connection_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The trunkConnectionId.
      */
     @java.lang.Override
@@ -3583,7 +3587,7 @@ public final class PrivateConnectionServiceOuterClass {
      * ID of the trunk_connection that the privateConnection belongs to.
      * </pre>
      *
-     * <code>string trunk_connection_id = 6;</code>
+     * <code>string trunk_connection_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for trunkConnectionId.
      */
     @java.lang.Override
@@ -3610,7 +3614,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Value range: [1, 4095]
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+     * <code>.google.protobuf.Int64Value vlan_id = 7 [(.yandex.cloud.value) = "1-4095"];</code>
      * @return Whether the vlanId field is set.
      */
     @java.lang.Override
@@ -3624,7 +3628,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Value range: [1, 4095]
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+     * <code>.google.protobuf.Int64Value vlan_id = 7 [(.yandex.cloud.value) = "1-4095"];</code>
      * @return The vlanId.
      */
     @java.lang.Override
@@ -3638,7 +3642,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Value range: [1, 4095]
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+     * <code>.google.protobuf.Int64Value vlan_id = 7 [(.yandex.cloud.value) = "1-4095"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getVlanIdOrBuilder() {
@@ -4404,7 +4408,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -4426,7 +4430,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -4449,7 +4453,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -4470,7 +4474,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -4486,7 +4490,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -4508,7 +4512,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Optional description of the privateConnection. 0-256 characters long.
        * </pre>
        *
-       * <code>string description = 2;</code>
+       * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The description.
        */
       public java.lang.String getDescription() {
@@ -4528,7 +4532,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Optional description of the privateConnection. 0-256 characters long.
        * </pre>
        *
-       * <code>string description = 2;</code>
+       * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
@@ -4549,7 +4553,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Optional description of the privateConnection. 0-256 characters long.
        * </pre>
        *
-       * <code>string description = 2;</code>
+       * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
        */
@@ -4568,7 +4572,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Optional description of the privateConnection. 0-256 characters long.
        * </pre>
        *
-       * <code>string description = 2;</code>
+       * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
@@ -4582,7 +4586,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Optional description of the privateConnection. 0-256 characters long.
        * </pre>
        *
-       * <code>string description = 2;</code>
+       * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
@@ -4604,7 +4608,7 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the folder that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string folder_id = 4;</code>
+       * <code>string folder_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The folderId.
        */
       public java.lang.String getFolderId() {
@@ -4624,7 +4628,7 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the folder that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string folder_id = 4;</code>
+       * <code>string folder_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
@@ -4645,7 +4649,7 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the folder that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string folder_id = 4;</code>
+       * <code>string folder_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
        */
@@ -4664,7 +4668,7 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the folder that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string folder_id = 4;</code>
+       * <code>string folder_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFolderId() {
@@ -4678,7 +4682,7 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the folder that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string folder_id = 4;</code>
+       * <code>string folder_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
        */
@@ -4700,10 +4704,11 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the region that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string region_id = 5;</code>
+       * <code>string region_id = 5 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @deprecated
        * @return The regionId.
        */
-      public java.lang.String getRegionId() {
+      @java.lang.Deprecated public java.lang.String getRegionId() {
         java.lang.Object ref = regionId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -4720,10 +4725,11 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the region that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string region_id = 5;</code>
+       * <code>string region_id = 5 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @deprecated
        * @return The bytes for regionId.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getRegionIdBytes() {
         java.lang.Object ref = regionId_;
         if (ref instanceof String) {
@@ -4741,11 +4747,12 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the region that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string region_id = 5;</code>
+       * <code>string region_id = 5 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @deprecated
        * @param value The regionId to set.
        * @return This builder for chaining.
        */
-      public Builder setRegionId(
+      @java.lang.Deprecated public Builder setRegionId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -4760,10 +4767,11 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the region that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string region_id = 5;</code>
+       * <code>string region_id = 5 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearRegionId() {
+      @java.lang.Deprecated public Builder clearRegionId() {
         
         regionId_ = getDefaultInstance().getRegionId();
         onChanged();
@@ -4774,11 +4782,12 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the region that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string region_id = 5;</code>
+       * <code>string region_id = 5 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @deprecated
        * @param value The bytes for regionId to set.
        * @return This builder for chaining.
        */
-      public Builder setRegionIdBytes(
+      @java.lang.Deprecated public Builder setRegionIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -4796,7 +4805,7 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the trunk_connection that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string trunk_connection_id = 6;</code>
+       * <code>string trunk_connection_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The trunkConnectionId.
        */
       public java.lang.String getTrunkConnectionId() {
@@ -4816,7 +4825,7 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the trunk_connection that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string trunk_connection_id = 6;</code>
+       * <code>string trunk_connection_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for trunkConnectionId.
        */
       public com.google.protobuf.ByteString
@@ -4837,7 +4846,7 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the trunk_connection that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string trunk_connection_id = 6;</code>
+       * <code>string trunk_connection_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The trunkConnectionId to set.
        * @return This builder for chaining.
        */
@@ -4856,7 +4865,7 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the trunk_connection that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string trunk_connection_id = 6;</code>
+       * <code>string trunk_connection_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTrunkConnectionId() {
@@ -4870,7 +4879,7 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the trunk_connection that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string trunk_connection_id = 6;</code>
+       * <code>string trunk_connection_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for trunkConnectionId to set.
        * @return This builder for chaining.
        */
@@ -4896,7 +4905,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value range: [1, 4095]
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+       * <code>.google.protobuf.Int64Value vlan_id = 7 [(.yandex.cloud.value) = "1-4095"];</code>
        * @return Whether the vlanId field is set.
        */
       public boolean hasVlanId() {
@@ -4909,7 +4918,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value range: [1, 4095]
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+       * <code>.google.protobuf.Int64Value vlan_id = 7 [(.yandex.cloud.value) = "1-4095"];</code>
        * @return The vlanId.
        */
       public com.google.protobuf.Int64Value getVlanId() {
@@ -4926,7 +4935,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value range: [1, 4095]
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+       * <code>.google.protobuf.Int64Value vlan_id = 7 [(.yandex.cloud.value) = "1-4095"];</code>
        */
       public Builder setVlanId(com.google.protobuf.Int64Value value) {
         if (vlanIdBuilder_ == null) {
@@ -4948,7 +4957,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value range: [1, 4095]
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+       * <code>.google.protobuf.Int64Value vlan_id = 7 [(.yandex.cloud.value) = "1-4095"];</code>
        */
       public Builder setVlanId(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -4968,7 +4977,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value range: [1, 4095]
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+       * <code>.google.protobuf.Int64Value vlan_id = 7 [(.yandex.cloud.value) = "1-4095"];</code>
        */
       public Builder mergeVlanId(com.google.protobuf.Int64Value value) {
         if (vlanIdBuilder_ == null) {
@@ -4992,7 +5001,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value range: [1, 4095]
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+       * <code>.google.protobuf.Int64Value vlan_id = 7 [(.yandex.cloud.value) = "1-4095"];</code>
        */
       public Builder clearVlanId() {
         if (vlanIdBuilder_ == null) {
@@ -5012,7 +5021,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value range: [1, 4095]
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+       * <code>.google.protobuf.Int64Value vlan_id = 7 [(.yandex.cloud.value) = "1-4095"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getVlanIdBuilder() {
         
@@ -5026,7 +5035,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value range: [1, 4095]
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+       * <code>.google.protobuf.Int64Value vlan_id = 7 [(.yandex.cloud.value) = "1-4095"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getVlanIdOrBuilder() {
         if (vlanIdBuilder_ != null) {
@@ -5043,7 +5052,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value range: [1, 4095]
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vlan_id = 7;</code>
+       * <code>.google.protobuf.Int64Value vlan_id = 7 [(.yandex.cloud.value) = "1-4095"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -6434,7 +6443,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
-     * <code>string name = 3;</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -6445,7 +6454,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
-     * <code>string name = 3;</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -6456,7 +6465,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Optional description of the privateConnection. 0-256 characters long.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
@@ -6465,7 +6474,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Optional description of the privateConnection. 0-256 characters long.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
     com.google.protobuf.ByteString
@@ -6476,19 +6485,21 @@ public final class PrivateConnectionServiceOuterClass {
      * ID of the region that the privateConnection belongs to.
      * </pre>
      *
-     * <code>string region_id = 7;</code>
+     * <code>string region_id = 7 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @deprecated
      * @return The regionId.
      */
-    java.lang.String getRegionId();
+    @java.lang.Deprecated java.lang.String getRegionId();
     /**
      * <pre>
      * ID of the region that the privateConnection belongs to.
      * </pre>
      *
-     * <code>string region_id = 7;</code>
+     * <code>string region_id = 7 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @deprecated
      * @return The bytes for regionId.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getRegionIdBytes();
 
     /**
@@ -6496,7 +6507,7 @@ public final class PrivateConnectionServiceOuterClass {
      * ID of the trunk_connection that the privateConnection belongs to.
      * </pre>
      *
-     * <code>string trunk_connection_id = 8;</code>
+     * <code>string trunk_connection_id = 8 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The trunkConnectionId.
      */
     java.lang.String getTrunkConnectionId();
@@ -6505,7 +6516,7 @@ public final class PrivateConnectionServiceOuterClass {
      * ID of the trunk_connection that the privateConnection belongs to.
      * </pre>
      *
-     * <code>string trunk_connection_id = 8;</code>
+     * <code>string trunk_connection_id = 8 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for trunkConnectionId.
      */
     com.google.protobuf.ByteString
@@ -6518,7 +6529,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Value range: [1, 4095]
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+     * <code>.google.protobuf.Int64Value vlan_id = 9 [(.yandex.cloud.value) = "1-4095"];</code>
      * @return Whether the vlanId field is set.
      */
     boolean hasVlanId();
@@ -6529,7 +6540,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Value range: [1, 4095]
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+     * <code>.google.protobuf.Int64Value vlan_id = 9 [(.yandex.cloud.value) = "1-4095"];</code>
      * @return The vlanId.
      */
     com.google.protobuf.Int64Value getVlanId();
@@ -6540,7 +6551,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Value range: [1, 4095]
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+     * <code>.google.protobuf.Int64Value vlan_id = 9 [(.yandex.cloud.value) = "1-4095"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getVlanIdOrBuilder();
 
@@ -6977,7 +6988,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
-     * <code>string name = 3;</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -7000,7 +7011,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
-     * <code>string name = 3;</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -7025,7 +7036,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Optional description of the privateConnection. 0-256 characters long.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     @java.lang.Override
@@ -7046,7 +7057,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Optional description of the privateConnection. 0-256 characters long.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
     @java.lang.Override
@@ -7071,11 +7082,12 @@ public final class PrivateConnectionServiceOuterClass {
      * ID of the region that the privateConnection belongs to.
      * </pre>
      *
-     * <code>string region_id = 7;</code>
+     * <code>string region_id = 7 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @deprecated
      * @return The regionId.
      */
     @java.lang.Override
-    public java.lang.String getRegionId() {
+    @java.lang.Deprecated public java.lang.String getRegionId() {
       java.lang.Object ref = regionId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -7092,11 +7104,12 @@ public final class PrivateConnectionServiceOuterClass {
      * ID of the region that the privateConnection belongs to.
      * </pre>
      *
-     * <code>string region_id = 7;</code>
+     * <code>string region_id = 7 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @deprecated
      * @return The bytes for regionId.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getRegionIdBytes() {
       java.lang.Object ref = regionId_;
       if (ref instanceof java.lang.String) {
@@ -7117,7 +7130,7 @@ public final class PrivateConnectionServiceOuterClass {
      * ID of the trunk_connection that the privateConnection belongs to.
      * </pre>
      *
-     * <code>string trunk_connection_id = 8;</code>
+     * <code>string trunk_connection_id = 8 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The trunkConnectionId.
      */
     @java.lang.Override
@@ -7138,7 +7151,7 @@ public final class PrivateConnectionServiceOuterClass {
      * ID of the trunk_connection that the privateConnection belongs to.
      * </pre>
      *
-     * <code>string trunk_connection_id = 8;</code>
+     * <code>string trunk_connection_id = 8 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for trunkConnectionId.
      */
     @java.lang.Override
@@ -7165,7 +7178,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Value range: [1, 4095]
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+     * <code>.google.protobuf.Int64Value vlan_id = 9 [(.yandex.cloud.value) = "1-4095"];</code>
      * @return Whether the vlanId field is set.
      */
     @java.lang.Override
@@ -7179,7 +7192,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Value range: [1, 4095]
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+     * <code>.google.protobuf.Int64Value vlan_id = 9 [(.yandex.cloud.value) = "1-4095"];</code>
      * @return The vlanId.
      */
     @java.lang.Override
@@ -7193,7 +7206,7 @@ public final class PrivateConnectionServiceOuterClass {
      * Value range: [1, 4095]
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+     * <code>.google.protobuf.Int64Value vlan_id = 9 [(.yandex.cloud.value) = "1-4095"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getVlanIdOrBuilder() {
@@ -8240,7 +8253,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
-       * <code>string name = 3;</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -8262,7 +8275,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
-       * <code>string name = 3;</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -8285,7 +8298,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
-       * <code>string name = 3;</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -8306,7 +8319,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
-       * <code>string name = 3;</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -8322,7 +8335,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
-       * <code>string name = 3;</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -8344,7 +8357,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Optional description of the privateConnection. 0-256 characters long.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The description.
        */
       public java.lang.String getDescription() {
@@ -8364,7 +8377,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Optional description of the privateConnection. 0-256 characters long.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
@@ -8385,7 +8398,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Optional description of the privateConnection. 0-256 characters long.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
        */
@@ -8404,7 +8417,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Optional description of the privateConnection. 0-256 characters long.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
@@ -8418,7 +8431,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Optional description of the privateConnection. 0-256 characters long.
        * </pre>
        *
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
@@ -8440,10 +8453,11 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the region that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string region_id = 7;</code>
+       * <code>string region_id = 7 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @deprecated
        * @return The regionId.
        */
-      public java.lang.String getRegionId() {
+      @java.lang.Deprecated public java.lang.String getRegionId() {
         java.lang.Object ref = regionId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -8460,10 +8474,11 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the region that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string region_id = 7;</code>
+       * <code>string region_id = 7 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @deprecated
        * @return The bytes for regionId.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getRegionIdBytes() {
         java.lang.Object ref = regionId_;
         if (ref instanceof String) {
@@ -8481,11 +8496,12 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the region that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string region_id = 7;</code>
+       * <code>string region_id = 7 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @deprecated
        * @param value The regionId to set.
        * @return This builder for chaining.
        */
-      public Builder setRegionId(
+      @java.lang.Deprecated public Builder setRegionId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -8500,10 +8516,11 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the region that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string region_id = 7;</code>
+       * <code>string region_id = 7 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearRegionId() {
+      @java.lang.Deprecated public Builder clearRegionId() {
         
         regionId_ = getDefaultInstance().getRegionId();
         onChanged();
@@ -8514,11 +8531,12 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the region that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string region_id = 7;</code>
+       * <code>string region_id = 7 [deprecated = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @deprecated
        * @param value The bytes for regionId to set.
        * @return This builder for chaining.
        */
-      public Builder setRegionIdBytes(
+      @java.lang.Deprecated public Builder setRegionIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -8536,7 +8554,7 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the trunk_connection that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string trunk_connection_id = 8;</code>
+       * <code>string trunk_connection_id = 8 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The trunkConnectionId.
        */
       public java.lang.String getTrunkConnectionId() {
@@ -8556,7 +8574,7 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the trunk_connection that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string trunk_connection_id = 8;</code>
+       * <code>string trunk_connection_id = 8 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for trunkConnectionId.
        */
       public com.google.protobuf.ByteString
@@ -8577,7 +8595,7 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the trunk_connection that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string trunk_connection_id = 8;</code>
+       * <code>string trunk_connection_id = 8 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The trunkConnectionId to set.
        * @return This builder for chaining.
        */
@@ -8596,7 +8614,7 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the trunk_connection that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string trunk_connection_id = 8;</code>
+       * <code>string trunk_connection_id = 8 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTrunkConnectionId() {
@@ -8610,7 +8628,7 @@ public final class PrivateConnectionServiceOuterClass {
        * ID of the trunk_connection that the privateConnection belongs to.
        * </pre>
        *
-       * <code>string trunk_connection_id = 8;</code>
+       * <code>string trunk_connection_id = 8 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for trunkConnectionId to set.
        * @return This builder for chaining.
        */
@@ -8636,7 +8654,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value range: [1, 4095]
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+       * <code>.google.protobuf.Int64Value vlan_id = 9 [(.yandex.cloud.value) = "1-4095"];</code>
        * @return Whether the vlanId field is set.
        */
       public boolean hasVlanId() {
@@ -8649,7 +8667,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value range: [1, 4095]
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+       * <code>.google.protobuf.Int64Value vlan_id = 9 [(.yandex.cloud.value) = "1-4095"];</code>
        * @return The vlanId.
        */
       public com.google.protobuf.Int64Value getVlanId() {
@@ -8666,7 +8684,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value range: [1, 4095]
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+       * <code>.google.protobuf.Int64Value vlan_id = 9 [(.yandex.cloud.value) = "1-4095"];</code>
        */
       public Builder setVlanId(com.google.protobuf.Int64Value value) {
         if (vlanIdBuilder_ == null) {
@@ -8688,7 +8706,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value range: [1, 4095]
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+       * <code>.google.protobuf.Int64Value vlan_id = 9 [(.yandex.cloud.value) = "1-4095"];</code>
        */
       public Builder setVlanId(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -8708,7 +8726,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value range: [1, 4095]
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+       * <code>.google.protobuf.Int64Value vlan_id = 9 [(.yandex.cloud.value) = "1-4095"];</code>
        */
       public Builder mergeVlanId(com.google.protobuf.Int64Value value) {
         if (vlanIdBuilder_ == null) {
@@ -8732,7 +8750,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value range: [1, 4095]
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+       * <code>.google.protobuf.Int64Value vlan_id = 9 [(.yandex.cloud.value) = "1-4095"];</code>
        */
       public Builder clearVlanId() {
         if (vlanIdBuilder_ == null) {
@@ -8752,7 +8770,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value range: [1, 4095]
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+       * <code>.google.protobuf.Int64Value vlan_id = 9 [(.yandex.cloud.value) = "1-4095"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getVlanIdBuilder() {
         
@@ -8766,7 +8784,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value range: [1, 4095]
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+       * <code>.google.protobuf.Int64Value vlan_id = 9 [(.yandex.cloud.value) = "1-4095"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getVlanIdOrBuilder() {
         if (vlanIdBuilder_ != null) {
@@ -8783,7 +8801,7 @@ public final class PrivateConnectionServiceOuterClass {
        * Value range: [1, 4095]
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vlan_id = 9;</code>
+       * <code>.google.protobuf.Int64Value vlan_id = 9 [(.yandex.cloud.value) = "1-4095"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -14714,6 +14732,1418 @@ public final class PrivateConnectionServiceOuterClass {
 
   }
 
+  public interface MovePrivateConnectionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.MovePrivateConnectionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource to move.
+     * To get the privateConnection ID use a [PrivateConnectionService.List] request.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The privateConnectionId.
+     */
+    java.lang.String getPrivateConnectionId();
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource to move.
+     * To get the privateConnection ID use a [PrivateConnectionService.List] request.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for privateConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes();
+
+    /**
+     * <pre>
+     * ID of the folder to which privateConnection will be moved.
+     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The destinationFolderId.
+     */
+    java.lang.String getDestinationFolderId();
+    /**
+     * <pre>
+     * ID of the folder to which privateConnection will be moved.
+     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for destinationFolderId.
+     */
+    com.google.protobuf.ByteString
+        getDestinationFolderIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.MovePrivateConnectionRequest}
+   */
+  public static final class MovePrivateConnectionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.MovePrivateConnectionRequest)
+      MovePrivateConnectionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MovePrivateConnectionRequest.newBuilder() to construct.
+    private MovePrivateConnectionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MovePrivateConnectionRequest() {
+      privateConnectionId_ = "";
+      destinationFolderId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MovePrivateConnectionRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MovePrivateConnectionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              privateConnectionId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              destinationFolderId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MovePrivateConnectionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MovePrivateConnectionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest.Builder.class);
+    }
+
+    public static final int PRIVATE_CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object privateConnectionId_;
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource to move.
+     * To get the privateConnection ID use a [PrivateConnectionService.List] request.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The privateConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getPrivateConnectionId() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        privateConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the PrivateConnection resource to move.
+     * To get the privateConnection ID use a [PrivateConnectionService.List] request.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for privateConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        privateConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESTINATION_FOLDER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object destinationFolderId_;
+    /**
+     * <pre>
+     * ID of the folder to which privateConnection will be moved.
+     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The destinationFolderId.
+     */
+    @java.lang.Override
+    public java.lang.String getDestinationFolderId() {
+      java.lang.Object ref = destinationFolderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destinationFolderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the folder to which privateConnection will be moved.
+     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for destinationFolderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDestinationFolderIdBytes() {
+      java.lang.Object ref = destinationFolderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destinationFolderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, privateConnectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationFolderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, destinationFolderId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, privateConnectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationFolderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, destinationFolderId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest other = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest) obj;
+
+      if (!getPrivateConnectionId()
+          .equals(other.getPrivateConnectionId())) return false;
+      if (!getDestinationFolderId()
+          .equals(other.getDestinationFolderId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRIVATE_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPrivateConnectionId().hashCode();
+      hash = (37 * hash) + DESTINATION_FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDestinationFolderId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.MovePrivateConnectionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.MovePrivateConnectionRequest)
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MovePrivateConnectionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MovePrivateConnectionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        privateConnectionId_ = "";
+
+        destinationFolderId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MovePrivateConnectionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest build() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest buildPartial() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest result = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest(this);
+        result.privateConnectionId_ = privateConnectionId_;
+        result.destinationFolderId_ = destinationFolderId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest) {
+          return mergeFrom((yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest other) {
+        if (other == yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest.getDefaultInstance()) return this;
+        if (!other.getPrivateConnectionId().isEmpty()) {
+          privateConnectionId_ = other.privateConnectionId_;
+          onChanged();
+        }
+        if (!other.getDestinationFolderId().isEmpty()) {
+          destinationFolderId_ = other.destinationFolderId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object privateConnectionId_ = "";
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource to move.
+       * To get the privateConnection ID use a [PrivateConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The privateConnectionId.
+       */
+      public java.lang.String getPrivateConnectionId() {
+        java.lang.Object ref = privateConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          privateConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource to move.
+       * To get the privateConnection ID use a [PrivateConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for privateConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getPrivateConnectionIdBytes() {
+        java.lang.Object ref = privateConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          privateConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource to move.
+       * To get the privateConnection ID use a [PrivateConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource to move.
+       * To get the privateConnection ID use a [PrivateConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateConnectionId() {
+        
+        privateConnectionId_ = getDefaultInstance().getPrivateConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateConnection resource to move.
+       * To get the privateConnection ID use a [PrivateConnectionService.List] request.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object destinationFolderId_ = "";
+      /**
+       * <pre>
+       * ID of the folder to which privateConnection will be moved.
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The destinationFolderId.
+       */
+      public java.lang.String getDestinationFolderId() {
+        java.lang.Object ref = destinationFolderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          destinationFolderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder to which privateConnection will be moved.
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for destinationFolderId.
+       */
+      public com.google.protobuf.ByteString
+          getDestinationFolderIdBytes() {
+        java.lang.Object ref = destinationFolderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          destinationFolderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder to which privateConnection will be moved.
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The destinationFolderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        destinationFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder to which privateConnection will be moved.
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDestinationFolderId() {
+        
+        destinationFolderId_ = getDefaultInstance().getDestinationFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder to which privateConnection will be moved.
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for destinationFolderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        destinationFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.MovePrivateConnectionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.MovePrivateConnectionRequest)
+    private static final yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest();
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MovePrivateConnectionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MovePrivateConnectionRequest>() {
+      @java.lang.Override
+      public MovePrivateConnectionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MovePrivateConnectionRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MovePrivateConnectionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MovePrivateConnectionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MovePrivateConnectionMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.MovePrivateConnectionMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the privateConnection that is being moved.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The privateConnectionId.
+     */
+    java.lang.String getPrivateConnectionId();
+    /**
+     * <pre>
+     * ID of the privateConnection that is being moved.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The bytes for privateConnectionId.
+     */
+    com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cic.v1.MovePrivateConnectionMetadata}
+   */
+  public static final class MovePrivateConnectionMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cic.v1.MovePrivateConnectionMetadata)
+      MovePrivateConnectionMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MovePrivateConnectionMetadata.newBuilder() to construct.
+    private MovePrivateConnectionMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MovePrivateConnectionMetadata() {
+      privateConnectionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MovePrivateConnectionMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MovePrivateConnectionMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              privateConnectionId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MovePrivateConnectionMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MovePrivateConnectionMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata.Builder.class);
+    }
+
+    public static final int PRIVATE_CONNECTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object privateConnectionId_;
+    /**
+     * <pre>
+     * ID of the privateConnection that is being moved.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The privateConnectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getPrivateConnectionId() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        privateConnectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the privateConnection that is being moved.
+     * </pre>
+     *
+     * <code>string private_connection_id = 1;</code>
+     * @return The bytes for privateConnectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrivateConnectionIdBytes() {
+      java.lang.Object ref = privateConnectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        privateConnectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, privateConnectionId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateConnectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, privateConnectionId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata other = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata) obj;
+
+      if (!getPrivateConnectionId()
+          .equals(other.getPrivateConnectionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRIVATE_CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPrivateConnectionId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cic.v1.MovePrivateConnectionMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cic.v1.MovePrivateConnectionMetadata)
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MovePrivateConnectionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MovePrivateConnectionMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata.class, yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        privateConnectionId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.internal_static_yandex_cloud_cic_v1_MovePrivateConnectionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata build() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata buildPartial() {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata result = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata(this);
+        result.privateConnectionId_ = privateConnectionId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata) {
+          return mergeFrom((yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata other) {
+        if (other == yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata.getDefaultInstance()) return this;
+        if (!other.getPrivateConnectionId().isEmpty()) {
+          privateConnectionId_ = other.privateConnectionId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object privateConnectionId_ = "";
+      /**
+       * <pre>
+       * ID of the privateConnection that is being moved.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @return The privateConnectionId.
+       */
+      public java.lang.String getPrivateConnectionId() {
+        java.lang.Object ref = privateConnectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          privateConnectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the privateConnection that is being moved.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @return The bytes for privateConnectionId.
+       */
+      public com.google.protobuf.ByteString
+          getPrivateConnectionIdBytes() {
+        java.lang.Object ref = privateConnectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          privateConnectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the privateConnection that is being moved.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @param value The privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the privateConnection that is being moved.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateConnectionId() {
+        
+        privateConnectionId_ = getDefaultInstance().getPrivateConnectionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the privateConnection that is being moved.
+       * </pre>
+       *
+       * <code>string private_connection_id = 1;</code>
+       * @param value The bytes for privateConnectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        privateConnectionId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cic.v1.MovePrivateConnectionMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cic.v1.MovePrivateConnectionMetadata)
+    private static final yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata();
+    }
+
+    public static yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MovePrivateConnectionMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<MovePrivateConnectionMetadata>() {
+      @java.lang.Override
+      public MovePrivateConnectionMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MovePrivateConnectionMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MovePrivateConnectionMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MovePrivateConnectionMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cic.v1.PrivateConnectionServiceOuterClass.MovePrivateConnectionMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ListPrivateConnectionOperationsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.cic.v1.ListPrivateConnectionOperationsRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -16831,6 +18261,16 @@ public final class PrivateConnectionServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_cic_v1_RemoveStaticRouteMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_MovePrivateConnectionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_MovePrivateConnectionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cic_v1_MovePrivateConnectionMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cic_v1_MovePrivateConnectionMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -16866,105 +18306,120 @@ public final class PrivateConnectionServiceOuterClass {
       "00\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"~\n\036ListPr" +
       "ivateConnectionsResponse\022C\n\023private_conn" +
       "ections\030\001 \003(\0132&.yandex.cloud.cic.v1.Priv" +
-      "ateConnection\022\027\n\017next_page_token\030\002 \001(\t\"\222" +
-      "\004\n\036CreatePrivateConnectionRequest\022\014\n\004nam" +
-      "e\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\021\n\tfolder_i" +
-      "d\030\004 \001(\t\022\021\n\tregion_id\030\005 \001(\t\022\033\n\023trunk_conn" +
-      "ection_id\030\006 \001(\t\022,\n\007vlan_id\030\007 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\0222\n\014ipv4_peering\030\n " +
-      "\001(\0132\034.yandex.cloud.cic.v1.Peering\022N\n\022ipv" +
-      "4_static_routes\030\023 \003(\01322.yandex.cloud.cic" +
-      ".v1.PrivateConnection.StaticRoute\022\220\001\n\006la" +
-      "bels\030\032 \003(\0132?.yandex.cloud.cic.v1.CreateP" +
-      "rivateConnectionRequest.LabelsEntryB?\202\3101" +
-      "\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\310" +
-      "1\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\003\020\004J\004\010\010\020\nJ" +
-      "\004\010\013\020\023J\004\010\024\020\032\"@\n\037CreatePrivateConnectionMe" +
-      "tadata\022\035\n\025private_connection_id\030\001 \001(\t\"\327\004" +
-      "\n\036UpdatePrivateConnectionRequest\022+\n\025priv" +
-      "ate_connection_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n" +
-      "\013update_mask\030\002 \001(\0132\032.google.protobuf.Fie" +
-      "ldMask\022\014\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001(" +
-      "\t\022\021\n\tregion_id\030\007 \001(\t\022\033\n\023trunk_connection" +
-      "_id\030\010 \001(\t\022,\n\007vlan_id\030\t \001(\0132\033.google.prot" +
-      "obuf.Int64Value\0222\n\014ipv4_peering\030\n \001(\0132\034." +
-      "yandex.cloud.cic.v1.Peering\022N\n\022ipv4_stat" +
-      "ic_routes\030\023 \003(\01322.yandex.cloud.cic.v1.Pr" +
-      "ivateConnection.StaticRoute\022\220\001\n\006labels\030\032" +
-      " \003(\0132?.yandex.cloud.cic.v1.UpdatePrivate" +
-      "ConnectionRequest.LabelsEntryB?\202\3101\004<=64\212" +
-      "\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a" +
-      "-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005\020\007J\004\010\013\020\023J\004\010\024\020\032\"" +
-      "@\n\037UpdatePrivateConnectionMetadata\022\035\n\025pr" +
-      "ivate_connection_id\030\001 \001(\t\"M\n\036DeletePriva" +
-      "teConnectionRequest\022+\n\025private_connectio" +
-      "n_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"@\n\037DeletePrivat" +
-      "eConnectionMetadata\022\035\n\025private_connectio" +
-      "n_id\030\001 \001(\t\"\235\001\n\030UpsertStaticRouteRequest\022" +
-      "+\n\025private_connection_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022N\n\022ipv4_static_routes\030\002 \003(\01322.yande" +
-      "x.cloud.cic.v1.PrivateConnection.StaticR" +
-      "outeJ\004\010\003\020\004\":\n\031UpsertStaticRouteMetadata\022" +
-      "\035\n\025private_connection_id\030\001 \001(\t\"\235\001\n\030Remov" +
-      "eStaticRouteRequest\022+\n\025private_connectio" +
-      "n_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022N\n\022ipv4_static_" +
-      "routes\030\002 \003(\01322.yandex.cloud.cic.v1.Priva" +
-      "teConnection.StaticRouteJ\004\010\003\020\004\":\n\031Remove" +
-      "StaticRouteMetadata\022\035\n\025private_connectio" +
-      "n_id\030\001 \001(\t\"\223\001\n&ListPrivateConnectionOper" +
-      "ationsRequest\022+\n\025private_connection_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
-      "\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
-      "\"y\n\'ListPrivateConnectionOperationsRespo" +
-      "nse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.o" +
-      "peration.Operation\022\027\n\017next_page_token\030\002 " +
-      "\001(\t2\374\014\n\030PrivateConnectionService\022\233\001\n\003Get" +
-      "\0220.yandex.cloud.cic.v1.GetPrivateConnect" +
-      "ionRequest\032&.yandex.cloud.cic.v1.Private" +
-      "Connection\":\202\323\344\223\0024\0222/cic/v1/privateConne" +
-      "ctions/{private_connection_id}\022\223\001\n\004List\022" +
-      "2.yandex.cloud.cic.v1.ListPrivateConnect" +
-      "ionsRequest\0323.yandex.cloud.cic.v1.ListPr" +
-      "ivateConnectionsResponse\"\"\202\323\344\223\002\034\022\032/cic/v" +
-      "1/privateConnections\022\277\001\n\006Create\0223.yandex" +
-      ".cloud.cic.v1.CreatePrivateConnectionReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "]\262\322*4\n\037CreatePrivateConnectionMetadata\022\021" +
-      "PrivateConnection\202\323\344\223\002\037\"\032/cic/v1/private" +
-      "Connections:\001*\022\327\001\n\006Update\0223.yandex.cloud" +
-      ".cic.v1.UpdatePrivateConnectionRequest\032!" +
-      ".yandex.cloud.operation.Operation\"u\262\322*4\n" +
-      "\037UpdatePrivateConnectionMetadata\022\021Privat" +
-      "eConnection\202\323\344\223\002722/cic/v1/privateConnec" +
-      "tions/{private_connection_id}:\001*\022\330\001\n\006Del" +
-      "ete\0223.yandex.cloud.cic.v1.DeletePrivateC" +
-      "onnectionRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"v\262\322*8\n\037DeletePrivateConnecti" +
-      "onMetadata\022\025google.protobuf.Empty\202\323\344\223\0024*" +
-      "2/cic/v1/privateConnections/{private_con" +
-      "nection_id}\022\356\001\n\021UpsertStaticRoute\022-.yand" +
-      "ex.cloud.cic.v1.UpsertStaticRouteRequest" +
-      "\032!.yandex.cloud.operation.Operation\"\206\001\262\322" +
-      "*2\n\031UpsertStaticRouteMetadata\022\025google.pr" +
-      "otobuf.Empty\202\323\344\223\002J\"E/cic/v1/privateConne" +
-      "ctions/{private_connection_id}:upsertSta" +
-      "ticRoutes:\001*\022\356\001\n\021RemoveStaticRoute\022-.yan" +
-      "dex.cloud.cic.v1.RemoveStaticRouteReques" +
-      "t\032!.yandex.cloud.operation.Operation\"\206\001\262" +
-      "\322*2\n\031RemoveStaticRouteMetadata\022\025google.p" +
-      "rotobuf.Empty\202\323\344\223\002J\"E/cic/v1/privateConn" +
-      "ections/{private_connection_id}:removeSt" +
-      "aticRoutes:\001*\022\322\001\n\016ListOperations\022;.yande" +
-      "x.cloud.cic.v1.ListPrivateConnectionOper" +
-      "ationsRequest\032<.yandex.cloud.cic.v1.List" +
-      "PrivateConnectionOperationsResponse\"E\202\323\344" +
-      "\223\002?\022=/cic/v1/privateConnections/{private" +
-      "_connection_id}/operationsBV\n\027yandex.clo" +
-      "ud.api.cic.v1Z;github.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/cic/v1;cicb\006prot" +
-      "o3"
+      "ateConnection\022\027\n\017next_page_token\030\002 \001(\t\"\201" +
+      "\005\n\036CreatePrivateConnectionRequest\022<\n\004nam" +
+      "e\030\001 \001(\tB.\362\3071*|[a-zA-Z]([-_a-zA-Z0-9]{0,6" +
+      "1}[a-zA-Z0-9])?\022\036\n\013description\030\002 \001(\tB\t\212\310" +
+      "1\005<=256\022\037\n\tfolder_id\030\004 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022\035\n\tregion_id\030\005 \001(\tB\n\030\001\212\3101\004<=50\022)\n\023trunk" +
+      "_connection_id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\0228\n\007vl" +
+      "an_id\030\007 \001(\0132\033.google.protobuf.Int64Value" +
+      "B\n\372\3071\0061-4095\0222\n\014ipv4_peering\030\n \001(\0132\034.yan" +
+      "dex.cloud.cic.v1.Peering\022N\n\022ipv4_static_" +
+      "routes\030\023 \003(\01322.yandex.cloud.cic.v1.Priva" +
+      "teConnection.StaticRoute\022\220\001\n\006labels\030\032 \003(" +
+      "\0132?.yandex.cloud.cic.v1.CreatePrivateCon" +
+      "nectionRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004" +
+      "<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z]" +
+      "[-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001J\004\010\003\020\004J\004\010\010\020\nJ\004\010\013\020\023J\004\010\024" +
+      "\020\032\"@\n\037CreatePrivateConnectionMetadata\022\035\n" +
+      "\025private_connection_id\030\001 \001(\t\"\270\005\n\036UpdateP" +
+      "rivateConnectionRequest\022+\n\025private_conne" +
+      "ction_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_m" +
+      "ask\030\002 \001(\0132\032.google.protobuf.FieldMask\022<\n" +
+      "\004name\030\003 \001(\tB.\362\3071*|[a-zA-Z]([-_a-zA-Z0-9]" +
+      "{0,61}[a-zA-Z0-9])?\022\036\n\013description\030\004 \001(\t" +
+      "B\t\212\3101\005<=256\022\035\n\tregion_id\030\007 \001(\tB\n\030\001\212\3101\004<=" +
+      "50\022)\n\023trunk_connection_id\030\010 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\0228\n\007vlan_id\030\t \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\n\372\3071\0061-4095\0222\n\014ipv4_peering\030" +
+      "\n \001(\0132\034.yandex.cloud.cic.v1.Peering\022N\n\022i" +
+      "pv4_static_routes\030\023 \003(\01322.yandex.cloud.c" +
+      "ic.v1.PrivateConnection.StaticRoute\022\220\001\n\006" +
+      "labels\030\032 \003(\0132?.yandex.cloud.cic.v1.Updat" +
+      "ePrivateConnectionRequest.LabelsEntryB?\202" +
+      "\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63" +
+      "\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005\020\007J\004\010\013\020" +
+      "\023J\004\010\024\020\032\"@\n\037UpdatePrivateConnectionMetada" +
+      "ta\022\035\n\025private_connection_id\030\001 \001(\t\"M\n\036Del" +
+      "etePrivateConnectionRequest\022+\n\025private_c" +
+      "onnection_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"@\n\037Dele" +
+      "tePrivateConnectionMetadata\022\035\n\025private_c" +
+      "onnection_id\030\001 \001(\t\"\235\001\n\030UpsertStaticRoute" +
+      "Request\022+\n\025private_connection_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022N\n\022ipv4_static_routes\030\002 \003(\013" +
+      "22.yandex.cloud.cic.v1.PrivateConnection" +
+      ".StaticRouteJ\004\010\003\020\004\":\n\031UpsertStaticRouteM" +
+      "etadata\022\035\n\025private_connection_id\030\001 \001(\t\"\235" +
+      "\001\n\030RemoveStaticRouteRequest\022+\n\025private_c" +
+      "onnection_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022N\n\022ipv4" +
+      "_static_routes\030\002 \003(\01322.yandex.cloud.cic." +
+      "v1.PrivateConnection.StaticRouteJ\004\010\003\020\004\":" +
+      "\n\031RemoveStaticRouteMetadata\022\035\n\025private_c" +
+      "onnection_id\030\001 \001(\t\"x\n\034MovePrivateConnect" +
+      "ionRequest\022+\n\025private_connection_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_folder_id" +
+      "\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\">\n\035MovePrivateConne" +
+      "ctionMetadata\022\035\n\025private_connection_id\030\001" +
+      " \001(\t\"\223\001\n&ListPrivateConnectionOperations" +
+      "Request\022+\n\025private_connection_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1" +
+      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"y\n\'Li" +
+      "stPrivateConnectionOperationsResponse\0225\n" +
+      "\noperations\030\001 \003(\0132!.yandex.cloud.operati" +
+      "on.Operation\022\027\n\017next_page_token\030\002 \001(\t2\325\016" +
+      "\n\030PrivateConnectionService\022\233\001\n\003Get\0220.yan" +
+      "dex.cloud.cic.v1.GetPrivateConnectionReq" +
+      "uest\032&.yandex.cloud.cic.v1.PrivateConnec" +
+      "tion\":\202\323\344\223\0024\0222/cic/v1/privateConnections" +
+      "/{private_connection_id}\022\223\001\n\004List\0222.yand" +
+      "ex.cloud.cic.v1.ListPrivateConnectionsRe" +
+      "quest\0323.yandex.cloud.cic.v1.ListPrivateC" +
+      "onnectionsResponse\"\"\202\323\344\223\002\034\022\032/cic/v1/priv" +
+      "ateConnections\022\277\001\n\006Create\0223.yandex.cloud" +
+      ".cic.v1.CreatePrivateConnectionRequest\032!" +
+      ".yandex.cloud.operation.Operation\"]\262\322*4\n" +
+      "\037CreatePrivateConnectionMetadata\022\021Privat" +
+      "eConnection\202\323\344\223\002\037\"\032/cic/v1/privateConnec" +
+      "tions:\001*\022\327\001\n\006Update\0223.yandex.cloud.cic.v" +
+      "1.UpdatePrivateConnectionRequest\032!.yande" +
+      "x.cloud.operation.Operation\"u\262\322*4\n\037Updat" +
+      "ePrivateConnectionMetadata\022\021PrivateConne" +
+      "ction\202\323\344\223\002722/cic/v1/privateConnections/" +
+      "{private_connection_id}:\001*\022\330\001\n\006Delete\0223." +
+      "yandex.cloud.cic.v1.DeletePrivateConnect" +
+      "ionRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"v\262\322*8\n\037DeletePrivateConnectionMeta" +
+      "data\022\025google.protobuf.Empty\202\323\344\223\0024*2/cic/" +
+      "v1/privateConnections/{private_connectio" +
+      "n_id}\022\356\001\n\021UpsertStaticRoute\022-.yandex.clo" +
+      "ud.cic.v1.UpsertStaticRouteRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"\206\001\262\322*2\n\031Up" +
+      "sertStaticRouteMetadata\022\025google.protobuf" +
+      ".Empty\202\323\344\223\002J\"E/cic/v1/privateConnections" +
+      "/{private_connection_id}:upsertStaticRou" +
+      "tes:\001*\022\356\001\n\021RemoveStaticRoute\022-.yandex.cl" +
+      "oud.cic.v1.RemoveStaticRouteRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"\206\001\262\322*2\n\031R" +
+      "emoveStaticRouteMetadata\022\025google.protobu" +
+      "f.Empty\202\323\344\223\002J\"E/cic/v1/privateConnection" +
+      "s/{private_connection_id}:removeStaticRo" +
+      "utes:\001*\022\326\001\n\004Move\0221.yandex.cloud.cic.v1.M" +
+      "ovePrivateConnectionRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"x\202\323\344\223\002<\"7/cic/v1/" +
+      "privateConnections/{private_connection_i" +
+      "d}:move:\001*\262\322*2\n\035MovePrivateConnectionMet" +
+      "adata\022\021PrivateConnection\022\322\001\n\016ListOperati" +
+      "ons\022;.yandex.cloud.cic.v1.ListPrivateCon" +
+      "nectionOperationsRequest\032<.yandex.cloud." +
+      "cic.v1.ListPrivateConnectionOperationsRe" +
+      "sponse\"E\202\323\344\223\002?\022=/cic/v1/privateConnectio" +
+      "ns/{private_connection_id}/operationsBV\n" +
+      "\027yandex.cloud.api.cic.v1Z;github.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/cic/v" +
+      "1;cicb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17068,14 +18523,26 @@ public final class PrivateConnectionServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cic_v1_RemoveStaticRouteMetadata_descriptor,
         new java.lang.String[] { "PrivateConnectionId", });
-    internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsRequest_descriptor =
+    internal_static_yandex_cloud_cic_v1_MovePrivateConnectionRequest_descriptor =
       getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_cic_v1_MovePrivateConnectionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_MovePrivateConnectionRequest_descriptor,
+        new java.lang.String[] { "PrivateConnectionId", "DestinationFolderId", });
+    internal_static_yandex_cloud_cic_v1_MovePrivateConnectionMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_cic_v1_MovePrivateConnectionMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cic_v1_MovePrivateConnectionMetadata_descriptor,
+        new java.lang.String[] { "PrivateConnectionId", });
+    internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsRequest_descriptor,
         new java.lang.String[] { "PrivateConnectionId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cic_v1_ListPrivateConnectionOperationsResponse_descriptor,

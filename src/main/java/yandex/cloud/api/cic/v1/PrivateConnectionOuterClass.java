@@ -64,7 +64,7 @@ public final class PrivateConnectionOuterClass {
 
     /**
      * <pre>
-     * Optional description of the privateConnection. 0-256 characters long.
+     * Description of the privateConnection. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -73,7 +73,7 @@ public final class PrivateConnectionOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Optional description of the privateConnection. 0-256 characters long.
+     * Description of the privateConnection. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -1427,7 +1427,7 @@ public final class PrivateConnectionOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Optional description of the privateConnection. 0-256 characters long.
+     * Description of the privateConnection. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -1448,7 +1448,7 @@ public final class PrivateConnectionOuterClass {
     }
     /**
      * <pre>
-     * Optional description of the privateConnection. 0-256 characters long.
+     * Description of the privateConnection. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -2739,7 +2739,7 @@ public final class PrivateConnectionOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Optional description of the privateConnection. 0-256 characters long.
+       * Description of the privateConnection. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -2759,7 +2759,7 @@ public final class PrivateConnectionOuterClass {
       }
       /**
        * <pre>
-       * Optional description of the privateConnection. 0-256 characters long.
+       * Description of the privateConnection. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -2780,7 +2780,7 @@ public final class PrivateConnectionOuterClass {
       }
       /**
        * <pre>
-       * Optional description of the privateConnection. 0-256 characters long.
+       * Description of the privateConnection. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -2799,7 +2799,7 @@ public final class PrivateConnectionOuterClass {
       }
       /**
        * <pre>
-       * Optional description of the privateConnection. 0-256 characters long.
+       * Description of the privateConnection. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -2813,7 +2813,7 @@ public final class PrivateConnectionOuterClass {
       }
       /**
        * <pre>
-       * Optional description of the privateConnection. 0-256 characters long.
+       * Description of the privateConnection. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>

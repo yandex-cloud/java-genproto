@@ -452,6 +452,37 @@ public final class RoutingInstanceServiceGrpc {
     return getDeleteMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.MoveRoutingInstanceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Move",
+      requestType = yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.MoveRoutingInstanceRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.MoveRoutingInstanceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.MoveRoutingInstanceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod;
+    if ((getMoveMethod = RoutingInstanceServiceGrpc.getMoveMethod) == null) {
+      synchronized (RoutingInstanceServiceGrpc.class) {
+        if ((getMoveMethod = RoutingInstanceServiceGrpc.getMoveMethod) == null) {
+          RoutingInstanceServiceGrpc.getMoveMethod = getMoveMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.MoveRoutingInstanceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Move"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.MoveRoutingInstanceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new RoutingInstanceServiceMethodDescriptorSupplier("Move"))
+              .build();
+        }
+      }
+    }
+    return getMoveMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.ListRoutingInstanceOperationsRequest,
       yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.ListRoutingInstanceOperationsResponse> getListOperationsMethod;
 
@@ -689,6 +720,16 @@ public final class RoutingInstanceServiceGrpc {
 
     /**
      * <pre>
+     * Moves the specified RoutingInstance to another folder.
+     * </pre>
+     */
+    public void move(yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.MoveRoutingInstanceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified RoutingInstance.
      * </pre>
      */
@@ -797,6 +838,13 @@ public final class RoutingInstanceServiceGrpc {
                 yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.DeleteRoutingInstanceRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
+          .addMethod(
+            getMoveMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.MoveRoutingInstanceRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_MOVE)))
           .addMethod(
             getListOperationsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -994,6 +1042,17 @@ public final class RoutingInstanceServiceGrpc {
 
     /**
      * <pre>
+     * Moves the specified RoutingInstance to another folder.
+     * </pre>
+     */
+    public void move(yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.MoveRoutingInstanceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getMoveMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified RoutingInstance.
      * </pre>
      */
@@ -1172,6 +1231,16 @@ public final class RoutingInstanceServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.DeleteRoutingInstanceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Moves the specified RoutingInstance to another folder.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.MoveRoutingInstanceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMoveMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1371,6 +1440,17 @@ public final class RoutingInstanceServiceGrpc {
 
     /**
      * <pre>
+     * Moves the specified RoutingInstance to another folder.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> move(
+        yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.MoveRoutingInstanceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getMoveMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified RoutingInstance.
      * </pre>
      */
@@ -1395,7 +1475,8 @@ public final class RoutingInstanceServiceGrpc {
   private static final int METHODID_ADD_PRIVATE_CONNECTION = 11;
   private static final int METHODID_REMOVE_PRIVATE_CONNECTION = 12;
   private static final int METHODID_DELETE = 13;
-  private static final int METHODID_LIST_OPERATIONS = 14;
+  private static final int METHODID_MOVE = 14;
+  private static final int METHODID_LIST_OPERATIONS = 15;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1468,6 +1549,10 @@ public final class RoutingInstanceServiceGrpc {
           break;
         case METHODID_DELETE:
           serviceImpl.delete((yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.DeleteRoutingInstanceRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_MOVE:
+          serviceImpl.move((yandex.cloud.api.cloudrouter.v1.RoutingInstanceServiceOuterClass.MoveRoutingInstanceRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_LIST_OPERATIONS:
@@ -1549,6 +1634,7 @@ public final class RoutingInstanceServiceGrpc {
               .addMethod(getAddPrivateConnectionMethod())
               .addMethod(getRemovePrivateConnectionMethod())
               .addMethod(getDeleteMethod())
+              .addMethod(getMoveMethod())
               .addMethod(getListOperationsMethod())
               .build();
         }

@@ -209,19 +209,58 @@ public final class AddressOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * External ipv4 address specification.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.ExternalIpv4Address external_ipv4_address = 7;</code>
      * @return Whether the externalIpv4Address field is set.
      */
     boolean hasExternalIpv4Address();
     /**
+     * <pre>
+     * External ipv4 address specification.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.ExternalIpv4Address external_ipv4_address = 7;</code>
      * @return The externalIpv4Address.
      */
     yandex.cloud.api.vpc.v1.AddressOuterClass.ExternalIpv4Address getExternalIpv4Address();
     /**
+     * <pre>
+     * External ipv4 address specification.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.ExternalIpv4Address external_ipv4_address = 7;</code>
      */
     yandex.cloud.api.vpc.v1.AddressOuterClass.ExternalIpv4AddressOrBuilder getExternalIpv4AddressOrBuilder();
+
+    /**
+     * <pre>
+     * Internal ipv4 address specification
+     * </pre>
+     *
+     * <code>.yandex.cloud.vpc.v1.InternalIpv4Address internal_ipv4_address = 8;</code>
+     * @return Whether the internalIpv4Address field is set.
+     */
+    boolean hasInternalIpv4Address();
+    /**
+     * <pre>
+     * Internal ipv4 address specification
+     * </pre>
+     *
+     * <code>.yandex.cloud.vpc.v1.InternalIpv4Address internal_ipv4_address = 8;</code>
+     * @return The internalIpv4Address.
+     */
+    yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address getInternalIpv4Address();
+    /**
+     * <pre>
+     * Internal ipv4 address specification
+     * </pre>
+     *
+     * <code>.yandex.cloud.vpc.v1.InternalIpv4Address internal_ipv4_address = 8;</code>
+     */
+    yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4AddressOrBuilder getInternalIpv4AddressOrBuilder();
 
     /**
      * <pre>
@@ -456,6 +495,20 @@ public final class AddressOuterClass {
                 address_ = subBuilder.buildPartial();
               }
               addressCase_ = 7;
+              break;
+            }
+            case 66: {
+              yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.Builder subBuilder = null;
+              if (addressCase_ == 8) {
+                subBuilder = ((yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address) address_).toBuilder();
+              }
+              address_ =
+                  input.readMessage(yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address) address_);
+                address_ = subBuilder.buildPartial();
+              }
+              addressCase_ = 8;
               break;
             }
             case 120: {
@@ -813,6 +866,7 @@ public final class AddressOuterClass {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       EXTERNAL_IPV4_ADDRESS(7),
+      INTERNAL_IPV4_ADDRESS(8),
       ADDRESS_NOT_SET(0);
       private final int value;
       private AddressCase(int value) {
@@ -831,6 +885,7 @@ public final class AddressOuterClass {
       public static AddressCase forNumber(int value) {
         switch (value) {
           case 7: return EXTERNAL_IPV4_ADDRESS;
+          case 8: return INTERNAL_IPV4_ADDRESS;
           case 0: return ADDRESS_NOT_SET;
           default: return null;
         }
@@ -1191,6 +1246,10 @@ public final class AddressOuterClass {
 
     public static final int EXTERNAL_IPV4_ADDRESS_FIELD_NUMBER = 7;
     /**
+     * <pre>
+     * External ipv4 address specification.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.ExternalIpv4Address external_ipv4_address = 7;</code>
      * @return Whether the externalIpv4Address field is set.
      */
@@ -1199,6 +1258,10 @@ public final class AddressOuterClass {
       return addressCase_ == 7;
     }
     /**
+     * <pre>
+     * External ipv4 address specification.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.ExternalIpv4Address external_ipv4_address = 7;</code>
      * @return The externalIpv4Address.
      */
@@ -1210,6 +1273,10 @@ public final class AddressOuterClass {
       return yandex.cloud.api.vpc.v1.AddressOuterClass.ExternalIpv4Address.getDefaultInstance();
     }
     /**
+     * <pre>
+     * External ipv4 address specification.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.ExternalIpv4Address external_ipv4_address = 7;</code>
      */
     @java.lang.Override
@@ -1218,6 +1285,49 @@ public final class AddressOuterClass {
          return (yandex.cloud.api.vpc.v1.AddressOuterClass.ExternalIpv4Address) address_;
       }
       return yandex.cloud.api.vpc.v1.AddressOuterClass.ExternalIpv4Address.getDefaultInstance();
+    }
+
+    public static final int INTERNAL_IPV4_ADDRESS_FIELD_NUMBER = 8;
+    /**
+     * <pre>
+     * Internal ipv4 address specification
+     * </pre>
+     *
+     * <code>.yandex.cloud.vpc.v1.InternalIpv4Address internal_ipv4_address = 8;</code>
+     * @return Whether the internalIpv4Address field is set.
+     */
+    @java.lang.Override
+    public boolean hasInternalIpv4Address() {
+      return addressCase_ == 8;
+    }
+    /**
+     * <pre>
+     * Internal ipv4 address specification
+     * </pre>
+     *
+     * <code>.yandex.cloud.vpc.v1.InternalIpv4Address internal_ipv4_address = 8;</code>
+     * @return The internalIpv4Address.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address getInternalIpv4Address() {
+      if (addressCase_ == 8) {
+         return (yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address) address_;
+      }
+      return yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Internal ipv4 address specification
+     * </pre>
+     *
+     * <code>.yandex.cloud.vpc.v1.InternalIpv4Address internal_ipv4_address = 8;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4AddressOrBuilder getInternalIpv4AddressOrBuilder() {
+      if (addressCase_ == 8) {
+         return (yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address) address_;
+      }
+      return yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.getDefaultInstance();
     }
 
     public static final int RESERVED_FIELD_NUMBER = 15;
@@ -1417,6 +1527,9 @@ public final class AddressOuterClass {
       if (addressCase_ == 7) {
         output.writeMessage(7, (yandex.cloud.api.vpc.v1.AddressOuterClass.ExternalIpv4Address) address_);
       }
+      if (addressCase_ == 8) {
+        output.writeMessage(8, (yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address) address_);
+      }
       if (reserved_ != false) {
         output.writeBool(15, reserved_);
       }
@@ -1473,6 +1586,10 @@ public final class AddressOuterClass {
       if (addressCase_ == 7) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, (yandex.cloud.api.vpc.v1.AddressOuterClass.ExternalIpv4Address) address_);
+      }
+      if (addressCase_ == 8) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, (yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address) address_);
       }
       if (reserved_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -1544,6 +1661,10 @@ public final class AddressOuterClass {
           if (!getExternalIpv4Address()
               .equals(other.getExternalIpv4Address())) return false;
           break;
+        case 8:
+          if (!getInternalIpv4Address()
+              .equals(other.getInternalIpv4Address())) return false;
+          break;
         case 0:
         default:
       }
@@ -1595,6 +1716,10 @@ public final class AddressOuterClass {
         case 7:
           hash = (37 * hash) + EXTERNAL_IPV4_ADDRESS_FIELD_NUMBER;
           hash = (53 * hash) + getExternalIpv4Address().hashCode();
+          break;
+        case 8:
+          hash = (37 * hash) + INTERNAL_IPV4_ADDRESS_FIELD_NUMBER;
+          hash = (53 * hash) + getInternalIpv4Address().hashCode();
           break;
         case 0:
         default:
@@ -1837,6 +1962,13 @@ public final class AddressOuterClass {
             result.address_ = externalIpv4AddressBuilder_.build();
           }
         }
+        if (addressCase_ == 8) {
+          if (internalIpv4AddressBuilder_ == null) {
+            result.address_ = address_;
+          } else {
+            result.address_ = internalIpv4AddressBuilder_.build();
+          }
+        }
         result.reserved_ = reserved_;
         result.used_ = used_;
         result.type_ = type_;
@@ -1965,6 +2097,10 @@ public final class AddressOuterClass {
         switch (other.getAddressCase()) {
           case EXTERNAL_IPV4_ADDRESS: {
             mergeExternalIpv4Address(other.getExternalIpv4Address());
+            break;
+          }
+          case INTERNAL_IPV4_ADDRESS: {
+            mergeInternalIpv4Address(other.getInternalIpv4Address());
             break;
           }
           case ADDRESS_NOT_SET: {
@@ -2762,6 +2898,10 @@ public final class AddressOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.vpc.v1.AddressOuterClass.ExternalIpv4Address, yandex.cloud.api.vpc.v1.AddressOuterClass.ExternalIpv4Address.Builder, yandex.cloud.api.vpc.v1.AddressOuterClass.ExternalIpv4AddressOrBuilder> externalIpv4AddressBuilder_;
       /**
+       * <pre>
+       * External ipv4 address specification.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.ExternalIpv4Address external_ipv4_address = 7;</code>
        * @return Whether the externalIpv4Address field is set.
        */
@@ -2770,6 +2910,10 @@ public final class AddressOuterClass {
         return addressCase_ == 7;
       }
       /**
+       * <pre>
+       * External ipv4 address specification.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.ExternalIpv4Address external_ipv4_address = 7;</code>
        * @return The externalIpv4Address.
        */
@@ -2788,6 +2932,10 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * External ipv4 address specification.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.ExternalIpv4Address external_ipv4_address = 7;</code>
        */
       public Builder setExternalIpv4Address(yandex.cloud.api.vpc.v1.AddressOuterClass.ExternalIpv4Address value) {
@@ -2804,6 +2952,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * External ipv4 address specification.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.ExternalIpv4Address external_ipv4_address = 7;</code>
        */
       public Builder setExternalIpv4Address(
@@ -2818,6 +2970,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * External ipv4 address specification.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.ExternalIpv4Address external_ipv4_address = 7;</code>
        */
       public Builder mergeExternalIpv4Address(yandex.cloud.api.vpc.v1.AddressOuterClass.ExternalIpv4Address value) {
@@ -2840,6 +2996,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * External ipv4 address specification.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.ExternalIpv4Address external_ipv4_address = 7;</code>
        */
       public Builder clearExternalIpv4Address() {
@@ -2859,12 +3019,20 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * External ipv4 address specification.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.ExternalIpv4Address external_ipv4_address = 7;</code>
        */
       public yandex.cloud.api.vpc.v1.AddressOuterClass.ExternalIpv4Address.Builder getExternalIpv4AddressBuilder() {
         return getExternalIpv4AddressFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * External ipv4 address specification.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.ExternalIpv4Address external_ipv4_address = 7;</code>
        */
       @java.lang.Override
@@ -2879,6 +3047,10 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * External ipv4 address specification.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.ExternalIpv4Address external_ipv4_address = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2898,6 +3070,183 @@ public final class AddressOuterClass {
         addressCase_ = 7;
         onChanged();;
         return externalIpv4AddressBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address, yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.Builder, yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4AddressOrBuilder> internalIpv4AddressBuilder_;
+      /**
+       * <pre>
+       * Internal ipv4 address specification
+       * </pre>
+       *
+       * <code>.yandex.cloud.vpc.v1.InternalIpv4Address internal_ipv4_address = 8;</code>
+       * @return Whether the internalIpv4Address field is set.
+       */
+      @java.lang.Override
+      public boolean hasInternalIpv4Address() {
+        return addressCase_ == 8;
+      }
+      /**
+       * <pre>
+       * Internal ipv4 address specification
+       * </pre>
+       *
+       * <code>.yandex.cloud.vpc.v1.InternalIpv4Address internal_ipv4_address = 8;</code>
+       * @return The internalIpv4Address.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address getInternalIpv4Address() {
+        if (internalIpv4AddressBuilder_ == null) {
+          if (addressCase_ == 8) {
+            return (yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address) address_;
+          }
+          return yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.getDefaultInstance();
+        } else {
+          if (addressCase_ == 8) {
+            return internalIpv4AddressBuilder_.getMessage();
+          }
+          return yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Internal ipv4 address specification
+       * </pre>
+       *
+       * <code>.yandex.cloud.vpc.v1.InternalIpv4Address internal_ipv4_address = 8;</code>
+       */
+      public Builder setInternalIpv4Address(yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address value) {
+        if (internalIpv4AddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          address_ = value;
+          onChanged();
+        } else {
+          internalIpv4AddressBuilder_.setMessage(value);
+        }
+        addressCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal ipv4 address specification
+       * </pre>
+       *
+       * <code>.yandex.cloud.vpc.v1.InternalIpv4Address internal_ipv4_address = 8;</code>
+       */
+      public Builder setInternalIpv4Address(
+          yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.Builder builderForValue) {
+        if (internalIpv4AddressBuilder_ == null) {
+          address_ = builderForValue.build();
+          onChanged();
+        } else {
+          internalIpv4AddressBuilder_.setMessage(builderForValue.build());
+        }
+        addressCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal ipv4 address specification
+       * </pre>
+       *
+       * <code>.yandex.cloud.vpc.v1.InternalIpv4Address internal_ipv4_address = 8;</code>
+       */
+      public Builder mergeInternalIpv4Address(yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address value) {
+        if (internalIpv4AddressBuilder_ == null) {
+          if (addressCase_ == 8 &&
+              address_ != yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.getDefaultInstance()) {
+            address_ = yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.newBuilder((yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address) address_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            address_ = value;
+          }
+          onChanged();
+        } else {
+          if (addressCase_ == 8) {
+            internalIpv4AddressBuilder_.mergeFrom(value);
+          }
+          internalIpv4AddressBuilder_.setMessage(value);
+        }
+        addressCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal ipv4 address specification
+       * </pre>
+       *
+       * <code>.yandex.cloud.vpc.v1.InternalIpv4Address internal_ipv4_address = 8;</code>
+       */
+      public Builder clearInternalIpv4Address() {
+        if (internalIpv4AddressBuilder_ == null) {
+          if (addressCase_ == 8) {
+            addressCase_ = 0;
+            address_ = null;
+            onChanged();
+          }
+        } else {
+          if (addressCase_ == 8) {
+            addressCase_ = 0;
+            address_ = null;
+          }
+          internalIpv4AddressBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal ipv4 address specification
+       * </pre>
+       *
+       * <code>.yandex.cloud.vpc.v1.InternalIpv4Address internal_ipv4_address = 8;</code>
+       */
+      public yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.Builder getInternalIpv4AddressBuilder() {
+        return getInternalIpv4AddressFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Internal ipv4 address specification
+       * </pre>
+       *
+       * <code>.yandex.cloud.vpc.v1.InternalIpv4Address internal_ipv4_address = 8;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4AddressOrBuilder getInternalIpv4AddressOrBuilder() {
+        if ((addressCase_ == 8) && (internalIpv4AddressBuilder_ != null)) {
+          return internalIpv4AddressBuilder_.getMessageOrBuilder();
+        } else {
+          if (addressCase_ == 8) {
+            return (yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address) address_;
+          }
+          return yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Internal ipv4 address specification
+       * </pre>
+       *
+       * <code>.yandex.cloud.vpc.v1.InternalIpv4Address internal_ipv4_address = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address, yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.Builder, yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4AddressOrBuilder> 
+          getInternalIpv4AddressFieldBuilder() {
+        if (internalIpv4AddressBuilder_ == null) {
+          if (!(addressCase_ == 8)) {
+            address_ = yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.getDefaultInstance();
+          }
+          internalIpv4AddressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address, yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.Builder, yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4AddressOrBuilder>(
+                  (yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address) address_,
+                  getParentForChildren(),
+                  isClean());
+          address_ = null;
+        }
+        addressCase_ = 8;
+        onChanged();;
+        return internalIpv4AddressBuilder_;
       }
 
       private boolean reserved_ ;
@@ -4589,6 +4938,926 @@ public final class AddressOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.vpc.v1.AddressOuterClass.ExternalIpv4Address getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface InternalIpv4AddressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.vpc.v1.InternalIpv4Address)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Value of address.
+     * </pre>
+     *
+     * <code>string address = 1;</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * Value of address.
+     * </pre>
+     *
+     * <code>string address = 1;</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <pre>
+     * Subnet from which the address will be allocated
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return Whether the subnetId field is set.
+     */
+    boolean hasSubnetId();
+    /**
+     * <pre>
+     * Subnet from which the address will be allocated
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return The subnetId.
+     */
+    java.lang.String getSubnetId();
+    /**
+     * <pre>
+     * Subnet from which the address will be allocated
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return The bytes for subnetId.
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdBytes();
+
+    public yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.ScopeCase getScopeCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.vpc.v1.InternalIpv4Address}
+   */
+  public static final class InternalIpv4Address extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.InternalIpv4Address)
+      InternalIpv4AddressOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InternalIpv4Address.newBuilder() to construct.
+    private InternalIpv4Address(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InternalIpv4Address() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InternalIpv4Address();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private InternalIpv4Address(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              address_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              scopeCase_ = 2;
+              scope_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.vpc.v1.AddressOuterClass.internal_static_yandex_cloud_vpc_v1_InternalIpv4Address_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.vpc.v1.AddressOuterClass.internal_static_yandex_cloud_vpc_v1_InternalIpv4Address_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.class, yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.Builder.class);
+    }
+
+    private int scopeCase_ = 0;
+    private java.lang.Object scope_;
+    public enum ScopeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      SUBNET_ID(2),
+      SCOPE_NOT_SET(0);
+      private final int value;
+      private ScopeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ScopeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ScopeCase forNumber(int value) {
+        switch (value) {
+          case 2: return SUBNET_ID;
+          case 0: return SCOPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ScopeCase
+    getScopeCase() {
+      return ScopeCase.forNumber(
+          scopeCase_);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    private volatile java.lang.Object address_;
+    /**
+     * <pre>
+     * Value of address.
+     * </pre>
+     *
+     * <code>string address = 1;</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Value of address.
+     * </pre>
+     *
+     * <code>string address = 1;</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBNET_ID_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Subnet from which the address will be allocated
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return Whether the subnetId field is set.
+     */
+    public boolean hasSubnetId() {
+      return scopeCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Subnet from which the address will be allocated
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return The subnetId.
+     */
+    public java.lang.String getSubnetId() {
+      java.lang.Object ref = "";
+      if (scopeCase_ == 2) {
+        ref = scope_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (scopeCase_ == 2) {
+          scope_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Subnet from which the address will be allocated
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return The bytes for subnetId.
+     */
+    public com.google.protobuf.ByteString
+        getSubnetIdBytes() {
+      java.lang.Object ref = "";
+      if (scopeCase_ == 2) {
+        ref = scope_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (scopeCase_ == 2) {
+          scope_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (scopeCase_ == 2) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, scope_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (scopeCase_ == 2) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, scope_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address other = (yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getScopeCase().equals(other.getScopeCase())) return false;
+      switch (scopeCase_) {
+        case 2:
+          if (!getSubnetId()
+              .equals(other.getSubnetId())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      switch (scopeCase_) {
+        case 2:
+          hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getSubnetId().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.vpc.v1.InternalIpv4Address}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.vpc.v1.InternalIpv4Address)
+        yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4AddressOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.vpc.v1.AddressOuterClass.internal_static_yandex_cloud_vpc_v1_InternalIpv4Address_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.vpc.v1.AddressOuterClass.internal_static_yandex_cloud_vpc_v1_InternalIpv4Address_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.class, yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        address_ = "";
+
+        scopeCase_ = 0;
+        scope_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.vpc.v1.AddressOuterClass.internal_static_yandex_cloud_vpc_v1_InternalIpv4Address_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address getDefaultInstanceForType() {
+        return yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address build() {
+        yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address buildPartial() {
+        yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address result = new yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address(this);
+        result.address_ = address_;
+        if (scopeCase_ == 2) {
+          result.scope_ = scope_;
+        }
+        result.scopeCase_ = scopeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address) {
+          return mergeFrom((yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address other) {
+        if (other == yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          onChanged();
+        }
+        switch (other.getScopeCase()) {
+          case SUBNET_ID: {
+            scopeCase_ = 2;
+            scope_ = other.scope_;
+            onChanged();
+            break;
+          }
+          case SCOPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int scopeCase_ = 0;
+      private java.lang.Object scope_;
+      public ScopeCase
+          getScopeCase() {
+        return ScopeCase.forNumber(
+            scopeCase_);
+      }
+
+      public Builder clearScope() {
+        scopeCase_ = 0;
+        scope_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * Value of address.
+       * </pre>
+       *
+       * <code>string address = 1;</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Value of address.
+       * </pre>
+       *
+       * <code>string address = 1;</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Value of address.
+       * </pre>
+       *
+       * <code>string address = 1;</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        address_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Value of address.
+       * </pre>
+       *
+       * <code>string address = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        
+        address_ = getDefaultInstance().getAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Value of address.
+       * </pre>
+       *
+       * <code>string address = 1;</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        address_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Subnet from which the address will be allocated
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @return Whether the subnetId field is set.
+       */
+      @java.lang.Override
+      public boolean hasSubnetId() {
+        return scopeCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Subnet from which the address will be allocated
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @return The subnetId.
+       */
+      @java.lang.Override
+      public java.lang.String getSubnetId() {
+        java.lang.Object ref = "";
+        if (scopeCase_ == 2) {
+          ref = scope_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (scopeCase_ == 2) {
+            scope_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Subnet from which the address will be allocated
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @return The bytes for subnetId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSubnetIdBytes() {
+        java.lang.Object ref = "";
+        if (scopeCase_ == 2) {
+          ref = scope_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (scopeCase_ == 2) {
+            scope_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Subnet from which the address will be allocated
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  scopeCase_ = 2;
+        scope_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Subnet from which the address will be allocated
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubnetId() {
+        if (scopeCase_ == 2) {
+          scopeCase_ = 0;
+          scope_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Subnet from which the address will be allocated
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        scopeCase_ = 2;
+        scope_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.vpc.v1.InternalIpv4Address)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.vpc.v1.InternalIpv4Address)
+    private static final yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address();
+    }
+
+    public static yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<InternalIpv4Address>
+        PARSER = new com.google.protobuf.AbstractParser<InternalIpv4Address>() {
+      @java.lang.Override
+      public InternalIpv4Address parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new InternalIpv4Address(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<InternalIpv4Address> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InternalIpv4Address> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.vpc.v1.AddressOuterClass.InternalIpv4Address getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6372,6 +7641,11 @@ public final class AddressOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_vpc_v1_ExternalIpv4Address_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_vpc_v1_InternalIpv4Address_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_vpc_v1_InternalIpv4Address_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_vpc_v1_AddressRequirements_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -6393,33 +7667,37 @@ public final class AddressOuterClass {
       "\n!yandex/cloud/vpc/v1/address.proto\022\023yan" +
       "dex.cloud.vpc.v1\032\037google/protobuf/timest" +
       "amp.proto\032\035yandex/cloud/validation.proto" +
-      "\"\234\005\n\007Address\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 " +
+      "\"\347\005\n\007Address\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 " +
       "\001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobu" +
       "f.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description" +
       "\030\005 \001(\t\0228\n\006labels\030\006 \003(\0132(.yandex.cloud.vp" +
       "c.v1.Address.LabelsEntry\022I\n\025external_ipv" +
       "4_address\030\007 \001(\0132(.yandex.cloud.vpc.v1.Ex" +
-      "ternalIpv4AddressH\000\022\020\n\010reserved\030\017 \001(\010\022\014\n" +
-      "\004used\030\020 \001(\010\022/\n\004type\030\021 \001(\0162!.yandex.cloud" +
-      ".vpc.v1.Address.Type\022:\n\nip_version\030\022 \001(\016" +
-      "2&.yandex.cloud.vpc.v1.Address.IpVersion" +
-      "\022\033\n\023deletion_protection\030\023 \001(\010\0223\n\013dns_rec" +
-      "ords\030\024 \003(\0132\036.yandex.cloud.vpc.v1.DnsReco" +
-      "rd\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\"8\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022" +
-      "\014\n\010INTERNAL\020\001\022\014\n\010EXTERNAL\020\002\";\n\tIpVersion" +
-      "\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010" +
-      "\n\004IPV6\020\002B\017\n\007address\022\004\300\3011\001J\004\010\010\020\017\"w\n\023Exter" +
-      "nalIpv4Address\022\017\n\007address\030\001 \001(\t\022\017\n\007zone_" +
-      "id\030\002 \001(\t\022>\n\014requirements\030\003 \001(\0132(.yandex." +
-      "cloud.vpc.v1.AddressRequirements\"Y\n\023Addr" +
-      "essRequirements\022 \n\030ddos_protection_provi" +
-      "der\030\001 \001(\t\022 \n\030outgoing_smtp_capability\030\002 " +
-      "\001(\t\"H\n\tDnsRecord\022\014\n\004fqdn\030\001 \001(\t\022\023\n\013dns_zo" +
-      "ne_id\030\002 \001(\t\022\013\n\003ttl\030\003 \001(\003\022\013\n\003ptr\030\004 \001(\010BV\n" +
-      "\027yandex.cloud.api.vpc.v1Z;github.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/vpc/v" +
-      "1;vpcb\006proto3"
+      "ternalIpv4AddressH\000\022I\n\025internal_ipv4_add" +
+      "ress\030\010 \001(\0132(.yandex.cloud.vpc.v1.Interna" +
+      "lIpv4AddressH\000\022\020\n\010reserved\030\017 \001(\010\022\014\n\004used" +
+      "\030\020 \001(\010\022/\n\004type\030\021 \001(\0162!.yandex.cloud.vpc." +
+      "v1.Address.Type\022:\n\nip_version\030\022 \001(\0162&.ya" +
+      "ndex.cloud.vpc.v1.Address.IpVersion\022\033\n\023d" +
+      "eletion_protection\030\023 \001(\010\0223\n\013dns_records\030" +
+      "\024 \003(\0132\036.yandex.cloud.vpc.v1.DnsRecord\032-\n" +
+      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\"8\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010IN" +
+      "TERNAL\020\001\022\014\n\010EXTERNAL\020\002\";\n\tIpVersion\022\032\n\026I" +
+      "P_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV" +
+      "6\020\002B\017\n\007address\022\004\300\3011\001J\004\010\t\020\017\"w\n\023ExternalIp" +
+      "v4Address\022\017\n\007address\030\001 \001(\t\022\017\n\007zone_id\030\002 " +
+      "\001(\t\022>\n\014requirements\030\003 \001(\0132(.yandex.cloud" +
+      ".vpc.v1.AddressRequirements\"J\n\023InternalI" +
+      "pv4Address\022\017\n\007address\030\001 \001(\t\022\023\n\tsubnet_id" +
+      "\030\002 \001(\tH\000B\r\n\005scope\022\004\300\3011\001\"Y\n\023AddressRequir" +
+      "ements\022 \n\030ddos_protection_provider\030\001 \001(\t" +
+      "\022 \n\030outgoing_smtp_capability\030\002 \001(\t\"H\n\tDn" +
+      "sRecord\022\014\n\004fqdn\030\001 \001(\t\022\023\n\013dns_zone_id\030\002 \001" +
+      "(\t\022\013\n\003ttl\030\003 \001(\003\022\013\n\003ptr\030\004 \001(\010BV\n\027yandex.c" +
+      "loud.api.vpc.v1Z;github.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/vpc/v1;vpcb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6432,7 +7710,7 @@ public final class AddressOuterClass {
     internal_static_yandex_cloud_vpc_v1_Address_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_Address_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "ExternalIpv4Address", "Reserved", "Used", "Type", "IpVersion", "DeletionProtection", "DnsRecords", "Address", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "ExternalIpv4Address", "InternalIpv4Address", "Reserved", "Used", "Type", "IpVersion", "DeletionProtection", "DnsRecords", "Address", });
     internal_static_yandex_cloud_vpc_v1_Address_LabelsEntry_descriptor =
       internal_static_yandex_cloud_vpc_v1_Address_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_vpc_v1_Address_LabelsEntry_fieldAccessorTable = new
@@ -6445,14 +7723,20 @@ public final class AddressOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_ExternalIpv4Address_descriptor,
         new java.lang.String[] { "Address", "ZoneId", "Requirements", });
-    internal_static_yandex_cloud_vpc_v1_AddressRequirements_descriptor =
+    internal_static_yandex_cloud_vpc_v1_InternalIpv4Address_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_vpc_v1_InternalIpv4Address_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_vpc_v1_InternalIpv4Address_descriptor,
+        new java.lang.String[] { "Address", "SubnetId", "Scope", });
+    internal_static_yandex_cloud_vpc_v1_AddressRequirements_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_vpc_v1_AddressRequirements_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_AddressRequirements_descriptor,
         new java.lang.String[] { "DdosProtectionProvider", "OutgoingSmtpCapability", });
     internal_static_yandex_cloud_vpc_v1_DnsRecord_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_vpc_v1_DnsRecord_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_DnsRecord_descriptor,

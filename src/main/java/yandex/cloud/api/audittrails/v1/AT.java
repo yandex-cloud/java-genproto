@@ -753,6 +753,132 @@ public final class AT {
     }
 
     /**
+     * Protobuf enum {@code yandex.cloud.audittrails.v1.Trail.Codec}
+     */
+    public enum Codec
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>CODEC_UNSPECIFIED = 0;</code>
+       */
+      CODEC_UNSPECIFIED(0),
+      /**
+       * <code>RAW = 1;</code>
+       */
+      RAW(1),
+      /**
+       * <code>GZIP = 2;</code>
+       */
+      GZIP(2),
+      /**
+       * <code>ZSTD = 3;</code>
+       */
+      ZSTD(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>CODEC_UNSPECIFIED = 0;</code>
+       */
+      public static final int CODEC_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>RAW = 1;</code>
+       */
+      public static final int RAW_VALUE = 1;
+      /**
+       * <code>GZIP = 2;</code>
+       */
+      public static final int GZIP_VALUE = 2;
+      /**
+       * <code>ZSTD = 3;</code>
+       */
+      public static final int ZSTD_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Codec valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Codec forNumber(int value) {
+        switch (value) {
+          case 0: return CODEC_UNSPECIFIED;
+          case 1: return RAW;
+          case 2: return GZIP;
+          case 3: return ZSTD;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Codec>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Codec> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Codec>() {
+              public Codec findValueByNumber(int number) {
+                return Codec.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.audittrails.v1.AT.Trail.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final Codec[] VALUES = values();
+
+      public static Codec valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Codec(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.audittrails.v1.Trail.Codec)
+    }
+
+    /**
      * Protobuf enum {@code yandex.cloud.audittrails.v1.Trail.EventCategoryFilter}
      */
     public enum EventCategoryFilter
@@ -859,7 +985,7 @@ public final class AT {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.audittrails.v1.AT.Trail.getDescriptor().getEnumTypes().get(1);
+        return yandex.cloud.api.audittrails.v1.AT.Trail.getDescriptor().getEnumTypes().get(2);
       }
 
       private static final EventCategoryFilter[] VALUES = values();
@@ -992,7 +1118,7 @@ public final class AT {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.audittrails.v1.AT.Trail.getDescriptor().getEnumTypes().get(2);
+        return yandex.cloud.api.audittrails.v1.AT.Trail.getDescriptor().getEnumTypes().get(3);
       }
 
       private static final EventAccessTypeFilter[] VALUES = values();
@@ -4254,6 +4380,25 @@ public final class AT {
        */
       com.google.protobuf.ByteString
           getStreamNameBytes();
+
+      /**
+       * <pre>
+       * Codec for compressing events
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.Codec codec = 3;</code>
+       * @return The enum numeric value on the wire for codec.
+       */
+      int getCodecValue();
+      /**
+       * <pre>
+       * Codec for compressing events
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.Codec codec = 3;</code>
+       * @return The codec.
+       */
+      yandex.cloud.api.audittrails.v1.AT.Trail.Codec getCodec();
     }
     /**
      * Protobuf type {@code yandex.cloud.audittrails.v1.Trail.DataStream}
@@ -4270,6 +4415,7 @@ public final class AT {
       private DataStream() {
         databaseId_ = "";
         streamName_ = "";
+        codec_ = 0;
       }
 
       @java.lang.Override
@@ -4312,6 +4458,12 @@ public final class AT {
                 java.lang.String s = input.readStringRequireUtf8();
 
                 streamName_ = s;
+                break;
+              }
+              case 24: {
+                int rawValue = input.readEnum();
+
+                codec_ = rawValue;
                 break;
               }
               default: {
@@ -4438,6 +4590,33 @@ public final class AT {
         }
       }
 
+      public static final int CODEC_FIELD_NUMBER = 3;
+      private int codec_;
+      /**
+       * <pre>
+       * Codec for compressing events
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.Codec codec = 3;</code>
+       * @return The enum numeric value on the wire for codec.
+       */
+      @java.lang.Override public int getCodecValue() {
+        return codec_;
+      }
+      /**
+       * <pre>
+       * Codec for compressing events
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.Codec codec = 3;</code>
+       * @return The codec.
+       */
+      @java.lang.Override public yandex.cloud.api.audittrails.v1.AT.Trail.Codec getCodec() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.audittrails.v1.AT.Trail.Codec result = yandex.cloud.api.audittrails.v1.AT.Trail.Codec.valueOf(codec_);
+        return result == null ? yandex.cloud.api.audittrails.v1.AT.Trail.Codec.UNRECOGNIZED : result;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -4458,6 +4637,9 @@ public final class AT {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(streamName_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, streamName_);
         }
+        if (codec_ != yandex.cloud.api.audittrails.v1.AT.Trail.Codec.CODEC_UNSPECIFIED.getNumber()) {
+          output.writeEnum(3, codec_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -4472,6 +4654,10 @@ public final class AT {
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(streamName_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, streamName_);
+        }
+        if (codec_ != yandex.cloud.api.audittrails.v1.AT.Trail.Codec.CODEC_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(3, codec_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -4492,6 +4678,7 @@ public final class AT {
             .equals(other.getDatabaseId())) return false;
         if (!getStreamName()
             .equals(other.getStreamName())) return false;
+        if (codec_ != other.codec_) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -4507,6 +4694,8 @@ public final class AT {
         hash = (53 * hash) + getDatabaseId().hashCode();
         hash = (37 * hash) + STREAM_NAME_FIELD_NUMBER;
         hash = (53 * hash) + getStreamName().hashCode();
+        hash = (37 * hash) + CODEC_FIELD_NUMBER;
+        hash = (53 * hash) + codec_;
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -4644,6 +4833,8 @@ public final class AT {
 
           streamName_ = "";
 
+          codec_ = 0;
+
           return this;
         }
 
@@ -4672,6 +4863,7 @@ public final class AT {
           yandex.cloud.api.audittrails.v1.AT.Trail.DataStream result = new yandex.cloud.api.audittrails.v1.AT.Trail.DataStream(this);
           result.databaseId_ = databaseId_;
           result.streamName_ = streamName_;
+          result.codec_ = codec_;
           onBuilt();
           return result;
         }
@@ -4727,6 +4919,9 @@ public final class AT {
           if (!other.getStreamName().isEmpty()) {
             streamName_ = other.streamName_;
             onChanged();
+          }
+          if (other.codec_ != 0) {
+            setCodecValue(other.getCodecValue());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -4945,6 +5140,80 @@ public final class AT {
   checkByteStringIsUtf8(value);
           
           streamName_ = value;
+          onChanged();
+          return this;
+        }
+
+        private int codec_ = 0;
+        /**
+         * <pre>
+         * Codec for compressing events
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.Codec codec = 3;</code>
+         * @return The enum numeric value on the wire for codec.
+         */
+        @java.lang.Override public int getCodecValue() {
+          return codec_;
+        }
+        /**
+         * <pre>
+         * Codec for compressing events
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.Codec codec = 3;</code>
+         * @param value The enum numeric value on the wire for codec to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCodecValue(int value) {
+          
+          codec_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Codec for compressing events
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.Codec codec = 3;</code>
+         * @return The codec.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.audittrails.v1.AT.Trail.Codec getCodec() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.audittrails.v1.AT.Trail.Codec result = yandex.cloud.api.audittrails.v1.AT.Trail.Codec.valueOf(codec_);
+          return result == null ? yandex.cloud.api.audittrails.v1.AT.Trail.Codec.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * Codec for compressing events
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.Codec codec = 3;</code>
+         * @param value The codec to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCodec(yandex.cloud.api.audittrails.v1.AT.Trail.Codec value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          codec_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Codec for compressing events
+         * </pre>
+         *
+         * <code>.yandex.cloud.audittrails.v1.Trail.Codec codec = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCodec() {
+          
+          codec_ = 0;
           onChanged();
           return this;
         }
@@ -18810,17 +19079,6 @@ public final class AT {
 
       /**
        * <pre>
-       * deprecated: use all_dns_queries instead
-       * </pre>
-       *
-       * <code>bool only_recursive_queries = 1 [deprecated = true];</code>
-       * @deprecated
-       * @return The onlyRecursiveQueries.
-       */
-      @java.lang.Deprecated boolean getOnlyRecursiveQueries();
-
-      /**
-       * <pre>
        * Not only recursive queries will be delivered
        * </pre>
        *
@@ -18874,11 +19132,6 @@ public final class AT {
               case 0:
                 done = true;
                 break;
-              case 8: {
-
-                onlyRecursiveQueries_ = input.readBool();
-                break;
-              }
               case 16: {
 
                 includeNonrecursiveQueries_ = input.readBool();
@@ -18916,22 +19169,6 @@ public final class AT {
                 yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.class, yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.Builder.class);
       }
 
-      public static final int ONLY_RECURSIVE_QUERIES_FIELD_NUMBER = 1;
-      private boolean onlyRecursiveQueries_;
-      /**
-       * <pre>
-       * deprecated: use all_dns_queries instead
-       * </pre>
-       *
-       * <code>bool only_recursive_queries = 1 [deprecated = true];</code>
-       * @deprecated
-       * @return The onlyRecursiveQueries.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated public boolean getOnlyRecursiveQueries() {
-        return onlyRecursiveQueries_;
-      }
-
       public static final int INCLUDE_NONRECURSIVE_QUERIES_FIELD_NUMBER = 2;
       private boolean includeNonrecursiveQueries_;
       /**
@@ -18961,9 +19198,6 @@ public final class AT {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (onlyRecursiveQueries_ != false) {
-          output.writeBool(1, onlyRecursiveQueries_);
-        }
         if (includeNonrecursiveQueries_ != false) {
           output.writeBool(2, includeNonrecursiveQueries_);
         }
@@ -18976,10 +19210,6 @@ public final class AT {
         if (size != -1) return size;
 
         size = 0;
-        if (onlyRecursiveQueries_ != false) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBoolSize(1, onlyRecursiveQueries_);
-        }
         if (includeNonrecursiveQueries_ != false) {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(2, includeNonrecursiveQueries_);
@@ -18999,8 +19229,6 @@ public final class AT {
         }
         yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter other = (yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter) obj;
 
-        if (getOnlyRecursiveQueries()
-            != other.getOnlyRecursiveQueries()) return false;
         if (getIncludeNonrecursiveQueries()
             != other.getIncludeNonrecursiveQueries()) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
@@ -19014,9 +19242,6 @@ public final class AT {
         }
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + ONLY_RECURSIVE_QUERIES_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getOnlyRecursiveQueries());
         hash = (37 * hash) + INCLUDE_NONRECURSIVE_QUERIES_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getIncludeNonrecursiveQueries());
@@ -19153,8 +19378,6 @@ public final class AT {
         @java.lang.Override
         public Builder clear() {
           super.clear();
-          onlyRecursiveQueries_ = false;
-
           includeNonrecursiveQueries_ = false;
 
           return this;
@@ -19183,7 +19406,6 @@ public final class AT {
         @java.lang.Override
         public yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter buildPartial() {
           yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter result = new yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter(this);
-          result.onlyRecursiveQueries_ = onlyRecursiveQueries_;
           result.includeNonrecursiveQueries_ = includeNonrecursiveQueries_;
           onBuilt();
           return result;
@@ -19233,9 +19455,6 @@ public final class AT {
 
         public Builder mergeFrom(yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter other) {
           if (other == yandex.cloud.api.audittrails.v1.AT.Trail.DnsDataEventsFilter.getDefaultInstance()) return this;
-          if (other.getOnlyRecursiveQueries() != false) {
-            setOnlyRecursiveQueries(other.getOnlyRecursiveQueries());
-          }
           if (other.getIncludeNonrecursiveQueries() != false) {
             setIncludeNonrecursiveQueries(other.getIncludeNonrecursiveQueries());
           }
@@ -19265,52 +19484,6 @@ public final class AT {
               mergeFrom(parsedMessage);
             }
           }
-          return this;
-        }
-
-        private boolean onlyRecursiveQueries_ ;
-        /**
-         * <pre>
-         * deprecated: use all_dns_queries instead
-         * </pre>
-         *
-         * <code>bool only_recursive_queries = 1 [deprecated = true];</code>
-         * @deprecated
-         * @return The onlyRecursiveQueries.
-         */
-        @java.lang.Override
-        @java.lang.Deprecated public boolean getOnlyRecursiveQueries() {
-          return onlyRecursiveQueries_;
-        }
-        /**
-         * <pre>
-         * deprecated: use all_dns_queries instead
-         * </pre>
-         *
-         * <code>bool only_recursive_queries = 1 [deprecated = true];</code>
-         * @deprecated
-         * @param value The onlyRecursiveQueries to set.
-         * @return This builder for chaining.
-         */
-        @java.lang.Deprecated public Builder setOnlyRecursiveQueries(boolean value) {
-          
-          onlyRecursiveQueries_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * deprecated: use all_dns_queries instead
-         * </pre>
-         *
-         * <code>bool only_recursive_queries = 1 [deprecated = true];</code>
-         * @deprecated
-         * @return This builder for chaining.
-         */
-        @java.lang.Deprecated public Builder clearOnlyRecursiveQueries() {
-          
-          onlyRecursiveQueries_ = false;
-          onChanged();
           return this;
         }
 
@@ -22547,7 +22720,7 @@ public final class AT {
       "\n\'yandex/cloud/audittrails/v1/trail.prot" +
       "o\022\033yandex.cloud.audittrails.v1\032\037google/p" +
       "rotobuf/timestamp.proto\032\035yandex/cloud/va" +
-      "lidation.proto\"\327\035\n\005Trail\022\n\n\002id\030\001 \001(\t\022\037\n\t" +
+      "lidation.proto\"\257\036\n\005Trail\022\n\n\002id\030\001 \001(\t\022\037\n\t" +
       "folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\0224\n\ncreated" +
       "_at\030\003 \001(\0132\032.google.protobuf.TimestampB\004\350" +
       "\3071\001\0224\n\nupdated_at\030\004 \001(\0132\032.google.protobu" +
@@ -22579,73 +22752,75 @@ public final class AT {
       "C\n\rObjectStorage\022\033\n\tbucket_id\030\001 \001(\tB\010\212\3101" +
       "\0043-63\022\025\n\robject_prefix\030\002 \001(\t\032E\n\014CloudLog" +
       "ging\022 \n\014log_group_id\030\001 \001(\tB\010\212\3101\004<=64H\000B\r" +
-      "\n\013destinationJ\004\010\002\020\003\0326\n\nDataStream\022\023\n\013dat" +
-      "abase_id\030\001 \001(\t\022\023\n\013stream_name\030\002 \001(\t\0329\n\013E" +
-      "ventRouter\022*\n\030eventrouter_connector_id\030\001" +
-      " \001(\tB\010\212\3101\004<=64\032\230\001\n\006Filter\022B\n\013path_filter" +
-      "\030\001 \001(\0132-.yandex.cloud.audittrails.v1.Tra" +
-      "il.PathFilter\022J\n\014event_filter\030\002 \001(\0132..ya" +
-      "ndex.cloud.audittrails.v1.Trail.EventFil" +
-      "terB\004\350\3071\001\032V\n\nPathFilter\022H\n\004root\030\001 \001(\01324." +
-      "yandex.cloud.audittrails.v1.Trail.PathFi" +
-      "lterElementB\004\350\3071\001\032\304\001\n\021PathFilterElement\022" +
-      "M\n\nany_filter\030\001 \001(\01327.yandex.cloud.audit" +
-      "trails.v1.Trail.PathFilterElementAnyH\000\022O" +
-      "\n\013some_filter\030\002 \001(\01328.yandex.cloud.audit" +
-      "trails.v1.Trail.PathFilterElementSomeH\000B" +
-      "\017\n\007element\022\004\300\3011\001\032[\n\024PathFilterElementAny" +
-      "\022C\n\010resource\030\001 \001(\0132+.yandex.cloud.auditt" +
-      "rails.v1.Trail.ResourceB\004\350\3071\001\032\253\001\n\025PathFi" +
-      "lterElementSome\022C\n\010resource\030\001 \001(\0132+.yand" +
-      "ex.cloud.audittrails.v1.Trail.ResourceB\004" +
-      "\350\3071\001\022M\n\007filters\030\002 \003(\01324.yandex.cloud.aud" +
-      "ittrails.v1.Trail.PathFilterElementB\006\202\3101" +
-      "\002>0\032@\n\010Resource\022\030\n\002id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=6" +
-      "4\022\032\n\004type\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\032^\n\013EventFi" +
-      "lter\022O\n\007filters\030\001 \003(\01325.yandex.cloud.aud" +
-      "ittrails.v1.Trail.EventFilterElementB\007\202\310" +
-      "1\003>=0\032\320\001\n\022EventFilterElement\022\025\n\007service\030" +
-      "\001 \001(\tB\004\350\3071\001\022Y\n\ncategories\030\002 \003(\0132=.yandex" +
-      ".cloud.audittrails.v1.Trail.EventFilterE" +
-      "lementCategoryB\006\202\3101\002>0\022H\n\013path_filter\030\003 " +
-      "\001(\0132-.yandex.cloud.audittrails.v1.Trail." +
-      "PathFilterB\004\350\3071\001\032\267\001\n\032EventFilterElementC" +
-      "ategory\022K\n\005plane\030\001 \001(\01626.yandex.cloud.au" +
-      "dittrails.v1.Trail.EventCategoryFilterB\004" +
-      "\350\3071\001\022L\n\004type\030\002 \001(\01628.yandex.cloud.auditt" +
-      "rails.v1.Trail.EventAccessTypeFilterB\004\350\307" +
-      "1\001\032\216\003\n\023DataEventsFiltering\022\025\n\007service\030\001 " +
-      "\001(\tB\004\350\3071\001\022H\n\017included_events\030\002 \001(\0132-.yan" +
-      "dex.cloud.audittrails.v1.Trail.EventType" +
-      "sH\000\022H\n\017excluded_events\030\003 \001(\0132-.yandex.cl" +
-      "oud.audittrails.v1.Trail.EventTypesH\000\022L\n" +
-      "\ndns_filter\030\005 \001(\01326.yandex.cloud.audittr" +
-      "ails.v1.Trail.DnsDataEventsFilterH\001\022P\n\017r" +
-      "esource_scopes\030\004 \003(\0132+.yandex.cloud.audi" +
-      "ttrails.v1.Trail.ResourceB\n\202\3101\0061-1024B\022\n" +
-      "\020additional_rulesB\030\n\026service_specific_ru" +
-      "les\032-\n\nEventTypes\022\037\n\013event_types\030\001 \003(\tB\n" +
-      "\202\3101\0061-1024\032m\n\031ManagementEventsFiltering\022" +
-      "P\n\017resource_scopes\030\001 \003(\0132+.yandex.cloud." +
-      "audittrails.v1.Trail.ResourceB\n\202\3101\0061-102" +
-      "4\032\326\001\n\017FilteringPolicy\022d\n\030management_even" +
-      "ts_filter\030\001 \001(\0132<.yandex.cloud.audittrai" +
-      "ls.v1.Trail.ManagementEventsFilteringB\004\350" +
-      "\3071\000\022]\n\023data_events_filters\030\002 \003(\01326.yande" +
-      "x.cloud.audittrails.v1.Trail.DataEventsF" +
-      "ilteringB\010\202\3101\004<128\032_\n\023DnsDataEventsFilte" +
-      "r\022\"\n\026only_recursive_queries\030\001 \001(\010B\002\030\001\022$\n" +
-      "\034include_nonrecursive_queries\030\002 \001(\010\"D\n\006S" +
-      "tatus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\n\n\006ACTIVE\020" +
-      "\001\022\t\n\005ERROR\020\002\022\013\n\007DELETED\020\003\"_\n\023EventCatego" +
-      "ryFilter\022%\n!EVENT_CATEGORY_FILTER_UNSPEC" +
-      "IFIED\020\000\022\021\n\rCONTROL_PLANE\020\001\022\016\n\nDATA_PLANE" +
-      "\020\002\"V\n\025EventAccessTypeFilter\022(\n$EVENT_ACC" +
-      "ESS_TYPE_FILTER_UNSPECIFIED\020\000\022\t\n\005WRITE\020\001" +
-      "\022\010\n\004READ\020\002J\004\010\r\020\016Br\n\037yandex.cloud.api.aud" +
-      "ittrails.v1B\002ATZKgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/audittrails/v1" +
-      ";audittrailsb\006proto3"
+      "\n\013destinationJ\004\010\002\020\003\032o\n\nDataStream\022\023\n\013dat" +
+      "abase_id\030\001 \001(\t\022\023\n\013stream_name\030\002 \001(\t\0227\n\005c" +
+      "odec\030\003 \001(\0162(.yandex.cloud.audittrails.v1" +
+      ".Trail.Codec\0329\n\013EventRouter\022*\n\030eventrout" +
+      "er_connector_id\030\001 \001(\tB\010\212\3101\004<=64\032\230\001\n\006Filt" +
+      "er\022B\n\013path_filter\030\001 \001(\0132-.yandex.cloud.a" +
+      "udittrails.v1.Trail.PathFilter\022J\n\014event_" +
+      "filter\030\002 \001(\0132..yandex.cloud.audittrails." +
+      "v1.Trail.EventFilterB\004\350\3071\001\032V\n\nPathFilter" +
+      "\022H\n\004root\030\001 \001(\01324.yandex.cloud.audittrail" +
+      "s.v1.Trail.PathFilterElementB\004\350\3071\001\032\304\001\n\021P" +
+      "athFilterElement\022M\n\nany_filter\030\001 \001(\01327.y" +
+      "andex.cloud.audittrails.v1.Trail.PathFil" +
+      "terElementAnyH\000\022O\n\013some_filter\030\002 \001(\01328.y" +
+      "andex.cloud.audittrails.v1.Trail.PathFil" +
+      "terElementSomeH\000B\017\n\007element\022\004\300\3011\001\032[\n\024Pat" +
+      "hFilterElementAny\022C\n\010resource\030\001 \001(\0132+.ya" +
+      "ndex.cloud.audittrails.v1.Trail.Resource" +
+      "B\004\350\3071\001\032\253\001\n\025PathFilterElementSome\022C\n\010reso" +
+      "urce\030\001 \001(\0132+.yandex.cloud.audittrails.v1" +
+      ".Trail.ResourceB\004\350\3071\001\022M\n\007filters\030\002 \003(\01324" +
+      ".yandex.cloud.audittrails.v1.Trail.PathF" +
+      "ilterElementB\006\202\3101\002>0\032@\n\010Resource\022\030\n\002id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=64\022\032\n\004type\030\002 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\032^\n\013EventFilter\022O\n\007filters\030\001 \003(\01325" +
+      ".yandex.cloud.audittrails.v1.Trail.Event" +
+      "FilterElementB\007\202\3101\003>=0\032\320\001\n\022EventFilterEl" +
+      "ement\022\025\n\007service\030\001 \001(\tB\004\350\3071\001\022Y\n\ncategori" +
+      "es\030\002 \003(\0132=.yandex.cloud.audittrails.v1.T" +
+      "rail.EventFilterElementCategoryB\006\202\3101\002>0\022" +
+      "H\n\013path_filter\030\003 \001(\0132-.yandex.cloud.audi" +
+      "ttrails.v1.Trail.PathFilterB\004\350\3071\001\032\267\001\n\032Ev" +
+      "entFilterElementCategory\022K\n\005plane\030\001 \001(\0162" +
+      "6.yandex.cloud.audittrails.v1.Trail.Even" +
+      "tCategoryFilterB\004\350\3071\001\022L\n\004type\030\002 \001(\01628.ya" +
+      "ndex.cloud.audittrails.v1.Trail.EventAcc" +
+      "essTypeFilterB\004\350\3071\001\032\216\003\n\023DataEventsFilter" +
+      "ing\022\025\n\007service\030\001 \001(\tB\004\350\3071\001\022H\n\017included_e" +
+      "vents\030\002 \001(\0132-.yandex.cloud.audittrails.v" +
+      "1.Trail.EventTypesH\000\022H\n\017excluded_events\030" +
+      "\003 \001(\0132-.yandex.cloud.audittrails.v1.Trai" +
+      "l.EventTypesH\000\022L\n\ndns_filter\030\005 \001(\01326.yan" +
+      "dex.cloud.audittrails.v1.Trail.DnsDataEv" +
+      "entsFilterH\001\022P\n\017resource_scopes\030\004 \003(\0132+." +
+      "yandex.cloud.audittrails.v1.Trail.Resour" +
+      "ceB\n\202\3101\0061-1024B\022\n\020additional_rulesB\030\n\026se" +
+      "rvice_specific_rules\032-\n\nEventTypes\022\037\n\013ev" +
+      "ent_types\030\001 \003(\tB\n\202\3101\0061-1024\032m\n\031Managemen" +
+      "tEventsFiltering\022P\n\017resource_scopes\030\001 \003(" +
+      "\0132+.yandex.cloud.audittrails.v1.Trail.Re" +
+      "sourceB\n\202\3101\0061-1024\032\326\001\n\017FilteringPolicy\022d" +
+      "\n\030management_events_filter\030\001 \001(\0132<.yande" +
+      "x.cloud.audittrails.v1.Trail.ManagementE" +
+      "ventsFilteringB\004\350\3071\000\022]\n\023data_events_filt" +
+      "ers\030\002 \003(\01326.yandex.cloud.audittrails.v1." +
+      "Trail.DataEventsFilteringB\010\202\3101\004<128\032A\n\023D" +
+      "nsDataEventsFilter\022$\n\034include_nonrecursi" +
+      "ve_queries\030\002 \001(\010J\004\010\001\020\002\"D\n\006Status\022\026\n\022STAT" +
+      "US_UNSPECIFIED\020\000\022\n\n\006ACTIVE\020\001\022\t\n\005ERROR\020\002\022" +
+      "\013\n\007DELETED\020\003\";\n\005Codec\022\025\n\021CODEC_UNSPECIFI" +
+      "ED\020\000\022\007\n\003RAW\020\001\022\010\n\004GZIP\020\002\022\010\n\004ZSTD\020\003\"_\n\023Eve" +
+      "ntCategoryFilter\022%\n!EVENT_CATEGORY_FILTE" +
+      "R_UNSPECIFIED\020\000\022\021\n\rCONTROL_PLANE\020\001\022\016\n\nDA" +
+      "TA_PLANE\020\002\"V\n\025EventAccessTypeFilter\022(\n$E" +
+      "VENT_ACCESS_TYPE_FILTER_UNSPECIFIED\020\000\022\t\n" +
+      "\005WRITE\020\001\022\010\n\004READ\020\002J\004\010\r\020\016Br\n\037yandex.cloud" +
+      ".api.audittrails.v1B\002ATZKgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/auditt" +
+      "rails/v1;audittrailsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -22688,7 +22863,7 @@ public final class AT {
     internal_static_yandex_cloud_audittrails_v1_Trail_DataStream_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_DataStream_descriptor,
-        new java.lang.String[] { "DatabaseId", "StreamName", });
+        new java.lang.String[] { "DatabaseId", "StreamName", "Codec", });
     internal_static_yandex_cloud_audittrails_v1_Trail_EventRouter_descriptor =
       internal_static_yandex_cloud_audittrails_v1_Trail_descriptor.getNestedTypes().get(5);
     internal_static_yandex_cloud_audittrails_v1_Trail_EventRouter_fieldAccessorTable = new
@@ -22778,7 +22953,7 @@ public final class AT {
     internal_static_yandex_cloud_audittrails_v1_Trail_DnsDataEventsFilter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_Trail_DnsDataEventsFilter_descriptor,
-        new java.lang.String[] { "OnlyRecursiveQueries", "IncludeNonrecursiveQueries", });
+        new java.lang.String[] { "IncludeNonrecursiveQueries", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);

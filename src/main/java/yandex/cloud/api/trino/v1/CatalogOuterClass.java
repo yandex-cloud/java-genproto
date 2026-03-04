@@ -261,6 +261,87 @@ public final class CatalogOuterClass {
      */
     yandex.cloud.api.trino.v1.CatalogOuterClass.SQLServerConnectorOrBuilder getSqlserverOrBuilder();
 
+    /**
+     * <pre>
+     * Hudi connector configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.HudiConnector hudi = 10;</code>
+     * @return Whether the hudi field is set.
+     */
+    boolean hasHudi();
+    /**
+     * <pre>
+     * Hudi connector configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.HudiConnector hudi = 10;</code>
+     * @return The hudi.
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector getHudi();
+    /**
+     * <pre>
+     * Hudi connector configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.HudiConnector hudi = 10;</code>
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnectorOrBuilder getHudiOrBuilder();
+
+    /**
+     * <pre>
+     * MySQL connector configuration for connecting to MySQL Database instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnector mysql = 11;</code>
+     * @return Whether the mysql field is set.
+     */
+    boolean hasMysql();
+    /**
+     * <pre>
+     * MySQL connector configuration for connecting to MySQL Database instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnector mysql = 11;</code>
+     * @return The mysql.
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector getMysql();
+    /**
+     * <pre>
+     * MySQL connector configuration for connecting to MySQL Database instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnector mysql = 11;</code>
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnectorOrBuilder getMysqlOrBuilder();
+
+    /**
+     * <pre>
+     * Greenplum connector configuration for connecting to Greenplum or Cloudberry Database instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnector greenplum = 12;</code>
+     * @return Whether the greenplum field is set.
+     */
+    boolean hasGreenplum();
+    /**
+     * <pre>
+     * Greenplum connector configuration for connecting to Greenplum or Cloudberry Database instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnector greenplum = 12;</code>
+     * @return The greenplum.
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector getGreenplum();
+    /**
+     * <pre>
+     * Greenplum connector configuration for connecting to Greenplum or Cloudberry Database instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnector greenplum = 12;</code>
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnectorOrBuilder getGreenplumOrBuilder();
+
     public yandex.cloud.api.trino.v1.CatalogOuterClass.Connector.TypeCase getTypeCase();
   }
   /**
@@ -438,6 +519,48 @@ public final class CatalogOuterClass {
               typeCase_ = 9;
               break;
             }
+            case 82: {
+              yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.Builder subBuilder = null;
+              if (typeCase_ == 10) {
+                subBuilder = ((yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 10;
+              break;
+            }
+            case 90: {
+              yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.Builder subBuilder = null;
+              if (typeCase_ == 11) {
+                subBuilder = ((yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 11;
+              break;
+            }
+            case 98: {
+              yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.Builder subBuilder = null;
+              if (typeCase_ == 12) {
+                subBuilder = ((yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 12;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -484,6 +607,9 @@ public final class CatalogOuterClass {
       TPCDS(7),
       ORACLE(8),
       SQLSERVER(9),
+      HUDI(10),
+      MYSQL(11),
+      GREENPLUM(12),
       TYPE_NOT_SET(0);
       private final int value;
       private TypeCase(int value) {
@@ -510,6 +636,9 @@ public final class CatalogOuterClass {
           case 7: return TPCDS;
           case 8: return ORACLE;
           case 9: return SQLSERVER;
+          case 10: return HUDI;
+          case 11: return MYSQL;
+          case 12: return GREENPLUM;
           case 0: return TYPE_NOT_SET;
           default: return null;
         }
@@ -912,6 +1041,135 @@ public final class CatalogOuterClass {
       return yandex.cloud.api.trino.v1.CatalogOuterClass.SQLServerConnector.getDefaultInstance();
     }
 
+    public static final int HUDI_FIELD_NUMBER = 10;
+    /**
+     * <pre>
+     * Hudi connector configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.HudiConnector hudi = 10;</code>
+     * @return Whether the hudi field is set.
+     */
+    @java.lang.Override
+    public boolean hasHudi() {
+      return typeCase_ == 10;
+    }
+    /**
+     * <pre>
+     * Hudi connector configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.HudiConnector hudi = 10;</code>
+     * @return The hudi.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector getHudi() {
+      if (typeCase_ == 10) {
+         return (yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector) type_;
+      }
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Hudi connector configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.HudiConnector hudi = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnectorOrBuilder getHudiOrBuilder() {
+      if (typeCase_ == 10) {
+         return (yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector) type_;
+      }
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.getDefaultInstance();
+    }
+
+    public static final int MYSQL_FIELD_NUMBER = 11;
+    /**
+     * <pre>
+     * MySQL connector configuration for connecting to MySQL Database instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnector mysql = 11;</code>
+     * @return Whether the mysql field is set.
+     */
+    @java.lang.Override
+    public boolean hasMysql() {
+      return typeCase_ == 11;
+    }
+    /**
+     * <pre>
+     * MySQL connector configuration for connecting to MySQL Database instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnector mysql = 11;</code>
+     * @return The mysql.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector getMysql() {
+      if (typeCase_ == 11) {
+         return (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector) type_;
+      }
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * MySQL connector configuration for connecting to MySQL Database instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnector mysql = 11;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnectorOrBuilder getMysqlOrBuilder() {
+      if (typeCase_ == 11) {
+         return (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector) type_;
+      }
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.getDefaultInstance();
+    }
+
+    public static final int GREENPLUM_FIELD_NUMBER = 12;
+    /**
+     * <pre>
+     * Greenplum connector configuration for connecting to Greenplum or Cloudberry Database instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnector greenplum = 12;</code>
+     * @return Whether the greenplum field is set.
+     */
+    @java.lang.Override
+    public boolean hasGreenplum() {
+      return typeCase_ == 12;
+    }
+    /**
+     * <pre>
+     * Greenplum connector configuration for connecting to Greenplum or Cloudberry Database instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnector greenplum = 12;</code>
+     * @return The greenplum.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector getGreenplum() {
+      if (typeCase_ == 12) {
+         return (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector) type_;
+      }
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Greenplum connector configuration for connecting to Greenplum or Cloudberry Database instances.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnector greenplum = 12;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnectorOrBuilder getGreenplumOrBuilder() {
+      if (typeCase_ == 12) {
+         return (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector) type_;
+      }
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -952,6 +1210,15 @@ public final class CatalogOuterClass {
       }
       if (typeCase_ == 9) {
         output.writeMessage(9, (yandex.cloud.api.trino.v1.CatalogOuterClass.SQLServerConnector) type_);
+      }
+      if (typeCase_ == 10) {
+        output.writeMessage(10, (yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector) type_);
+      }
+      if (typeCase_ == 11) {
+        output.writeMessage(11, (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector) type_);
+      }
+      if (typeCase_ == 12) {
+        output.writeMessage(12, (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector) type_);
       }
       unknownFields.writeTo(output);
     }
@@ -997,6 +1264,18 @@ public final class CatalogOuterClass {
       if (typeCase_ == 9) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, (yandex.cloud.api.trino.v1.CatalogOuterClass.SQLServerConnector) type_);
+      }
+      if (typeCase_ == 10) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, (yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector) type_);
+      }
+      if (typeCase_ == 11) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector) type_);
+      }
+      if (typeCase_ == 12) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector) type_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1051,6 +1330,18 @@ public final class CatalogOuterClass {
           if (!getSqlserver()
               .equals(other.getSqlserver())) return false;
           break;
+        case 10:
+          if (!getHudi()
+              .equals(other.getHudi())) return false;
+          break;
+        case 11:
+          if (!getMysql()
+              .equals(other.getMysql())) return false;
+          break;
+        case 12:
+          if (!getGreenplum()
+              .equals(other.getGreenplum())) return false;
+          break;
         case 0:
         default:
       }
@@ -1101,6 +1392,18 @@ public final class CatalogOuterClass {
         case 9:
           hash = (37 * hash) + SQLSERVER_FIELD_NUMBER;
           hash = (53 * hash) + getSqlserver().hashCode();
+          break;
+        case 10:
+          hash = (37 * hash) + HUDI_FIELD_NUMBER;
+          hash = (53 * hash) + getHudi().hashCode();
+          break;
+        case 11:
+          hash = (37 * hash) + MYSQL_FIELD_NUMBER;
+          hash = (53 * hash) + getMysql().hashCode();
+          break;
+        case 12:
+          hash = (37 * hash) + GREENPLUM_FIELD_NUMBER;
+          hash = (53 * hash) + getGreenplum().hashCode();
           break;
         case 0:
         default:
@@ -1333,6 +1636,27 @@ public final class CatalogOuterClass {
             result.type_ = sqlserverBuilder_.build();
           }
         }
+        if (typeCase_ == 10) {
+          if (hudiBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = hudiBuilder_.build();
+          }
+        }
+        if (typeCase_ == 11) {
+          if (mysqlBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = mysqlBuilder_.build();
+          }
+        }
+        if (typeCase_ == 12) {
+          if (greenplumBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = greenplumBuilder_.build();
+          }
+        }
         result.typeCase_ = typeCase_;
         onBuilt();
         return result;
@@ -1417,6 +1741,18 @@ public final class CatalogOuterClass {
           }
           case SQLSERVER: {
             mergeSqlserver(other.getSqlserver());
+            break;
+          }
+          case HUDI: {
+            mergeHudi(other.getHudi());
+            break;
+          }
+          case MYSQL: {
+            mergeMysql(other.getMysql());
+            break;
+          }
+          case GREENPLUM: {
+            mergeGreenplum(other.getGreenplum());
             break;
           }
           case TYPE_NOT_SET: {
@@ -3058,6 +3394,537 @@ public final class CatalogOuterClass {
         typeCase_ = 9;
         onChanged();;
         return sqlserverBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector, yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnectorOrBuilder> hudiBuilder_;
+      /**
+       * <pre>
+       * Hudi connector configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.HudiConnector hudi = 10;</code>
+       * @return Whether the hudi field is set.
+       */
+      @java.lang.Override
+      public boolean hasHudi() {
+        return typeCase_ == 10;
+      }
+      /**
+       * <pre>
+       * Hudi connector configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.HudiConnector hudi = 10;</code>
+       * @return The hudi.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector getHudi() {
+        if (hudiBuilder_ == null) {
+          if (typeCase_ == 10) {
+            return (yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector) type_;
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.getDefaultInstance();
+        } else {
+          if (typeCase_ == 10) {
+            return hudiBuilder_.getMessage();
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Hudi connector configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.HudiConnector hudi = 10;</code>
+       */
+      public Builder setHudi(yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector value) {
+        if (hudiBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          hudiBuilder_.setMessage(value);
+        }
+        typeCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Hudi connector configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.HudiConnector hudi = 10;</code>
+       */
+      public Builder setHudi(
+          yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.Builder builderForValue) {
+        if (hudiBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          hudiBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Hudi connector configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.HudiConnector hudi = 10;</code>
+       */
+      public Builder mergeHudi(yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector value) {
+        if (hudiBuilder_ == null) {
+          if (typeCase_ == 10 &&
+              type_ != yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.getDefaultInstance()) {
+            type_ = yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.newBuilder((yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 10) {
+            hudiBuilder_.mergeFrom(value);
+          }
+          hudiBuilder_.setMessage(value);
+        }
+        typeCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Hudi connector configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.HudiConnector hudi = 10;</code>
+       */
+      public Builder clearHudi() {
+        if (hudiBuilder_ == null) {
+          if (typeCase_ == 10) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 10) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          hudiBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Hudi connector configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.HudiConnector hudi = 10;</code>
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.Builder getHudiBuilder() {
+        return getHudiFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Hudi connector configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.HudiConnector hudi = 10;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnectorOrBuilder getHudiOrBuilder() {
+        if ((typeCase_ == 10) && (hudiBuilder_ != null)) {
+          return hudiBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 10) {
+            return (yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector) type_;
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Hudi connector configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.HudiConnector hudi = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector, yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnectorOrBuilder> 
+          getHudiFieldBuilder() {
+        if (hudiBuilder_ == null) {
+          if (!(typeCase_ == 10)) {
+            type_ = yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.getDefaultInstance();
+          }
+          hudiBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector, yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnectorOrBuilder>(
+                  (yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 10;
+        onChanged();;
+        return hudiBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnectorOrBuilder> mysqlBuilder_;
+      /**
+       * <pre>
+       * MySQL connector configuration for connecting to MySQL Database instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnector mysql = 11;</code>
+       * @return Whether the mysql field is set.
+       */
+      @java.lang.Override
+      public boolean hasMysql() {
+        return typeCase_ == 11;
+      }
+      /**
+       * <pre>
+       * MySQL connector configuration for connecting to MySQL Database instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnector mysql = 11;</code>
+       * @return The mysql.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector getMysql() {
+        if (mysqlBuilder_ == null) {
+          if (typeCase_ == 11) {
+            return (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector) type_;
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.getDefaultInstance();
+        } else {
+          if (typeCase_ == 11) {
+            return mysqlBuilder_.getMessage();
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * MySQL connector configuration for connecting to MySQL Database instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnector mysql = 11;</code>
+       */
+      public Builder setMysql(yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector value) {
+        if (mysqlBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          mysqlBuilder_.setMessage(value);
+        }
+        typeCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * MySQL connector configuration for connecting to MySQL Database instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnector mysql = 11;</code>
+       */
+      public Builder setMysql(
+          yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.Builder builderForValue) {
+        if (mysqlBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          mysqlBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * MySQL connector configuration for connecting to MySQL Database instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnector mysql = 11;</code>
+       */
+      public Builder mergeMysql(yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector value) {
+        if (mysqlBuilder_ == null) {
+          if (typeCase_ == 11 &&
+              type_ != yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.getDefaultInstance()) {
+            type_ = yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.newBuilder((yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 11) {
+            mysqlBuilder_.mergeFrom(value);
+          }
+          mysqlBuilder_.setMessage(value);
+        }
+        typeCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * MySQL connector configuration for connecting to MySQL Database instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnector mysql = 11;</code>
+       */
+      public Builder clearMysql() {
+        if (mysqlBuilder_ == null) {
+          if (typeCase_ == 11) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 11) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          mysqlBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * MySQL connector configuration for connecting to MySQL Database instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnector mysql = 11;</code>
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.Builder getMysqlBuilder() {
+        return getMysqlFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * MySQL connector configuration for connecting to MySQL Database instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnector mysql = 11;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnectorOrBuilder getMysqlOrBuilder() {
+        if ((typeCase_ == 11) && (mysqlBuilder_ != null)) {
+          return mysqlBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 11) {
+            return (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector) type_;
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * MySQL connector configuration for connecting to MySQL Database instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnector mysql = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnectorOrBuilder> 
+          getMysqlFieldBuilder() {
+        if (mysqlBuilder_ == null) {
+          if (!(typeCase_ == 11)) {
+            type_ = yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.getDefaultInstance();
+          }
+          mysqlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnectorOrBuilder>(
+                  (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 11;
+        onChanged();;
+        return mysqlBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnectorOrBuilder> greenplumBuilder_;
+      /**
+       * <pre>
+       * Greenplum connector configuration for connecting to Greenplum or Cloudberry Database instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnector greenplum = 12;</code>
+       * @return Whether the greenplum field is set.
+       */
+      @java.lang.Override
+      public boolean hasGreenplum() {
+        return typeCase_ == 12;
+      }
+      /**
+       * <pre>
+       * Greenplum connector configuration for connecting to Greenplum or Cloudberry Database instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnector greenplum = 12;</code>
+       * @return The greenplum.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector getGreenplum() {
+        if (greenplumBuilder_ == null) {
+          if (typeCase_ == 12) {
+            return (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector) type_;
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.getDefaultInstance();
+        } else {
+          if (typeCase_ == 12) {
+            return greenplumBuilder_.getMessage();
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Greenplum connector configuration for connecting to Greenplum or Cloudberry Database instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnector greenplum = 12;</code>
+       */
+      public Builder setGreenplum(yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector value) {
+        if (greenplumBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          greenplumBuilder_.setMessage(value);
+        }
+        typeCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * Greenplum connector configuration for connecting to Greenplum or Cloudberry Database instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnector greenplum = 12;</code>
+       */
+      public Builder setGreenplum(
+          yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.Builder builderForValue) {
+        if (greenplumBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          greenplumBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * Greenplum connector configuration for connecting to Greenplum or Cloudberry Database instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnector greenplum = 12;</code>
+       */
+      public Builder mergeGreenplum(yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector value) {
+        if (greenplumBuilder_ == null) {
+          if (typeCase_ == 12 &&
+              type_ != yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.getDefaultInstance()) {
+            type_ = yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.newBuilder((yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 12) {
+            greenplumBuilder_.mergeFrom(value);
+          }
+          greenplumBuilder_.setMessage(value);
+        }
+        typeCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * Greenplum connector configuration for connecting to Greenplum or Cloudberry Database instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnector greenplum = 12;</code>
+       */
+      public Builder clearGreenplum() {
+        if (greenplumBuilder_ == null) {
+          if (typeCase_ == 12) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 12) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          greenplumBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Greenplum connector configuration for connecting to Greenplum or Cloudberry Database instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnector greenplum = 12;</code>
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.Builder getGreenplumBuilder() {
+        return getGreenplumFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Greenplum connector configuration for connecting to Greenplum or Cloudberry Database instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnector greenplum = 12;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnectorOrBuilder getGreenplumOrBuilder() {
+        if ((typeCase_ == 12) && (greenplumBuilder_ != null)) {
+          return greenplumBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 12) {
+            return (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector) type_;
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Greenplum connector configuration for connecting to Greenplum or Cloudberry Database instances.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnector greenplum = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnectorOrBuilder> 
+          getGreenplumFieldBuilder() {
+        if (greenplumBuilder_ == null) {
+          if (!(typeCase_ == 12)) {
+            type_ = yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.getDefaultInstance();
+          }
+          greenplumBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnectorOrBuilder>(
+                  (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 12;
+        onChanged();;
+        return greenplumBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7673,16 +8540,28 @@ public final class CatalogOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Apache Hive Metastore.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.Metastore.HiveMetastore hive = 1;</code>
      * @return Whether the hive field is set.
      */
     boolean hasHive();
     /**
+     * <pre>
+     * Apache Hive Metastore.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.Metastore.HiveMetastore hive = 1;</code>
      * @return The hive.
      */
     yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore.HiveMetastore getHive();
     /**
+     * <pre>
+     * Apache Hive Metastore.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.Metastore.HiveMetastore hive = 1;</code>
      */
     yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore.HiveMetastoreOrBuilder getHiveOrBuilder();
@@ -8567,6 +9446,10 @@ public final class CatalogOuterClass {
 
     public static final int HIVE_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Apache Hive Metastore.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.Metastore.HiveMetastore hive = 1;</code>
      * @return Whether the hive field is set.
      */
@@ -8575,6 +9458,10 @@ public final class CatalogOuterClass {
       return typeCase_ == 1;
     }
     /**
+     * <pre>
+     * Apache Hive Metastore.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.Metastore.HiveMetastore hive = 1;</code>
      * @return The hive.
      */
@@ -8586,6 +9473,10 @@ public final class CatalogOuterClass {
       return yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore.HiveMetastore.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Apache Hive Metastore.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.Metastore.HiveMetastore hive = 1;</code>
      */
     @java.lang.Override
@@ -8946,6 +9837,10 @@ public final class CatalogOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore.HiveMetastore, yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore.HiveMetastore.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore.HiveMetastoreOrBuilder> hiveBuilder_;
       /**
+       * <pre>
+       * Apache Hive Metastore.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.Metastore.HiveMetastore hive = 1;</code>
        * @return Whether the hive field is set.
        */
@@ -8954,6 +9849,10 @@ public final class CatalogOuterClass {
         return typeCase_ == 1;
       }
       /**
+       * <pre>
+       * Apache Hive Metastore.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.Metastore.HiveMetastore hive = 1;</code>
        * @return The hive.
        */
@@ -8972,6 +9871,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * Apache Hive Metastore.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.Metastore.HiveMetastore hive = 1;</code>
        */
       public Builder setHive(yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore.HiveMetastore value) {
@@ -8988,6 +9891,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Apache Hive Metastore.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.Metastore.HiveMetastore hive = 1;</code>
        */
       public Builder setHive(
@@ -9002,6 +9909,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Apache Hive Metastore.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.Metastore.HiveMetastore hive = 1;</code>
        */
       public Builder mergeHive(yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore.HiveMetastore value) {
@@ -9024,6 +9935,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Apache Hive Metastore.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.Metastore.HiveMetastore hive = 1;</code>
        */
       public Builder clearHive() {
@@ -9043,12 +9958,20 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Apache Hive Metastore.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.Metastore.HiveMetastore hive = 1;</code>
        */
       public yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore.HiveMetastore.Builder getHiveBuilder() {
         return getHiveFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Apache Hive Metastore.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.Metastore.HiveMetastore hive = 1;</code>
        */
       @java.lang.Override
@@ -9063,6 +9986,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * Apache Hive Metastore.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.Metastore.HiveMetastore hive = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -9141,31 +10068,55 @@ public final class CatalogOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Yandex Cloud S3 filesystem.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.FileSystem.S3FileSystem s3 = 1;</code>
      * @return Whether the s3 field is set.
      */
     boolean hasS3();
     /**
+     * <pre>
+     * Yandex Cloud S3 filesystem.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.FileSystem.S3FileSystem s3 = 1;</code>
      * @return The s3.
      */
     yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.S3FileSystem getS3();
     /**
+     * <pre>
+     * Yandex Cloud S3 filesystem.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.FileSystem.S3FileSystem s3 = 1;</code>
      */
     yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.S3FileSystemOrBuilder getS3OrBuilder();
 
     /**
+     * <pre>
+     * External S3 filesystem.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.FileSystem.ExternalS3FileSystem external_s3 = 2;</code>
      * @return Whether the externalS3 field is set.
      */
     boolean hasExternalS3();
     /**
+     * <pre>
+     * External S3 filesystem.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.FileSystem.ExternalS3FileSystem external_s3 = 2;</code>
      * @return The externalS3.
      */
     yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.ExternalS3FileSystem getExternalS3();
     /**
+     * <pre>
+     * External S3 filesystem.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.FileSystem.ExternalS3FileSystem external_s3 = 2;</code>
      */
     yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.ExternalS3FileSystemOrBuilder getExternalS3OrBuilder();
@@ -9714,11 +10665,19 @@ public final class CatalogOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * AWS access key.
+       * </pre>
+       *
        * <code>string aws_access_key = 1 [(.yandex.cloud.required) = true];</code>
        * @return The awsAccessKey.
        */
       java.lang.String getAwsAccessKey();
       /**
+       * <pre>
+       * AWS access key.
+       * </pre>
+       *
        * <code>string aws_access_key = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for awsAccessKey.
        */
@@ -9726,11 +10685,19 @@ public final class CatalogOuterClass {
           getAwsAccessKeyBytes();
 
       /**
+       * <pre>
+       * AWS secret key.
+       * </pre>
+       *
        * <code>string aws_secret_key = 2 [(.yandex.cloud.required) = true];</code>
        * @return The awsSecretKey.
        */
       java.lang.String getAwsSecretKey();
       /**
+       * <pre>
+       * AWS secret key.
+       * </pre>
+       *
        * <code>string aws_secret_key = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for awsSecretKey.
        */
@@ -9738,11 +10705,19 @@ public final class CatalogOuterClass {
           getAwsSecretKeyBytes();
 
       /**
+       * <pre>
+       * AWS endpoint.
+       * </pre>
+       *
        * <code>string aws_endpoint = 3 [(.yandex.cloud.required) = true];</code>
        * @return The awsEndpoint.
        */
       java.lang.String getAwsEndpoint();
       /**
+       * <pre>
+       * AWS endpoint.
+       * </pre>
+       *
        * <code>string aws_endpoint = 3 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for awsEndpoint.
        */
@@ -9750,11 +10725,19 @@ public final class CatalogOuterClass {
           getAwsEndpointBytes();
 
       /**
+       * <pre>
+       * AWS region.
+       * </pre>
+       *
        * <code>string aws_region = 4 [(.yandex.cloud.required) = true];</code>
        * @return The awsRegion.
        */
       java.lang.String getAwsRegion();
       /**
+       * <pre>
+       * AWS region.
+       * </pre>
+       *
        * <code>string aws_region = 4 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for awsRegion.
        */
@@ -9873,6 +10856,10 @@ public final class CatalogOuterClass {
       public static final int AWS_ACCESS_KEY_FIELD_NUMBER = 1;
       private volatile java.lang.Object awsAccessKey_;
       /**
+       * <pre>
+       * AWS access key.
+       * </pre>
+       *
        * <code>string aws_access_key = 1 [(.yandex.cloud.required) = true];</code>
        * @return The awsAccessKey.
        */
@@ -9890,6 +10877,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * AWS access key.
+       * </pre>
+       *
        * <code>string aws_access_key = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for awsAccessKey.
        */
@@ -9911,6 +10902,10 @@ public final class CatalogOuterClass {
       public static final int AWS_SECRET_KEY_FIELD_NUMBER = 2;
       private volatile java.lang.Object awsSecretKey_;
       /**
+       * <pre>
+       * AWS secret key.
+       * </pre>
+       *
        * <code>string aws_secret_key = 2 [(.yandex.cloud.required) = true];</code>
        * @return The awsSecretKey.
        */
@@ -9928,6 +10923,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * AWS secret key.
+       * </pre>
+       *
        * <code>string aws_secret_key = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for awsSecretKey.
        */
@@ -9949,6 +10948,10 @@ public final class CatalogOuterClass {
       public static final int AWS_ENDPOINT_FIELD_NUMBER = 3;
       private volatile java.lang.Object awsEndpoint_;
       /**
+       * <pre>
+       * AWS endpoint.
+       * </pre>
+       *
        * <code>string aws_endpoint = 3 [(.yandex.cloud.required) = true];</code>
        * @return The awsEndpoint.
        */
@@ -9966,6 +10969,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * AWS endpoint.
+       * </pre>
+       *
        * <code>string aws_endpoint = 3 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for awsEndpoint.
        */
@@ -9987,6 +10994,10 @@ public final class CatalogOuterClass {
       public static final int AWS_REGION_FIELD_NUMBER = 4;
       private volatile java.lang.Object awsRegion_;
       /**
+       * <pre>
+       * AWS region.
+       * </pre>
+       *
        * <code>string aws_region = 4 [(.yandex.cloud.required) = true];</code>
        * @return The awsRegion.
        */
@@ -10004,6 +11015,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * AWS region.
+       * </pre>
+       *
        * <code>string aws_region = 4 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for awsRegion.
        */
@@ -10381,6 +11396,10 @@ public final class CatalogOuterClass {
 
         private java.lang.Object awsAccessKey_ = "";
         /**
+         * <pre>
+         * AWS access key.
+         * </pre>
+         *
          * <code>string aws_access_key = 1 [(.yandex.cloud.required) = true];</code>
          * @return The awsAccessKey.
          */
@@ -10397,6 +11416,10 @@ public final class CatalogOuterClass {
           }
         }
         /**
+         * <pre>
+         * AWS access key.
+         * </pre>
+         *
          * <code>string aws_access_key = 1 [(.yandex.cloud.required) = true];</code>
          * @return The bytes for awsAccessKey.
          */
@@ -10414,6 +11437,10 @@ public final class CatalogOuterClass {
           }
         }
         /**
+         * <pre>
+         * AWS access key.
+         * </pre>
+         *
          * <code>string aws_access_key = 1 [(.yandex.cloud.required) = true];</code>
          * @param value The awsAccessKey to set.
          * @return This builder for chaining.
@@ -10429,6 +11456,10 @@ public final class CatalogOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * AWS access key.
+         * </pre>
+         *
          * <code>string aws_access_key = 1 [(.yandex.cloud.required) = true];</code>
          * @return This builder for chaining.
          */
@@ -10439,6 +11470,10 @@ public final class CatalogOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * AWS access key.
+         * </pre>
+         *
          * <code>string aws_access_key = 1 [(.yandex.cloud.required) = true];</code>
          * @param value The bytes for awsAccessKey to set.
          * @return This builder for chaining.
@@ -10457,6 +11492,10 @@ public final class CatalogOuterClass {
 
         private java.lang.Object awsSecretKey_ = "";
         /**
+         * <pre>
+         * AWS secret key.
+         * </pre>
+         *
          * <code>string aws_secret_key = 2 [(.yandex.cloud.required) = true];</code>
          * @return The awsSecretKey.
          */
@@ -10473,6 +11512,10 @@ public final class CatalogOuterClass {
           }
         }
         /**
+         * <pre>
+         * AWS secret key.
+         * </pre>
+         *
          * <code>string aws_secret_key = 2 [(.yandex.cloud.required) = true];</code>
          * @return The bytes for awsSecretKey.
          */
@@ -10490,6 +11533,10 @@ public final class CatalogOuterClass {
           }
         }
         /**
+         * <pre>
+         * AWS secret key.
+         * </pre>
+         *
          * <code>string aws_secret_key = 2 [(.yandex.cloud.required) = true];</code>
          * @param value The awsSecretKey to set.
          * @return This builder for chaining.
@@ -10505,6 +11552,10 @@ public final class CatalogOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * AWS secret key.
+         * </pre>
+         *
          * <code>string aws_secret_key = 2 [(.yandex.cloud.required) = true];</code>
          * @return This builder for chaining.
          */
@@ -10515,6 +11566,10 @@ public final class CatalogOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * AWS secret key.
+         * </pre>
+         *
          * <code>string aws_secret_key = 2 [(.yandex.cloud.required) = true];</code>
          * @param value The bytes for awsSecretKey to set.
          * @return This builder for chaining.
@@ -10533,6 +11588,10 @@ public final class CatalogOuterClass {
 
         private java.lang.Object awsEndpoint_ = "";
         /**
+         * <pre>
+         * AWS endpoint.
+         * </pre>
+         *
          * <code>string aws_endpoint = 3 [(.yandex.cloud.required) = true];</code>
          * @return The awsEndpoint.
          */
@@ -10549,6 +11608,10 @@ public final class CatalogOuterClass {
           }
         }
         /**
+         * <pre>
+         * AWS endpoint.
+         * </pre>
+         *
          * <code>string aws_endpoint = 3 [(.yandex.cloud.required) = true];</code>
          * @return The bytes for awsEndpoint.
          */
@@ -10566,6 +11629,10 @@ public final class CatalogOuterClass {
           }
         }
         /**
+         * <pre>
+         * AWS endpoint.
+         * </pre>
+         *
          * <code>string aws_endpoint = 3 [(.yandex.cloud.required) = true];</code>
          * @param value The awsEndpoint to set.
          * @return This builder for chaining.
@@ -10581,6 +11648,10 @@ public final class CatalogOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * AWS endpoint.
+         * </pre>
+         *
          * <code>string aws_endpoint = 3 [(.yandex.cloud.required) = true];</code>
          * @return This builder for chaining.
          */
@@ -10591,6 +11662,10 @@ public final class CatalogOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * AWS endpoint.
+         * </pre>
+         *
          * <code>string aws_endpoint = 3 [(.yandex.cloud.required) = true];</code>
          * @param value The bytes for awsEndpoint to set.
          * @return This builder for chaining.
@@ -10609,6 +11684,10 @@ public final class CatalogOuterClass {
 
         private java.lang.Object awsRegion_ = "";
         /**
+         * <pre>
+         * AWS region.
+         * </pre>
+         *
          * <code>string aws_region = 4 [(.yandex.cloud.required) = true];</code>
          * @return The awsRegion.
          */
@@ -10625,6 +11704,10 @@ public final class CatalogOuterClass {
           }
         }
         /**
+         * <pre>
+         * AWS region.
+         * </pre>
+         *
          * <code>string aws_region = 4 [(.yandex.cloud.required) = true];</code>
          * @return The bytes for awsRegion.
          */
@@ -10642,6 +11725,10 @@ public final class CatalogOuterClass {
           }
         }
         /**
+         * <pre>
+         * AWS region.
+         * </pre>
+         *
          * <code>string aws_region = 4 [(.yandex.cloud.required) = true];</code>
          * @param value The awsRegion to set.
          * @return This builder for chaining.
@@ -10657,6 +11744,10 @@ public final class CatalogOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * AWS region.
+         * </pre>
+         *
          * <code>string aws_region = 4 [(.yandex.cloud.required) = true];</code>
          * @return This builder for chaining.
          */
@@ -10667,6 +11758,10 @@ public final class CatalogOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * AWS region.
+         * </pre>
+         *
          * <code>string aws_region = 4 [(.yandex.cloud.required) = true];</code>
          * @param value The bytes for awsRegion to set.
          * @return This builder for chaining.
@@ -10778,6 +11873,10 @@ public final class CatalogOuterClass {
 
     public static final int S3_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Yandex Cloud S3 filesystem.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.FileSystem.S3FileSystem s3 = 1;</code>
      * @return Whether the s3 field is set.
      */
@@ -10786,6 +11885,10 @@ public final class CatalogOuterClass {
       return typeCase_ == 1;
     }
     /**
+     * <pre>
+     * Yandex Cloud S3 filesystem.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.FileSystem.S3FileSystem s3 = 1;</code>
      * @return The s3.
      */
@@ -10797,6 +11900,10 @@ public final class CatalogOuterClass {
       return yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.S3FileSystem.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Yandex Cloud S3 filesystem.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.FileSystem.S3FileSystem s3 = 1;</code>
      */
     @java.lang.Override
@@ -10809,6 +11916,10 @@ public final class CatalogOuterClass {
 
     public static final int EXTERNAL_S3_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * External S3 filesystem.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.FileSystem.ExternalS3FileSystem external_s3 = 2;</code>
      * @return Whether the externalS3 field is set.
      */
@@ -10817,6 +11928,10 @@ public final class CatalogOuterClass {
       return typeCase_ == 2;
     }
     /**
+     * <pre>
+     * External S3 filesystem.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.FileSystem.ExternalS3FileSystem external_s3 = 2;</code>
      * @return The externalS3.
      */
@@ -10828,6 +11943,10 @@ public final class CatalogOuterClass {
       return yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.ExternalS3FileSystem.getDefaultInstance();
     }
     /**
+     * <pre>
+     * External S3 filesystem.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.FileSystem.ExternalS3FileSystem external_s3 = 2;</code>
      */
     @java.lang.Override
@@ -11214,6 +12333,10 @@ public final class CatalogOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.S3FileSystem, yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.S3FileSystem.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.S3FileSystemOrBuilder> s3Builder_;
       /**
+       * <pre>
+       * Yandex Cloud S3 filesystem.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.FileSystem.S3FileSystem s3 = 1;</code>
        * @return Whether the s3 field is set.
        */
@@ -11222,6 +12345,10 @@ public final class CatalogOuterClass {
         return typeCase_ == 1;
       }
       /**
+       * <pre>
+       * Yandex Cloud S3 filesystem.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.FileSystem.S3FileSystem s3 = 1;</code>
        * @return The s3.
        */
@@ -11240,6 +12367,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * Yandex Cloud S3 filesystem.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.FileSystem.S3FileSystem s3 = 1;</code>
        */
       public Builder setS3(yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.S3FileSystem value) {
@@ -11256,6 +12387,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Cloud S3 filesystem.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.FileSystem.S3FileSystem s3 = 1;</code>
        */
       public Builder setS3(
@@ -11270,6 +12405,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Cloud S3 filesystem.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.FileSystem.S3FileSystem s3 = 1;</code>
        */
       public Builder mergeS3(yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.S3FileSystem value) {
@@ -11292,6 +12431,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Cloud S3 filesystem.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.FileSystem.S3FileSystem s3 = 1;</code>
        */
       public Builder clearS3() {
@@ -11311,12 +12454,20 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Yandex Cloud S3 filesystem.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.FileSystem.S3FileSystem s3 = 1;</code>
        */
       public yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.S3FileSystem.Builder getS3Builder() {
         return getS3FieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Yandex Cloud S3 filesystem.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.FileSystem.S3FileSystem s3 = 1;</code>
        */
       @java.lang.Override
@@ -11331,6 +12482,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * Yandex Cloud S3 filesystem.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.FileSystem.S3FileSystem s3 = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -11355,6 +12510,10 @@ public final class CatalogOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.ExternalS3FileSystem, yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.ExternalS3FileSystem.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.ExternalS3FileSystemOrBuilder> externalS3Builder_;
       /**
+       * <pre>
+       * External S3 filesystem.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.FileSystem.ExternalS3FileSystem external_s3 = 2;</code>
        * @return Whether the externalS3 field is set.
        */
@@ -11363,6 +12522,10 @@ public final class CatalogOuterClass {
         return typeCase_ == 2;
       }
       /**
+       * <pre>
+       * External S3 filesystem.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.FileSystem.ExternalS3FileSystem external_s3 = 2;</code>
        * @return The externalS3.
        */
@@ -11381,6 +12544,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * External S3 filesystem.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.FileSystem.ExternalS3FileSystem external_s3 = 2;</code>
        */
       public Builder setExternalS3(yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.ExternalS3FileSystem value) {
@@ -11397,6 +12564,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * External S3 filesystem.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.FileSystem.ExternalS3FileSystem external_s3 = 2;</code>
        */
       public Builder setExternalS3(
@@ -11411,6 +12582,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * External S3 filesystem.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.FileSystem.ExternalS3FileSystem external_s3 = 2;</code>
        */
       public Builder mergeExternalS3(yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.ExternalS3FileSystem value) {
@@ -11433,6 +12608,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * External S3 filesystem.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.FileSystem.ExternalS3FileSystem external_s3 = 2;</code>
        */
       public Builder clearExternalS3() {
@@ -11452,12 +12631,20 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * External S3 filesystem.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.FileSystem.ExternalS3FileSystem external_s3 = 2;</code>
        */
       public yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.ExternalS3FileSystem.Builder getExternalS3Builder() {
         return getExternalS3FieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * External S3 filesystem.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.FileSystem.ExternalS3FileSystem external_s3 = 2;</code>
        */
       @java.lang.Override
@@ -11472,6 +12659,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * External S3 filesystem.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.FileSystem.ExternalS3FileSystem external_s3 = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -15538,36 +16729,1391 @@ public final class CatalogOuterClass {
 
   }
 
+  public interface HudiConnectorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.trino.v1.HudiConnector)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Metastore configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.Metastore metastore = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the metastore field is set.
+     */
+    boolean hasMetastore();
+    /**
+     * <pre>
+     * Metastore configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.Metastore metastore = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The metastore.
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore getMetastore();
+    /**
+     * <pre>
+     * Metastore configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.Metastore metastore = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.MetastoreOrBuilder getMetastoreOrBuilder();
+
+    /**
+     * <pre>
+     * File system configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.FileSystem filesystem = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the filesystem field is set.
+     */
+    boolean hasFilesystem();
+    /**
+     * <pre>
+     * File system configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.FileSystem filesystem = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The filesystem.
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem getFilesystem();
+    /**
+     * <pre>
+     * File system configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.FileSystem filesystem = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystemOrBuilder getFilesystemOrBuilder();
+
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getAdditionalPropertiesCount();
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsAdditionalProperties(
+        java.lang.String key);
+    /**
+     * Use {@link #getAdditionalPropertiesMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getAdditionalProperties();
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getAdditionalPropertiesMap();
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getAdditionalPropertiesOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getAdditionalPropertiesOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.trino.v1.HudiConnector}
+   */
+  public static final class HudiConnector extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.trino.v1.HudiConnector)
+      HudiConnectorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HudiConnector.newBuilder() to construct.
+    private HudiConnector(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HudiConnector() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HudiConnector();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private HudiConnector(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore.Builder subBuilder = null;
+              if (metastore_ != null) {
+                subBuilder = metastore_.toBuilder();
+              }
+              metastore_ = input.readMessage(yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(metastore_);
+                metastore_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.Builder subBuilder = null;
+              if (filesystem_ != null) {
+                subBuilder = filesystem_.toBuilder();
+              }
+              filesystem_ = input.readMessage(yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(filesystem_);
+                filesystem_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                additionalProperties_ = com.google.protobuf.MapField.newMapField(
+                    AdditionalPropertiesDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              additionalProperties__ = input.readMessage(
+                  AdditionalPropertiesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              additionalProperties_.getMutableMap().put(
+                  additionalProperties__.getKey(), additionalProperties__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_HudiConnector_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 3:
+          return internalGetAdditionalProperties();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_HudiConnector_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.class, yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.Builder.class);
+    }
+
+    public static final int METASTORE_FIELD_NUMBER = 1;
+    private yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore metastore_;
+    /**
+     * <pre>
+     * Metastore configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.Metastore metastore = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the metastore field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetastore() {
+      return metastore_ != null;
+    }
+    /**
+     * <pre>
+     * Metastore configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.Metastore metastore = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The metastore.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore getMetastore() {
+      return metastore_ == null ? yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore.getDefaultInstance() : metastore_;
+    }
+    /**
+     * <pre>
+     * Metastore configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.Metastore metastore = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.MetastoreOrBuilder getMetastoreOrBuilder() {
+      return getMetastore();
+    }
+
+    public static final int FILESYSTEM_FIELD_NUMBER = 2;
+    private yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem filesystem_;
+    /**
+     * <pre>
+     * File system configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.FileSystem filesystem = 2 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the filesystem field is set.
+     */
+    @java.lang.Override
+    public boolean hasFilesystem() {
+      return filesystem_ != null;
+    }
+    /**
+     * <pre>
+     * File system configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.FileSystem filesystem = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The filesystem.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem getFilesystem() {
+      return filesystem_ == null ? yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.getDefaultInstance() : filesystem_;
+    }
+    /**
+     * <pre>
+     * File system configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.FileSystem filesystem = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystemOrBuilder getFilesystemOrBuilder() {
+      return getFilesystem();
+    }
+
+    public static final int ADDITIONAL_PROPERTIES_FIELD_NUMBER = 3;
+    private static final class AdditionalPropertiesDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_HudiConnector_AdditionalPropertiesEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> additionalProperties_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetAdditionalProperties() {
+      if (additionalProperties_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            AdditionalPropertiesDefaultEntryHolder.defaultEntry);
+      }
+      return additionalProperties_;
+    }
+
+    public int getAdditionalPropertiesCount() {
+      return internalGetAdditionalProperties().getMap().size();
+    }
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsAdditionalProperties(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetAdditionalProperties().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getAdditionalPropertiesMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getAdditionalProperties() {
+      return getAdditionalPropertiesMap();
+    }
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getAdditionalPropertiesMap() {
+      return internalGetAdditionalProperties().getMap();
+    }
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getAdditionalPropertiesOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetAdditionalProperties().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getAdditionalPropertiesOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetAdditionalProperties().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (metastore_ != null) {
+        output.writeMessage(1, getMetastore());
+      }
+      if (filesystem_ != null) {
+        output.writeMessage(2, getFilesystem());
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetAdditionalProperties(),
+          AdditionalPropertiesDefaultEntryHolder.defaultEntry,
+          3);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (metastore_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMetastore());
+      }
+      if (filesystem_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getFilesystem());
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetAdditionalProperties().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        additionalProperties__ = AdditionalPropertiesDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, additionalProperties__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector other = (yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector) obj;
+
+      if (hasMetastore() != other.hasMetastore()) return false;
+      if (hasMetastore()) {
+        if (!getMetastore()
+            .equals(other.getMetastore())) return false;
+      }
+      if (hasFilesystem() != other.hasFilesystem()) return false;
+      if (hasFilesystem()) {
+        if (!getFilesystem()
+            .equals(other.getFilesystem())) return false;
+      }
+      if (!internalGetAdditionalProperties().equals(
+          other.internalGetAdditionalProperties())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMetastore()) {
+        hash = (37 * hash) + METASTORE_FIELD_NUMBER;
+        hash = (53 * hash) + getMetastore().hashCode();
+      }
+      if (hasFilesystem()) {
+        hash = (37 * hash) + FILESYSTEM_FIELD_NUMBER;
+        hash = (53 * hash) + getFilesystem().hashCode();
+      }
+      if (!internalGetAdditionalProperties().getMap().isEmpty()) {
+        hash = (37 * hash) + ADDITIONAL_PROPERTIES_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetAdditionalProperties().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.trino.v1.HudiConnector}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.trino.v1.HudiConnector)
+        yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnectorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_HudiConnector_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetAdditionalProperties();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetMutableAdditionalProperties();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_HudiConnector_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.class, yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metastoreBuilder_ == null) {
+          metastore_ = null;
+        } else {
+          metastore_ = null;
+          metastoreBuilder_ = null;
+        }
+        if (filesystemBuilder_ == null) {
+          filesystem_ = null;
+        } else {
+          filesystem_ = null;
+          filesystemBuilder_ = null;
+        }
+        internalGetMutableAdditionalProperties().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_HudiConnector_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector getDefaultInstanceForType() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector build() {
+        yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector buildPartial() {
+        yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector result = new yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector(this);
+        int from_bitField0_ = bitField0_;
+        if (metastoreBuilder_ == null) {
+          result.metastore_ = metastore_;
+        } else {
+          result.metastore_ = metastoreBuilder_.build();
+        }
+        if (filesystemBuilder_ == null) {
+          result.filesystem_ = filesystem_;
+        } else {
+          result.filesystem_ = filesystemBuilder_.build();
+        }
+        result.additionalProperties_ = internalGetAdditionalProperties();
+        result.additionalProperties_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector) {
+          return mergeFrom((yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector other) {
+        if (other == yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector.getDefaultInstance()) return this;
+        if (other.hasMetastore()) {
+          mergeMetastore(other.getMetastore());
+        }
+        if (other.hasFilesystem()) {
+          mergeFilesystem(other.getFilesystem());
+        }
+        internalGetMutableAdditionalProperties().mergeFrom(
+            other.internalGetAdditionalProperties());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore metastore_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore, yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.MetastoreOrBuilder> metastoreBuilder_;
+      /**
+       * <pre>
+       * Metastore configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.Metastore metastore = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the metastore field is set.
+       */
+      public boolean hasMetastore() {
+        return metastoreBuilder_ != null || metastore_ != null;
+      }
+      /**
+       * <pre>
+       * Metastore configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.Metastore metastore = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The metastore.
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore getMetastore() {
+        if (metastoreBuilder_ == null) {
+          return metastore_ == null ? yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore.getDefaultInstance() : metastore_;
+        } else {
+          return metastoreBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Metastore configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.Metastore metastore = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setMetastore(yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore value) {
+        if (metastoreBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metastore_ = value;
+          onChanged();
+        } else {
+          metastoreBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Metastore configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.Metastore metastore = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setMetastore(
+          yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore.Builder builderForValue) {
+        if (metastoreBuilder_ == null) {
+          metastore_ = builderForValue.build();
+          onChanged();
+        } else {
+          metastoreBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Metastore configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.Metastore metastore = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergeMetastore(yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore value) {
+        if (metastoreBuilder_ == null) {
+          if (metastore_ != null) {
+            metastore_ =
+              yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore.newBuilder(metastore_).mergeFrom(value).buildPartial();
+          } else {
+            metastore_ = value;
+          }
+          onChanged();
+        } else {
+          metastoreBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Metastore configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.Metastore metastore = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearMetastore() {
+        if (metastoreBuilder_ == null) {
+          metastore_ = null;
+          onChanged();
+        } else {
+          metastore_ = null;
+          metastoreBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Metastore configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.Metastore metastore = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore.Builder getMetastoreBuilder() {
+        
+        onChanged();
+        return getMetastoreFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Metastore configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.Metastore metastore = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MetastoreOrBuilder getMetastoreOrBuilder() {
+        if (metastoreBuilder_ != null) {
+          return metastoreBuilder_.getMessageOrBuilder();
+        } else {
+          return metastore_ == null ?
+              yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore.getDefaultInstance() : metastore_;
+        }
+      }
+      /**
+       * <pre>
+       * Metastore configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.Metastore metastore = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore, yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.MetastoreOrBuilder> 
+          getMetastoreFieldBuilder() {
+        if (metastoreBuilder_ == null) {
+          metastoreBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore, yandex.cloud.api.trino.v1.CatalogOuterClass.Metastore.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.MetastoreOrBuilder>(
+                  getMetastore(),
+                  getParentForChildren(),
+                  isClean());
+          metastore_ = null;
+        }
+        return metastoreBuilder_;
+      }
+
+      private yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem filesystem_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem, yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystemOrBuilder> filesystemBuilder_;
+      /**
+       * <pre>
+       * File system configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.FileSystem filesystem = 2 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the filesystem field is set.
+       */
+      public boolean hasFilesystem() {
+        return filesystemBuilder_ != null || filesystem_ != null;
+      }
+      /**
+       * <pre>
+       * File system configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.FileSystem filesystem = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The filesystem.
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem getFilesystem() {
+        if (filesystemBuilder_ == null) {
+          return filesystem_ == null ? yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.getDefaultInstance() : filesystem_;
+        } else {
+          return filesystemBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * File system configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.FileSystem filesystem = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setFilesystem(yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem value) {
+        if (filesystemBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          filesystem_ = value;
+          onChanged();
+        } else {
+          filesystemBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * File system configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.FileSystem filesystem = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setFilesystem(
+          yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.Builder builderForValue) {
+        if (filesystemBuilder_ == null) {
+          filesystem_ = builderForValue.build();
+          onChanged();
+        } else {
+          filesystemBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * File system configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.FileSystem filesystem = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergeFilesystem(yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem value) {
+        if (filesystemBuilder_ == null) {
+          if (filesystem_ != null) {
+            filesystem_ =
+              yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.newBuilder(filesystem_).mergeFrom(value).buildPartial();
+          } else {
+            filesystem_ = value;
+          }
+          onChanged();
+        } else {
+          filesystemBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * File system configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.FileSystem filesystem = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearFilesystem() {
+        if (filesystemBuilder_ == null) {
+          filesystem_ = null;
+          onChanged();
+        } else {
+          filesystem_ = null;
+          filesystemBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * File system configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.FileSystem filesystem = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.Builder getFilesystemBuilder() {
+        
+        onChanged();
+        return getFilesystemFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * File system configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.FileSystem filesystem = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystemOrBuilder getFilesystemOrBuilder() {
+        if (filesystemBuilder_ != null) {
+          return filesystemBuilder_.getMessageOrBuilder();
+        } else {
+          return filesystem_ == null ?
+              yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.getDefaultInstance() : filesystem_;
+        }
+      }
+      /**
+       * <pre>
+       * File system configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.FileSystem filesystem = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem, yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystemOrBuilder> 
+          getFilesystemFieldBuilder() {
+        if (filesystemBuilder_ == null) {
+          filesystemBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem, yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystem.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.FileSystemOrBuilder>(
+                  getFilesystem(),
+                  getParentForChildren(),
+                  isClean());
+          filesystem_ = null;
+        }
+        return filesystemBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> additionalProperties_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetAdditionalProperties() {
+        if (additionalProperties_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              AdditionalPropertiesDefaultEntryHolder.defaultEntry);
+        }
+        return additionalProperties_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableAdditionalProperties() {
+        onChanged();;
+        if (additionalProperties_ == null) {
+          additionalProperties_ = com.google.protobuf.MapField.newMapField(
+              AdditionalPropertiesDefaultEntryHolder.defaultEntry);
+        }
+        if (!additionalProperties_.isMutable()) {
+          additionalProperties_ = additionalProperties_.copy();
+        }
+        return additionalProperties_;
+      }
+
+      public int getAdditionalPropertiesCount() {
+        return internalGetAdditionalProperties().getMap().size();
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsAdditionalProperties(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetAdditionalProperties().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getAdditionalPropertiesMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getAdditionalProperties() {
+        return getAdditionalPropertiesMap();
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getAdditionalPropertiesMap() {
+        return internalGetAdditionalProperties().getMap();
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getAdditionalPropertiesOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetAdditionalProperties().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getAdditionalPropertiesOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetAdditionalProperties().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearAdditionalProperties() {
+        internalGetMutableAdditionalProperties().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeAdditionalProperties(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableAdditionalProperties().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableAdditionalProperties() {
+        return internalGetMutableAdditionalProperties().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putAdditionalProperties(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableAdditionalProperties().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllAdditionalProperties(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableAdditionalProperties().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.trino.v1.HudiConnector)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.trino.v1.HudiConnector)
+    private static final yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector();
+    }
+
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HudiConnector>
+        PARSER = new com.google.protobuf.AbstractParser<HudiConnector>() {
+      @java.lang.Override
+      public HudiConnector parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new HudiConnector(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<HudiConnector> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HudiConnector> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.HudiConnector getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PostgresqlConnectionOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.trino.v1.PostgresqlConnection)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.PostgresqlConnection.OnPremise on_premise = 1;</code>
      * @return Whether the onPremise field is set.
      */
     boolean hasOnPremise();
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.PostgresqlConnection.OnPremise on_premise = 1;</code>
      * @return The onPremise.
      */
     yandex.cloud.api.trino.v1.CatalogOuterClass.PostgresqlConnection.OnPremise getOnPremise();
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.PostgresqlConnection.OnPremise on_premise = 1;</code>
      */
     yandex.cloud.api.trino.v1.CatalogOuterClass.PostgresqlConnection.OnPremiseOrBuilder getOnPremiseOrBuilder();
 
     /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.PostgresqlConnection.ConnectionManager connection_manager = 2;</code>
      * @return Whether the connectionManager field is set.
      */
     boolean hasConnectionManager();
     /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.PostgresqlConnection.ConnectionManager connection_manager = 2;</code>
      * @return The connectionManager.
      */
     yandex.cloud.api.trino.v1.CatalogOuterClass.PostgresqlConnection.ConnectionManager getConnectionManager();
     /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.PostgresqlConnection.ConnectionManager connection_manager = 2;</code>
      */
     yandex.cloud.api.trino.v1.CatalogOuterClass.PostgresqlConnection.ConnectionManagerOrBuilder getConnectionManagerOrBuilder();
@@ -15688,7 +18234,7 @@ public final class CatalogOuterClass {
        * Connection to the Postgresql.
        * </pre>
        *
-       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:postgresql://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
        * @return The connectionUrl.
        */
       java.lang.String getConnectionUrl();
@@ -15697,7 +18243,7 @@ public final class CatalogOuterClass {
        * Connection to the Postgresql.
        * </pre>
        *
-       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:postgresql://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
        * @return The bytes for connectionUrl.
        */
       com.google.protobuf.ByteString
@@ -15848,7 +18394,7 @@ public final class CatalogOuterClass {
        * Connection to the Postgresql.
        * </pre>
        *
-       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:postgresql://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
        * @return The connectionUrl.
        */
       @java.lang.Override
@@ -15869,7 +18415,7 @@ public final class CatalogOuterClass {
        * Connection to the Postgresql.
        * </pre>
        *
-       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:postgresql://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
        * @return The bytes for connectionUrl.
        */
       @java.lang.Override
@@ -16321,7 +18867,7 @@ public final class CatalogOuterClass {
          * Connection to the Postgresql.
          * </pre>
          *
-         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:postgresql://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
          * @return The connectionUrl.
          */
         public java.lang.String getConnectionUrl() {
@@ -16341,7 +18887,7 @@ public final class CatalogOuterClass {
          * Connection to the Postgresql.
          * </pre>
          *
-         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:postgresql://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
          * @return The bytes for connectionUrl.
          */
         public com.google.protobuf.ByteString
@@ -16362,7 +18908,7 @@ public final class CatalogOuterClass {
          * Connection to the Postgresql.
          * </pre>
          *
-         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:postgresql://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
          * @param value The connectionUrl to set.
          * @return This builder for chaining.
          */
@@ -16381,7 +18927,7 @@ public final class CatalogOuterClass {
          * Connection to the Postgresql.
          * </pre>
          *
-         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:postgresql://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
          * @return This builder for chaining.
          */
         public Builder clearConnectionUrl() {
@@ -16395,7 +18941,7 @@ public final class CatalogOuterClass {
          * Connection to the Postgresql.
          * </pre>
          *
-         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:postgresql://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
          * @param value The bytes for connectionUrl to set.
          * @return This builder for chaining.
          */
@@ -17875,6 +20421,10 @@ public final class CatalogOuterClass {
 
     public static final int ON_PREMISE_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.PostgresqlConnection.OnPremise on_premise = 1;</code>
      * @return Whether the onPremise field is set.
      */
@@ -17883,6 +20433,10 @@ public final class CatalogOuterClass {
       return typeCase_ == 1;
     }
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.PostgresqlConnection.OnPremise on_premise = 1;</code>
      * @return The onPremise.
      */
@@ -17894,6 +20448,10 @@ public final class CatalogOuterClass {
       return yandex.cloud.api.trino.v1.CatalogOuterClass.PostgresqlConnection.OnPremise.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.PostgresqlConnection.OnPremise on_premise = 1;</code>
      */
     @java.lang.Override
@@ -17906,6 +20464,10 @@ public final class CatalogOuterClass {
 
     public static final int CONNECTION_MANAGER_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.PostgresqlConnection.ConnectionManager connection_manager = 2;</code>
      * @return Whether the connectionManager field is set.
      */
@@ -17914,6 +20476,10 @@ public final class CatalogOuterClass {
       return typeCase_ == 2;
     }
     /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.PostgresqlConnection.ConnectionManager connection_manager = 2;</code>
      * @return The connectionManager.
      */
@@ -17925,6 +20491,10 @@ public final class CatalogOuterClass {
       return yandex.cloud.api.trino.v1.CatalogOuterClass.PostgresqlConnection.ConnectionManager.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.PostgresqlConnection.ConnectionManager connection_manager = 2;</code>
      */
     @java.lang.Override
@@ -18307,6 +20877,10 @@ public final class CatalogOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.trino.v1.CatalogOuterClass.PostgresqlConnection.OnPremise, yandex.cloud.api.trino.v1.CatalogOuterClass.PostgresqlConnection.OnPremise.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.PostgresqlConnection.OnPremiseOrBuilder> onPremiseBuilder_;
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.PostgresqlConnection.OnPremise on_premise = 1;</code>
        * @return Whether the onPremise field is set.
        */
@@ -18315,6 +20889,10 @@ public final class CatalogOuterClass {
         return typeCase_ == 1;
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.PostgresqlConnection.OnPremise on_premise = 1;</code>
        * @return The onPremise.
        */
@@ -18333,6 +20911,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.PostgresqlConnection.OnPremise on_premise = 1;</code>
        */
       public Builder setOnPremise(yandex.cloud.api.trino.v1.CatalogOuterClass.PostgresqlConnection.OnPremise value) {
@@ -18349,6 +20931,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.PostgresqlConnection.OnPremise on_premise = 1;</code>
        */
       public Builder setOnPremise(
@@ -18363,6 +20949,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.PostgresqlConnection.OnPremise on_premise = 1;</code>
        */
       public Builder mergeOnPremise(yandex.cloud.api.trino.v1.CatalogOuterClass.PostgresqlConnection.OnPremise value) {
@@ -18385,6 +20975,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.PostgresqlConnection.OnPremise on_premise = 1;</code>
        */
       public Builder clearOnPremise() {
@@ -18404,12 +20998,20 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.PostgresqlConnection.OnPremise on_premise = 1;</code>
        */
       public yandex.cloud.api.trino.v1.CatalogOuterClass.PostgresqlConnection.OnPremise.Builder getOnPremiseBuilder() {
         return getOnPremiseFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.PostgresqlConnection.OnPremise on_premise = 1;</code>
        */
       @java.lang.Override
@@ -18424,6 +21026,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.PostgresqlConnection.OnPremise on_premise = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -18448,6 +21054,10 @@ public final class CatalogOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.trino.v1.CatalogOuterClass.PostgresqlConnection.ConnectionManager, yandex.cloud.api.trino.v1.CatalogOuterClass.PostgresqlConnection.ConnectionManager.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.PostgresqlConnection.ConnectionManagerOrBuilder> connectionManagerBuilder_;
       /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.PostgresqlConnection.ConnectionManager connection_manager = 2;</code>
        * @return Whether the connectionManager field is set.
        */
@@ -18456,6 +21066,10 @@ public final class CatalogOuterClass {
         return typeCase_ == 2;
       }
       /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.PostgresqlConnection.ConnectionManager connection_manager = 2;</code>
        * @return The connectionManager.
        */
@@ -18474,6 +21088,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.PostgresqlConnection.ConnectionManager connection_manager = 2;</code>
        */
       public Builder setConnectionManager(yandex.cloud.api.trino.v1.CatalogOuterClass.PostgresqlConnection.ConnectionManager value) {
@@ -18490,6 +21108,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.PostgresqlConnection.ConnectionManager connection_manager = 2;</code>
        */
       public Builder setConnectionManager(
@@ -18504,6 +21126,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.PostgresqlConnection.ConnectionManager connection_manager = 2;</code>
        */
       public Builder mergeConnectionManager(yandex.cloud.api.trino.v1.CatalogOuterClass.PostgresqlConnection.ConnectionManager value) {
@@ -18526,6 +21152,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.PostgresqlConnection.ConnectionManager connection_manager = 2;</code>
        */
       public Builder clearConnectionManager() {
@@ -18545,12 +21175,20 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.PostgresqlConnection.ConnectionManager connection_manager = 2;</code>
        */
       public yandex.cloud.api.trino.v1.CatalogOuterClass.PostgresqlConnection.ConnectionManager.Builder getConnectionManagerBuilder() {
         return getConnectionManagerFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.PostgresqlConnection.ConnectionManager connection_manager = 2;</code>
        */
       @java.lang.Override
@@ -18565,6 +21203,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.PostgresqlConnection.ConnectionManager connection_manager = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -19711,31 +22353,55 @@ public final class CatalogOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.ClickhouseConnection.OnPremise on_premise = 1;</code>
      * @return Whether the onPremise field is set.
      */
     boolean hasOnPremise();
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.ClickhouseConnection.OnPremise on_premise = 1;</code>
      * @return The onPremise.
      */
     yandex.cloud.api.trino.v1.CatalogOuterClass.ClickhouseConnection.OnPremise getOnPremise();
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.ClickhouseConnection.OnPremise on_premise = 1;</code>
      */
     yandex.cloud.api.trino.v1.CatalogOuterClass.ClickhouseConnection.OnPremiseOrBuilder getOnPremiseOrBuilder();
 
     /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.ClickhouseConnection.ConnectionManager connection_manager = 2;</code>
      * @return Whether the connectionManager field is set.
      */
     boolean hasConnectionManager();
     /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.ClickhouseConnection.ConnectionManager connection_manager = 2;</code>
      * @return The connectionManager.
      */
     yandex.cloud.api.trino.v1.CatalogOuterClass.ClickhouseConnection.ConnectionManager getConnectionManager();
     /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.ClickhouseConnection.ConnectionManager connection_manager = 2;</code>
      */
     yandex.cloud.api.trino.v1.CatalogOuterClass.ClickhouseConnection.ConnectionManagerOrBuilder getConnectionManagerOrBuilder();
@@ -19856,7 +22522,7 @@ public final class CatalogOuterClass {
        * Connection to the Clickhouse.
        * </pre>
        *
-       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:clickhouse://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
        * @return The connectionUrl.
        */
       java.lang.String getConnectionUrl();
@@ -19865,7 +22531,7 @@ public final class CatalogOuterClass {
        * Connection to the Clickhouse.
        * </pre>
        *
-       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:clickhouse://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
        * @return The bytes for connectionUrl.
        */
       com.google.protobuf.ByteString
@@ -20016,7 +22682,7 @@ public final class CatalogOuterClass {
        * Connection to the Clickhouse.
        * </pre>
        *
-       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:clickhouse://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
        * @return The connectionUrl.
        */
       @java.lang.Override
@@ -20037,7 +22703,7 @@ public final class CatalogOuterClass {
        * Connection to the Clickhouse.
        * </pre>
        *
-       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:clickhouse://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
        * @return The bytes for connectionUrl.
        */
       @java.lang.Override
@@ -20489,7 +23155,7 @@ public final class CatalogOuterClass {
          * Connection to the Clickhouse.
          * </pre>
          *
-         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:clickhouse://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
          * @return The connectionUrl.
          */
         public java.lang.String getConnectionUrl() {
@@ -20509,7 +23175,7 @@ public final class CatalogOuterClass {
          * Connection to the Clickhouse.
          * </pre>
          *
-         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:clickhouse://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
          * @return The bytes for connectionUrl.
          */
         public com.google.protobuf.ByteString
@@ -20530,7 +23196,7 @@ public final class CatalogOuterClass {
          * Connection to the Clickhouse.
          * </pre>
          *
-         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:clickhouse://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
          * @param value The connectionUrl to set.
          * @return This builder for chaining.
          */
@@ -20549,7 +23215,7 @@ public final class CatalogOuterClass {
          * Connection to the Clickhouse.
          * </pre>
          *
-         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:clickhouse://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
          * @return This builder for chaining.
          */
         public Builder clearConnectionUrl() {
@@ -20563,7 +23229,7 @@ public final class CatalogOuterClass {
          * Connection to the Clickhouse.
          * </pre>
          *
-         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:clickhouse://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
          * @param value The bytes for connectionUrl to set.
          * @return This builder for chaining.
          */
@@ -22043,6 +24709,10 @@ public final class CatalogOuterClass {
 
     public static final int ON_PREMISE_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.ClickhouseConnection.OnPremise on_premise = 1;</code>
      * @return Whether the onPremise field is set.
      */
@@ -22051,6 +24721,10 @@ public final class CatalogOuterClass {
       return typeCase_ == 1;
     }
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.ClickhouseConnection.OnPremise on_premise = 1;</code>
      * @return The onPremise.
      */
@@ -22062,6 +24736,10 @@ public final class CatalogOuterClass {
       return yandex.cloud.api.trino.v1.CatalogOuterClass.ClickhouseConnection.OnPremise.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.ClickhouseConnection.OnPremise on_premise = 1;</code>
      */
     @java.lang.Override
@@ -22074,6 +24752,10 @@ public final class CatalogOuterClass {
 
     public static final int CONNECTION_MANAGER_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.ClickhouseConnection.ConnectionManager connection_manager = 2;</code>
      * @return Whether the connectionManager field is set.
      */
@@ -22082,6 +24764,10 @@ public final class CatalogOuterClass {
       return typeCase_ == 2;
     }
     /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.ClickhouseConnection.ConnectionManager connection_manager = 2;</code>
      * @return The connectionManager.
      */
@@ -22093,6 +24779,10 @@ public final class CatalogOuterClass {
       return yandex.cloud.api.trino.v1.CatalogOuterClass.ClickhouseConnection.ConnectionManager.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.ClickhouseConnection.ConnectionManager connection_manager = 2;</code>
      */
     @java.lang.Override
@@ -22475,6 +25165,10 @@ public final class CatalogOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.trino.v1.CatalogOuterClass.ClickhouseConnection.OnPremise, yandex.cloud.api.trino.v1.CatalogOuterClass.ClickhouseConnection.OnPremise.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.ClickhouseConnection.OnPremiseOrBuilder> onPremiseBuilder_;
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ClickhouseConnection.OnPremise on_premise = 1;</code>
        * @return Whether the onPremise field is set.
        */
@@ -22483,6 +25177,10 @@ public final class CatalogOuterClass {
         return typeCase_ == 1;
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ClickhouseConnection.OnPremise on_premise = 1;</code>
        * @return The onPremise.
        */
@@ -22501,6 +25199,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ClickhouseConnection.OnPremise on_premise = 1;</code>
        */
       public Builder setOnPremise(yandex.cloud.api.trino.v1.CatalogOuterClass.ClickhouseConnection.OnPremise value) {
@@ -22517,6 +25219,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ClickhouseConnection.OnPremise on_premise = 1;</code>
        */
       public Builder setOnPremise(
@@ -22531,6 +25237,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ClickhouseConnection.OnPremise on_premise = 1;</code>
        */
       public Builder mergeOnPremise(yandex.cloud.api.trino.v1.CatalogOuterClass.ClickhouseConnection.OnPremise value) {
@@ -22553,6 +25263,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ClickhouseConnection.OnPremise on_premise = 1;</code>
        */
       public Builder clearOnPremise() {
@@ -22572,12 +25286,20 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ClickhouseConnection.OnPremise on_premise = 1;</code>
        */
       public yandex.cloud.api.trino.v1.CatalogOuterClass.ClickhouseConnection.OnPremise.Builder getOnPremiseBuilder() {
         return getOnPremiseFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ClickhouseConnection.OnPremise on_premise = 1;</code>
        */
       @java.lang.Override
@@ -22592,6 +25314,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ClickhouseConnection.OnPremise on_premise = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -22616,6 +25342,10 @@ public final class CatalogOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.trino.v1.CatalogOuterClass.ClickhouseConnection.ConnectionManager, yandex.cloud.api.trino.v1.CatalogOuterClass.ClickhouseConnection.ConnectionManager.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.ClickhouseConnection.ConnectionManagerOrBuilder> connectionManagerBuilder_;
       /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ClickhouseConnection.ConnectionManager connection_manager = 2;</code>
        * @return Whether the connectionManager field is set.
        */
@@ -22624,6 +25354,10 @@ public final class CatalogOuterClass {
         return typeCase_ == 2;
       }
       /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ClickhouseConnection.ConnectionManager connection_manager = 2;</code>
        * @return The connectionManager.
        */
@@ -22642,6 +25376,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ClickhouseConnection.ConnectionManager connection_manager = 2;</code>
        */
       public Builder setConnectionManager(yandex.cloud.api.trino.v1.CatalogOuterClass.ClickhouseConnection.ConnectionManager value) {
@@ -22658,6 +25396,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ClickhouseConnection.ConnectionManager connection_manager = 2;</code>
        */
       public Builder setConnectionManager(
@@ -22672,6 +25414,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ClickhouseConnection.ConnectionManager connection_manager = 2;</code>
        */
       public Builder mergeConnectionManager(yandex.cloud.api.trino.v1.CatalogOuterClass.ClickhouseConnection.ConnectionManager value) {
@@ -22694,6 +25440,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ClickhouseConnection.ConnectionManager connection_manager = 2;</code>
        */
       public Builder clearConnectionManager() {
@@ -22713,12 +25463,20 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ClickhouseConnection.ConnectionManager connection_manager = 2;</code>
        */
       public yandex.cloud.api.trino.v1.CatalogOuterClass.ClickhouseConnection.ConnectionManager.Builder getConnectionManagerBuilder() {
         return getConnectionManagerFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ClickhouseConnection.ConnectionManager connection_manager = 2;</code>
        */
       @java.lang.Override
@@ -22733,6 +25491,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.ClickhouseConnection.ConnectionManager connection_manager = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -25489,16 +28251,28 @@ public final class CatalogOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.OracleConnection.OnPremise on_premise = 1;</code>
      * @return Whether the onPremise field is set.
      */
     boolean hasOnPremise();
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.OracleConnection.OnPremise on_premise = 1;</code>
      * @return The onPremise.
      */
     yandex.cloud.api.trino.v1.CatalogOuterClass.OracleConnection.OnPremise getOnPremise();
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.OracleConnection.OnPremise on_premise = 1;</code>
      */
     yandex.cloud.api.trino.v1.CatalogOuterClass.OracleConnection.OnPremiseOrBuilder getOnPremiseOrBuilder();
@@ -25605,7 +28379,7 @@ public final class CatalogOuterClass {
        * Connection to the Oracle.
        * </pre>
        *
-       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+:(?s:.*)$"];</code>
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:oracle:(?s:.*)$"];</code>
        * @return The connectionUrl.
        */
       java.lang.String getConnectionUrl();
@@ -25614,7 +28388,7 @@ public final class CatalogOuterClass {
        * Connection to the Oracle.
        * </pre>
        *
-       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+:(?s:.*)$"];</code>
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:oracle:(?s:.*)$"];</code>
        * @return The bytes for connectionUrl.
        */
       com.google.protobuf.ByteString
@@ -25765,7 +28539,7 @@ public final class CatalogOuterClass {
        * Connection to the Oracle.
        * </pre>
        *
-       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+:(?s:.*)$"];</code>
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:oracle:(?s:.*)$"];</code>
        * @return The connectionUrl.
        */
       @java.lang.Override
@@ -25786,7 +28560,7 @@ public final class CatalogOuterClass {
        * Connection to the Oracle.
        * </pre>
        *
-       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+:(?s:.*)$"];</code>
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:oracle:(?s:.*)$"];</code>
        * @return The bytes for connectionUrl.
        */
       @java.lang.Override
@@ -26238,7 +29012,7 @@ public final class CatalogOuterClass {
          * Connection to the Oracle.
          * </pre>
          *
-         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+:(?s:.*)$"];</code>
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:oracle:(?s:.*)$"];</code>
          * @return The connectionUrl.
          */
         public java.lang.String getConnectionUrl() {
@@ -26258,7 +29032,7 @@ public final class CatalogOuterClass {
          * Connection to the Oracle.
          * </pre>
          *
-         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+:(?s:.*)$"];</code>
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:oracle:(?s:.*)$"];</code>
          * @return The bytes for connectionUrl.
          */
         public com.google.protobuf.ByteString
@@ -26279,7 +29053,7 @@ public final class CatalogOuterClass {
          * Connection to the Oracle.
          * </pre>
          *
-         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+:(?s:.*)$"];</code>
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:oracle:(?s:.*)$"];</code>
          * @param value The connectionUrl to set.
          * @return This builder for chaining.
          */
@@ -26298,7 +29072,7 @@ public final class CatalogOuterClass {
          * Connection to the Oracle.
          * </pre>
          *
-         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+:(?s:.*)$"];</code>
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:oracle:(?s:.*)$"];</code>
          * @return This builder for chaining.
          */
         public Builder clearConnectionUrl() {
@@ -26312,7 +29086,7 @@ public final class CatalogOuterClass {
          * Connection to the Oracle.
          * </pre>
          *
-         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+:(?s:.*)$"];</code>
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:oracle:(?s:.*)$"];</code>
          * @param value The bytes for connectionUrl to set.
          * @return This builder for chaining.
          */
@@ -26613,6 +29387,10 @@ public final class CatalogOuterClass {
 
     public static final int ON_PREMISE_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.OracleConnection.OnPremise on_premise = 1;</code>
      * @return Whether the onPremise field is set.
      */
@@ -26621,6 +29399,10 @@ public final class CatalogOuterClass {
       return typeCase_ == 1;
     }
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.OracleConnection.OnPremise on_premise = 1;</code>
      * @return The onPremise.
      */
@@ -26632,6 +29414,10 @@ public final class CatalogOuterClass {
       return yandex.cloud.api.trino.v1.CatalogOuterClass.OracleConnection.OnPremise.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.OracleConnection.OnPremise on_premise = 1;</code>
      */
     @java.lang.Override
@@ -26988,6 +29774,10 @@ public final class CatalogOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.trino.v1.CatalogOuterClass.OracleConnection.OnPremise, yandex.cloud.api.trino.v1.CatalogOuterClass.OracleConnection.OnPremise.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.OracleConnection.OnPremiseOrBuilder> onPremiseBuilder_;
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.OracleConnection.OnPremise on_premise = 1;</code>
        * @return Whether the onPremise field is set.
        */
@@ -26996,6 +29786,10 @@ public final class CatalogOuterClass {
         return typeCase_ == 1;
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.OracleConnection.OnPremise on_premise = 1;</code>
        * @return The onPremise.
        */
@@ -27014,6 +29808,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.OracleConnection.OnPremise on_premise = 1;</code>
        */
       public Builder setOnPremise(yandex.cloud.api.trino.v1.CatalogOuterClass.OracleConnection.OnPremise value) {
@@ -27030,6 +29828,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.OracleConnection.OnPremise on_premise = 1;</code>
        */
       public Builder setOnPremise(
@@ -27044,6 +29846,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.OracleConnection.OnPremise on_premise = 1;</code>
        */
       public Builder mergeOnPremise(yandex.cloud.api.trino.v1.CatalogOuterClass.OracleConnection.OnPremise value) {
@@ -27066,6 +29872,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.OracleConnection.OnPremise on_premise = 1;</code>
        */
       public Builder clearOnPremise() {
@@ -27085,12 +29895,20 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.OracleConnection.OnPremise on_premise = 1;</code>
        */
       public yandex.cloud.api.trino.v1.CatalogOuterClass.OracleConnection.OnPremise.Builder getOnPremiseBuilder() {
         return getOnPremiseFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.OracleConnection.OnPremise on_premise = 1;</code>
        */
       @java.lang.Override
@@ -27105,6 +29923,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.OracleConnection.OnPremise on_premise = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -28251,16 +31073,28 @@ public final class CatalogOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.SQLServerConnection.OnPremise on_premise = 1;</code>
      * @return Whether the onPremise field is set.
      */
     boolean hasOnPremise();
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.SQLServerConnection.OnPremise on_premise = 1;</code>
      * @return The onPremise.
      */
     yandex.cloud.api.trino.v1.CatalogOuterClass.SQLServerConnection.OnPremise getOnPremise();
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.SQLServerConnection.OnPremise on_premise = 1;</code>
      */
     yandex.cloud.api.trino.v1.CatalogOuterClass.SQLServerConnection.OnPremiseOrBuilder getOnPremiseOrBuilder();
@@ -28367,7 +31201,7 @@ public final class CatalogOuterClass {
        * Connection to the SQLServer.
        * </pre>
        *
-       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+:(?s:.*)$"];</code>
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:sqlserver:(?s:.*)$"];</code>
        * @return The connectionUrl.
        */
       java.lang.String getConnectionUrl();
@@ -28376,7 +31210,7 @@ public final class CatalogOuterClass {
        * Connection to the SQLServer.
        * </pre>
        *
-       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+:(?s:.*)$"];</code>
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:sqlserver:(?s:.*)$"];</code>
        * @return The bytes for connectionUrl.
        */
       com.google.protobuf.ByteString
@@ -28527,7 +31361,7 @@ public final class CatalogOuterClass {
        * Connection to the SQLServer.
        * </pre>
        *
-       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+:(?s:.*)$"];</code>
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:sqlserver:(?s:.*)$"];</code>
        * @return The connectionUrl.
        */
       @java.lang.Override
@@ -28548,7 +31382,7 @@ public final class CatalogOuterClass {
        * Connection to the SQLServer.
        * </pre>
        *
-       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+:(?s:.*)$"];</code>
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:sqlserver:(?s:.*)$"];</code>
        * @return The bytes for connectionUrl.
        */
       @java.lang.Override
@@ -29000,7 +31834,7 @@ public final class CatalogOuterClass {
          * Connection to the SQLServer.
          * </pre>
          *
-         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+:(?s:.*)$"];</code>
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:sqlserver:(?s:.*)$"];</code>
          * @return The connectionUrl.
          */
         public java.lang.String getConnectionUrl() {
@@ -29020,7 +31854,7 @@ public final class CatalogOuterClass {
          * Connection to the SQLServer.
          * </pre>
          *
-         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+:(?s:.*)$"];</code>
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:sqlserver:(?s:.*)$"];</code>
          * @return The bytes for connectionUrl.
          */
         public com.google.protobuf.ByteString
@@ -29041,7 +31875,7 @@ public final class CatalogOuterClass {
          * Connection to the SQLServer.
          * </pre>
          *
-         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+:(?s:.*)$"];</code>
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:sqlserver:(?s:.*)$"];</code>
          * @param value The connectionUrl to set.
          * @return This builder for chaining.
          */
@@ -29060,7 +31894,7 @@ public final class CatalogOuterClass {
          * Connection to the SQLServer.
          * </pre>
          *
-         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+:(?s:.*)$"];</code>
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:sqlserver:(?s:.*)$"];</code>
          * @return This builder for chaining.
          */
         public Builder clearConnectionUrl() {
@@ -29074,7 +31908,7 @@ public final class CatalogOuterClass {
          * Connection to the SQLServer.
          * </pre>
          *
-         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:[a-z0-9]+:(?s:.*)$"];</code>
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:sqlserver:(?s:.*)$"];</code>
          * @param value The bytes for connectionUrl to set.
          * @return This builder for chaining.
          */
@@ -29375,6 +32209,10 @@ public final class CatalogOuterClass {
 
     public static final int ON_PREMISE_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.SQLServerConnection.OnPremise on_premise = 1;</code>
      * @return Whether the onPremise field is set.
      */
@@ -29383,6 +32221,10 @@ public final class CatalogOuterClass {
       return typeCase_ == 1;
     }
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.SQLServerConnection.OnPremise on_premise = 1;</code>
      * @return The onPremise.
      */
@@ -29394,6 +32236,10 @@ public final class CatalogOuterClass {
       return yandex.cloud.api.trino.v1.CatalogOuterClass.SQLServerConnection.OnPremise.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
      * <code>.yandex.cloud.trino.v1.SQLServerConnection.OnPremise on_premise = 1;</code>
      */
     @java.lang.Override
@@ -29750,6 +32596,10 @@ public final class CatalogOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.trino.v1.CatalogOuterClass.SQLServerConnection.OnPremise, yandex.cloud.api.trino.v1.CatalogOuterClass.SQLServerConnection.OnPremise.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.SQLServerConnection.OnPremiseOrBuilder> onPremiseBuilder_;
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.SQLServerConnection.OnPremise on_premise = 1;</code>
        * @return Whether the onPremise field is set.
        */
@@ -29758,6 +32608,10 @@ public final class CatalogOuterClass {
         return typeCase_ == 1;
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.SQLServerConnection.OnPremise on_premise = 1;</code>
        * @return The onPremise.
        */
@@ -29776,6 +32630,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.SQLServerConnection.OnPremise on_premise = 1;</code>
        */
       public Builder setOnPremise(yandex.cloud.api.trino.v1.CatalogOuterClass.SQLServerConnection.OnPremise value) {
@@ -29792,6 +32650,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.SQLServerConnection.OnPremise on_premise = 1;</code>
        */
       public Builder setOnPremise(
@@ -29806,6 +32668,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.SQLServerConnection.OnPremise on_premise = 1;</code>
        */
       public Builder mergeOnPremise(yandex.cloud.api.trino.v1.CatalogOuterClass.SQLServerConnection.OnPremise value) {
@@ -29828,6 +32694,10 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.SQLServerConnection.OnPremise on_premise = 1;</code>
        */
       public Builder clearOnPremise() {
@@ -29847,12 +32717,20 @@ public final class CatalogOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.SQLServerConnection.OnPremise on_premise = 1;</code>
        */
       public yandex.cloud.api.trino.v1.CatalogOuterClass.SQLServerConnection.OnPremise.Builder getOnPremiseBuilder() {
         return getOnPremiseFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.SQLServerConnection.OnPremise on_premise = 1;</code>
        */
       @java.lang.Override
@@ -29867,6 +32745,10 @@ public final class CatalogOuterClass {
         }
       }
       /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
        * <code>.yandex.cloud.trino.v1.SQLServerConnection.OnPremise on_premise = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -31008,6 +33890,8396 @@ public final class CatalogOuterClass {
 
   }
 
+  public interface MysqlConnectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.trino.v1.MysqlConnection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnection.OnPremise on_premise = 1;</code>
+     * @return Whether the onPremise field is set.
+     */
+    boolean hasOnPremise();
+    /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnection.OnPremise on_premise = 1;</code>
+     * @return The onPremise.
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise getOnPremise();
+    /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnection.OnPremise on_premise = 1;</code>
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremiseOrBuilder getOnPremiseOrBuilder();
+
+    /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnection.ConnectionManager connection_manager = 2;</code>
+     * @return Whether the connectionManager field is set.
+     */
+    boolean hasConnectionManager();
+    /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnection.ConnectionManager connection_manager = 2;</code>
+     * @return The connectionManager.
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager getConnectionManager();
+    /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnection.ConnectionManager connection_manager = 2;</code>
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManagerOrBuilder getConnectionManagerOrBuilder();
+
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.TypeCase getTypeCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.trino.v1.MysqlConnection}
+   */
+  public static final class MysqlConnection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.trino.v1.MysqlConnection)
+      MysqlConnectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MysqlConnection.newBuilder() to construct.
+    private MysqlConnection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MysqlConnection() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MysqlConnection();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MysqlConnection(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.Builder subBuilder = null;
+              if (typeCase_ == 1) {
+                subBuilder = ((yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 1;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.Builder subBuilder = null;
+              if (typeCase_ == 2) {
+                subBuilder = ((yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 2;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.class, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.Builder.class);
+    }
+
+    public interface OnPremiseOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.trino.v1.MysqlConnection.OnPremise)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Connection to the MySQL.
+       * </pre>
+       *
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:mysql://(?:.+:&#92;&#92;d+)(?:/?.*)$"];</code>
+       * @return The connectionUrl.
+       */
+      java.lang.String getConnectionUrl();
+      /**
+       * <pre>
+       * Connection to the MySQL.
+       * </pre>
+       *
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:mysql://(?:.+:&#92;&#92;d+)(?:/?.*)$"];</code>
+       * @return The bytes for connectionUrl.
+       */
+      com.google.protobuf.ByteString
+          getConnectionUrlBytes();
+
+      /**
+       * <pre>
+       * Name of the MySQL user.
+       * </pre>
+       *
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The userName.
+       */
+      java.lang.String getUserName();
+      /**
+       * <pre>
+       * Name of the MySQL user.
+       * </pre>
+       *
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for userName.
+       */
+      com.google.protobuf.ByteString
+          getUserNameBytes();
+
+      /**
+       * <pre>
+       * Password of the MySQL user.
+       * </pre>
+       *
+       * <code>string password = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "0-128"];</code>
+       * @return The password.
+       */
+      java.lang.String getPassword();
+      /**
+       * <pre>
+       * Password of the MySQL user.
+       * </pre>
+       *
+       * <code>string password = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "0-128"];</code>
+       * @return The bytes for password.
+       */
+      com.google.protobuf.ByteString
+          getPasswordBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.trino.v1.MysqlConnection.OnPremise}
+     */
+    public static final class OnPremise extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.trino.v1.MysqlConnection.OnPremise)
+        OnPremiseOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use OnPremise.newBuilder() to construct.
+      private OnPremise(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private OnPremise() {
+        connectionUrl_ = "";
+        userName_ = "";
+        password_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new OnPremise();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private OnPremise(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                connectionUrl_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                userName_ = s;
+                break;
+              }
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                password_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnection_OnPremise_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnection_OnPremise_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.class, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.Builder.class);
+      }
+
+      public static final int CONNECTION_URL_FIELD_NUMBER = 1;
+      private volatile java.lang.Object connectionUrl_;
+      /**
+       * <pre>
+       * Connection to the MySQL.
+       * </pre>
+       *
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:mysql://(?:.+:&#92;&#92;d+)(?:/?.*)$"];</code>
+       * @return The connectionUrl.
+       */
+      @java.lang.Override
+      public java.lang.String getConnectionUrl() {
+        java.lang.Object ref = connectionUrl_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectionUrl_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Connection to the MySQL.
+       * </pre>
+       *
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:mysql://(?:.+:&#92;&#92;d+)(?:/?.*)$"];</code>
+       * @return The bytes for connectionUrl.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getConnectionUrlBytes() {
+        java.lang.Object ref = connectionUrl_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectionUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int USER_NAME_FIELD_NUMBER = 2;
+      private volatile java.lang.Object userName_;
+      /**
+       * <pre>
+       * Name of the MySQL user.
+       * </pre>
+       *
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The userName.
+       */
+      @java.lang.Override
+      public java.lang.String getUserName() {
+        java.lang.Object ref = userName_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userName_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the MySQL user.
+       * </pre>
+       *
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for userName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUserNameBytes() {
+        java.lang.Object ref = userName_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int PASSWORD_FIELD_NUMBER = 3;
+      private volatile java.lang.Object password_;
+      /**
+       * <pre>
+       * Password of the MySQL user.
+       * </pre>
+       *
+       * <code>string password = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "0-128"];</code>
+       * @return The password.
+       */
+      @java.lang.Override
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          password_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Password of the MySQL user.
+       * </pre>
+       *
+       * <code>string password = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "0-128"];</code>
+       * @return The bytes for password.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPasswordBytes() {
+        java.lang.Object ref = password_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          password_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionUrl_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, connectionUrl_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userName_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, password_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionUrl_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, connectionUrl_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userName_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, password_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise other = (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise) obj;
+
+        if (!getConnectionUrl()
+            .equals(other.getConnectionUrl())) return false;
+        if (!getUserName()
+            .equals(other.getUserName())) return false;
+        if (!getPassword()
+            .equals(other.getPassword())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + CONNECTION_URL_FIELD_NUMBER;
+        hash = (53 * hash) + getConnectionUrl().hashCode();
+        hash = (37 * hash) + USER_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getUserName().hashCode();
+        hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
+        hash = (53 * hash) + getPassword().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.trino.v1.MysqlConnection.OnPremise}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.trino.v1.MysqlConnection.OnPremise)
+          yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremiseOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnection_OnPremise_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnection_OnPremise_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.class, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          connectionUrl_ = "";
+
+          userName_ = "";
+
+          password_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnection_OnPremise_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise getDefaultInstanceForType() {
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise build() {
+          yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise buildPartial() {
+          yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise result = new yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise(this);
+          result.connectionUrl_ = connectionUrl_;
+          result.userName_ = userName_;
+          result.password_ = password_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise) {
+            return mergeFrom((yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise other) {
+          if (other == yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.getDefaultInstance()) return this;
+          if (!other.getConnectionUrl().isEmpty()) {
+            connectionUrl_ = other.connectionUrl_;
+            onChanged();
+          }
+          if (!other.getUserName().isEmpty()) {
+            userName_ = other.userName_;
+            onChanged();
+          }
+          if (!other.getPassword().isEmpty()) {
+            password_ = other.password_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object connectionUrl_ = "";
+        /**
+         * <pre>
+         * Connection to the MySQL.
+         * </pre>
+         *
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:mysql://(?:.+:&#92;&#92;d+)(?:/?.*)$"];</code>
+         * @return The connectionUrl.
+         */
+        public java.lang.String getConnectionUrl() {
+          java.lang.Object ref = connectionUrl_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            connectionUrl_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Connection to the MySQL.
+         * </pre>
+         *
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:mysql://(?:.+:&#92;&#92;d+)(?:/?.*)$"];</code>
+         * @return The bytes for connectionUrl.
+         */
+        public com.google.protobuf.ByteString
+            getConnectionUrlBytes() {
+          java.lang.Object ref = connectionUrl_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            connectionUrl_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Connection to the MySQL.
+         * </pre>
+         *
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:mysql://(?:.+:&#92;&#92;d+)(?:/?.*)$"];</code>
+         * @param value The connectionUrl to set.
+         * @return This builder for chaining.
+         */
+        public Builder setConnectionUrl(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          connectionUrl_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Connection to the MySQL.
+         * </pre>
+         *
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:mysql://(?:.+:&#92;&#92;d+)(?:/?.*)$"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearConnectionUrl() {
+          
+          connectionUrl_ = getDefaultInstance().getConnectionUrl();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Connection to the MySQL.
+         * </pre>
+         *
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:mysql://(?:.+:&#92;&#92;d+)(?:/?.*)$"];</code>
+         * @param value The bytes for connectionUrl to set.
+         * @return This builder for chaining.
+         */
+        public Builder setConnectionUrlBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          connectionUrl_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object userName_ = "";
+        /**
+         * <pre>
+         * Name of the MySQL user.
+         * </pre>
+         *
+         * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         * @return The userName.
+         */
+        public java.lang.String getUserName() {
+          java.lang.Object ref = userName_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            userName_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Name of the MySQL user.
+         * </pre>
+         *
+         * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         * @return The bytes for userName.
+         */
+        public com.google.protobuf.ByteString
+            getUserNameBytes() {
+          java.lang.Object ref = userName_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            userName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Name of the MySQL user.
+         * </pre>
+         *
+         * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         * @param value The userName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUserName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          userName_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Name of the MySQL user.
+         * </pre>
+         *
+         * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUserName() {
+          
+          userName_ = getDefaultInstance().getUserName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Name of the MySQL user.
+         * </pre>
+         *
+         * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         * @param value The bytes for userName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUserNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          userName_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object password_ = "";
+        /**
+         * <pre>
+         * Password of the MySQL user.
+         * </pre>
+         *
+         * <code>string password = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "0-128"];</code>
+         * @return The password.
+         */
+        public java.lang.String getPassword() {
+          java.lang.Object ref = password_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            password_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Password of the MySQL user.
+         * </pre>
+         *
+         * <code>string password = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "0-128"];</code>
+         * @return The bytes for password.
+         */
+        public com.google.protobuf.ByteString
+            getPasswordBytes() {
+          java.lang.Object ref = password_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            password_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Password of the MySQL user.
+         * </pre>
+         *
+         * <code>string password = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "0-128"];</code>
+         * @param value The password to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPassword(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          password_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Password of the MySQL user.
+         * </pre>
+         *
+         * <code>string password = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "0-128"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPassword() {
+          
+          password_ = getDefaultInstance().getPassword();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Password of the MySQL user.
+         * </pre>
+         *
+         * <code>string password = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "0-128"];</code>
+         * @param value The bytes for password to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPasswordBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          password_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.trino.v1.MysqlConnection.OnPremise)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.trino.v1.MysqlConnection.OnPremise)
+      private static final yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise();
+      }
+
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<OnPremise>
+          PARSER = new com.google.protobuf.AbstractParser<OnPremise>() {
+        @java.lang.Override
+        public OnPremise parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new OnPremise(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<OnPremise> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<OnPremise> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface ConnectionManagerOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.trino.v1.MysqlConnection.ConnectionManager)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Connection ID.
+       * </pre>
+       *
+       * <code>string connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-50"];</code>
+       * @return The connectionId.
+       */
+      java.lang.String getConnectionId();
+      /**
+       * <pre>
+       * Connection ID.
+       * </pre>
+       *
+       * <code>string connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-50"];</code>
+       * @return The bytes for connectionId.
+       */
+      com.google.protobuf.ByteString
+          getConnectionIdBytes();
+
+      /**
+       * <pre>
+       * Additional connection properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; connection_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      int getConnectionPropertiesCount();
+      /**
+       * <pre>
+       * Additional connection properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; connection_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      boolean containsConnectionProperties(
+          java.lang.String key);
+      /**
+       * Use {@link #getConnectionPropertiesMap()} instead.
+       */
+      @java.lang.Deprecated
+      java.util.Map<java.lang.String, java.lang.String>
+      getConnectionProperties();
+      /**
+       * <pre>
+       * Additional connection properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; connection_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      java.util.Map<java.lang.String, java.lang.String>
+      getConnectionPropertiesMap();
+      /**
+       * <pre>
+       * Additional connection properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; connection_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      java.lang.String getConnectionPropertiesOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue);
+      /**
+       * <pre>
+       * Additional connection properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; connection_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      java.lang.String getConnectionPropertiesOrThrow(
+          java.lang.String key);
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.trino.v1.MysqlConnection.ConnectionManager}
+     */
+    public static final class ConnectionManager extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.trino.v1.MysqlConnection.ConnectionManager)
+        ConnectionManagerOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ConnectionManager.newBuilder() to construct.
+      private ConnectionManager(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ConnectionManager() {
+        connectionId_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ConnectionManager();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ConnectionManager(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                connectionId_ = s;
+                break;
+              }
+              case 18: {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  connectionProperties_ = com.google.protobuf.MapField.newMapField(
+                      ConnectionPropertiesDefaultEntryHolder.defaultEntry);
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                connectionProperties__ = input.readMessage(
+                    ConnectionPropertiesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                connectionProperties_.getMutableMap().put(
+                    connectionProperties__.getKey(), connectionProperties__.getValue());
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnection_ConnectionManager_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      @java.lang.Override
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetConnectionProperties();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnection_ConnectionManager_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.class, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.Builder.class);
+      }
+
+      public static final int CONNECTION_ID_FIELD_NUMBER = 1;
+      private volatile java.lang.Object connectionId_;
+      /**
+       * <pre>
+       * Connection ID.
+       * </pre>
+       *
+       * <code>string connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-50"];</code>
+       * @return The connectionId.
+       */
+      @java.lang.Override
+      public java.lang.String getConnectionId() {
+        java.lang.Object ref = connectionId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectionId_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Connection ID.
+       * </pre>
+       *
+       * <code>string connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-50"];</code>
+       * @return The bytes for connectionId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getConnectionIdBytes() {
+        java.lang.Object ref = connectionId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int CONNECTION_PROPERTIES_FIELD_NUMBER = 2;
+      private static final class ConnectionPropertiesDefaultEntryHolder {
+        static final com.google.protobuf.MapEntry<
+            java.lang.String, java.lang.String> defaultEntry =
+                com.google.protobuf.MapEntry
+                .<java.lang.String, java.lang.String>newDefaultInstance(
+                    yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnection_ConnectionManager_ConnectionPropertiesEntry_descriptor, 
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "",
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "");
+      }
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> connectionProperties_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetConnectionProperties() {
+        if (connectionProperties_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              ConnectionPropertiesDefaultEntryHolder.defaultEntry);
+        }
+        return connectionProperties_;
+      }
+
+      public int getConnectionPropertiesCount() {
+        return internalGetConnectionProperties().getMap().size();
+      }
+      /**
+       * <pre>
+       * Additional connection properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; connection_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsConnectionProperties(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetConnectionProperties().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getConnectionPropertiesMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getConnectionProperties() {
+        return getConnectionPropertiesMap();
+      }
+      /**
+       * <pre>
+       * Additional connection properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; connection_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getConnectionPropertiesMap() {
+        return internalGetConnectionProperties().getMap();
+      }
+      /**
+       * <pre>
+       * Additional connection properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; connection_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getConnectionPropertiesOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetConnectionProperties().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Additional connection properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; connection_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getConnectionPropertiesOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetConnectionProperties().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, connectionId_);
+        }
+        com.google.protobuf.GeneratedMessageV3
+          .serializeStringMapTo(
+            output,
+            internalGetConnectionProperties(),
+            ConnectionPropertiesDefaultEntryHolder.defaultEntry,
+            2);
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, connectionId_);
+        }
+        for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+             : internalGetConnectionProperties().getMap().entrySet()) {
+          com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+          connectionProperties__ = ConnectionPropertiesDefaultEntryHolder.defaultEntry.newBuilderForType()
+              .setKey(entry.getKey())
+              .setValue(entry.getValue())
+              .build();
+          size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(2, connectionProperties__);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager other = (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager) obj;
+
+        if (!getConnectionId()
+            .equals(other.getConnectionId())) return false;
+        if (!internalGetConnectionProperties().equals(
+            other.internalGetConnectionProperties())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getConnectionId().hashCode();
+        if (!internalGetConnectionProperties().getMap().isEmpty()) {
+          hash = (37 * hash) + CONNECTION_PROPERTIES_FIELD_NUMBER;
+          hash = (53 * hash) + internalGetConnectionProperties().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.trino.v1.MysqlConnection.ConnectionManager}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.trino.v1.MysqlConnection.ConnectionManager)
+          yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManagerOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnection_ConnectionManager_descriptor;
+        }
+
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMapField(
+            int number) {
+          switch (number) {
+            case 2:
+              return internalGetConnectionProperties();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMutableMapField(
+            int number) {
+          switch (number) {
+            case 2:
+              return internalGetMutableConnectionProperties();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnection_ConnectionManager_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.class, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          connectionId_ = "";
+
+          internalGetMutableConnectionProperties().clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnection_ConnectionManager_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager getDefaultInstanceForType() {
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager build() {
+          yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager buildPartial() {
+          yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager result = new yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager(this);
+          int from_bitField0_ = bitField0_;
+          result.connectionId_ = connectionId_;
+          result.connectionProperties_ = internalGetConnectionProperties();
+          result.connectionProperties_.makeImmutable();
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager) {
+            return mergeFrom((yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager other) {
+          if (other == yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.getDefaultInstance()) return this;
+          if (!other.getConnectionId().isEmpty()) {
+            connectionId_ = other.connectionId_;
+            onChanged();
+          }
+          internalGetMutableConnectionProperties().mergeFrom(
+              other.internalGetConnectionProperties());
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object connectionId_ = "";
+        /**
+         * <pre>
+         * Connection ID.
+         * </pre>
+         *
+         * <code>string connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-50"];</code>
+         * @return The connectionId.
+         */
+        public java.lang.String getConnectionId() {
+          java.lang.Object ref = connectionId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            connectionId_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Connection ID.
+         * </pre>
+         *
+         * <code>string connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-50"];</code>
+         * @return The bytes for connectionId.
+         */
+        public com.google.protobuf.ByteString
+            getConnectionIdBytes() {
+          java.lang.Object ref = connectionId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            connectionId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Connection ID.
+         * </pre>
+         *
+         * <code>string connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-50"];</code>
+         * @param value The connectionId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setConnectionId(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          connectionId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Connection ID.
+         * </pre>
+         *
+         * <code>string connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-50"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearConnectionId() {
+          
+          connectionId_ = getDefaultInstance().getConnectionId();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Connection ID.
+         * </pre>
+         *
+         * <code>string connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-50"];</code>
+         * @param value The bytes for connectionId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setConnectionIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          connectionId_ = value;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.MapField<
+            java.lang.String, java.lang.String> connectionProperties_;
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetConnectionProperties() {
+          if (connectionProperties_ == null) {
+            return com.google.protobuf.MapField.emptyMapField(
+                ConnectionPropertiesDefaultEntryHolder.defaultEntry);
+          }
+          return connectionProperties_;
+        }
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableConnectionProperties() {
+          onChanged();;
+          if (connectionProperties_ == null) {
+            connectionProperties_ = com.google.protobuf.MapField.newMapField(
+                ConnectionPropertiesDefaultEntryHolder.defaultEntry);
+          }
+          if (!connectionProperties_.isMutable()) {
+            connectionProperties_ = connectionProperties_.copy();
+          }
+          return connectionProperties_;
+        }
+
+        public int getConnectionPropertiesCount() {
+          return internalGetConnectionProperties().getMap().size();
+        }
+        /**
+         * <pre>
+         * Additional connection properties.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; connection_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+         */
+
+        @java.lang.Override
+        public boolean containsConnectionProperties(
+            java.lang.String key) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          return internalGetConnectionProperties().getMap().containsKey(key);
+        }
+        /**
+         * Use {@link #getConnectionPropertiesMap()} instead.
+         */
+        @java.lang.Override
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String> getConnectionProperties() {
+          return getConnectionPropertiesMap();
+        }
+        /**
+         * <pre>
+         * Additional connection properties.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; connection_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+         */
+        @java.lang.Override
+
+        public java.util.Map<java.lang.String, java.lang.String> getConnectionPropertiesMap() {
+          return internalGetConnectionProperties().getMap();
+        }
+        /**
+         * <pre>
+         * Additional connection properties.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; connection_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+         */
+        @java.lang.Override
+
+        public java.lang.String getConnectionPropertiesOrDefault(
+            java.lang.String key,
+            java.lang.String defaultValue) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetConnectionProperties().getMap();
+          return map.containsKey(key) ? map.get(key) : defaultValue;
+        }
+        /**
+         * <pre>
+         * Additional connection properties.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; connection_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+         */
+        @java.lang.Override
+
+        public java.lang.String getConnectionPropertiesOrThrow(
+            java.lang.String key) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetConnectionProperties().getMap();
+          if (!map.containsKey(key)) {
+            throw new java.lang.IllegalArgumentException();
+          }
+          return map.get(key);
+        }
+
+        public Builder clearConnectionProperties() {
+          internalGetMutableConnectionProperties().getMutableMap()
+              .clear();
+          return this;
+        }
+        /**
+         * <pre>
+         * Additional connection properties.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; connection_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+         */
+
+        public Builder removeConnectionProperties(
+            java.lang.String key) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          internalGetMutableConnectionProperties().getMutableMap()
+              .remove(key);
+          return this;
+        }
+        /**
+         * Use alternate mutation accessors instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String>
+        getMutableConnectionProperties() {
+          return internalGetMutableConnectionProperties().getMutableMap();
+        }
+        /**
+         * <pre>
+         * Additional connection properties.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; connection_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+         */
+        public Builder putConnectionProperties(
+            java.lang.String key,
+            java.lang.String value) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+          internalGetMutableConnectionProperties().getMutableMap()
+              .put(key, value);
+          return this;
+        }
+        /**
+         * <pre>
+         * Additional connection properties.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; connection_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+         */
+
+        public Builder putAllConnectionProperties(
+            java.util.Map<java.lang.String, java.lang.String> values) {
+          internalGetMutableConnectionProperties().getMutableMap()
+              .putAll(values);
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.trino.v1.MysqlConnection.ConnectionManager)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.trino.v1.MysqlConnection.ConnectionManager)
+      private static final yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager();
+      }
+
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<ConnectionManager>
+          PARSER = new com.google.protobuf.AbstractParser<ConnectionManager>() {
+        @java.lang.Override
+        public ConnectionManager parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ConnectionManager(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ConnectionManager> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ConnectionManager> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int typeCase_ = 0;
+    private java.lang.Object type_;
+    public enum TypeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      ON_PREMISE(1),
+      CONNECTION_MANAGER(2),
+      TYPE_NOT_SET(0);
+      private final int value;
+      private TypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TypeCase forNumber(int value) {
+        switch (value) {
+          case 1: return ON_PREMISE;
+          case 2: return CONNECTION_MANAGER;
+          case 0: return TYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TypeCase
+    getTypeCase() {
+      return TypeCase.forNumber(
+          typeCase_);
+    }
+
+    public static final int ON_PREMISE_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnection.OnPremise on_premise = 1;</code>
+     * @return Whether the onPremise field is set.
+     */
+    @java.lang.Override
+    public boolean hasOnPremise() {
+      return typeCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnection.OnPremise on_premise = 1;</code>
+     * @return The onPremise.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise getOnPremise() {
+      if (typeCase_ == 1) {
+         return (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise) type_;
+      }
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnection.OnPremise on_premise = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremiseOrBuilder getOnPremiseOrBuilder() {
+      if (typeCase_ == 1) {
+         return (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise) type_;
+      }
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.getDefaultInstance();
+    }
+
+    public static final int CONNECTION_MANAGER_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnection.ConnectionManager connection_manager = 2;</code>
+     * @return Whether the connectionManager field is set.
+     */
+    @java.lang.Override
+    public boolean hasConnectionManager() {
+      return typeCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnection.ConnectionManager connection_manager = 2;</code>
+     * @return The connectionManager.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager getConnectionManager() {
+      if (typeCase_ == 2) {
+         return (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager) type_;
+      }
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnection.ConnectionManager connection_manager = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManagerOrBuilder getConnectionManagerOrBuilder() {
+      if (typeCase_ == 2) {
+         return (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager) type_;
+      }
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (typeCase_ == 1) {
+        output.writeMessage(1, (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise) type_);
+      }
+      if (typeCase_ == 2) {
+        output.writeMessage(2, (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager) type_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (typeCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise) type_);
+      }
+      if (typeCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager) type_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection other = (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection) obj;
+
+      if (!getTypeCase().equals(other.getTypeCase())) return false;
+      switch (typeCase_) {
+        case 1:
+          if (!getOnPremise()
+              .equals(other.getOnPremise())) return false;
+          break;
+        case 2:
+          if (!getConnectionManager()
+              .equals(other.getConnectionManager())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (typeCase_) {
+        case 1:
+          hash = (37 * hash) + ON_PREMISE_FIELD_NUMBER;
+          hash = (53 * hash) + getOnPremise().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + CONNECTION_MANAGER_FIELD_NUMBER;
+          hash = (53 * hash) + getConnectionManager().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.trino.v1.MysqlConnection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.trino.v1.MysqlConnection)
+        yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.class, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        typeCase_ = 0;
+        type_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnection_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection getDefaultInstanceForType() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection build() {
+        yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection buildPartial() {
+        yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection result = new yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection(this);
+        if (typeCase_ == 1) {
+          if (onPremiseBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = onPremiseBuilder_.build();
+          }
+        }
+        if (typeCase_ == 2) {
+          if (connectionManagerBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = connectionManagerBuilder_.build();
+          }
+        }
+        result.typeCase_ = typeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection) {
+          return mergeFrom((yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection other) {
+        if (other == yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.getDefaultInstance()) return this;
+        switch (other.getTypeCase()) {
+          case ON_PREMISE: {
+            mergeOnPremise(other.getOnPremise());
+            break;
+          }
+          case CONNECTION_MANAGER: {
+            mergeConnectionManager(other.getConnectionManager());
+            break;
+          }
+          case TYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int typeCase_ = 0;
+      private java.lang.Object type_;
+      public TypeCase
+          getTypeCase() {
+        return TypeCase.forNumber(
+            typeCase_);
+      }
+
+      public Builder clearType() {
+        typeCase_ = 0;
+        type_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremiseOrBuilder> onPremiseBuilder_;
+      /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection.OnPremise on_premise = 1;</code>
+       * @return Whether the onPremise field is set.
+       */
+      @java.lang.Override
+      public boolean hasOnPremise() {
+        return typeCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection.OnPremise on_premise = 1;</code>
+       * @return The onPremise.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise getOnPremise() {
+        if (onPremiseBuilder_ == null) {
+          if (typeCase_ == 1) {
+            return (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise) type_;
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.getDefaultInstance();
+        } else {
+          if (typeCase_ == 1) {
+            return onPremiseBuilder_.getMessage();
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection.OnPremise on_premise = 1;</code>
+       */
+      public Builder setOnPremise(yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise value) {
+        if (onPremiseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          onPremiseBuilder_.setMessage(value);
+        }
+        typeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection.OnPremise on_premise = 1;</code>
+       */
+      public Builder setOnPremise(
+          yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.Builder builderForValue) {
+        if (onPremiseBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          onPremiseBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection.OnPremise on_premise = 1;</code>
+       */
+      public Builder mergeOnPremise(yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise value) {
+        if (onPremiseBuilder_ == null) {
+          if (typeCase_ == 1 &&
+              type_ != yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.getDefaultInstance()) {
+            type_ = yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.newBuilder((yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 1) {
+            onPremiseBuilder_.mergeFrom(value);
+          }
+          onPremiseBuilder_.setMessage(value);
+        }
+        typeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection.OnPremise on_premise = 1;</code>
+       */
+      public Builder clearOnPremise() {
+        if (onPremiseBuilder_ == null) {
+          if (typeCase_ == 1) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 1) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          onPremiseBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection.OnPremise on_premise = 1;</code>
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.Builder getOnPremiseBuilder() {
+        return getOnPremiseFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection.OnPremise on_premise = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremiseOrBuilder getOnPremiseOrBuilder() {
+        if ((typeCase_ == 1) && (onPremiseBuilder_ != null)) {
+          return onPremiseBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 1) {
+            return (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise) type_;
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection.OnPremise on_premise = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremiseOrBuilder> 
+          getOnPremiseFieldBuilder() {
+        if (onPremiseBuilder_ == null) {
+          if (!(typeCase_ == 1)) {
+            type_ = yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.getDefaultInstance();
+          }
+          onPremiseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremiseOrBuilder>(
+                  (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.OnPremise) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 1;
+        onChanged();;
+        return onPremiseBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManagerOrBuilder> connectionManagerBuilder_;
+      /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection.ConnectionManager connection_manager = 2;</code>
+       * @return Whether the connectionManager field is set.
+       */
+      @java.lang.Override
+      public boolean hasConnectionManager() {
+        return typeCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection.ConnectionManager connection_manager = 2;</code>
+       * @return The connectionManager.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager getConnectionManager() {
+        if (connectionManagerBuilder_ == null) {
+          if (typeCase_ == 2) {
+            return (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager) type_;
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.getDefaultInstance();
+        } else {
+          if (typeCase_ == 2) {
+            return connectionManagerBuilder_.getMessage();
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection.ConnectionManager connection_manager = 2;</code>
+       */
+      public Builder setConnectionManager(yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager value) {
+        if (connectionManagerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          connectionManagerBuilder_.setMessage(value);
+        }
+        typeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection.ConnectionManager connection_manager = 2;</code>
+       */
+      public Builder setConnectionManager(
+          yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.Builder builderForValue) {
+        if (connectionManagerBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectionManagerBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection.ConnectionManager connection_manager = 2;</code>
+       */
+      public Builder mergeConnectionManager(yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager value) {
+        if (connectionManagerBuilder_ == null) {
+          if (typeCase_ == 2 &&
+              type_ != yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.getDefaultInstance()) {
+            type_ = yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.newBuilder((yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 2) {
+            connectionManagerBuilder_.mergeFrom(value);
+          }
+          connectionManagerBuilder_.setMessage(value);
+        }
+        typeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection.ConnectionManager connection_manager = 2;</code>
+       */
+      public Builder clearConnectionManager() {
+        if (connectionManagerBuilder_ == null) {
+          if (typeCase_ == 2) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 2) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          connectionManagerBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection.ConnectionManager connection_manager = 2;</code>
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.Builder getConnectionManagerBuilder() {
+        return getConnectionManagerFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection.ConnectionManager connection_manager = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManagerOrBuilder getConnectionManagerOrBuilder() {
+        if ((typeCase_ == 2) && (connectionManagerBuilder_ != null)) {
+          return connectionManagerBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 2) {
+            return (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager) type_;
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection.ConnectionManager connection_manager = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManagerOrBuilder> 
+          getConnectionManagerFieldBuilder() {
+        if (connectionManagerBuilder_ == null) {
+          if (!(typeCase_ == 2)) {
+            type_ = yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.getDefaultInstance();
+          }
+          connectionManagerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManagerOrBuilder>(
+                  (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.ConnectionManager) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 2;
+        onChanged();;
+        return connectionManagerBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.trino.v1.MysqlConnection)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.trino.v1.MysqlConnection)
+    private static final yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection();
+    }
+
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MysqlConnection>
+        PARSER = new com.google.protobuf.AbstractParser<MysqlConnection>() {
+      @java.lang.Override
+      public MysqlConnection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MysqlConnection(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MysqlConnection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MysqlConnection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MysqlConnectorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.trino.v1.MysqlConnector)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Connection configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnection connection = 1;</code>
+     * @return Whether the connection field is set.
+     */
+    boolean hasConnection();
+    /**
+     * <pre>
+     * Connection configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnection connection = 1;</code>
+     * @return The connection.
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection getConnection();
+    /**
+     * <pre>
+     * Connection configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnection connection = 1;</code>
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnectionOrBuilder getConnectionOrBuilder();
+
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getAdditionalPropertiesCount();
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsAdditionalProperties(
+        java.lang.String key);
+    /**
+     * Use {@link #getAdditionalPropertiesMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getAdditionalProperties();
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getAdditionalPropertiesMap();
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getAdditionalPropertiesOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getAdditionalPropertiesOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.trino.v1.MysqlConnector}
+   */
+  public static final class MysqlConnector extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.trino.v1.MysqlConnector)
+      MysqlConnectorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MysqlConnector.newBuilder() to construct.
+    private MysqlConnector(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MysqlConnector() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MysqlConnector();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MysqlConnector(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.Builder subBuilder = null;
+              if (connection_ != null) {
+                subBuilder = connection_.toBuilder();
+              }
+              connection_ = input.readMessage(yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(connection_);
+                connection_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                additionalProperties_ = com.google.protobuf.MapField.newMapField(
+                    AdditionalPropertiesDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              additionalProperties__ = input.readMessage(
+                  AdditionalPropertiesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              additionalProperties_.getMutableMap().put(
+                  additionalProperties__.getKey(), additionalProperties__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnector_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetAdditionalProperties();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnector_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.class, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.Builder.class);
+    }
+
+    public static final int CONNECTION_FIELD_NUMBER = 1;
+    private yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection connection_;
+    /**
+     * <pre>
+     * Connection configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnection connection = 1;</code>
+     * @return Whether the connection field is set.
+     */
+    @java.lang.Override
+    public boolean hasConnection() {
+      return connection_ != null;
+    }
+    /**
+     * <pre>
+     * Connection configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnection connection = 1;</code>
+     * @return The connection.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection getConnection() {
+      return connection_ == null ? yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.getDefaultInstance() : connection_;
+    }
+    /**
+     * <pre>
+     * Connection configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.MysqlConnection connection = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnectionOrBuilder getConnectionOrBuilder() {
+      return getConnection();
+    }
+
+    public static final int ADDITIONAL_PROPERTIES_FIELD_NUMBER = 2;
+    private static final class AdditionalPropertiesDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnector_AdditionalPropertiesEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> additionalProperties_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetAdditionalProperties() {
+      if (additionalProperties_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            AdditionalPropertiesDefaultEntryHolder.defaultEntry);
+      }
+      return additionalProperties_;
+    }
+
+    public int getAdditionalPropertiesCount() {
+      return internalGetAdditionalProperties().getMap().size();
+    }
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsAdditionalProperties(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetAdditionalProperties().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getAdditionalPropertiesMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getAdditionalProperties() {
+      return getAdditionalPropertiesMap();
+    }
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getAdditionalPropertiesMap() {
+      return internalGetAdditionalProperties().getMap();
+    }
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getAdditionalPropertiesOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetAdditionalProperties().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getAdditionalPropertiesOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetAdditionalProperties().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (connection_ != null) {
+        output.writeMessage(1, getConnection());
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetAdditionalProperties(),
+          AdditionalPropertiesDefaultEntryHolder.defaultEntry,
+          2);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (connection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getConnection());
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetAdditionalProperties().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        additionalProperties__ = AdditionalPropertiesDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, additionalProperties__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector other = (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector) obj;
+
+      if (hasConnection() != other.hasConnection()) return false;
+      if (hasConnection()) {
+        if (!getConnection()
+            .equals(other.getConnection())) return false;
+      }
+      if (!internalGetAdditionalProperties().equals(
+          other.internalGetAdditionalProperties())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasConnection()) {
+        hash = (37 * hash) + CONNECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getConnection().hashCode();
+      }
+      if (!internalGetAdditionalProperties().getMap().isEmpty()) {
+        hash = (37 * hash) + ADDITIONAL_PROPERTIES_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetAdditionalProperties().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.trino.v1.MysqlConnector}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.trino.v1.MysqlConnector)
+        yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnectorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnector_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetAdditionalProperties();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetMutableAdditionalProperties();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnector_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.class, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (connectionBuilder_ == null) {
+          connection_ = null;
+        } else {
+          connection_ = null;
+          connectionBuilder_ = null;
+        }
+        internalGetMutableAdditionalProperties().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_MysqlConnector_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector getDefaultInstanceForType() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector build() {
+        yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector buildPartial() {
+        yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector result = new yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector(this);
+        int from_bitField0_ = bitField0_;
+        if (connectionBuilder_ == null) {
+          result.connection_ = connection_;
+        } else {
+          result.connection_ = connectionBuilder_.build();
+        }
+        result.additionalProperties_ = internalGetAdditionalProperties();
+        result.additionalProperties_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector) {
+          return mergeFrom((yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector other) {
+        if (other == yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector.getDefaultInstance()) return this;
+        if (other.hasConnection()) {
+          mergeConnection(other.getConnection());
+        }
+        internalGetMutableAdditionalProperties().mergeFrom(
+            other.internalGetAdditionalProperties());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection connection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnectionOrBuilder> connectionBuilder_;
+      /**
+       * <pre>
+       * Connection configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection connection = 1;</code>
+       * @return Whether the connection field is set.
+       */
+      public boolean hasConnection() {
+        return connectionBuilder_ != null || connection_ != null;
+      }
+      /**
+       * <pre>
+       * Connection configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection connection = 1;</code>
+       * @return The connection.
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection getConnection() {
+        if (connectionBuilder_ == null) {
+          return connection_ == null ? yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.getDefaultInstance() : connection_;
+        } else {
+          return connectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Connection configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection connection = 1;</code>
+       */
+      public Builder setConnection(yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection value) {
+        if (connectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          connection_ = value;
+          onChanged();
+        } else {
+          connectionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection connection = 1;</code>
+       */
+      public Builder setConnection(
+          yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.Builder builderForValue) {
+        if (connectionBuilder_ == null) {
+          connection_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection connection = 1;</code>
+       */
+      public Builder mergeConnection(yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection value) {
+        if (connectionBuilder_ == null) {
+          if (connection_ != null) {
+            connection_ =
+              yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.newBuilder(connection_).mergeFrom(value).buildPartial();
+          } else {
+            connection_ = value;
+          }
+          onChanged();
+        } else {
+          connectionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection connection = 1;</code>
+       */
+      public Builder clearConnection() {
+        if (connectionBuilder_ == null) {
+          connection_ = null;
+          onChanged();
+        } else {
+          connection_ = null;
+          connectionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection connection = 1;</code>
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.Builder getConnectionBuilder() {
+        
+        onChanged();
+        return getConnectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Connection configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection connection = 1;</code>
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnectionOrBuilder getConnectionOrBuilder() {
+        if (connectionBuilder_ != null) {
+          return connectionBuilder_.getMessageOrBuilder();
+        } else {
+          return connection_ == null ?
+              yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.getDefaultInstance() : connection_;
+        }
+      }
+      /**
+       * <pre>
+       * Connection configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.MysqlConnection connection = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnectionOrBuilder> 
+          getConnectionFieldBuilder() {
+        if (connectionBuilder_ == null) {
+          connectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnection.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnectionOrBuilder>(
+                  getConnection(),
+                  getParentForChildren(),
+                  isClean());
+          connection_ = null;
+        }
+        return connectionBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> additionalProperties_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetAdditionalProperties() {
+        if (additionalProperties_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              AdditionalPropertiesDefaultEntryHolder.defaultEntry);
+        }
+        return additionalProperties_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableAdditionalProperties() {
+        onChanged();;
+        if (additionalProperties_ == null) {
+          additionalProperties_ = com.google.protobuf.MapField.newMapField(
+              AdditionalPropertiesDefaultEntryHolder.defaultEntry);
+        }
+        if (!additionalProperties_.isMutable()) {
+          additionalProperties_ = additionalProperties_.copy();
+        }
+        return additionalProperties_;
+      }
+
+      public int getAdditionalPropertiesCount() {
+        return internalGetAdditionalProperties().getMap().size();
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsAdditionalProperties(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetAdditionalProperties().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getAdditionalPropertiesMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getAdditionalProperties() {
+        return getAdditionalPropertiesMap();
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getAdditionalPropertiesMap() {
+        return internalGetAdditionalProperties().getMap();
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getAdditionalPropertiesOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetAdditionalProperties().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getAdditionalPropertiesOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetAdditionalProperties().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearAdditionalProperties() {
+        internalGetMutableAdditionalProperties().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeAdditionalProperties(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableAdditionalProperties().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableAdditionalProperties() {
+        return internalGetMutableAdditionalProperties().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putAdditionalProperties(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableAdditionalProperties().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllAdditionalProperties(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableAdditionalProperties().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.trino.v1.MysqlConnector)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.trino.v1.MysqlConnector)
+    private static final yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector();
+    }
+
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MysqlConnector>
+        PARSER = new com.google.protobuf.AbstractParser<MysqlConnector>() {
+      @java.lang.Override
+      public MysqlConnector parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MysqlConnector(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MysqlConnector> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MysqlConnector> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.MysqlConnector getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GreenplumConnectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.trino.v1.GreenplumConnection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnection.OnPremise on_premise = 1;</code>
+     * @return Whether the onPremise field is set.
+     */
+    boolean hasOnPremise();
+    /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnection.OnPremise on_premise = 1;</code>
+     * @return The onPremise.
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise getOnPremise();
+    /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnection.OnPremise on_premise = 1;</code>
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremiseOrBuilder getOnPremiseOrBuilder();
+
+    /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager connection_manager = 2;</code>
+     * @return Whether the connectionManager field is set.
+     */
+    boolean hasConnectionManager();
+    /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager connection_manager = 2;</code>
+     * @return The connectionManager.
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager getConnectionManager();
+    /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager connection_manager = 2;</code>
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManagerOrBuilder getConnectionManagerOrBuilder();
+
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.TypeCase getTypeCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.trino.v1.GreenplumConnection}
+   */
+  public static final class GreenplumConnection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.trino.v1.GreenplumConnection)
+      GreenplumConnectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GreenplumConnection.newBuilder() to construct.
+    private GreenplumConnection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GreenplumConnection() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GreenplumConnection();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GreenplumConnection(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.Builder subBuilder = null;
+              if (typeCase_ == 1) {
+                subBuilder = ((yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 1;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.Builder subBuilder = null;
+              if (typeCase_ == 2) {
+                subBuilder = ((yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 2;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.class, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.Builder.class);
+    }
+
+    public interface OnPremiseOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.trino.v1.GreenplumConnection.OnPremise)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Connection to the Greenplum/Cloudberry.
+       * </pre>
+       *
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:postgresql://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+       * @return The connectionUrl.
+       */
+      java.lang.String getConnectionUrl();
+      /**
+       * <pre>
+       * Connection to the Greenplum/Cloudberry.
+       * </pre>
+       *
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:postgresql://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+       * @return The bytes for connectionUrl.
+       */
+      com.google.protobuf.ByteString
+          getConnectionUrlBytes();
+
+      /**
+       * <pre>
+       * Name of the Greenplum/Cloudberry user.
+       * </pre>
+       *
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The userName.
+       */
+      java.lang.String getUserName();
+      /**
+       * <pre>
+       * Name of the Greenplum/Cloudberry user.
+       * </pre>
+       *
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for userName.
+       */
+      com.google.protobuf.ByteString
+          getUserNameBytes();
+
+      /**
+       * <pre>
+       * Password of the Greenplum/Cloudberry user.
+       * </pre>
+       *
+       * <code>string password = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "0-128"];</code>
+       * @return The password.
+       */
+      java.lang.String getPassword();
+      /**
+       * <pre>
+       * Password of the Greenplum/Cloudberry user.
+       * </pre>
+       *
+       * <code>string password = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "0-128"];</code>
+       * @return The bytes for password.
+       */
+      com.google.protobuf.ByteString
+          getPasswordBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.trino.v1.GreenplumConnection.OnPremise}
+     */
+    public static final class OnPremise extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.trino.v1.GreenplumConnection.OnPremise)
+        OnPremiseOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use OnPremise.newBuilder() to construct.
+      private OnPremise(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private OnPremise() {
+        connectionUrl_ = "";
+        userName_ = "";
+        password_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new OnPremise();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private OnPremise(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                connectionUrl_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                userName_ = s;
+                break;
+              }
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                password_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnection_OnPremise_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnection_OnPremise_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.class, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.Builder.class);
+      }
+
+      public static final int CONNECTION_URL_FIELD_NUMBER = 1;
+      private volatile java.lang.Object connectionUrl_;
+      /**
+       * <pre>
+       * Connection to the Greenplum/Cloudberry.
+       * </pre>
+       *
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:postgresql://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+       * @return The connectionUrl.
+       */
+      @java.lang.Override
+      public java.lang.String getConnectionUrl() {
+        java.lang.Object ref = connectionUrl_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectionUrl_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Connection to the Greenplum/Cloudberry.
+       * </pre>
+       *
+       * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:postgresql://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+       * @return The bytes for connectionUrl.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getConnectionUrlBytes() {
+        java.lang.Object ref = connectionUrl_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectionUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int USER_NAME_FIELD_NUMBER = 2;
+      private volatile java.lang.Object userName_;
+      /**
+       * <pre>
+       * Name of the Greenplum/Cloudberry user.
+       * </pre>
+       *
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The userName.
+       */
+      @java.lang.Override
+      public java.lang.String getUserName() {
+        java.lang.Object ref = userName_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userName_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the Greenplum/Cloudberry user.
+       * </pre>
+       *
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for userName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUserNameBytes() {
+        java.lang.Object ref = userName_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int PASSWORD_FIELD_NUMBER = 3;
+      private volatile java.lang.Object password_;
+      /**
+       * <pre>
+       * Password of the Greenplum/Cloudberry user.
+       * </pre>
+       *
+       * <code>string password = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "0-128"];</code>
+       * @return The password.
+       */
+      @java.lang.Override
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          password_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Password of the Greenplum/Cloudberry user.
+       * </pre>
+       *
+       * <code>string password = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "0-128"];</code>
+       * @return The bytes for password.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPasswordBytes() {
+        java.lang.Object ref = password_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          password_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionUrl_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, connectionUrl_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userName_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, password_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionUrl_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, connectionUrl_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userName_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, password_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise other = (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise) obj;
+
+        if (!getConnectionUrl()
+            .equals(other.getConnectionUrl())) return false;
+        if (!getUserName()
+            .equals(other.getUserName())) return false;
+        if (!getPassword()
+            .equals(other.getPassword())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + CONNECTION_URL_FIELD_NUMBER;
+        hash = (53 * hash) + getConnectionUrl().hashCode();
+        hash = (37 * hash) + USER_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getUserName().hashCode();
+        hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
+        hash = (53 * hash) + getPassword().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.trino.v1.GreenplumConnection.OnPremise}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.trino.v1.GreenplumConnection.OnPremise)
+          yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremiseOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnection_OnPremise_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnection_OnPremise_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.class, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          connectionUrl_ = "";
+
+          userName_ = "";
+
+          password_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnection_OnPremise_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise getDefaultInstanceForType() {
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise build() {
+          yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise buildPartial() {
+          yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise result = new yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise(this);
+          result.connectionUrl_ = connectionUrl_;
+          result.userName_ = userName_;
+          result.password_ = password_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise) {
+            return mergeFrom((yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise other) {
+          if (other == yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.getDefaultInstance()) return this;
+          if (!other.getConnectionUrl().isEmpty()) {
+            connectionUrl_ = other.connectionUrl_;
+            onChanged();
+          }
+          if (!other.getUserName().isEmpty()) {
+            userName_ = other.userName_;
+            onChanged();
+          }
+          if (!other.getPassword().isEmpty()) {
+            password_ = other.password_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object connectionUrl_ = "";
+        /**
+         * <pre>
+         * Connection to the Greenplum/Cloudberry.
+         * </pre>
+         *
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:postgresql://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+         * @return The connectionUrl.
+         */
+        public java.lang.String getConnectionUrl() {
+          java.lang.Object ref = connectionUrl_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            connectionUrl_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Connection to the Greenplum/Cloudberry.
+         * </pre>
+         *
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:postgresql://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+         * @return The bytes for connectionUrl.
+         */
+        public com.google.protobuf.ByteString
+            getConnectionUrlBytes() {
+          java.lang.Object ref = connectionUrl_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            connectionUrl_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Connection to the Greenplum/Cloudberry.
+         * </pre>
+         *
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:postgresql://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+         * @param value The connectionUrl to set.
+         * @return This builder for chaining.
+         */
+        public Builder setConnectionUrl(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          connectionUrl_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Connection to the Greenplum/Cloudberry.
+         * </pre>
+         *
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:postgresql://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearConnectionUrl() {
+          
+          connectionUrl_ = getDefaultInstance().getConnectionUrl();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Connection to the Greenplum/Cloudberry.
+         * </pre>
+         *
+         * <code>string connection_url = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^jdbc:postgresql://(?:.+:&#92;&#92;d+)/(?:.*)$"];</code>
+         * @param value The bytes for connectionUrl to set.
+         * @return This builder for chaining.
+         */
+        public Builder setConnectionUrlBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          connectionUrl_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object userName_ = "";
+        /**
+         * <pre>
+         * Name of the Greenplum/Cloudberry user.
+         * </pre>
+         *
+         * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         * @return The userName.
+         */
+        public java.lang.String getUserName() {
+          java.lang.Object ref = userName_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            userName_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Name of the Greenplum/Cloudberry user.
+         * </pre>
+         *
+         * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         * @return The bytes for userName.
+         */
+        public com.google.protobuf.ByteString
+            getUserNameBytes() {
+          java.lang.Object ref = userName_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            userName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Name of the Greenplum/Cloudberry user.
+         * </pre>
+         *
+         * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         * @param value The userName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUserName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          userName_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Name of the Greenplum/Cloudberry user.
+         * </pre>
+         *
+         * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUserName() {
+          
+          userName_ = getDefaultInstance().getUserName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Name of the Greenplum/Cloudberry user.
+         * </pre>
+         *
+         * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         * @param value The bytes for userName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUserNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          userName_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object password_ = "";
+        /**
+         * <pre>
+         * Password of the Greenplum/Cloudberry user.
+         * </pre>
+         *
+         * <code>string password = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "0-128"];</code>
+         * @return The password.
+         */
+        public java.lang.String getPassword() {
+          java.lang.Object ref = password_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            password_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Password of the Greenplum/Cloudberry user.
+         * </pre>
+         *
+         * <code>string password = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "0-128"];</code>
+         * @return The bytes for password.
+         */
+        public com.google.protobuf.ByteString
+            getPasswordBytes() {
+          java.lang.Object ref = password_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            password_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Password of the Greenplum/Cloudberry user.
+         * </pre>
+         *
+         * <code>string password = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "0-128"];</code>
+         * @param value The password to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPassword(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          password_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Password of the Greenplum/Cloudberry user.
+         * </pre>
+         *
+         * <code>string password = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "0-128"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPassword() {
+          
+          password_ = getDefaultInstance().getPassword();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Password of the Greenplum/Cloudberry user.
+         * </pre>
+         *
+         * <code>string password = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "0-128"];</code>
+         * @param value The bytes for password to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPasswordBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          password_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.trino.v1.GreenplumConnection.OnPremise)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.trino.v1.GreenplumConnection.OnPremise)
+      private static final yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise();
+      }
+
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<OnPremise>
+          PARSER = new com.google.protobuf.AbstractParser<OnPremise>() {
+        @java.lang.Override
+        public OnPremise parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new OnPremise(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<OnPremise> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<OnPremise> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface ConnectionManagerOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Connection ID.
+       * </pre>
+       *
+       * <code>string connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-50"];</code>
+       * @return The connectionId.
+       */
+      java.lang.String getConnectionId();
+      /**
+       * <pre>
+       * Connection ID.
+       * </pre>
+       *
+       * <code>string connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-50"];</code>
+       * @return The bytes for connectionId.
+       */
+      com.google.protobuf.ByteString
+          getConnectionIdBytes();
+
+      /**
+       * <pre>
+       * Database.
+       * </pre>
+       *
+       * <code>string database = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The database.
+       */
+      java.lang.String getDatabase();
+      /**
+       * <pre>
+       * Database.
+       * </pre>
+       *
+       * <code>string database = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for database.
+       */
+      com.google.protobuf.ByteString
+          getDatabaseBytes();
+
+      /**
+       * <pre>
+       * Additional connection properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; connection_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      int getConnectionPropertiesCount();
+      /**
+       * <pre>
+       * Additional connection properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; connection_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      boolean containsConnectionProperties(
+          java.lang.String key);
+      /**
+       * Use {@link #getConnectionPropertiesMap()} instead.
+       */
+      @java.lang.Deprecated
+      java.util.Map<java.lang.String, java.lang.String>
+      getConnectionProperties();
+      /**
+       * <pre>
+       * Additional connection properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; connection_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      java.util.Map<java.lang.String, java.lang.String>
+      getConnectionPropertiesMap();
+      /**
+       * <pre>
+       * Additional connection properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; connection_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      java.lang.String getConnectionPropertiesOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue);
+      /**
+       * <pre>
+       * Additional connection properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; connection_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      java.lang.String getConnectionPropertiesOrThrow(
+          java.lang.String key);
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager}
+     */
+    public static final class ConnectionManager extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager)
+        ConnectionManagerOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ConnectionManager.newBuilder() to construct.
+      private ConnectionManager(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ConnectionManager() {
+        connectionId_ = "";
+        database_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ConnectionManager();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ConnectionManager(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                connectionId_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                database_ = s;
+                break;
+              }
+              case 26: {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  connectionProperties_ = com.google.protobuf.MapField.newMapField(
+                      ConnectionPropertiesDefaultEntryHolder.defaultEntry);
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                connectionProperties__ = input.readMessage(
+                    ConnectionPropertiesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                connectionProperties_.getMutableMap().put(
+                    connectionProperties__.getKey(), connectionProperties__.getValue());
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnection_ConnectionManager_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      @java.lang.Override
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetConnectionProperties();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnection_ConnectionManager_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.class, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.Builder.class);
+      }
+
+      public static final int CONNECTION_ID_FIELD_NUMBER = 1;
+      private volatile java.lang.Object connectionId_;
+      /**
+       * <pre>
+       * Connection ID.
+       * </pre>
+       *
+       * <code>string connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-50"];</code>
+       * @return The connectionId.
+       */
+      @java.lang.Override
+      public java.lang.String getConnectionId() {
+        java.lang.Object ref = connectionId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectionId_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Connection ID.
+       * </pre>
+       *
+       * <code>string connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-50"];</code>
+       * @return The bytes for connectionId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getConnectionIdBytes() {
+        java.lang.Object ref = connectionId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int DATABASE_FIELD_NUMBER = 2;
+      private volatile java.lang.Object database_;
+      /**
+       * <pre>
+       * Database.
+       * </pre>
+       *
+       * <code>string database = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The database.
+       */
+      @java.lang.Override
+      public java.lang.String getDatabase() {
+        java.lang.Object ref = database_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          database_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Database.
+       * </pre>
+       *
+       * <code>string database = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * @return The bytes for database.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDatabaseBytes() {
+        java.lang.Object ref = database_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          database_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int CONNECTION_PROPERTIES_FIELD_NUMBER = 3;
+      private static final class ConnectionPropertiesDefaultEntryHolder {
+        static final com.google.protobuf.MapEntry<
+            java.lang.String, java.lang.String> defaultEntry =
+                com.google.protobuf.MapEntry
+                .<java.lang.String, java.lang.String>newDefaultInstance(
+                    yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnection_ConnectionManager_ConnectionPropertiesEntry_descriptor, 
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "",
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "");
+      }
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> connectionProperties_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetConnectionProperties() {
+        if (connectionProperties_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              ConnectionPropertiesDefaultEntryHolder.defaultEntry);
+        }
+        return connectionProperties_;
+      }
+
+      public int getConnectionPropertiesCount() {
+        return internalGetConnectionProperties().getMap().size();
+      }
+      /**
+       * <pre>
+       * Additional connection properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; connection_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsConnectionProperties(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetConnectionProperties().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getConnectionPropertiesMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getConnectionProperties() {
+        return getConnectionPropertiesMap();
+      }
+      /**
+       * <pre>
+       * Additional connection properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; connection_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getConnectionPropertiesMap() {
+        return internalGetConnectionProperties().getMap();
+      }
+      /**
+       * <pre>
+       * Additional connection properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; connection_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getConnectionPropertiesOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetConnectionProperties().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Additional connection properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; connection_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getConnectionPropertiesOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetConnectionProperties().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, connectionId_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(database_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, database_);
+        }
+        com.google.protobuf.GeneratedMessageV3
+          .serializeStringMapTo(
+            output,
+            internalGetConnectionProperties(),
+            ConnectionPropertiesDefaultEntryHolder.defaultEntry,
+            3);
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, connectionId_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(database_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, database_);
+        }
+        for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+             : internalGetConnectionProperties().getMap().entrySet()) {
+          com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+          connectionProperties__ = ConnectionPropertiesDefaultEntryHolder.defaultEntry.newBuilderForType()
+              .setKey(entry.getKey())
+              .setValue(entry.getValue())
+              .build();
+          size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(3, connectionProperties__);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager other = (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager) obj;
+
+        if (!getConnectionId()
+            .equals(other.getConnectionId())) return false;
+        if (!getDatabase()
+            .equals(other.getDatabase())) return false;
+        if (!internalGetConnectionProperties().equals(
+            other.internalGetConnectionProperties())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getConnectionId().hashCode();
+        hash = (37 * hash) + DATABASE_FIELD_NUMBER;
+        hash = (53 * hash) + getDatabase().hashCode();
+        if (!internalGetConnectionProperties().getMap().isEmpty()) {
+          hash = (37 * hash) + CONNECTION_PROPERTIES_FIELD_NUMBER;
+          hash = (53 * hash) + internalGetConnectionProperties().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager)
+          yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManagerOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnection_ConnectionManager_descriptor;
+        }
+
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMapField(
+            int number) {
+          switch (number) {
+            case 3:
+              return internalGetConnectionProperties();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMutableMapField(
+            int number) {
+          switch (number) {
+            case 3:
+              return internalGetMutableConnectionProperties();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnection_ConnectionManager_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.class, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          connectionId_ = "";
+
+          database_ = "";
+
+          internalGetMutableConnectionProperties().clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnection_ConnectionManager_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager getDefaultInstanceForType() {
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager build() {
+          yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager buildPartial() {
+          yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager result = new yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager(this);
+          int from_bitField0_ = bitField0_;
+          result.connectionId_ = connectionId_;
+          result.database_ = database_;
+          result.connectionProperties_ = internalGetConnectionProperties();
+          result.connectionProperties_.makeImmutable();
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager) {
+            return mergeFrom((yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager other) {
+          if (other == yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.getDefaultInstance()) return this;
+          if (!other.getConnectionId().isEmpty()) {
+            connectionId_ = other.connectionId_;
+            onChanged();
+          }
+          if (!other.getDatabase().isEmpty()) {
+            database_ = other.database_;
+            onChanged();
+          }
+          internalGetMutableConnectionProperties().mergeFrom(
+              other.internalGetConnectionProperties());
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object connectionId_ = "";
+        /**
+         * <pre>
+         * Connection ID.
+         * </pre>
+         *
+         * <code>string connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-50"];</code>
+         * @return The connectionId.
+         */
+        public java.lang.String getConnectionId() {
+          java.lang.Object ref = connectionId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            connectionId_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Connection ID.
+         * </pre>
+         *
+         * <code>string connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-50"];</code>
+         * @return The bytes for connectionId.
+         */
+        public com.google.protobuf.ByteString
+            getConnectionIdBytes() {
+          java.lang.Object ref = connectionId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            connectionId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Connection ID.
+         * </pre>
+         *
+         * <code>string connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-50"];</code>
+         * @param value The connectionId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setConnectionId(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          connectionId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Connection ID.
+         * </pre>
+         *
+         * <code>string connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-50"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearConnectionId() {
+          
+          connectionId_ = getDefaultInstance().getConnectionId();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Connection ID.
+         * </pre>
+         *
+         * <code>string connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "1-50"];</code>
+         * @param value The bytes for connectionId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setConnectionIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          connectionId_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object database_ = "";
+        /**
+         * <pre>
+         * Database.
+         * </pre>
+         *
+         * <code>string database = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         * @return The database.
+         */
+        public java.lang.String getDatabase() {
+          java.lang.Object ref = database_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            database_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Database.
+         * </pre>
+         *
+         * <code>string database = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         * @return The bytes for database.
+         */
+        public com.google.protobuf.ByteString
+            getDatabaseBytes() {
+          java.lang.Object ref = database_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            database_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Database.
+         * </pre>
+         *
+         * <code>string database = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         * @param value The database to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDatabase(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          database_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Database.
+         * </pre>
+         *
+         * <code>string database = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDatabase() {
+          
+          database_ = getDefaultInstance().getDatabase();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Database.
+         * </pre>
+         *
+         * <code>string database = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         * @param value The bytes for database to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDatabaseBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          database_ = value;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.MapField<
+            java.lang.String, java.lang.String> connectionProperties_;
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetConnectionProperties() {
+          if (connectionProperties_ == null) {
+            return com.google.protobuf.MapField.emptyMapField(
+                ConnectionPropertiesDefaultEntryHolder.defaultEntry);
+          }
+          return connectionProperties_;
+        }
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableConnectionProperties() {
+          onChanged();;
+          if (connectionProperties_ == null) {
+            connectionProperties_ = com.google.protobuf.MapField.newMapField(
+                ConnectionPropertiesDefaultEntryHolder.defaultEntry);
+          }
+          if (!connectionProperties_.isMutable()) {
+            connectionProperties_ = connectionProperties_.copy();
+          }
+          return connectionProperties_;
+        }
+
+        public int getConnectionPropertiesCount() {
+          return internalGetConnectionProperties().getMap().size();
+        }
+        /**
+         * <pre>
+         * Additional connection properties.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; connection_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+         */
+
+        @java.lang.Override
+        public boolean containsConnectionProperties(
+            java.lang.String key) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          return internalGetConnectionProperties().getMap().containsKey(key);
+        }
+        /**
+         * Use {@link #getConnectionPropertiesMap()} instead.
+         */
+        @java.lang.Override
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String> getConnectionProperties() {
+          return getConnectionPropertiesMap();
+        }
+        /**
+         * <pre>
+         * Additional connection properties.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; connection_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+         */
+        @java.lang.Override
+
+        public java.util.Map<java.lang.String, java.lang.String> getConnectionPropertiesMap() {
+          return internalGetConnectionProperties().getMap();
+        }
+        /**
+         * <pre>
+         * Additional connection properties.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; connection_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+         */
+        @java.lang.Override
+
+        public java.lang.String getConnectionPropertiesOrDefault(
+            java.lang.String key,
+            java.lang.String defaultValue) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetConnectionProperties().getMap();
+          return map.containsKey(key) ? map.get(key) : defaultValue;
+        }
+        /**
+         * <pre>
+         * Additional connection properties.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; connection_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+         */
+        @java.lang.Override
+
+        public java.lang.String getConnectionPropertiesOrThrow(
+            java.lang.String key) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetConnectionProperties().getMap();
+          if (!map.containsKey(key)) {
+            throw new java.lang.IllegalArgumentException();
+          }
+          return map.get(key);
+        }
+
+        public Builder clearConnectionProperties() {
+          internalGetMutableConnectionProperties().getMutableMap()
+              .clear();
+          return this;
+        }
+        /**
+         * <pre>
+         * Additional connection properties.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; connection_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+         */
+
+        public Builder removeConnectionProperties(
+            java.lang.String key) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          internalGetMutableConnectionProperties().getMutableMap()
+              .remove(key);
+          return this;
+        }
+        /**
+         * Use alternate mutation accessors instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String>
+        getMutableConnectionProperties() {
+          return internalGetMutableConnectionProperties().getMutableMap();
+        }
+        /**
+         * <pre>
+         * Additional connection properties.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; connection_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+         */
+        public Builder putConnectionProperties(
+            java.lang.String key,
+            java.lang.String value) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+          internalGetMutableConnectionProperties().getMutableMap()
+              .put(key, value);
+          return this;
+        }
+        /**
+         * <pre>
+         * Additional connection properties.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; connection_properties = 3 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+         */
+
+        public Builder putAllConnectionProperties(
+            java.util.Map<java.lang.String, java.lang.String> values) {
+          internalGetMutableConnectionProperties().getMutableMap()
+              .putAll(values);
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager)
+      private static final yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager();
+      }
+
+      public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<ConnectionManager>
+          PARSER = new com.google.protobuf.AbstractParser<ConnectionManager>() {
+        @java.lang.Override
+        public ConnectionManager parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ConnectionManager(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ConnectionManager> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ConnectionManager> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int typeCase_ = 0;
+    private java.lang.Object type_;
+    public enum TypeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      ON_PREMISE(1),
+      CONNECTION_MANAGER(2),
+      TYPE_NOT_SET(0);
+      private final int value;
+      private TypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TypeCase forNumber(int value) {
+        switch (value) {
+          case 1: return ON_PREMISE;
+          case 2: return CONNECTION_MANAGER;
+          case 0: return TYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TypeCase
+    getTypeCase() {
+      return TypeCase.forNumber(
+          typeCase_);
+    }
+
+    public static final int ON_PREMISE_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnection.OnPremise on_premise = 1;</code>
+     * @return Whether the onPremise field is set.
+     */
+    @java.lang.Override
+    public boolean hasOnPremise() {
+      return typeCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnection.OnPremise on_premise = 1;</code>
+     * @return The onPremise.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise getOnPremise() {
+      if (typeCase_ == 1) {
+         return (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise) type_;
+      }
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Connection configured manually.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnection.OnPremise on_premise = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremiseOrBuilder getOnPremiseOrBuilder() {
+      if (typeCase_ == 1) {
+         return (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise) type_;
+      }
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.getDefaultInstance();
+    }
+
+    public static final int CONNECTION_MANAGER_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager connection_manager = 2;</code>
+     * @return Whether the connectionManager field is set.
+     */
+    @java.lang.Override
+    public boolean hasConnectionManager() {
+      return typeCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager connection_manager = 2;</code>
+     * @return The connectionManager.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager getConnectionManager() {
+      if (typeCase_ == 2) {
+         return (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager) type_;
+      }
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Connection configured using Yandex Cloud Connection Manager.
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager connection_manager = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManagerOrBuilder getConnectionManagerOrBuilder() {
+      if (typeCase_ == 2) {
+         return (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager) type_;
+      }
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (typeCase_ == 1) {
+        output.writeMessage(1, (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise) type_);
+      }
+      if (typeCase_ == 2) {
+        output.writeMessage(2, (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager) type_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (typeCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise) type_);
+      }
+      if (typeCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager) type_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection other = (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection) obj;
+
+      if (!getTypeCase().equals(other.getTypeCase())) return false;
+      switch (typeCase_) {
+        case 1:
+          if (!getOnPremise()
+              .equals(other.getOnPremise())) return false;
+          break;
+        case 2:
+          if (!getConnectionManager()
+              .equals(other.getConnectionManager())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (typeCase_) {
+        case 1:
+          hash = (37 * hash) + ON_PREMISE_FIELD_NUMBER;
+          hash = (53 * hash) + getOnPremise().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + CONNECTION_MANAGER_FIELD_NUMBER;
+          hash = (53 * hash) + getConnectionManager().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.trino.v1.GreenplumConnection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.trino.v1.GreenplumConnection)
+        yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.class, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        typeCase_ = 0;
+        type_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnection_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection getDefaultInstanceForType() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection build() {
+        yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection buildPartial() {
+        yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection result = new yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection(this);
+        if (typeCase_ == 1) {
+          if (onPremiseBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = onPremiseBuilder_.build();
+          }
+        }
+        if (typeCase_ == 2) {
+          if (connectionManagerBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = connectionManagerBuilder_.build();
+          }
+        }
+        result.typeCase_ = typeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection) {
+          return mergeFrom((yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection other) {
+        if (other == yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.getDefaultInstance()) return this;
+        switch (other.getTypeCase()) {
+          case ON_PREMISE: {
+            mergeOnPremise(other.getOnPremise());
+            break;
+          }
+          case CONNECTION_MANAGER: {
+            mergeConnectionManager(other.getConnectionManager());
+            break;
+          }
+          case TYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int typeCase_ = 0;
+      private java.lang.Object type_;
+      public TypeCase
+          getTypeCase() {
+        return TypeCase.forNumber(
+            typeCase_);
+      }
+
+      public Builder clearType() {
+        typeCase_ = 0;
+        type_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremiseOrBuilder> onPremiseBuilder_;
+      /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection.OnPremise on_premise = 1;</code>
+       * @return Whether the onPremise field is set.
+       */
+      @java.lang.Override
+      public boolean hasOnPremise() {
+        return typeCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection.OnPremise on_premise = 1;</code>
+       * @return The onPremise.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise getOnPremise() {
+        if (onPremiseBuilder_ == null) {
+          if (typeCase_ == 1) {
+            return (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise) type_;
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.getDefaultInstance();
+        } else {
+          if (typeCase_ == 1) {
+            return onPremiseBuilder_.getMessage();
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection.OnPremise on_premise = 1;</code>
+       */
+      public Builder setOnPremise(yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise value) {
+        if (onPremiseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          onPremiseBuilder_.setMessage(value);
+        }
+        typeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection.OnPremise on_premise = 1;</code>
+       */
+      public Builder setOnPremise(
+          yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.Builder builderForValue) {
+        if (onPremiseBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          onPremiseBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection.OnPremise on_premise = 1;</code>
+       */
+      public Builder mergeOnPremise(yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise value) {
+        if (onPremiseBuilder_ == null) {
+          if (typeCase_ == 1 &&
+              type_ != yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.getDefaultInstance()) {
+            type_ = yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.newBuilder((yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 1) {
+            onPremiseBuilder_.mergeFrom(value);
+          }
+          onPremiseBuilder_.setMessage(value);
+        }
+        typeCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection.OnPremise on_premise = 1;</code>
+       */
+      public Builder clearOnPremise() {
+        if (onPremiseBuilder_ == null) {
+          if (typeCase_ == 1) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 1) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          onPremiseBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection.OnPremise on_premise = 1;</code>
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.Builder getOnPremiseBuilder() {
+        return getOnPremiseFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection.OnPremise on_premise = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremiseOrBuilder getOnPremiseOrBuilder() {
+        if ((typeCase_ == 1) && (onPremiseBuilder_ != null)) {
+          return onPremiseBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 1) {
+            return (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise) type_;
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Connection configured manually.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection.OnPremise on_premise = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremiseOrBuilder> 
+          getOnPremiseFieldBuilder() {
+        if (onPremiseBuilder_ == null) {
+          if (!(typeCase_ == 1)) {
+            type_ = yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.getDefaultInstance();
+          }
+          onPremiseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremiseOrBuilder>(
+                  (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.OnPremise) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 1;
+        onChanged();;
+        return onPremiseBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManagerOrBuilder> connectionManagerBuilder_;
+      /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager connection_manager = 2;</code>
+       * @return Whether the connectionManager field is set.
+       */
+      @java.lang.Override
+      public boolean hasConnectionManager() {
+        return typeCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager connection_manager = 2;</code>
+       * @return The connectionManager.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager getConnectionManager() {
+        if (connectionManagerBuilder_ == null) {
+          if (typeCase_ == 2) {
+            return (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager) type_;
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.getDefaultInstance();
+        } else {
+          if (typeCase_ == 2) {
+            return connectionManagerBuilder_.getMessage();
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager connection_manager = 2;</code>
+       */
+      public Builder setConnectionManager(yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager value) {
+        if (connectionManagerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          connectionManagerBuilder_.setMessage(value);
+        }
+        typeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager connection_manager = 2;</code>
+       */
+      public Builder setConnectionManager(
+          yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.Builder builderForValue) {
+        if (connectionManagerBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectionManagerBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager connection_manager = 2;</code>
+       */
+      public Builder mergeConnectionManager(yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager value) {
+        if (connectionManagerBuilder_ == null) {
+          if (typeCase_ == 2 &&
+              type_ != yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.getDefaultInstance()) {
+            type_ = yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.newBuilder((yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 2) {
+            connectionManagerBuilder_.mergeFrom(value);
+          }
+          connectionManagerBuilder_.setMessage(value);
+        }
+        typeCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager connection_manager = 2;</code>
+       */
+      public Builder clearConnectionManager() {
+        if (connectionManagerBuilder_ == null) {
+          if (typeCase_ == 2) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 2) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          connectionManagerBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager connection_manager = 2;</code>
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.Builder getConnectionManagerBuilder() {
+        return getConnectionManagerFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager connection_manager = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManagerOrBuilder getConnectionManagerOrBuilder() {
+        if ((typeCase_ == 2) && (connectionManagerBuilder_ != null)) {
+          return connectionManagerBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 2) {
+            return (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager) type_;
+          }
+          return yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Connection configured using Yandex Cloud Connection Manager.
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection.ConnectionManager connection_manager = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManagerOrBuilder> 
+          getConnectionManagerFieldBuilder() {
+        if (connectionManagerBuilder_ == null) {
+          if (!(typeCase_ == 2)) {
+            type_ = yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.getDefaultInstance();
+          }
+          connectionManagerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManagerOrBuilder>(
+                  (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.ConnectionManager) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 2;
+        onChanged();;
+        return connectionManagerBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.trino.v1.GreenplumConnection)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.trino.v1.GreenplumConnection)
+    private static final yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection();
+    }
+
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GreenplumConnection>
+        PARSER = new com.google.protobuf.AbstractParser<GreenplumConnection>() {
+      @java.lang.Override
+      public GreenplumConnection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GreenplumConnection(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GreenplumConnection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GreenplumConnection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GreenplumConnectorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.trino.v1.GreenplumConnector)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Connection configuration
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnection connection = 1;</code>
+     * @return Whether the connection field is set.
+     */
+    boolean hasConnection();
+    /**
+     * <pre>
+     * Connection configuration
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnection connection = 1;</code>
+     * @return The connection.
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection getConnection();
+    /**
+     * <pre>
+     * Connection configuration
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnection connection = 1;</code>
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnectionOrBuilder getConnectionOrBuilder();
+
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getAdditionalPropertiesCount();
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsAdditionalProperties(
+        java.lang.String key);
+    /**
+     * Use {@link #getAdditionalPropertiesMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getAdditionalProperties();
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getAdditionalPropertiesMap();
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getAdditionalPropertiesOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getAdditionalPropertiesOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.trino.v1.GreenplumConnector}
+   */
+  public static final class GreenplumConnector extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.trino.v1.GreenplumConnector)
+      GreenplumConnectorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GreenplumConnector.newBuilder() to construct.
+    private GreenplumConnector(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GreenplumConnector() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GreenplumConnector();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GreenplumConnector(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.Builder subBuilder = null;
+              if (connection_ != null) {
+                subBuilder = connection_.toBuilder();
+              }
+              connection_ = input.readMessage(yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(connection_);
+                connection_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                additionalProperties_ = com.google.protobuf.MapField.newMapField(
+                    AdditionalPropertiesDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              additionalProperties__ = input.readMessage(
+                  AdditionalPropertiesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              additionalProperties_.getMutableMap().put(
+                  additionalProperties__.getKey(), additionalProperties__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnector_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetAdditionalProperties();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnector_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.class, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.Builder.class);
+    }
+
+    public static final int CONNECTION_FIELD_NUMBER = 1;
+    private yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection connection_;
+    /**
+     * <pre>
+     * Connection configuration
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnection connection = 1;</code>
+     * @return Whether the connection field is set.
+     */
+    @java.lang.Override
+    public boolean hasConnection() {
+      return connection_ != null;
+    }
+    /**
+     * <pre>
+     * Connection configuration
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnection connection = 1;</code>
+     * @return The connection.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection getConnection() {
+      return connection_ == null ? yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.getDefaultInstance() : connection_;
+    }
+    /**
+     * <pre>
+     * Connection configuration
+     * </pre>
+     *
+     * <code>.yandex.cloud.trino.v1.GreenplumConnection connection = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnectionOrBuilder getConnectionOrBuilder() {
+      return getConnection();
+    }
+
+    public static final int ADDITIONAL_PROPERTIES_FIELD_NUMBER = 2;
+    private static final class AdditionalPropertiesDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnector_AdditionalPropertiesEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> additionalProperties_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetAdditionalProperties() {
+      if (additionalProperties_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            AdditionalPropertiesDefaultEntryHolder.defaultEntry);
+      }
+      return additionalProperties_;
+    }
+
+    public int getAdditionalPropertiesCount() {
+      return internalGetAdditionalProperties().getMap().size();
+    }
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsAdditionalProperties(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetAdditionalProperties().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getAdditionalPropertiesMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getAdditionalProperties() {
+      return getAdditionalPropertiesMap();
+    }
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getAdditionalPropertiesMap() {
+      return internalGetAdditionalProperties().getMap();
+    }
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getAdditionalPropertiesOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetAdditionalProperties().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Additional properties.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getAdditionalPropertiesOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetAdditionalProperties().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (connection_ != null) {
+        output.writeMessage(1, getConnection());
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetAdditionalProperties(),
+          AdditionalPropertiesDefaultEntryHolder.defaultEntry,
+          2);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (connection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getConnection());
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetAdditionalProperties().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        additionalProperties__ = AdditionalPropertiesDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, additionalProperties__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector other = (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector) obj;
+
+      if (hasConnection() != other.hasConnection()) return false;
+      if (hasConnection()) {
+        if (!getConnection()
+            .equals(other.getConnection())) return false;
+      }
+      if (!internalGetAdditionalProperties().equals(
+          other.internalGetAdditionalProperties())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasConnection()) {
+        hash = (37 * hash) + CONNECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getConnection().hashCode();
+      }
+      if (!internalGetAdditionalProperties().getMap().isEmpty()) {
+        hash = (37 * hash) + ADDITIONAL_PROPERTIES_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetAdditionalProperties().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.trino.v1.GreenplumConnector}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.trino.v1.GreenplumConnector)
+        yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnectorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnector_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetAdditionalProperties();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetMutableAdditionalProperties();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnector_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.class, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (connectionBuilder_ == null) {
+          connection_ = null;
+        } else {
+          connection_ = null;
+          connectionBuilder_ = null;
+        }
+        internalGetMutableAdditionalProperties().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.internal_static_yandex_cloud_trino_v1_GreenplumConnector_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector getDefaultInstanceForType() {
+        return yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector build() {
+        yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector buildPartial() {
+        yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector result = new yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector(this);
+        int from_bitField0_ = bitField0_;
+        if (connectionBuilder_ == null) {
+          result.connection_ = connection_;
+        } else {
+          result.connection_ = connectionBuilder_.build();
+        }
+        result.additionalProperties_ = internalGetAdditionalProperties();
+        result.additionalProperties_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector) {
+          return mergeFrom((yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector other) {
+        if (other == yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector.getDefaultInstance()) return this;
+        if (other.hasConnection()) {
+          mergeConnection(other.getConnection());
+        }
+        internalGetMutableAdditionalProperties().mergeFrom(
+            other.internalGetAdditionalProperties());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection connection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnectionOrBuilder> connectionBuilder_;
+      /**
+       * <pre>
+       * Connection configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection connection = 1;</code>
+       * @return Whether the connection field is set.
+       */
+      public boolean hasConnection() {
+        return connectionBuilder_ != null || connection_ != null;
+      }
+      /**
+       * <pre>
+       * Connection configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection connection = 1;</code>
+       * @return The connection.
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection getConnection() {
+        if (connectionBuilder_ == null) {
+          return connection_ == null ? yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.getDefaultInstance() : connection_;
+        } else {
+          return connectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Connection configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection connection = 1;</code>
+       */
+      public Builder setConnection(yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection value) {
+        if (connectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          connection_ = value;
+          onChanged();
+        } else {
+          connectionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection connection = 1;</code>
+       */
+      public Builder setConnection(
+          yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.Builder builderForValue) {
+        if (connectionBuilder_ == null) {
+          connection_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection connection = 1;</code>
+       */
+      public Builder mergeConnection(yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection value) {
+        if (connectionBuilder_ == null) {
+          if (connection_ != null) {
+            connection_ =
+              yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.newBuilder(connection_).mergeFrom(value).buildPartial();
+          } else {
+            connection_ = value;
+          }
+          onChanged();
+        } else {
+          connectionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection connection = 1;</code>
+       */
+      public Builder clearConnection() {
+        if (connectionBuilder_ == null) {
+          connection_ = null;
+          onChanged();
+        } else {
+          connection_ = null;
+          connectionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection connection = 1;</code>
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.Builder getConnectionBuilder() {
+        
+        onChanged();
+        return getConnectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Connection configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection connection = 1;</code>
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnectionOrBuilder getConnectionOrBuilder() {
+        if (connectionBuilder_ != null) {
+          return connectionBuilder_.getMessageOrBuilder();
+        } else {
+          return connection_ == null ?
+              yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.getDefaultInstance() : connection_;
+        }
+      }
+      /**
+       * <pre>
+       * Connection configuration
+       * </pre>
+       *
+       * <code>.yandex.cloud.trino.v1.GreenplumConnection connection = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnectionOrBuilder> 
+          getConnectionFieldBuilder() {
+        if (connectionBuilder_ == null) {
+          connectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnection.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnectionOrBuilder>(
+                  getConnection(),
+                  getParentForChildren(),
+                  isClean());
+          connection_ = null;
+        }
+        return connectionBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> additionalProperties_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetAdditionalProperties() {
+        if (additionalProperties_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              AdditionalPropertiesDefaultEntryHolder.defaultEntry);
+        }
+        return additionalProperties_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableAdditionalProperties() {
+        onChanged();;
+        if (additionalProperties_ == null) {
+          additionalProperties_ = com.google.protobuf.MapField.newMapField(
+              AdditionalPropertiesDefaultEntryHolder.defaultEntry);
+        }
+        if (!additionalProperties_.isMutable()) {
+          additionalProperties_ = additionalProperties_.copy();
+        }
+        return additionalProperties_;
+      }
+
+      public int getAdditionalPropertiesCount() {
+        return internalGetAdditionalProperties().getMap().size();
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsAdditionalProperties(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetAdditionalProperties().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getAdditionalPropertiesMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getAdditionalProperties() {
+        return getAdditionalPropertiesMap();
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getAdditionalPropertiesMap() {
+        return internalGetAdditionalProperties().getMap();
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getAdditionalPropertiesOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetAdditionalProperties().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getAdditionalPropertiesOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetAdditionalProperties().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearAdditionalProperties() {
+        internalGetMutableAdditionalProperties().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeAdditionalProperties(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableAdditionalProperties().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableAdditionalProperties() {
+        return internalGetMutableAdditionalProperties().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putAdditionalProperties(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableAdditionalProperties().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional properties.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; additional_properties = 2 [(.yandex.cloud.pattern) = "[-_0-9a-zA-Z.,:&#92;&#92;/_ ]*", (.yandex.cloud.size) = "&lt;=256", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllAdditionalProperties(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableAdditionalProperties().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.trino.v1.GreenplumConnector)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.trino.v1.GreenplumConnector)
+    private static final yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector();
+    }
+
+    public static yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GreenplumConnector>
+        PARSER = new com.google.protobuf.AbstractParser<GreenplumConnector>() {
+      @java.lang.Override
+      public GreenplumConnector parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GreenplumConnector(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GreenplumConnector> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GreenplumConnector> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.GreenplumConnector getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_trino_v1_Connector_descriptor;
   private static final 
@@ -31098,6 +42370,16 @@ public final class CatalogOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_trino_v1_DeltaLakeConnector_AdditionalPropertiesEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_trino_v1_HudiConnector_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_trino_v1_HudiConnector_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_trino_v1_HudiConnector_AdditionalPropertiesEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_trino_v1_HudiConnector_AdditionalPropertiesEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_trino_v1_PostgresqlConnection_descriptor;
   private static final 
@@ -31218,6 +42500,66 @@ public final class CatalogOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_trino_v1_SQLServerConnector_AdditionalPropertiesEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_trino_v1_MysqlConnection_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_trino_v1_MysqlConnection_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_trino_v1_MysqlConnection_OnPremise_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_trino_v1_MysqlConnection_OnPremise_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_trino_v1_MysqlConnection_ConnectionManager_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_trino_v1_MysqlConnection_ConnectionManager_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_trino_v1_MysqlConnection_ConnectionManager_ConnectionPropertiesEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_trino_v1_MysqlConnection_ConnectionManager_ConnectionPropertiesEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_trino_v1_MysqlConnector_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_trino_v1_MysqlConnector_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_trino_v1_MysqlConnector_AdditionalPropertiesEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_trino_v1_MysqlConnector_AdditionalPropertiesEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_trino_v1_GreenplumConnection_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_trino_v1_GreenplumConnection_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_trino_v1_GreenplumConnection_OnPremise_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_trino_v1_GreenplumConnection_OnPremise_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_trino_v1_GreenplumConnection_ConnectionManager_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_trino_v1_GreenplumConnection_ConnectionManager_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_trino_v1_GreenplumConnection_ConnectionManager_ConnectionPropertiesEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_trino_v1_GreenplumConnection_ConnectionManager_ConnectionPropertiesEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_trino_v1_GreenplumConnector_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_trino_v1_GreenplumConnector_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_trino_v1_GreenplumConnector_AdditionalPropertiesEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_trino_v1_GreenplumConnector_AdditionalPropertiesEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -31229,7 +42571,7 @@ public final class CatalogOuterClass {
     java.lang.String[] descriptorData = {
       "\n#yandex/cloud/trino/v1/catalog.proto\022\025y" +
       "andex.cloud.trino.v1\032\035yandex/cloud/valid" +
-      "ation.proto\"\270\004\n\tConnector\0224\n\004hive\030\001 \001(\0132" +
+      "ation.proto\"\346\005\n\tConnector\0224\n\004hive\030\001 \001(\0132" +
       "$.yandex.cloud.trino.v1.HiveConnectorH\000\022" +
       ":\n\007iceberg\030\002 \001(\0132\'.yandex.cloud.trino.v1" +
       ".IcebergConnectorH\000\022?\n\ndelta_lake\030\003 \001(\0132" +
@@ -31243,168 +42585,232 @@ public final class CatalogOuterClass {
       "ctorH\000\0228\n\006oracle\030\010 \001(\0132&.yandex.cloud.tr" +
       "ino.v1.OracleConnectorH\000\022>\n\tsqlserver\030\t " +
       "\001(\0132).yandex.cloud.trino.v1.SQLServerCon" +
-      "nectorH\000B\014\n\004type\022\004\300\3011\001\"\330\001\n\007Catalog\022\n\n\002id" +
-      "\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\0223\n\tconnector\030\003 \001(\0132" +
-      " .yandex.cloud.trino.v1.Connector\022\023\n\013des" +
-      "cription\030\004 \001(\t\022:\n\006labels\030\005 \003(\0132*.yandex." +
-      "cloud.trino.v1.Catalog.LabelsEntry\032-\n\013La" +
-      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\"\306\002\n\013CatalogSpec\022,\n\004name\030\001 \001(\tB\036\350\3071\001\212\3101" +
-      "\004<=63\362\3071\016[a-zA-Z0-9_-]*\0229\n\tconnector\030\002 \001" +
-      "(\0132 .yandex.cloud.trino.v1.ConnectorB\004\350\307" +
-      "1\001\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\177\n\006la" +
-      "bels\030\004 \003(\0132..yandex.cloud.trino.v1.Catal" +
-      "ogSpec.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013" +
-      "[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-" +
-      "z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\"\311\002\n\021CatalogUpdateSpec\022(\n\004name" +
-      "\030\001 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\0223\n\tco" +
-      "nnector\030\002 \001(\0132 .yandex.cloud.trino.v1.Co" +
-      "nnector\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022" +
-      "\205\001\n\006labels\030\004 \003(\01324.yandex.cloud.trino.v1" +
-      ".CatalogUpdateSpec.LabelsEntryB?\202\3101\004<=64" +
-      "\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[" +
-      "a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\215\001\n\tMetastore\022>\n\004" +
-      "hive\030\001 \001(\0132..yandex.cloud.trino.v1.Metas" +
-      "tore.HiveMetastoreH\000\0322\n\rHiveMetastore\022\r\n" +
-      "\003uri\030\001 \001(\tH\000B\022\n\nconnection\022\004\300\3011\001B\014\n\004type" +
-      "\022\004\300\3011\001\"\302\002\n\nFileSystem\022<\n\002s3\030\001 \001(\0132..yand" +
-      "ex.cloud.trino.v1.FileSystem.S3FileSyste" +
-      "mH\000\022M\n\013external_s3\030\002 \001(\01326.yandex.cloud." +
-      "trino.v1.FileSystem.ExternalS3FileSystem" +
-      "H\000\032\016\n\014S3FileSystem\032\210\001\n\024ExternalS3FileSys" +
-      "tem\022\034\n\016aws_access_key\030\001 \001(\tB\004\350\3071\001\022\034\n\016aws" +
-      "_secret_key\030\002 \001(\tB\004\350\3071\001\022\032\n\014aws_endpoint\030" +
-      "\003 \001(\tB\004\350\3071\001\022\030\n\naws_region\030\004 \001(\tB\004\350\3071\001B\014\n" +
-      "\004type\022\004\300\3011\001\"\363\002\n\rHiveConnector\0229\n\tmetasto" +
-      "re\030\001 \001(\0132 .yandex.cloud.trino.v1.Metasto" +
-      "reB\004\350\3071\001\022;\n\nfilesystem\030\002 \001(\0132!.yandex.cl" +
-      "oud.trino.v1.FileSystemB\004\350\3071\001\022\254\001\n\025additi" +
-      "onal_properties\030\003 \003(\0132>.yandex.cloud.tri" +
-      "no.v1.HiveConnector.AdditionalProperties" +
-      "EntryBM\202\3101\005<=256\212\3101\005<=128\362\3071\025[-_0-9a-zA-" +
-      "Z.,:\\/_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-" +
-      "z.]*\032;\n\031AdditionalPropertiesEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\371\002\n\020IcebergCon" +
-      "nector\0229\n\tmetastore\030\001 \001(\0132 .yandex.cloud" +
-      ".trino.v1.MetastoreB\004\350\3071\001\022;\n\nfilesystem\030" +
-      "\002 \001(\0132!.yandex.cloud.trino.v1.FileSystem" +
-      "B\004\350\3071\001\022\257\001\n\025additional_properties\030\003 \003(\0132A" +
-      ".yandex.cloud.trino.v1.IcebergConnector." +
-      "AdditionalPropertiesEntryBM\202\3101\005<=256\212\3101\005" +
-      "<=128\362\3071\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007\032\0051-12" +
-      "8\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;\n\031AdditionalPr" +
-      "opertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"\375\002\n\022DeltaLakeConnector\0229\n\tmetastor" +
-      "e\030\001 \001(\0132 .yandex.cloud.trino.v1.Metastor" +
-      "eB\004\350\3071\001\022;\n\nfilesystem\030\002 \001(\0132!.yandex.clo" +
-      "ud.trino.v1.FileSystemB\004\350\3071\001\022\261\001\n\025additio" +
-      "nal_properties\030\003 \003(\0132C.yandex.cloud.trin" +
-      "o.v1.DeltaLakeConnector.AdditionalProper" +
-      "tiesEntryBM\202\3101\005<=256\212\3101\005<=128\362\3071\025[-_0-9a" +
-      "-zA-Z.,:\\/_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0" +
-      "-9a-z.]*\032;\n\031AdditionalPropertiesEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\337\005\n\024Postgr" +
-      "esqlConnection\022K\n\non_premise\030\001 \001(\01325.yan" +
-      "dex.cloud.trino.v1.PostgresqlConnection." +
-      "OnPremiseH\000\022[\n\022connection_manager\030\002 \001(\0132" +
-      "=.yandex.cloud.trino.v1.PostgresqlConnec" +
-      "tion.ConnectionManagerH\000\032\245\001\n\tOnPremise\022D" +
-      "\n\016connection_url\030\001 \001(\tB,\350\3071\001\362\3071$^jdbc:[a" +
-      "-z0-9]+://(?:.+:\\d+)/(?:.*)$\0221\n\tuser_nam" +
-      "e\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022" +
-      "\037\n\010password\030\003 \001(\tB\r\350\3071\001\212\3101\0050-128\032\346\002\n\021Con" +
-      "nectionManager\022#\n\rconnection_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\0041-50\0220\n\010database\030\002 \001(\tB\036\350\3071\001\212\3101\004<" +
-      "=63\362\3071\016[a-zA-Z0-9_-]*\022\274\001\n\025connection_pro" +
-      "perties\030\003 \003(\0132W.yandex.cloud.trino.v1.Po" +
-      "stgresqlConnection.ConnectionManager.Con" +
-      "nectionPropertiesEntryBD\202\3101\005<=256\212\3101\005<=1" +
-      "28\362\3071\024[-_0-9a-zA-Z.,:\\/_]*\262\3101\007\032\0051-128\262\3101" +
-      "\013\022\t[a-zA-Z]*\032;\n\031ConnectionPropertiesEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\004typ" +
-      "e\022\004\300\3011\001\"\310\002\n\023PostgresqlConnector\022?\n\nconne" +
-      "ction\030\001 \001(\0132+.yandex.cloud.trino.v1.Post" +
-      "gresqlConnection\022\262\001\n\025additional_properti" +
-      "es\030\002 \003(\0132D.yandex.cloud.trino.v1.Postgre" +
-      "sqlConnector.AdditionalPropertiesEntryBM" +
-      "\202\3101\005<=256\212\3101\005<=128\362\3071\025[-_0-9a-zA-Z.,:\\/_" +
-      " ]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;\n" +
-      "\031AdditionalPropertiesEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\"\340\005\n\024ClickhouseConnect" +
-      "ion\022K\n\non_premise\030\001 \001(\01325.yandex.cloud.t" +
-      "rino.v1.ClickhouseConnection.OnPremiseH\000" +
-      "\022[\n\022connection_manager\030\002 \001(\0132=.yandex.cl" +
-      "oud.trino.v1.ClickhouseConnection.Connec" +
-      "tionManagerH\000\032\245\001\n\tOnPremise\022D\n\016connectio" +
-      "n_url\030\001 \001(\tB,\350\3071\001\362\3071$^jdbc:[a-z0-9]+://(" +
+      "nectorH\000\0224\n\004hudi\030\n \001(\0132$.yandex.cloud.tr" +
+      "ino.v1.HudiConnectorH\000\0226\n\005mysql\030\013 \001(\0132%." +
+      "yandex.cloud.trino.v1.MysqlConnectorH\000\022>" +
+      "\n\tgreenplum\030\014 \001(\0132).yandex.cloud.trino.v" +
+      "1.GreenplumConnectorH\000B\014\n\004type\022\004\300\3011\001\"\330\001\n" +
+      "\007Catalog\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\0223\n\tco" +
+      "nnector\030\003 \001(\0132 .yandex.cloud.trino.v1.Co" +
+      "nnector\022\023\n\013description\030\004 \001(\t\022:\n\006labels\030\005" +
+      " \003(\0132*.yandex.cloud.trino.v1.Catalog.Lab" +
+      "elsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\"\306\002\n\013CatalogSpec\022,\n\004name\030" +
+      "\001 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\0229\n" +
+      "\tconnector\030\002 \001(\0132 .yandex.cloud.trino.v1" +
+      ".ConnectorB\004\350\3071\001\022\036\n\013description\030\003 \001(\tB\t\212" +
+      "\3101\005<=256\022\177\n\006labels\030\004 \003(\0132..yandex.cloud." +
+      "trino.v1.CatalogSpec.LabelsEntryB?\202\3101\004<=" +
+      "64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022" +
+      "\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\311\002\n\021CatalogUpda" +
+      "teSpec\022(\n\004name\030\001 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-" +
+      "Z0-9_-]*\0223\n\tconnector\030\002 \001(\0132 .yandex.clo" +
+      "ud.trino.v1.Connector\022\036\n\013description\030\003 \001" +
+      "(\tB\t\212\3101\005<=256\022\205\001\n\006labels\030\004 \003(\01324.yandex." +
+      "cloud.trino.v1.CatalogUpdateSpec.LabelsE" +
+      "ntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101" +
+      "\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\215\001\n" +
+      "\tMetastore\022>\n\004hive\030\001 \001(\0132..yandex.cloud." +
+      "trino.v1.Metastore.HiveMetastoreH\000\0322\n\rHi" +
+      "veMetastore\022\r\n\003uri\030\001 \001(\tH\000B\022\n\nconnection" +
+      "\022\004\300\3011\001B\014\n\004type\022\004\300\3011\001\"\302\002\n\nFileSystem\022<\n\002s" +
+      "3\030\001 \001(\0132..yandex.cloud.trino.v1.FileSyst" +
+      "em.S3FileSystemH\000\022M\n\013external_s3\030\002 \001(\01326" +
+      ".yandex.cloud.trino.v1.FileSystem.Extern" +
+      "alS3FileSystemH\000\032\016\n\014S3FileSystem\032\210\001\n\024Ext" +
+      "ernalS3FileSystem\022\034\n\016aws_access_key\030\001 \001(" +
+      "\tB\004\350\3071\001\022\034\n\016aws_secret_key\030\002 \001(\tB\004\350\3071\001\022\032\n" +
+      "\014aws_endpoint\030\003 \001(\tB\004\350\3071\001\022\030\n\naws_region\030" +
+      "\004 \001(\tB\004\350\3071\001B\014\n\004type\022\004\300\3011\001\"\363\002\n\rHiveConnec" +
+      "tor\0229\n\tmetastore\030\001 \001(\0132 .yandex.cloud.tr" +
+      "ino.v1.MetastoreB\004\350\3071\001\022;\n\nfilesystem\030\002 \001" +
+      "(\0132!.yandex.cloud.trino.v1.FileSystemB\004\350" +
+      "\3071\001\022\254\001\n\025additional_properties\030\003 \003(\0132>.ya" +
+      "ndex.cloud.trino.v1.HiveConnector.Additi" +
+      "onalPropertiesEntryBM\202\3101\005<=256\212\3101\005<=128\362" +
+      "\3071\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007\032\0051-128\262\3101\023\022" +
+      "\021[a-z][-_0-9a-z.]*\032;\n\031AdditionalProperti" +
+      "esEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "\371\002\n\020IcebergConnector\0229\n\tmetastore\030\001 \001(\0132" +
+      " .yandex.cloud.trino.v1.MetastoreB\004\350\3071\001\022" +
+      ";\n\nfilesystem\030\002 \001(\0132!.yandex.cloud.trino" +
+      ".v1.FileSystemB\004\350\3071\001\022\257\001\n\025additional_prop" +
+      "erties\030\003 \003(\0132A.yandex.cloud.trino.v1.Ice" +
+      "bergConnector.AdditionalPropertiesEntryB" +
+      "M\202\3101\005<=256\212\3101\005<=128\362\3071\025[-_0-9a-zA-Z.,:\\/" +
+      "_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;" +
+      "\n\031AdditionalPropertiesEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\"\375\002\n\022DeltaLakeConnect" +
+      "or\0229\n\tmetastore\030\001 \001(\0132 .yandex.cloud.tri" +
+      "no.v1.MetastoreB\004\350\3071\001\022;\n\nfilesystem\030\002 \001(" +
+      "\0132!.yandex.cloud.trino.v1.FileSystemB\004\350\307" +
+      "1\001\022\261\001\n\025additional_properties\030\003 \003(\0132C.yan" +
+      "dex.cloud.trino.v1.DeltaLakeConnector.Ad" +
+      "ditionalPropertiesEntryBM\202\3101\005<=256\212\3101\005<=" +
+      "128\362\3071\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007\032\0051-128\262" +
+      "\3101\023\022\021[a-z][-_0-9a-z.]*\032;\n\031AdditionalProp" +
+      "ertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\"\363\002\n\rHudiConnector\0229\n\tmetastore\030\001 \001(\013" +
+      "2 .yandex.cloud.trino.v1.MetastoreB\004\350\3071\001" +
+      "\022;\n\nfilesystem\030\002 \001(\0132!.yandex.cloud.trin" +
+      "o.v1.FileSystemB\004\350\3071\001\022\254\001\n\025additional_pro" +
+      "perties\030\003 \003(\0132>.yandex.cloud.trino.v1.Hu" +
+      "diConnector.AdditionalPropertiesEntryBM\202" +
+      "\3101\005<=256\212\3101\005<=128\362\3071\025[-_0-9a-zA-Z.,:\\/_ " +
+      "]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;\n\031" +
+      "AdditionalPropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001\"\340\005\n\024PostgresqlConnecti" +
+      "on\022K\n\non_premise\030\001 \001(\01325.yandex.cloud.tr" +
+      "ino.v1.PostgresqlConnection.OnPremiseH\000\022" +
+      "[\n\022connection_manager\030\002 \001(\0132=.yandex.clo" +
+      "ud.trino.v1.PostgresqlConnection.Connect" +
+      "ionManagerH\000\032\246\001\n\tOnPremise\022E\n\016connection" +
+      "_url\030\001 \001(\tB-\350\3071\001\362\3071%^jdbc:postgresql://(" +
       "?:.+:\\d+)/(?:.*)$\0221\n\tuser_name\030\002 \001(\tB\036\350\307" +
       "1\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\037\n\010password" +
-      "\030\003 \001(\tB\r\350\3071\001\212\3101\0050-128\032\347\002\n\021ConnectionMana" +
+      "\030\003 \001(\tB\r\350\3071\001\212\3101\0050-128\032\346\002\n\021ConnectionMana" +
       "ger\022#\n\rconnection_id\030\001 \001(\tB\014\350\3071\001\212\3101\0041-50" +
       "\0220\n\010database\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-z" +
-      "A-Z0-9_-]*\022\275\001\n\025connection_properties\030\003 \003" +
-      "(\0132W.yandex.cloud.trino.v1.ClickhouseCon" +
+      "A-Z0-9_-]*\022\274\001\n\025connection_properties\030\003 \003" +
+      "(\0132W.yandex.cloud.trino.v1.PostgresqlCon" +
       "nection.ConnectionManager.ConnectionProp" +
-      "ertiesEntryBE\202\3101\005<=256\212\3101\005<=128\362\3071\024[-_0-" +
-      "9a-zA-Z.,:\\/_]*\262\3101\007\032\0051-128\262\3101\014\022\n[a-zA-Z_" +
-      "]*\032;\n\031ConnectionPropertiesEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\004type\022\004\300\3011\001\"\310\002" +
-      "\n\023ClickhouseConnector\022?\n\nconnection\030\001 \001(" +
-      "\0132+.yandex.cloud.trino.v1.ClickhouseConn" +
-      "ection\022\262\001\n\025additional_properties\030\002 \003(\0132D" +
-      ".yandex.cloud.trino.v1.ClickhouseConnect" +
+      "ertiesEntryBD\202\3101\005<=256\212\3101\005<=128\362\3071\024[-_0-" +
+      "9a-zA-Z.,:\\/_]*\262\3101\007\032\0051-128\262\3101\013\022\t[a-zA-Z]" +
+      "*\032;\n\031ConnectionPropertiesEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\004type\022\004\300\3011\001\"\310\002\n" +
+      "\023PostgresqlConnector\022?\n\nconnection\030\001 \001(\013" +
+      "2+.yandex.cloud.trino.v1.PostgresqlConne" +
+      "ction\022\262\001\n\025additional_properties\030\002 \003(\0132D." +
+      "yandex.cloud.trino.v1.PostgresqlConnecto" +
+      "r.AdditionalPropertiesEntryBM\202\3101\005<=256\212\310" +
+      "1\005<=128\362\3071\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007\032\0051-" +
+      "128\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;\n\031Additional" +
+      "PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001\"\341\005\n\024ClickhouseConnection\022K\n\non_p" +
+      "remise\030\001 \001(\01325.yandex.cloud.trino.v1.Cli" +
+      "ckhouseConnection.OnPremiseH\000\022[\n\022connect" +
+      "ion_manager\030\002 \001(\0132=.yandex.cloud.trino.v" +
+      "1.ClickhouseConnection.ConnectionManager" +
+      "H\000\032\246\001\n\tOnPremise\022E\n\016connection_url\030\001 \001(\t" +
+      "B-\350\3071\001\362\3071%^jdbc:clickhouse://(?:.+:\\d+)/" +
+      "(?:.*)$\0221\n\tuser_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63" +
+      "\362\3071\016[a-zA-Z0-9_-]*\022\037\n\010password\030\003 \001(\tB\r\350\307" +
+      "1\001\212\3101\0050-128\032\347\002\n\021ConnectionManager\022#\n\rcon" +
+      "nection_id\030\001 \001(\tB\014\350\3071\001\212\3101\0041-50\0220\n\010databa" +
+      "se\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*" +
+      "\022\275\001\n\025connection_properties\030\003 \003(\0132W.yande" +
+      "x.cloud.trino.v1.ClickhouseConnection.Co" +
+      "nnectionManager.ConnectionPropertiesEntr" +
+      "yBE\202\3101\005<=256\212\3101\005<=128\362\3071\024[-_0-9a-zA-Z.,:" +
+      "\\/_]*\262\3101\007\032\0051-128\262\3101\014\022\n[a-zA-Z_]*\032;\n\031Conn" +
+      "ectionPropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001B\014\n\004type\022\004\300\3011\001\"\310\002\n\023Clickhou" +
+      "seConnector\022?\n\nconnection\030\001 \001(\0132+.yandex" +
+      ".cloud.trino.v1.ClickhouseConnection\022\262\001\n" +
+      "\025additional_properties\030\002 \003(\0132D.yandex.cl" +
+      "oud.trino.v1.ClickhouseConnector.Additio" +
+      "nalPropertiesEntryBM\202\3101\005<=256\212\3101\005<=128\362\307" +
+      "1\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021" +
+      "[a-z][-_0-9a-z.]*\032;\n\031AdditionalPropertie" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\373" +
+      "\001\n\rTPCHConnector\022\254\001\n\025additional_properti" +
+      "es\030\001 \003(\0132>.yandex.cloud.trino.v1.TPCHCon" +
+      "nector.AdditionalPropertiesEntryBM\202\3101\005<=" +
+      "256\212\3101\005<=128\362\3071\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101" +
+      "\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;\n\031Addit" +
+      "ionalPropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\"\375\001\n\016TPCDSConnector\022\255\001\n\025addi" +
+      "tional_properties\030\001 \003(\0132?.yandex.cloud.t" +
+      "rino.v1.TPCDSConnector.AdditionalPropert" +
+      "iesEntryBM\202\3101\005<=256\212\3101\005<=128\362\3071\025[-_0-9a-" +
+      "zA-Z.,:\\/_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-" +
+      "9a-z.]*\032;\n\031AdditionalPropertiesEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\202\002\n\020OracleC" +
+      "onnection\022G\n\non_premise\030\001 \001(\01321.yandex.c" +
+      "loud.trino.v1.OracleConnection.OnPremise" +
+      "H\000\032\226\001\n\tOnPremise\0225\n\016connection_url\030\001 \001(\t" +
+      "B\035\350\3071\001\362\3071\025^jdbc:oracle:(?s:.*)$\0221\n\tuser_" +
+      "name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-" +
+      "]*\022\037\n\010password\030\003 \001(\tB\r\350\3071\001\212\3101\0050-128B\014\n\004t" +
+      "ype\022\004\300\3011\001\"\274\002\n\017OracleConnector\022;\n\nconnect" +
+      "ion\030\001 \001(\0132\'.yandex.cloud.trino.v1.Oracle" +
+      "Connection\022\256\001\n\025additional_properties\030\002 \003" +
+      "(\0132@.yandex.cloud.trino.v1.OracleConnect" +
       "or.AdditionalPropertiesEntryBM\202\3101\005<=256\212" +
       "\3101\005<=128\362\3071\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007\032\0051" +
       "-128\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;\n\031Additiona" +
       "lPropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\"\373\001\n\rTPCHConnector\022\254\001\n\025additiona" +
-      "l_properties\030\001 \003(\0132>.yandex.cloud.trino." +
-      "v1.TPCHConnector.AdditionalPropertiesEnt" +
-      "ryBM\202\3101\005<=256\212\3101\005<=128\362\3071\025[-_0-9a-zA-Z.," +
-      ":\\/_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]" +
-      "*\032;\n\031AdditionalPropertiesEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\375\001\n\016TPCDSConnecto" +
-      "r\022\255\001\n\025additional_properties\030\001 \003(\0132?.yand" +
-      "ex.cloud.trino.v1.TPCDSConnector.Additio" +
-      "nalPropertiesEntryBM\202\3101\005<=256\212\3101\005<=128\362\307" +
-      "1\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021" +
-      "[a-z][-_0-9a-z.]*\032;\n\031AdditionalPropertie" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\205" +
-      "\002\n\020OracleConnection\022G\n\non_premise\030\001 \001(\0132" +
-      "1.yandex.cloud.trino.v1.OracleConnection" +
-      ".OnPremiseH\000\032\231\001\n\tOnPremise\0228\n\016connection" +
-      "_url\030\001 \001(\tB \350\3071\001\362\3071\030^jdbc:[a-z0-9]+:(?s:" +
-      ".*)$\0221\n\tuser_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071" +
-      "\016[a-zA-Z0-9_-]*\022\037\n\010password\030\003 \001(\tB\r\350\3071\001\212" +
-      "\3101\0050-128B\014\n\004type\022\004\300\3011\001\"\274\002\n\017OracleConnect" +
-      "or\022;\n\nconnection\030\001 \001(\0132\'.yandex.cloud.tr" +
-      "ino.v1.OracleConnection\022\256\001\n\025additional_p" +
-      "roperties\030\002 \003(\0132@.yandex.cloud.trino.v1." +
-      "OracleConnector.AdditionalPropertiesEntr" +
-      "yBM\202\3101\005<=256\212\3101\005<=128\362\3071\025[-_0-9a-zA-Z.,:" +
-      "\\/_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]*" +
-      "\032;\n\031AdditionalPropertiesEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\213\002\n\023SQLServerConne" +
-      "ction\022J\n\non_premise\030\001 \001(\01324.yandex.cloud" +
-      ".trino.v1.SQLServerConnection.OnPremiseH" +
-      "\000\032\231\001\n\tOnPremise\0228\n\016connection_url\030\001 \001(\tB" +
-      " \350\3071\001\362\3071\030^jdbc:[a-z0-9]+:(?s:.*)$\0221\n\tuse" +
-      "r_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9" +
-      "_-]*\022\037\n\010password\030\003 \001(\tB\r\350\3071\001\212\3101\0050-128B\014\n" +
-      "\004type\022\004\300\3011\001\"\305\002\n\022SQLServerConnector\022>\n\nco" +
-      "nnection\030\001 \001(\0132*.yandex.cloud.trino.v1.S" +
-      "QLServerConnection\022\261\001\n\025additional_proper" +
-      "ties\030\002 \003(\0132C.yandex.cloud.trino.v1.SQLSe" +
-      "rverConnector.AdditionalPropertiesEntryB" +
-      "M\202\3101\005<=256\212\3101\005<=128\362\3071\025[-_0-9a-zA-Z.,:\\/" +
-      "_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;" +
-      "\n\031AdditionalPropertiesEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001B\\\n\031yandex.cloud.api." +
-      "trino.v1Z?github.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/trino/v1;trinob\006proto" +
-      "3"
+      " \001(\t:\0028\001\"\213\002\n\023SQLServerConnection\022J\n\non_p" +
+      "remise\030\001 \001(\01324.yandex.cloud.trino.v1.SQL" +
+      "ServerConnection.OnPremiseH\000\032\231\001\n\tOnPremi" +
+      "se\0228\n\016connection_url\030\001 \001(\tB \350\3071\001\362\3071\030^jdb" +
+      "c:sqlserver:(?s:.*)$\0221\n\tuser_name\030\002 \001(\tB" +
+      "\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\037\n\010passw" +
+      "ord\030\003 \001(\tB\r\350\3071\001\212\3101\0050-128B\014\n\004type\022\004\300\3011\001\"\305" +
+      "\002\n\022SQLServerConnector\022>\n\nconnection\030\001 \001(" +
+      "\0132*.yandex.cloud.trino.v1.SQLServerConne" +
+      "ction\022\261\001\n\025additional_properties\030\002 \003(\0132C." +
+      "yandex.cloud.trino.v1.SQLServerConnector" +
+      ".AdditionalPropertiesEntryBM\202\3101\005<=256\212\3101" +
+      "\005<=128\362\3071\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007\032\0051-1" +
+      "28\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;\n\031AdditionalP" +
+      "ropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001\"\227\005\n\017MysqlConnection\022F\n\non_premise" +
+      "\030\001 \001(\01320.yandex.cloud.trino.v1.MysqlConn" +
+      "ection.OnPremiseH\000\022V\n\022connection_manager" +
+      "\030\002 \001(\01328.yandex.cloud.trino.v1.MysqlConn" +
+      "ection.ConnectionManagerH\000\032\242\001\n\tOnPremise" +
+      "\022A\n\016connection_url\030\001 \001(\tB)\350\3071\001\362\3071!^jdbc:" +
+      "mysql://(?:.+:\\d+)(?:/?.*)$\0221\n\tuser_name" +
+      "\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\037" +
+      "\n\010password\030\003 \001(\tB\r\350\3071\001\212\3101\0050-128\032\260\002\n\021Conn" +
+      "ectionManager\022#\n\rconnection_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\0041-50\022\270\001\n\025connection_properties\030\002 \003" +
+      "(\0132R.yandex.cloud.trino.v1.MysqlConnecti" +
+      "on.ConnectionManager.ConnectionPropertie" +
+      "sEntryBE\202\3101\005<=256\212\3101\005<=128\362\3071\024[-_0-9a-zA" +
+      "-Z.,:\\/_]*\262\3101\007\032\0051-128\262\3101\014\022\n[a-zA-Z_]*\032;\n" +
+      "\031ConnectionPropertiesEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001B\014\n\004type\022\004\300\3011\001\"\271\002\n\016Mys" +
+      "qlConnector\022:\n\nconnection\030\001 \001(\0132&.yandex" +
+      ".cloud.trino.v1.MysqlConnection\022\255\001\n\025addi" +
+      "tional_properties\030\002 \003(\0132?.yandex.cloud.t" +
+      "rino.v1.MysqlConnector.AdditionalPropert" +
+      "iesEntryBM\202\3101\005<=256\212\3101\005<=128\362\3071\025[-_0-9a-" +
+      "zA-Z.,:\\/_ ]*\262\3101\007\032\0051-128\262\3101\023\022\021[a-z][-_0-" +
+      "9a-z.]*\032;\n\031AdditionalPropertiesEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\334\005\n\023Greenpl" +
+      "umConnection\022J\n\non_premise\030\001 \001(\01324.yande" +
+      "x.cloud.trino.v1.GreenplumConnection.OnP" +
+      "remiseH\000\022Z\n\022connection_manager\030\002 \001(\0132<.y" +
+      "andex.cloud.trino.v1.GreenplumConnection" +
+      ".ConnectionManagerH\000\032\246\001\n\tOnPremise\022E\n\016co" +
+      "nnection_url\030\001 \001(\tB-\350\3071\001\362\3071%^jdbc:postgr" +
+      "esql://(?:.+:\\d+)/(?:.*)$\0221\n\tuser_name\030\002" +
+      " \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\037\n\010" +
+      "password\030\003 \001(\tB\r\350\3071\001\212\3101\0050-128\032\345\002\n\021Connec" +
+      "tionManager\022#\n\rconnection_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\0041-50\0220\n\010database\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63" +
+      "\362\3071\016[a-zA-Z0-9_-]*\022\273\001\n\025connection_proper" +
+      "ties\030\003 \003(\0132V.yandex.cloud.trino.v1.Green" +
+      "plumConnection.ConnectionManager.Connect" +
+      "ionPropertiesEntryBD\202\3101\005<=256\212\3101\005<=128\362\307" +
+      "1\024[-_0-9a-zA-Z.,:\\/_]*\262\3101\007\032\0051-128\262\3101\013\022\t[" +
+      "a-zA-Z]*\032;\n\031ConnectionPropertiesEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\004type\022\004\300" +
+      "\3011\001\"\305\002\n\022GreenplumConnector\022>\n\nconnection" +
+      "\030\001 \001(\0132*.yandex.cloud.trino.v1.Greenplum" +
+      "Connection\022\261\001\n\025additional_properties\030\002 \003" +
+      "(\0132C.yandex.cloud.trino.v1.GreenplumConn" +
+      "ector.AdditionalPropertiesEntryBM\202\3101\005<=2" +
+      "56\212\3101\005<=128\362\3071\025[-_0-9a-zA-Z.,:\\/_ ]*\262\3101\007" +
+      "\032\0051-128\262\3101\023\022\021[a-z][-_0-9a-z.]*\032;\n\031Additi" +
+      "onalPropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001B\\\n\031yandex.cloud.api.trino.v1" +
+      "Z?github.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/trino/v1;trinob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -31416,7 +42822,7 @@ public final class CatalogOuterClass {
     internal_static_yandex_cloud_trino_v1_Connector_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_Connector_descriptor,
-        new java.lang.String[] { "Hive", "Iceberg", "DeltaLake", "Postgresql", "Clickhouse", "Tpch", "Tpcds", "Oracle", "Sqlserver", "Type", });
+        new java.lang.String[] { "Hive", "Iceberg", "DeltaLake", "Postgresql", "Clickhouse", "Tpch", "Tpcds", "Oracle", "Sqlserver", "Hudi", "Mysql", "Greenplum", "Type", });
     internal_static_yandex_cloud_trino_v1_Catalog_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_trino_v1_Catalog_fieldAccessorTable = new
@@ -31519,8 +42925,20 @@ public final class CatalogOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_DeltaLakeConnector_AdditionalPropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_yandex_cloud_trino_v1_PostgresqlConnection_descriptor =
+    internal_static_yandex_cloud_trino_v1_HudiConnector_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_trino_v1_HudiConnector_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_trino_v1_HudiConnector_descriptor,
+        new java.lang.String[] { "Metastore", "Filesystem", "AdditionalProperties", });
+    internal_static_yandex_cloud_trino_v1_HudiConnector_AdditionalPropertiesEntry_descriptor =
+      internal_static_yandex_cloud_trino_v1_HudiConnector_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_trino_v1_HudiConnector_AdditionalPropertiesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_trino_v1_HudiConnector_AdditionalPropertiesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_trino_v1_PostgresqlConnection_descriptor =
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_trino_v1_PostgresqlConnection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_PostgresqlConnection_descriptor,
@@ -31544,7 +42962,7 @@ public final class CatalogOuterClass {
         internal_static_yandex_cloud_trino_v1_PostgresqlConnection_ConnectionManager_ConnectionPropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_trino_v1_PostgresqlConnector_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_trino_v1_PostgresqlConnector_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_PostgresqlConnector_descriptor,
@@ -31556,7 +42974,7 @@ public final class CatalogOuterClass {
         internal_static_yandex_cloud_trino_v1_PostgresqlConnector_AdditionalPropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_trino_v1_ClickhouseConnection_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_trino_v1_ClickhouseConnection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_ClickhouseConnection_descriptor,
@@ -31580,7 +42998,7 @@ public final class CatalogOuterClass {
         internal_static_yandex_cloud_trino_v1_ClickhouseConnection_ConnectionManager_ConnectionPropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_trino_v1_ClickhouseConnector_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_trino_v1_ClickhouseConnector_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_ClickhouseConnector_descriptor,
@@ -31592,7 +43010,7 @@ public final class CatalogOuterClass {
         internal_static_yandex_cloud_trino_v1_ClickhouseConnector_AdditionalPropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_trino_v1_TPCHConnector_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_trino_v1_TPCHConnector_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_TPCHConnector_descriptor,
@@ -31604,7 +43022,7 @@ public final class CatalogOuterClass {
         internal_static_yandex_cloud_trino_v1_TPCHConnector_AdditionalPropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_trino_v1_TPCDSConnector_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_trino_v1_TPCDSConnector_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_TPCDSConnector_descriptor,
@@ -31616,7 +43034,7 @@ public final class CatalogOuterClass {
         internal_static_yandex_cloud_trino_v1_TPCDSConnector_AdditionalPropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_trino_v1_OracleConnection_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_trino_v1_OracleConnection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_OracleConnection_descriptor,
@@ -31628,7 +43046,7 @@ public final class CatalogOuterClass {
         internal_static_yandex_cloud_trino_v1_OracleConnection_OnPremise_descriptor,
         new java.lang.String[] { "ConnectionUrl", "UserName", "Password", });
     internal_static_yandex_cloud_trino_v1_OracleConnector_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_trino_v1_OracleConnector_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_OracleConnector_descriptor,
@@ -31640,7 +43058,7 @@ public final class CatalogOuterClass {
         internal_static_yandex_cloud_trino_v1_OracleConnector_AdditionalPropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_trino_v1_SQLServerConnection_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_trino_v1_SQLServerConnection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_SQLServerConnection_descriptor,
@@ -31652,7 +43070,7 @@ public final class CatalogOuterClass {
         internal_static_yandex_cloud_trino_v1_SQLServerConnection_OnPremise_descriptor,
         new java.lang.String[] { "ConnectionUrl", "UserName", "Password", });
     internal_static_yandex_cloud_trino_v1_SQLServerConnector_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_trino_v1_SQLServerConnector_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_SQLServerConnector_descriptor,
@@ -31662,6 +43080,78 @@ public final class CatalogOuterClass {
     internal_static_yandex_cloud_trino_v1_SQLServerConnector_AdditionalPropertiesEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_SQLServerConnector_AdditionalPropertiesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_trino_v1_MysqlConnection_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_yandex_cloud_trino_v1_MysqlConnection_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_trino_v1_MysqlConnection_descriptor,
+        new java.lang.String[] { "OnPremise", "ConnectionManager", "Type", });
+    internal_static_yandex_cloud_trino_v1_MysqlConnection_OnPremise_descriptor =
+      internal_static_yandex_cloud_trino_v1_MysqlConnection_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_trino_v1_MysqlConnection_OnPremise_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_trino_v1_MysqlConnection_OnPremise_descriptor,
+        new java.lang.String[] { "ConnectionUrl", "UserName", "Password", });
+    internal_static_yandex_cloud_trino_v1_MysqlConnection_ConnectionManager_descriptor =
+      internal_static_yandex_cloud_trino_v1_MysqlConnection_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_trino_v1_MysqlConnection_ConnectionManager_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_trino_v1_MysqlConnection_ConnectionManager_descriptor,
+        new java.lang.String[] { "ConnectionId", "ConnectionProperties", });
+    internal_static_yandex_cloud_trino_v1_MysqlConnection_ConnectionManager_ConnectionPropertiesEntry_descriptor =
+      internal_static_yandex_cloud_trino_v1_MysqlConnection_ConnectionManager_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_trino_v1_MysqlConnection_ConnectionManager_ConnectionPropertiesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_trino_v1_MysqlConnection_ConnectionManager_ConnectionPropertiesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_trino_v1_MysqlConnector_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_yandex_cloud_trino_v1_MysqlConnector_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_trino_v1_MysqlConnector_descriptor,
+        new java.lang.String[] { "Connection", "AdditionalProperties", });
+    internal_static_yandex_cloud_trino_v1_MysqlConnector_AdditionalPropertiesEntry_descriptor =
+      internal_static_yandex_cloud_trino_v1_MysqlConnector_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_trino_v1_MysqlConnector_AdditionalPropertiesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_trino_v1_MysqlConnector_AdditionalPropertiesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_trino_v1_GreenplumConnection_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_yandex_cloud_trino_v1_GreenplumConnection_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_trino_v1_GreenplumConnection_descriptor,
+        new java.lang.String[] { "OnPremise", "ConnectionManager", "Type", });
+    internal_static_yandex_cloud_trino_v1_GreenplumConnection_OnPremise_descriptor =
+      internal_static_yandex_cloud_trino_v1_GreenplumConnection_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_trino_v1_GreenplumConnection_OnPremise_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_trino_v1_GreenplumConnection_OnPremise_descriptor,
+        new java.lang.String[] { "ConnectionUrl", "UserName", "Password", });
+    internal_static_yandex_cloud_trino_v1_GreenplumConnection_ConnectionManager_descriptor =
+      internal_static_yandex_cloud_trino_v1_GreenplumConnection_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_trino_v1_GreenplumConnection_ConnectionManager_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_trino_v1_GreenplumConnection_ConnectionManager_descriptor,
+        new java.lang.String[] { "ConnectionId", "Database", "ConnectionProperties", });
+    internal_static_yandex_cloud_trino_v1_GreenplumConnection_ConnectionManager_ConnectionPropertiesEntry_descriptor =
+      internal_static_yandex_cloud_trino_v1_GreenplumConnection_ConnectionManager_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_trino_v1_GreenplumConnection_ConnectionManager_ConnectionPropertiesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_trino_v1_GreenplumConnection_ConnectionManager_ConnectionPropertiesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_trino_v1_GreenplumConnector_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_yandex_cloud_trino_v1_GreenplumConnector_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_trino_v1_GreenplumConnector_descriptor,
+        new java.lang.String[] { "Connection", "AdditionalProperties", });
+    internal_static_yandex_cloud_trino_v1_GreenplumConnector_AdditionalPropertiesEntry_descriptor =
+      internal_static_yandex_cloud_trino_v1_GreenplumConnector_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_trino_v1_GreenplumConnector_AdditionalPropertiesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_trino_v1_GreenplumConnector_AdditionalPropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

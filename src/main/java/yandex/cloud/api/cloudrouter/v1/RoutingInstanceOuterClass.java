@@ -64,7 +64,7 @@ public final class RoutingInstanceOuterClass {
 
     /**
      * <pre>
-     * Optional description of the routingInstance. 0-256 characters long.
+     * Description of the routingInstance. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -73,7 +73,7 @@ public final class RoutingInstanceOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Optional description of the routingInstance. 0-256 characters long.
+     * Description of the routingInstance. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -663,7 +663,7 @@ public final class RoutingInstanceOuterClass {
        * ID of the cicPrivateConnection that is attached to the routingInstance.
        * </pre>
        *
-       * <code>string cic_private_connection_id = 1;</code>
+       * <code>string cic_private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The cicPrivateConnectionId.
        */
       java.lang.String getCicPrivateConnectionId();
@@ -672,7 +672,7 @@ public final class RoutingInstanceOuterClass {
        * ID of the cicPrivateConnection that is attached to the routingInstance.
        * </pre>
        *
-       * <code>string cic_private_connection_id = 1;</code>
+       * <code>string cic_private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for cicPrivateConnectionId.
        */
       com.google.protobuf.ByteString
@@ -769,7 +769,7 @@ public final class RoutingInstanceOuterClass {
        * ID of the cicPrivateConnection that is attached to the routingInstance.
        * </pre>
        *
-       * <code>string cic_private_connection_id = 1;</code>
+       * <code>string cic_private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The cicPrivateConnectionId.
        */
       @java.lang.Override
@@ -790,7 +790,7 @@ public final class RoutingInstanceOuterClass {
        * ID of the cicPrivateConnection that is attached to the routingInstance.
        * </pre>
        *
-       * <code>string cic_private_connection_id = 1;</code>
+       * <code>string cic_private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for cicPrivateConnectionId.
        */
       @java.lang.Override
@@ -1116,7 +1116,7 @@ public final class RoutingInstanceOuterClass {
          * ID of the cicPrivateConnection that is attached to the routingInstance.
          * </pre>
          *
-         * <code>string cic_private_connection_id = 1;</code>
+         * <code>string cic_private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
          * @return The cicPrivateConnectionId.
          */
         public java.lang.String getCicPrivateConnectionId() {
@@ -1136,7 +1136,7 @@ public final class RoutingInstanceOuterClass {
          * ID of the cicPrivateConnection that is attached to the routingInstance.
          * </pre>
          *
-         * <code>string cic_private_connection_id = 1;</code>
+         * <code>string cic_private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
          * @return The bytes for cicPrivateConnectionId.
          */
         public com.google.protobuf.ByteString
@@ -1157,7 +1157,7 @@ public final class RoutingInstanceOuterClass {
          * ID of the cicPrivateConnection that is attached to the routingInstance.
          * </pre>
          *
-         * <code>string cic_private_connection_id = 1;</code>
+         * <code>string cic_private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
          * @param value The cicPrivateConnectionId to set.
          * @return This builder for chaining.
          */
@@ -1176,7 +1176,7 @@ public final class RoutingInstanceOuterClass {
          * ID of the cicPrivateConnection that is attached to the routingInstance.
          * </pre>
          *
-         * <code>string cic_private_connection_id = 1;</code>
+         * <code>string cic_private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
          * @return This builder for chaining.
          */
         public Builder clearCicPrivateConnectionId() {
@@ -1190,7 +1190,7 @@ public final class RoutingInstanceOuterClass {
          * ID of the cicPrivateConnection that is attached to the routingInstance.
          * </pre>
          *
-         * <code>string cic_private_connection_id = 1;</code>
+         * <code>string cic_private_connection_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
          * @param value The bytes for cicPrivateConnectionId to set.
          * @return This builder for chaining.
          */
@@ -1267,7 +1267,7 @@ public final class RoutingInstanceOuterClass {
        * ID of the vpcNetwork that is attached to the routingInstance.
        * </pre>
        *
-       * <code>string vpc_network_id = 1;</code>
+       * <code>string vpc_network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The vpcNetworkId.
        */
       java.lang.String getVpcNetworkId();
@@ -1276,7 +1276,7 @@ public final class RoutingInstanceOuterClass {
        * ID of the vpcNetwork that is attached to the routingInstance.
        * </pre>
        *
-       * <code>string vpc_network_id = 1;</code>
+       * <code>string vpc_network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for vpcNetworkId.
        */
       com.google.protobuf.ByteString
@@ -1287,7 +1287,7 @@ public final class RoutingInstanceOuterClass {
        * List of the az-related info about vpcNetworks which are attached to routingInstance
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+       * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
        */
       java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfo> 
           getAzInfosList();
@@ -1296,7 +1296,7 @@ public final class RoutingInstanceOuterClass {
        * List of the az-related info about vpcNetworks which are attached to routingInstance
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+       * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
        */
       yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfo getAzInfos(int index);
       /**
@@ -1304,7 +1304,7 @@ public final class RoutingInstanceOuterClass {
        * List of the az-related info about vpcNetworks which are attached to routingInstance
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+       * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
        */
       int getAzInfosCount();
       /**
@@ -1312,7 +1312,7 @@ public final class RoutingInstanceOuterClass {
        * List of the az-related info about vpcNetworks which are attached to routingInstance
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+       * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
        */
       java.util.List<? extends yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfoOrBuilder> 
           getAzInfosOrBuilderList();
@@ -1321,7 +1321,7 @@ public final class RoutingInstanceOuterClass {
        * List of the az-related info about vpcNetworks which are attached to routingInstance
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+       * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
        */
       yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfoOrBuilder getAzInfosOrBuilder(
           int index);
@@ -1431,7 +1431,7 @@ public final class RoutingInstanceOuterClass {
        * ID of the vpcNetwork that is attached to the routingInstance.
        * </pre>
        *
-       * <code>string vpc_network_id = 1;</code>
+       * <code>string vpc_network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The vpcNetworkId.
        */
       @java.lang.Override
@@ -1452,7 +1452,7 @@ public final class RoutingInstanceOuterClass {
        * ID of the vpcNetwork that is attached to the routingInstance.
        * </pre>
        *
-       * <code>string vpc_network_id = 1;</code>
+       * <code>string vpc_network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for vpcNetworkId.
        */
       @java.lang.Override
@@ -1477,7 +1477,7 @@ public final class RoutingInstanceOuterClass {
        * List of the az-related info about vpcNetworks which are attached to routingInstance
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+       * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
        */
       @java.lang.Override
       public java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfo> getAzInfosList() {
@@ -1488,7 +1488,7 @@ public final class RoutingInstanceOuterClass {
        * List of the az-related info about vpcNetworks which are attached to routingInstance
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+       * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
        */
       @java.lang.Override
       public java.util.List<? extends yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfoOrBuilder> 
@@ -1500,7 +1500,7 @@ public final class RoutingInstanceOuterClass {
        * List of the az-related info about vpcNetworks which are attached to routingInstance
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+       * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
        */
       @java.lang.Override
       public int getAzInfosCount() {
@@ -1511,7 +1511,7 @@ public final class RoutingInstanceOuterClass {
        * List of the az-related info about vpcNetworks which are attached to routingInstance
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+       * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
        */
       @java.lang.Override
       public yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfo getAzInfos(int index) {
@@ -1522,7 +1522,7 @@ public final class RoutingInstanceOuterClass {
        * List of the az-related info about vpcNetworks which are attached to routingInstance
        * </pre>
        *
-       * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+       * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
        */
       @java.lang.Override
       public yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfoOrBuilder getAzInfosOrBuilder(
@@ -1895,7 +1895,7 @@ public final class RoutingInstanceOuterClass {
          * ID of the vpcNetwork that is attached to the routingInstance.
          * </pre>
          *
-         * <code>string vpc_network_id = 1;</code>
+         * <code>string vpc_network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
          * @return The vpcNetworkId.
          */
         public java.lang.String getVpcNetworkId() {
@@ -1915,7 +1915,7 @@ public final class RoutingInstanceOuterClass {
          * ID of the vpcNetwork that is attached to the routingInstance.
          * </pre>
          *
-         * <code>string vpc_network_id = 1;</code>
+         * <code>string vpc_network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
          * @return The bytes for vpcNetworkId.
          */
         public com.google.protobuf.ByteString
@@ -1936,7 +1936,7 @@ public final class RoutingInstanceOuterClass {
          * ID of the vpcNetwork that is attached to the routingInstance.
          * </pre>
          *
-         * <code>string vpc_network_id = 1;</code>
+         * <code>string vpc_network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
          * @param value The vpcNetworkId to set.
          * @return This builder for chaining.
          */
@@ -1955,7 +1955,7 @@ public final class RoutingInstanceOuterClass {
          * ID of the vpcNetwork that is attached to the routingInstance.
          * </pre>
          *
-         * <code>string vpc_network_id = 1;</code>
+         * <code>string vpc_network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
          * @return This builder for chaining.
          */
         public Builder clearVpcNetworkId() {
@@ -1969,7 +1969,7 @@ public final class RoutingInstanceOuterClass {
          * ID of the vpcNetwork that is attached to the routingInstance.
          * </pre>
          *
-         * <code>string vpc_network_id = 1;</code>
+         * <code>string vpc_network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
          * @param value The bytes for vpcNetworkId to set.
          * @return This builder for chaining.
          */
@@ -2002,7 +2002,7 @@ public final class RoutingInstanceOuterClass {
          * List of the az-related info about vpcNetworks which are attached to routingInstance
          * </pre>
          *
-         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
          */
         public java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfo> getAzInfosList() {
           if (azInfosBuilder_ == null) {
@@ -2016,7 +2016,7 @@ public final class RoutingInstanceOuterClass {
          * List of the az-related info about vpcNetworks which are attached to routingInstance
          * </pre>
          *
-         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
          */
         public int getAzInfosCount() {
           if (azInfosBuilder_ == null) {
@@ -2030,7 +2030,7 @@ public final class RoutingInstanceOuterClass {
          * List of the az-related info about vpcNetworks which are attached to routingInstance
          * </pre>
          *
-         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
          */
         public yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfo getAzInfos(int index) {
           if (azInfosBuilder_ == null) {
@@ -2044,7 +2044,7 @@ public final class RoutingInstanceOuterClass {
          * List of the az-related info about vpcNetworks which are attached to routingInstance
          * </pre>
          *
-         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
          */
         public Builder setAzInfos(
             int index, yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfo value) {
@@ -2065,7 +2065,7 @@ public final class RoutingInstanceOuterClass {
          * List of the az-related info about vpcNetworks which are attached to routingInstance
          * </pre>
          *
-         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
          */
         public Builder setAzInfos(
             int index, yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfo.Builder builderForValue) {
@@ -2083,7 +2083,7 @@ public final class RoutingInstanceOuterClass {
          * List of the az-related info about vpcNetworks which are attached to routingInstance
          * </pre>
          *
-         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
          */
         public Builder addAzInfos(yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfo value) {
           if (azInfosBuilder_ == null) {
@@ -2103,7 +2103,7 @@ public final class RoutingInstanceOuterClass {
          * List of the az-related info about vpcNetworks which are attached to routingInstance
          * </pre>
          *
-         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
          */
         public Builder addAzInfos(
             int index, yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfo value) {
@@ -2124,7 +2124,7 @@ public final class RoutingInstanceOuterClass {
          * List of the az-related info about vpcNetworks which are attached to routingInstance
          * </pre>
          *
-         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
          */
         public Builder addAzInfos(
             yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfo.Builder builderForValue) {
@@ -2142,7 +2142,7 @@ public final class RoutingInstanceOuterClass {
          * List of the az-related info about vpcNetworks which are attached to routingInstance
          * </pre>
          *
-         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
          */
         public Builder addAzInfos(
             int index, yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfo.Builder builderForValue) {
@@ -2160,7 +2160,7 @@ public final class RoutingInstanceOuterClass {
          * List of the az-related info about vpcNetworks which are attached to routingInstance
          * </pre>
          *
-         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
          */
         public Builder addAllAzInfos(
             java.lang.Iterable<? extends yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfo> values) {
@@ -2179,7 +2179,7 @@ public final class RoutingInstanceOuterClass {
          * List of the az-related info about vpcNetworks which are attached to routingInstance
          * </pre>
          *
-         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
          */
         public Builder clearAzInfos() {
           if (azInfosBuilder_ == null) {
@@ -2196,7 +2196,7 @@ public final class RoutingInstanceOuterClass {
          * List of the az-related info about vpcNetworks which are attached to routingInstance
          * </pre>
          *
-         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
          */
         public Builder removeAzInfos(int index) {
           if (azInfosBuilder_ == null) {
@@ -2213,7 +2213,7 @@ public final class RoutingInstanceOuterClass {
          * List of the az-related info about vpcNetworks which are attached to routingInstance
          * </pre>
          *
-         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
          */
         public yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfo.Builder getAzInfosBuilder(
             int index) {
@@ -2224,7 +2224,7 @@ public final class RoutingInstanceOuterClass {
          * List of the az-related info about vpcNetworks which are attached to routingInstance
          * </pre>
          *
-         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
          */
         public yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfoOrBuilder getAzInfosOrBuilder(
             int index) {
@@ -2238,7 +2238,7 @@ public final class RoutingInstanceOuterClass {
          * List of the az-related info about vpcNetworks which are attached to routingInstance
          * </pre>
          *
-         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
          */
         public java.util.List<? extends yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfoOrBuilder> 
              getAzInfosOrBuilderList() {
@@ -2253,7 +2253,7 @@ public final class RoutingInstanceOuterClass {
          * List of the az-related info about vpcNetworks which are attached to routingInstance
          * </pre>
          *
-         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
          */
         public yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfo.Builder addAzInfosBuilder() {
           return getAzInfosFieldBuilder().addBuilder(
@@ -2264,7 +2264,7 @@ public final class RoutingInstanceOuterClass {
          * List of the az-related info about vpcNetworks which are attached to routingInstance
          * </pre>
          *
-         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
          */
         public yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfo.Builder addAzInfosBuilder(
             int index) {
@@ -2276,7 +2276,7 @@ public final class RoutingInstanceOuterClass {
          * List of the az-related info about vpcNetworks which are attached to routingInstance
          * </pre>
          *
-         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2;</code>
+         * <code>repeated .yandex.cloud.cloudrouter.v1.RoutingInstance.VpcAzInfo az_infos = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-50"];</code>
          */
         public java.util.List<yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcAzInfo.Builder> 
              getAzInfosBuilderList() {
@@ -2358,7 +2358,7 @@ public final class RoutingInstanceOuterClass {
        * VpcInfo which is set by user
        * </pre>
        *
-       * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2;</code>
+       * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2 [(.yandex.cloud.required) = true];</code>
        * @return Whether the manualInfo field is set.
        */
       boolean hasManualInfo();
@@ -2367,7 +2367,7 @@ public final class RoutingInstanceOuterClass {
        * VpcInfo which is set by user
        * </pre>
        *
-       * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2;</code>
+       * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2 [(.yandex.cloud.required) = true];</code>
        * @return The manualInfo.
        */
       yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcManualInfo getManualInfo();
@@ -2376,7 +2376,7 @@ public final class RoutingInstanceOuterClass {
        * VpcInfo which is set by user
        * </pre>
        *
-       * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2;</code>
+       * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2 [(.yandex.cloud.required) = true];</code>
        */
       yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcManualInfoOrBuilder getManualInfoOrBuilder();
     }
@@ -2477,7 +2477,7 @@ public final class RoutingInstanceOuterClass {
        * VpcInfo which is set by user
        * </pre>
        *
-       * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2;</code>
+       * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2 [(.yandex.cloud.required) = true];</code>
        * @return Whether the manualInfo field is set.
        */
       @java.lang.Override
@@ -2489,7 +2489,7 @@ public final class RoutingInstanceOuterClass {
        * VpcInfo which is set by user
        * </pre>
        *
-       * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2;</code>
+       * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2 [(.yandex.cloud.required) = true];</code>
        * @return The manualInfo.
        */
       @java.lang.Override
@@ -2501,7 +2501,7 @@ public final class RoutingInstanceOuterClass {
        * VpcInfo which is set by user
        * </pre>
        *
-       * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2;</code>
+       * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2 [(.yandex.cloud.required) = true];</code>
        */
       @java.lang.Override
       public yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcManualInfoOrBuilder getManualInfoOrBuilder() {
@@ -2831,7 +2831,7 @@ public final class RoutingInstanceOuterClass {
          * VpcInfo which is set by user
          * </pre>
          *
-         * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2;</code>
+         * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2 [(.yandex.cloud.required) = true];</code>
          * @return Whether the manualInfo field is set.
          */
         public boolean hasManualInfo() {
@@ -2842,7 +2842,7 @@ public final class RoutingInstanceOuterClass {
          * VpcInfo which is set by user
          * </pre>
          *
-         * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2;</code>
+         * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2 [(.yandex.cloud.required) = true];</code>
          * @return The manualInfo.
          */
         public yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcManualInfo getManualInfo() {
@@ -2857,7 +2857,7 @@ public final class RoutingInstanceOuterClass {
          * VpcInfo which is set by user
          * </pre>
          *
-         * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2;</code>
+         * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2 [(.yandex.cloud.required) = true];</code>
          */
         public Builder setManualInfo(yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcManualInfo value) {
           if (manualInfoBuilder_ == null) {
@@ -2877,7 +2877,7 @@ public final class RoutingInstanceOuterClass {
          * VpcInfo which is set by user
          * </pre>
          *
-         * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2;</code>
+         * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2 [(.yandex.cloud.required) = true];</code>
          */
         public Builder setManualInfo(
             yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcManualInfo.Builder builderForValue) {
@@ -2895,7 +2895,7 @@ public final class RoutingInstanceOuterClass {
          * VpcInfo which is set by user
          * </pre>
          *
-         * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2;</code>
+         * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2 [(.yandex.cloud.required) = true];</code>
          */
         public Builder mergeManualInfo(yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcManualInfo value) {
           if (manualInfoBuilder_ == null) {
@@ -2917,7 +2917,7 @@ public final class RoutingInstanceOuterClass {
          * VpcInfo which is set by user
          * </pre>
          *
-         * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2;</code>
+         * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2 [(.yandex.cloud.required) = true];</code>
          */
         public Builder clearManualInfo() {
           if (manualInfoBuilder_ == null) {
@@ -2935,7 +2935,7 @@ public final class RoutingInstanceOuterClass {
          * VpcInfo which is set by user
          * </pre>
          *
-         * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2;</code>
+         * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2 [(.yandex.cloud.required) = true];</code>
          */
         public yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcManualInfo.Builder getManualInfoBuilder() {
           
@@ -2947,7 +2947,7 @@ public final class RoutingInstanceOuterClass {
          * VpcInfo which is set by user
          * </pre>
          *
-         * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2;</code>
+         * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2 [(.yandex.cloud.required) = true];</code>
          */
         public yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcManualInfoOrBuilder getManualInfoOrBuilder() {
           if (manualInfoBuilder_ != null) {
@@ -2962,7 +2962,7 @@ public final class RoutingInstanceOuterClass {
          * VpcInfo which is set by user
          * </pre>
          *
-         * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2;</code>
+         * <code>.yandex.cloud.cloudrouter.v1.RoutingInstance.VpcManualInfo manual_info = 2 [(.yandex.cloud.required) = true];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcManualInfo, yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcManualInfo.Builder, yandex.cloud.api.cloudrouter.v1.RoutingInstanceOuterClass.RoutingInstance.VpcManualInfoOrBuilder> 
@@ -3039,7 +3039,7 @@ public final class RoutingInstanceOuterClass {
        * ID of the AZ
        * </pre>
        *
-       * <code>string az_id = 1;</code>
+       * <code>string az_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The azId.
        */
       java.lang.String getAzId();
@@ -3048,7 +3048,7 @@ public final class RoutingInstanceOuterClass {
        * ID of the AZ
        * </pre>
        *
-       * <code>string az_id = 1;</code>
+       * <code>string az_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for azId.
        */
       com.google.protobuf.ByteString
@@ -3059,7 +3059,7 @@ public final class RoutingInstanceOuterClass {
        * List of prefixes to announce
        * </pre>
        *
-       * <code>repeated string prefixes = 5;</code>
+       * <code>repeated string prefixes = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-10000"];</code>
        * @return A list containing the prefixes.
        */
       java.util.List<java.lang.String>
@@ -3069,7 +3069,7 @@ public final class RoutingInstanceOuterClass {
        * List of prefixes to announce
        * </pre>
        *
-       * <code>repeated string prefixes = 5;</code>
+       * <code>repeated string prefixes = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-10000"];</code>
        * @return The count of prefixes.
        */
       int getPrefixesCount();
@@ -3078,7 +3078,7 @@ public final class RoutingInstanceOuterClass {
        * List of prefixes to announce
        * </pre>
        *
-       * <code>repeated string prefixes = 5;</code>
+       * <code>repeated string prefixes = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-10000"];</code>
        * @param index The index of the element to return.
        * @return The prefixes at the given index.
        */
@@ -3088,7 +3088,7 @@ public final class RoutingInstanceOuterClass {
        * List of prefixes to announce
        * </pre>
        *
-       * <code>repeated string prefixes = 5;</code>
+       * <code>repeated string prefixes = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-10000"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the prefixes at the given index.
        */
@@ -3200,7 +3200,7 @@ public final class RoutingInstanceOuterClass {
        * ID of the AZ
        * </pre>
        *
-       * <code>string az_id = 1;</code>
+       * <code>string az_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The azId.
        */
       @java.lang.Override
@@ -3221,7 +3221,7 @@ public final class RoutingInstanceOuterClass {
        * ID of the AZ
        * </pre>
        *
-       * <code>string az_id = 1;</code>
+       * <code>string az_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for azId.
        */
       @java.lang.Override
@@ -3246,7 +3246,7 @@ public final class RoutingInstanceOuterClass {
        * List of prefixes to announce
        * </pre>
        *
-       * <code>repeated string prefixes = 5;</code>
+       * <code>repeated string prefixes = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-10000"];</code>
        * @return A list containing the prefixes.
        */
       public com.google.protobuf.ProtocolStringList
@@ -3258,7 +3258,7 @@ public final class RoutingInstanceOuterClass {
        * List of prefixes to announce
        * </pre>
        *
-       * <code>repeated string prefixes = 5;</code>
+       * <code>repeated string prefixes = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-10000"];</code>
        * @return The count of prefixes.
        */
       public int getPrefixesCount() {
@@ -3269,7 +3269,7 @@ public final class RoutingInstanceOuterClass {
        * List of prefixes to announce
        * </pre>
        *
-       * <code>repeated string prefixes = 5;</code>
+       * <code>repeated string prefixes = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-10000"];</code>
        * @param index The index of the element to return.
        * @return The prefixes at the given index.
        */
@@ -3281,7 +3281,7 @@ public final class RoutingInstanceOuterClass {
        * List of prefixes to announce
        * </pre>
        *
-       * <code>repeated string prefixes = 5;</code>
+       * <code>repeated string prefixes = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-10000"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the prefixes at the given index.
        */
@@ -3634,7 +3634,7 @@ public final class RoutingInstanceOuterClass {
          * ID of the AZ
          * </pre>
          *
-         * <code>string az_id = 1;</code>
+         * <code>string az_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
          * @return The azId.
          */
         public java.lang.String getAzId() {
@@ -3654,7 +3654,7 @@ public final class RoutingInstanceOuterClass {
          * ID of the AZ
          * </pre>
          *
-         * <code>string az_id = 1;</code>
+         * <code>string az_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
          * @return The bytes for azId.
          */
         public com.google.protobuf.ByteString
@@ -3675,7 +3675,7 @@ public final class RoutingInstanceOuterClass {
          * ID of the AZ
          * </pre>
          *
-         * <code>string az_id = 1;</code>
+         * <code>string az_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
          * @param value The azId to set.
          * @return This builder for chaining.
          */
@@ -3694,7 +3694,7 @@ public final class RoutingInstanceOuterClass {
          * ID of the AZ
          * </pre>
          *
-         * <code>string az_id = 1;</code>
+         * <code>string az_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
          * @return This builder for chaining.
          */
         public Builder clearAzId() {
@@ -3708,7 +3708,7 @@ public final class RoutingInstanceOuterClass {
          * ID of the AZ
          * </pre>
          *
-         * <code>string az_id = 1;</code>
+         * <code>string az_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
          * @param value The bytes for azId to set.
          * @return This builder for chaining.
          */
@@ -3736,7 +3736,7 @@ public final class RoutingInstanceOuterClass {
          * List of prefixes to announce
          * </pre>
          *
-         * <code>repeated string prefixes = 5;</code>
+         * <code>repeated string prefixes = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-10000"];</code>
          * @return A list containing the prefixes.
          */
         public com.google.protobuf.ProtocolStringList
@@ -3748,7 +3748,7 @@ public final class RoutingInstanceOuterClass {
          * List of prefixes to announce
          * </pre>
          *
-         * <code>repeated string prefixes = 5;</code>
+         * <code>repeated string prefixes = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-10000"];</code>
          * @return The count of prefixes.
          */
         public int getPrefixesCount() {
@@ -3759,7 +3759,7 @@ public final class RoutingInstanceOuterClass {
          * List of prefixes to announce
          * </pre>
          *
-         * <code>repeated string prefixes = 5;</code>
+         * <code>repeated string prefixes = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-10000"];</code>
          * @param index The index of the element to return.
          * @return The prefixes at the given index.
          */
@@ -3771,7 +3771,7 @@ public final class RoutingInstanceOuterClass {
          * List of prefixes to announce
          * </pre>
          *
-         * <code>repeated string prefixes = 5;</code>
+         * <code>repeated string prefixes = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-10000"];</code>
          * @param index The index of the value to return.
          * @return The bytes of the prefixes at the given index.
          */
@@ -3784,7 +3784,7 @@ public final class RoutingInstanceOuterClass {
          * List of prefixes to announce
          * </pre>
          *
-         * <code>repeated string prefixes = 5;</code>
+         * <code>repeated string prefixes = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-10000"];</code>
          * @param index The index to set the value at.
          * @param value The prefixes to set.
          * @return This builder for chaining.
@@ -3804,7 +3804,7 @@ public final class RoutingInstanceOuterClass {
          * List of prefixes to announce
          * </pre>
          *
-         * <code>repeated string prefixes = 5;</code>
+         * <code>repeated string prefixes = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-10000"];</code>
          * @param value The prefixes to add.
          * @return This builder for chaining.
          */
@@ -3823,7 +3823,7 @@ public final class RoutingInstanceOuterClass {
          * List of prefixes to announce
          * </pre>
          *
-         * <code>repeated string prefixes = 5;</code>
+         * <code>repeated string prefixes = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-10000"];</code>
          * @param values The prefixes to add.
          * @return This builder for chaining.
          */
@@ -3840,7 +3840,7 @@ public final class RoutingInstanceOuterClass {
          * List of prefixes to announce
          * </pre>
          *
-         * <code>repeated string prefixes = 5;</code>
+         * <code>repeated string prefixes = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-10000"];</code>
          * @return This builder for chaining.
          */
         public Builder clearPrefixes() {
@@ -3854,7 +3854,7 @@ public final class RoutingInstanceOuterClass {
          * List of prefixes to announce
          * </pre>
          *
-         * <code>repeated string prefixes = 5;</code>
+         * <code>repeated string prefixes = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "1-10000"];</code>
          * @param value The bytes of the prefixes to add.
          * @return This builder for chaining.
          */
@@ -4022,7 +4022,7 @@ public final class RoutingInstanceOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Optional description of the routingInstance. 0-256 characters long.
+     * Description of the routingInstance. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -4043,7 +4043,7 @@ public final class RoutingInstanceOuterClass {
     }
     /**
      * <pre>
-     * Optional description of the routingInstance. 0-256 characters long.
+     * Description of the routingInstance. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -5240,7 +5240,7 @@ public final class RoutingInstanceOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Optional description of the routingInstance. 0-256 characters long.
+       * Description of the routingInstance. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -5260,7 +5260,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * Optional description of the routingInstance. 0-256 characters long.
+       * Description of the routingInstance. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -5281,7 +5281,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * Optional description of the routingInstance. 0-256 characters long.
+       * Description of the routingInstance. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -5300,7 +5300,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * Optional description of the routingInstance. 0-256 characters long.
+       * Description of the routingInstance. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -5314,7 +5314,7 @@ public final class RoutingInstanceOuterClass {
       }
       /**
        * <pre>
-       * Optional description of the routingInstance. 0-256 characters long.
+       * Description of the routingInstance. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -6665,38 +6665,42 @@ public final class RoutingInstanceOuterClass {
     java.lang.String[] descriptorData = {
       "\n2yandex/cloud/cloudrouter/v1/routing_in" +
       "stance.proto\022\033yandex.cloud.cloudrouter.v" +
-      "1\032\037google/protobuf/timestamp.proto\"\272\007\n\017R" +
-      "outingInstance\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t" +
-      "\022\023\n\013description\030\003 \001(\t\022\021\n\tfolder_id\030\005 \001(\t" +
-      "\022\021\n\tregion_id\030\006 \001(\t\022F\n\010vpc_info\030\007 \003(\01324." +
+      "1\032\035yandex/cloud/validation.proto\032\037google" +
+      "/protobuf/timestamp.proto\"\212\010\n\017RoutingIns" +
+      "tance\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013descr" +
+      "iption\030\003 \001(\t\022\021\n\tfolder_id\030\005 \001(\t\022\021\n\tregio" +
+      "n_id\030\006 \001(\t\022F\n\010vpc_info\030\007 \003(\01324.yandex.cl" +
+      "oud.cloudrouter.v1.RoutingInstance.VpcIn" +
+      "fo\022j\n\033cic_private_connection_info\030\010 \003(\0132" +
+      "E.yandex.cloud.cloudrouter.v1.RoutingIns" +
+      "tance.CicPrivateConnectionInfo\022C\n\006status" +
+      "\030\t \001(\01623.yandex.cloud.cloudrouter.v1.Rou" +
+      "tingInstance.Status\022.\n\ncreated_at\030\013 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022H\n\006labels\030\030 " +
+      "\003(\01328.yandex.cloud.cloudrouter.v1.Routin" +
+      "gInstance.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032K\n\030CicPriva" +
+      "teConnectionInfo\022/\n\031cic_private_connecti" +
+      "on_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\032\207\001\n\007VpcInfo\022$\n" +
+      "\016vpc_network_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022V\n\010a" +
+      "z_infos\030\002 \003(\01326.yandex.cloud.cloudrouter" +
+      ".v1.RoutingInstance.VpcAzInfoB\014\350\3071\001\202\3101\0041" +
+      "-50\032h\n\tVpcAzInfo\022U\n\013manual_info\030\002 \001(\0132:." +
       "yandex.cloud.cloudrouter.v1.RoutingInsta" +
-      "nce.VpcInfo\022j\n\033cic_private_connection_in" +
-      "fo\030\010 \003(\0132E.yandex.cloud.cloudrouter.v1.R" +
-      "outingInstance.CicPrivateConnectionInfo\022" +
-      "C\n\006status\030\t \001(\01623.yandex.cloud.cloudrout" +
-      "er.v1.RoutingInstance.Status\022.\n\ncreated_" +
-      "at\030\013 \001(\0132\032.google.protobuf.Timestamp\022H\n\006" +
-      "labels\030\030 \003(\01328.yandex.cloud.cloudrouter." +
-      "v1.RoutingInstance.LabelsEntry\032-\n\013Labels" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032=\n" +
-      "\030CicPrivateConnectionInfo\022!\n\031cic_private" +
-      "_connection_id\030\001 \001(\t\032k\n\007VpcInfo\022\026\n\016vpc_n" +
-      "etwork_id\030\001 \001(\t\022H\n\010az_infos\030\002 \003(\01326.yand" +
-      "ex.cloud.cloudrouter.v1.RoutingInstance." +
-      "VpcAzInfo\032b\n\tVpcAzInfo\022O\n\013manual_info\030\002 " +
-      "\001(\0132:.yandex.cloud.cloudrouter.v1.Routin" +
-      "gInstance.VpcManualInfoJ\004\010\001\020\002\0326\n\rVpcManu" +
-      "alInfo\022\r\n\005az_id\030\001 \001(\t\022\020\n\010prefixes\030\005 \003(\tJ" +
-      "\004\010\002\020\005\"V\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022" +
-      "\014\n\010CREATING\020\001\022\014\n\010UPDATING\020\002\022\014\n\010DELETING\020" +
-      "\003\022\n\n\006ACTIVE\020\004J\004\010\004\020\005J\004\010\n\020\013J\004\010\014\020\030Bn\n\037yande" +
-      "x.cloud.api.cloudrouter.v1ZKgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/clo" +
-      "udrouter/v1;cloudrouterb\006proto3"
+      "nce.VpcManualInfoB\004\350\3071\001J\004\010\001\020\002\032U\n\rVpcManu" +
+      "alInfo\022\033\n\005az_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\010p" +
+      "refixes\030\005 \003(\tB\017\350\3071\001\202\3101\0071-10000J\004\010\002\020\005\"V\n\006" +
+      "Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATI" +
+      "NG\020\001\022\014\n\010UPDATING\020\002\022\014\n\010DELETING\020\003\022\n\n\006ACTI" +
+      "VE\020\004J\004\010\004\020\005J\004\010\n\020\013J\004\010\014\020\030Bn\n\037yandex.cloud.a" +
+      "pi.cloudrouter.v1ZKgithub.com/yandex-clo" +
+      "ud/go-genproto/yandex/cloud/cloudrouter/" +
+      "v1;cloudrouterb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          yandex.cloud.api.Validation.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_yandex_cloud_cloudrouter_v1_RoutingInstance_descriptor =
@@ -6735,6 +6739,14 @@ public final class RoutingInstanceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cloudrouter_v1_RoutingInstance_VpcManualInfo_descriptor,
         new java.lang.String[] { "AzId", "Prefixes", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    yandex.cloud.api.Validation.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

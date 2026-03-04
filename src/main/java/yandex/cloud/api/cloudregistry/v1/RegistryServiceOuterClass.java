@@ -16466,7 +16466,7 @@ public final class RegistryServiceOuterClass {
       "\212\3101\005<=100\"l\n\025ListArtifactsResponse\022:\n\tar" +
       "tifacts\030\001 \003(\0132\'.yandex.cloud.cloudregist" +
       "ry.v1.Artifact\022\027\n\017next_page_token\030\002 \001(\t2" +
-      "\256\023\n\017RegistryService\022\226\001\n\003Get\0221.yandex.clo" +
+      "\213\025\n\017RegistryService\022\226\001\n\003Get\0221.yandex.clo" +
       "ud.cloudregistry.v1.GetRegistryRequest\032\'" +
       ".yandex.cloud.cloudregistry.v1.Registry\"" +
       "3\202\323\344\223\002-\022+/cloud-registry/v1/registries/{" +
@@ -16488,50 +16488,55 @@ public final class RegistryServiceOuterClass {
       "yRequest\032!.yandex.cloud.operation.Operat" +
       "ion\"f\202\323\344\223\002-*+/cloud-registry/v1/registri" +
       "es/{registry_id}\262\322*/\n\026DeleteRegistryMeta" +
-      "data\022\025google.protobuf.Empty\022\275\001\n\022ListAcce" +
-      "ssBindings\022..yandex.cloud.access.ListAcc" +
-      "essBindingsRequest\032/.yandex.cloud.access" +
-      ".ListAccessBindingsResponse\"F\202\323\344\223\002@\022>/cl" +
-      "oud-registry/v1/registries/{resource_id}" +
-      ":listAccessBindings\022\355\001\n\021SetAccessBinding" +
-      "s\022-.yandex.cloud.access.SetAccessBinding" +
-      "sRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"\205\001\202\323\344\223\002B\"=/cloud-registry/v1/registr" +
-      "ies/{resource_id}:setAccessBindings:\001*\262\322" +
-      "*9\n access.SetAccessBindingsMetadata\022\025go" +
-      "ogle.protobuf.Empty\022\371\001\n\024UpdateAccessBind" +
-      "ings\0220.yandex.cloud.access.UpdateAccessB" +
-      "indingsRequest\032!.yandex.cloud.operation." +
-      "Operation\"\213\001\202\323\344\223\002E\"@/cloud-registry/v1/r" +
-      "egistries/{resource_id}:updateAccessBind" +
-      "ings:\001*\262\322*<\n#access.UpdateAccessBindings" +
-      "Metadata\022\025google.protobuf.Empty\022\315\001\n\021List" +
-      "IpPermissions\0227.yandex.cloud.cloudregist" +
-      "ry.v1.ListIpPermissionsRequest\0328.yandex." +
-      "cloud.cloudregistry.v1.ListIpPermissions" +
-      "Response\"E\202\323\344\223\002?\022=/cloud-registry/v1/reg" +
-      "istries/{registry_id}:listIpPermissions\022" +
-      "\353\001\n\020SetIpPermissions\0226.yandex.cloud.clou" +
-      "dregistry.v1.SetIpPermissionsRequest\032!.y" +
-      "andex.cloud.operation.Operation\"|\202\323\344\223\002A\"" +
-      "</cloud-registry/v1/registries/{registry" +
-      "_id}:setIpPermissions:\001*\262\322*1\n\030SetIpPermi" +
-      "ssionsMetadata\022\025google.protobuf.Empty\022\370\001" +
-      "\n\023UpdateIpPermissions\0229.yandex.cloud.clo" +
-      "udregistry.v1.UpdateIpPermissionsRequest" +
-      "\032!.yandex.cloud.operation.Operation\"\202\001\202\323" +
-      "\344\223\002D\"?/cloud-registry/v1/registries/{reg" +
-      "istry_id}:updateIpPermissions:\001*\262\322*4\n\033Up" +
-      "dateIpPermissionsMetadata\022\025google.protob" +
-      "uf.Empty\022\275\001\n\rListArtifacts\0223.yandex.clou" +
-      "d.cloudregistry.v1.ListArtifactsRequest\032" +
-      "4.yandex.cloud.cloudregistry.v1.ListArti" +
-      "factsResponse\"A\202\323\344\223\002;\0229/cloud-registry/v" +
-      "1/registries/{registry_id}:listArtifacts" +
-      "Bt\n!yandex.cloud.api.cloudregistry.v1ZOg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/cloudregistry/v1;cloudregistryb\006" +
-      "proto3"
+      "data\022\025google.protobuf.Empty\022\332\001\n\013ForceDel" +
+      "ete\0224.yandex.cloud.cloudregistry.v1.Dele" +
+      "teRegistryRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"r\202\323\344\223\0029\"7/cloud-registry/v1" +
+      "/registries/{registry_id}:forceDelete\262\322*" +
+      "/\n\026DeleteRegistryMetadata\022\025google.protob" +
+      "uf.Empty\022\275\001\n\022ListAccessBindings\022..yandex" +
+      ".cloud.access.ListAccessBindingsRequest\032" +
+      "/.yandex.cloud.access.ListAccessBindings" +
+      "Response\"F\202\323\344\223\002@\022>/cloud-registry/v1/reg" +
+      "istries/{resource_id}:listAccessBindings" +
+      "\022\355\001\n\021SetAccessBindings\022-.yandex.cloud.ac" +
+      "cess.SetAccessBindingsRequest\032!.yandex.c" +
+      "loud.operation.Operation\"\205\001\202\323\344\223\002B\"=/clou" +
+      "d-registry/v1/registries/{resource_id}:s" +
+      "etAccessBindings:\001*\262\322*9\n access.SetAcces" +
+      "sBindingsMetadata\022\025google.protobuf.Empty" +
+      "\022\371\001\n\024UpdateAccessBindings\0220.yandex.cloud" +
+      ".access.UpdateAccessBindingsRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"\213\001\202\323\344\223\002E\"" +
+      "@/cloud-registry/v1/registries/{resource" +
+      "_id}:updateAccessBindings:\001*\262\322*<\n#access" +
+      ".UpdateAccessBindingsMetadata\022\025google.pr" +
+      "otobuf.Empty\022\315\001\n\021ListIpPermissions\0227.yan" +
+      "dex.cloud.cloudregistry.v1.ListIpPermiss" +
+      "ionsRequest\0328.yandex.cloud.cloudregistry" +
+      ".v1.ListIpPermissionsResponse\"E\202\323\344\223\002?\022=/" +
+      "cloud-registry/v1/registries/{registry_i" +
+      "d}:listIpPermissions\022\353\001\n\020SetIpPermission" +
+      "s\0226.yandex.cloud.cloudregistry.v1.SetIpP" +
+      "ermissionsRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"|\202\323\344\223\002A\"</cloud-registry/v1" +
+      "/registries/{registry_id}:setIpPermissio" +
+      "ns:\001*\262\322*1\n\030SetIpPermissionsMetadata\022\025goo" +
+      "gle.protobuf.Empty\022\370\001\n\023UpdateIpPermissio" +
+      "ns\0229.yandex.cloud.cloudregistry.v1.Updat" +
+      "eIpPermissionsRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"\202\001\202\323\344\223\002D\"?/cloud-regist" +
+      "ry/v1/registries/{registry_id}:updateIpP" +
+      "ermissions:\001*\262\322*4\n\033UpdateIpPermissionsMe" +
+      "tadata\022\025google.protobuf.Empty\022\275\001\n\rListAr" +
+      "tifacts\0223.yandex.cloud.cloudregistry.v1." +
+      "ListArtifactsRequest\0324.yandex.cloud.clou" +
+      "dregistry.v1.ListArtifactsResponse\"A\202\323\344\223" +
+      "\002;\0229/cloud-registry/v1/registries/{regis" +
+      "try_id}:listArtifactsBt\n!yandex.cloud.ap" +
+      "i.cloudregistry.v1ZOgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/cloudregist" +
+      "ry/v1;cloudregistryb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

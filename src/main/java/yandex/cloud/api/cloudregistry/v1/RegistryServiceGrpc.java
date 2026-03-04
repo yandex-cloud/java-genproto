@@ -173,6 +173,37 @@ public final class RegistryServiceGrpc {
     return getDeleteMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.DeleteRegistryRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getForceDeleteMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ForceDelete",
+      requestType = yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.DeleteRegistryRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.DeleteRegistryRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getForceDeleteMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.DeleteRegistryRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getForceDeleteMethod;
+    if ((getForceDeleteMethod = RegistryServiceGrpc.getForceDeleteMethod) == null) {
+      synchronized (RegistryServiceGrpc.class) {
+        if ((getForceDeleteMethod = RegistryServiceGrpc.getForceDeleteMethod) == null) {
+          RegistryServiceGrpc.getForceDeleteMethod = getForceDeleteMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.DeleteRegistryRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ForceDelete"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.DeleteRegistryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("ForceDelete"))
+              .build();
+        }
+      }
+    }
+    return getForceDeleteMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
       yandex.cloud.api.access.Access.ListAccessBindingsResponse> getListAccessBindingsMethod;
 
@@ -494,6 +525,16 @@ public final class RegistryServiceGrpc {
 
     /**
      * <pre>
+     * Forcefully deletes the specified registry along with all its repositories and data.
+     * </pre>
+     */
+    public void forceDelete(yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.DeleteRegistryRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getForceDeleteMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists access bindings for the specified registry.
      * </pre>
      */
@@ -599,6 +640,13 @@ public final class RegistryServiceGrpc {
                 yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.DeleteRegistryRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
+          .addMethod(
+            getForceDeleteMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.DeleteRegistryRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_FORCE_DELETE)))
           .addMethod(
             getListAccessBindingsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -723,6 +771,17 @@ public final class RegistryServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Forcefully deletes the specified registry along with all its repositories and data.
+     * </pre>
+     */
+    public void forceDelete(yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.DeleteRegistryRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getForceDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -873,6 +932,16 @@ public final class RegistryServiceGrpc {
 
     /**
      * <pre>
+     * Forcefully deletes the specified registry along with all its repositories and data.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation forceDelete(yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.DeleteRegistryRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getForceDeleteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Lists access bindings for the specified registry.
      * </pre>
      */
@@ -1017,6 +1086,17 @@ public final class RegistryServiceGrpc {
 
     /**
      * <pre>
+     * Forcefully deletes the specified registry along with all its repositories and data.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> forceDelete(
+        yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.DeleteRegistryRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getForceDeleteMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists access bindings for the specified registry.
      * </pre>
      */
@@ -1098,13 +1178,14 @@ public final class RegistryServiceGrpc {
   private static final int METHODID_CREATE = 2;
   private static final int METHODID_UPDATE = 3;
   private static final int METHODID_DELETE = 4;
-  private static final int METHODID_LIST_ACCESS_BINDINGS = 5;
-  private static final int METHODID_SET_ACCESS_BINDINGS = 6;
-  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 7;
-  private static final int METHODID_LIST_IP_PERMISSIONS = 8;
-  private static final int METHODID_SET_IP_PERMISSIONS = 9;
-  private static final int METHODID_UPDATE_IP_PERMISSIONS = 10;
-  private static final int METHODID_LIST_ARTIFACTS = 11;
+  private static final int METHODID_FORCE_DELETE = 5;
+  private static final int METHODID_LIST_ACCESS_BINDINGS = 6;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 7;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 8;
+  private static final int METHODID_LIST_IP_PERMISSIONS = 9;
+  private static final int METHODID_SET_IP_PERMISSIONS = 10;
+  private static final int METHODID_UPDATE_IP_PERMISSIONS = 11;
+  private static final int METHODID_LIST_ARTIFACTS = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1141,6 +1222,10 @@ public final class RegistryServiceGrpc {
           break;
         case METHODID_DELETE:
           serviceImpl.delete((yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.DeleteRegistryRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_FORCE_DELETE:
+          serviceImpl.forceDelete((yandex.cloud.api.cloudregistry.v1.RegistryServiceOuterClass.DeleteRegistryRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_LIST_ACCESS_BINDINGS:
@@ -1237,6 +1322,7 @@ public final class RegistryServiceGrpc {
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
+              .addMethod(getForceDeleteMethod())
               .addMethod(getListAccessBindingsMethod())
               .addMethod(getSetAccessBindingsMethod())
               .addMethod(getUpdateAccessBindingsMethod())

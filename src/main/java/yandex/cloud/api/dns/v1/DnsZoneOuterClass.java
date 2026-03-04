@@ -2770,6 +2770,26 @@ public final class DnsZoneOuterClass {
      */
     com.google.protobuf.ByteString
         getDataBytes(int index);
+
+    /**
+     * <pre>
+     * Description of the record set.
+     * </pre>
+     *
+     * <code>string description = 5;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description of the record set.
+     * </pre>
+     *
+     * <code>string description = 5;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * <pre>
@@ -2791,6 +2811,7 @@ public final class DnsZoneOuterClass {
       name_ = "";
       type_ = "";
       data_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      description_ = "";
     }
 
     @java.lang.Override
@@ -2848,6 +2869,12 @@ public final class DnsZoneOuterClass {
                 mutable_bitField0_ |= 0x00000001;
               }
               data_.add(s);
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
             default: {
@@ -3043,6 +3070,52 @@ public final class DnsZoneOuterClass {
       return data_.getByteString(index);
     }
 
+    public static final int DESCRIPTION_FIELD_NUMBER = 5;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Description of the record set.
+     * </pre>
+     *
+     * <code>string description = 5;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description of the record set.
+     * </pre>
+     *
+     * <code>string description = 5;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3068,6 +3141,9 @@ public final class DnsZoneOuterClass {
       }
       for (int i = 0; i < data_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, data_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
       }
       unknownFields.writeTo(output);
     }
@@ -3096,6 +3172,9 @@ public final class DnsZoneOuterClass {
         size += dataSize;
         size += 1 * getDataList().size();
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3119,6 +3198,8 @@ public final class DnsZoneOuterClass {
           != other.getTtl()) return false;
       if (!getDataList()
           .equals(other.getDataList())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3141,6 +3222,8 @@ public final class DnsZoneOuterClass {
         hash = (37 * hash) + DATA_FIELD_NUMBER;
         hash = (53 * hash) + getDataList().hashCode();
       }
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3286,6 +3369,8 @@ public final class DnsZoneOuterClass {
 
         data_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
+        description_ = "";
+
         return this;
       }
 
@@ -3321,6 +3406,7 @@ public final class DnsZoneOuterClass {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.data_ = data_;
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -3388,6 +3474,10 @@ public final class DnsZoneOuterClass {
             ensureDataIsMutable();
             data_.addAll(other.data_);
           }
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -3797,6 +3887,102 @@ public final class DnsZoneOuterClass {
   checkByteStringIsUtf8(value);
         ensureDataIsMutable();
         data_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description of the record set.
+       * </pre>
+       *
+       * <code>string description = 5;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the record set.
+       * </pre>
+       *
+       * <code>string description = 5;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the record set.
+       * </pre>
+       *
+       * <code>string description = 5;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the record set.
+       * </pre>
+       *
+       * <code>string description = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the record set.
+       * </pre>
+       *
+       * <code>string description = 5;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
         onChanged();
         return this;
       }
@@ -5040,14 +5226,15 @@ public final class DnsZoneOuterClass {
       "sibility\030\t \001(\0132%.yandex.cloud.dns.v1.Pub" +
       "licVisibility\022\033\n\023deletion_protection\030\n \001" +
       "(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\"\201\001\n\tRecordSet\022\027\n\004name\030\001 \001(\tB\t\212" +
+      "\002 \001(\t:\0028\001\"\226\001\n\tRecordSet\022\027\n\004name\030\001 \001(\tB\t\212" +
       "\3101\0051-254\022\026\n\004type\030\002 \001(\tB\010\212\3101\0041-20\022\035\n\003ttl\030" +
       "\003 \001(\003B\020\372\3071\0140-2147483647\022$\n\004data\030\004 \003(\tB\026\202" +
-      "\3101\0051-100\212\3101\0051-255\220\3101\001\"=\n\021PrivateVisibili" +
-      "ty\022(\n\013network_ids\030\001 \003(\tB\023\202\3101\0050-100\212\3101\00220" +
-      "\220\3101\001\"\022\n\020PublicVisibilityBV\n\027yandex.cloud" +
-      ".api.dns.v1Z;github.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/dns/v1;dnsb\006proto3"
+      "\3101\0051-100\212\3101\0051-255\220\3101\001\022\023\n\013description\030\005 \001" +
+      "(\t\"=\n\021PrivateVisibility\022(\n\013network_ids\030\001" +
+      " \003(\tB\023\202\3101\0050-100\212\3101\00220\220\3101\001\"\022\n\020PublicVisib" +
+      "ilityBV\n\027yandex.cloud.api.dns.v1Z;github" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/dns/v1;dnsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5072,7 +5259,7 @@ public final class DnsZoneOuterClass {
     internal_static_yandex_cloud_dns_v1_RecordSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_RecordSet_descriptor,
-        new java.lang.String[] { "Name", "Type", "Ttl", "Data", });
+        new java.lang.String[] { "Name", "Type", "Ttl", "Data", "Description", });
     internal_static_yandex_cloud_dns_v1_PrivateVisibility_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_dns_v1_PrivateVisibility_fieldAccessorTable = new

@@ -2540,6 +2540,80 @@ public final class DesktopImageServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getImageIdBytes();
+
+    /**
+     * <pre>
+     * Desktop image labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Desktop image labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Desktop image labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Desktop image labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Desktop image labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * Desktop image description.
+     * </pre>
+     *
+     * <code>string description = 10 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Desktop image description.
+     * </pre>
+     *
+     * <code>string description = 10 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.clouddesktop.v1.api.CopyDesktopImageRequest}
@@ -2557,6 +2631,7 @@ public final class DesktopImageServiceOuterClass {
       folderId_ = "";
       name_ = "";
       imageId_ = "";
+      description_ = "";
     }
 
     @java.lang.Override
@@ -2579,6 +2654,7 @@ public final class DesktopImageServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2607,6 +2683,25 @@ public final class DesktopImageServiceOuterClass {
               imageId_ = s;
               break;
             }
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2631,6 +2726,18 @@ public final class DesktopImageServiceOuterClass {
       return yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_CopyDesktopImageRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 9:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -2777,6 +2884,149 @@ public final class DesktopImageServiceOuterClass {
       }
     }
 
+    public static final int LABELS_FIELD_NUMBER = 9;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_CopyDesktopImageRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Desktop image labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Desktop image labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Desktop image labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Desktop image labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 10;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Desktop image description.
+     * </pre>
+     *
+     * <code>string description = 10 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Desktop image description.
+     * </pre>
+     *
+     * <code>string description = 10 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2800,6 +3050,15 @@ public final class DesktopImageServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, imageId_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          9);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, description_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2817,6 +3076,19 @@ public final class DesktopImageServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, imageId_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(9, labels__);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, description_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2839,6 +3111,10 @@ public final class DesktopImageServiceOuterClass {
           .equals(other.getName())) return false;
       if (!getImageId()
           .equals(other.getImageId())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2856,6 +3132,12 @@ public final class DesktopImageServiceOuterClass {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + IMAGE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getImageId().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2963,6 +3245,28 @@ public final class DesktopImageServiceOuterClass {
         return yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_CopyDesktopImageRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 9:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 9:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -2995,6 +3299,9 @@ public final class DesktopImageServiceOuterClass {
 
         imageId_ = "";
 
+        internalGetMutableLabels().clear();
+        description_ = "";
+
         return this;
       }
 
@@ -3021,9 +3328,13 @@ public final class DesktopImageServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.CopyDesktopImageRequest buildPartial() {
         yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.CopyDesktopImageRequest result = new yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.CopyDesktopImageRequest(this);
+        int from_bitField0_ = bitField0_;
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.imageId_ = imageId_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -3084,6 +3395,12 @@ public final class DesktopImageServiceOuterClass {
           imageId_ = other.imageId_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3112,6 +3429,7 @@ public final class DesktopImageServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object folderId_ = "";
       /**
@@ -3400,6 +3718,261 @@ public final class DesktopImageServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Desktop image labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Desktop image labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Desktop image labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Desktop image labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Desktop image labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Desktop image labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Desktop image labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Desktop image description.
+       * </pre>
+       *
+       * <code>string description = 10 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Desktop image description.
+       * </pre>
+       *
+       * <code>string description = 10 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Desktop image description.
+       * </pre>
+       *
+       * <code>string description = 10 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Desktop image description.
+       * </pre>
+       *
+       * <code>string description = 10 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Desktop image description.
+       * </pre>
+       *
+       * <code>string description = 10 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3577,6 +4150,26 @@ public final class DesktopImageServiceOuterClass {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * New desktop image description.
+     * </pre>
+     *
+     * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * New desktop image description.
+     * </pre>
+     *
+     * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.clouddesktop.v1.api.UpdateDesktopImageRequest}
@@ -3593,6 +4186,7 @@ public final class DesktopImageServiceOuterClass {
     private UpdateDesktopImageRequest() {
       imageId_ = "";
       name_ = "";
+      description_ = "";
     }
 
     @java.lang.Override
@@ -3662,6 +4256,12 @@ public final class DesktopImageServiceOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
             default: {
@@ -3935,6 +4535,52 @@ public final class DesktopImageServiceOuterClass {
       return map.get(key);
     }
 
+    public static final int DESCRIPTION_FIELD_NUMBER = 5;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * New desktop image description.
+     * </pre>
+     *
+     * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * New desktop image description.
+     * </pre>
+     *
+     * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3964,6 +4610,9 @@ public final class DesktopImageServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           4);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3993,6 +4642,9 @@ public final class DesktopImageServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(4, labels__);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4019,6 +4671,8 @@ public final class DesktopImageServiceOuterClass {
           .equals(other.getName())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4042,6 +4696,8 @@ public final class DesktopImageServiceOuterClass {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
       }
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4208,6 +4864,8 @@ public final class DesktopImageServiceOuterClass {
         name_ = "";
 
         internalGetMutableLabels().clear();
+        description_ = "";
+
         return this;
       }
 
@@ -4244,6 +4902,7 @@ public final class DesktopImageServiceOuterClass {
         result.name_ = name_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -4305,6 +4964,10 @@ public final class DesktopImageServiceOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4840,6 +5503,102 @@ public final class DesktopImageServiceOuterClass {
             .putAll(values);
         return this;
       }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * New desktop image description.
+       * </pre>
+       *
+       * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New desktop image description.
+       * </pre>
+       *
+       * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New desktop image description.
+       * </pre>
+       *
+       * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New desktop image description.
+       * </pre>
+       *
+       * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New desktop image description.
+       * </pre>
+       *
+       * <code>string description = 5 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4956,6 +5715,80 @@ public final class DesktopImageServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getDesktopIdBytes();
+
+    /**
+     * <pre>
+     * Desktop image labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Desktop image labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Desktop image labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Desktop image labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Desktop image labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * Desktop image description.
+     * </pre>
+     *
+     * <code>string description = 10 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Desktop image description.
+     * </pre>
+     *
+     * <code>string description = 10 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.clouddesktop.v1.api.CopyFromDesktopRequest}
@@ -4973,6 +5806,7 @@ public final class DesktopImageServiceOuterClass {
       folderId_ = "";
       name_ = "";
       desktopId_ = "";
+      description_ = "";
     }
 
     @java.lang.Override
@@ -4995,6 +5829,7 @@ public final class DesktopImageServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5023,6 +5858,25 @@ public final class DesktopImageServiceOuterClass {
               desktopId_ = s;
               break;
             }
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5047,6 +5901,18 @@ public final class DesktopImageServiceOuterClass {
       return yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_CopyFromDesktopRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 9:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -5193,6 +6059,149 @@ public final class DesktopImageServiceOuterClass {
       }
     }
 
+    public static final int LABELS_FIELD_NUMBER = 9;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_CopyFromDesktopRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Desktop image labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Desktop image labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Desktop image labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Desktop image labels.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 10;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Desktop image description.
+     * </pre>
+     *
+     * <code>string description = 10 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Desktop image description.
+     * </pre>
+     *
+     * <code>string description = 10 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5216,6 +6225,15 @@ public final class DesktopImageServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(desktopId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, desktopId_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          9);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, description_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5233,6 +6251,19 @@ public final class DesktopImageServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(desktopId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, desktopId_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(9, labels__);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, description_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5255,6 +6286,10 @@ public final class DesktopImageServiceOuterClass {
           .equals(other.getName())) return false;
       if (!getDesktopId()
           .equals(other.getDesktopId())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5272,6 +6307,12 @@ public final class DesktopImageServiceOuterClass {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DESKTOP_ID_FIELD_NUMBER;
       hash = (53 * hash) + getDesktopId().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5379,6 +6420,28 @@ public final class DesktopImageServiceOuterClass {
         return yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.internal_static_yandex_cloud_clouddesktop_v1_api_CopyFromDesktopRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 9:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 9:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -5411,6 +6474,9 @@ public final class DesktopImageServiceOuterClass {
 
         desktopId_ = "";
 
+        internalGetMutableLabels().clear();
+        description_ = "";
+
         return this;
       }
 
@@ -5437,9 +6503,13 @@ public final class DesktopImageServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.CopyFromDesktopRequest buildPartial() {
         yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.CopyFromDesktopRequest result = new yandex.cloud.api.clouddesktop.v1.DesktopImageServiceOuterClass.CopyFromDesktopRequest(this);
+        int from_bitField0_ = bitField0_;
         result.folderId_ = folderId_;
         result.name_ = name_;
         result.desktopId_ = desktopId_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        result.description_ = description_;
         onBuilt();
         return result;
       }
@@ -5500,6 +6570,12 @@ public final class DesktopImageServiceOuterClass {
           desktopId_ = other.desktopId_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -5528,6 +6604,7 @@ public final class DesktopImageServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object folderId_ = "";
       /**
@@ -5813,6 +6890,261 @@ public final class DesktopImageServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         desktopId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Desktop image labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Desktop image labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Desktop image labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Desktop image labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Desktop image labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Desktop image labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Desktop image labels.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Desktop image description.
+       * </pre>
+       *
+       * <code>string description = 10 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Desktop image description.
+       * </pre>
+       *
+       * <code>string description = 10 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Desktop image description.
+       * </pre>
+       *
+       * <code>string description = 10 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Desktop image description.
+       * </pre>
+       *
+       * <code>string description = 10 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Desktop image description.
+       * </pre>
+       *
+       * <code>string description = 10 [(.yandex.cloud.length) = "&lt;=1024"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
         onChanged();
         return this;
       }
@@ -8894,11 +10226,19 @@ public final class DesktopImageServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the image to update.
+     * </pre>
+     *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The imageId.
      */
     java.lang.String getImageId();
     /**
+     * <pre>
+     * ID of the image to update.
+     * </pre>
+     *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for imageId.
      */
@@ -8992,6 +10332,10 @@ public final class DesktopImageServiceOuterClass {
     public static final int IMAGE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object imageId_;
     /**
+     * <pre>
+     * ID of the image to update.
+     * </pre>
+     *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The imageId.
      */
@@ -9009,6 +10353,10 @@ public final class DesktopImageServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the image to update.
+     * </pre>
+     *
      * <code>string image_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for imageId.
      */
@@ -9331,6 +10679,10 @@ public final class DesktopImageServiceOuterClass {
 
       private java.lang.Object imageId_ = "";
       /**
+       * <pre>
+       * ID of the image to update.
+       * </pre>
+       *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The imageId.
        */
@@ -9347,6 +10699,10 @@ public final class DesktopImageServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the image to update.
+       * </pre>
+       *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for imageId.
        */
@@ -9364,6 +10720,10 @@ public final class DesktopImageServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the image to update.
+       * </pre>
+       *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The imageId to set.
        * @return This builder for chaining.
@@ -9379,6 +10739,10 @@ public final class DesktopImageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the image to update.
+       * </pre>
+       *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -9389,6 +10753,10 @@ public final class DesktopImageServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the image to update.
+       * </pre>
+       *
        * <code>string image_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for imageId to set.
        * @return This builder for chaining.
@@ -9473,6 +10841,11 @@ public final class DesktopImageServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_clouddesktop_v1_api_CopyDesktopImageRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_clouddesktop_v1_api_CopyDesktopImageRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_clouddesktop_v1_api_CopyDesktopImageRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_clouddesktop_v1_api_UpdateDesktopImageRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -9487,6 +10860,11 @@ public final class DesktopImageServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_clouddesktop_v1_api_CopyFromDesktopRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_clouddesktop_v1_api_CopyFromDesktopRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_clouddesktop_v1_api_CopyFromDesktopRequest_LabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_clouddesktop_v1_api_CopyDesktopImageMetadata_descriptor;
   private static final 
@@ -9541,61 +10919,73 @@ public final class DesktopImageServiceOuterClass {
       "\tB\t\212\3101\005<=100J\004\010\002\020\025\"\202\001\n\031ListDesktopImages" +
       "Response\022F\n\016desktop_images\030\001 \003(\0132..yande" +
       "x.cloud.clouddesktop.v1.api.DesktopImage" +
-      "\022\027\n\017next_page_token\030\026 \001(\tJ\004\010\002\020\026\"|\n\027CopyD" +
-      "esktopImageRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022\032\n\004name\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "\036\n\010image_id\030\010 \001(\tB\014\350\3071\001\212\3101\004<=50J\004\010\003\020\010\"\306\002" +
-      "\n\031UpdateDesktopImageRequest\022\026\n\010image_id\030" +
-      "\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.googl" +
-      "e.protobuf.FieldMask\022\026\n\004name\030\003 \001(\tB\010\212\3101\004" +
-      "<=50\022\230\001\n\006labels\030\004 \003(\0132G.yandex.cloud.clo" +
-      "uddesktop.v1.api.UpdateDesktopImageReque" +
-      "st.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0" +
-      "-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032" +
-      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"u\n\026CopyFromDesktopRequest\022\033\n\tfold" +
-      "er_id\030\003 \001(\tB\010\212\3101\004<=50\022\026\n\004name\030\004 \001(\tB\010\212\3101" +
-      "\004<=50\022 \n\ndesktop_id\030\010 \001(\tB\014\350\3071\001\212\3101\004<=50J" +
-      "\004\010\005\020\010\",\n\030CopyDesktopImageMetadata\022\020\n\010ima" +
-      "ge_id\030\001 \001(\t\"+\n\027CopyFromDesktopMetadata\022\020" +
-      "\n\010image_id\030\001 \001(\t\"3\n\031DeleteDesktopImageRe" +
-      "quest\022\026\n\010image_id\030\001 \001(\tB\004\350\3071\001\".\n\032DeleteD" +
-      "esktopImageMetadata\022\020\n\010image_id\030\001 \001(\t\"0\n" +
-      "\026GetDesktopImageRequest\022\026\n\010image_id\030\001 \001(" +
-      "\tB\004\350\3071\001\"4\n\032UpdateDesktopImageMetadata\022\026\n" +
-      "\010image_id\030\001 \001(\tB\004\350\3071\0012\376\010\n\023DesktopImageSe" +
-      "rvice\022\241\001\n\004List\022:.yandex.cloud.clouddeskt" +
-      "op.v1.api.ListDesktopImagesRequest\032;.yan" +
+      "\022\027\n\017next_page_token\030\026 \001(\tJ\004\010\002\020\026\"\345\002\n\027Copy" +
+      "DesktopImageRequest\022\037\n\tfolder_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022\032\n\004name\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022\036\n\010image_id\030\010 \001(\tB\014\350\3071\001\212\3101\004<=50\022\226\001\n\006lab" +
+      "els\030\t \003(\0132E.yandex.cloud.clouddesktop.v1" +
+      ".api.CopyDesktopImageRequest.LabelsEntry" +
+      "B?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041" +
+      "-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\037\n\013description" +
+      "\030\n \001(\tB\n\212\3101\006<=1024\032-\n\013LabelsEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\003\020\010\"\347\002\n\031Upda" +
+      "teDesktopImageRequest\022\026\n\010image_id\030\001 \001(\tB" +
+      "\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.google.prot" +
+      "obuf.FieldMask\022\026\n\004name\030\003 \001(\tB\010\212\3101\004<=50\022\230" +
+      "\001\n\006labels\030\004 \003(\0132G.yandex.cloud.clouddesk" +
+      "top.v1.api.UpdateDesktopImageRequest.Lab" +
+      "elsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]" +
+      "*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\037\n\013des" +
+      "cription\030\005 \001(\tB\n\212\3101\006<=1024\032-\n\013LabelsEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\335\002\n\026Co" +
+      "pyFromDesktopRequest\022\033\n\tfolder_id\030\003 \001(\tB" +
+      "\010\212\3101\004<=50\022\026\n\004name\030\004 \001(\tB\010\212\3101\004<=50\022 \n\ndes" +
+      "ktop_id\030\010 \001(\tB\014\350\3071\001\212\3101\004<=50\022\225\001\n\006labels\030\t" +
+      " \003(\0132D.yandex.cloud.clouddesktop.v1.api." +
+      "CopyFromDesktopRequest.LabelsEntryB?\202\3101\004" +
+      "<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101" +
+      "\022\022\020[a-z][-_0-9a-z]*\022\037\n\013description\030\n \001(\t" +
+      "B\n\212\3101\006<=1024\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005\020\010\",\n\030CopyDesktop" +
+      "ImageMetadata\022\020\n\010image_id\030\001 \001(\t\"+\n\027CopyF" +
+      "romDesktopMetadata\022\020\n\010image_id\030\001 \001(\t\"3\n\031" +
+      "DeleteDesktopImageRequest\022\026\n\010image_id\030\001 " +
+      "\001(\tB\004\350\3071\001\".\n\032DeleteDesktopImageMetadata\022" +
+      "\020\n\010image_id\030\001 \001(\t\"0\n\026GetDesktopImageRequ" +
+      "est\022\026\n\010image_id\030\001 \001(\tB\004\350\3071\001\"4\n\032UpdateDes" +
+      "ktopImageMetadata\022\026\n\010image_id\030\001 \001(\tB\004\350\3071" +
+      "\0012\376\010\n\023DesktopImageService\022\241\001\n\004List\022:.yan" +
       "dex.cloud.clouddesktop.v1.api.ListDeskto" +
-      "pImagesResponse\" \202\323\344\223\002\032\022\030/cloud-desktop/" +
-      "v1/images\022\234\001\n\003Get\0228.yandex.cloud.cloudde" +
-      "sktop.v1.api.GetDesktopImageRequest\032..ya" +
-      "ndex.cloud.clouddesktop.v1.api.DesktopIm" +
-      "age\"+\202\323\344\223\002%\022#/cloud-desktop/v1/images/{i" +
-      "mage_id}\022\272\001\n\004Copy\0229.yandex.cloud.cloudde" +
-      "sktop.v1.api.CopyDesktopImageRequest\032!.y" +
-      "andex.cloud.operation.Operation\"T\202\323\344\223\002\"\"" +
-      "\035/cloud-desktop/v1/images:copy:\001*\262\322*(\n\030C" +
-      "opyDesktopImageMetadata\022\014DesktopImage\022\306\001" +
-      "\n\006Update\022;.yandex.cloud.clouddesktop.v1." +
-      "api.UpdateDesktopImageRequest\032!.yandex.c" +
-      "loud.operation.Operation\"\\\202\323\344\223\002(2#/cloud" +
-      "-desktop/v1/images/{image_id}:\001*\262\322**\n\032Up" +
-      "dateDesktopImageMetadata\022\014DesktopImage\022\316" +
-      "\001\n\017CopyFromDesktop\0228.yandex.cloud.cloudd" +
-      "esktop.v1.api.CopyFromDesktopRequest\032!.y" +
-      "andex.cloud.operation.Operation\"^\202\323\344\223\002-\"" +
-      "(/cloud-desktop/v1/images:copyFromDeskto" +
-      "p:\001*\262\322*\'\n\027CopyFromDesktopMetadata\022\014Deskt" +
-      "opImage\022\314\001\n\006Delete\022;.yandex.cloud.cloudd" +
-      "esktop.v1.api.DeleteDesktopImageRequest\032" +
-      "!.yandex.cloud.operation.Operation\"b\202\323\344\223" +
-      "\002%*#/cloud-desktop/v1/images/{image_id}\262" +
-      "\322*3\n\032DeleteDesktopImageMetadata\022\025google." +
-      "protobuf.EmptyBq\n yandex.cloud.api.cloud" +
-      "desktop.v1ZMgithub.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/clouddesktop/v1;clo" +
-      "uddesktopb\006proto3"
+      "pImagesRequest\032;.yandex.cloud.clouddeskt" +
+      "op.v1.api.ListDesktopImagesResponse\" \202\323\344" +
+      "\223\002\032\022\030/cloud-desktop/v1/images\022\234\001\n\003Get\0228." +
+      "yandex.cloud.clouddesktop.v1.api.GetDesk" +
+      "topImageRequest\032..yandex.cloud.clouddesk" +
+      "top.v1.api.DesktopImage\"+\202\323\344\223\002%\022#/cloud-" +
+      "desktop/v1/images/{image_id}\022\272\001\n\004Copy\0229." +
+      "yandex.cloud.clouddesktop.v1.api.CopyDes" +
+      "ktopImageRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"T\202\323\344\223\002\"\"\035/cloud-desktop/v1/i" +
+      "mages:copy:\001*\262\322*(\n\030CopyDesktopImageMetad" +
+      "ata\022\014DesktopImage\022\306\001\n\006Update\022;.yandex.cl" +
+      "oud.clouddesktop.v1.api.UpdateDesktopIma" +
+      "geRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"\\\202\323\344\223\002(2#/cloud-desktop/v1/images/{" +
+      "image_id}:\001*\262\322**\n\032UpdateDesktopImageMeta" +
+      "data\022\014DesktopImage\022\316\001\n\017CopyFromDesktop\0228" +
+      ".yandex.cloud.clouddesktop.v1.api.CopyFr" +
+      "omDesktopRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"^\202\323\344\223\002-\"(/cloud-desktop/v1/i" +
+      "mages:copyFromDesktop:\001*\262\322*\'\n\027CopyFromDe" +
+      "sktopMetadata\022\014DesktopImage\022\314\001\n\006Delete\022;" +
+      ".yandex.cloud.clouddesktop.v1.api.Delete" +
+      "DesktopImageRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"b\202\323\344\223\002%*#/cloud-desktop/v" +
+      "1/images/{image_id}\262\322*3\n\032DeleteDesktopIm" +
+      "ageMetadata\022\025google.protobuf.EmptyBq\n ya" +
+      "ndex.cloud.api.clouddesktop.v1ZMgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/clouddesktop/v1;clouddesktopb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9624,13 +11014,19 @@ public final class DesktopImageServiceOuterClass {
     internal_static_yandex_cloud_clouddesktop_v1_api_CopyDesktopImageRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_clouddesktop_v1_api_CopyDesktopImageRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "ImageId", });
+        new java.lang.String[] { "FolderId", "Name", "ImageId", "Labels", "Description", });
+    internal_static_yandex_cloud_clouddesktop_v1_api_CopyDesktopImageRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_clouddesktop_v1_api_CopyDesktopImageRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_clouddesktop_v1_api_CopyDesktopImageRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_clouddesktop_v1_api_CopyDesktopImageRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_clouddesktop_v1_api_UpdateDesktopImageRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_clouddesktop_v1_api_UpdateDesktopImageRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_clouddesktop_v1_api_UpdateDesktopImageRequest_descriptor,
-        new java.lang.String[] { "ImageId", "UpdateMask", "Name", "Labels", });
+        new java.lang.String[] { "ImageId", "UpdateMask", "Name", "Labels", "Description", });
     internal_static_yandex_cloud_clouddesktop_v1_api_UpdateDesktopImageRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_clouddesktop_v1_api_UpdateDesktopImageRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_clouddesktop_v1_api_UpdateDesktopImageRequest_LabelsEntry_fieldAccessorTable = new
@@ -9642,7 +11038,13 @@ public final class DesktopImageServiceOuterClass {
     internal_static_yandex_cloud_clouddesktop_v1_api_CopyFromDesktopRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_clouddesktop_v1_api_CopyFromDesktopRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "DesktopId", });
+        new java.lang.String[] { "FolderId", "Name", "DesktopId", "Labels", "Description", });
+    internal_static_yandex_cloud_clouddesktop_v1_api_CopyFromDesktopRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_clouddesktop_v1_api_CopyFromDesktopRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_clouddesktop_v1_api_CopyFromDesktopRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_clouddesktop_v1_api_CopyFromDesktopRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_clouddesktop_v1_api_CopyDesktopImageMetadata_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_clouddesktop_v1_api_CopyDesktopImageMetadata_fieldAccessorTable = new

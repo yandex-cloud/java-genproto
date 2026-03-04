@@ -1731,1006 +1731,6 @@ public final class UserServiceOuterClass {
 
   }
 
-  public interface ListUsersAtRevisionRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.spqr.v1.ListUsersAtRevisionRequest)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * ID of the cluster to list SPQR users in.
-     * To get the cluster ID, use a [ClusterService.List] request.
-     * </pre>
-     *
-     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
-     * @return The clusterId.
-     */
-    java.lang.String getClusterId();
-    /**
-     * <pre>
-     * ID of the cluster to list SPQR users in.
-     * To get the cluster ID, use a [ClusterService.List] request.
-     * </pre>
-     *
-     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
-     * @return The bytes for clusterId.
-     */
-    com.google.protobuf.ByteString
-        getClusterIdBytes();
-
-    /**
-     * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
-     * </pre>
-     *
-     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
-     * @return The pageSize.
-     */
-    long getPageSize();
-
-    /**
-     * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
-     * [ListUsersResponse.next_page_token] returned by the previous list request.
-     * </pre>
-     *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
-     * @return The pageToken.
-     */
-    java.lang.String getPageToken();
-    /**
-     * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
-     * [ListUsersResponse.next_page_token] returned by the previous list request.
-     * </pre>
-     *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
-     * @return The bytes for pageToken.
-     */
-    com.google.protobuf.ByteString
-        getPageTokenBytes();
-
-    /**
-     * <pre>
-     * Cluster revision
-     * </pre>
-     *
-     * <code>int64 revision = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
-     * @return The revision.
-     */
-    long getRevision();
-  }
-  /**
-   * Protobuf type {@code yandex.cloud.mdb.spqr.v1.ListUsersAtRevisionRequest}
-   */
-  public static final class ListUsersAtRevisionRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.spqr.v1.ListUsersAtRevisionRequest)
-      ListUsersAtRevisionRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ListUsersAtRevisionRequest.newBuilder() to construct.
-    private ListUsersAtRevisionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ListUsersAtRevisionRequest() {
-      clusterId_ = "";
-      pageToken_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ListUsersAtRevisionRequest();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ListUsersAtRevisionRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              clusterId_ = s;
-              break;
-            }
-            case 16: {
-
-              pageSize_ = input.readInt64();
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              pageToken_ = s;
-              break;
-            }
-            case 32: {
-
-              revision_ = input.readInt64();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.internal_static_yandex_cloud_mdb_spqr_v1_ListUsersAtRevisionRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.internal_static_yandex_cloud_mdb_spqr_v1_ListUsersAtRevisionRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest.class, yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest.Builder.class);
-    }
-
-    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object clusterId_;
-    /**
-     * <pre>
-     * ID of the cluster to list SPQR users in.
-     * To get the cluster ID, use a [ClusterService.List] request.
-     * </pre>
-     *
-     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
-     * @return The clusterId.
-     */
-    @java.lang.Override
-    public java.lang.String getClusterId() {
-      java.lang.Object ref = clusterId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        clusterId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * ID of the cluster to list SPQR users in.
-     * To get the cluster ID, use a [ClusterService.List] request.
-     * </pre>
-     *
-     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
-     * @return The bytes for clusterId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getClusterIdBytes() {
-      java.lang.Object ref = clusterId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        clusterId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
-    private long pageSize_;
-    /**
-     * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
-     * </pre>
-     *
-     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
-     * @return The pageSize.
-     */
-    @java.lang.Override
-    public long getPageSize() {
-      return pageSize_;
-    }
-
-    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
-    private volatile java.lang.Object pageToken_;
-    /**
-     * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
-     * [ListUsersResponse.next_page_token] returned by the previous list request.
-     * </pre>
-     *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
-     * @return The pageToken.
-     */
-    @java.lang.Override
-    public java.lang.String getPageToken() {
-      java.lang.Object ref = pageToken_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        pageToken_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
-     * [ListUsersResponse.next_page_token] returned by the previous list request.
-     * </pre>
-     *
-     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
-     * @return The bytes for pageToken.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPageTokenBytes() {
-      java.lang.Object ref = pageToken_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        pageToken_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int REVISION_FIELD_NUMBER = 4;
-    private long revision_;
-    /**
-     * <pre>
-     * Cluster revision
-     * </pre>
-     *
-     * <code>int64 revision = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
-     * @return The revision.
-     */
-    @java.lang.Override
-    public long getRevision() {
-      return revision_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
-      }
-      if (pageSize_ != 0L) {
-        output.writeInt64(2, pageSize_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
-      }
-      if (revision_ != 0L) {
-        output.writeInt64(4, revision_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
-      }
-      if (pageSize_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, pageSize_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
-      }
-      if (revision_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(4, revision_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest)) {
-        return super.equals(obj);
-      }
-      yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest other = (yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest) obj;
-
-      if (!getClusterId()
-          .equals(other.getClusterId())) return false;
-      if (getPageSize()
-          != other.getPageSize()) return false;
-      if (!getPageToken()
-          .equals(other.getPageToken())) return false;
-      if (getRevision()
-          != other.getRevision()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getClusterId().hashCode();
-      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getPageSize());
-      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
-      hash = (53 * hash) + getPageToken().hashCode();
-      hash = (37 * hash) + REVISION_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getRevision());
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code yandex.cloud.mdb.spqr.v1.ListUsersAtRevisionRequest}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.spqr.v1.ListUsersAtRevisionRequest)
-        yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.internal_static_yandex_cloud_mdb_spqr_v1_ListUsersAtRevisionRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.internal_static_yandex_cloud_mdb_spqr_v1_ListUsersAtRevisionRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest.class, yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest.Builder.class);
-      }
-
-      // Construct using yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        clusterId_ = "";
-
-        pageSize_ = 0L;
-
-        pageToken_ = "";
-
-        revision_ = 0L;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.internal_static_yandex_cloud_mdb_spqr_v1_ListUsersAtRevisionRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest getDefaultInstanceForType() {
-        return yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest build() {
-        yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest buildPartial() {
-        yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest result = new yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest(this);
-        result.clusterId_ = clusterId_;
-        result.pageSize_ = pageSize_;
-        result.pageToken_ = pageToken_;
-        result.revision_ = revision_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest) {
-          return mergeFrom((yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest other) {
-        if (other == yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest.getDefaultInstance()) return this;
-        if (!other.getClusterId().isEmpty()) {
-          clusterId_ = other.clusterId_;
-          onChanged();
-        }
-        if (other.getPageSize() != 0L) {
-          setPageSize(other.getPageSize());
-        }
-        if (!other.getPageToken().isEmpty()) {
-          pageToken_ = other.pageToken_;
-          onChanged();
-        }
-        if (other.getRevision() != 0L) {
-          setRevision(other.getRevision());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object clusterId_ = "";
-      /**
-       * <pre>
-       * ID of the cluster to list SPQR users in.
-       * To get the cluster ID, use a [ClusterService.List] request.
-       * </pre>
-       *
-       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
-       * @return The clusterId.
-       */
-      public java.lang.String getClusterId() {
-        java.lang.Object ref = clusterId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          clusterId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ID of the cluster to list SPQR users in.
-       * To get the cluster ID, use a [ClusterService.List] request.
-       * </pre>
-       *
-       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
-       * @return The bytes for clusterId.
-       */
-      public com.google.protobuf.ByteString
-          getClusterIdBytes() {
-        java.lang.Object ref = clusterId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          clusterId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ID of the cluster to list SPQR users in.
-       * To get the cluster ID, use a [ClusterService.List] request.
-       * </pre>
-       *
-       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
-       * @param value The clusterId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setClusterId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        clusterId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the cluster to list SPQR users in.
-       * To get the cluster ID, use a [ClusterService.List] request.
-       * </pre>
-       *
-       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearClusterId() {
-        
-        clusterId_ = getDefaultInstance().getClusterId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the cluster to list SPQR users in.
-       * To get the cluster ID, use a [ClusterService.List] request.
-       * </pre>
-       *
-       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
-       * @param value The bytes for clusterId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setClusterIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        clusterId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long pageSize_ ;
-      /**
-       * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
-       * </pre>
-       *
-       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
-       * @return The pageSize.
-       */
-      @java.lang.Override
-      public long getPageSize() {
-        return pageSize_;
-      }
-      /**
-       * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
-       * </pre>
-       *
-       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
-       * @param value The pageSize to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPageSize(long value) {
-        
-        pageSize_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
-       * </pre>
-       *
-       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPageSize() {
-        
-        pageSize_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object pageToken_ = "";
-      /**
-       * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
-       * [ListUsersResponse.next_page_token] returned by the previous list request.
-       * </pre>
-       *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
-       * @return The pageToken.
-       */
-      public java.lang.String getPageToken() {
-        java.lang.Object ref = pageToken_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          pageToken_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
-       * [ListUsersResponse.next_page_token] returned by the previous list request.
-       * </pre>
-       *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
-       * @return The bytes for pageToken.
-       */
-      public com.google.protobuf.ByteString
-          getPageTokenBytes() {
-        java.lang.Object ref = pageToken_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          pageToken_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
-       * [ListUsersResponse.next_page_token] returned by the previous list request.
-       * </pre>
-       *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
-       * @param value The pageToken to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPageToken(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        pageToken_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
-       * [ListUsersResponse.next_page_token] returned by the previous list request.
-       * </pre>
-       *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPageToken() {
-        
-        pageToken_ = getDefaultInstance().getPageToken();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
-       * [ListUsersResponse.next_page_token] returned by the previous list request.
-       * </pre>
-       *
-       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
-       * @param value The bytes for pageToken to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPageTokenBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        pageToken_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long revision_ ;
-      /**
-       * <pre>
-       * Cluster revision
-       * </pre>
-       *
-       * <code>int64 revision = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
-       * @return The revision.
-       */
-      @java.lang.Override
-      public long getRevision() {
-        return revision_;
-      }
-      /**
-       * <pre>
-       * Cluster revision
-       * </pre>
-       *
-       * <code>int64 revision = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
-       * @param value The revision to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRevision(long value) {
-        
-        revision_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Cluster revision
-       * </pre>
-       *
-       * <code>int64 revision = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRevision() {
-        
-        revision_ = 0L;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.spqr.v1.ListUsersAtRevisionRequest)
-    }
-
-    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.spqr.v1.ListUsersAtRevisionRequest)
-    private static final yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest();
-    }
-
-    public static yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<ListUsersAtRevisionRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ListUsersAtRevisionRequest>() {
-      @java.lang.Override
-      public ListUsersAtRevisionRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ListUsersAtRevisionRequest(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<ListUsersAtRevisionRequest> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ListUsersAtRevisionRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public yandex.cloud.api.mdb.spqr.v1.UserServiceOuterClass.ListUsersAtRevisionRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface ListUsersResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.spqr.v1.ListUsersResponse)
       com.google.protobuf.MessageOrBuilder {
@@ -5721,6 +4721,33 @@ public final class UserServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getGrantsBytes(int index);
+
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     * @return Whether the deletionProtection field is set.
+     */
+    boolean hasDeletionProtection();
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     * @return The deletionProtection.
+     */
+    com.google.protobuf.BoolValue getDeletionProtection();
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.spqr.v1.UpdateUserRequest}
@@ -5833,6 +4860,19 @@ public final class UserServiceOuterClass {
                 mutable_bitField0_ |= 0x00000002;
               }
               grants_.add(s);
+              break;
+            }
+            case 66: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (deletionProtection_ != null) {
+                subBuilder = deletionProtection_.toBuilder();
+              }
+              deletionProtection_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deletionProtection_);
+                deletionProtection_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -6202,6 +5242,44 @@ public final class UserServiceOuterClass {
       return grants_.getByteString(index);
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 8;
+    private com.google.protobuf.BoolValue deletionProtection_;
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     * @return Whether the deletionProtection field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeletionProtection() {
+      return deletionProtection_ != null;
+    }
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     * @return The deletionProtection.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getDeletionProtection() {
+      return deletionProtection_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+    }
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the user
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder() {
+      return getDeletionProtection();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6236,6 +5314,9 @@ public final class UserServiceOuterClass {
       }
       for (int i = 0; i < grants_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, grants_.getRaw(i));
+      }
+      if (deletionProtection_ != null) {
+        output.writeMessage(8, getDeletionProtection());
       }
       unknownFields.writeTo(output);
     }
@@ -6275,6 +5356,10 @@ public final class UserServiceOuterClass {
         size += dataSize;
         size += 1 * getGrantsList().size();
       }
+      if (deletionProtection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getDeletionProtection());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6310,6 +5395,11 @@ public final class UserServiceOuterClass {
       }
       if (!getGrantsList()
           .equals(other.getGrantsList())) return false;
+      if (hasDeletionProtection() != other.hasDeletionProtection()) return false;
+      if (hasDeletionProtection()) {
+        if (!getDeletionProtection()
+            .equals(other.getDeletionProtection())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6342,6 +5432,10 @@ public final class UserServiceOuterClass {
       if (getGrantsCount() > 0) {
         hash = (37 * hash) + GRANTS_FIELD_NUMBER;
         hash = (53 * hash) + getGrantsList().hashCode();
+      }
+      if (hasDeletionProtection()) {
+        hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDeletionProtection().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -6503,6 +5597,12 @@ public final class UserServiceOuterClass {
         }
         grants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = null;
+        } else {
+          deletionProtection_ = null;
+          deletionProtectionBuilder_ = null;
+        }
         return this;
       }
 
@@ -6557,6 +5657,11 @@ public final class UserServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.grants_ = grants_;
+        if (deletionProtectionBuilder_ == null) {
+          result.deletionProtection_ = deletionProtection_;
+        } else {
+          result.deletionProtection_ = deletionProtectionBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -6658,6 +5763,9 @@ public final class UserServiceOuterClass {
             grants_.addAll(other.grants_);
           }
           onChanged();
+        }
+        if (other.hasDeletionProtection()) {
+          mergeDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7753,6 +6861,161 @@ public final class UserServiceOuterClass {
         grants_.add(value);
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.BoolValue deletionProtection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> deletionProtectionBuilder_;
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       * @return Whether the deletionProtection field is set.
+       */
+      public boolean hasDeletionProtection() {
+        return deletionProtectionBuilder_ != null || deletionProtection_ != null;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       * @return The deletionProtection.
+       */
+      public com.google.protobuf.BoolValue getDeletionProtection() {
+        if (deletionProtectionBuilder_ == null) {
+          return deletionProtection_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+        } else {
+          return deletionProtectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public Builder setDeletionProtection(com.google.protobuf.BoolValue value) {
+        if (deletionProtectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deletionProtection_ = value;
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public Builder setDeletionProtection(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = builderForValue.build();
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public Builder mergeDeletionProtection(com.google.protobuf.BoolValue value) {
+        if (deletionProtectionBuilder_ == null) {
+          if (deletionProtection_ != null) {
+            deletionProtection_ =
+              com.google.protobuf.BoolValue.newBuilder(deletionProtection_).mergeFrom(value).buildPartial();
+          } else {
+            deletionProtection_ = value;
+          }
+          onChanged();
+        } else {
+          deletionProtectionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public Builder clearDeletionProtection() {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtection_ = null;
+          onChanged();
+        } else {
+          deletionProtection_ = null;
+          deletionProtectionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getDeletionProtectionBuilder() {
+        
+        onChanged();
+        return getDeletionProtectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder() {
+        if (deletionProtectionBuilder_ != null) {
+          return deletionProtectionBuilder_.getMessageOrBuilder();
+        } else {
+          return deletionProtection_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : deletionProtection_;
+        }
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the user
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getDeletionProtectionFieldBuilder() {
+        if (deletionProtectionBuilder_ == null) {
+          deletionProtectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getDeletionProtection(),
+                  getParentForChildren(),
+                  isClean());
+          deletionProtection_ = null;
+        }
+        return deletionProtectionBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10206,11 +9469,6 @@ public final class UserServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_spqr_v1_ListUsersRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_mdb_spqr_v1_ListUsersAtRevisionRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_mdb_spqr_v1_ListUsersAtRevisionRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_spqr_v1_ListUsersResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -10260,67 +9518,61 @@ public final class UserServiceOuterClass {
       "operation.proto\032 google/protobuf/field_m" +
       "ask.proto\032&yandex/cloud/operation/operat" +
       "ion.proto\032\035yandex/cloud/validation.proto" +
-      "\032#yandex/cloud/mdb/spqr/v1/user.proto\"d\n" +
-      "\016GetUserRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\0220\n\tuser_name\030\002 \001(\tB\035\350\3071\001\212\3101\004<=" +
-      "63\362\3071\r[a-zA-Z0-9_]*\"r\n\020ListUsersRequest\022" +
-      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpag" +
-      "e_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003" +
-      " \001(\tB\t\212\3101\005<=100\"\226\001\n\032ListUsersAtRevisionR" +
-      "equest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_" +
-      "token\030\003 \001(\tB\t\212\3101\005<=100\022\030\n\010revision\030\004 \001(\003" +
-      "B\006\372\3071\002>0\"[\n\021ListUsersResponse\022-\n\005users\030\001" +
-      " \003(\0132\036.yandex.cloud.mdb.spqr.v1.User\022\027\n\017" +
-      "next_page_token\030\002 \001(\t\"l\n\021CreateUserReque" +
-      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0225\n\t" +
-      "user_spec\030\002 \001(\0132\".yandex.cloud.mdb.spqr." +
-      "v1.UserSpec\";\n\022CreateUserMetadata\022\022\n\nclu" +
-      "ster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\326\002\n\021Upd" +
-      "ateUserRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\0220\n\tuser_name\030\002 \001(\tB\035\350\3071\001\212\3101\004<=6" +
-      "3\362\3071\r[a-zA-Z0-9_]*\022/\n\013update_mask\030\003 \001(\0132" +
-      "\032.google.protobuf.FieldMask\022\033\n\010password\030" +
-      "\004 \001(\tB\t\212\3101\0058-128\0229\n\013permissions\030\005 \003(\0132$." +
-      "yandex.cloud.mdb.spqr.v1.Permission\0228\n\010s" +
-      "ettings\030\006 \001(\0132&.yandex.cloud.mdb.spqr.v1" +
-      ".UserSettings\022*\n\006grants\030\007 \003(\tB\032\212\3101\004<=63\362" +
-      "\3071\016[a-zA-Z0-9_-]*\";\n\022UpdateUserMetadata\022" +
-      "\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"g" +
-      "\n\021DeleteUserRequest\022 \n\ncluster_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\0220\n\tuser_name\030\002 \001(\tB\035\350\3071\001\212\310" +
-      "1\004<=63\362\3071\r[a-zA-Z0-9_]*\";\n\022DeleteUserMet" +
-      "adata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_name\030\002" +
-      " \001(\t2\241\010\n\013UserService\022\221\001\n\003Get\022(.yandex.cl" +
-      "oud.mdb.spqr.v1.GetUserRequest\032\036.yandex." +
-      "cloud.mdb.spqr.v1.User\"@\202\323\344\223\002:\0228/managed" +
-      "-spqr/v1/clusters/{cluster_id}/users/{us" +
-      "er_name}\022\225\001\n\004List\022*.yandex.cloud.mdb.spq" +
-      "r.v1.ListUsersRequest\032+.yandex.cloud.mdb" +
-      ".spqr.v1.ListUsersResponse\"4\202\323\344\223\002.\022,/man" +
-      "aged-spqr/v1/clusters/{cluster_id}/users" +
-      "\022\251\001\n\016ListAtRevision\0224.yandex.cloud.mdb.s" +
-      "pqr.v1.ListUsersAtRevisionRequest\032+.yand" +
-      "ex.cloud.mdb.spqr.v1.ListUsersResponse\"4" +
-      "\202\323\344\223\002.\022,/managed-spqr/v1/clusters/{clust" +
-      "er_id}/users\022\257\001\n\006Create\022+.yandex.cloud.m" +
-      "db.spqr.v1.CreateUserRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"U\202\323\344\223\0021\",/manage" +
-      "d-spqr/v1/clusters/{cluster_id}/users:\001*" +
-      "\262\322*\032\n\022CreateUserMetadata\022\004User\022\273\001\n\006Updat" +
-      "e\022+.yandex.cloud.mdb.spqr.v1.UpdateUserR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"a\202\323\344\223\002=28/managed-spqr/v1/clusters/{cl" +
-      "uster_id}/users/{user_name}:\001*\262\322*\032\n\022Upda" +
-      "teUserMetadata\022\004User\022\311\001\n\006Delete\022+.yandex" +
-      ".cloud.mdb.spqr.v1.DeleteUserRequest\032!.y" +
-      "andex.cloud.operation.Operation\"o\202\323\344\223\002:*" +
-      "8/managed-spqr/v1/clusters/{cluster_id}/" +
-      "users/{user_name}\262\322*+\n\022DeleteUserMetadat" +
-      "a\022\025google.protobuf.EmptyBa\n\034yandex.cloud" +
-      ".api.mdb.spqr.v1ZAgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/mdb/spqr/v1;s" +
-      "pqrb\006proto3"
+      "\032\036google/protobuf/wrappers.proto\032#yandex" +
+      "/cloud/mdb/spqr/v1/user.proto\"d\n\016GetUser" +
+      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\0220\n\tuser_name\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r[a" +
+      "-zA-Z0-9_]*\"r\n\020ListUsersRequest\022 \n\nclust" +
+      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002" +
+      " \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\310" +
+      "1\005<=100\"[\n\021ListUsersResponse\022-\n\005users\030\001 " +
+      "\003(\0132\036.yandex.cloud.mdb.spqr.v1.User\022\027\n\017n" +
+      "ext_page_token\030\002 \001(\t\"l\n\021CreateUserReques" +
+      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0225\n\tu" +
+      "ser_spec\030\002 \001(\0132\".yandex.cloud.mdb.spqr.v" +
+      "1.UserSpec\";\n\022CreateUserMetadata\022\022\n\nclus" +
+      "ter_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\217\003\n\021Upda" +
+      "teUserRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\0220\n\tuser_name\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63" +
+      "\362\3071\r[a-zA-Z0-9_]*\022/\n\013update_mask\030\003 \001(\0132\032" +
+      ".google.protobuf.FieldMask\022\033\n\010password\030\004" +
+      " \001(\tB\t\212\3101\0058-128\0229\n\013permissions\030\005 \003(\0132$.y" +
+      "andex.cloud.mdb.spqr.v1.Permission\0228\n\010se" +
+      "ttings\030\006 \001(\0132&.yandex.cloud.mdb.spqr.v1." +
+      "UserSettings\022*\n\006grants\030\007 \003(\tB\032\212\3101\004<=63\362\307" +
+      "1\016[a-zA-Z0-9_-]*\0227\n\023deletion_protection\030" +
+      "\010 \001(\0132\032.google.protobuf.BoolValue\";\n\022Upd" +
+      "ateUserMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tu" +
+      "ser_name\030\002 \001(\t\"g\n\021DeleteUserRequest\022 \n\nc" +
+      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0220\n\tuser_na" +
+      "me\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\"" +
+      ";\n\022DeleteUserMetadata\022\022\n\ncluster_id\030\001 \001(" +
+      "\t\022\021\n\tuser_name\030\002 \001(\t2\365\006\n\013UserService\022\221\001\n" +
+      "\003Get\022(.yandex.cloud.mdb.spqr.v1.GetUserR" +
+      "equest\032\036.yandex.cloud.mdb.spqr.v1.User\"@" +
+      "\202\323\344\223\002:\0228/managed-spqr/v1/clusters/{clust" +
+      "er_id}/users/{user_name}\022\225\001\n\004List\022*.yand" +
+      "ex.cloud.mdb.spqr.v1.ListUsersRequest\032+." +
+      "yandex.cloud.mdb.spqr.v1.ListUsersRespon" +
+      "se\"4\202\323\344\223\002.\022,/managed-spqr/v1/clusters/{c" +
+      "luster_id}/users\022\257\001\n\006Create\022+.yandex.clo" +
+      "ud.mdb.spqr.v1.CreateUserRequest\032!.yande" +
+      "x.cloud.operation.Operation\"U\202\323\344\223\0021\",/ma" +
+      "naged-spqr/v1/clusters/{cluster_id}/user" +
+      "s:\001*\262\322*\032\n\022CreateUserMetadata\022\004User\022\273\001\n\006U" +
+      "pdate\022+.yandex.cloud.mdb.spqr.v1.UpdateU" +
+      "serRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"a\202\323\344\223\002=28/managed-spqr/v1/clusters" +
+      "/{cluster_id}/users/{user_name}:\001*\262\322*\032\n\022" +
+      "UpdateUserMetadata\022\004User\022\311\001\n\006Delete\022+.ya" +
+      "ndex.cloud.mdb.spqr.v1.DeleteUserRequest" +
+      "\032!.yandex.cloud.operation.Operation\"o\202\323\344" +
+      "\223\002:*8/managed-spqr/v1/clusters/{cluster_" +
+      "id}/users/{user_name}\262\322*+\n\022DeleteUserMet" +
+      "adata\022\025google.protobuf.EmptyBa\n\034yandex.c" +
+      "loud.api.mdb.spqr.v1ZAgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/mdb/spqr/" +
+      "v1;spqrb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10330,6 +9582,7 @@ public final class UserServiceOuterClass {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.mdb.spqr.v1.UserOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_mdb_spqr_v1_GetUserRequest_descriptor =
@@ -10344,50 +9597,44 @@ public final class UserServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_spqr_v1_ListUsersRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
-    internal_static_yandex_cloud_mdb_spqr_v1_ListUsersAtRevisionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_yandex_cloud_mdb_spqr_v1_ListUsersAtRevisionRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_mdb_spqr_v1_ListUsersAtRevisionRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "PageSize", "PageToken", "Revision", });
     internal_static_yandex_cloud_mdb_spqr_v1_ListUsersResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_mdb_spqr_v1_ListUsersResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_spqr_v1_ListUsersResponse_descriptor,
         new java.lang.String[] { "Users", "NextPageToken", });
     internal_static_yandex_cloud_mdb_spqr_v1_CreateUserRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_spqr_v1_CreateUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_spqr_v1_CreateUserRequest_descriptor,
         new java.lang.String[] { "ClusterId", "UserSpec", });
     internal_static_yandex_cloud_mdb_spqr_v1_CreateUserMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_mdb_spqr_v1_CreateUserMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_spqr_v1_CreateUserMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "UserName", });
     internal_static_yandex_cloud_mdb_spqr_v1_UpdateUserRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_mdb_spqr_v1_UpdateUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_spqr_v1_UpdateUserRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UserName", "UpdateMask", "Password", "Permissions", "Settings", "Grants", });
+        new java.lang.String[] { "ClusterId", "UserName", "UpdateMask", "Password", "Permissions", "Settings", "Grants", "DeletionProtection", });
     internal_static_yandex_cloud_mdb_spqr_v1_UpdateUserMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_spqr_v1_UpdateUserMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_spqr_v1_UpdateUserMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "UserName", });
     internal_static_yandex_cloud_mdb_spqr_v1_DeleteUserRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_mdb_spqr_v1_DeleteUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_spqr_v1_DeleteUserRequest_descriptor,
         new java.lang.String[] { "ClusterId", "UserName", });
     internal_static_yandex_cloud_mdb_spqr_v1_DeleteUserMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_mdb_spqr_v1_DeleteUserMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_spqr_v1_DeleteUserMetadata_descriptor,
@@ -10407,6 +9654,7 @@ public final class UserServiceOuterClass {
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.mdb.spqr.v1.UserOuterClass.getDescriptor();
   }
 

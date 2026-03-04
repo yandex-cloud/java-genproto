@@ -59,6 +59,14 @@ public final class SymmetricKeyOuterClass {
      * <code>AES_256_HSM = 4;</code>
      */
     AES_256_HSM(4),
+    /**
+     * <pre>
+     * GOST R 34.12-2015 Kuznyechik algorithm
+     * </pre>
+     *
+     * <code>GOST_R_3412_2015_K = 5;</code>
+     */
+    GOST_R_3412_2015_K(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -98,6 +106,14 @@ public final class SymmetricKeyOuterClass {
      * <code>AES_256_HSM = 4;</code>
      */
     public static final int AES_256_HSM_VALUE = 4;
+    /**
+     * <pre>
+     * GOST R 34.12-2015 Kuznyechik algorithm
+     * </pre>
+     *
+     * <code>GOST_R_3412_2015_K = 5;</code>
+     */
+    public static final int GOST_R_3412_2015_K_VALUE = 5;
 
 
     public final int getNumber() {
@@ -129,6 +145,7 @@ public final class SymmetricKeyOuterClass {
         case 2: return AES_192;
         case 3: return AES_256;
         case 4: return AES_256_HSM;
+        case 5: return GOST_R_3412_2015_K;
         default: return null;
       }
     }
@@ -5376,12 +5393,13 @@ public final class SymmetricKeyOuterClass {
       "obuf.Timestamp\022\025\n\rhosted_by_hsm\030\010 \001(\010\"Z\n" +
       "\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\n\n\006ACTIV" +
       "E\020\001\022\035\n\031SCHEDULED_FOR_DESTRUCTION\020\002\022\r\n\tDE" +
-      "STROYED\020\003*q\n\022SymmetricAlgorithm\022#\n\037SYMME" +
-      "TRIC_ALGORITHM_UNSPECIFIED\020\000\022\013\n\007AES_128\020" +
-      "\001\022\013\n\007AES_192\020\002\022\013\n\007AES_256\020\003\022\017\n\013AES_256_H" +
-      "SM\020\004BV\n\027yandex.cloud.api.kms.v1Z;github." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/kms/v1;kmsb\006proto3"
+      "STROYED\020\003*\211\001\n\022SymmetricAlgorithm\022#\n\037SYMM" +
+      "ETRIC_ALGORITHM_UNSPECIFIED\020\000\022\013\n\007AES_128" +
+      "\020\001\022\013\n\007AES_192\020\002\022\013\n\007AES_256\020\003\022\017\n\013AES_256_" +
+      "HSM\020\004\022\026\n\022GOST_R_3412_2015_K\020\005BV\n\027yandex." +
+      "cloud.api.kms.v1Z;github.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/kms/v1;kmsb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

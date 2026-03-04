@@ -46,7 +46,7 @@ public final class UserServiceOuterClass {
      * To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
-     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The userName.
      */
     java.lang.String getUserName();
@@ -56,7 +56,7 @@ public final class UserServiceOuterClass {
      * To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
-     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for userName.
      */
     com.google.protobuf.ByteString
@@ -209,7 +209,7 @@ public final class UserServiceOuterClass {
      * To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
-     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The userName.
      */
     @java.lang.Override
@@ -231,7 +231,7 @@ public final class UserServiceOuterClass {
      * To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
-     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for userName.
      */
     @java.lang.Override
@@ -676,7 +676,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The userName.
        */
       public java.lang.String getUserName() {
@@ -697,7 +697,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The bytes for userName.
        */
       public com.google.protobuf.ByteString
@@ -719,7 +719,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The userName to set.
        * @return This builder for chaining.
        */
@@ -739,7 +739,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUserName() {
@@ -754,7 +754,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The bytes for userName to set.
        * @return This builder for chaining.
        */
@@ -4547,7 +4547,7 @@ public final class UserServiceOuterClass {
      * To get the name of the user use a [UserService.List] request.
      * </pre>
      *
-     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The userName.
      */
     java.lang.String getUserName();
@@ -4557,7 +4557,7 @@ public final class UserServiceOuterClass {
      * To get the name of the user use a [UserService.List] request.
      * </pre>
      *
-     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for userName.
      */
     com.google.protobuf.ByteString
@@ -4834,6 +4834,25 @@ public final class UserServiceOuterClass {
      * <code>.google.protobuf.BoolValue generate_password = 12;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getGeneratePasswordOrBuilder();
+
+    /**
+     * <pre>
+     * User Auth method
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 13;</code>
+     * @return The enum numeric value on the wire for authMethod.
+     */
+    int getAuthMethodValue();
+    /**
+     * <pre>
+     * User Auth method
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 13;</code>
+     * @return The authMethod.
+     */
+    yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod getAuthMethod();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.UpdateUserRequest}
@@ -4854,6 +4873,7 @@ public final class UserServiceOuterClass {
       permissions_ = java.util.Collections.emptyList();
       grants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       userPasswordEncryption_ = 0;
+      authMethod_ = 0;
     }
 
     @java.lang.Override
@@ -4999,6 +5019,12 @@ public final class UserServiceOuterClass {
 
               break;
             }
+            case 104: {
+              int rawValue = input.readEnum();
+
+              authMethod_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5093,7 +5119,7 @@ public final class UserServiceOuterClass {
      * To get the name of the user use a [UserService.List] request.
      * </pre>
      *
-     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The userName.
      */
     @java.lang.Override
@@ -5115,7 +5141,7 @@ public final class UserServiceOuterClass {
      * To get the name of the user use a [UserService.List] request.
      * </pre>
      *
-     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for userName.
      */
     @java.lang.Override
@@ -5525,6 +5551,33 @@ public final class UserServiceOuterClass {
       return getGeneratePassword();
     }
 
+    public static final int AUTH_METHOD_FIELD_NUMBER = 13;
+    private int authMethod_;
+    /**
+     * <pre>
+     * User Auth method
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 13;</code>
+     * @return The enum numeric value on the wire for authMethod.
+     */
+    @java.lang.Override public int getAuthMethodValue() {
+      return authMethod_;
+    }
+    /**
+     * <pre>
+     * User Auth method
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 13;</code>
+     * @return The authMethod.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod getAuthMethod() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod result = yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod.valueOf(authMethod_);
+      return result == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5574,6 +5627,9 @@ public final class UserServiceOuterClass {
       }
       if (generatePassword_ != null) {
         output.writeMessage(12, getGeneratePassword());
+      }
+      if (authMethod_ != yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod.AUTH_METHOD_UNSPECIFIED.getNumber()) {
+        output.writeEnum(13, authMethod_);
       }
       unknownFields.writeTo(output);
     }
@@ -5633,6 +5689,10 @@ public final class UserServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getGeneratePassword());
       }
+      if (authMethod_ != yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod.AUTH_METHOD_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(13, authMethod_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5686,6 +5746,7 @@ public final class UserServiceOuterClass {
         if (!getGeneratePassword()
             .equals(other.getGeneratePassword())) return false;
       }
+      if (authMethod_ != other.authMethod_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5736,6 +5797,8 @@ public final class UserServiceOuterClass {
         hash = (37 * hash) + GENERATE_PASSWORD_FIELD_NUMBER;
         hash = (53 * hash) + getGeneratePassword().hashCode();
       }
+      hash = (37 * hash) + AUTH_METHOD_FIELD_NUMBER;
+      hash = (53 * hash) + authMethod_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5918,6 +5981,8 @@ public final class UserServiceOuterClass {
           generatePassword_ = null;
           generatePasswordBuilder_ = null;
         }
+        authMethod_ = 0;
+
         return this;
       }
 
@@ -5989,6 +6054,7 @@ public final class UserServiceOuterClass {
         } else {
           result.generatePassword_ = generatePasswordBuilder_.build();
         }
+        result.authMethod_ = authMethod_;
         onBuilt();
         return result;
       }
@@ -6105,6 +6171,9 @@ public final class UserServiceOuterClass {
         }
         if (other.hasGeneratePassword()) {
           mergeGeneratePassword(other.getGeneratePassword());
+        }
+        if (other.authMethod_ != 0) {
+          setAuthMethodValue(other.getAuthMethodValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6244,7 +6313,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The userName.
        */
       public java.lang.String getUserName() {
@@ -6265,7 +6334,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The bytes for userName.
        */
       public com.google.protobuf.ByteString
@@ -6287,7 +6356,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The userName to set.
        * @return This builder for chaining.
        */
@@ -6307,7 +6376,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUserName() {
@@ -6322,7 +6391,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The bytes for userName to set.
        * @return This builder for chaining.
        */
@@ -7788,6 +7857,80 @@ public final class UserServiceOuterClass {
         }
         return generatePasswordBuilder_;
       }
+
+      private int authMethod_ = 0;
+      /**
+       * <pre>
+       * User Auth method
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 13;</code>
+       * @return The enum numeric value on the wire for authMethod.
+       */
+      @java.lang.Override public int getAuthMethodValue() {
+        return authMethod_;
+      }
+      /**
+       * <pre>
+       * User Auth method
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 13;</code>
+       * @param value The enum numeric value on the wire for authMethod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthMethodValue(int value) {
+        
+        authMethod_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User Auth method
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 13;</code>
+       * @return The authMethod.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod getAuthMethod() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod result = yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod.valueOf(authMethod_);
+        return result == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * User Auth method
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 13;</code>
+       * @param value The authMethod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthMethod(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.AuthMethod value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        authMethod_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User Auth method
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.AuthMethod auth_method = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthMethod() {
+        
+        authMethod_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8663,7 +8806,7 @@ public final class UserServiceOuterClass {
      * To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
-     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The userName.
      */
     java.lang.String getUserName();
@@ -8673,7 +8816,7 @@ public final class UserServiceOuterClass {
      * To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
-     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for userName.
      */
     com.google.protobuf.ByteString
@@ -8826,7 +8969,7 @@ public final class UserServiceOuterClass {
      * To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
-     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The userName.
      */
     @java.lang.Override
@@ -8848,7 +8991,7 @@ public final class UserServiceOuterClass {
      * To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
-     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for userName.
      */
     @java.lang.Override
@@ -9293,7 +9436,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The userName.
        */
       public java.lang.String getUserName() {
@@ -9314,7 +9457,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The bytes for userName.
        */
       public com.google.protobuf.ByteString
@@ -9336,7 +9479,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The userName to set.
        * @return This builder for chaining.
        */
@@ -9356,7 +9499,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUserName() {
@@ -9371,7 +9514,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The bytes for userName to set.
        * @return This builder for chaining.
        */
@@ -10261,7 +10404,7 @@ public final class UserServiceOuterClass {
      * To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
-     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The userName.
      */
     java.lang.String getUserName();
@@ -10271,7 +10414,7 @@ public final class UserServiceOuterClass {
      * To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
-     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for userName.
      */
     com.google.protobuf.ByteString
@@ -10464,7 +10607,7 @@ public final class UserServiceOuterClass {
      * To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
-     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The userName.
      */
     @java.lang.Override
@@ -10486,7 +10629,7 @@ public final class UserServiceOuterClass {
      * To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
-     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for userName.
      */
     @java.lang.Override
@@ -10999,7 +11142,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The userName.
        */
       public java.lang.String getUserName() {
@@ -11020,7 +11163,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The bytes for userName.
        */
       public com.google.protobuf.ByteString
@@ -11042,7 +11185,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The userName to set.
        * @return This builder for chaining.
        */
@@ -11062,7 +11205,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUserName() {
@@ -11077,7 +11220,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The bytes for userName to set.
        * @return This builder for chaining.
        */
@@ -12131,7 +12274,7 @@ public final class UserServiceOuterClass {
      * To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
-     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The userName.
      */
     java.lang.String getUserName();
@@ -12141,7 +12284,7 @@ public final class UserServiceOuterClass {
      * To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
-     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for userName.
      */
     com.google.protobuf.ByteString
@@ -12321,7 +12464,7 @@ public final class UserServiceOuterClass {
      * To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
-     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The userName.
      */
     @java.lang.Override
@@ -12343,7 +12486,7 @@ public final class UserServiceOuterClass {
      * To get the name of the user, use a [UserService.List] request.
      * </pre>
      *
-     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for userName.
      */
     @java.lang.Override
@@ -12851,7 +12994,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The userName.
        */
       public java.lang.String getUserName() {
@@ -12872,7 +13015,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The bytes for userName.
        */
       public com.google.protobuf.ByteString
@@ -12894,7 +13037,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The userName to set.
        * @return This builder for chaining.
        */
@@ -12914,7 +13057,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUserName() {
@@ -12929,7 +13072,7 @@ public final class UserServiceOuterClass {
        * To get the name of the user, use a [UserService.List] request.
        * </pre>
        *
-       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string user_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_&#64;.-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The bytes for userName to set.
        * @return This builder for chaining.
        */
@@ -13965,93 +14108,95 @@ public final class UserServiceOuterClass {
       "ion/operation.proto\032\035yandex/cloud/valida" +
       "tion.proto\032)yandex/cloud/mdb/postgresql/" +
       "v1/user.proto\032 yandex/cloud/api/operatio" +
-      "n.proto\"e\n\016GetUserRequest\022 \n\ncluster_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0221\n\tuser_name\030\002 \001(\tB\036" +
-      "\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"r\n\020ListUs" +
-      "ersRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\np" +
-      "age_token\030\003 \001(\tB\t\212\3101\005<=100\"a\n\021ListUsersR" +
-      "esponse\0223\n\005users\030\001 \003(\0132$.yandex.cloud.md" +
-      "b.postgresql.v1.User\022\027\n\017next_page_token\030" +
-      "\002 \001(\t\"x\n\021CreateUserRequest\022 \n\ncluster_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022A\n\tuser_spec\030\002 \001(\0132" +
-      "(.yandex.cloud.mdb.postgresql.v1.UserSpe" +
-      "cB\004\350\3071\001\";\n\022CreateUserMetadata\022\022\n\ncluster" +
-      "_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\365\004\n\021UpdateU" +
-      "serRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\0221\n\tuser_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071" +
-      "\016[a-zA-Z0-9_-]*\022/\n\013update_mask\030\003 \001(\0132\032.g" +
-      "oogle.protobuf.FieldMask\022\033\n\010password\030\004 \001" +
-      "(\tB\t\212\3101\0058-128\022?\n\013permissions\030\005 \003(\0132*.yan" +
-      "dex.cloud.mdb.postgresql.v1.Permission\022\034" +
-      "\n\nconn_limit\030\006 \001(\003B\010\372\3071\004>=10\022>\n\010settings" +
-      "\030\007 \001(\0132,.yandex.cloud.mdb.postgresql.v1." +
-      "UserSettings\022)\n\005login\030\010 \001(\0132\032.google.pro" +
-      "tobuf.BoolValue\022)\n\006grants\030\t \003(\tB\031\212\3101\004<=6" +
-      "3\362\3071\r[a-zA-Z0-9_]*\0227\n\023deletion_protectio" +
-      "n\030\n \001(\0132\032.google.protobuf.BoolValue\022X\n\030u" +
-      "ser_password_encryption\030\013 \001(\01626.yandex.c" +
-      "loud.mdb.postgresql.v1.UserPasswordEncry" +
-      "ption\0225\n\021generate_password\030\014 \001(\0132\032.googl" +
-      "e.protobuf.BoolValue\";\n\022UpdateUserMetada" +
-      "ta\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(" +
-      "\t\"h\n\021DeleteUserRequest\022 \n\ncluster_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\0221\n\tuser_name\030\002 \001(\tB\036\350\3071" +
-      "\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\";\n\022DeleteUse" +
-      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_na" +
-      "me\030\002 \001(\t\"\267\001\n\032GrantUserPermissionRequest\022" +
-      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0221\n\tuse" +
-      "r_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9" +
-      "_-]*\022D\n\npermission\030\003 \001(\0132*.yandex.cloud." +
-      "mdb.postgresql.v1.PermissionB\004\350\3071\001\"D\n\033Gr" +
-      "antUserPermissionMetadata\022\022\n\ncluster_id\030" +
-      "\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\251\001\n\033RevokeUserP" +
-      "ermissionRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\0221\n\tuser_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<" +
-      "=63\362\3071\016[a-zA-Z0-9_-]*\0225\n\rdatabase_name\030\003" +
-      " \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"E\n\034" +
-      "RevokeUserPermissionMetadata\022\022\n\ncluster_" +
-      "id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t2\255\013\n\013UserServ" +
-      "ice\022\243\001\n\003Get\022..yandex.cloud.mdb.postgresq" +
-      "l.v1.GetUserRequest\032$.yandex.cloud.mdb.p" +
-      "ostgresql.v1.User\"F\202\323\344\223\002@\022>/managed-post" +
-      "gresql/v1/clusters/{cluster_id}/users/{u" +
-      "ser_name}\022\247\001\n\004List\0220.yandex.cloud.mdb.po" +
-      "stgresql.v1.ListUsersRequest\0321.yandex.cl" +
-      "oud.mdb.postgresql.v1.ListUsersResponse\"" +
-      ":\202\323\344\223\0024\0222/managed-postgresql/v1/clusters" +
-      "/{cluster_id}/users\022\273\001\n\006Create\0221.yandex." +
-      "cloud.mdb.postgresql.v1.CreateUserReques" +
-      "t\032!.yandex.cloud.operation.Operation\"[\202\323" +
-      "\344\223\0027\"2/managed-postgresql/v1/clusters/{c" +
-      "luster_id}/users:\001*\262\322*\032\n\022CreateUserMetad" +
-      "ata\022\004User\022\307\001\n\006Update\0221.yandex.cloud.mdb." +
-      "postgresql.v1.UpdateUserRequest\032!.yandex" +
-      ".cloud.operation.Operation\"g\202\323\344\223\002C2>/man" +
-      "aged-postgresql/v1/clusters/{cluster_id}" +
-      "/users/{user_name}:\001*\262\322*\032\n\022UpdateUserMet" +
-      "adata\022\004User\022\325\001\n\006Delete\0221.yandex.cloud.md" +
-      "b.postgresql.v1.DeleteUserRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"u\202\323\344\223\002@*>/m" +
-      "anaged-postgresql/v1/clusters/{cluster_i" +
-      "d}/users/{user_name}\262\322*+\n\022DeleteUserMeta" +
-      "data\022\025google.protobuf.Empty\022\363\001\n\017GrantPer" +
-      "mission\022:.yandex.cloud.mdb.postgresql.v1" +
-      ".GrantUserPermissionRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"\200\001\202\323\344\223\002S\"N/manage" +
+      "n.proto\"g\n\016GetUserRequest\022 \n\ncluster_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0223\n\tuser_name\030\002 \001(\tB " +
+      "\350\3071\001\212\3101\004<=63\362\3071\020[a-zA-Z0-9_@.-]*\"r\n\020List" +
+      "UsersRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n" +
+      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"a\n\021ListUser" +
+      "sResponse\0223\n\005users\030\001 \003(\0132$.yandex.cloud." +
+      "mdb.postgresql.v1.User\022\027\n\017next_page_toke" +
+      "n\030\002 \001(\t\"x\n\021CreateUserRequest\022 \n\ncluster_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022A\n\tuser_spec\030\002 \001(" +
+      "\0132(.yandex.cloud.mdb.postgresql.v1.UserS" +
+      "pecB\004\350\3071\001\";\n\022CreateUserMetadata\022\022\n\nclust" +
+      "er_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\270\005\n\021Updat" +
+      "eUserRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\0223\n\tuser_name\030\002 \001(\tB \350\3071\001\212\3101\004<=63\362" +
+      "\3071\020[a-zA-Z0-9_@.-]*\022/\n\013update_mask\030\003 \001(\013" +
+      "2\032.google.protobuf.FieldMask\022\033\n\010password" +
+      "\030\004 \001(\tB\t\212\3101\0058-128\022?\n\013permissions\030\005 \003(\0132*" +
+      ".yandex.cloud.mdb.postgresql.v1.Permissi" +
+      "on\022\034\n\nconn_limit\030\006 \001(\003B\010\372\3071\004>=10\022>\n\010sett" +
+      "ings\030\007 \001(\0132,.yandex.cloud.mdb.postgresql" +
+      ".v1.UserSettings\022)\n\005login\030\010 \001(\0132\032.google" +
+      ".protobuf.BoolValue\022)\n\006grants\030\t \003(\tB\031\212\3101" +
+      "\004<=63\362\3071\r[a-zA-Z0-9_]*\0227\n\023deletion_prote" +
+      "ction\030\n \001(\0132\032.google.protobuf.BoolValue\022" +
+      "X\n\030user_password_encryption\030\013 \001(\01626.yand" +
+      "ex.cloud.mdb.postgresql.v1.UserPasswordE" +
+      "ncryption\0225\n\021generate_password\030\014 \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\022?\n\013auth_method\030" +
+      "\r \001(\0162*.yandex.cloud.mdb.postgresql.v1.A" +
+      "uthMethod\";\n\022UpdateUserMetadata\022\022\n\nclust" +
+      "er_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"j\n\021Delete" +
+      "UserRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\0223\n\tuser_name\030\002 \001(\tB \350\3071\001\212\3101\004<=63\362\307" +
+      "1\020[a-zA-Z0-9_@.-]*\";\n\022DeleteUserMetadata" +
+      "\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"" +
+      "\271\001\n\032GrantUserPermissionRequest\022 \n\ncluste" +
+      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0223\n\tuser_name\030\002 " +
+      "\001(\tB \350\3071\001\212\3101\004<=63\362\3071\020[a-zA-Z0-9_@.-]*\022D\n" +
+      "\npermission\030\003 \001(\0132*.yandex.cloud.mdb.pos" +
+      "tgresql.v1.PermissionB\004\350\3071\001\"D\n\033GrantUser" +
+      "PermissionMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021" +
+      "\n\tuser_name\030\002 \001(\t\"\253\001\n\033RevokeUserPermissi" +
+      "onRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\0223\n\tuser_name\030\002 \001(\tB \350\3071\001\212\3101\004<=63\362\3071\020" +
+      "[a-zA-Z0-9_@.-]*\0225\n\rdatabase_name\030\003 \001(\tB" +
+      "\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"E\n\034Revok" +
+      "eUserPermissionMetadata\022\022\n\ncluster_id\030\001 " +
+      "\001(\t\022\021\n\tuser_name\030\002 \001(\t2\255\013\n\013UserService\022\243" +
+      "\001\n\003Get\022..yandex.cloud.mdb.postgresql.v1." +
+      "GetUserRequest\032$.yandex.cloud.mdb.postgr" +
+      "esql.v1.User\"F\202\323\344\223\002@\022>/managed-postgresq" +
+      "l/v1/clusters/{cluster_id}/users/{user_n" +
+      "ame}\022\247\001\n\004List\0220.yandex.cloud.mdb.postgre" +
+      "sql.v1.ListUsersRequest\0321.yandex.cloud.m" +
+      "db.postgresql.v1.ListUsersResponse\":\202\323\344\223" +
+      "\0024\0222/managed-postgresql/v1/clusters/{clu" +
+      "ster_id}/users\022\273\001\n\006Create\0221.yandex.cloud" +
+      ".mdb.postgresql.v1.CreateUserRequest\032!.y" +
+      "andex.cloud.operation.Operation\"[\202\323\344\223\0027\"" +
+      "2/managed-postgresql/v1/clusters/{cluste" +
+      "r_id}/users:\001*\262\322*\032\n\022CreateUserMetadata\022\004" +
+      "User\022\307\001\n\006Update\0221.yandex.cloud.mdb.postg" +
+      "resql.v1.UpdateUserRequest\032!.yandex.clou" +
+      "d.operation.Operation\"g\202\323\344\223\002C2>/managed-" +
+      "postgresql/v1/clusters/{cluster_id}/user" +
+      "s/{user_name}:\001*\262\322*\032\n\022UpdateUserMetadata" +
+      "\022\004User\022\325\001\n\006Delete\0221.yandex.cloud.mdb.pos" +
+      "tgresql.v1.DeleteUserRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"u\202\323\344\223\002@*>/manage" +
       "d-postgresql/v1/clusters/{cluster_id}/us" +
-      "ers/{user_name}:grantPermission:\001*\262\322*#\n\033" +
-      "GrantUserPermissionMetadata\022\004User\022\367\001\n\020Re" +
-      "vokePermission\022;.yandex.cloud.mdb.postgr" +
-      "esql.v1.RevokeUserPermissionRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"\202\001\202\323\344\223\002T\"" +
-      "O/managed-postgresql/v1/clusters/{cluste" +
-      "r_id}/users/{user_name}:revokePermission" +
-      ":\001*\262\322*$\n\034RevokeUserPermissionMetadata\022\004U" +
-      "serBs\n\"yandex.cloud.api.mdb.postgresql.v" +
-      "1ZMgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/mdb/postgresql/v1;postgresql" +
-      "b\006proto3"
+      "ers/{user_name}\262\322*+\n\022DeleteUserMetadata\022" +
+      "\025google.protobuf.Empty\022\363\001\n\017GrantPermissi" +
+      "on\022:.yandex.cloud.mdb.postgresql.v1.Gran" +
+      "tUserPermissionRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"\200\001\202\323\344\223\002S\"N/managed-pos" +
+      "tgresql/v1/clusters/{cluster_id}/users/{" +
+      "user_name}:grantPermission:\001*\262\322*#\n\033Grant" +
+      "UserPermissionMetadata\022\004User\022\367\001\n\020RevokeP" +
+      "ermission\022;.yandex.cloud.mdb.postgresql." +
+      "v1.RevokeUserPermissionRequest\032!.yandex." +
+      "cloud.operation.Operation\"\202\001\202\323\344\223\002T\"O/man" +
+      "aged-postgresql/v1/clusters/{cluster_id}" +
+      "/users/{user_name}:revokePermission:\001*\262\322" +
+      "*$\n\034RevokeUserPermissionMetadata\022\004UserBs" +
+      "\n\"yandex.cloud.api.mdb.postgresql.v1ZMgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/mdb/postgresql/v1;postgresqlb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14099,7 +14244,7 @@ public final class UserServiceOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_UpdateUserRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UserName", "UpdateMask", "Password", "Permissions", "ConnLimit", "Settings", "Login", "Grants", "DeletionProtection", "UserPasswordEncryption", "GeneratePassword", });
+        new java.lang.String[] { "ClusterId", "UserName", "UpdateMask", "Password", "Permissions", "ConnLimit", "Settings", "Login", "Grants", "DeletionProtection", "UserPasswordEncryption", "GeneratePassword", "AuthMethod", });
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateUserMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateUserMetadata_fieldAccessorTable = new

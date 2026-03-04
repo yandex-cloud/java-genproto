@@ -3840,31 +3840,32 @@ public final class StorageOuterClass {
       "\n,yandex/cloud/baremetal/v1alpha/storage" +
       ".proto\022\036yandex.cloud.baremetal.v1alpha\032)" +
       "yandex/cloud/baremetal/v1alpha/disk.prot" +
-      "o\"}\n\020StoragePartition\022B\n\004type\030\001 \001(\01624.ya" +
-      "ndex.cloud.baremetal.v1alpha.StoragePart" +
-      "itionType\022\020\n\010size_gib\030\002 \001(\003\022\023\n\013mount_poi" +
-      "nt\030\003 \001(\t\"\327\001\n\007Storage\022D\n\npartitions\030\003 \003(\013" +
-      "20.yandex.cloud.baremetal.v1alpha.Storag" +
-      "ePartition\0224\n\004disk\030\004 \001(\0132$.yandex.cloud." +
-      "baremetal.v1alpha.DiskH\000\0224\n\004raid\030\005 \001(\0132$" +
-      ".yandex.cloud.baremetal.v1alpha.RaidH\000B\016" +
-      "\n\014storage_typeJ\004\010\001\020\002J\004\010\002\020\003\"s\n\004Raid\0226\n\004ty" +
-      "pe\030\001 \001(\0162(.yandex.cloud.baremetal.v1alph" +
-      "a.RaidType\0223\n\005disks\030\002 \003(\0132$.yandex.cloud" +
-      ".baremetal.v1alpha.Disk*e\n\024StoragePartit" +
-      "ionType\022&\n\"STORAGE_PARTITION_TYPE_UNSPEC" +
-      "IFIED\020\000\022\010\n\004EXT4\020\001\022\010\n\004SWAP\020\002\022\010\n\004EXT3\020\003\022\007\n" +
-      "\003XFS\020\004*G\n\010RaidType\022\031\n\025RAID_TYPE_UNSPECIF" +
-      "IED\020\000\022\t\n\005RAID0\020\001\022\t\n\005RAID1\020\002\022\n\n\006RAID10\020\003B" +
-      "r\n\"yandex.cloud.api.baremetal.v1alphaZLg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/baremetal/v1alpha;baremetalb\006pro" +
-      "to3"
+      "o\032\035yandex/cloud/validation.proto\"}\n\020Stor" +
+      "agePartition\022B\n\004type\030\001 \001(\01624.yandex.clou" +
+      "d.baremetal.v1alpha.StoragePartitionType" +
+      "\022\020\n\010size_gib\030\002 \001(\003\022\023\n\013mount_point\030\003 \001(\t\"" +
+      "\335\001\n\007Storage\022D\n\npartitions\030\003 \003(\01320.yandex" +
+      ".cloud.baremetal.v1alpha.StoragePartitio" +
+      "n\0224\n\004disk\030\004 \001(\0132$.yandex.cloud.baremetal" +
+      ".v1alpha.DiskH\000\0224\n\004raid\030\005 \001(\0132$.yandex.c" +
+      "loud.baremetal.v1alpha.RaidH\000B\024\n\014storage" +
+      "_type\022\004\300\3011\001J\004\010\001\020\002J\004\010\002\020\003\"s\n\004Raid\0226\n\004type\030" +
+      "\001 \001(\0162(.yandex.cloud.baremetal.v1alpha.R" +
+      "aidType\0223\n\005disks\030\002 \003(\0132$.yandex.cloud.ba" +
+      "remetal.v1alpha.Disk*e\n\024StoragePartition" +
+      "Type\022&\n\"STORAGE_PARTITION_TYPE_UNSPECIFI" +
+      "ED\020\000\022\010\n\004EXT4\020\001\022\010\n\004SWAP\020\002\022\010\n\004EXT3\020\003\022\007\n\003XF" +
+      "S\020\004*G\n\010RaidType\022\031\n\025RAID_TYPE_UNSPECIFIED" +
+      "\020\000\022\t\n\005RAID0\020\001\022\t\n\005RAID1\020\002\022\n\n\006RAID10\020\003Br\n\"" +
+      "yandex.cloud.api.baremetal.v1alphaZLgith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/baremetal/v1alpha;baremetalb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.baremetal.v1alpha.DiskOuterClass.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_baremetal_v1alpha_StoragePartition_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3884,7 +3885,13 @@ public final class StorageOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_baremetal_v1alpha_Raid_descriptor,
         new java.lang.String[] { "Type", "Disks", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.exactlyOne);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     yandex.cloud.api.baremetal.v1alpha.DiskOuterClass.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

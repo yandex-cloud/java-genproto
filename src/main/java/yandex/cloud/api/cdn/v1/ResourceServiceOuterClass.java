@@ -2952,6 +2952,33 @@ public final class ResourceServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getProviderTypeBytes();
+
+    /**
+     * <pre>
+     * TLS configuration for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS tls = 11;</code>
+     * @return Whether the tls field is set.
+     */
+    boolean hasTls();
+    /**
+     * <pre>
+     * TLS configuration for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS tls = 11;</code>
+     * @return The tls.
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS getTls();
+    /**
+     * <pre>
+     * TLS configuration for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS tls = 11;</code>
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.TLSOrBuilder getTlsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.cdn.v1.CreateResourceRequest}
@@ -3103,6 +3130,19 @@ public final class ResourceServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               providerType_ = s;
+              break;
+            }
+            case 90: {
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Builder subBuilder = null;
+              if (tls_ != null) {
+                subBuilder = tls_.toBuilder();
+              }
+              tls_ = input.readMessage(yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tls_);
+                tls_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -4787,6 +4827,44 @@ public final class ResourceServiceOuterClass {
       }
     }
 
+    public static final int TLS_FIELD_NUMBER = 11;
+    private yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS tls_;
+    /**
+     * <pre>
+     * TLS configuration for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS tls = 11;</code>
+     * @return Whether the tls field is set.
+     */
+    @java.lang.Override
+    public boolean hasTls() {
+      return tls_ != null;
+    }
+    /**
+     * <pre>
+     * TLS configuration for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS tls = 11;</code>
+     * @return The tls.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS getTls() {
+      return tls_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.getDefaultInstance() : tls_;
+    }
+    /**
+     * <pre>
+     * TLS configuration for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS tls = 11;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLSOrBuilder getTlsOrBuilder() {
+      return getTls();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4833,6 +4911,9 @@ public final class ResourceServiceOuterClass {
           9);
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, providerType_);
+      }
+      if (tls_ != null) {
+        output.writeMessage(11, getTls());
       }
       unknownFields.writeTo(output);
     }
@@ -4886,6 +4967,10 @@ public final class ResourceServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, providerType_);
       }
+      if (tls_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getTls());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4935,6 +5020,11 @@ public final class ResourceServiceOuterClass {
           other.internalGetLabels())) return false;
       if (!getProviderType()
           .equals(other.getProviderType())) return false;
+      if (hasTls() != other.hasTls()) return false;
+      if (hasTls()) {
+        if (!getTls()
+            .equals(other.getTls())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4978,6 +5068,10 @@ public final class ResourceServiceOuterClass {
       }
       hash = (37 * hash) + PROVIDER_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getProviderType().hashCode();
+      if (hasTls()) {
+        hash = (37 * hash) + TLS_FIELD_NUMBER;
+        hash = (53 * hash) + getTls().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5172,6 +5266,12 @@ public final class ResourceServiceOuterClass {
         internalGetMutableLabels().clear();
         providerType_ = "";
 
+        if (tlsBuilder_ == null) {
+          tls_ = null;
+        } else {
+          tls_ = null;
+          tlsBuilder_ = null;
+        }
         return this;
       }
 
@@ -5230,6 +5330,11 @@ public final class ResourceServiceOuterClass {
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         result.providerType_ = providerType_;
+        if (tlsBuilder_ == null) {
+          result.tls_ = tls_;
+        } else {
+          result.tls_ = tlsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -5309,6 +5414,9 @@ public final class ResourceServiceOuterClass {
         if (!other.getProviderType().isEmpty()) {
           providerType_ = other.providerType_;
           onChanged();
+        }
+        if (other.hasTls()) {
+          mergeTls(other.getTls());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6672,6 +6780,161 @@ public final class ResourceServiceOuterClass {
         providerType_ = value;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS tls_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS, yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.TLSOrBuilder> tlsBuilder_;
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 11;</code>
+       * @return Whether the tls field is set.
+       */
+      public boolean hasTls() {
+        return tlsBuilder_ != null || tls_ != null;
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 11;</code>
+       * @return The tls.
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS getTls() {
+        if (tlsBuilder_ == null) {
+          return tls_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.getDefaultInstance() : tls_;
+        } else {
+          return tlsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 11;</code>
+       */
+      public Builder setTls(yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS value) {
+        if (tlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tls_ = value;
+          onChanged();
+        } else {
+          tlsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 11;</code>
+       */
+      public Builder setTls(
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Builder builderForValue) {
+        if (tlsBuilder_ == null) {
+          tls_ = builderForValue.build();
+          onChanged();
+        } else {
+          tlsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 11;</code>
+       */
+      public Builder mergeTls(yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS value) {
+        if (tlsBuilder_ == null) {
+          if (tls_ != null) {
+            tls_ =
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.newBuilder(tls_).mergeFrom(value).buildPartial();
+          } else {
+            tls_ = value;
+          }
+          onChanged();
+        } else {
+          tlsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 11;</code>
+       */
+      public Builder clearTls() {
+        if (tlsBuilder_ == null) {
+          tls_ = null;
+          onChanged();
+        } else {
+          tls_ = null;
+          tlsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 11;</code>
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Builder getTlsBuilder() {
+        
+        onChanged();
+        return getTlsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 11;</code>
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLSOrBuilder getTlsOrBuilder() {
+        if (tlsBuilder_ != null) {
+          return tlsBuilder_.getMessageOrBuilder();
+        } else {
+          return tls_ == null ?
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.getDefaultInstance() : tls_;
+        }
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS, yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.TLSOrBuilder> 
+          getTlsFieldBuilder() {
+        if (tlsBuilder_ == null) {
+          tlsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS, yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.TLSOrBuilder>(
+                  getTls(),
+                  getParentForChildren(),
+                  isClean());
+          tls_ = null;
+        }
+        return tlsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -8452,6 +8715,33 @@ public final class ResourceServiceOuterClass {
      * @return The removeLabels.
      */
     boolean getRemoveLabels();
+
+    /**
+     * <pre>
+     * TLS configuration for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS tls = 10;</code>
+     * @return Whether the tls field is set.
+     */
+    boolean hasTls();
+    /**
+     * <pre>
+     * TLS configuration for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS tls = 10;</code>
+     * @return The tls.
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS getTls();
+    /**
+     * <pre>
+     * TLS configuration for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS tls = 10;</code>
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.TLSOrBuilder getTlsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.cdn.v1.UpdateResourceRequest}
@@ -8594,6 +8884,19 @@ public final class ResourceServiceOuterClass {
             case 72: {
 
               removeLabels_ = input.readBool();
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Builder subBuilder = null;
+              if (tls_ != null) {
+                subBuilder = tls_.toBuilder();
+              }
+              tls_ = input.readMessage(yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tls_);
+                tls_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -9021,6 +9324,44 @@ public final class ResourceServiceOuterClass {
       return removeLabels_;
     }
 
+    public static final int TLS_FIELD_NUMBER = 10;
+    private yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS tls_;
+    /**
+     * <pre>
+     * TLS configuration for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS tls = 10;</code>
+     * @return Whether the tls field is set.
+     */
+    @java.lang.Override
+    public boolean hasTls() {
+      return tls_ != null;
+    }
+    /**
+     * <pre>
+     * TLS configuration for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS tls = 10;</code>
+     * @return The tls.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS getTls() {
+      return tls_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.getDefaultInstance() : tls_;
+    }
+    /**
+     * <pre>
+     * TLS configuration for the resource.
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.TLS tls = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLSOrBuilder getTlsOrBuilder() {
+      return getTls();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9064,6 +9405,9 @@ public final class ResourceServiceOuterClass {
           8);
       if (removeLabels_ != false) {
         output.writeBool(9, removeLabels_);
+      }
+      if (tls_ != null) {
+        output.writeMessage(10, getTls());
       }
       unknownFields.writeTo(output);
     }
@@ -9115,6 +9459,10 @@ public final class ResourceServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(9, removeLabels_);
       }
+      if (tls_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getTls());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -9162,6 +9510,11 @@ public final class ResourceServiceOuterClass {
           other.internalGetLabels())) return false;
       if (getRemoveLabels()
           != other.getRemoveLabels()) return false;
+      if (hasTls() != other.hasTls()) return false;
+      if (hasTls()) {
+        if (!getTls()
+            .equals(other.getTls())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9204,6 +9557,10 @@ public final class ResourceServiceOuterClass {
       hash = (37 * hash) + REMOVE_LABELS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getRemoveLabels());
+      if (hasTls()) {
+        hash = (37 * hash) + TLS_FIELD_NUMBER;
+        hash = (53 * hash) + getTls().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9396,6 +9753,12 @@ public final class ResourceServiceOuterClass {
         internalGetMutableLabels().clear();
         removeLabels_ = false;
 
+        if (tlsBuilder_ == null) {
+          tls_ = null;
+        } else {
+          tls_ = null;
+          tlsBuilder_ = null;
+        }
         return this;
       }
 
@@ -9453,6 +9816,11 @@ public final class ResourceServiceOuterClass {
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         result.removeLabels_ = removeLabels_;
+        if (tlsBuilder_ == null) {
+          result.tls_ = tls_;
+        } else {
+          result.tls_ = tlsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -9527,6 +9895,9 @@ public final class ResourceServiceOuterClass {
             other.internalGetLabels());
         if (other.getRemoveLabels() != false) {
           setRemoveLabels(other.getRemoveLabels());
+        }
+        if (other.hasTls()) {
+          mergeTls(other.getTls());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10721,6 +11092,161 @@ public final class ResourceServiceOuterClass {
         removeLabels_ = false;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS tls_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS, yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.TLSOrBuilder> tlsBuilder_;
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 10;</code>
+       * @return Whether the tls field is set.
+       */
+      public boolean hasTls() {
+        return tlsBuilder_ != null || tls_ != null;
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 10;</code>
+       * @return The tls.
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS getTls() {
+        if (tlsBuilder_ == null) {
+          return tls_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.getDefaultInstance() : tls_;
+        } else {
+          return tlsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 10;</code>
+       */
+      public Builder setTls(yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS value) {
+        if (tlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tls_ = value;
+          onChanged();
+        } else {
+          tlsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 10;</code>
+       */
+      public Builder setTls(
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Builder builderForValue) {
+        if (tlsBuilder_ == null) {
+          tls_ = builderForValue.build();
+          onChanged();
+        } else {
+          tlsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 10;</code>
+       */
+      public Builder mergeTls(yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS value) {
+        if (tlsBuilder_ == null) {
+          if (tls_ != null) {
+            tls_ =
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.newBuilder(tls_).mergeFrom(value).buildPartial();
+          } else {
+            tls_ = value;
+          }
+          onChanged();
+        } else {
+          tlsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 10;</code>
+       */
+      public Builder clearTls() {
+        if (tlsBuilder_ == null) {
+          tls_ = null;
+          onChanged();
+        } else {
+          tls_ = null;
+          tlsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 10;</code>
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Builder getTlsBuilder() {
+        
+        onChanged();
+        return getTlsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 10;</code>
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.TLSOrBuilder getTlsOrBuilder() {
+        if (tlsBuilder_ != null) {
+          return tlsBuilder_.getMessageOrBuilder();
+        } else {
+          return tls_ == null ?
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.getDefaultInstance() : tls_;
+        }
+      }
+      /**
+       * <pre>
+       * TLS configuration for the resource.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.TLS tls = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS, yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.TLSOrBuilder> 
+          getTlsFieldBuilder() {
+        if (tlsBuilder_ == null) {
+          tlsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS, yandex.cloud.api.cdn.v1.ResourceOuterClass.TLS.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.TLSOrBuilder>(
+                  getTls(),
+                  getParentForChildren(),
+                  isClean());
+          tls_ = null;
+        }
+        return tlsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13981,6 +14507,2700 @@ public final class ResourceServiceOuterClass {
 
   }
 
+  public interface GetResourceAttributesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cdn.v1.GetResourceAttributesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the resource to get attributes for.
+     * </pre>
+     *
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
+     */
+    java.lang.String getResourceId();
+    /**
+     * <pre>
+     * ID of the resource to get attributes for.
+     * </pre>
+     *
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
+     */
+    com.google.protobuf.ByteString
+        getResourceIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cdn.v1.GetResourceAttributesRequest}
+   */
+  public static final class GetResourceAttributesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.GetResourceAttributesRequest)
+      GetResourceAttributesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetResourceAttributesRequest.newBuilder() to construct.
+    private GetResourceAttributesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetResourceAttributesRequest() {
+      resourceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetResourceAttributesRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetResourceAttributesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourceId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_GetResourceAttributesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_GetResourceAttributesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest.class, yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest.Builder.class);
+    }
+
+    public static final int RESOURCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object resourceId_;
+    /**
+     * <pre>
+     * ID of the resource to get attributes for.
+     * </pre>
+     *
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The resourceId.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the resource to get attributes for.
+     * </pre>
+     *
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for resourceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest other = (yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest) obj;
+
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cdn.v1.GetResourceAttributesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cdn.v1.GetResourceAttributesRequest)
+        yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_GetResourceAttributesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_GetResourceAttributesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest.class, yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        resourceId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_GetResourceAttributesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest build() {
+        yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest buildPartial() {
+        yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest result = new yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest(this);
+        result.resourceId_ = resourceId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest) {
+          return mergeFrom((yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest other) {
+        if (other == yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest.getDefaultInstance()) return this;
+        if (!other.getResourceId().isEmpty()) {
+          resourceId_ = other.resourceId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object resourceId_ = "";
+      /**
+       * <pre>
+       * ID of the resource to get attributes for.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The resourceId.
+       */
+      public java.lang.String getResourceId() {
+        java.lang.Object ref = resourceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the resource to get attributes for.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for resourceId.
+       */
+      public com.google.protobuf.ByteString
+          getResourceIdBytes() {
+        java.lang.Object ref = resourceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the resource to get attributes for.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the resource to get attributes for.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceId() {
+        
+        resourceId_ = getDefaultInstance().getResourceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the resource to get attributes for.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cdn.v1.GetResourceAttributesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cdn.v1.GetResourceAttributesRequest)
+    private static final yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest();
+    }
+
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetResourceAttributesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetResourceAttributesRequest>() {
+      @java.lang.Override
+      public GetResourceAttributesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetResourceAttributesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetResourceAttributesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetResourceAttributesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetResourceAttributesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cdn.v1.GetResourceAttributesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Resource attributes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Value attributes = 1;</code>
+     * @return Whether the attributes field is set.
+     */
+    boolean hasAttributes();
+    /**
+     * <pre>
+     * Resource attributes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Value attributes = 1;</code>
+     * @return The attributes.
+     */
+    com.google.protobuf.Value getAttributes();
+    /**
+     * <pre>
+     * Resource attributes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Value attributes = 1;</code>
+     */
+    com.google.protobuf.ValueOrBuilder getAttributesOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cdn.v1.GetResourceAttributesResponse}
+   */
+  public static final class GetResourceAttributesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.GetResourceAttributesResponse)
+      GetResourceAttributesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetResourceAttributesResponse.newBuilder() to construct.
+    private GetResourceAttributesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetResourceAttributesResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetResourceAttributesResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetResourceAttributesResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Value.Builder subBuilder = null;
+              if (attributes_ != null) {
+                subBuilder = attributes_.toBuilder();
+              }
+              attributes_ = input.readMessage(com.google.protobuf.Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(attributes_);
+                attributes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_GetResourceAttributesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_GetResourceAttributesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse.class, yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse.Builder.class);
+    }
+
+    public static final int ATTRIBUTES_FIELD_NUMBER = 1;
+    private com.google.protobuf.Value attributes_;
+    /**
+     * <pre>
+     * Resource attributes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Value attributes = 1;</code>
+     * @return Whether the attributes field is set.
+     */
+    @java.lang.Override
+    public boolean hasAttributes() {
+      return attributes_ != null;
+    }
+    /**
+     * <pre>
+     * Resource attributes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Value attributes = 1;</code>
+     * @return The attributes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Value getAttributes() {
+      return attributes_ == null ? com.google.protobuf.Value.getDefaultInstance() : attributes_;
+    }
+    /**
+     * <pre>
+     * Resource attributes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Value attributes = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ValueOrBuilder getAttributesOrBuilder() {
+      return getAttributes();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (attributes_ != null) {
+        output.writeMessage(1, getAttributes());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (attributes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAttributes());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse other = (yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse) obj;
+
+      if (hasAttributes() != other.hasAttributes()) return false;
+      if (hasAttributes()) {
+        if (!getAttributes()
+            .equals(other.getAttributes())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAttributes()) {
+        hash = (37 * hash) + ATTRIBUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getAttributes().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cdn.v1.GetResourceAttributesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cdn.v1.GetResourceAttributesResponse)
+        yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_GetResourceAttributesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_GetResourceAttributesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse.class, yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (attributesBuilder_ == null) {
+          attributes_ = null;
+        } else {
+          attributes_ = null;
+          attributesBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_GetResourceAttributesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse build() {
+        yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse buildPartial() {
+        yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse result = new yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse(this);
+        if (attributesBuilder_ == null) {
+          result.attributes_ = attributes_;
+        } else {
+          result.attributes_ = attributesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse) {
+          return mergeFrom((yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse other) {
+        if (other == yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse.getDefaultInstance()) return this;
+        if (other.hasAttributes()) {
+          mergeAttributes(other.getAttributes());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.Value attributes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Value, com.google.protobuf.Value.Builder, com.google.protobuf.ValueOrBuilder> attributesBuilder_;
+      /**
+       * <pre>
+       * Resource attributes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Value attributes = 1;</code>
+       * @return Whether the attributes field is set.
+       */
+      public boolean hasAttributes() {
+        return attributesBuilder_ != null || attributes_ != null;
+      }
+      /**
+       * <pre>
+       * Resource attributes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Value attributes = 1;</code>
+       * @return The attributes.
+       */
+      public com.google.protobuf.Value getAttributes() {
+        if (attributesBuilder_ == null) {
+          return attributes_ == null ? com.google.protobuf.Value.getDefaultInstance() : attributes_;
+        } else {
+          return attributesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Resource attributes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Value attributes = 1;</code>
+       */
+      public Builder setAttributes(com.google.protobuf.Value value) {
+        if (attributesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          attributes_ = value;
+          onChanged();
+        } else {
+          attributesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource attributes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Value attributes = 1;</code>
+       */
+      public Builder setAttributes(
+          com.google.protobuf.Value.Builder builderForValue) {
+        if (attributesBuilder_ == null) {
+          attributes_ = builderForValue.build();
+          onChanged();
+        } else {
+          attributesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource attributes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Value attributes = 1;</code>
+       */
+      public Builder mergeAttributes(com.google.protobuf.Value value) {
+        if (attributesBuilder_ == null) {
+          if (attributes_ != null) {
+            attributes_ =
+              com.google.protobuf.Value.newBuilder(attributes_).mergeFrom(value).buildPartial();
+          } else {
+            attributes_ = value;
+          }
+          onChanged();
+        } else {
+          attributesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource attributes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Value attributes = 1;</code>
+       */
+      public Builder clearAttributes() {
+        if (attributesBuilder_ == null) {
+          attributes_ = null;
+          onChanged();
+        } else {
+          attributes_ = null;
+          attributesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource attributes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Value attributes = 1;</code>
+       */
+      public com.google.protobuf.Value.Builder getAttributesBuilder() {
+        
+        onChanged();
+        return getAttributesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Resource attributes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Value attributes = 1;</code>
+       */
+      public com.google.protobuf.ValueOrBuilder getAttributesOrBuilder() {
+        if (attributesBuilder_ != null) {
+          return attributesBuilder_.getMessageOrBuilder();
+        } else {
+          return attributes_ == null ?
+              com.google.protobuf.Value.getDefaultInstance() : attributes_;
+        }
+      }
+      /**
+       * <pre>
+       * Resource attributes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Value attributes = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Value, com.google.protobuf.Value.Builder, com.google.protobuf.ValueOrBuilder> 
+          getAttributesFieldBuilder() {
+        if (attributesBuilder_ == null) {
+          attributesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Value, com.google.protobuf.Value.Builder, com.google.protobuf.ValueOrBuilder>(
+                  getAttributes(),
+                  getParentForChildren(),
+                  isClean());
+          attributes_ = null;
+        }
+        return attributesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cdn.v1.GetResourceAttributesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cdn.v1.GetResourceAttributesResponse)
+    private static final yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse();
+    }
+
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetResourceAttributesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetResourceAttributesResponse>() {
+      @java.lang.Override
+      public GetResourceAttributesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetResourceAttributesResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetResourceAttributesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetResourceAttributesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListResourceAttributesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cdn.v1.ListResourceAttributesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Folder ID to list attributes.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * Folder ID to list attributes.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cdn.v1.ListResourceAttributesRequest}
+   */
+  public static final class ListResourceAttributesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ListResourceAttributesRequest)
+      ListResourceAttributesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListResourceAttributesRequest.newBuilder() to construct.
+    private ListResourceAttributesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListResourceAttributesRequest() {
+      folderId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListResourceAttributesRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListResourceAttributesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_ListResourceAttributesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_ListResourceAttributesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest.class, yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest.Builder.class);
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * Folder ID to list attributes.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Folder ID to list attributes.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest other = (yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest) obj;
+
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cdn.v1.ListResourceAttributesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cdn.v1.ListResourceAttributesRequest)
+        yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_ListResourceAttributesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_ListResourceAttributesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest.class, yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        folderId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_ListResourceAttributesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest build() {
+        yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest buildPartial() {
+        yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest result = new yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest(this);
+        result.folderId_ = folderId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest) {
+          return mergeFrom((yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest other) {
+        if (other == yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest.getDefaultInstance()) return this;
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * Folder ID to list attributes.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Folder ID to list attributes.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Folder ID to list attributes.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Folder ID to list attributes.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Folder ID to list attributes.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cdn.v1.ListResourceAttributesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cdn.v1.ListResourceAttributesRequest)
+    private static final yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest();
+    }
+
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListResourceAttributesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListResourceAttributesRequest>() {
+      @java.lang.Override
+      public ListResourceAttributesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListResourceAttributesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListResourceAttributesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListResourceAttributesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListResourceAttributesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.cdn.v1.ListResourceAttributesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Mapping resource ID to its attributes.
+     * </pre>
+     *
+     * <code>map&lt;string, .google.protobuf.Value&gt; attributes = 1;</code>
+     */
+    int getAttributesCount();
+    /**
+     * <pre>
+     * Mapping resource ID to its attributes.
+     * </pre>
+     *
+     * <code>map&lt;string, .google.protobuf.Value&gt; attributes = 1;</code>
+     */
+    boolean containsAttributes(
+        java.lang.String key);
+    /**
+     * Use {@link #getAttributesMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.google.protobuf.Value>
+    getAttributes();
+    /**
+     * <pre>
+     * Mapping resource ID to its attributes.
+     * </pre>
+     *
+     * <code>map&lt;string, .google.protobuf.Value&gt; attributes = 1;</code>
+     */
+    java.util.Map<java.lang.String, com.google.protobuf.Value>
+    getAttributesMap();
+    /**
+     * <pre>
+     * Mapping resource ID to its attributes.
+     * </pre>
+     *
+     * <code>map&lt;string, .google.protobuf.Value&gt; attributes = 1;</code>
+     */
+
+    com.google.protobuf.Value getAttributesOrDefault(
+        java.lang.String key,
+        com.google.protobuf.Value defaultValue);
+    /**
+     * <pre>
+     * Mapping resource ID to its attributes.
+     * </pre>
+     *
+     * <code>map&lt;string, .google.protobuf.Value&gt; attributes = 1;</code>
+     */
+
+    com.google.protobuf.Value getAttributesOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.cdn.v1.ListResourceAttributesResponse}
+   */
+  public static final class ListResourceAttributesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ListResourceAttributesResponse)
+      ListResourceAttributesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListResourceAttributesResponse.newBuilder() to construct.
+    private ListResourceAttributesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListResourceAttributesResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListResourceAttributesResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListResourceAttributesResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                attributes_ = com.google.protobuf.MapField.newMapField(
+                    AttributesDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Value>
+              attributes__ = input.readMessage(
+                  AttributesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              attributes_.getMutableMap().put(
+                  attributes__.getKey(), attributes__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_ListResourceAttributesResponse_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetAttributes();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_ListResourceAttributesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse.class, yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse.Builder.class);
+    }
+
+    public static final int ATTRIBUTES_FIELD_NUMBER = 1;
+    private static final class AttributesDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, com.google.protobuf.Value> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, com.google.protobuf.Value>newDefaultInstance(
+                  yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_ListResourceAttributesResponse_AttributesEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.google.protobuf.Value.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, com.google.protobuf.Value> attributes_;
+    private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.Value>
+    internalGetAttributes() {
+      if (attributes_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            AttributesDefaultEntryHolder.defaultEntry);
+      }
+      return attributes_;
+    }
+
+    public int getAttributesCount() {
+      return internalGetAttributes().getMap().size();
+    }
+    /**
+     * <pre>
+     * Mapping resource ID to its attributes.
+     * </pre>
+     *
+     * <code>map&lt;string, .google.protobuf.Value&gt; attributes = 1;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsAttributes(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetAttributes().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getAttributesMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.google.protobuf.Value> getAttributes() {
+      return getAttributesMap();
+    }
+    /**
+     * <pre>
+     * Mapping resource ID to its attributes.
+     * </pre>
+     *
+     * <code>map&lt;string, .google.protobuf.Value&gt; attributes = 1;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, com.google.protobuf.Value> getAttributesMap() {
+      return internalGetAttributes().getMap();
+    }
+    /**
+     * <pre>
+     * Mapping resource ID to its attributes.
+     * </pre>
+     *
+     * <code>map&lt;string, .google.protobuf.Value&gt; attributes = 1;</code>
+     */
+    @java.lang.Override
+
+    public com.google.protobuf.Value getAttributesOrDefault(
+        java.lang.String key,
+        com.google.protobuf.Value defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.google.protobuf.Value> map =
+          internalGetAttributes().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Mapping resource ID to its attributes.
+     * </pre>
+     *
+     * <code>map&lt;string, .google.protobuf.Value&gt; attributes = 1;</code>
+     */
+    @java.lang.Override
+
+    public com.google.protobuf.Value getAttributesOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.google.protobuf.Value> map =
+          internalGetAttributes().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetAttributes(),
+          AttributesDefaultEntryHolder.defaultEntry,
+          1);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (java.util.Map.Entry<java.lang.String, com.google.protobuf.Value> entry
+           : internalGetAttributes().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Value>
+        attributes__ = AttributesDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, attributes__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse other = (yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse) obj;
+
+      if (!internalGetAttributes().equals(
+          other.internalGetAttributes())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (!internalGetAttributes().getMap().isEmpty()) {
+        hash = (37 * hash) + ATTRIBUTES_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetAttributes().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cdn.v1.ListResourceAttributesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.cdn.v1.ListResourceAttributesResponse)
+        yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_ListResourceAttributesResponse_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetAttributes();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMutableAttributes();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_ListResourceAttributesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse.class, yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        internalGetMutableAttributes().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.internal_static_yandex_cloud_cdn_v1_ListResourceAttributesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse build() {
+        yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse buildPartial() {
+        yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse result = new yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse(this);
+        int from_bitField0_ = bitField0_;
+        result.attributes_ = internalGetAttributes();
+        result.attributes_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse) {
+          return mergeFrom((yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse other) {
+        if (other == yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse.getDefaultInstance()) return this;
+        internalGetMutableAttributes().mergeFrom(
+            other.internalGetAttributes());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.MapField<
+          java.lang.String, com.google.protobuf.Value> attributes_;
+      private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.Value>
+      internalGetAttributes() {
+        if (attributes_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              AttributesDefaultEntryHolder.defaultEntry);
+        }
+        return attributes_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.Value>
+      internalGetMutableAttributes() {
+        onChanged();;
+        if (attributes_ == null) {
+          attributes_ = com.google.protobuf.MapField.newMapField(
+              AttributesDefaultEntryHolder.defaultEntry);
+        }
+        if (!attributes_.isMutable()) {
+          attributes_ = attributes_.copy();
+        }
+        return attributes_;
+      }
+
+      public int getAttributesCount() {
+        return internalGetAttributes().getMap().size();
+      }
+      /**
+       * <pre>
+       * Mapping resource ID to its attributes.
+       * </pre>
+       *
+       * <code>map&lt;string, .google.protobuf.Value&gt; attributes = 1;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsAttributes(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetAttributes().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getAttributesMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.Value> getAttributes() {
+        return getAttributesMap();
+      }
+      /**
+       * <pre>
+       * Mapping resource ID to its attributes.
+       * </pre>
+       *
+       * <code>map&lt;string, .google.protobuf.Value&gt; attributes = 1;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, com.google.protobuf.Value> getAttributesMap() {
+        return internalGetAttributes().getMap();
+      }
+      /**
+       * <pre>
+       * Mapping resource ID to its attributes.
+       * </pre>
+       *
+       * <code>map&lt;string, .google.protobuf.Value&gt; attributes = 1;</code>
+       */
+      @java.lang.Override
+
+      public com.google.protobuf.Value getAttributesOrDefault(
+          java.lang.String key,
+          com.google.protobuf.Value defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.google.protobuf.Value> map =
+            internalGetAttributes().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Mapping resource ID to its attributes.
+       * </pre>
+       *
+       * <code>map&lt;string, .google.protobuf.Value&gt; attributes = 1;</code>
+       */
+      @java.lang.Override
+
+      public com.google.protobuf.Value getAttributesOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.google.protobuf.Value> map =
+            internalGetAttributes().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearAttributes() {
+        internalGetMutableAttributes().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Mapping resource ID to its attributes.
+       * </pre>
+       *
+       * <code>map&lt;string, .google.protobuf.Value&gt; attributes = 1;</code>
+       */
+
+      public Builder removeAttributes(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableAttributes().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.Value>
+      getMutableAttributes() {
+        return internalGetMutableAttributes().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Mapping resource ID to its attributes.
+       * </pre>
+       *
+       * <code>map&lt;string, .google.protobuf.Value&gt; attributes = 1;</code>
+       */
+      public Builder putAttributes(
+          java.lang.String key,
+          com.google.protobuf.Value value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableAttributes().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Mapping resource ID to its attributes.
+       * </pre>
+       *
+       * <code>map&lt;string, .google.protobuf.Value&gt; attributes = 1;</code>
+       */
+
+      public Builder putAllAttributes(
+          java.util.Map<java.lang.String, com.google.protobuf.Value> values) {
+        internalGetMutableAttributes().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.cdn.v1.ListResourceAttributesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.cdn.v1.ListResourceAttributesResponse)
+    private static final yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse();
+    }
+
+    public static yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListResourceAttributesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListResourceAttributesResponse>() {
+      @java.lang.Override
+      public ListResourceAttributesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListResourceAttributesResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListResourceAttributesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListResourceAttributesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_cdn_v1_GetResourceRequest_descriptor;
   private static final 
@@ -14056,6 +17276,31 @@ public final class ResourceServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_cdn_v1_GetProviderCNameResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cdn_v1_GetResourceAttributesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cdn_v1_GetResourceAttributesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cdn_v1_GetResourceAttributesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cdn_v1_GetResourceAttributesResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cdn_v1_ListResourceAttributesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cdn_v1_ListResourceAttributesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cdn_v1_ListResourceAttributesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cdn_v1_ListResourceAttributesResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cdn_v1_ListResourceAttributesResponse_AttributesEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cdn_v1_ListResourceAttributesResponse_AttributesEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -14068,85 +17313,104 @@ public final class ResourceServiceOuterClass {
       "\n*yandex/cloud/cdn/v1/resource_service.p" +
       "roto\022\023yandex.cloud.cdn.v1\032\034google/api/an" +
       "notations.proto\032\036google/protobuf/wrapper" +
-      "s.proto\032 yandex/cloud/api/operation.prot" +
-      "o\032 yandex/cloud/cdn/v1/origin.proto\032\"yan" +
-      "dex/cloud/cdn/v1/resource.proto\032&yandex/" +
-      "cloud/operation/operation.proto\032\035yandex/" +
-      "cloud/validation.proto\"7\n\022GetResourceReq" +
-      "uest\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
-      "u\n\024ListResourcesRequest\022\037\n\tfolder_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
-      "\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"b" +
-      "\n\025ListResourcesResponse\0220\n\tresources\030\001 \003" +
-      "(\0132\035.yandex.cloud.cdn.v1.Resource\022\027\n\017nex" +
-      "t_page_token\030\002 \001(\t\"\353\005\n\025CreateResourceReq" +
-      "uest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\023\n" +
-      "\005cname\030\002 \001(\tB\004\350\3071\001\022G\n\006origin\030\003 \001(\01321.yan" +
-      "dex.cloud.cdn.v1.CreateResourceRequest.O" +
-      "riginB\004\350\3071\001\022D\n\023secondary_hostnames\030\004 \001(\013" +
-      "2\'.yandex.cloud.cdn.v1.SecondaryHostname" +
-      "s\022<\n\017origin_protocol\030\005 \001(\0162#.yandex.clou" +
-      "d.cdn.v1.OriginProtocol\022*\n\006active\030\006 \001(\0132" +
-      "\032.google.protobuf.BoolValue\0225\n\007options\030\007" +
-      " \001(\0132$.yandex.cloud.cdn.v1.ResourceOptio" +
-      "ns\022B\n\017ssl_certificate\030\010 \001(\0132).yandex.clo" +
-      "ud.cdn.v1.SSLTargetCertificate\022F\n\006labels" +
-      "\030\t \003(\01326.yandex.cloud.cdn.v1.CreateResou" +
-      "rceRequest.LabelsEntry\022\025\n\rprovider_type\030" +
-      "\n \001(\t\032\231\001\n\006Origin\022\031\n\017origin_group_id\030\001 \001(" +
-      "\003H\000\022\027\n\rorigin_source\030\002 \001(\tH\000\022I\n\024origin_s" +
-      "ource_params\030\003 \001(\0132).yandex.cloud.cdn.v1" +
-      ".ResourceOriginParamsH\000B\020\n\016origin_varian" +
-      "t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\"U\n\024ResourceOriginParams\022\016\n\006sour" +
-      "ce\030\001 \001(\t\022-\n\004meta\030\002 \001(\0132\037.yandex.cloud.cd" +
-      "n.v1.OriginMeta\";\n\026CreateResourceMetadat" +
-      "a\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\251\004\n" +
-      "\025UpdateResourceRequest\022!\n\013resource_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\0224\n\017origin_group_id\030\002 \001" +
-      "(\0132\033.google.protobuf.Int64Value\022D\n\023secon" +
-      "dary_hostnames\030\003 \001(\0132\'.yandex.cloud.cdn." +
-      "v1.SecondaryHostnames\0225\n\007options\030\004 \001(\0132$" +
-      ".yandex.cloud.cdn.v1.ResourceOptions\022<\n\017" +
-      "origin_protocol\030\005 \001(\0162#.yandex.cloud.cdn" +
-      ".v1.OriginProtocol\022*\n\006active\030\006 \001(\0132\032.goo" +
-      "gle.protobuf.BoolValue\022B\n\017ssl_certificat" +
-      "e\030\007 \001(\0132).yandex.cloud.cdn.v1.SSLTargetC" +
-      "ertificate\022F\n\006labels\030\010 \003(\01326.yandex.clou" +
-      "d.cdn.v1.UpdateResourceRequest.LabelsEnt" +
-      "ry\022\025\n\rremove_labels\030\t \001(\010\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\";\n\026Upda" +
-      "teResourceMetadata\022!\n\013resource_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\":\n\025DeleteResourceRequest\022!" +
-      "\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026Del" +
-      "eteResourceMetadata\022\023\n\013resource_id\030\001 \001(\t" +
-      "\":\n\027GetProviderCNameRequest\022\037\n\tfolder_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"<\n\030GetProviderCName" +
-      "Response\022\r\n\005cname\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001" +
-      "(\t2\230\007\n\017ResourceService\022v\n\003Get\022\'.yandex.c" +
-      "loud.cdn.v1.GetResourceRequest\032\035.yandex." +
-      "cloud.cdn.v1.Resource\"\'\202\323\344\223\002!\022\037/cdn/v1/r" +
-      "esources/{resource_id}\022x\n\004List\022).yandex." +
-      "cloud.cdn.v1.ListResourcesRequest\032*.yand" +
-      "ex.cloud.cdn.v1.ListResourcesResponse\"\031\202" +
-      "\323\344\223\002\023\022\021/cdn/v1/resources\022\233\001\n\006Create\022*.ya" +
-      "ndex.cloud.cdn.v1.CreateResourceRequest\032" +
-      "!.yandex.cloud.operation.Operation\"B\202\323\344\223" +
-      "\002\026\"\021/cdn/v1/resources:\001*\262\322*\"\n\026CreateReso" +
-      "urceMetadata\022\010Resource\022\251\001\n\006Update\022*.yand" +
-      "ex.cloud.cdn.v1.UpdateResourceRequest\032!." +
-      "yandex.cloud.operation.Operation\"P\202\323\344\223\002$" +
-      "2\037/cdn/v1/resources/{resource_id}:\001*\262\322*\"" +
-      "\n\026UpdateResourceMetadata\022\010Resource\022\263\001\n\006D" +
-      "elete\022*.yandex.cloud.cdn.v1.DeleteResour" +
-      "ceRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"Z\202\323\344\223\002!*\037/cdn/v1/resources/{resourc" +
-      "e_id}\262\322*/\n\026DeleteResourceMetadata\022\025googl" +
-      "e.protobuf.Empty\022\222\001\n\020GetProviderCName\022,." +
-      "yandex.cloud.cdn.v1.GetProviderCNameRequ" +
-      "est\032-.yandex.cloud.cdn.v1.GetProviderCNa" +
-      "meResponse\"!\202\323\344\223\002\033\022\031/cdn/v1/cname/{folde" +
-      "r_id}BV\n\027yandex.cloud.api.cdn.v1Z;github" +
+      "s.proto\032\034google/protobuf/struct.proto\032 y" +
+      "andex/cloud/api/operation.proto\032 yandex/" +
+      "cloud/cdn/v1/origin.proto\032\"yandex/cloud/" +
+      "cdn/v1/resource.proto\032&yandex/cloud/oper" +
+      "ation/operation.proto\032\035yandex/cloud/vali" +
+      "dation.proto\"7\n\022GetResourceRequest\022!\n\013re" +
+      "source_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"u\n\024ListRes" +
+      "ourcesRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n" +
+      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"b\n\025ListReso" +
+      "urcesResponse\0220\n\tresources\030\001 \003(\0132\035.yande" +
+      "x.cloud.cdn.v1.Resource\022\027\n\017next_page_tok" +
+      "en\030\002 \001(\t\"\222\006\n\025CreateResourceRequest\022\037\n\tfo" +
+      "lder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\023\n\005cname\030\002 \001" +
+      "(\tB\004\350\3071\001\022G\n\006origin\030\003 \001(\01321.yandex.cloud." +
+      "cdn.v1.CreateResourceRequest.OriginB\004\350\3071" +
+      "\001\022D\n\023secondary_hostnames\030\004 \001(\0132\'.yandex." +
+      "cloud.cdn.v1.SecondaryHostnames\022<\n\017origi" +
+      "n_protocol\030\005 \001(\0162#.yandex.cloud.cdn.v1.O" +
+      "riginProtocol\022*\n\006active\030\006 \001(\0132\032.google.p" +
+      "rotobuf.BoolValue\0225\n\007options\030\007 \001(\0132$.yan" +
+      "dex.cloud.cdn.v1.ResourceOptions\022B\n\017ssl_" +
+      "certificate\030\010 \001(\0132).yandex.cloud.cdn.v1." +
+      "SSLTargetCertificate\022F\n\006labels\030\t \003(\01326.y" +
+      "andex.cloud.cdn.v1.CreateResourceRequest" +
+      ".LabelsEntry\022\025\n\rprovider_type\030\n \001(\t\022%\n\003t" +
+      "ls\030\013 \001(\0132\030.yandex.cloud.cdn.v1.TLS\032\231\001\n\006O" +
+      "rigin\022\031\n\017origin_group_id\030\001 \001(\003H\000\022\027\n\rorig" +
+      "in_source\030\002 \001(\tH\000\022I\n\024origin_source_param" +
+      "s\030\003 \001(\0132).yandex.cloud.cdn.v1.ResourceOr" +
+      "iginParamsH\000B\020\n\016origin_variant\032-\n\013Labels" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"U\n" +
+      "\024ResourceOriginParams\022\016\n\006source\030\001 \001(\t\022-\n" +
+      "\004meta\030\002 \001(\0132\037.yandex.cloud.cdn.v1.Origin" +
+      "Meta\";\n\026CreateResourceMetadata\022!\n\013resour" +
+      "ce_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\320\004\n\025UpdateReso" +
+      "urceRequest\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\0224\n\017origin_group_id\030\002 \001(\0132\033.google" +
+      ".protobuf.Int64Value\022D\n\023secondary_hostna" +
+      "mes\030\003 \001(\0132\'.yandex.cloud.cdn.v1.Secondar" +
+      "yHostnames\0225\n\007options\030\004 \001(\0132$.yandex.clo" +
+      "ud.cdn.v1.ResourceOptions\022<\n\017origin_prot" +
+      "ocol\030\005 \001(\0162#.yandex.cloud.cdn.v1.OriginP" +
+      "rotocol\022*\n\006active\030\006 \001(\0132\032.google.protobu" +
+      "f.BoolValue\022B\n\017ssl_certificate\030\007 \001(\0132).y" +
+      "andex.cloud.cdn.v1.SSLTargetCertificate\022" +
+      "F\n\006labels\030\010 \003(\01326.yandex.cloud.cdn.v1.Up" +
+      "dateResourceRequest.LabelsEntry\022\025\n\rremov" +
+      "e_labels\030\t \001(\010\022%\n\003tls\030\n \001(\0132\030.yandex.clo" +
+      "ud.cdn.v1.TLS\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\";\n\026UpdateResourceMe" +
+      "tadata\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\":\n\025DeleteResourceRequest\022!\n\013resource_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteResourceM" +
+      "etadata\022\023\n\013resource_id\030\001 \001(\t\":\n\027GetProvi" +
+      "derCNameRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\"<\n\030GetProviderCNameResponse\022\r\n\005" +
+      "cname\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\"A\n\034GetRes" +
+      "ourceAttributesRequest\022!\n\013resource_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"K\n\035GetResourceAttribut" +
+      "esResponse\022*\n\nattributes\030\001 \001(\0132\026.google." +
+      "protobuf.Value\"@\n\035ListResourceAttributes" +
+      "Request\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\"\304\001\n\036ListResourceAttributesResponse\022W\n\na" +
+      "ttributes\030\001 \003(\0132C.yandex.cloud.cdn.v1.Li" +
+      "stResourceAttributesResponse.AttributesE" +
+      "ntry\032I\n\017AttributesEntry\022\013\n\003key\030\001 \001(\t\022%\n\005" +
+      "value\030\002 \001(\0132\026.google.protobuf.Value:\0028\0012" +
+      "\213\t\n\017ResourceService\022v\n\003Get\022\'.yandex.clou" +
+      "d.cdn.v1.GetResourceRequest\032\035.yandex.clo" +
+      "ud.cdn.v1.Resource\"\'\202\323\344\223\002!\022\037/cdn/v1/reso" +
+      "urces/{resource_id}\022x\n\004List\022).yandex.clo" +
+      "ud.cdn.v1.ListResourcesRequest\032*.yandex." +
+      "cloud.cdn.v1.ListResourcesResponse\"\031\202\323\344\223" +
+      "\002\023\022\021/cdn/v1/resources\022\233\001\n\006Create\022*.yande" +
+      "x.cloud.cdn.v1.CreateResourceRequest\032!.y" +
+      "andex.cloud.operation.Operation\"B\202\323\344\223\002\026\"" +
+      "\021/cdn/v1/resources:\001*\262\322*\"\n\026CreateResourc" +
+      "eMetadata\022\010Resource\022\251\001\n\006Update\022*.yandex." +
+      "cloud.cdn.v1.UpdateResourceRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"P\202\323\344\223\002$2\037/" +
+      "cdn/v1/resources/{resource_id}:\001*\262\322*\"\n\026U" +
+      "pdateResourceMetadata\022\010Resource\022\263\001\n\006Dele" +
+      "te\022*.yandex.cloud.cdn.v1.DeleteResourceR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"Z\202\323\344\223\002!*\037/cdn/v1/resources/{resource_i" +
+      "d}\262\322*/\n\026DeleteResourceMetadata\022\025google.p" +
+      "rotobuf.Empty\022\222\001\n\020GetProviderCName\022,.yan" +
+      "dex.cloud.cdn.v1.GetProviderCNameRequest" +
+      "\032-.yandex.cloud.cdn.v1.GetProviderCNameR" +
+      "esponse\"!\202\323\344\223\002\033\022\031/cdn/v1/cname/{folder_i" +
+      "d}\022v\n\rGetAttributes\0221.yandex.cloud.cdn.v" +
+      "1.GetResourceAttributesRequest\0322.yandex." +
+      "cloud.cdn.v1.GetResourceAttributesRespon" +
+      "se\022y\n\016ListAttributes\0222.yandex.cloud.cdn." +
+      "v1.ListResourceAttributesRequest\0323.yande" +
+      "x.cloud.cdn.v1.ListResourceAttributesRes" +
+      "ponseBV\n\027yandex.cloud.api.cdn.v1Z;github" +
       ".com/yandex-cloud/go-genproto/yandex/clo" +
       "ud/cdn/v1;cdnb\006proto3"
     };
@@ -14155,6 +17419,7 @@ public final class ResourceServiceOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
+          com.google.protobuf.StructProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.cdn.v1.OriginOuterClass.getDescriptor(),
           yandex.cloud.api.cdn.v1.ResourceOuterClass.getDescriptor(),
@@ -14184,7 +17449,7 @@ public final class ResourceServiceOuterClass {
     internal_static_yandex_cloud_cdn_v1_CreateResourceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cdn_v1_CreateResourceRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Cname", "Origin", "SecondaryHostnames", "OriginProtocol", "Active", "Options", "SslCertificate", "Labels", "ProviderType", });
+        new java.lang.String[] { "FolderId", "Cname", "Origin", "SecondaryHostnames", "OriginProtocol", "Active", "Options", "SslCertificate", "Labels", "ProviderType", "Tls", });
     internal_static_yandex_cloud_cdn_v1_CreateResourceRequest_Origin_descriptor =
       internal_static_yandex_cloud_cdn_v1_CreateResourceRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_cdn_v1_CreateResourceRequest_Origin_fieldAccessorTable = new
@@ -14214,7 +17479,7 @@ public final class ResourceServiceOuterClass {
     internal_static_yandex_cloud_cdn_v1_UpdateResourceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cdn_v1_UpdateResourceRequest_descriptor,
-        new java.lang.String[] { "ResourceId", "OriginGroupId", "SecondaryHostnames", "Options", "OriginProtocol", "Active", "SslCertificate", "Labels", "RemoveLabels", });
+        new java.lang.String[] { "ResourceId", "OriginGroupId", "SecondaryHostnames", "Options", "OriginProtocol", "Active", "SslCertificate", "Labels", "RemoveLabels", "Tls", });
     internal_static_yandex_cloud_cdn_v1_UpdateResourceRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_cdn_v1_UpdateResourceRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_cdn_v1_UpdateResourceRequest_LabelsEntry_fieldAccessorTable = new
@@ -14251,6 +17516,36 @@ public final class ResourceServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cdn_v1_GetProviderCNameResponse_descriptor,
         new java.lang.String[] { "Cname", "FolderId", });
+    internal_static_yandex_cloud_cdn_v1_GetResourceAttributesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_cdn_v1_GetResourceAttributesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cdn_v1_GetResourceAttributesRequest_descriptor,
+        new java.lang.String[] { "ResourceId", });
+    internal_static_yandex_cloud_cdn_v1_GetResourceAttributesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_cdn_v1_GetResourceAttributesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cdn_v1_GetResourceAttributesResponse_descriptor,
+        new java.lang.String[] { "Attributes", });
+    internal_static_yandex_cloud_cdn_v1_ListResourceAttributesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_cdn_v1_ListResourceAttributesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cdn_v1_ListResourceAttributesRequest_descriptor,
+        new java.lang.String[] { "FolderId", });
+    internal_static_yandex_cloud_cdn_v1_ListResourceAttributesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_yandex_cloud_cdn_v1_ListResourceAttributesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cdn_v1_ListResourceAttributesResponse_descriptor,
+        new java.lang.String[] { "Attributes", });
+    internal_static_yandex_cloud_cdn_v1_ListResourceAttributesResponse_AttributesEntry_descriptor =
+      internal_static_yandex_cloud_cdn_v1_ListResourceAttributesResponse_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_cdn_v1_ListResourceAttributesResponse_AttributesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cdn_v1_ListResourceAttributesResponse_AttributesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -14262,6 +17557,7 @@ public final class ResourceServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
+    com.google.protobuf.StructProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.cdn.v1.OriginOuterClass.getDescriptor();
     yandex.cloud.api.cdn.v1.ResourceOuterClass.getDescriptor();

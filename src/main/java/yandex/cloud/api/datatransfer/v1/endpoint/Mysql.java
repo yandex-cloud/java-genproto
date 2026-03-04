@@ -20,7 +20,7 @@ public final class Mysql {
 
     /**
      * <pre>
-     * Database port
+     * Port for the database connection
      * </pre>
      *
      * <code>int64 port = 2;</code>
@@ -30,7 +30,9 @@ public final class Mysql {
 
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database.
+     * If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
@@ -39,7 +41,9 @@ public final class Mysql {
     java.lang.String getSubnetId();
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database.
+     * If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
@@ -49,23 +53,39 @@ public final class Mysql {
         getSubnetIdBytes();
 
     /**
+     * <pre>
+     * List of host names of the MySQL server. Exactly one host is expected
+     * </pre>
+     *
      * <code>repeated string hosts = 5;</code>
      * @return A list containing the hosts.
      */
     java.util.List<java.lang.String>
         getHostsList();
     /**
+     * <pre>
+     * List of host names of the MySQL server. Exactly one host is expected
+     * </pre>
+     *
      * <code>repeated string hosts = 5;</code>
      * @return The count of hosts.
      */
     int getHostsCount();
     /**
+     * <pre>
+     * List of host names of the MySQL server. Exactly one host is expected
+     * </pre>
+     *
      * <code>repeated string hosts = 5;</code>
      * @param index The index of the element to return.
      * @return The hosts at the given index.
      */
     java.lang.String getHosts(int index);
     /**
+     * <pre>
+     * List of host names of the MySQL server. Exactly one host is expected
+     * </pre>
+     *
      * <code>repeated string hosts = 5;</code>
      * @param index The index of the value to return.
      * @return The bytes of the hosts at the given index.
@@ -220,7 +240,7 @@ public final class Mysql {
     private long port_;
     /**
      * <pre>
-     * Database port
+     * Port for the database connection
      * </pre>
      *
      * <code>int64 port = 2;</code>
@@ -235,7 +255,9 @@ public final class Mysql {
     private volatile java.lang.Object subnetId_;
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database.
+     * If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
@@ -256,7 +278,9 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
+     * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+     * database.
+     * If omitted, the server has to be accessible via Internet
      * </pre>
      *
      * <code>string subnet_id = 4;</code>
@@ -280,6 +304,10 @@ public final class Mysql {
     public static final int HOSTS_FIELD_NUMBER = 5;
     private com.google.protobuf.LazyStringList hosts_;
     /**
+     * <pre>
+     * List of host names of the MySQL server. Exactly one host is expected
+     * </pre>
+     *
      * <code>repeated string hosts = 5;</code>
      * @return A list containing the hosts.
      */
@@ -288,6 +316,10 @@ public final class Mysql {
       return hosts_;
     }
     /**
+     * <pre>
+     * List of host names of the MySQL server. Exactly one host is expected
+     * </pre>
+     *
      * <code>repeated string hosts = 5;</code>
      * @return The count of hosts.
      */
@@ -295,6 +327,10 @@ public final class Mysql {
       return hosts_.size();
     }
     /**
+     * <pre>
+     * List of host names of the MySQL server. Exactly one host is expected
+     * </pre>
+     *
      * <code>repeated string hosts = 5;</code>
      * @param index The index of the element to return.
      * @return The hosts at the given index.
@@ -303,6 +339,10 @@ public final class Mysql {
       return hosts_.get(index);
     }
     /**
+     * <pre>
+     * List of host names of the MySQL server. Exactly one host is expected
+     * </pre>
+     *
      * <code>repeated string hosts = 5;</code>
      * @param index The index of the value to return.
      * @return The bytes of the hosts at the given index.
@@ -739,7 +779,7 @@ public final class Mysql {
       private long port_ ;
       /**
        * <pre>
-       * Database port
+       * Port for the database connection
        * </pre>
        *
        * <code>int64 port = 2;</code>
@@ -751,7 +791,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Database port
+       * Port for the database connection
        * </pre>
        *
        * <code>int64 port = 2;</code>
@@ -766,7 +806,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Database port
+       * Port for the database connection
        * </pre>
        *
        * <code>int64 port = 2;</code>
@@ -782,7 +822,9 @@ public final class Mysql {
       private java.lang.Object subnetId_ = "";
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database.
+       * If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -802,7 +844,9 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database.
+       * If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -823,7 +867,9 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database.
+       * If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -842,7 +888,9 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database.
+       * If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -856,7 +904,9 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
+       * Identifier of the Yandex Cloud VPC subnetwork to user for accessing the
+       * database.
+       * If omitted, the server has to be accessible via Internet
        * </pre>
        *
        * <code>string subnet_id = 4;</code>
@@ -883,6 +933,10 @@ public final class Mysql {
          }
       }
       /**
+       * <pre>
+       * List of host names of the MySQL server. Exactly one host is expected
+       * </pre>
+       *
        * <code>repeated string hosts = 5;</code>
        * @return A list containing the hosts.
        */
@@ -891,6 +945,10 @@ public final class Mysql {
         return hosts_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of host names of the MySQL server. Exactly one host is expected
+       * </pre>
+       *
        * <code>repeated string hosts = 5;</code>
        * @return The count of hosts.
        */
@@ -898,6 +956,10 @@ public final class Mysql {
         return hosts_.size();
       }
       /**
+       * <pre>
+       * List of host names of the MySQL server. Exactly one host is expected
+       * </pre>
+       *
        * <code>repeated string hosts = 5;</code>
        * @param index The index of the element to return.
        * @return The hosts at the given index.
@@ -906,6 +968,10 @@ public final class Mysql {
         return hosts_.get(index);
       }
       /**
+       * <pre>
+       * List of host names of the MySQL server. Exactly one host is expected
+       * </pre>
+       *
        * <code>repeated string hosts = 5;</code>
        * @param index The index of the value to return.
        * @return The bytes of the hosts at the given index.
@@ -915,6 +981,10 @@ public final class Mysql {
         return hosts_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of host names of the MySQL server. Exactly one host is expected
+       * </pre>
+       *
        * <code>repeated string hosts = 5;</code>
        * @param index The index to set the value at.
        * @param value The hosts to set.
@@ -931,6 +1001,10 @@ public final class Mysql {
         return this;
       }
       /**
+       * <pre>
+       * List of host names of the MySQL server. Exactly one host is expected
+       * </pre>
+       *
        * <code>repeated string hosts = 5;</code>
        * @param value The hosts to add.
        * @return This builder for chaining.
@@ -946,6 +1020,10 @@ public final class Mysql {
         return this;
       }
       /**
+       * <pre>
+       * List of host names of the MySQL server. Exactly one host is expected
+       * </pre>
+       *
        * <code>repeated string hosts = 5;</code>
        * @param values The hosts to add.
        * @return This builder for chaining.
@@ -959,6 +1037,10 @@ public final class Mysql {
         return this;
       }
       /**
+       * <pre>
+       * List of host names of the MySQL server. Exactly one host is expected
+       * </pre>
+       *
        * <code>repeated string hosts = 5;</code>
        * @return This builder for chaining.
        */
@@ -969,6 +1051,10 @@ public final class Mysql {
         return this;
       }
       /**
+       * <pre>
+       * List of host names of the MySQL server. Exactly one host is expected
+       * </pre>
+       *
        * <code>repeated string hosts = 5;</code>
        * @param value The bytes of the hosts to add.
        * @return This builder for chaining.
@@ -1253,16 +1339,28 @@ public final class Mysql {
     yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysqlOrBuilder getOnPremiseOrBuilder();
 
     /**
+     * <pre>
+     * Get Mysql installation params and credentials from Connection Manager
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
      * @return Whether the connectionManagerConnection field is set.
      */
     boolean hasConnectionManagerConnection();
     /**
+     * <pre>
+     * Get Mysql installation params and credentials from Connection Manager
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
      * @return The connectionManagerConnection.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection getConnectionManagerConnection();
     /**
+     * <pre>
+     * Get Mysql installation params and credentials from Connection Manager
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder getConnectionManagerConnectionOrBuilder();
@@ -1532,6 +1630,10 @@ public final class Mysql {
 
     public static final int CONNECTION_MANAGER_CONNECTION_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * Get Mysql installation params and credentials from Connection Manager
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
      * @return Whether the connectionManagerConnection field is set.
      */
@@ -1540,6 +1642,10 @@ public final class Mysql {
       return connectionCase_ == 3;
     }
     /**
+     * <pre>
+     * Get Mysql installation params and credentials from Connection Manager
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
      * @return The connectionManagerConnection.
      */
@@ -1551,6 +1657,10 @@ public final class Mysql {
       return yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Get Mysql installation params and credentials from Connection Manager
+     * </pre>
+     *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
      */
     @java.lang.Override
@@ -2254,6 +2364,10 @@ public final class Mysql {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnectionOrBuilder> connectionManagerConnectionBuilder_;
       /**
+       * <pre>
+       * Get Mysql installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        * @return Whether the connectionManagerConnection field is set.
        */
@@ -2262,6 +2376,10 @@ public final class Mysql {
         return connectionCase_ == 3;
       }
       /**
+       * <pre>
+       * Get Mysql installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        * @return The connectionManagerConnection.
        */
@@ -2280,6 +2398,10 @@ public final class Mysql {
         }
       }
       /**
+       * <pre>
+       * Get Mysql installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       public Builder setConnectionManagerConnection(yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection value) {
@@ -2296,6 +2418,10 @@ public final class Mysql {
         return this;
       }
       /**
+       * <pre>
+       * Get Mysql installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       public Builder setConnectionManagerConnection(
@@ -2310,6 +2436,10 @@ public final class Mysql {
         return this;
       }
       /**
+       * <pre>
+       * Get Mysql installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       public Builder mergeConnectionManagerConnection(yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection value) {
@@ -2332,6 +2462,10 @@ public final class Mysql {
         return this;
       }
       /**
+       * <pre>
+       * Get Mysql installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       public Builder clearConnectionManagerConnection() {
@@ -2351,12 +2485,20 @@ public final class Mysql {
         return this;
       }
       /**
+       * <pre>
+       * Get Mysql installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.ConnectionManagerConnection.Builder getConnectionManagerConnectionBuilder() {
         return getConnectionManagerConnectionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Get Mysql installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       @java.lang.Override
@@ -2371,6 +2513,10 @@ public final class Mysql {
         }
       }
       /**
+       * <pre>
+       * Get Mysql installation params and credentials from Connection Manager
+       * </pre>
+       *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.ConnectionManagerConnection connection_manager_connection = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3485,7 +3631,7 @@ public final class Mysql {
 
     /**
      * <pre>
-     * Database name
+     * Name of the database to transfer
      * 
      * You can leave it empty, then it will be possible to transfer tables from several
      * databases at the same time from this source.
@@ -3497,7 +3643,7 @@ public final class Mysql {
     java.lang.String getDatabase();
     /**
      * <pre>
-     * Database name
+     * Name of the database to transfer
      * 
      * You can leave it empty, then it will be possible to transfer tables from several
      * databases at the same time from this source.
@@ -3511,7 +3657,7 @@ public final class Mysql {
 
     /**
      * <pre>
-     * User for database access. not required as may be in connection
+     * User for database access. Required unless connection manager connection is used
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -3520,7 +3666,7 @@ public final class Mysql {
     java.lang.String getUser();
     /**
      * <pre>
-     * User for database access. not required as may be in connection
+     * User for database access. Required unless connection manager connection is used
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -3585,8 +3731,10 @@ public final class Mysql {
     /**
      * <pre>
      * Schema migration
-     * 
-     * Select database objects to be transferred during activation or deactivation.
+     * Defines which database schema objects should be transferred, e.g. views,
+     * routines, etc. 
+     * All of the attrubutes in the block are optional and should be either
+     * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`."
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
@@ -3596,8 +3744,10 @@ public final class Mysql {
     /**
      * <pre>
      * Schema migration
-     * 
-     * Select database objects to be transferred during activation or deactivation.
+     * Defines which database schema objects should be transferred, e.g. views,
+     * routines, etc. 
+     * All of the attrubutes in the block are optional and should be either
+     * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`."
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
@@ -3607,8 +3757,10 @@ public final class Mysql {
     /**
      * <pre>
      * Schema migration
-     * 
-     * Select database objects to be transferred during activation or deactivation.
+     * Defines which database schema objects should be transferred, e.g. views,
+     * routines, etc. 
+     * All of the attrubutes in the block are optional and should be either
+     * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`."
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
@@ -3616,23 +3768,47 @@ public final class Mysql {
     yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlObjectTransferSettingsOrBuilder getObjectTransferSettingsOrBuilder();
 
     /**
+     * <pre>
+     * List of regular expressions of table names which should be transferred. A table
+     * name is formatted as schemaname.tablename. For example, a single regular
+     * expression may look like `^mydb.employees$`
+     * </pre>
+     *
      * <code>repeated string include_tables_regex = 12;</code>
      * @return A list containing the includeTablesRegex.
      */
     java.util.List<java.lang.String>
         getIncludeTablesRegexList();
     /**
+     * <pre>
+     * List of regular expressions of table names which should be transferred. A table
+     * name is formatted as schemaname.tablename. For example, a single regular
+     * expression may look like `^mydb.employees$`
+     * </pre>
+     *
      * <code>repeated string include_tables_regex = 12;</code>
      * @return The count of includeTablesRegex.
      */
     int getIncludeTablesRegexCount();
     /**
+     * <pre>
+     * List of regular expressions of table names which should be transferred. A table
+     * name is formatted as schemaname.tablename. For example, a single regular
+     * expression may look like `^mydb.employees$`
+     * </pre>
+     *
      * <code>repeated string include_tables_regex = 12;</code>
      * @param index The index of the element to return.
      * @return The includeTablesRegex at the given index.
      */
     java.lang.String getIncludeTablesRegex(int index);
     /**
+     * <pre>
+     * List of regular expressions of table names which should be transferred. A table
+     * name is formatted as schemaname.tablename. For example, a single regular
+     * expression may look like `^mydb.employees$`
+     * </pre>
+     *
      * <code>repeated string include_tables_regex = 12;</code>
      * @param index The index of the value to return.
      * @return The bytes of the includeTablesRegex at the given index.
@@ -3641,23 +3817,43 @@ public final class Mysql {
         getIncludeTablesRegexBytes(int index);
 
     /**
+     * <pre>
+     * Opposite of `include_table_regex`. The tables matching the specified regular
+     * expressions will not be transferred
+     * </pre>
+     *
      * <code>repeated string exclude_tables_regex = 13;</code>
      * @return A list containing the excludeTablesRegex.
      */
     java.util.List<java.lang.String>
         getExcludeTablesRegexList();
     /**
+     * <pre>
+     * Opposite of `include_table_regex`. The tables matching the specified regular
+     * expressions will not be transferred
+     * </pre>
+     *
      * <code>repeated string exclude_tables_regex = 13;</code>
      * @return The count of excludeTablesRegex.
      */
     int getExcludeTablesRegexCount();
     /**
+     * <pre>
+     * Opposite of `include_table_regex`. The tables matching the specified regular
+     * expressions will not be transferred
+     * </pre>
+     *
      * <code>repeated string exclude_tables_regex = 13;</code>
      * @param index The index of the element to return.
      * @return The excludeTablesRegex at the given index.
      */
     java.lang.String getExcludeTablesRegex(int index);
     /**
+     * <pre>
+     * Opposite of `include_table_regex`. The tables matching the specified regular
+     * expressions will not be transferred
+     * </pre>
+     *
      * <code>repeated string exclude_tables_regex = 13;</code>
      * @param index The index of the value to return.
      * @return The bytes of the excludeTablesRegex at the given index.
@@ -3667,7 +3863,8 @@ public final class Mysql {
 
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
@@ -3677,7 +3874,8 @@ public final class Mysql {
         getSecurityGroupsList();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
@@ -3686,7 +3884,8 @@ public final class Mysql {
     int getSecurityGroupsCount();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
@@ -3696,7 +3895,8 @@ public final class Mysql {
     java.lang.String getSecurityGroups(int index);
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
@@ -3709,7 +3909,6 @@ public final class Mysql {
     /**
      * <pre>
      * Database for service tables
-     * 
      * Default: data source database. Here created technical tables (__tm_keeper,
      * __tm_gtid_keeper).
      * </pre>
@@ -3721,7 +3920,6 @@ public final class Mysql {
     /**
      * <pre>
      * Database for service tables
-     * 
      * Default: data source database. Here created technical tables (__tm_keeper,
      * __tm_gtid_keeper).
      * </pre>
@@ -3733,6 +3931,10 @@ public final class Mysql {
         getServiceDatabaseBytes();
   }
   /**
+   * <pre>
+   * Settings specific to the MySQL source endpoint
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MysqlSource}
    */
   public static final class MysqlSource extends
@@ -3958,7 +4160,7 @@ public final class Mysql {
     private volatile java.lang.Object database_;
     /**
      * <pre>
-     * Database name
+     * Name of the database to transfer
      * 
      * You can leave it empty, then it will be possible to transfer tables from several
      * databases at the same time from this source.
@@ -3982,7 +4184,7 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Database name
+     * Name of the database to transfer
      * 
      * You can leave it empty, then it will be possible to transfer tables from several
      * databases at the same time from this source.
@@ -4010,7 +4212,7 @@ public final class Mysql {
     private volatile java.lang.Object user_;
     /**
      * <pre>
-     * User for database access. not required as may be in connection
+     * User for database access. Required unless connection manager connection is used
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -4031,7 +4233,7 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * User for database access. not required as may be in connection
+     * User for database access. Required unless connection manager connection is used
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -4147,8 +4349,10 @@ public final class Mysql {
     /**
      * <pre>
      * Schema migration
-     * 
-     * Select database objects to be transferred during activation or deactivation.
+     * Defines which database schema objects should be transferred, e.g. views,
+     * routines, etc. 
+     * All of the attrubutes in the block are optional and should be either
+     * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`."
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
@@ -4161,8 +4365,10 @@ public final class Mysql {
     /**
      * <pre>
      * Schema migration
-     * 
-     * Select database objects to be transferred during activation or deactivation.
+     * Defines which database schema objects should be transferred, e.g. views,
+     * routines, etc. 
+     * All of the attrubutes in the block are optional and should be either
+     * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`."
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
@@ -4175,8 +4381,10 @@ public final class Mysql {
     /**
      * <pre>
      * Schema migration
-     * 
-     * Select database objects to be transferred during activation or deactivation.
+     * Defines which database schema objects should be transferred, e.g. views,
+     * routines, etc. 
+     * All of the attrubutes in the block are optional and should be either
+     * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`."
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
@@ -4189,6 +4397,12 @@ public final class Mysql {
     public static final int INCLUDE_TABLES_REGEX_FIELD_NUMBER = 12;
     private com.google.protobuf.LazyStringList includeTablesRegex_;
     /**
+     * <pre>
+     * List of regular expressions of table names which should be transferred. A table
+     * name is formatted as schemaname.tablename. For example, a single regular
+     * expression may look like `^mydb.employees$`
+     * </pre>
+     *
      * <code>repeated string include_tables_regex = 12;</code>
      * @return A list containing the includeTablesRegex.
      */
@@ -4197,6 +4411,12 @@ public final class Mysql {
       return includeTablesRegex_;
     }
     /**
+     * <pre>
+     * List of regular expressions of table names which should be transferred. A table
+     * name is formatted as schemaname.tablename. For example, a single regular
+     * expression may look like `^mydb.employees$`
+     * </pre>
+     *
      * <code>repeated string include_tables_regex = 12;</code>
      * @return The count of includeTablesRegex.
      */
@@ -4204,6 +4424,12 @@ public final class Mysql {
       return includeTablesRegex_.size();
     }
     /**
+     * <pre>
+     * List of regular expressions of table names which should be transferred. A table
+     * name is formatted as schemaname.tablename. For example, a single regular
+     * expression may look like `^mydb.employees$`
+     * </pre>
+     *
      * <code>repeated string include_tables_regex = 12;</code>
      * @param index The index of the element to return.
      * @return The includeTablesRegex at the given index.
@@ -4212,6 +4438,12 @@ public final class Mysql {
       return includeTablesRegex_.get(index);
     }
     /**
+     * <pre>
+     * List of regular expressions of table names which should be transferred. A table
+     * name is formatted as schemaname.tablename. For example, a single regular
+     * expression may look like `^mydb.employees$`
+     * </pre>
+     *
      * <code>repeated string include_tables_regex = 12;</code>
      * @param index The index of the value to return.
      * @return The bytes of the includeTablesRegex at the given index.
@@ -4224,6 +4456,11 @@ public final class Mysql {
     public static final int EXCLUDE_TABLES_REGEX_FIELD_NUMBER = 13;
     private com.google.protobuf.LazyStringList excludeTablesRegex_;
     /**
+     * <pre>
+     * Opposite of `include_table_regex`. The tables matching the specified regular
+     * expressions will not be transferred
+     * </pre>
+     *
      * <code>repeated string exclude_tables_regex = 13;</code>
      * @return A list containing the excludeTablesRegex.
      */
@@ -4232,6 +4469,11 @@ public final class Mysql {
       return excludeTablesRegex_;
     }
     /**
+     * <pre>
+     * Opposite of `include_table_regex`. The tables matching the specified regular
+     * expressions will not be transferred
+     * </pre>
+     *
      * <code>repeated string exclude_tables_regex = 13;</code>
      * @return The count of excludeTablesRegex.
      */
@@ -4239,6 +4481,11 @@ public final class Mysql {
       return excludeTablesRegex_.size();
     }
     /**
+     * <pre>
+     * Opposite of `include_table_regex`. The tables matching the specified regular
+     * expressions will not be transferred
+     * </pre>
+     *
      * <code>repeated string exclude_tables_regex = 13;</code>
      * @param index The index of the element to return.
      * @return The excludeTablesRegex at the given index.
@@ -4247,6 +4494,11 @@ public final class Mysql {
       return excludeTablesRegex_.get(index);
     }
     /**
+     * <pre>
+     * Opposite of `include_table_regex`. The tables matching the specified regular
+     * expressions will not be transferred
+     * </pre>
+     *
      * <code>repeated string exclude_tables_regex = 13;</code>
      * @param index The index of the value to return.
      * @return The bytes of the excludeTablesRegex at the given index.
@@ -4260,7 +4512,8 @@ public final class Mysql {
     private com.google.protobuf.LazyStringList securityGroups_;
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
@@ -4272,7 +4525,8 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
@@ -4283,7 +4537,8 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
@@ -4295,7 +4550,8 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 14;</code>
@@ -4312,7 +4568,6 @@ public final class Mysql {
     /**
      * <pre>
      * Database for service tables
-     * 
      * Default: data source database. Here created technical tables (__tm_keeper,
      * __tm_gtid_keeper).
      * </pre>
@@ -4336,7 +4591,6 @@ public final class Mysql {
     /**
      * <pre>
      * Database for service tables
-     * 
      * Default: data source database. Here created technical tables (__tm_keeper,
      * __tm_gtid_keeper).
      * </pre>
@@ -4643,6 +4897,10 @@ public final class Mysql {
       return builder;
     }
     /**
+     * <pre>
+     * Settings specific to the MySQL source endpoint
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MysqlSource}
      */
     public static final class Builder extends
@@ -5064,7 +5322,7 @@ public final class Mysql {
       private java.lang.Object database_ = "";
       /**
        * <pre>
-       * Database name
+       * Name of the database to transfer
        * 
        * You can leave it empty, then it will be possible to transfer tables from several
        * databases at the same time from this source.
@@ -5087,7 +5345,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Database name
+       * Name of the database to transfer
        * 
        * You can leave it empty, then it will be possible to transfer tables from several
        * databases at the same time from this source.
@@ -5111,7 +5369,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Database name
+       * Name of the database to transfer
        * 
        * You can leave it empty, then it will be possible to transfer tables from several
        * databases at the same time from this source.
@@ -5133,7 +5391,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Database name
+       * Name of the database to transfer
        * 
        * You can leave it empty, then it will be possible to transfer tables from several
        * databases at the same time from this source.
@@ -5150,7 +5408,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Database name
+       * Name of the database to transfer
        * 
        * You can leave it empty, then it will be possible to transfer tables from several
        * databases at the same time from this source.
@@ -5175,7 +5433,7 @@ public final class Mysql {
       private java.lang.Object user_ = "";
       /**
        * <pre>
-       * User for database access. not required as may be in connection
+       * User for database access. Required unless connection manager connection is used
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -5195,7 +5453,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * User for database access. not required as may be in connection
+       * User for database access. Required unless connection manager connection is used
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -5216,7 +5474,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * User for database access. not required as may be in connection
+       * User for database access. Required unless connection manager connection is used
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -5235,7 +5493,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * User for database access. not required as may be in connection
+       * User for database access. Required unless connection manager connection is used
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -5249,7 +5507,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * User for database access. not required as may be in connection
+       * User for database access. Required unless connection manager connection is used
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -5540,8 +5798,10 @@ public final class Mysql {
       /**
        * <pre>
        * Schema migration
-       * 
-       * Select database objects to be transferred during activation or deactivation.
+       * Defines which database schema objects should be transferred, e.g. views,
+       * routines, etc. 
+       * All of the attrubutes in the block are optional and should be either
+       * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`."
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
@@ -5553,8 +5813,10 @@ public final class Mysql {
       /**
        * <pre>
        * Schema migration
-       * 
-       * Select database objects to be transferred during activation or deactivation.
+       * Defines which database schema objects should be transferred, e.g. views,
+       * routines, etc. 
+       * All of the attrubutes in the block are optional and should be either
+       * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`."
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
@@ -5570,8 +5832,10 @@ public final class Mysql {
       /**
        * <pre>
        * Schema migration
-       * 
-       * Select database objects to be transferred during activation or deactivation.
+       * Defines which database schema objects should be transferred, e.g. views,
+       * routines, etc. 
+       * All of the attrubutes in the block are optional and should be either
+       * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`."
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
@@ -5592,8 +5856,10 @@ public final class Mysql {
       /**
        * <pre>
        * Schema migration
-       * 
-       * Select database objects to be transferred during activation or deactivation.
+       * Defines which database schema objects should be transferred, e.g. views,
+       * routines, etc. 
+       * All of the attrubutes in the block are optional and should be either
+       * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`."
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
@@ -5612,8 +5878,10 @@ public final class Mysql {
       /**
        * <pre>
        * Schema migration
-       * 
-       * Select database objects to be transferred during activation or deactivation.
+       * Defines which database schema objects should be transferred, e.g. views,
+       * routines, etc. 
+       * All of the attrubutes in the block are optional and should be either
+       * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`."
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
@@ -5636,8 +5904,10 @@ public final class Mysql {
       /**
        * <pre>
        * Schema migration
-       * 
-       * Select database objects to be transferred during activation or deactivation.
+       * Defines which database schema objects should be transferred, e.g. views,
+       * routines, etc. 
+       * All of the attrubutes in the block are optional and should be either
+       * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`."
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
@@ -5656,8 +5926,10 @@ public final class Mysql {
       /**
        * <pre>
        * Schema migration
-       * 
-       * Select database objects to be transferred during activation or deactivation.
+       * Defines which database schema objects should be transferred, e.g. views,
+       * routines, etc. 
+       * All of the attrubutes in the block are optional and should be either
+       * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`."
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
@@ -5670,8 +5942,10 @@ public final class Mysql {
       /**
        * <pre>
        * Schema migration
-       * 
-       * Select database objects to be transferred during activation or deactivation.
+       * Defines which database schema objects should be transferred, e.g. views,
+       * routines, etc. 
+       * All of the attrubutes in the block are optional and should be either
+       * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`."
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
@@ -5687,8 +5961,10 @@ public final class Mysql {
       /**
        * <pre>
        * Schema migration
-       * 
-       * Select database objects to be transferred during activation or deactivation.
+       * Defines which database schema objects should be transferred, e.g. views,
+       * routines, etc. 
+       * All of the attrubutes in the block are optional and should be either
+       * `BEFORE_DATA`, `AFTER_DATA` or `NEVER`."
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
@@ -5715,6 +5991,12 @@ public final class Mysql {
          }
       }
       /**
+       * <pre>
+       * List of regular expressions of table names which should be transferred. A table
+       * name is formatted as schemaname.tablename. For example, a single regular
+       * expression may look like `^mydb.employees$`
+       * </pre>
+       *
        * <code>repeated string include_tables_regex = 12;</code>
        * @return A list containing the includeTablesRegex.
        */
@@ -5723,6 +6005,12 @@ public final class Mysql {
         return includeTablesRegex_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of regular expressions of table names which should be transferred. A table
+       * name is formatted as schemaname.tablename. For example, a single regular
+       * expression may look like `^mydb.employees$`
+       * </pre>
+       *
        * <code>repeated string include_tables_regex = 12;</code>
        * @return The count of includeTablesRegex.
        */
@@ -5730,6 +6018,12 @@ public final class Mysql {
         return includeTablesRegex_.size();
       }
       /**
+       * <pre>
+       * List of regular expressions of table names which should be transferred. A table
+       * name is formatted as schemaname.tablename. For example, a single regular
+       * expression may look like `^mydb.employees$`
+       * </pre>
+       *
        * <code>repeated string include_tables_regex = 12;</code>
        * @param index The index of the element to return.
        * @return The includeTablesRegex at the given index.
@@ -5738,6 +6032,12 @@ public final class Mysql {
         return includeTablesRegex_.get(index);
       }
       /**
+       * <pre>
+       * List of regular expressions of table names which should be transferred. A table
+       * name is formatted as schemaname.tablename. For example, a single regular
+       * expression may look like `^mydb.employees$`
+       * </pre>
+       *
        * <code>repeated string include_tables_regex = 12;</code>
        * @param index The index of the value to return.
        * @return The bytes of the includeTablesRegex at the given index.
@@ -5747,6 +6047,12 @@ public final class Mysql {
         return includeTablesRegex_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of regular expressions of table names which should be transferred. A table
+       * name is formatted as schemaname.tablename. For example, a single regular
+       * expression may look like `^mydb.employees$`
+       * </pre>
+       *
        * <code>repeated string include_tables_regex = 12;</code>
        * @param index The index to set the value at.
        * @param value The includeTablesRegex to set.
@@ -5763,6 +6069,12 @@ public final class Mysql {
         return this;
       }
       /**
+       * <pre>
+       * List of regular expressions of table names which should be transferred. A table
+       * name is formatted as schemaname.tablename. For example, a single regular
+       * expression may look like `^mydb.employees$`
+       * </pre>
+       *
        * <code>repeated string include_tables_regex = 12;</code>
        * @param value The includeTablesRegex to add.
        * @return This builder for chaining.
@@ -5778,6 +6090,12 @@ public final class Mysql {
         return this;
       }
       /**
+       * <pre>
+       * List of regular expressions of table names which should be transferred. A table
+       * name is formatted as schemaname.tablename. For example, a single regular
+       * expression may look like `^mydb.employees$`
+       * </pre>
+       *
        * <code>repeated string include_tables_regex = 12;</code>
        * @param values The includeTablesRegex to add.
        * @return This builder for chaining.
@@ -5791,6 +6109,12 @@ public final class Mysql {
         return this;
       }
       /**
+       * <pre>
+       * List of regular expressions of table names which should be transferred. A table
+       * name is formatted as schemaname.tablename. For example, a single regular
+       * expression may look like `^mydb.employees$`
+       * </pre>
+       *
        * <code>repeated string include_tables_regex = 12;</code>
        * @return This builder for chaining.
        */
@@ -5801,6 +6125,12 @@ public final class Mysql {
         return this;
       }
       /**
+       * <pre>
+       * List of regular expressions of table names which should be transferred. A table
+       * name is formatted as schemaname.tablename. For example, a single regular
+       * expression may look like `^mydb.employees$`
+       * </pre>
+       *
        * <code>repeated string include_tables_regex = 12;</code>
        * @param value The bytes of the includeTablesRegex to add.
        * @return This builder for chaining.
@@ -5825,6 +6155,11 @@ public final class Mysql {
          }
       }
       /**
+       * <pre>
+       * Opposite of `include_table_regex`. The tables matching the specified regular
+       * expressions will not be transferred
+       * </pre>
+       *
        * <code>repeated string exclude_tables_regex = 13;</code>
        * @return A list containing the excludeTablesRegex.
        */
@@ -5833,6 +6168,11 @@ public final class Mysql {
         return excludeTablesRegex_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * Opposite of `include_table_regex`. The tables matching the specified regular
+       * expressions will not be transferred
+       * </pre>
+       *
        * <code>repeated string exclude_tables_regex = 13;</code>
        * @return The count of excludeTablesRegex.
        */
@@ -5840,6 +6180,11 @@ public final class Mysql {
         return excludeTablesRegex_.size();
       }
       /**
+       * <pre>
+       * Opposite of `include_table_regex`. The tables matching the specified regular
+       * expressions will not be transferred
+       * </pre>
+       *
        * <code>repeated string exclude_tables_regex = 13;</code>
        * @param index The index of the element to return.
        * @return The excludeTablesRegex at the given index.
@@ -5848,6 +6193,11 @@ public final class Mysql {
         return excludeTablesRegex_.get(index);
       }
       /**
+       * <pre>
+       * Opposite of `include_table_regex`. The tables matching the specified regular
+       * expressions will not be transferred
+       * </pre>
+       *
        * <code>repeated string exclude_tables_regex = 13;</code>
        * @param index The index of the value to return.
        * @return The bytes of the excludeTablesRegex at the given index.
@@ -5857,6 +6207,11 @@ public final class Mysql {
         return excludeTablesRegex_.getByteString(index);
       }
       /**
+       * <pre>
+       * Opposite of `include_table_regex`. The tables matching the specified regular
+       * expressions will not be transferred
+       * </pre>
+       *
        * <code>repeated string exclude_tables_regex = 13;</code>
        * @param index The index to set the value at.
        * @param value The excludeTablesRegex to set.
@@ -5873,6 +6228,11 @@ public final class Mysql {
         return this;
       }
       /**
+       * <pre>
+       * Opposite of `include_table_regex`. The tables matching the specified regular
+       * expressions will not be transferred
+       * </pre>
+       *
        * <code>repeated string exclude_tables_regex = 13;</code>
        * @param value The excludeTablesRegex to add.
        * @return This builder for chaining.
@@ -5888,6 +6248,11 @@ public final class Mysql {
         return this;
       }
       /**
+       * <pre>
+       * Opposite of `include_table_regex`. The tables matching the specified regular
+       * expressions will not be transferred
+       * </pre>
+       *
        * <code>repeated string exclude_tables_regex = 13;</code>
        * @param values The excludeTablesRegex to add.
        * @return This builder for chaining.
@@ -5901,6 +6266,11 @@ public final class Mysql {
         return this;
       }
       /**
+       * <pre>
+       * Opposite of `include_table_regex`. The tables matching the specified regular
+       * expressions will not be transferred
+       * </pre>
+       *
        * <code>repeated string exclude_tables_regex = 13;</code>
        * @return This builder for chaining.
        */
@@ -5911,6 +6281,11 @@ public final class Mysql {
         return this;
       }
       /**
+       * <pre>
+       * Opposite of `include_table_regex`. The tables matching the specified regular
+       * expressions will not be transferred
+       * </pre>
+       *
        * <code>repeated string exclude_tables_regex = 13;</code>
        * @param value The bytes of the excludeTablesRegex to add.
        * @return This builder for chaining.
@@ -5936,7 +6311,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
@@ -5948,7 +6324,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
@@ -5959,7 +6336,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
@@ -5971,7 +6349,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
@@ -5984,7 +6363,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
@@ -6004,7 +6384,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
@@ -6023,7 +6404,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
@@ -6040,7 +6422,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
@@ -6054,7 +6437,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 14;</code>
@@ -6077,7 +6461,6 @@ public final class Mysql {
       /**
        * <pre>
        * Database for service tables
-       * 
        * Default: data source database. Here created technical tables (__tm_keeper,
        * __tm_gtid_keeper).
        * </pre>
@@ -6100,7 +6483,6 @@ public final class Mysql {
       /**
        * <pre>
        * Database for service tables
-       * 
        * Default: data source database. Here created technical tables (__tm_keeper,
        * __tm_gtid_keeper).
        * </pre>
@@ -6124,7 +6506,6 @@ public final class Mysql {
       /**
        * <pre>
        * Database for service tables
-       * 
        * Default: data source database. Here created technical tables (__tm_keeper,
        * __tm_gtid_keeper).
        * </pre>
@@ -6146,7 +6527,6 @@ public final class Mysql {
       /**
        * <pre>
        * Database for service tables
-       * 
        * Default: data source database. Here created technical tables (__tm_keeper,
        * __tm_gtid_keeper).
        * </pre>
@@ -6163,7 +6543,6 @@ public final class Mysql {
       /**
        * <pre>
        * Database for service tables
-       * 
        * Default: data source database. Here created technical tables (__tm_keeper,
        * __tm_gtid_keeper).
        * </pre>
@@ -6297,7 +6676,7 @@ public final class Mysql {
 
     /**
      * <pre>
-     * User for database access. not required as may be in connection
+     * User for database access. Required unless connection manager connection is used
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -6306,7 +6685,7 @@ public final class Mysql {
     java.lang.String getUser();
     /**
      * <pre>
-     * User for database access. not required as may be in connection
+     * User for database access. Required unless connection manager connection is used
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -6344,7 +6723,9 @@ public final class Mysql {
 
     /**
      * <pre>
-     * Default: NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION.
+     * [sql_mode](https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html) to use when
+     * interacting with the server. 
+     * Defaults to `NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION`
      * </pre>
      *
      * <code>string sql_mode = 5;</code>
@@ -6353,7 +6734,9 @@ public final class Mysql {
     java.lang.String getSqlMode();
     /**
      * <pre>
-     * Default: NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION.
+     * [sql_mode](https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html) to use when
+     * interacting with the server. 
+     * Defaults to `NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION`
      * </pre>
      *
      * <code>string sql_mode = 5;</code>
@@ -6365,10 +6748,11 @@ public final class Mysql {
     /**
      * <pre>
      * Disable constraints checks
-     * 
-     * Recommend to disable for increase replication speed, but if schema contain
-     * cascading operations we don't recommend to disable. This option set
-     * FOREIGN_KEY_CHECKS=0 and UNIQUE_CHECKS=0.
+     * When `true`, disables foreign key checks and unique checks. `False` by default.
+     * See
+     * [foreign_key_checks](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_foreign_key_checks).
+     * Recommend to disable for increase replication speed unless schema contains
+     * cascading operations 
      * </pre>
      *
      * <code>bool skip_constraint_checks = 6;</code>
@@ -6404,10 +6788,8 @@ public final class Mysql {
 
     /**
      * <pre>
-     * Cleanup policy
-     * 
-     * Cleanup policy for activate, reactivate and reupload processes. Default is
-     * DISABLED.
+     * Cleanup policy for activate, reactivate and reupload processes.  
+     * One of `DISABLED`, `DROP` or `TRUNCATE` Default is `DISABLED`.
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
@@ -6416,10 +6798,8 @@ public final class Mysql {
     int getCleanupPolicyValue();
     /**
      * <pre>
-     * Cleanup policy
-     * 
-     * Cleanup policy for activate, reactivate and reupload processes. Default is
-     * DISABLED.
+     * Cleanup policy for activate, reactivate and reupload processes.  
+     * One of `DISABLED`, `DROP` or `TRUNCATE` Default is `DISABLED`.
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
@@ -6430,7 +6810,6 @@ public final class Mysql {
     /**
      * <pre>
      * Database schema for service table
-     * 
      * Default: db name. Here created technical tables (__tm_keeper, __tm_gtid_keeper).
      * </pre>
      *
@@ -6441,7 +6820,6 @@ public final class Mysql {
     /**
      * <pre>
      * Database schema for service table
-     * 
      * Default: db name. Here created technical tables (__tm_keeper, __tm_gtid_keeper).
      * </pre>
      *
@@ -6453,7 +6831,8 @@ public final class Mysql {
 
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 16;</code>
@@ -6463,7 +6842,8 @@ public final class Mysql {
         getSecurityGroupsList();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 16;</code>
@@ -6472,7 +6852,8 @@ public final class Mysql {
     int getSecurityGroupsCount();
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 16;</code>
@@ -6482,7 +6863,8 @@ public final class Mysql {
     java.lang.String getSecurityGroups(int index);
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 16;</code>
@@ -6493,12 +6875,20 @@ public final class Mysql {
         getSecurityGroupsBytes(int index);
 
     /**
+     * <pre>
+     * Whether can change table schema if schema changed on source
+     * </pre>
+     *
      * <code>bool is_schema_migration_disabled = 17;</code>
      * @return The isSchemaMigrationDisabled.
      */
     boolean getIsSchemaMigrationDisabled();
   }
   /**
+   * <pre>
+   * Settings specific to the MySQL target endpoint
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MysqlTarget}
    */
   public static final class MysqlTarget extends
@@ -6763,7 +7153,7 @@ public final class Mysql {
     private volatile java.lang.Object user_;
     /**
      * <pre>
-     * User for database access. not required as may be in connection
+     * User for database access. Required unless connection manager connection is used
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -6784,7 +7174,7 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * User for database access. not required as may be in connection
+     * User for database access. Required unless connection manager connection is used
      * </pre>
      *
      * <code>string user = 3;</code>
@@ -6847,7 +7237,9 @@ public final class Mysql {
     private volatile java.lang.Object sqlMode_;
     /**
      * <pre>
-     * Default: NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION.
+     * [sql_mode](https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html) to use when
+     * interacting with the server. 
+     * Defaults to `NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION`
      * </pre>
      *
      * <code>string sql_mode = 5;</code>
@@ -6868,7 +7260,9 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Default: NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION.
+     * [sql_mode](https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html) to use when
+     * interacting with the server. 
+     * Defaults to `NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION`
      * </pre>
      *
      * <code>string sql_mode = 5;</code>
@@ -6894,10 +7288,11 @@ public final class Mysql {
     /**
      * <pre>
      * Disable constraints checks
-     * 
-     * Recommend to disable for increase replication speed, but if schema contain
-     * cascading operations we don't recommend to disable. This option set
-     * FOREIGN_KEY_CHECKS=0 and UNIQUE_CHECKS=0.
+     * When `true`, disables foreign key checks and unique checks. `False` by default.
+     * See
+     * [foreign_key_checks](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_foreign_key_checks).
+     * Recommend to disable for increase replication speed unless schema contains
+     * cascading operations 
      * </pre>
      *
      * <code>bool skip_constraint_checks = 6;</code>
@@ -6964,10 +7359,8 @@ public final class Mysql {
     private int cleanupPolicy_;
     /**
      * <pre>
-     * Cleanup policy
-     * 
-     * Cleanup policy for activate, reactivate and reupload processes. Default is
-     * DISABLED.
+     * Cleanup policy for activate, reactivate and reupload processes.  
+     * One of `DISABLED`, `DROP` or `TRUNCATE` Default is `DISABLED`.
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
@@ -6978,10 +7371,8 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Cleanup policy
-     * 
-     * Cleanup policy for activate, reactivate and reupload processes. Default is
-     * DISABLED.
+     * Cleanup policy for activate, reactivate and reupload processes.  
+     * One of `DISABLED`, `DROP` or `TRUNCATE` Default is `DISABLED`.
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
@@ -6998,7 +7389,6 @@ public final class Mysql {
     /**
      * <pre>
      * Database schema for service table
-     * 
      * Default: db name. Here created technical tables (__tm_keeper, __tm_gtid_keeper).
      * </pre>
      *
@@ -7021,7 +7411,6 @@ public final class Mysql {
     /**
      * <pre>
      * Database schema for service table
-     * 
      * Default: db name. Here created technical tables (__tm_keeper, __tm_gtid_keeper).
      * </pre>
      *
@@ -7047,7 +7436,8 @@ public final class Mysql {
     private com.google.protobuf.LazyStringList securityGroups_;
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 16;</code>
@@ -7059,7 +7449,8 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 16;</code>
@@ -7070,7 +7461,8 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 16;</code>
@@ -7082,7 +7474,8 @@ public final class Mysql {
     }
     /**
      * <pre>
-     * Security groups
+     * List of security groups that the transfer associated with this endpoint should
+     * use
      * </pre>
      *
      * <code>repeated string security_groups = 16;</code>
@@ -7097,6 +7490,10 @@ public final class Mysql {
     public static final int IS_SCHEMA_MIGRATION_DISABLED_FIELD_NUMBER = 17;
     private boolean isSchemaMigrationDisabled_;
     /**
+     * <pre>
+     * Whether can change table schema if schema changed on source
+     * </pre>
+     *
      * <code>bool is_schema_migration_disabled = 17;</code>
      * @return The isSchemaMigrationDisabled.
      */
@@ -7383,6 +7780,10 @@ public final class Mysql {
       return builder;
     }
     /**
+     * <pre>
+     * Settings specific to the MySQL target endpoint
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MysqlTarget}
      */
     public static final class Builder extends
@@ -7897,7 +8298,7 @@ public final class Mysql {
       private java.lang.Object user_ = "";
       /**
        * <pre>
-       * User for database access. not required as may be in connection
+       * User for database access. Required unless connection manager connection is used
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -7917,7 +8318,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * User for database access. not required as may be in connection
+       * User for database access. Required unless connection manager connection is used
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -7938,7 +8339,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * User for database access. not required as may be in connection
+       * User for database access. Required unless connection manager connection is used
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -7957,7 +8358,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * User for database access. not required as may be in connection
+       * User for database access. Required unless connection manager connection is used
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -7971,7 +8372,7 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * User for database access. not required as may be in connection
+       * User for database access. Required unless connection manager connection is used
        * </pre>
        *
        * <code>string user = 3;</code>
@@ -8148,7 +8549,9 @@ public final class Mysql {
       private java.lang.Object sqlMode_ = "";
       /**
        * <pre>
-       * Default: NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION.
+       * [sql_mode](https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html) to use when
+       * interacting with the server. 
+       * Defaults to `NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION`
        * </pre>
        *
        * <code>string sql_mode = 5;</code>
@@ -8168,7 +8571,9 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Default: NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION.
+       * [sql_mode](https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html) to use when
+       * interacting with the server. 
+       * Defaults to `NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION`
        * </pre>
        *
        * <code>string sql_mode = 5;</code>
@@ -8189,7 +8594,9 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Default: NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION.
+       * [sql_mode](https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html) to use when
+       * interacting with the server. 
+       * Defaults to `NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION`
        * </pre>
        *
        * <code>string sql_mode = 5;</code>
@@ -8208,7 +8615,9 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Default: NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION.
+       * [sql_mode](https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html) to use when
+       * interacting with the server. 
+       * Defaults to `NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION`
        * </pre>
        *
        * <code>string sql_mode = 5;</code>
@@ -8222,7 +8631,9 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Default: NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION.
+       * [sql_mode](https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html) to use when
+       * interacting with the server. 
+       * Defaults to `NO_AUTO_VALUE_ON_ZERO,NO_DIR_IN_CREATE,NO_ENGINE_SUBSTITUTION`
        * </pre>
        *
        * <code>string sql_mode = 5;</code>
@@ -8245,10 +8656,11 @@ public final class Mysql {
       /**
        * <pre>
        * Disable constraints checks
-       * 
-       * Recommend to disable for increase replication speed, but if schema contain
-       * cascading operations we don't recommend to disable. This option set
-       * FOREIGN_KEY_CHECKS=0 and UNIQUE_CHECKS=0.
+       * When `true`, disables foreign key checks and unique checks. `False` by default.
+       * See
+       * [foreign_key_checks](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_foreign_key_checks).
+       * Recommend to disable for increase replication speed unless schema contains
+       * cascading operations 
        * </pre>
        *
        * <code>bool skip_constraint_checks = 6;</code>
@@ -8261,10 +8673,11 @@ public final class Mysql {
       /**
        * <pre>
        * Disable constraints checks
-       * 
-       * Recommend to disable for increase replication speed, but if schema contain
-       * cascading operations we don't recommend to disable. This option set
-       * FOREIGN_KEY_CHECKS=0 and UNIQUE_CHECKS=0.
+       * When `true`, disables foreign key checks and unique checks. `False` by default.
+       * See
+       * [foreign_key_checks](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_foreign_key_checks).
+       * Recommend to disable for increase replication speed unless schema contains
+       * cascading operations 
        * </pre>
        *
        * <code>bool skip_constraint_checks = 6;</code>
@@ -8280,10 +8693,11 @@ public final class Mysql {
       /**
        * <pre>
        * Disable constraints checks
-       * 
-       * Recommend to disable for increase replication speed, but if schema contain
-       * cascading operations we don't recommend to disable. This option set
-       * FOREIGN_KEY_CHECKS=0 and UNIQUE_CHECKS=0.
+       * When `true`, disables foreign key checks and unique checks. `False` by default.
+       * See
+       * [foreign_key_checks](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_foreign_key_checks).
+       * Recommend to disable for increase replication speed unless schema contains
+       * cascading operations 
        * </pre>
        *
        * <code>bool skip_constraint_checks = 6;</code>
@@ -8410,10 +8824,8 @@ public final class Mysql {
       private int cleanupPolicy_ = 0;
       /**
        * <pre>
-       * Cleanup policy
-       * 
-       * Cleanup policy for activate, reactivate and reupload processes. Default is
-       * DISABLED.
+       * Cleanup policy for activate, reactivate and reupload processes.  
+       * One of `DISABLED`, `DROP` or `TRUNCATE` Default is `DISABLED`.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
@@ -8424,10 +8836,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Cleanup policy
-       * 
-       * Cleanup policy for activate, reactivate and reupload processes. Default is
-       * DISABLED.
+       * Cleanup policy for activate, reactivate and reupload processes.  
+       * One of `DISABLED`, `DROP` or `TRUNCATE` Default is `DISABLED`.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
@@ -8442,10 +8852,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Cleanup policy
-       * 
-       * Cleanup policy for activate, reactivate and reupload processes. Default is
-       * DISABLED.
+       * Cleanup policy for activate, reactivate and reupload processes.  
+       * One of `DISABLED`, `DROP` or `TRUNCATE` Default is `DISABLED`.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
@@ -8459,10 +8867,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Cleanup policy
-       * 
-       * Cleanup policy for activate, reactivate and reupload processes. Default is
-       * DISABLED.
+       * Cleanup policy for activate, reactivate and reupload processes.  
+       * One of `DISABLED`, `DROP` or `TRUNCATE` Default is `DISABLED`.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
@@ -8480,10 +8886,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Cleanup policy
-       * 
-       * Cleanup policy for activate, reactivate and reupload processes. Default is
-       * DISABLED.
+       * Cleanup policy for activate, reactivate and reupload processes.  
+       * One of `DISABLED`, `DROP` or `TRUNCATE` Default is `DISABLED`.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 8;</code>
@@ -8500,7 +8904,6 @@ public final class Mysql {
       /**
        * <pre>
        * Database schema for service table
-       * 
        * Default: db name. Here created technical tables (__tm_keeper, __tm_gtid_keeper).
        * </pre>
        *
@@ -8522,7 +8925,6 @@ public final class Mysql {
       /**
        * <pre>
        * Database schema for service table
-       * 
        * Default: db name. Here created technical tables (__tm_keeper, __tm_gtid_keeper).
        * </pre>
        *
@@ -8545,7 +8947,6 @@ public final class Mysql {
       /**
        * <pre>
        * Database schema for service table
-       * 
        * Default: db name. Here created technical tables (__tm_keeper, __tm_gtid_keeper).
        * </pre>
        *
@@ -8566,7 +8967,6 @@ public final class Mysql {
       /**
        * <pre>
        * Database schema for service table
-       * 
        * Default: db name. Here created technical tables (__tm_keeper, __tm_gtid_keeper).
        * </pre>
        *
@@ -8582,7 +8982,6 @@ public final class Mysql {
       /**
        * <pre>
        * Database schema for service table
-       * 
        * Default: db name. Here created technical tables (__tm_keeper, __tm_gtid_keeper).
        * </pre>
        *
@@ -8611,7 +9010,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 16;</code>
@@ -8623,7 +9023,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 16;</code>
@@ -8634,7 +9035,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 16;</code>
@@ -8646,7 +9048,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 16;</code>
@@ -8659,7 +9062,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 16;</code>
@@ -8679,7 +9083,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 16;</code>
@@ -8698,7 +9103,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 16;</code>
@@ -8715,7 +9121,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 16;</code>
@@ -8729,7 +9136,8 @@ public final class Mysql {
       }
       /**
        * <pre>
-       * Security groups
+       * List of security groups that the transfer associated with this endpoint should
+       * use
        * </pre>
        *
        * <code>repeated string security_groups = 16;</code>
@@ -8750,6 +9158,10 @@ public final class Mysql {
 
       private boolean isSchemaMigrationDisabled_ ;
       /**
+       * <pre>
+       * Whether can change table schema if schema changed on source
+       * </pre>
+       *
        * <code>bool is_schema_migration_disabled = 17;</code>
        * @return The isSchemaMigrationDisabled.
        */
@@ -8758,6 +9170,10 @@ public final class Mysql {
         return isSchemaMigrationDisabled_;
       }
       /**
+       * <pre>
+       * Whether can change table schema if schema changed on source
+       * </pre>
+       *
        * <code>bool is_schema_migration_disabled = 17;</code>
        * @param value The isSchemaMigrationDisabled to set.
        * @return This builder for chaining.
@@ -8769,6 +9185,10 @@ public final class Mysql {
         return this;
       }
       /**
+       * <pre>
+       * Whether can change table schema if schema changed on source
+       * </pre>
+       *
        * <code>bool is_schema_migration_disabled = 17;</code>
        * @return This builder for chaining.
        */

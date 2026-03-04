@@ -2946,7 +2946,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * Password specification.
+     * Password specification. Credentials type. Exactly one of credentials type must be specified.
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordSpec password_spec = 9;</code>
@@ -2955,7 +2955,7 @@ public final class UserServiceOuterClass {
     boolean hasPasswordSpec();
     /**
      * <pre>
-     * Password specification.
+     * Password specification. Credentials type. Exactly one of credentials type must be specified.
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordSpec password_spec = 9;</code>
@@ -2964,7 +2964,7 @@ public final class UserServiceOuterClass {
     yandex.cloud.api.organizationmanager.v1.idp.UserServiceOuterClass.PasswordSpec getPasswordSpec();
     /**
      * <pre>
-     * Password specification.
+     * Password specification. Credentials type. Exactly one of credentials type must be specified.
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordSpec password_spec = 9;</code>
@@ -2973,7 +2973,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * Password hash.
+     * Password hash. Credentials type. Exactly one of credentials type must be specified.
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordHash password_hash = 11;</code>
@@ -2982,7 +2982,7 @@ public final class UserServiceOuterClass {
     boolean hasPasswordHash();
     /**
      * <pre>
-     * Password hash.
+     * Password hash. Credentials type. Exactly one of credentials type must be specified.
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordHash password_hash = 11;</code>
@@ -2991,7 +2991,7 @@ public final class UserServiceOuterClass {
     yandex.cloud.api.organizationmanager.v1.idp.UserServiceOuterClass.PasswordHash getPasswordHash();
     /**
      * <pre>
-     * Password hash.
+     * Password hash. Credentials type. Exactly one of credentials type must be specified.
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordHash password_hash = 11;</code>
@@ -3045,6 +3045,86 @@ public final class UserServiceOuterClass {
     com.google.protobuf.ByteString
         getExternalIdBytes();
 
+    /**
+     * <pre>
+     * User's company name.
+     * </pre>
+     *
+     * <code>string company_name = 13 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The companyName.
+     */
+    java.lang.String getCompanyName();
+    /**
+     * <pre>
+     * User's company name.
+     * </pre>
+     *
+     * <code>string company_name = 13 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for companyName.
+     */
+    com.google.protobuf.ByteString
+        getCompanyNameBytes();
+
+    /**
+     * <pre>
+     * User's department.
+     * </pre>
+     *
+     * <code>string department = 14 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The department.
+     */
+    java.lang.String getDepartment();
+    /**
+     * <pre>
+     * User's department.
+     * </pre>
+     *
+     * <code>string department = 14 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for department.
+     */
+    com.google.protobuf.ByteString
+        getDepartmentBytes();
+
+    /**
+     * <pre>
+     * User's job title.
+     * </pre>
+     *
+     * <code>string job_title = 15 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The jobTitle.
+     */
+    java.lang.String getJobTitle();
+    /**
+     * <pre>
+     * User's job title.
+     * </pre>
+     *
+     * <code>string job_title = 15 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for jobTitle.
+     */
+    com.google.protobuf.ByteString
+        getJobTitleBytes();
+
+    /**
+     * <pre>
+     * User's employee ID
+     * </pre>
+     *
+     * <code>string employee_id = 16 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The employeeId.
+     */
+    java.lang.String getEmployeeId();
+    /**
+     * <pre>
+     * User's employee ID
+     * </pre>
+     *
+     * <code>string employee_id = 16 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for employeeId.
+     */
+    com.google.protobuf.ByteString
+        getEmployeeIdBytes();
+
     public yandex.cloud.api.organizationmanager.v1.idp.UserServiceOuterClass.CreateUserRequest.CredentialsCase getCredentialsCase();
   }
   /**
@@ -3072,6 +3152,10 @@ public final class UserServiceOuterClass {
       email_ = "";
       phoneNumber_ = "";
       externalId_ = "";
+      companyName_ = "";
+      department_ = "";
+      jobTitle_ = "";
+      employeeId_ = "";
     }
 
     @java.lang.Override
@@ -3191,6 +3275,30 @@ public final class UserServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               externalId_ = s;
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              companyName_ = s;
+              break;
+            }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              department_ = s;
+              break;
+            }
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              jobTitle_ = s;
+              break;
+            }
+            case 130: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              employeeId_ = s;
               break;
             }
             default: {
@@ -3591,7 +3699,7 @@ public final class UserServiceOuterClass {
     public static final int PASSWORD_SPEC_FIELD_NUMBER = 9;
     /**
      * <pre>
-     * Password specification.
+     * Password specification. Credentials type. Exactly one of credentials type must be specified.
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordSpec password_spec = 9;</code>
@@ -3603,7 +3711,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * Password specification.
+     * Password specification. Credentials type. Exactly one of credentials type must be specified.
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordSpec password_spec = 9;</code>
@@ -3618,7 +3726,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * Password specification.
+     * Password specification. Credentials type. Exactly one of credentials type must be specified.
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordSpec password_spec = 9;</code>
@@ -3634,7 +3742,7 @@ public final class UserServiceOuterClass {
     public static final int PASSWORD_HASH_FIELD_NUMBER = 11;
     /**
      * <pre>
-     * Password hash.
+     * Password hash. Credentials type. Exactly one of credentials type must be specified.
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordHash password_hash = 11;</code>
@@ -3646,7 +3754,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * Password hash.
+     * Password hash. Credentials type. Exactly one of credentials type must be specified.
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordHash password_hash = 11;</code>
@@ -3661,7 +3769,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * Password hash.
+     * Password hash. Credentials type. Exactly one of credentials type must be specified.
      * </pre>
      *
      * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordHash password_hash = 11;</code>
@@ -3758,6 +3866,190 @@ public final class UserServiceOuterClass {
       }
     }
 
+    public static final int COMPANY_NAME_FIELD_NUMBER = 13;
+    private volatile java.lang.Object companyName_;
+    /**
+     * <pre>
+     * User's company name.
+     * </pre>
+     *
+     * <code>string company_name = 13 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The companyName.
+     */
+    @java.lang.Override
+    public java.lang.String getCompanyName() {
+      java.lang.Object ref = companyName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        companyName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * User's company name.
+     * </pre>
+     *
+     * <code>string company_name = 13 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for companyName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCompanyNameBytes() {
+      java.lang.Object ref = companyName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        companyName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEPARTMENT_FIELD_NUMBER = 14;
+    private volatile java.lang.Object department_;
+    /**
+     * <pre>
+     * User's department.
+     * </pre>
+     *
+     * <code>string department = 14 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The department.
+     */
+    @java.lang.Override
+    public java.lang.String getDepartment() {
+      java.lang.Object ref = department_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        department_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * User's department.
+     * </pre>
+     *
+     * <code>string department = 14 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for department.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDepartmentBytes() {
+      java.lang.Object ref = department_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        department_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int JOB_TITLE_FIELD_NUMBER = 15;
+    private volatile java.lang.Object jobTitle_;
+    /**
+     * <pre>
+     * User's job title.
+     * </pre>
+     *
+     * <code>string job_title = 15 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The jobTitle.
+     */
+    @java.lang.Override
+    public java.lang.String getJobTitle() {
+      java.lang.Object ref = jobTitle_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        jobTitle_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * User's job title.
+     * </pre>
+     *
+     * <code>string job_title = 15 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for jobTitle.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJobTitleBytes() {
+      java.lang.Object ref = jobTitle_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jobTitle_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EMPLOYEE_ID_FIELD_NUMBER = 16;
+    private volatile java.lang.Object employeeId_;
+    /**
+     * <pre>
+     * User's employee ID
+     * </pre>
+     *
+     * <code>string employee_id = 16 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The employeeId.
+     */
+    @java.lang.Override
+    public java.lang.String getEmployeeId() {
+      java.lang.Object ref = employeeId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        employeeId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * User's employee ID
+     * </pre>
+     *
+     * <code>string employee_id = 16 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for employeeId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEmployeeIdBytes() {
+      java.lang.Object ref = employeeId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        employeeId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3805,6 +4097,18 @@ public final class UserServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, externalId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, companyName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(department_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, department_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jobTitle_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, jobTitle_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(employeeId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, employeeId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3850,6 +4154,18 @@ public final class UserServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, externalId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, companyName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(department_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, department_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jobTitle_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, jobTitle_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(employeeId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, employeeId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3886,6 +4202,14 @@ public final class UserServiceOuterClass {
       }
       if (!getExternalId()
           .equals(other.getExternalId())) return false;
+      if (!getCompanyName()
+          .equals(other.getCompanyName())) return false;
+      if (!getDepartment()
+          .equals(other.getDepartment())) return false;
+      if (!getJobTitle()
+          .equals(other.getJobTitle())) return false;
+      if (!getEmployeeId()
+          .equals(other.getEmployeeId())) return false;
       if (!getCredentialsCase().equals(other.getCredentialsCase())) return false;
       switch (credentialsCase_) {
         case 9:
@@ -3930,6 +4254,14 @@ public final class UserServiceOuterClass {
       }
       hash = (37 * hash) + EXTERNAL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getExternalId().hashCode();
+      hash = (37 * hash) + COMPANY_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getCompanyName().hashCode();
+      hash = (37 * hash) + DEPARTMENT_FIELD_NUMBER;
+      hash = (53 * hash) + getDepartment().hashCode();
+      hash = (37 * hash) + JOB_TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getJobTitle().hashCode();
+      hash = (37 * hash) + EMPLOYEE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getEmployeeId().hashCode();
       switch (credentialsCase_) {
         case 9:
           hash = (37 * hash) + PASSWORD_SPEC_FIELD_NUMBER;
@@ -4101,6 +4433,14 @@ public final class UserServiceOuterClass {
         }
         externalId_ = "";
 
+        companyName_ = "";
+
+        department_ = "";
+
+        jobTitle_ = "";
+
+        employeeId_ = "";
+
         credentialsCase_ = 0;
         credentials_ = null;
         return this;
@@ -4156,6 +4496,10 @@ public final class UserServiceOuterClass {
           result.isActive_ = isActiveBuilder_.build();
         }
         result.externalId_ = externalId_;
+        result.companyName_ = companyName_;
+        result.department_ = department_;
+        result.jobTitle_ = jobTitle_;
+        result.employeeId_ = employeeId_;
         result.credentialsCase_ = credentialsCase_;
         onBuilt();
         return result;
@@ -4238,6 +4582,22 @@ public final class UserServiceOuterClass {
         }
         if (!other.getExternalId().isEmpty()) {
           externalId_ = other.externalId_;
+          onChanged();
+        }
+        if (!other.getCompanyName().isEmpty()) {
+          companyName_ = other.companyName_;
+          onChanged();
+        }
+        if (!other.getDepartment().isEmpty()) {
+          department_ = other.department_;
+          onChanged();
+        }
+        if (!other.getJobTitle().isEmpty()) {
+          jobTitle_ = other.jobTitle_;
+          onChanged();
+        }
+        if (!other.getEmployeeId().isEmpty()) {
+          employeeId_ = other.employeeId_;
           onChanged();
         }
         switch (other.getCredentialsCase()) {
@@ -4973,7 +5333,7 @@ public final class UserServiceOuterClass {
           yandex.cloud.api.organizationmanager.v1.idp.UserServiceOuterClass.PasswordSpec, yandex.cloud.api.organizationmanager.v1.idp.UserServiceOuterClass.PasswordSpec.Builder, yandex.cloud.api.organizationmanager.v1.idp.UserServiceOuterClass.PasswordSpecOrBuilder> passwordSpecBuilder_;
       /**
        * <pre>
-       * Password specification.
+       * Password specification. Credentials type. Exactly one of credentials type must be specified.
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordSpec password_spec = 9;</code>
@@ -4985,7 +5345,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Password specification.
+       * Password specification. Credentials type. Exactly one of credentials type must be specified.
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordSpec password_spec = 9;</code>
@@ -5007,7 +5367,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Password specification.
+       * Password specification. Credentials type. Exactly one of credentials type must be specified.
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordSpec password_spec = 9;</code>
@@ -5027,7 +5387,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Password specification.
+       * Password specification. Credentials type. Exactly one of credentials type must be specified.
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordSpec password_spec = 9;</code>
@@ -5045,7 +5405,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Password specification.
+       * Password specification. Credentials type. Exactly one of credentials type must be specified.
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordSpec password_spec = 9;</code>
@@ -5071,7 +5431,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Password specification.
+       * Password specification. Credentials type. Exactly one of credentials type must be specified.
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordSpec password_spec = 9;</code>
@@ -5094,7 +5454,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Password specification.
+       * Password specification. Credentials type. Exactly one of credentials type must be specified.
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordSpec password_spec = 9;</code>
@@ -5104,7 +5464,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Password specification.
+       * Password specification. Credentials type. Exactly one of credentials type must be specified.
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordSpec password_spec = 9;</code>
@@ -5122,7 +5482,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Password specification.
+       * Password specification. Credentials type. Exactly one of credentials type must be specified.
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordSpec password_spec = 9;</code>
@@ -5150,7 +5510,7 @@ public final class UserServiceOuterClass {
           yandex.cloud.api.organizationmanager.v1.idp.UserServiceOuterClass.PasswordHash, yandex.cloud.api.organizationmanager.v1.idp.UserServiceOuterClass.PasswordHash.Builder, yandex.cloud.api.organizationmanager.v1.idp.UserServiceOuterClass.PasswordHashOrBuilder> passwordHashBuilder_;
       /**
        * <pre>
-       * Password hash.
+       * Password hash. Credentials type. Exactly one of credentials type must be specified.
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordHash password_hash = 11;</code>
@@ -5162,7 +5522,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Password hash.
+       * Password hash. Credentials type. Exactly one of credentials type must be specified.
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordHash password_hash = 11;</code>
@@ -5184,7 +5544,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Password hash.
+       * Password hash. Credentials type. Exactly one of credentials type must be specified.
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordHash password_hash = 11;</code>
@@ -5204,7 +5564,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Password hash.
+       * Password hash. Credentials type. Exactly one of credentials type must be specified.
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordHash password_hash = 11;</code>
@@ -5222,7 +5582,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Password hash.
+       * Password hash. Credentials type. Exactly one of credentials type must be specified.
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordHash password_hash = 11;</code>
@@ -5248,7 +5608,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Password hash.
+       * Password hash. Credentials type. Exactly one of credentials type must be specified.
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordHash password_hash = 11;</code>
@@ -5271,7 +5631,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Password hash.
+       * Password hash. Credentials type. Exactly one of credentials type must be specified.
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordHash password_hash = 11;</code>
@@ -5281,7 +5641,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Password hash.
+       * Password hash. Credentials type. Exactly one of credentials type must be specified.
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordHash password_hash = 11;</code>
@@ -5299,7 +5659,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Password hash.
+       * Password hash. Credentials type. Exactly one of credentials type must be specified.
        * </pre>
        *
        * <code>.yandex.cloud.organizationmanager.v1.idp.PasswordHash password_hash = 11;</code>
@@ -5570,6 +5930,390 @@ public final class UserServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         externalId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object companyName_ = "";
+      /**
+       * <pre>
+       * User's company name.
+       * </pre>
+       *
+       * <code>string company_name = 13 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The companyName.
+       */
+      public java.lang.String getCompanyName() {
+        java.lang.Object ref = companyName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          companyName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User's company name.
+       * </pre>
+       *
+       * <code>string company_name = 13 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for companyName.
+       */
+      public com.google.protobuf.ByteString
+          getCompanyNameBytes() {
+        java.lang.Object ref = companyName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          companyName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User's company name.
+       * </pre>
+       *
+       * <code>string company_name = 13 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The companyName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompanyName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        companyName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User's company name.
+       * </pre>
+       *
+       * <code>string company_name = 13 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCompanyName() {
+        
+        companyName_ = getDefaultInstance().getCompanyName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User's company name.
+       * </pre>
+       *
+       * <code>string company_name = 13 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for companyName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompanyNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        companyName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object department_ = "";
+      /**
+       * <pre>
+       * User's department.
+       * </pre>
+       *
+       * <code>string department = 14 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The department.
+       */
+      public java.lang.String getDepartment() {
+        java.lang.Object ref = department_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          department_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User's department.
+       * </pre>
+       *
+       * <code>string department = 14 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for department.
+       */
+      public com.google.protobuf.ByteString
+          getDepartmentBytes() {
+        java.lang.Object ref = department_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          department_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User's department.
+       * </pre>
+       *
+       * <code>string department = 14 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The department to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepartment(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        department_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User's department.
+       * </pre>
+       *
+       * <code>string department = 14 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDepartment() {
+        
+        department_ = getDefaultInstance().getDepartment();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User's department.
+       * </pre>
+       *
+       * <code>string department = 14 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for department to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepartmentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        department_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object jobTitle_ = "";
+      /**
+       * <pre>
+       * User's job title.
+       * </pre>
+       *
+       * <code>string job_title = 15 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The jobTitle.
+       */
+      public java.lang.String getJobTitle() {
+        java.lang.Object ref = jobTitle_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          jobTitle_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User's job title.
+       * </pre>
+       *
+       * <code>string job_title = 15 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for jobTitle.
+       */
+      public com.google.protobuf.ByteString
+          getJobTitleBytes() {
+        java.lang.Object ref = jobTitle_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jobTitle_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User's job title.
+       * </pre>
+       *
+       * <code>string job_title = 15 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The jobTitle to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobTitle(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        jobTitle_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User's job title.
+       * </pre>
+       *
+       * <code>string job_title = 15 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJobTitle() {
+        
+        jobTitle_ = getDefaultInstance().getJobTitle();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User's job title.
+       * </pre>
+       *
+       * <code>string job_title = 15 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for jobTitle to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        jobTitle_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object employeeId_ = "";
+      /**
+       * <pre>
+       * User's employee ID
+       * </pre>
+       *
+       * <code>string employee_id = 16 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The employeeId.
+       */
+      public java.lang.String getEmployeeId() {
+        java.lang.Object ref = employeeId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          employeeId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User's employee ID
+       * </pre>
+       *
+       * <code>string employee_id = 16 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for employeeId.
+       */
+      public com.google.protobuf.ByteString
+          getEmployeeIdBytes() {
+        java.lang.Object ref = employeeId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          employeeId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User's employee ID
+       * </pre>
+       *
+       * <code>string employee_id = 16 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The employeeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmployeeId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        employeeId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User's employee ID
+       * </pre>
+       *
+       * <code>string employee_id = 16 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmployeeId() {
+        
+        employeeId_ = getDefaultInstance().getEmployeeId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User's employee ID
+       * </pre>
+       *
+       * <code>string employee_id = 16 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for employeeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmployeeIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        employeeId_ = value;
         onChanged();
         return this;
       }
@@ -6408,6 +7152,86 @@ public final class UserServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getPhoneNumberBytes();
+
+    /**
+     * <pre>
+     * New company name for the user.
+     * </pre>
+     *
+     * <code>string company_name = 10 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The companyName.
+     */
+    java.lang.String getCompanyName();
+    /**
+     * <pre>
+     * New company name for the user.
+     * </pre>
+     *
+     * <code>string company_name = 10 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for companyName.
+     */
+    com.google.protobuf.ByteString
+        getCompanyNameBytes();
+
+    /**
+     * <pre>
+     * New department for the user.
+     * </pre>
+     *
+     * <code>string department = 11 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The department.
+     */
+    java.lang.String getDepartment();
+    /**
+     * <pre>
+     * New department for the user.
+     * </pre>
+     *
+     * <code>string department = 11 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for department.
+     */
+    com.google.protobuf.ByteString
+        getDepartmentBytes();
+
+    /**
+     * <pre>
+     * New job title for the user.
+     * </pre>
+     *
+     * <code>string job_title = 12 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The jobTitle.
+     */
+    java.lang.String getJobTitle();
+    /**
+     * <pre>
+     * New job title for the user.
+     * </pre>
+     *
+     * <code>string job_title = 12 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for jobTitle.
+     */
+    com.google.protobuf.ByteString
+        getJobTitleBytes();
+
+    /**
+     * <pre>
+     * New employee ID for the user.
+     * </pre>
+     *
+     * <code>string employee_id = 13 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The employeeId.
+     */
+    java.lang.String getEmployeeId();
+    /**
+     * <pre>
+     * New employee ID for the user.
+     * </pre>
+     *
+     * <code>string employee_id = 13 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for employeeId.
+     */
+    com.google.protobuf.ByteString
+        getEmployeeIdBytes();
   }
   /**
    * <pre>
@@ -6433,6 +7257,10 @@ public final class UserServiceOuterClass {
       familyName_ = "";
       email_ = "";
       phoneNumber_ = "";
+      companyName_ = "";
+      department_ = "";
+      jobTitle_ = "";
+      employeeId_ = "";
     }
 
     @java.lang.Override
@@ -6518,6 +7346,30 @@ public final class UserServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               phoneNumber_ = s;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              companyName_ = s;
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              department_ = s;
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              jobTitle_ = s;
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              employeeId_ = s;
               break;
             }
             default: {
@@ -6912,6 +7764,190 @@ public final class UserServiceOuterClass {
       }
     }
 
+    public static final int COMPANY_NAME_FIELD_NUMBER = 10;
+    private volatile java.lang.Object companyName_;
+    /**
+     * <pre>
+     * New company name for the user.
+     * </pre>
+     *
+     * <code>string company_name = 10 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The companyName.
+     */
+    @java.lang.Override
+    public java.lang.String getCompanyName() {
+      java.lang.Object ref = companyName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        companyName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * New company name for the user.
+     * </pre>
+     *
+     * <code>string company_name = 10 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for companyName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCompanyNameBytes() {
+      java.lang.Object ref = companyName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        companyName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEPARTMENT_FIELD_NUMBER = 11;
+    private volatile java.lang.Object department_;
+    /**
+     * <pre>
+     * New department for the user.
+     * </pre>
+     *
+     * <code>string department = 11 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The department.
+     */
+    @java.lang.Override
+    public java.lang.String getDepartment() {
+      java.lang.Object ref = department_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        department_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * New department for the user.
+     * </pre>
+     *
+     * <code>string department = 11 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for department.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDepartmentBytes() {
+      java.lang.Object ref = department_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        department_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int JOB_TITLE_FIELD_NUMBER = 12;
+    private volatile java.lang.Object jobTitle_;
+    /**
+     * <pre>
+     * New job title for the user.
+     * </pre>
+     *
+     * <code>string job_title = 12 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The jobTitle.
+     */
+    @java.lang.Override
+    public java.lang.String getJobTitle() {
+      java.lang.Object ref = jobTitle_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        jobTitle_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * New job title for the user.
+     * </pre>
+     *
+     * <code>string job_title = 12 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for jobTitle.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJobTitleBytes() {
+      java.lang.Object ref = jobTitle_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jobTitle_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EMPLOYEE_ID_FIELD_NUMBER = 13;
+    private volatile java.lang.Object employeeId_;
+    /**
+     * <pre>
+     * New employee ID for the user.
+     * </pre>
+     *
+     * <code>string employee_id = 13 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The employeeId.
+     */
+    @java.lang.Override
+    public java.lang.String getEmployeeId() {
+      java.lang.Object ref = employeeId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        employeeId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * New employee ID for the user.
+     * </pre>
+     *
+     * <code>string employee_id = 13 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for employeeId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEmployeeIdBytes() {
+      java.lang.Object ref = employeeId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        employeeId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6950,6 +7986,18 @@ public final class UserServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, phoneNumber_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, companyName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(department_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, department_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jobTitle_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, jobTitle_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(employeeId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, employeeId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6983,6 +8031,18 @@ public final class UserServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, phoneNumber_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, companyName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(department_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, department_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jobTitle_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, jobTitle_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(employeeId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, employeeId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7018,6 +8078,14 @@ public final class UserServiceOuterClass {
           .equals(other.getEmail())) return false;
       if (!getPhoneNumber()
           .equals(other.getPhoneNumber())) return false;
+      if (!getCompanyName()
+          .equals(other.getCompanyName())) return false;
+      if (!getDepartment()
+          .equals(other.getDepartment())) return false;
+      if (!getJobTitle()
+          .equals(other.getJobTitle())) return false;
+      if (!getEmployeeId()
+          .equals(other.getEmployeeId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7047,6 +8115,14 @@ public final class UserServiceOuterClass {
       hash = (53 * hash) + getEmail().hashCode();
       hash = (37 * hash) + PHONE_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getPhoneNumber().hashCode();
+      hash = (37 * hash) + COMPANY_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getCompanyName().hashCode();
+      hash = (37 * hash) + DEPARTMENT_FIELD_NUMBER;
+      hash = (53 * hash) + getDepartment().hashCode();
+      hash = (37 * hash) + JOB_TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getJobTitle().hashCode();
+      hash = (37 * hash) + EMPLOYEE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getEmployeeId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7204,6 +8280,14 @@ public final class UserServiceOuterClass {
 
         phoneNumber_ = "";
 
+        companyName_ = "";
+
+        department_ = "";
+
+        jobTitle_ = "";
+
+        employeeId_ = "";
+
         return this;
       }
 
@@ -7242,6 +8326,10 @@ public final class UserServiceOuterClass {
         result.familyName_ = familyName_;
         result.email_ = email_;
         result.phoneNumber_ = phoneNumber_;
+        result.companyName_ = companyName_;
+        result.department_ = department_;
+        result.jobTitle_ = jobTitle_;
+        result.employeeId_ = employeeId_;
         onBuilt();
         return result;
       }
@@ -7319,6 +8407,22 @@ public final class UserServiceOuterClass {
         }
         if (!other.getPhoneNumber().isEmpty()) {
           phoneNumber_ = other.phoneNumber_;
+          onChanged();
+        }
+        if (!other.getCompanyName().isEmpty()) {
+          companyName_ = other.companyName_;
+          onChanged();
+        }
+        if (!other.getDepartment().isEmpty()) {
+          department_ = other.department_;
+          onChanged();
+        }
+        if (!other.getJobTitle().isEmpty()) {
+          jobTitle_ = other.jobTitle_;
+          onChanged();
+        }
+        if (!other.getEmployeeId().isEmpty()) {
+          employeeId_ = other.employeeId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -8173,6 +9277,390 @@ public final class UserServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         phoneNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object companyName_ = "";
+      /**
+       * <pre>
+       * New company name for the user.
+       * </pre>
+       *
+       * <code>string company_name = 10 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The companyName.
+       */
+      public java.lang.String getCompanyName() {
+        java.lang.Object ref = companyName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          companyName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New company name for the user.
+       * </pre>
+       *
+       * <code>string company_name = 10 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for companyName.
+       */
+      public com.google.protobuf.ByteString
+          getCompanyNameBytes() {
+        java.lang.Object ref = companyName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          companyName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New company name for the user.
+       * </pre>
+       *
+       * <code>string company_name = 10 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The companyName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompanyName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        companyName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New company name for the user.
+       * </pre>
+       *
+       * <code>string company_name = 10 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCompanyName() {
+        
+        companyName_ = getDefaultInstance().getCompanyName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New company name for the user.
+       * </pre>
+       *
+       * <code>string company_name = 10 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for companyName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompanyNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        companyName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object department_ = "";
+      /**
+       * <pre>
+       * New department for the user.
+       * </pre>
+       *
+       * <code>string department = 11 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The department.
+       */
+      public java.lang.String getDepartment() {
+        java.lang.Object ref = department_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          department_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New department for the user.
+       * </pre>
+       *
+       * <code>string department = 11 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for department.
+       */
+      public com.google.protobuf.ByteString
+          getDepartmentBytes() {
+        java.lang.Object ref = department_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          department_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New department for the user.
+       * </pre>
+       *
+       * <code>string department = 11 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The department to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepartment(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        department_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New department for the user.
+       * </pre>
+       *
+       * <code>string department = 11 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDepartment() {
+        
+        department_ = getDefaultInstance().getDepartment();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New department for the user.
+       * </pre>
+       *
+       * <code>string department = 11 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for department to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepartmentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        department_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object jobTitle_ = "";
+      /**
+       * <pre>
+       * New job title for the user.
+       * </pre>
+       *
+       * <code>string job_title = 12 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The jobTitle.
+       */
+      public java.lang.String getJobTitle() {
+        java.lang.Object ref = jobTitle_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          jobTitle_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New job title for the user.
+       * </pre>
+       *
+       * <code>string job_title = 12 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for jobTitle.
+       */
+      public com.google.protobuf.ByteString
+          getJobTitleBytes() {
+        java.lang.Object ref = jobTitle_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jobTitle_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New job title for the user.
+       * </pre>
+       *
+       * <code>string job_title = 12 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The jobTitle to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobTitle(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        jobTitle_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New job title for the user.
+       * </pre>
+       *
+       * <code>string job_title = 12 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJobTitle() {
+        
+        jobTitle_ = getDefaultInstance().getJobTitle();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New job title for the user.
+       * </pre>
+       *
+       * <code>string job_title = 12 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for jobTitle to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        jobTitle_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object employeeId_ = "";
+      /**
+       * <pre>
+       * New employee ID for the user.
+       * </pre>
+       *
+       * <code>string employee_id = 13 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The employeeId.
+       */
+      public java.lang.String getEmployeeId() {
+        java.lang.Object ref = employeeId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          employeeId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New employee ID for the user.
+       * </pre>
+       *
+       * <code>string employee_id = 13 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for employeeId.
+       */
+      public com.google.protobuf.ByteString
+          getEmployeeIdBytes() {
+        java.lang.Object ref = employeeId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          employeeId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New employee ID for the user.
+       * </pre>
+       *
+       * <code>string employee_id = 13 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The employeeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmployeeId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        employeeId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New employee ID for the user.
+       * </pre>
+       *
+       * <code>string employee_id = 13 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmployeeId() {
+        
+        employeeId_ = getDefaultInstance().getEmployeeId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New employee ID for the user.
+       * </pre>
+       *
+       * <code>string employee_id = 13 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for employeeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmployeeIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        employeeId_ = value;
         onChanged();
         return this;
       }
@@ -27952,7 +29440,7 @@ public final class UserServiceOuterClass {
       "B\n\212\3101\006<=1000\"j\n\021ListUsersResponse\022<\n\005use" +
       "rs\030\001 \003(\0132-.yandex.cloud.organizationmana" +
       "ger.v1.idp.User\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\"\255\004\n\021CreateUserRequest\022!\n\013userpool_id\030\001 " +
+      "\"\253\005\n\021CreateUserRequest\022!\n\013userpool_id\030\001 " +
       "\001(\tB\014\350\3071\001\212\3101\004<=50\022A\n\010username\030\002 \001(\tB/\350\3071" +
       "\001\212\3101\005<=254\362\3071\036[a-z0-9A-Z\\._-]{1,64}@.{1," +
       "256}\022 \n\tfull_name\030\004 \001(\tB\r\350\3071\001\212\3101\005<=256\022\035" +
@@ -27965,153 +29453,160 @@ public final class UserServiceOuterClass {
       "yandex.cloud.organizationmanager.v1.idp." +
       "PasswordHashH\000\022-\n\tis_active\030\n \001(\0132\032.goog" +
       "le.protobuf.BoolValue\022\036\n\013external_id\030\014 \001" +
-      "(\tB\t\212\3101\005<=256B\023\n\013credentials\022\004\300\3011\001J\004\010\003\020\004" +
-      "\"%\n\022CreateUserMetadata\022\017\n\007user_id\030\001 \001(\t\"" +
-      "\317\002\n\021UpdateUserRequest\022\035\n\007user_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.goog" +
-      "le.protobuf.FieldMask\022>\n\010username\030\003 \001(\tB" +
-      ",\212\3101\005<=254\362\3071\037|[a-z0-9A-Z\\._-]{1,64}@.{1" +
-      ",256}\022\034\n\tfull_name\030\005 \001(\tB\t\212\3101\005<=256\022\035\n\ng" +
-      "iven_name\030\006 \001(\tB\t\212\3101\005<=256\022\036\n\013family_nam" +
-      "e\030\007 \001(\tB\t\212\3101\005<=256\022\'\n\005email\030\010 \001(\tB\030\212\3101\005<" +
-      "=254\362\3071\013|(.{3,254})\022\036\n\014phone_number\030\t \001(" +
-      "\tB\010\212\3101\004<=50J\004\010\004\020\005\"%\n\022UpdateUserMetadata\022" +
-      "\017\n\007user_id\030\001 \001(\t\"2\n\021DeleteUserRequest\022\035\n" +
-      "\007user_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"%\n\022DeleteUs" +
-      "erMetadata\022\017\n\007user_id\030\001 \001(\t\"R\n\022SuspendUs" +
+      "(\tB\t\212\3101\005<=256\022\037\n\014company_name\030\r \001(\tB\t\212\3101" +
+      "\005<=256\022\035\n\ndepartment\030\016 \001(\tB\t\212\3101\005<=256\022\034\n" +
+      "\tjob_title\030\017 \001(\tB\t\212\3101\005<=256\022\036\n\013employee_" +
+      "id\030\020 \001(\tB\t\212\3101\005<=256B\023\n\013credentials\022\004\300\3011\001" +
+      "J\004\010\003\020\004\"%\n\022CreateUserMetadata\022\017\n\007user_id\030" +
+      "\001 \001(\t\"\315\003\n\021UpdateUserRequest\022\035\n\007user_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132" +
+      "\032.google.protobuf.FieldMask\022>\n\010username\030" +
+      "\003 \001(\tB,\212\3101\005<=254\362\3071\037|[a-z0-9A-Z\\._-]{1,6" +
+      "4}@.{1,256}\022\034\n\tfull_name\030\005 \001(\tB\t\212\3101\005<=25" +
+      "6\022\035\n\ngiven_name\030\006 \001(\tB\t\212\3101\005<=256\022\036\n\013fami" +
+      "ly_name\030\007 \001(\tB\t\212\3101\005<=256\022\'\n\005email\030\010 \001(\tB" +
+      "\030\212\3101\005<=254\362\3071\013|(.{3,254})\022\036\n\014phone_numbe" +
+      "r\030\t \001(\tB\010\212\3101\004<=50\022\037\n\014company_name\030\n \001(\tB" +
+      "\t\212\3101\005<=256\022\035\n\ndepartment\030\013 \001(\tB\t\212\3101\005<=25" +
+      "6\022\034\n\tjob_title\030\014 \001(\tB\t\212\3101\005<=256\022\036\n\013emplo" +
+      "yee_id\030\r \001(\tB\t\212\3101\005<=256J\004\010\004\020\005\"%\n\022UpdateU" +
+      "serMetadata\022\017\n\007user_id\030\001 \001(\t\"2\n\021DeleteUs" +
       "erRequest\022\035\n\007user_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022\035\n\006reason\030\002 \001(\tB\r\350\3071\000\212\3101\005<=256\"&\n\023Suspe" +
-      "ndUserMetadata\022\017\n\007user_id\030\001 \001(\t\"6\n\025React" +
-      "ivateUserRequest\022\035\n\007user_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\")\n\026ReactivateUserMetadata\022\017\n\007use" +
-      "r_id\030\001 \001(\t\"\220\001\n\025SetOwnPasswordRequest\022R\n\r" +
-      "password_spec\030\001 \001(\01325.yandex.cloud.organ" +
-      "izationmanager.v1.idp.PasswordSpecB\004\350\3071\001" +
-      "\022#\n\014old_password\030\002 \001(\tB\r\350\3071\001\212\3101\005<=128\")\n" +
-      "\026SetOwnPasswordMetadata\022\017\n\007user_id\030\001 \001(\t" +
-      "\"\030\n\026SetOwnPasswordResponse\"\215\001\n\030SetOthers" +
-      "PasswordRequest\022\035\n\007user_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022R\n\rpassword_spec\030\002 \001(\01325.yandex.c" +
-      "loud.organizationmanager.v1.idp.Password" +
-      "SpecB\004\350\3071\001\",\n\031SetOthersPasswordMetadata\022" +
-      "\017\n\007user_id\030\001 \001(\t\"\033\n\031SetOthersPasswordRes" +
-      "ponse\"\031\n\027GeneratePasswordRequest\"h\n\030Gene" +
-      "ratePasswordResponse\022L\n\rpassword_spec\030\001 " +
-      "\001(\01325.yandex.cloud.organizationmanager.v" +
-      "1.idp.PasswordSpec\"T\n\014PasswordSpec\022\037\n\010pa" +
-      "ssword\030\001 \001(\tB\r\350\3071\001\212\3101\005<=128\022#\n\020generatio" +
-      "n_proof\030\002 \001(\tB\t\212\3101\005<=128\"\320\003\n\020PasswordMet" +
-      "adata\022\n\n\002id\030\001 \001(\t\022T\n\004type\030\002 \001(\0162F.yandex" +
+      "\"%\n\022DeleteUserMetadata\022\017\n\007user_id\030\001 \001(\t\"" +
+      "R\n\022SuspendUserRequest\022\035\n\007user_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022\035\n\006reason\030\002 \001(\tB\r\350\3071\000\212\3101\005<=" +
+      "256\"&\n\023SuspendUserMetadata\022\017\n\007user_id\030\001 " +
+      "\001(\t\"6\n\025ReactivateUserRequest\022\035\n\007user_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\026ReactivateUserMet" +
+      "adata\022\017\n\007user_id\030\001 \001(\t\"\220\001\n\025SetOwnPasswor" +
+      "dRequest\022R\n\rpassword_spec\030\001 \001(\01325.yandex" +
       ".cloud.organizationmanager.v1.idp.Passwo" +
-      "rdMetadata.PasswordType\022.\n\ncreated_at\030\003 " +
-      "\001(\0132\032.google.protobuf.Timestamp\022.\n\nexpir" +
-      "es_at\030\004 \001(\0132\032.google.protobuf.Timestamp\022" +
-      "[\n\nlast_usage\030\005 \001(\0132G.yandex.cloud.organ" +
-      "izationmanager.v1.idp.PasswordMetadata.P" +
-      "asswordUsage\032P\n\rPasswordUsage\022+\n\007used_at" +
-      "\030\001 \001(\0132\032.google.protobuf.Timestamp\022\022\n\nip" +
-      "_address\030\002 \001(\t\"K\n\014PasswordType\022\035\n\031PASSWO" +
-      "RD_TYPE_UNSPECIFIED\020\000\022\r\n\tTEMPORARY\020\001\022\r\n\t" +
-      "PERMANENT\020\002\"a\n\034ConvertToExternalUserRequ" +
-      "est\022\035\n\007user_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\"\n\013ex" +
-      "ternal_id\030\002 \001(\tB\r\350\3071\001\212\3101\005<=256\"E\n\035Conver" +
-      "tToExternalUserMetadata\022\017\n\007user_id\030\001 \001(\t" +
-      "\022\023\n\013external_id\030\002 \001(\t\"|\n\026SetPasswordHash" +
-      "Request\022\035\n\007user_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022C" +
-      "\n\004hash\030\002 \001(\01325.yandex.cloud.organization" +
-      "manager.v1.idp.PasswordHash\"*\n\027SetPasswo" +
-      "rdHashMetadata\022\017\n\007user_id\030\001 \001(\t\"\342\001\n\014Pass" +
-      "wordHash\022$\n\rpassword_hash\030\001 \001(\tB\r\350\3071\001\212\3101" +
-      "\005<=128\022h\n\022password_hash_type\030\002 \001(\0162F.yan" +
-      "dex.cloud.organizationmanager.v1.idp.Pas" +
-      "swordHash.PasswordHashTypeB\004\350\3071\001\"B\n\020Pass" +
-      "wordHashType\022\"\n\036PASSWORD_HASH_TYPE_UNSPE" +
-      "CIFIED\020\000\022\n\n\006AD_MD4\020\001\"i\n\031ResolveExternalI" +
-      "dsRequest\022!\n\013userpool_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022)\n\014external_ids\030\002 \003(\tB\023\202\3101\0061-1000\212\310" +
-      "1\005<=256\"I\n\014ResolvedUser\022\017\n\007user_id\030\001 \001(\t" +
-      "\022\023\n\013external_id\030\002 \001(\t\022\023\n\013userpool_id\030\003 \001" +
-      "(\t\"k\n\032ResolveExternalIdsResponse\022M\n\016reso" +
-      "lved_users\030\001 \003(\01325.yandex.cloud.organiza" +
-      "tionmanager.v1.idp.ResolvedUser2\256\027\n\013User" +
-      "Service\022\243\001\n\003Get\0227.yandex.cloud.organizat" +
-      "ionmanager.v1.idp.GetUserRequest\032-.yande" +
-      "x.cloud.organizationmanager.v1.idp.User\"" +
-      "4\202\323\344\223\002.\022,/organization-manager/v1/idp/us" +
-      "ers/{user_id}\022\251\001\n\004List\0229.yandex.cloud.or" +
-      "ganizationmanager.v1.idp.ListUsersReques" +
-      "t\032:.yandex.cloud.organizationmanager.v1." +
-      "idp.ListUsersResponse\"*\202\323\344\223\002$\022\"/organiza" +
-      "tion-manager/v1/idp/users\022\264\001\n\006Create\022:.y" +
-      "andex.cloud.organizationmanager.v1.idp.C" +
-      "reateUserRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"K\202\323\344\223\002\'\"\"/organization-manag" +
-      "er/v1/idp/users:\001*\262\322*\032\n\022CreateUserMetada" +
-      "ta\022\004User\022\276\001\n\006Update\022:.yandex.cloud.organ" +
-      "izationmanager.v1.idp.UpdateUserRequest\032" +
-      "!.yandex.cloud.operation.Operation\"U\202\323\344\223" +
-      "\00212,/organization-manager/v1/idp/users/{" +
-      "user_id}:\001*\262\322*\032\n\022UpdateUserMetadata\022\004Use" +
-      "r\022\314\001\n\006Delete\022:.yandex.cloud.organization" +
-      "manager.v1.idp.DeleteUserRequest\032!.yande" +
-      "x.cloud.operation.Operation\"c\202\323\344\223\002.*,/or" +
-      "ganization-manager/v1/idp/users/{user_id" +
-      "}\262\322*+\n\022DeleteUserMetadata\022\025google.protob" +
-      "uf.Empty\022\345\001\n\016SetOwnPassword\022>.yandex.clo" +
-      "ud.organizationmanager.v1.idp.SetOwnPass" +
-      "wordRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"p\202\323\344\223\0026\"1/organization-manager/v1" +
-      "/idp/users:setOwnPassword:\001*\262\322*0\n\026SetOwn" +
-      "PasswordMetadata\022\026SetOwnPasswordResponse" +
-      "\022\377\001\n\021SetOthersPassword\022A.yandex.cloud.or" +
-      "ganizationmanager.v1.idp.SetOthersPasswo" +
-      "rdRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"\203\001\202\323\344\223\002C\">/organization-manager/v1/" +
-      "idp/users/{user_id}:setOthersPassword:\001*" +
-      "\262\322*6\n\031SetOthersPasswordMetadata\022\031SetOthe" +
-      "rsPasswordResponse\022\332\001\n\007Suspend\022;.yandex." +
-      "cloud.organizationmanager.v1.idp.Suspend" +
+      "rdSpecB\004\350\3071\001\022#\n\014old_password\030\002 \001(\tB\r\350\3071\001" +
+      "\212\3101\005<=128\")\n\026SetOwnPasswordMetadata\022\017\n\007u" +
+      "ser_id\030\001 \001(\t\"\030\n\026SetOwnPasswordResponse\"\215" +
+      "\001\n\030SetOthersPasswordRequest\022\035\n\007user_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022R\n\rpassword_spec\030\002 \001(" +
+      "\01325.yandex.cloud.organizationmanager.v1." +
+      "idp.PasswordSpecB\004\350\3071\001\",\n\031SetOthersPassw" +
+      "ordMetadata\022\017\n\007user_id\030\001 \001(\t\"\033\n\031SetOther" +
+      "sPasswordResponse\"\031\n\027GeneratePasswordReq" +
+      "uest\"h\n\030GeneratePasswordResponse\022L\n\rpass" +
+      "word_spec\030\001 \001(\01325.yandex.cloud.organizat" +
+      "ionmanager.v1.idp.PasswordSpec\"T\n\014Passwo" +
+      "rdSpec\022\037\n\010password\030\001 \001(\tB\r\350\3071\001\212\3101\005<=128\022" +
+      "#\n\020generation_proof\030\002 \001(\tB\t\212\3101\005<=128\"\320\003\n" +
+      "\020PasswordMetadata\022\n\n\002id\030\001 \001(\t\022T\n\004type\030\002 " +
+      "\001(\0162F.yandex.cloud.organizationmanager.v" +
+      "1.idp.PasswordMetadata.PasswordType\022.\n\nc" +
+      "reated_at\030\003 \001(\0132\032.google.protobuf.Timest" +
+      "amp\022.\n\nexpires_at\030\004 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022[\n\nlast_usage\030\005 \001(\0132G.yandex" +
+      ".cloud.organizationmanager.v1.idp.Passwo" +
+      "rdMetadata.PasswordUsage\032P\n\rPasswordUsag" +
+      "e\022+\n\007used_at\030\001 \001(\0132\032.google.protobuf.Tim" +
+      "estamp\022\022\n\nip_address\030\002 \001(\t\"K\n\014PasswordTy" +
+      "pe\022\035\n\031PASSWORD_TYPE_UNSPECIFIED\020\000\022\r\n\tTEM" +
+      "PORARY\020\001\022\r\n\tPERMANENT\020\002\"a\n\034ConvertToExte" +
+      "rnalUserRequest\022\035\n\007user_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022\"\n\013external_id\030\002 \001(\tB\r\350\3071\001\212\3101\005<=2" +
+      "56\"E\n\035ConvertToExternalUserMetadata\022\017\n\007u" +
+      "ser_id\030\001 \001(\t\022\023\n\013external_id\030\002 \001(\t\"|\n\026Set" +
+      "PasswordHashRequest\022\035\n\007user_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022C\n\004hash\030\002 \001(\01325.yandex.cloud." +
+      "organizationmanager.v1.idp.PasswordHash\"" +
+      "*\n\027SetPasswordHashMetadata\022\017\n\007user_id\030\001 " +
+      "\001(\t\"\342\001\n\014PasswordHash\022$\n\rpassword_hash\030\001 " +
+      "\001(\tB\r\350\3071\001\212\3101\005<=128\022h\n\022password_hash_type" +
+      "\030\002 \001(\0162F.yandex.cloud.organizationmanage" +
+      "r.v1.idp.PasswordHash.PasswordHashTypeB\004" +
+      "\350\3071\001\"B\n\020PasswordHashType\022\"\n\036PASSWORD_HAS" +
+      "H_TYPE_UNSPECIFIED\020\000\022\n\n\006AD_MD4\020\001\"i\n\031Reso" +
+      "lveExternalIdsRequest\022!\n\013userpool_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022)\n\014external_ids\030\002 \003(\tB\023" +
+      "\202\3101\0061-1000\212\3101\005<=256\"I\n\014ResolvedUser\022\017\n\007u" +
+      "ser_id\030\001 \001(\t\022\023\n\013external_id\030\002 \001(\t\022\023\n\013use" +
+      "rpool_id\030\003 \001(\t\"k\n\032ResolveExternalIdsResp" +
+      "onse\022M\n\016resolved_users\030\001 \003(\01325.yandex.cl" +
+      "oud.organizationmanager.v1.idp.ResolvedU" +
+      "ser2\256\027\n\013UserService\022\243\001\n\003Get\0227.yandex.clo" +
+      "ud.organizationmanager.v1.idp.GetUserReq" +
+      "uest\032-.yandex.cloud.organizationmanager." +
+      "v1.idp.User\"4\202\323\344\223\002.\022,/organization-manag" +
+      "er/v1/idp/users/{user_id}\022\251\001\n\004List\0229.yan" +
+      "dex.cloud.organizationmanager.v1.idp.Lis" +
+      "tUsersRequest\032:.yandex.cloud.organizatio" +
+      "nmanager.v1.idp.ListUsersResponse\"*\202\323\344\223\002" +
+      "$\022\"/organization-manager/v1/idp/users\022\264\001" +
+      "\n\006Create\022:.yandex.cloud.organizationmana" +
+      "ger.v1.idp.CreateUserRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"K\202\323\344\223\002\'\"\"/organi" +
+      "zation-manager/v1/idp/users:\001*\262\322*\032\n\022Crea" +
+      "teUserMetadata\022\004User\022\276\001\n\006Update\022:.yandex" +
+      ".cloud.organizationmanager.v1.idp.Update" +
       "UserRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"o\202\323\344\223\0029\"4/organization-manager/v1" +
-      "/idp/users/{user_id}:suspend:\001*\262\322*,\n\023Sus" +
-      "pendUserMetadata\022\025google.protobuf.Empty\022" +
-      "\346\001\n\nReactivate\022>.yandex.cloud.organizati" +
-      "onmanager.v1.idp.ReactivateUserRequest\032!" +
-      ".yandex.cloud.operation.Operation\"u\202\323\344\223\002" +
-      "<\"7/organization-manager/v1/idp/users/{u" +
-      "ser_id}:reactivate:\001*\262\322*/\n\026ReactivateUse" +
-      "rMetadata\022\025google.protobuf.Empty\022\327\001\n\020Gen" +
-      "eratePassword\022@.yandex.cloud.organizatio" +
-      "nmanager.v1.idp.GeneratePasswordRequest\032" +
-      "A.yandex.cloud.organizationmanager.v1.id" +
-      "p.GeneratePasswordResponse\">\202\323\344\223\0028\"3/org" +
-      "anization-manager/v1/idp/users:generateP" +
-      "assword:\001*\022\260\001\n\027GetSelfPasswordMetadata\022\026" +
-      ".google.protobuf.Empty\0329.yandex.cloud.or" +
-      "ganizationmanager.v1.idp.PasswordMetadat" +
-      "a\"B\202\323\344\223\002<\022:/organization-manager/v1/idp/" +
-      "users:getSelfPasswordMetadata\022\361\001\n\021Conver" +
-      "tToExternal\022E.yandex.cloud.organizationm" +
-      "anager.v1.idp.ConvertToExternalUserReque" +
-      "st\032!.yandex.cloud.operation.Operation\"r\202" +
-      "\323\344\223\002C\">/organization-manager/v1/idp/user" +
-      "s/{user_id}:convertToExternal:\001*\262\322*%\n\035Co" +
-      "nvertToExternalUserMetadata\022\004User\022\362\001\n\017Se" +
-      "tPasswordHash\022?.yandex.cloud.organizatio" +
-      "nmanager.v1.idp.SetPasswordHashRequest\032!" +
-      ".yandex.cloud.operation.Operation\"{\202\323\344\223\002" +
-      "A\"</organization-manager/v1/idp/users/{u" +
-      "ser_id}:setPasswordHash:\001*\262\322*0\n\027SetPassw" +
-      "ordHashMetadata\022\025google.protobuf.Empty\022\337" +
-      "\001\n\022ResolveExternalIds\022B.yandex.cloud.org" +
+      "ration\"U\202\323\344\223\00212,/organization-manager/v1" +
+      "/idp/users/{user_id}:\001*\262\322*\032\n\022UpdateUserM" +
+      "etadata\022\004User\022\314\001\n\006Delete\022:.yandex.cloud." +
+      "organizationmanager.v1.idp.DeleteUserReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "c\202\323\344\223\002.*,/organization-manager/v1/idp/us" +
+      "ers/{user_id}\262\322*+\n\022DeleteUserMetadata\022\025g" +
+      "oogle.protobuf.Empty\022\345\001\n\016SetOwnPassword\022" +
+      ">.yandex.cloud.organizationmanager.v1.id" +
+      "p.SetOwnPasswordRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"p\202\323\344\223\0026\"1/organizatio" +
+      "n-manager/v1/idp/users:setOwnPassword:\001*" +
+      "\262\322*0\n\026SetOwnPasswordMetadata\022\026SetOwnPass" +
+      "wordResponse\022\377\001\n\021SetOthersPassword\022A.yan" +
+      "dex.cloud.organizationmanager.v1.idp.Set" +
+      "OthersPasswordRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"\203\001\202\323\344\223\002C\">/organization" +
+      "-manager/v1/idp/users/{user_id}:setOther" +
+      "sPassword:\001*\262\322*6\n\031SetOthersPasswordMetad" +
+      "ata\022\031SetOthersPasswordResponse\022\332\001\n\007Suspe" +
+      "nd\022;.yandex.cloud.organizationmanager.v1" +
+      ".idp.SuspendUserRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"o\202\323\344\223\0029\"4/organizatio" +
+      "n-manager/v1/idp/users/{user_id}:suspend" +
+      ":\001*\262\322*,\n\023SuspendUserMetadata\022\025google.pro" +
+      "tobuf.Empty\022\346\001\n\nReactivate\022>.yandex.clou" +
+      "d.organizationmanager.v1.idp.ReactivateU" +
+      "serRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"u\202\323\344\223\002<\"7/organization-manager/v1/" +
+      "idp/users/{user_id}:reactivate:\001*\262\322*/\n\026R" +
+      "eactivateUserMetadata\022\025google.protobuf.E" +
+      "mpty\022\327\001\n\020GeneratePassword\022@.yandex.cloud" +
+      ".organizationmanager.v1.idp.GeneratePass" +
+      "wordRequest\032A.yandex.cloud.organizationm" +
+      "anager.v1.idp.GeneratePasswordResponse\">" +
+      "\202\323\344\223\0028\"3/organization-manager/v1/idp/use" +
+      "rs:generatePassword:\001*\022\260\001\n\027GetSelfPasswo" +
+      "rdMetadata\022\026.google.protobuf.Empty\0329.yan" +
+      "dex.cloud.organizationmanager.v1.idp.Pas" +
+      "swordMetadata\"B\202\323\344\223\002<\022:/organization-man" +
+      "ager/v1/idp/users:getSelfPasswordMetadat" +
+      "a\022\361\001\n\021ConvertToExternal\022E.yandex.cloud.o" +
+      "rganizationmanager.v1.idp.ConvertToExter" +
+      "nalUserRequest\032!.yandex.cloud.operation." +
+      "Operation\"r\202\323\344\223\002C\">/organization-manager" +
+      "/v1/idp/users/{user_id}:convertToExterna" +
+      "l:\001*\262\322*%\n\035ConvertToExternalUserMetadata\022" +
+      "\004User\022\362\001\n\017SetPasswordHash\022?.yandex.cloud" +
+      ".organizationmanager.v1.idp.SetPasswordH" +
+      "ashRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"{\202\323\344\223\002A\"</organization-manager/v1/" +
+      "idp/users/{user_id}:setPasswordHash:\001*\262\322" +
+      "*0\n\027SetPasswordHashMetadata\022\025google.prot" +
+      "obuf.Empty\022\337\001\n\022ResolveExternalIds\022B.yand" +
+      "ex.cloud.organizationmanager.v1.idp.Reso" +
+      "lveExternalIdsRequest\032C.yandex.cloud.org" +
       "anizationmanager.v1.idp.ResolveExternalI" +
-      "dsRequest\032C.yandex.cloud.organizationman" +
-      "ager.v1.idp.ResolveExternalIdsResponse\"@" +
-      "\202\323\344\223\002:\"5/organization-manager/v1/idp/use" +
-      "rs:resolveExternalIds:\001*B~\n+yandex.cloud" +
-      ".api.organizationmanager.v1.idpZOgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/organizationmanager/v1/idp;idpb\006proto3"
+      "dsResponse\"@\202\323\344\223\002:\"5/organization-manage" +
+      "r/v1/idp/users:resolveExternalIds:\001*B~\n+" +
+      "yandex.cloud.api.organizationmanager.v1." +
+      "idpZOgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/organizationmanager/v1/idp" +
+      ";idpb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -28149,7 +29644,7 @@ public final class UserServiceOuterClass {
     internal_static_yandex_cloud_organizationmanager_v1_idp_CreateUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_idp_CreateUserRequest_descriptor,
-        new java.lang.String[] { "UserpoolId", "Username", "FullName", "GivenName", "FamilyName", "Email", "PhoneNumber", "PasswordSpec", "PasswordHash", "IsActive", "ExternalId", "Credentials", });
+        new java.lang.String[] { "UserpoolId", "Username", "FullName", "GivenName", "FamilyName", "Email", "PhoneNumber", "PasswordSpec", "PasswordHash", "IsActive", "ExternalId", "CompanyName", "Department", "JobTitle", "EmployeeId", "Credentials", });
     internal_static_yandex_cloud_organizationmanager_v1_idp_CreateUserMetadata_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_organizationmanager_v1_idp_CreateUserMetadata_fieldAccessorTable = new
@@ -28161,7 +29656,7 @@ public final class UserServiceOuterClass {
     internal_static_yandex_cloud_organizationmanager_v1_idp_UpdateUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_idp_UpdateUserRequest_descriptor,
-        new java.lang.String[] { "UserId", "UpdateMask", "Username", "FullName", "GivenName", "FamilyName", "Email", "PhoneNumber", });
+        new java.lang.String[] { "UserId", "UpdateMask", "Username", "FullName", "GivenName", "FamilyName", "Email", "PhoneNumber", "CompanyName", "Department", "JobTitle", "EmployeeId", });
     internal_static_yandex_cloud_organizationmanager_v1_idp_UpdateUserMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_organizationmanager_v1_idp_UpdateUserMetadata_fieldAccessorTable = new

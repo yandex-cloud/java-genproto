@@ -669,6 +669,68 @@ public final class InstanceGroupServiceGrpc {
     return getPauseProcessesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDisableZonesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DisableZones",
+      requestType = yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDisableZonesMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDisableZonesMethod;
+    if ((getDisableZonesMethod = InstanceGroupServiceGrpc.getDisableZonesMethod) == null) {
+      synchronized (InstanceGroupServiceGrpc.class) {
+        if ((getDisableZonesMethod = InstanceGroupServiceGrpc.getDisableZonesMethod) == null) {
+          InstanceGroupServiceGrpc.getDisableZonesMethod = getDisableZonesMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DisableZones"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new InstanceGroupServiceMethodDescriptorSupplier("DisableZones"))
+              .build();
+        }
+      }
+    }
+    return getDisableZonesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getEnableZonesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EnableZones",
+      requestType = yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getEnableZonesMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getEnableZonesMethod;
+    if ((getEnableZonesMethod = InstanceGroupServiceGrpc.getEnableZonesMethod) == null) {
+      synchronized (InstanceGroupServiceGrpc.class) {
+        if ((getEnableZonesMethod = InstanceGroupServiceGrpc.getEnableZonesMethod) == null) {
+          InstanceGroupServiceGrpc.getEnableZonesMethod = getEnableZonesMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EnableZones"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new InstanceGroupServiceMethodDescriptorSupplier("EnableZones"))
+              .build();
+        }
+      }
+    }
+    return getEnableZonesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -939,6 +1001,26 @@ public final class InstanceGroupServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPauseProcessesMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Disable zones for the specified instance group.
+     * </pre>
+     */
+    public void disableZones(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisableZonesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Enable zones for the specified instance group.
+     * </pre>
+     */
+    public void enableZones(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnableZonesMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -1088,6 +1170,20 @@ public final class InstanceGroupServiceGrpc {
                 yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_PAUSE_PROCESSES)))
+          .addMethod(
+            getDisableZonesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DISABLE_ZONES)))
+          .addMethod(
+            getEnableZonesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_ENABLE_ZONES)))
           .build();
     }
   }
@@ -1348,6 +1444,28 @@ public final class InstanceGroupServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPauseProcessesMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Disable zones for the specified instance group.
+     * </pre>
+     */
+    public void disableZones(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDisableZonesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Enable zones for the specified instance group.
+     * </pre>
+     */
+    public void enableZones(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getEnableZonesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1584,6 +1702,26 @@ public final class InstanceGroupServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation pauseProcesses(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPauseProcessesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Disable zones for the specified instance group.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation disableZones(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDisableZonesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Enable zones for the specified instance group.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation enableZones(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEnableZonesMethod(), getCallOptions(), request);
     }
   }
 
@@ -1843,6 +1981,28 @@ public final class InstanceGroupServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPauseProcessesMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Disable zones for the specified instance group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> disableZones(
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDisableZonesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Enable zones for the specified instance group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> enableZones(
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getEnableZonesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -1866,6 +2026,8 @@ public final class InstanceGroupServiceGrpc {
   private static final int METHODID_UPDATE_ACCESS_BINDINGS = 18;
   private static final int METHODID_RESUME_PROCESSES = 19;
   private static final int METHODID_PAUSE_PROCESSES = 20;
+  private static final int METHODID_DISABLE_ZONES = 21;
+  private static final int METHODID_ENABLE_ZONES = 22;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1968,6 +2130,14 @@ public final class InstanceGroupServiceGrpc {
           serviceImpl.pauseProcesses((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
+        case METHODID_DISABLE_ZONES:
+          serviceImpl.disableZones((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DisableZonesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_ENABLE_ZONES:
+          serviceImpl.enableZones((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.EnableZonesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -2050,6 +2220,8 @@ public final class InstanceGroupServiceGrpc {
               .addMethod(getUpdateAccessBindingsMethod())
               .addMethod(getResumeProcessesMethod())
               .addMethod(getPauseProcessesMethod())
+              .addMethod(getDisableZonesMethod())
+              .addMethod(getEnableZonesMethod())
               .build();
         }
       }

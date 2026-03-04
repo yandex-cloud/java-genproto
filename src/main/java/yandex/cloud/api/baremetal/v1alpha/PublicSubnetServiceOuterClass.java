@@ -637,7 +637,7 @@ public final class PublicSubnetServiceOuterClass {
      * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1;</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
@@ -647,7 +647,7 @@ public final class PublicSubnetServiceOuterClass {
      * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1;</code>
      * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
@@ -662,7 +662,7 @@ public final class PublicSubnetServiceOuterClass {
      * Default value is 20.
      * </pre>
      *
-     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     long getPageSize();
@@ -727,7 +727,7 @@ public final class PublicSubnetServiceOuterClass {
      * Example: "key1='value' AND key2='value'"
      * Supported operators: ["AND"].
      * Supported fields: ["id", "name", "zoneId", "hardwarePoolIds"].
-     * Deprecated fields: ["hardwarePoolId"].
+     * Fields to be unsupported: ["hardwarePoolId"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -747,7 +747,7 @@ public final class PublicSubnetServiceOuterClass {
      * Example: "key1='value' AND key2='value'"
      * Supported operators: ["AND"].
      * Supported fields: ["id", "name", "zoneId", "hardwarePoolIds"].
-     * Deprecated fields: ["hardwarePoolId"].
+     * Fields to be unsupported: ["hardwarePoolId"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -875,7 +875,7 @@ public final class PublicSubnetServiceOuterClass {
      * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1;</code>
      * @return The folderId.
      */
     @java.lang.Override
@@ -897,7 +897,7 @@ public final class PublicSubnetServiceOuterClass {
      * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1;</code>
      * @return The bytes for folderId.
      */
     @java.lang.Override
@@ -926,7 +926,7 @@ public final class PublicSubnetServiceOuterClass {
      * Default value is 20.
      * </pre>
      *
-     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     @java.lang.Override
@@ -1048,7 +1048,7 @@ public final class PublicSubnetServiceOuterClass {
      * Example: "key1='value' AND key2='value'"
      * Supported operators: ["AND"].
      * Supported fields: ["id", "name", "zoneId", "hardwarePoolIds"].
-     * Deprecated fields: ["hardwarePoolId"].
+     * Fields to be unsupported: ["hardwarePoolId"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -1080,7 +1080,7 @@ public final class PublicSubnetServiceOuterClass {
      * Example: "key1='value' AND key2='value'"
      * Supported operators: ["AND"].
      * Supported fields: ["id", "name", "zoneId", "hardwarePoolIds"].
-     * Deprecated fields: ["hardwarePoolId"].
+     * Fields to be unsupported: ["hardwarePoolId"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -1480,7 +1480,7 @@ public final class PublicSubnetServiceOuterClass {
        * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1;</code>
        * @return The folderId.
        */
       public java.lang.String getFolderId() {
@@ -1501,7 +1501,7 @@ public final class PublicSubnetServiceOuterClass {
        * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1;</code>
        * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
@@ -1523,7 +1523,7 @@ public final class PublicSubnetServiceOuterClass {
        * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1;</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
        */
@@ -1543,7 +1543,7 @@ public final class PublicSubnetServiceOuterClass {
        * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearFolderId() {
@@ -1558,7 +1558,7 @@ public final class PublicSubnetServiceOuterClass {
        * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1;</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
        */
@@ -1584,7 +1584,7 @@ public final class PublicSubnetServiceOuterClass {
        * Default value is 20.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return The pageSize.
        */
       @java.lang.Override
@@ -1600,7 +1600,7 @@ public final class PublicSubnetServiceOuterClass {
        * Default value is 20.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
        */
@@ -1619,7 +1619,7 @@ public final class PublicSubnetServiceOuterClass {
        * Default value is 20.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageSize() {
@@ -1854,7 +1854,7 @@ public final class PublicSubnetServiceOuterClass {
        * Example: "key1='value' AND key2='value'"
        * Supported operators: ["AND"].
        * Supported fields: ["id", "name", "zoneId", "hardwarePoolIds"].
-       * Deprecated fields: ["hardwarePoolId"].
+       * Fields to be unsupported: ["hardwarePoolId"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1885,7 +1885,7 @@ public final class PublicSubnetServiceOuterClass {
        * Example: "key1='value' AND key2='value'"
        * Supported operators: ["AND"].
        * Supported fields: ["id", "name", "zoneId", "hardwarePoolIds"].
-       * Deprecated fields: ["hardwarePoolId"].
+       * Fields to be unsupported: ["hardwarePoolId"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1917,7 +1917,7 @@ public final class PublicSubnetServiceOuterClass {
        * Example: "key1='value' AND key2='value'"
        * Supported operators: ["AND"].
        * Supported fields: ["id", "name", "zoneId", "hardwarePoolIds"].
-       * Deprecated fields: ["hardwarePoolId"].
+       * Fields to be unsupported: ["hardwarePoolId"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1947,7 +1947,7 @@ public final class PublicSubnetServiceOuterClass {
        * Example: "key1='value' AND key2='value'"
        * Supported operators: ["AND"].
        * Supported fields: ["id", "name", "zoneId", "hardwarePoolIds"].
-       * Deprecated fields: ["hardwarePoolId"].
+       * Fields to be unsupported: ["hardwarePoolId"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1972,7 +1972,7 @@ public final class PublicSubnetServiceOuterClass {
        * Example: "key1='value' AND key2='value'"
        * Supported operators: ["AND"].
        * Supported fields: ["id", "name", "zoneId", "hardwarePoolIds"].
-       * Deprecated fields: ["hardwarePoolId"].
+       * Fields to be unsupported: ["hardwarePoolId"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -3172,7 +3172,7 @@ public final class PublicSubnetServiceOuterClass {
      * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1;</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
@@ -3182,7 +3182,7 @@ public final class PublicSubnetServiceOuterClass {
      * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1;</code>
      * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
@@ -3277,13 +3277,69 @@ public final class PublicSubnetServiceOuterClass {
 
     /**
      * <pre>
+     * &#64;deprecated
      * Prefix length of the public subnet CIDR block.
      * </pre>
      *
-     * <code>int64 prefix_length = 5 [(.yandex.cloud.value) = "1-31"];</code>
+     * <code>int64 prefix_length = 5 [deprecated = true, (.yandex.cloud.value) = "1-31"];</code>
+     * @deprecated
      * @return The prefixLength.
      */
-    long getPrefixLength();
+    @java.lang.Deprecated long getPrefixLength();
+
+    /**
+     * <pre>
+     * Automatic CIDR allocation from the system public prefix pool.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation auto_allocation = 6;</code>
+     * @return Whether the autoAllocation field is set.
+     */
+    boolean hasAutoAllocation();
+    /**
+     * <pre>
+     * Automatic CIDR allocation from the system public prefix pool.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation auto_allocation = 6;</code>
+     * @return The autoAllocation.
+     */
+    yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation getAutoAllocation();
+    /**
+     * <pre>
+     * Automatic CIDR allocation from the system public prefix pool.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation auto_allocation = 6;</code>
+     */
+    yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocationOrBuilder getAutoAllocationOrBuilder();
+
+    /**
+     * <pre>
+     * Manual CIDR allocation with explicit CIDR from user's own public prefix pool (BYOIP).
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation manual_allocation = 7;</code>
+     * @return Whether the manualAllocation field is set.
+     */
+    boolean hasManualAllocation();
+    /**
+     * <pre>
+     * Manual CIDR allocation with explicit CIDR from user's own public prefix pool (BYOIP).
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation manual_allocation = 7;</code>
+     * @return The manualAllocation.
+     */
+    yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation getManualAllocation();
+    /**
+     * <pre>
+     * Manual CIDR allocation with explicit CIDR from user's own public prefix pool (BYOIP).
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation manual_allocation = 7;</code>
+     */
+    yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocationOrBuilder getManualAllocationOrBuilder();
 
     /**
      * <pre>
@@ -3338,6 +3394,8 @@ public final class PublicSubnetServiceOuterClass {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    public yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.CidrAllocationMethodCase getCidrAllocationMethodCase();
   }
   /**
    * Protobuf type {@code yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest}
@@ -3421,6 +3479,34 @@ public final class PublicSubnetServiceOuterClass {
               prefixLength_ = input.readInt64();
               break;
             }
+            case 50: {
+              yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.Builder subBuilder = null;
+              if (cidrAllocationMethodCase_ == 6) {
+                subBuilder = ((yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation) cidrAllocationMethod_).toBuilder();
+              }
+              cidrAllocationMethod_ =
+                  input.readMessage(yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation) cidrAllocationMethod_);
+                cidrAllocationMethod_ = subBuilder.buildPartial();
+              }
+              cidrAllocationMethodCase_ = 6;
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.Builder subBuilder = null;
+              if (cidrAllocationMethodCase_ == 7) {
+                subBuilder = ((yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation) cidrAllocationMethod_).toBuilder();
+              }
+              cidrAllocationMethod_ =
+                  input.readMessage(yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation) cidrAllocationMethod_);
+                cidrAllocationMethod_ = subBuilder.buildPartial();
+              }
+              cidrAllocationMethodCase_ = 7;
+              break;
+            }
             case 1602: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
@@ -3481,6 +3567,1371 @@ public final class PublicSubnetServiceOuterClass {
               yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.class, yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.Builder.class);
     }
 
+    public interface AutoAllocationOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Prefix length of the public subnet CIDR block.
+       * </pre>
+       *
+       * <code>int64 prefix_length = 1 [(.yandex.cloud.value) = "1-31"];</code>
+       * @return The prefixLength.
+       */
+      long getPrefixLength();
+    }
+    /**
+     * <pre>
+     * Automatic CIDR allocation configuration.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation}
+     */
+    public static final class AutoAllocation extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation)
+        AutoAllocationOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use AutoAllocation.newBuilder() to construct.
+      private AutoAllocation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private AutoAllocation() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new AutoAllocation();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private AutoAllocation(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                prefixLength_ = input.readInt64();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_AutoAllocation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_AutoAllocation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.class, yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.Builder.class);
+      }
+
+      public static final int PREFIX_LENGTH_FIELD_NUMBER = 1;
+      private long prefixLength_;
+      /**
+       * <pre>
+       * Prefix length of the public subnet CIDR block.
+       * </pre>
+       *
+       * <code>int64 prefix_length = 1 [(.yandex.cloud.value) = "1-31"];</code>
+       * @return The prefixLength.
+       */
+      @java.lang.Override
+      public long getPrefixLength() {
+        return prefixLength_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (prefixLength_ != 0L) {
+          output.writeInt64(1, prefixLength_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (prefixLength_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(1, prefixLength_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation other = (yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation) obj;
+
+        if (getPrefixLength()
+            != other.getPrefixLength()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + PREFIX_LENGTH_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getPrefixLength());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Automatic CIDR allocation configuration.
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation)
+          yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocationOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_AutoAllocation_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_AutoAllocation_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.class, yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          prefixLength_ = 0L;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_AutoAllocation_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation getDefaultInstanceForType() {
+          return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation build() {
+          yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation buildPartial() {
+          yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation result = new yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation(this);
+          result.prefixLength_ = prefixLength_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation) {
+            return mergeFrom((yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation other) {
+          if (other == yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.getDefaultInstance()) return this;
+          if (other.getPrefixLength() != 0L) {
+            setPrefixLength(other.getPrefixLength());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private long prefixLength_ ;
+        /**
+         * <pre>
+         * Prefix length of the public subnet CIDR block.
+         * </pre>
+         *
+         * <code>int64 prefix_length = 1 [(.yandex.cloud.value) = "1-31"];</code>
+         * @return The prefixLength.
+         */
+        @java.lang.Override
+        public long getPrefixLength() {
+          return prefixLength_;
+        }
+        /**
+         * <pre>
+         * Prefix length of the public subnet CIDR block.
+         * </pre>
+         *
+         * <code>int64 prefix_length = 1 [(.yandex.cloud.value) = "1-31"];</code>
+         * @param value The prefixLength to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPrefixLength(long value) {
+          
+          prefixLength_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Prefix length of the public subnet CIDR block.
+         * </pre>
+         *
+         * <code>int64 prefix_length = 1 [(.yandex.cloud.value) = "1-31"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPrefixLength() {
+          
+          prefixLength_ = 0L;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation)
+      private static final yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation();
+      }
+
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<AutoAllocation>
+          PARSER = new com.google.protobuf.AbstractParser<AutoAllocation>() {
+        @java.lang.Override
+        public AutoAllocation parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AutoAllocation(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<AutoAllocation> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AutoAllocation> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface ManualAllocationOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * CIDR block of the public subnet. Must be within the public prefix pool CIDR block.
+       * </pre>
+       *
+       * <code>string cidr = 1;</code>
+       * @return The cidr.
+       */
+      java.lang.String getCidr();
+      /**
+       * <pre>
+       * CIDR block of the public subnet. Must be within the public prefix pool CIDR block.
+       * </pre>
+       *
+       * <code>string cidr = 1;</code>
+       * @return The bytes for cidr.
+       */
+      com.google.protobuf.ByteString
+          getCidrBytes();
+
+      /**
+       * <pre>
+       * ID of the public prefix pool that the CIDR block belongs to.
+       * To get a list of available public prefix pools, use the [PublicPrefixPoolService.List] request.
+       * </pre>
+       *
+       * <code>string public_prefix_pool_id = 2;</code>
+       * @return The publicPrefixPoolId.
+       */
+      java.lang.String getPublicPrefixPoolId();
+      /**
+       * <pre>
+       * ID of the public prefix pool that the CIDR block belongs to.
+       * To get a list of available public prefix pools, use the [PublicPrefixPoolService.List] request.
+       * </pre>
+       *
+       * <code>string public_prefix_pool_id = 2;</code>
+       * @return The bytes for publicPrefixPoolId.
+       */
+      com.google.protobuf.ByteString
+          getPublicPrefixPoolIdBytes();
+    }
+    /**
+     * <pre>
+     * Manual CIDR allocation configuration.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation}
+     */
+    public static final class ManualAllocation extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation)
+        ManualAllocationOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ManualAllocation.newBuilder() to construct.
+      private ManualAllocation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ManualAllocation() {
+        cidr_ = "";
+        publicPrefixPoolId_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ManualAllocation();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ManualAllocation(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                cidr_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                publicPrefixPoolId_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_ManualAllocation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_ManualAllocation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.class, yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.Builder.class);
+      }
+
+      public static final int CIDR_FIELD_NUMBER = 1;
+      private volatile java.lang.Object cidr_;
+      /**
+       * <pre>
+       * CIDR block of the public subnet. Must be within the public prefix pool CIDR block.
+       * </pre>
+       *
+       * <code>string cidr = 1;</code>
+       * @return The cidr.
+       */
+      @java.lang.Override
+      public java.lang.String getCidr() {
+        java.lang.Object ref = cidr_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cidr_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * CIDR block of the public subnet. Must be within the public prefix pool CIDR block.
+       * </pre>
+       *
+       * <code>string cidr = 1;</code>
+       * @return The bytes for cidr.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCidrBytes() {
+        java.lang.Object ref = cidr_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cidr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int PUBLIC_PREFIX_POOL_ID_FIELD_NUMBER = 2;
+      private volatile java.lang.Object publicPrefixPoolId_;
+      /**
+       * <pre>
+       * ID of the public prefix pool that the CIDR block belongs to.
+       * To get a list of available public prefix pools, use the [PublicPrefixPoolService.List] request.
+       * </pre>
+       *
+       * <code>string public_prefix_pool_id = 2;</code>
+       * @return The publicPrefixPoolId.
+       */
+      @java.lang.Override
+      public java.lang.String getPublicPrefixPoolId() {
+        java.lang.Object ref = publicPrefixPoolId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          publicPrefixPoolId_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the public prefix pool that the CIDR block belongs to.
+       * To get a list of available public prefix pools, use the [PublicPrefixPoolService.List] request.
+       * </pre>
+       *
+       * <code>string public_prefix_pool_id = 2;</code>
+       * @return The bytes for publicPrefixPoolId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPublicPrefixPoolIdBytes() {
+        java.lang.Object ref = publicPrefixPoolId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          publicPrefixPoolId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cidr_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cidr_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicPrefixPoolId_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, publicPrefixPoolId_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cidr_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cidr_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicPrefixPoolId_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, publicPrefixPoolId_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation other = (yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation) obj;
+
+        if (!getCidr()
+            .equals(other.getCidr())) return false;
+        if (!getPublicPrefixPoolId()
+            .equals(other.getPublicPrefixPoolId())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + CIDR_FIELD_NUMBER;
+        hash = (53 * hash) + getCidr().hashCode();
+        hash = (37 * hash) + PUBLIC_PREFIX_POOL_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getPublicPrefixPoolId().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Manual CIDR allocation configuration.
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation)
+          yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocationOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_ManualAllocation_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_ManualAllocation_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.class, yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          cidr_ = "";
+
+          publicPrefixPoolId_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_ManualAllocation_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation getDefaultInstanceForType() {
+          return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation build() {
+          yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation buildPartial() {
+          yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation result = new yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation(this);
+          result.cidr_ = cidr_;
+          result.publicPrefixPoolId_ = publicPrefixPoolId_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation) {
+            return mergeFrom((yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation other) {
+          if (other == yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.getDefaultInstance()) return this;
+          if (!other.getCidr().isEmpty()) {
+            cidr_ = other.cidr_;
+            onChanged();
+          }
+          if (!other.getPublicPrefixPoolId().isEmpty()) {
+            publicPrefixPoolId_ = other.publicPrefixPoolId_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object cidr_ = "";
+        /**
+         * <pre>
+         * CIDR block of the public subnet. Must be within the public prefix pool CIDR block.
+         * </pre>
+         *
+         * <code>string cidr = 1;</code>
+         * @return The cidr.
+         */
+        public java.lang.String getCidr() {
+          java.lang.Object ref = cidr_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            cidr_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * CIDR block of the public subnet. Must be within the public prefix pool CIDR block.
+         * </pre>
+         *
+         * <code>string cidr = 1;</code>
+         * @return The bytes for cidr.
+         */
+        public com.google.protobuf.ByteString
+            getCidrBytes() {
+          java.lang.Object ref = cidr_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            cidr_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * CIDR block of the public subnet. Must be within the public prefix pool CIDR block.
+         * </pre>
+         *
+         * <code>string cidr = 1;</code>
+         * @param value The cidr to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCidr(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          cidr_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * CIDR block of the public subnet. Must be within the public prefix pool CIDR block.
+         * </pre>
+         *
+         * <code>string cidr = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCidr() {
+          
+          cidr_ = getDefaultInstance().getCidr();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * CIDR block of the public subnet. Must be within the public prefix pool CIDR block.
+         * </pre>
+         *
+         * <code>string cidr = 1;</code>
+         * @param value The bytes for cidr to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCidrBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          cidr_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object publicPrefixPoolId_ = "";
+        /**
+         * <pre>
+         * ID of the public prefix pool that the CIDR block belongs to.
+         * To get a list of available public prefix pools, use the [PublicPrefixPoolService.List] request.
+         * </pre>
+         *
+         * <code>string public_prefix_pool_id = 2;</code>
+         * @return The publicPrefixPoolId.
+         */
+        public java.lang.String getPublicPrefixPoolId() {
+          java.lang.Object ref = publicPrefixPoolId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            publicPrefixPoolId_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * ID of the public prefix pool that the CIDR block belongs to.
+         * To get a list of available public prefix pools, use the [PublicPrefixPoolService.List] request.
+         * </pre>
+         *
+         * <code>string public_prefix_pool_id = 2;</code>
+         * @return The bytes for publicPrefixPoolId.
+         */
+        public com.google.protobuf.ByteString
+            getPublicPrefixPoolIdBytes() {
+          java.lang.Object ref = publicPrefixPoolId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            publicPrefixPoolId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * ID of the public prefix pool that the CIDR block belongs to.
+         * To get a list of available public prefix pools, use the [PublicPrefixPoolService.List] request.
+         * </pre>
+         *
+         * <code>string public_prefix_pool_id = 2;</code>
+         * @param value The publicPrefixPoolId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPublicPrefixPoolId(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          publicPrefixPoolId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * ID of the public prefix pool that the CIDR block belongs to.
+         * To get a list of available public prefix pools, use the [PublicPrefixPoolService.List] request.
+         * </pre>
+         *
+         * <code>string public_prefix_pool_id = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPublicPrefixPoolId() {
+          
+          publicPrefixPoolId_ = getDefaultInstance().getPublicPrefixPoolId();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * ID of the public prefix pool that the CIDR block belongs to.
+         * To get a list of available public prefix pools, use the [PublicPrefixPoolService.List] request.
+         * </pre>
+         *
+         * <code>string public_prefix_pool_id = 2;</code>
+         * @param value The bytes for publicPrefixPoolId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPublicPrefixPoolIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          publicPrefixPoolId_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation)
+      private static final yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation();
+      }
+
+      public static yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<ManualAllocation>
+          PARSER = new com.google.protobuf.AbstractParser<ManualAllocation>() {
+        @java.lang.Override
+        public ManualAllocation parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ManualAllocation(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ManualAllocation> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ManualAllocation> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int cidrAllocationMethodCase_ = 0;
+    private java.lang.Object cidrAllocationMethod_;
+    public enum CidrAllocationMethodCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      AUTO_ALLOCATION(6),
+      MANUAL_ALLOCATION(7),
+      CIDRALLOCATIONMETHOD_NOT_SET(0);
+      private final int value;
+      private CidrAllocationMethodCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static CidrAllocationMethodCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static CidrAllocationMethodCase forNumber(int value) {
+        switch (value) {
+          case 6: return AUTO_ALLOCATION;
+          case 7: return MANUAL_ALLOCATION;
+          case 0: return CIDRALLOCATIONMETHOD_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public CidrAllocationMethodCase
+    getCidrAllocationMethodCase() {
+      return CidrAllocationMethodCase.forNumber(
+          cidrAllocationMethodCase_);
+    }
+
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
@@ -3489,7 +4940,7 @@ public final class PublicSubnetServiceOuterClass {
      * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1;</code>
      * @return The folderId.
      */
     @java.lang.Override
@@ -3511,7 +4962,7 @@ public final class PublicSubnetServiceOuterClass {
      * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
-     * <code>string folder_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string folder_id = 1;</code>
      * @return The bytes for folderId.
      */
     @java.lang.Override
@@ -3682,15 +5133,103 @@ public final class PublicSubnetServiceOuterClass {
     private long prefixLength_;
     /**
      * <pre>
+     * &#64;deprecated
      * Prefix length of the public subnet CIDR block.
      * </pre>
      *
-     * <code>int64 prefix_length = 5 [(.yandex.cloud.value) = "1-31"];</code>
+     * <code>int64 prefix_length = 5 [deprecated = true, (.yandex.cloud.value) = "1-31"];</code>
+     * @deprecated
      * @return The prefixLength.
      */
     @java.lang.Override
-    public long getPrefixLength() {
+    @java.lang.Deprecated public long getPrefixLength() {
       return prefixLength_;
+    }
+
+    public static final int AUTO_ALLOCATION_FIELD_NUMBER = 6;
+    /**
+     * <pre>
+     * Automatic CIDR allocation from the system public prefix pool.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation auto_allocation = 6;</code>
+     * @return Whether the autoAllocation field is set.
+     */
+    @java.lang.Override
+    public boolean hasAutoAllocation() {
+      return cidrAllocationMethodCase_ == 6;
+    }
+    /**
+     * <pre>
+     * Automatic CIDR allocation from the system public prefix pool.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation auto_allocation = 6;</code>
+     * @return The autoAllocation.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation getAutoAllocation() {
+      if (cidrAllocationMethodCase_ == 6) {
+         return (yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation) cidrAllocationMethod_;
+      }
+      return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Automatic CIDR allocation from the system public prefix pool.
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation auto_allocation = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocationOrBuilder getAutoAllocationOrBuilder() {
+      if (cidrAllocationMethodCase_ == 6) {
+         return (yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation) cidrAllocationMethod_;
+      }
+      return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.getDefaultInstance();
+    }
+
+    public static final int MANUAL_ALLOCATION_FIELD_NUMBER = 7;
+    /**
+     * <pre>
+     * Manual CIDR allocation with explicit CIDR from user's own public prefix pool (BYOIP).
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation manual_allocation = 7;</code>
+     * @return Whether the manualAllocation field is set.
+     */
+    @java.lang.Override
+    public boolean hasManualAllocation() {
+      return cidrAllocationMethodCase_ == 7;
+    }
+    /**
+     * <pre>
+     * Manual CIDR allocation with explicit CIDR from user's own public prefix pool (BYOIP).
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation manual_allocation = 7;</code>
+     * @return The manualAllocation.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation getManualAllocation() {
+      if (cidrAllocationMethodCase_ == 7) {
+         return (yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation) cidrAllocationMethod_;
+      }
+      return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Manual CIDR allocation with explicit CIDR from user's own public prefix pool (BYOIP).
+     * </pre>
+     *
+     * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation manual_allocation = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocationOrBuilder getManualAllocationOrBuilder() {
+      if (cidrAllocationMethodCase_ == 7) {
+         return (yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation) cidrAllocationMethod_;
+      }
+      return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.getDefaultInstance();
     }
 
     public static final int LABELS_FIELD_NUMBER = 200;
@@ -3819,6 +5358,12 @@ public final class PublicSubnetServiceOuterClass {
       if (prefixLength_ != 0L) {
         output.writeInt64(5, prefixLength_);
       }
+      if (cidrAllocationMethodCase_ == 6) {
+        output.writeMessage(6, (yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation) cidrAllocationMethod_);
+      }
+      if (cidrAllocationMethodCase_ == 7) {
+        output.writeMessage(7, (yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation) cidrAllocationMethod_);
+      }
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
           output,
@@ -3854,6 +5399,14 @@ public final class PublicSubnetServiceOuterClass {
       if (prefixLength_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, prefixLength_);
+      }
+      if (cidrAllocationMethodCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation) cidrAllocationMethod_);
+      }
+      if (cidrAllocationMethodCase_ == 7) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, (yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation) cidrAllocationMethod_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
            : internalGetLabels().getMap().entrySet()) {
@@ -3892,6 +5445,19 @@ public final class PublicSubnetServiceOuterClass {
           != other.getPrefixLength()) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (!getCidrAllocationMethodCase().equals(other.getCidrAllocationMethodCase())) return false;
+      switch (cidrAllocationMethodCase_) {
+        case 6:
+          if (!getAutoAllocation()
+              .equals(other.getAutoAllocation())) return false;
+          break;
+        case 7:
+          if (!getManualAllocation()
+              .equals(other.getManualAllocation())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3919,6 +5485,18 @@ public final class PublicSubnetServiceOuterClass {
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      switch (cidrAllocationMethodCase_) {
+        case 6:
+          hash = (37 * hash) + AUTO_ALLOCATION_FIELD_NUMBER;
+          hash = (53 * hash) + getAutoAllocation().hashCode();
+          break;
+        case 7:
+          hash = (37 * hash) + MANUAL_ALLOCATION_FIELD_NUMBER;
+          hash = (53 * hash) + getManualAllocation().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4086,6 +5664,8 @@ public final class PublicSubnetServiceOuterClass {
         prefixLength_ = 0L;
 
         internalGetMutableLabels().clear();
+        cidrAllocationMethodCase_ = 0;
+        cidrAllocationMethod_ = null;
         return this;
       }
 
@@ -4122,8 +5702,23 @@ public final class PublicSubnetServiceOuterClass {
         }
         result.hardwarePoolIds_ = hardwarePoolIds_;
         result.prefixLength_ = prefixLength_;
+        if (cidrAllocationMethodCase_ == 6) {
+          if (autoAllocationBuilder_ == null) {
+            result.cidrAllocationMethod_ = cidrAllocationMethod_;
+          } else {
+            result.cidrAllocationMethod_ = autoAllocationBuilder_.build();
+          }
+        }
+        if (cidrAllocationMethodCase_ == 7) {
+          if (manualAllocationBuilder_ == null) {
+            result.cidrAllocationMethod_ = cidrAllocationMethod_;
+          } else {
+            result.cidrAllocationMethod_ = manualAllocationBuilder_.build();
+          }
+        }
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        result.cidrAllocationMethodCase_ = cidrAllocationMethodCase_;
         onBuilt();
         return result;
       }
@@ -4199,6 +5794,19 @@ public final class PublicSubnetServiceOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        switch (other.getCidrAllocationMethodCase()) {
+          case AUTO_ALLOCATION: {
+            mergeAutoAllocation(other.getAutoAllocation());
+            break;
+          }
+          case MANUAL_ALLOCATION: {
+            mergeManualAllocation(other.getManualAllocation());
+            break;
+          }
+          case CIDRALLOCATIONMETHOD_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4227,6 +5835,21 @@ public final class PublicSubnetServiceOuterClass {
         }
         return this;
       }
+      private int cidrAllocationMethodCase_ = 0;
+      private java.lang.Object cidrAllocationMethod_;
+      public CidrAllocationMethodCase
+          getCidrAllocationMethodCase() {
+        return CidrAllocationMethodCase.forNumber(
+            cidrAllocationMethodCase_);
+      }
+
+      public Builder clearCidrAllocationMethod() {
+        cidrAllocationMethodCase_ = 0;
+        cidrAllocationMethod_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
 
       private java.lang.Object folderId_ = "";
@@ -4236,7 +5859,7 @@ public final class PublicSubnetServiceOuterClass {
        * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1;</code>
        * @return The folderId.
        */
       public java.lang.String getFolderId() {
@@ -4257,7 +5880,7 @@ public final class PublicSubnetServiceOuterClass {
        * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1;</code>
        * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
@@ -4279,7 +5902,7 @@ public final class PublicSubnetServiceOuterClass {
        * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1;</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
        */
@@ -4299,7 +5922,7 @@ public final class PublicSubnetServiceOuterClass {
        * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearFolderId() {
@@ -4314,7 +5937,7 @@ public final class PublicSubnetServiceOuterClass {
        * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9.-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string folder_id = 1;</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
        */
@@ -4685,26 +6308,30 @@ public final class PublicSubnetServiceOuterClass {
       private long prefixLength_ ;
       /**
        * <pre>
+       * &#64;deprecated
        * Prefix length of the public subnet CIDR block.
        * </pre>
        *
-       * <code>int64 prefix_length = 5 [(.yandex.cloud.value) = "1-31"];</code>
+       * <code>int64 prefix_length = 5 [deprecated = true, (.yandex.cloud.value) = "1-31"];</code>
+       * @deprecated
        * @return The prefixLength.
        */
       @java.lang.Override
-      public long getPrefixLength() {
+      @java.lang.Deprecated public long getPrefixLength() {
         return prefixLength_;
       }
       /**
        * <pre>
+       * &#64;deprecated
        * Prefix length of the public subnet CIDR block.
        * </pre>
        *
-       * <code>int64 prefix_length = 5 [(.yandex.cloud.value) = "1-31"];</code>
+       * <code>int64 prefix_length = 5 [deprecated = true, (.yandex.cloud.value) = "1-31"];</code>
+       * @deprecated
        * @param value The prefixLength to set.
        * @return This builder for chaining.
        */
-      public Builder setPrefixLength(long value) {
+      @java.lang.Deprecated public Builder setPrefixLength(long value) {
         
         prefixLength_ = value;
         onChanged();
@@ -4712,17 +6339,373 @@ public final class PublicSubnetServiceOuterClass {
       }
       /**
        * <pre>
+       * &#64;deprecated
        * Prefix length of the public subnet CIDR block.
        * </pre>
        *
-       * <code>int64 prefix_length = 5 [(.yandex.cloud.value) = "1-31"];</code>
+       * <code>int64 prefix_length = 5 [deprecated = true, (.yandex.cloud.value) = "1-31"];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearPrefixLength() {
+      @java.lang.Deprecated public Builder clearPrefixLength() {
         
         prefixLength_ = 0L;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation, yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.Builder, yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocationOrBuilder> autoAllocationBuilder_;
+      /**
+       * <pre>
+       * Automatic CIDR allocation from the system public prefix pool.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation auto_allocation = 6;</code>
+       * @return Whether the autoAllocation field is set.
+       */
+      @java.lang.Override
+      public boolean hasAutoAllocation() {
+        return cidrAllocationMethodCase_ == 6;
+      }
+      /**
+       * <pre>
+       * Automatic CIDR allocation from the system public prefix pool.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation auto_allocation = 6;</code>
+       * @return The autoAllocation.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation getAutoAllocation() {
+        if (autoAllocationBuilder_ == null) {
+          if (cidrAllocationMethodCase_ == 6) {
+            return (yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation) cidrAllocationMethod_;
+          }
+          return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.getDefaultInstance();
+        } else {
+          if (cidrAllocationMethodCase_ == 6) {
+            return autoAllocationBuilder_.getMessage();
+          }
+          return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Automatic CIDR allocation from the system public prefix pool.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation auto_allocation = 6;</code>
+       */
+      public Builder setAutoAllocation(yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation value) {
+        if (autoAllocationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cidrAllocationMethod_ = value;
+          onChanged();
+        } else {
+          autoAllocationBuilder_.setMessage(value);
+        }
+        cidrAllocationMethodCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Automatic CIDR allocation from the system public prefix pool.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation auto_allocation = 6;</code>
+       */
+      public Builder setAutoAllocation(
+          yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.Builder builderForValue) {
+        if (autoAllocationBuilder_ == null) {
+          cidrAllocationMethod_ = builderForValue.build();
+          onChanged();
+        } else {
+          autoAllocationBuilder_.setMessage(builderForValue.build());
+        }
+        cidrAllocationMethodCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Automatic CIDR allocation from the system public prefix pool.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation auto_allocation = 6;</code>
+       */
+      public Builder mergeAutoAllocation(yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation value) {
+        if (autoAllocationBuilder_ == null) {
+          if (cidrAllocationMethodCase_ == 6 &&
+              cidrAllocationMethod_ != yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.getDefaultInstance()) {
+            cidrAllocationMethod_ = yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.newBuilder((yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation) cidrAllocationMethod_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            cidrAllocationMethod_ = value;
+          }
+          onChanged();
+        } else {
+          if (cidrAllocationMethodCase_ == 6) {
+            autoAllocationBuilder_.mergeFrom(value);
+          }
+          autoAllocationBuilder_.setMessage(value);
+        }
+        cidrAllocationMethodCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Automatic CIDR allocation from the system public prefix pool.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation auto_allocation = 6;</code>
+       */
+      public Builder clearAutoAllocation() {
+        if (autoAllocationBuilder_ == null) {
+          if (cidrAllocationMethodCase_ == 6) {
+            cidrAllocationMethodCase_ = 0;
+            cidrAllocationMethod_ = null;
+            onChanged();
+          }
+        } else {
+          if (cidrAllocationMethodCase_ == 6) {
+            cidrAllocationMethodCase_ = 0;
+            cidrAllocationMethod_ = null;
+          }
+          autoAllocationBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Automatic CIDR allocation from the system public prefix pool.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation auto_allocation = 6;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.Builder getAutoAllocationBuilder() {
+        return getAutoAllocationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Automatic CIDR allocation from the system public prefix pool.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation auto_allocation = 6;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocationOrBuilder getAutoAllocationOrBuilder() {
+        if ((cidrAllocationMethodCase_ == 6) && (autoAllocationBuilder_ != null)) {
+          return autoAllocationBuilder_.getMessageOrBuilder();
+        } else {
+          if (cidrAllocationMethodCase_ == 6) {
+            return (yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation) cidrAllocationMethod_;
+          }
+          return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Automatic CIDR allocation from the system public prefix pool.
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.AutoAllocation auto_allocation = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation, yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.Builder, yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocationOrBuilder> 
+          getAutoAllocationFieldBuilder() {
+        if (autoAllocationBuilder_ == null) {
+          if (!(cidrAllocationMethodCase_ == 6)) {
+            cidrAllocationMethod_ = yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.getDefaultInstance();
+          }
+          autoAllocationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation, yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation.Builder, yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocationOrBuilder>(
+                  (yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.AutoAllocation) cidrAllocationMethod_,
+                  getParentForChildren(),
+                  isClean());
+          cidrAllocationMethod_ = null;
+        }
+        cidrAllocationMethodCase_ = 6;
+        onChanged();;
+        return autoAllocationBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation, yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.Builder, yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocationOrBuilder> manualAllocationBuilder_;
+      /**
+       * <pre>
+       * Manual CIDR allocation with explicit CIDR from user's own public prefix pool (BYOIP).
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation manual_allocation = 7;</code>
+       * @return Whether the manualAllocation field is set.
+       */
+      @java.lang.Override
+      public boolean hasManualAllocation() {
+        return cidrAllocationMethodCase_ == 7;
+      }
+      /**
+       * <pre>
+       * Manual CIDR allocation with explicit CIDR from user's own public prefix pool (BYOIP).
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation manual_allocation = 7;</code>
+       * @return The manualAllocation.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation getManualAllocation() {
+        if (manualAllocationBuilder_ == null) {
+          if (cidrAllocationMethodCase_ == 7) {
+            return (yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation) cidrAllocationMethod_;
+          }
+          return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.getDefaultInstance();
+        } else {
+          if (cidrAllocationMethodCase_ == 7) {
+            return manualAllocationBuilder_.getMessage();
+          }
+          return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Manual CIDR allocation with explicit CIDR from user's own public prefix pool (BYOIP).
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation manual_allocation = 7;</code>
+       */
+      public Builder setManualAllocation(yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation value) {
+        if (manualAllocationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cidrAllocationMethod_ = value;
+          onChanged();
+        } else {
+          manualAllocationBuilder_.setMessage(value);
+        }
+        cidrAllocationMethodCase_ = 7;
+        return this;
+      }
+      /**
+       * <pre>
+       * Manual CIDR allocation with explicit CIDR from user's own public prefix pool (BYOIP).
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation manual_allocation = 7;</code>
+       */
+      public Builder setManualAllocation(
+          yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.Builder builderForValue) {
+        if (manualAllocationBuilder_ == null) {
+          cidrAllocationMethod_ = builderForValue.build();
+          onChanged();
+        } else {
+          manualAllocationBuilder_.setMessage(builderForValue.build());
+        }
+        cidrAllocationMethodCase_ = 7;
+        return this;
+      }
+      /**
+       * <pre>
+       * Manual CIDR allocation with explicit CIDR from user's own public prefix pool (BYOIP).
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation manual_allocation = 7;</code>
+       */
+      public Builder mergeManualAllocation(yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation value) {
+        if (manualAllocationBuilder_ == null) {
+          if (cidrAllocationMethodCase_ == 7 &&
+              cidrAllocationMethod_ != yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.getDefaultInstance()) {
+            cidrAllocationMethod_ = yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.newBuilder((yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation) cidrAllocationMethod_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            cidrAllocationMethod_ = value;
+          }
+          onChanged();
+        } else {
+          if (cidrAllocationMethodCase_ == 7) {
+            manualAllocationBuilder_.mergeFrom(value);
+          }
+          manualAllocationBuilder_.setMessage(value);
+        }
+        cidrAllocationMethodCase_ = 7;
+        return this;
+      }
+      /**
+       * <pre>
+       * Manual CIDR allocation with explicit CIDR from user's own public prefix pool (BYOIP).
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation manual_allocation = 7;</code>
+       */
+      public Builder clearManualAllocation() {
+        if (manualAllocationBuilder_ == null) {
+          if (cidrAllocationMethodCase_ == 7) {
+            cidrAllocationMethodCase_ = 0;
+            cidrAllocationMethod_ = null;
+            onChanged();
+          }
+        } else {
+          if (cidrAllocationMethodCase_ == 7) {
+            cidrAllocationMethodCase_ = 0;
+            cidrAllocationMethod_ = null;
+          }
+          manualAllocationBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Manual CIDR allocation with explicit CIDR from user's own public prefix pool (BYOIP).
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation manual_allocation = 7;</code>
+       */
+      public yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.Builder getManualAllocationBuilder() {
+        return getManualAllocationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Manual CIDR allocation with explicit CIDR from user's own public prefix pool (BYOIP).
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation manual_allocation = 7;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocationOrBuilder getManualAllocationOrBuilder() {
+        if ((cidrAllocationMethodCase_ == 7) && (manualAllocationBuilder_ != null)) {
+          return manualAllocationBuilder_.getMessageOrBuilder();
+        } else {
+          if (cidrAllocationMethodCase_ == 7) {
+            return (yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation) cidrAllocationMethod_;
+          }
+          return yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Manual CIDR allocation with explicit CIDR from user's own public prefix pool (BYOIP).
+       * </pre>
+       *
+       * <code>.yandex.cloud.baremetal.v1alpha.CreatePublicSubnetRequest.ManualAllocation manual_allocation = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation, yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.Builder, yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocationOrBuilder> 
+          getManualAllocationFieldBuilder() {
+        if (manualAllocationBuilder_ == null) {
+          if (!(cidrAllocationMethodCase_ == 7)) {
+            cidrAllocationMethod_ = yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.getDefaultInstance();
+          }
+          manualAllocationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation, yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation.Builder, yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocationOrBuilder>(
+                  (yandex.cloud.api.baremetal.v1alpha.PublicSubnetServiceOuterClass.CreatePublicSubnetRequest.ManualAllocation) cidrAllocationMethod_,
+                  getParentForChildren(),
+                  isClean());
+          cidrAllocationMethod_ = null;
+        }
+        cidrAllocationMethodCase_ = 7;
+        onChanged();;
+        return manualAllocationBuilder_;
       }
 
       private com.google.protobuf.MapField<
@@ -5681,11 +7664,19 @@ public final class PublicSubnetServiceOuterClass {
         getHardwarePoolIdsBytes(int index);
 
     /**
+     * <pre>
+     * Type of the public subnet.
+     * </pre>
+     *
      * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetType type = 6;</code>
      * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
+     * <pre>
+     * Type of the public subnet.
+     * </pre>
+     *
      * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetType type = 6;</code>
      * @return The type.
      */
@@ -6145,6 +8136,10 @@ public final class PublicSubnetServiceOuterClass {
     public static final int TYPE_FIELD_NUMBER = 6;
     private int type_;
     /**
+     * <pre>
+     * Type of the public subnet.
+     * </pre>
+     *
      * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetType type = 6;</code>
      * @return The enum numeric value on the wire for type.
      */
@@ -6152,6 +8147,10 @@ public final class PublicSubnetServiceOuterClass {
       return type_;
     }
     /**
+     * <pre>
+     * Type of the public subnet.
+     * </pre>
+     *
      * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetType type = 6;</code>
      * @return The type.
      */
@@ -7339,6 +9338,10 @@ public final class PublicSubnetServiceOuterClass {
 
       private int type_ = 0;
       /**
+       * <pre>
+       * Type of the public subnet.
+       * </pre>
+       *
        * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetType type = 6;</code>
        * @return The enum numeric value on the wire for type.
        */
@@ -7346,6 +9349,10 @@ public final class PublicSubnetServiceOuterClass {
         return type_;
       }
       /**
+       * <pre>
+       * Type of the public subnet.
+       * </pre>
+       *
        * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetType type = 6;</code>
        * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
@@ -7357,6 +9364,10 @@ public final class PublicSubnetServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Type of the public subnet.
+       * </pre>
+       *
        * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetType type = 6;</code>
        * @return The type.
        */
@@ -7367,6 +9378,10 @@ public final class PublicSubnetServiceOuterClass {
         return result == null ? yandex.cloud.api.baremetal.v1alpha.PublicSubnetOuterClass.PublicSubnetType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Type of the public subnet.
+       * </pre>
+       *
        * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetType type = 6;</code>
        * @param value The type to set.
        * @return This builder for chaining.
@@ -7381,6 +9396,10 @@ public final class PublicSubnetServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Type of the public subnet.
+       * </pre>
+       *
        * <code>.yandex.cloud.baremetal.v1alpha.PublicSubnetType type = 6;</code>
        * @return This builder for chaining.
        */
@@ -9463,7 +11482,7 @@ public final class PublicSubnetServiceOuterClass {
      * Default value is 20.
      * </pre>
      *
-     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     long getPageSize();
@@ -9643,7 +11662,7 @@ public final class PublicSubnetServiceOuterClass {
      * Default value is 20.
      * </pre>
      *
-     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
+     * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     @java.lang.Override
@@ -10142,7 +12161,7 @@ public final class PublicSubnetServiceOuterClass {
        * Default value is 20.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return The pageSize.
        */
       @java.lang.Override
@@ -10158,7 +12177,7 @@ public final class PublicSubnetServiceOuterClass {
        * Default value is 20.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
        */
@@ -10177,7 +12196,7 @@ public final class PublicSubnetServiceOuterClass {
        * Default value is 20.
        * </pre>
        *
-       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
+       * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageSize() {
@@ -11484,6 +13503,16 @@ public final class PublicSubnetServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_LabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_AutoAllocation_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_AutoAllocation_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_ManualAllocation_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_ManualAllocation_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -11541,83 +13570,90 @@ public final class PublicSubnetServiceOuterClass {
       "to\032&yandex/cloud/operation/operation.pro" +
       "to\032\035yandex/cloud/validation.proto\"8\n\026Get" +
       "PublicSubnetRequest\022\036\n\020public_subnet_id\030" +
-      "\001 \001(\tB\004\350\3071\001\"\244\001\n\027ListPublicSubnetRequest\022" +
-      "/\n\tfolder_id\030\001 \001(\tB\034\362\3071\020[a-z][a-z0-9.-]*" +
-      "\212\3101\004<=50\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\022" +
-      "\n\npage_token\030e \001(\t\022\020\n\010order_by\030f \001(\t\022\016\n\006" +
-      "filter\030g \001(\tJ\004\010\002\020d\"\177\n\030ListPublicSubnetRe" +
-      "sponse\022D\n\016public_subnets\030\001 \003(\0132,.yandex." +
-      "cloud.baremetal.v1alpha.PublicSubnet\022\027\n\017" +
-      "next_page_token\030d \001(\tJ\004\010\002\020d\"\257\003\n\031CreatePu" +
-      "blicSubnetRequest\022/\n\tfolder_id\030\001 \001(\tB\034\362\307" +
-      "1\020[a-z][a-z0-9.-]*\212\3101\004<=50\0224\n\004name\030\002 \001(\t" +
-      "B&\362\3071\032[a-z]([-a-z0-9]*[a-z0-9])?\212\3101\0042-63" +
-      "\022\037\n\013description\030\003 \001(\tB\n\212\3101\006<=1024\022\031\n\021har" +
-      "dware_pool_ids\030\004 \003(\t\022\037\n\rprefix_length\030\005 " +
-      "\001(\003B\010\372\3071\0041-31\022\227\001\n\006labels\030\310\001 \003(\0132E.yandex" +
-      ".cloud.baremetal.v1alpha.CreatePublicSub" +
-      "netRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63" +
-      "\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0" +
-      "-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001J\005\010\006\020\310\001\"6\n\032CreatePublicSub" +
-      "netMetadata\022\030\n\020public_subnet_id\030\001 \001(\t\"\356\003" +
-      "\n\031UpdatePublicSubnetRequest\022\036\n\020public_su" +
-      "bnet_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\013" +
-      "2\032.google.protobuf.FieldMask\0224\n\004name\030\003 \001" +
-      "(\tB&\362\3071\032[a-z]([-a-z0-9]*[a-z0-9])?\212\3101\0042-" +
-      "63\022\037\n\013description\030\004 \001(\tB\n\212\3101\006<=1024\022\031\n\021h" +
-      "ardware_pool_ids\030\005 \003(\t\022>\n\004type\030\006 \001(\01620.y" +
-      "andex.cloud.baremetal.v1alpha.PublicSubn" +
-      "etType\022\227\001\n\006labels\030\310\001 \003(\0132E.yandex.cloud." +
-      "baremetal.v1alpha.UpdatePublicSubnetRequ" +
-      "est.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_" +
-      "0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*" +
-      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001J\005\010\007\020\310\001\"6\n\032UpdatePublicSubnetMeta" +
-      "data\022\030\n\020public_subnet_id\030\001 \001(\t\";\n\031Delete" +
-      "PublicSubnetRequest\022\036\n\020public_subnet_id\030" +
-      "\001 \001(\tB\004\350\3071\001\"6\n\032DeletePublicSubnetMetadat" +
-      "a\022\030\n\020public_subnet_id\030\001 \001(\t\"u\n!ListPubli" +
-      "cSubnetOperationsRequest\022\030\n\020public_subne" +
-      "t_id\030\001 \001(\t\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100" +
-      "\022\022\n\npage_token\030e \001(\tJ\004\010\002\020d\"z\n\"ListPublic" +
-      "SubnetOperationsResponse\0225\n\noperations\030\001" +
-      " \003(\0132!.yandex.cloud.operation.Operation\022" +
-      "\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d2\300\t\n\023Publi" +
-      "cSubnetService\022\250\001\n\003Get\0226.yandex.cloud.ba" +
-      "remetal.v1alpha.GetPublicSubnetRequest\032," +
-      ".yandex.cloud.baremetal.v1alpha.PublicSu" +
-      "bnet\";\202\323\344\223\0025\0223/baremetal/v1alpha/publicS" +
-      "ubnets/{public_subnet_id}\022\243\001\n\004List\0227.yan" +
-      "dex.cloud.baremetal.v1alpha.ListPublicSu" +
-      "bnetRequest\0328.yandex.cloud.baremetal.v1a" +
-      "lpha.ListPublicSubnetResponse\"(\202\323\344\223\002\"\022 /" +
-      "baremetal/v1alpha/publicSubnets\022\301\001\n\006Crea" +
-      "te\0229.yandex.cloud.baremetal.v1alpha.Crea" +
-      "tePublicSubnetRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"Y\202\323\344\223\002%\" /baremetal/v1a" +
-      "lpha/publicSubnets:\001*\262\322**\n\032CreatePublicS" +
-      "ubnetMetadata\022\014PublicSubnet\022\324\001\n\006Update\0229" +
-      ".yandex.cloud.baremetal.v1alpha.UpdatePu" +
-      "blicSubnetRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"l\202\323\344\223\002823/baremetal/v1alpha" +
-      "/publicSubnets/{public_subnet_id}:\001*\262\322**" +
-      "\n\032UpdatePublicSubnetMetadata\022\014PublicSubn" +
-      "et\022\332\001\n\006Delete\0229.yandex.cloud.baremetal.v" +
-      "1alpha.DeletePublicSubnetRequest\032!.yande" +
-      "x.cloud.operation.Operation\"r\202\323\344\223\0025*3/ba" +
-      "remetal/v1alpha/publicSubnets/{public_su" +
-      "bnet_id}\262\322*3\n\032DeletePublicSubnetMetadata" +
-      "\022\025google.protobuf.Empty\022\337\001\n\016ListOperatio" +
-      "ns\022A.yandex.cloud.baremetal.v1alpha.List" +
-      "PublicSubnetOperationsRequest\032B.yandex.c" +
-      "loud.baremetal.v1alpha.ListPublicSubnetO" +
-      "perationsResponse\"F\202\323\344\223\002@\022>/baremetal/v1" +
-      "alpha/publicSubnets/{public_subnet_id}/o" +
-      "perationsBr\n\"yandex.cloud.api.baremetal." +
-      "v1alphaZLgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/baremetal/v1alpha;bare" +
-      "metalb\006proto3"
+      "\001 \001(\tB\004\350\3071\001\"\207\001\n\027ListPublicSubnetRequest\022" +
+      "\021\n\tfolder_id\030\001 \001(\t\022\035\n\tpage_size\030d \001(\003B\n\372" +
+      "\3071\006<=1000\022\022\n\npage_token\030e \001(\t\022\020\n\010order_b" +
+      "y\030f \001(\t\022\016\n\006filter\030g \001(\tJ\004\010\002\020d\"\177\n\030ListPub" +
+      "licSubnetResponse\022D\n\016public_subnets\030\001 \003(" +
+      "\0132,.yandex.cloud.baremetal.v1alpha.Publi" +
+      "cSubnet\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d\"\357" +
+      "\005\n\031CreatePublicSubnetRequest\022\021\n\tfolder_i" +
+      "d\030\001 \001(\t\0224\n\004name\030\002 \001(\tB&\362\3071\032[a-z]([-a-z0-" +
+      "9]*[a-z0-9])?\212\3101\0042-63\022\037\n\013description\030\003 \001" +
+      "(\tB\n\212\3101\006<=1024\022\031\n\021hardware_pool_ids\030\004 \003(" +
+      "\t\022!\n\rprefix_length\030\005 \001(\003B\n\030\001\372\3071\0041-31\022c\n\017" +
+      "auto_allocation\030\006 \001(\0132H.yandex.cloud.bar" +
+      "emetal.v1alpha.CreatePublicSubnetRequest" +
+      ".AutoAllocationH\000\022g\n\021manual_allocation\030\007" +
+      " \001(\0132J.yandex.cloud.baremetal.v1alpha.Cr" +
+      "eatePublicSubnetRequest.ManualAllocation" +
+      "H\000\022\227\001\n\006labels\030\310\001 \003(\0132E.yandex.cloud.bare" +
+      "metal.v1alpha.CreatePublicSubnetRequest." +
+      "LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a" +
+      "-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013" +
+      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\0321\n\016AutoAllocation\022\037\n\rprefix_length\030\001" +
+      " \001(\003B\010\372\3071\0041-31\032?\n\020ManualAllocation\022\014\n\004ci" +
+      "dr\030\001 \001(\t\022\035\n\025public_prefix_pool_id\030\002 \001(\tB" +
+      "\030\n\026cidr_allocation_methodJ\005\010\010\020\310\001\"6\n\032Crea" +
+      "tePublicSubnetMetadata\022\030\n\020public_subnet_" +
+      "id\030\001 \001(\t\"\356\003\n\031UpdatePublicSubnetRequest\022\036" +
+      "\n\020public_subnet_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update" +
+      "_mask\030\002 \001(\0132\032.google.protobuf.FieldMask\022" +
+      "4\n\004name\030\003 \001(\tB&\362\3071\032[a-z]([-a-z0-9]*[a-z0" +
+      "-9])?\212\3101\0042-63\022\037\n\013description\030\004 \001(\tB\n\212\3101\006" +
+      "<=1024\022\031\n\021hardware_pool_ids\030\005 \003(\t\022>\n\004typ" +
+      "e\030\006 \001(\01620.yandex.cloud.baremetal.v1alpha" +
+      ".PublicSubnetType\022\227\001\n\006labels\030\310\001 \003(\0132E.ya" +
+      "ndex.cloud.baremetal.v1alpha.UpdatePubli" +
+      "cSubnetRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004" +
+      "<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z]" +
+      "[-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001J\005\010\007\020\310\001\"6\n\032UpdatePubli" +
+      "cSubnetMetadata\022\030\n\020public_subnet_id\030\001 \001(" +
+      "\t\";\n\031DeletePublicSubnetRequest\022\036\n\020public" +
+      "_subnet_id\030\001 \001(\tB\004\350\3071\001\"6\n\032DeletePublicSu" +
+      "bnetMetadata\022\030\n\020public_subnet_id\030\001 \001(\t\"v" +
+      "\n!ListPublicSubnetOperationsRequest\022\030\n\020p" +
+      "ublic_subnet_id\030\001 \001(\t\022\035\n\tpage_size\030d \001(\003" +
+      "B\n\372\3071\006<=1000\022\022\n\npage_token\030e \001(\tJ\004\010\002\020d\"z" +
+      "\n\"ListPublicSubnetOperationsResponse\0225\n\n" +
+      "operations\030\001 \003(\0132!.yandex.cloud.operatio" +
+      "n.Operation\022\027\n\017next_page_token\030d \001(\tJ\004\010\002" +
+      "\020d2\300\t\n\023PublicSubnetService\022\250\001\n\003Get\0226.yan" +
+      "dex.cloud.baremetal.v1alpha.GetPublicSub" +
+      "netRequest\032,.yandex.cloud.baremetal.v1al" +
+      "pha.PublicSubnet\";\202\323\344\223\0025\0223/baremetal/v1a" +
+      "lpha/publicSubnets/{public_subnet_id}\022\243\001" +
+      "\n\004List\0227.yandex.cloud.baremetal.v1alpha." +
+      "ListPublicSubnetRequest\0328.yandex.cloud.b" +
+      "aremetal.v1alpha.ListPublicSubnetRespons" +
+      "e\"(\202\323\344\223\002\"\022 /baremetal/v1alpha/publicSubn" +
+      "ets\022\301\001\n\006Create\0229.yandex.cloud.baremetal." +
+      "v1alpha.CreatePublicSubnetRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"Y\202\323\344\223\002%\" /b" +
+      "aremetal/v1alpha/publicSubnets:\001*\262\322**\n\032C" +
+      "reatePublicSubnetMetadata\022\014PublicSubnet\022" +
+      "\324\001\n\006Update\0229.yandex.cloud.baremetal.v1al" +
+      "pha.UpdatePublicSubnetRequest\032!.yandex.c" +
+      "loud.operation.Operation\"l\202\323\344\223\002823/barem" +
+      "etal/v1alpha/publicSubnets/{public_subne" +
+      "t_id}:\001*\262\322**\n\032UpdatePublicSubnetMetadata" +
+      "\022\014PublicSubnet\022\332\001\n\006Delete\0229.yandex.cloud" +
+      ".baremetal.v1alpha.DeletePublicSubnetReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "r\202\323\344\223\0025*3/baremetal/v1alpha/publicSubnet" +
+      "s/{public_subnet_id}\262\322*3\n\032DeletePublicSu" +
+      "bnetMetadata\022\025google.protobuf.Empty\022\337\001\n\016" +
+      "ListOperations\022A.yandex.cloud.baremetal." +
+      "v1alpha.ListPublicSubnetOperationsReques" +
+      "t\032B.yandex.cloud.baremetal.v1alpha.ListP" +
+      "ublicSubnetOperationsResponse\"F\202\323\344\223\002@\022>/" +
+      "baremetal/v1alpha/publicSubnets/{public_" +
+      "subnet_id}/operationsBr\n\"yandex.cloud.ap" +
+      "i.baremetal.v1alphaZLgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/baremetal/" +
+      "v1alpha;baremetalb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11652,13 +13688,25 @@ public final class PublicSubnetServiceOuterClass {
     internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "HardwarePoolIds", "PrefixLength", "Labels", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "HardwarePoolIds", "PrefixLength", "AutoAllocation", "ManualAllocation", "Labels", "CidrAllocationMethod", });
     internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_LabelsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_AutoAllocation_descriptor =
+      internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_AutoAllocation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_AutoAllocation_descriptor,
+        new java.lang.String[] { "PrefixLength", });
+    internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_ManualAllocation_descriptor =
+      internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_descriptor.getNestedTypes().get(2);
+    internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_ManualAllocation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetRequest_ManualAllocation_descriptor,
+        new java.lang.String[] { "Cidr", "PublicPrefixPoolId", });
     internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetMetadata_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_baremetal_v1alpha_CreatePublicSubnetMetadata_fieldAccessorTable = new

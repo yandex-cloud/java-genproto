@@ -11490,7 +11490,7 @@ public final class CloudServiceOuterClass {
       "\010cloud_id\030\001 \001(\t\0220\n\014delete_after\030\002 \001(\0132\032." +
       "google.protobuf.Timestamp\022\024\n\014cancelled_b" +
       "y\030\003 \001(\t\0220\n\014cancelled_at\030\004 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp2\350\r\n\014CloudService\022\217\001\n\003G" +
+      "rotobuf.Timestamp2\203\026\n\014CloudService\022\217\001\n\003G" +
       "et\0220.yandex.cloud.resourcemanager.v1.Get" +
       "CloudRequest\032&.yandex.cloud.resourcemana" +
       "ger.v1.Cloud\".\202\323\344\223\002(\022&/resource-manager/" +
@@ -11534,10 +11534,37 @@ public final class CloudServiceOuterClass {
       "\002C\">/resource-manager/v1/clouds/{resourc" +
       "e_id}:updateAccessBindings:\001*\262\322*K\n#acces" +
       "s.UpdateAccessBindingsMetadata\022$access.A" +
-      "ccessBindingsOperationResultBz\n#yandex.c" +
-      "loud.api.resourcemanager.v1ZSgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/re" +
-      "sourcemanager/v1;resourcemanagerb\006proto3"
+      "ccessBindingsOperationResult\022\323\001\n\030ListAcc" +
+      "essPolicyBindings\0224.yandex.cloud.access." +
+      "ListAccessPolicyBindingsRequest\0325.yandex" +
+      ".cloud.access.ListAccessPolicyBindingsRe" +
+      "sponse\"J\202\323\344\223\002D\022B/resource-manager/v1/clo" +
+      "uds/{resource_id}:listAccessPolicyBindin" +
+      "gs\022\361\001\n\020BindAccessPolicy\022,.yandex.cloud.a" +
+      "ccess.BindAccessPolicyRequest\032!.yandex.c" +
+      "loud.operation.Operation\"\213\001\202\323\344\223\002?\":/reso" +
+      "urce-manager/v1/clouds/{resource_id}:bin" +
+      "dAccessPolicy:\001*\262\322*B\n\037access.BindAccessP" +
+      "olicyMetadata\022\037access.BindAccessPolicyRe" +
+      "sponse\022\373\001\n\022UnbindAccessPolicy\022..yandex.c" +
+      "loud.access.UnbindAccessPolicyRequest\032!." +
+      "yandex.cloud.operation.Operation\"\221\001\202\323\344\223\002" +
+      "A\"</resource-manager/v1/clouds/{resource" +
+      "_id}:unbindAccessPolicy:\001*\262\322*F\n!access.U" +
+      "nbindAccessPolicyMetadata\022!access.Unbind" +
+      "AccessPolicyResponse\022\320\002\n#UpdateAccessPol" +
+      "icyBindingParameters\022?.yandex.cloud.acce" +
+      "ss.UpdateAccessPolicyBindingParametersRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"\304\001\202\323\344\223\002R2M/resource-manager/v1/clouds/{" +
+      "resource_id}:updateAccessPolicyBindingPa" +
+      "rameters:\001*\262\322*h\n2access.UpdateAccessPoli" +
+      "cyBindingParametersMetadata\0222access.Upda" +
+      "teAccessPolicyBindingParametersResponseB" +
+      "z\n#yandex.cloud.api.resourcemanager.v1ZS" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/resourcemanager/v1;resourcemana" +
+      "gerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -204,6 +204,68 @@ public final class ResourceServiceGrpc {
     return getGetProviderCNameMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest,
+      yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse> getGetAttributesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAttributes",
+      requestType = yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest.class,
+      responseType = yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest,
+      yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse> getGetAttributesMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest, yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse> getGetAttributesMethod;
+    if ((getGetAttributesMethod = ResourceServiceGrpc.getGetAttributesMethod) == null) {
+      synchronized (ResourceServiceGrpc.class) {
+        if ((getGetAttributesMethod = ResourceServiceGrpc.getGetAttributesMethod) == null) {
+          ResourceServiceGrpc.getGetAttributesMethod = getGetAttributesMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest, yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAttributes"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ResourceServiceMethodDescriptorSupplier("GetAttributes"))
+              .build();
+        }
+      }
+    }
+    return getGetAttributesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest,
+      yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse> getListAttributesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAttributes",
+      requestType = yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest.class,
+      responseType = yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest,
+      yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse> getListAttributesMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest, yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse> getListAttributesMethod;
+    if ((getListAttributesMethod = ResourceServiceGrpc.getListAttributesMethod) == null) {
+      synchronized (ResourceServiceGrpc.class) {
+        if ((getListAttributesMethod = ResourceServiceGrpc.getListAttributesMethod) == null) {
+          ResourceServiceGrpc.getListAttributesMethod = getListAttributesMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest, yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAttributes"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ResourceServiceMethodDescriptorSupplier("ListAttributes"))
+              .build();
+        }
+      }
+    }
+    return getListAttributesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -319,6 +381,26 @@ public final class ResourceServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProviderCNameMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Get resource attributes.
+     * </pre>
+     */
+    public void getAttributes(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAttributesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * List resource attributes.
+     * </pre>
+     */
+    public void listAttributes(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAttributesMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -363,6 +445,20 @@ public final class ResourceServiceGrpc {
                 yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetProviderCNameRequest,
                 yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetProviderCNameResponse>(
                   this, METHODID_GET_PROVIDER_CNAME)))
+          .addMethod(
+            getGetAttributesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest,
+                yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse>(
+                  this, METHODID_GET_ATTRIBUTES)))
+          .addMethod(
+            getListAttributesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest,
+                yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse>(
+                  this, METHODID_LIST_ATTRIBUTES)))
           .build();
     }
   }
@@ -453,6 +549,28 @@ public final class ResourceServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetProviderCNameMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Get resource attributes.
+     * </pre>
+     */
+    public void getAttributes(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetAttributesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * List resource attributes.
+     * </pre>
+     */
+    public void listAttributes(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListAttributesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -534,6 +652,26 @@ public final class ResourceServiceGrpc {
     public yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetProviderCNameResponse getProviderCName(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetProviderCNameRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetProviderCNameMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get resource attributes.
+     * </pre>
+     */
+    public yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse getAttributes(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetAttributesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * List resource attributes.
+     * </pre>
+     */
+    public yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse listAttributes(yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAttributesMethod(), getCallOptions(), request);
     }
   }
 
@@ -623,6 +761,28 @@ public final class ResourceServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetProviderCNameMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Get resource attributes.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse> getAttributes(
+        yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetAttributesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * List resource attributes.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse> listAttributes(
+        yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListAttributesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -631,6 +791,8 @@ public final class ResourceServiceGrpc {
   private static final int METHODID_UPDATE = 3;
   private static final int METHODID_DELETE = 4;
   private static final int METHODID_GET_PROVIDER_CNAME = 5;
+  private static final int METHODID_GET_ATTRIBUTES = 6;
+  private static final int METHODID_LIST_ATTRIBUTES = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -672,6 +834,14 @@ public final class ResourceServiceGrpc {
         case METHODID_GET_PROVIDER_CNAME:
           serviceImpl.getProviderCName((yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetProviderCNameRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetProviderCNameResponse>) responseObserver);
+          break;
+        case METHODID_GET_ATTRIBUTES:
+          serviceImpl.getAttributes((yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.GetResourceAttributesResponse>) responseObserver);
+          break;
+        case METHODID_LIST_ATTRIBUTES:
+          serviceImpl.listAttributes((yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.cdn.v1.ResourceServiceOuterClass.ListResourceAttributesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -740,6 +910,8 @@ public final class ResourceServiceGrpc {
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getGetProviderCNameMethod())
+              .addMethod(getGetAttributesMethod())
+              .addMethod(getListAttributesMethod())
               .build();
         }
       }
